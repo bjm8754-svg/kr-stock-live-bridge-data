@@ -1,8 +1,8 @@
 {
   "status": "OK",
   "tradeDate": "20260918",
-  "publishedAtUtc": "2026-09-18T01:59:35.636Z",
-  "publishedAtKst": "2026-09-18 10:59:35.636 KST",
+  "publishedAtUtc": "2026-09-18T01:59:49.268Z",
+  "publishedAtKst": "2026-09-18 10:59:49.268 KST",
   "source": "NAVER_PUBLIC_WEB_ENDPOINT",
   "watchlist": [
     "295310",
@@ -2705,25 +2705,25 @@
   },
   "indexes": {
     "KOSPI": {
-      "value": 685338,
-      "change": 13797,
-      "changePct": 2.05,
+      "value": 685256,
+      "change": 13715,
+      "changePct": 2.04,
       "open": 688570,
       "high": 688570,
       "low": 683095,
-      "volume": 136672,
-      "tradingValue": 7632746,
+      "volume": 136742,
+      "tradingValue": 7636676,
       "marketStatus": "OPEN"
     },
     "KOSDAQ": {
-      "value": 82770,
-      "change": 552,
-      "changePct": 0.67,
+      "value": 82764,
+      "change": 546,
+      "changePct": 0.66,
       "open": 83272,
       "high": 83357,
       "low": 82692,
-      "volume": 302132,
-      "tradingValue": 3421367,
+      "volume": 302269,
+      "tradingValue": 3423354,
       "marketStatus": "OPEN"
     }
   },
