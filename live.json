@@ -1,0 +1,3016 @@
+{
+  "status": "OK",
+  "tradeDate": "20260918",
+  "publishedAtUtc": "2026-09-18T01:39:53.300Z",
+  "publishedAtKst": "2026-09-18 10:39:53.300 KST",
+  "source": "NAVER_PUBLIC_WEB_ENDPOINT",
+  "watchlist": [
+    "295310",
+    "064400"
+  ],
+  "history": {
+    "count": 41,
+    "from": "20260918 0900",
+    "to": "20260918 0940",
+    "rows": [
+      {
+        "atKst": "20260918 0900",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60400,
+            "previousClose": 60700,
+            "change": 300,
+            "changePct": 0.49,
+            "open": 61000,
+            "high": 61300,
+            "low": 60300,
+            "volume": 7784,
+            "tradingValue": 473483500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:00:38.760898+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "79,410",
+              "accumulatedTradingValue": "48.3��",
+              "accumulatedTradingVolumeRaw": "79410",
+              "accumulatedTradingValueRaw": "4826000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70700,
+            "previousClose": 69100,
+            "change": 1600,
+            "changePct": 2.32,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 9476,
+            "tradingValue": 667006850,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0901",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60500,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 60100,
+            "volume": 9916,
+            "tradingValue": 602525300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:01:36.544158+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "80,589",
+              "accumulatedTradingValue": "49��",
+              "accumulatedTradingVolumeRaw": "80589",
+              "accumulatedTradingValueRaw": "4897000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70500,
+            "previousClose": 69100,
+            "change": 1400,
+            "changePct": 2.03,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 13809,
+            "tradingValue": 972556450,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0902",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 60100,
+            "volume": 11146,
+            "tradingValue": 676905900,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:02:36.516174+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "82,893",
+              "accumulatedTradingValue": "50.4��",
+              "accumulatedTradingVolumeRaw": "82893",
+              "accumulatedTradingValueRaw": "5036000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70400,
+            "previousClose": 69100,
+            "change": 1300,
+            "changePct": 1.88,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 18868,
+            "tradingValue": 1328773350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0903",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60000,
+            "previousClose": 60700,
+            "change": 700,
+            "changePct": 1.15,
+            "open": 61000,
+            "high": 61300,
+            "low": 59900,
+            "volume": 15225,
+            "tradingValue": 922137400,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,100",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-600",
+              "fluctuationsRatio": "-0.99",
+              "localTradedAt": "2026-09-18T09:03:36.035866+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "85,408",
+              "accumulatedTradingValue": "51.9��",
+              "accumulatedTradingVolumeRaw": "85408",
+              "accumulatedTradingValueRaw": "5187000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70400,
+            "previousClose": 69100,
+            "change": 1300,
+            "changePct": 1.88,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 21769,
+            "tradingValue": 1532952650,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0904",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 59700,
+            "previousClose": 60700,
+            "change": 1000,
+            "changePct": 1.65,
+            "open": 61000,
+            "high": 61300,
+            "low": 59700,
+            "volume": 16984,
+            "tradingValue": 1027332700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "59,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-1,100",
+              "fluctuationsRatio": "-1.81",
+              "localTradedAt": "2026-09-18T09:04:36.374358+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "87,920",
+              "accumulatedTradingValue": "53.4��",
+              "accumulatedTradingValueRaw": "5338000000",
+              "accumulatedTradingVolumeRaw": "87920"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70400,
+            "previousClose": 69100,
+            "change": 1300,
+            "changePct": 1.88,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 24089,
+            "tradingValue": 1696318050,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0905",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 59700,
+            "previousClose": 60700,
+            "change": 1000,
+            "changePct": 1.65,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 18491,
+            "tradingValue": 1117309100,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "59,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-1,000",
+              "fluctuationsRatio": "-1.65",
+              "localTradedAt": "2026-09-18T09:05:36.362165+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "89,059",
+              "accumulatedTradingValue": "54.1��",
+              "accumulatedTradingVolumeRaw": "89059",
+              "accumulatedTradingValueRaw": "5406000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70300,
+            "volume": 26347,
+            "tradingValue": 1855224350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0906",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 59700,
+            "previousClose": 60700,
+            "change": 1000,
+            "changePct": 1.65,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 19982,
+            "tradingValue": 1206254300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "59,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-1,000",
+              "fluctuationsRatio": "-1.65",
+              "localTradedAt": "2026-09-18T09:06:35.919331+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "90,686",
+              "accumulatedTradingValue": "55��",
+              "accumulatedTradingVolumeRaw": "90686",
+              "accumulatedTradingValueRaw": "5503000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70200,
+            "volume": 27550,
+            "tradingValue": 1939809450,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0907",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60100,
+            "previousClose": 60700,
+            "change": 600,
+            "changePct": 0.99,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 22387,
+            "tradingValue": 1350693700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,000",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-700",
+              "fluctuationsRatio": "-1.15",
+              "localTradedAt": "2026-09-18T09:07:36.345643+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "91,542",
+              "accumulatedTradingValue": "55.5��",
+              "accumulatedTradingVolumeRaw": "91542",
+              "accumulatedTradingValueRaw": "5554000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70400,
+            "previousClose": 69100,
+            "change": 1300,
+            "changePct": 1.88,
+            "open": 70300,
+            "high": 70900,
+            "low": 70200,
+            "volume": 31120,
+            "tradingValue": 2190500950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0908",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60400,
+            "previousClose": 60700,
+            "change": 300,
+            "changePct": 0.49,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 25982,
+            "tradingValue": 1567112300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:08:36.416838+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "92,533",
+              "accumulatedTradingValue": "56.1��",
+              "accumulatedTradingVolumeRaw": "92533",
+              "accumulatedTradingValueRaw": "5614000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70200,
+            "volume": 32087,
+            "tradingValue": 2258535050,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0909",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60900,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 27659,
+            "tradingValue": 1669084800,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,900",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "200",
+              "fluctuationsRatio": "0.33",
+              "localTradedAt": "2026-09-18T09:09:35.844181+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "94,425",
+              "accumulatedTradingValue": "57.3��",
+              "accumulatedTradingVolumeRaw": "94425",
+              "accumulatedTradingValueRaw": "5728000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70100,
+            "volume": 34396,
+            "tradingValue": 2420468350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0910",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 28995,
+            "tradingValue": 1750517950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,900",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "200",
+              "fluctuationsRatio": "0.33",
+              "localTradedAt": "2026-09-18T09:10:36.333303+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "95,516",
+              "accumulatedTradingValue": "58��",
+              "accumulatedTradingVolumeRaw": "95516",
+              "accumulatedTradingValueRaw": "5795000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 34997,
+            "tradingValue": 2462549750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0911",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60900,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 30413,
+            "tradingValue": 1836827250,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,800",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.16",
+              "localTradedAt": "2026-09-18T09:11:35.871309+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "96,257",
+              "accumulatedTradingValue": "58.4��",
+              "accumulatedTradingVolumeRaw": "96257",
+              "accumulatedTradingValueRaw": "5840000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 36969,
+            "tradingValue": 2600790300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0912",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 32217,
+            "tradingValue": 1946770350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "61,000",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "300",
+              "fluctuationsRatio": "0.49",
+              "localTradedAt": "2026-09-18T09:12:36.430041+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "97,733",
+              "accumulatedTradingValue": "59.3��",
+              "accumulatedTradingVolumeRaw": "97733",
+              "accumulatedTradingValueRaw": "5930000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 38124,
+            "tradingValue": 2681848400,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0913",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 32735,
+            "tradingValue": 1978222750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:13:36.333827+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "98,262",
+              "accumulatedTradingValue": "59.6��",
+              "accumulatedTradingVolumeRaw": "98262",
+              "accumulatedTradingValueRaw": "5962000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 39221,
+            "tradingValue": 2758855000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0914",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 33527,
+            "tradingValue": 2026257500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:14:35.839761+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "99,330",
+              "accumulatedTradingValue": "60.3��",
+              "accumulatedTradingVolumeRaw": "99330",
+              "accumulatedTradingValueRaw": "6027000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 42116,
+            "tradingValue": 2961856400,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0915",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 33926,
+            "tradingValue": 2050440500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:15:36.379673+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "99,678",
+              "accumulatedTradingValue": "60.5��",
+              "accumulatedTradingVolumeRaw": "99678",
+              "accumulatedTradingValueRaw": "6048000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 43380,
+            "tradingValue": 3050589150,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0916",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60300,
+            "previousClose": 60700,
+            "change": 400,
+            "changePct": 0.66,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 35589,
+            "tradingValue": 2151191500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,300",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-400",
+              "fluctuationsRatio": "-0.66",
+              "localTradedAt": "2026-09-18T09:16:36.601240+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "100,243",
+              "accumulatedTradingValue": "60.8��",
+              "accumulatedTradingVolumeRaw": "100243",
+              "accumulatedTradingValueRaw": "6082000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 44498,
+            "tradingValue": 3128978850,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0917",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 36348,
+            "tradingValue": 2197126200,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:17:36.357993+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "100,802",
+              "accumulatedTradingValue": "61.2��",
+              "accumulatedTradingVolumeRaw": "100802",
+              "accumulatedTradingValueRaw": "6116000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 45968,
+            "tradingValue": 3232166950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0918",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 38044,
+            "tradingValue": 2300229400,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:18:36.526495+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "101,693",
+              "accumulatedTradingValue": "61.7��",
+              "accumulatedTradingVolumeRaw": "101693",
+              "accumulatedTradingValueRaw": "6170000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 47583,
+            "tradingValue": 3345695250,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0919",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 38784,
+            "tradingValue": 2345110700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:19:36.394386+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "102,260",
+              "accumulatedTradingValue": "62.1��",
+              "accumulatedTradingVolumeRaw": "102260",
+              "accumulatedTradingValueRaw": "6205000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70300,
+            "previousClose": 69100,
+            "change": 1200,
+            "changePct": 1.74,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 48624,
+            "tradingValue": 3418863550,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0920",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 39750,
+            "tradingValue": 2403732600,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:20:36.044455+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "104,782",
+              "accumulatedTradingValue": "63.6��",
+              "accumulatedTradingVolumeRaw": "104782",
+              "accumulatedTradingValueRaw": "6358000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 49633,
+            "tradingValue": 3489701550,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0921",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 40361,
+            "tradingValue": 2440880800,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,800",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.16",
+              "localTradedAt": "2026-09-18T09:21:36.381545+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "105,084",
+              "accumulatedTradingValue": "63.8��",
+              "accumulatedTradingVolumeRaw": "105084",
+              "accumulatedTradingValueRaw": "6376000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 51439,
+            "tradingValue": 3616476950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0922",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 41418,
+            "tradingValue": 2505286500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,900",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "200",
+              "fluctuationsRatio": "0.33",
+              "localTradedAt": "2026-09-18T09:22:36.045338+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "106,206",
+              "accumulatedTradingValue": "64.4��",
+              "accumulatedTradingVolumeRaw": "106206",
+              "accumulatedTradingValueRaw": "6444000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 51965,
+            "tradingValue": 3653402950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0923",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 41494,
+            "tradingValue": 2509905300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,800",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.16",
+              "localTradedAt": "2026-09-18T09:23:36.589709+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "106,386",
+              "accumulatedTradingValue": "64.6��",
+              "accumulatedTradingVolumeRaw": "106386",
+              "accumulatedTradingValueRaw": "6455000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 52415,
+            "tradingValue": 3684998800,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0924",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 42115,
+            "tradingValue": 2547607000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:24:36.034812+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "106,716",
+              "accumulatedTradingValue": "64.8��",
+              "accumulatedTradingVolumeRaw": "106716",
+              "accumulatedTradingValueRaw": "6475000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 54114,
+            "tradingValue": 3804268300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0925",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 42208,
+            "tradingValue": 2553259100,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,800",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.16",
+              "localTradedAt": "2026-09-18T09:25:36.531956+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "106,919",
+              "accumulatedTradingValue": "64.9��",
+              "accumulatedTradingVolumeRaw": "106919",
+              "accumulatedTradingValueRaw": "6488000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 56195,
+            "tradingValue": 3950133100,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0926",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 42329,
+            "tradingValue": 2560607300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:26:36.068370+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "107,113",
+              "accumulatedTradingValue": "65��",
+              "accumulatedTradingVolumeRaw": "107113",
+              "accumulatedTradingValueRaw": "6499000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 57224,
+            "tradingValue": 4022197700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0927",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 42688,
+            "tradingValue": 2582393500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:27:36.573394+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "107,340",
+              "accumulatedTradingValue": "65.1��",
+              "accumulatedTradingValueRaw": "6513000000",
+              "accumulatedTradingVolumeRaw": "107340"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 57782,
+            "tradingValue": 4061298350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0928",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 43179,
+            "tradingValue": 2612204000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:28:36.419676+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "107,768",
+              "accumulatedTradingValue": "65.4��",
+              "accumulatedTradingVolumeRaw": "107768",
+              "accumulatedTradingValueRaw": "6539000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 58140,
+            "tradingValue": 4086388250,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0929",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60800,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 43792,
+            "tradingValue": 2649372100,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:29:36.595183+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "108,582",
+              "accumulatedTradingValue": "65.9��",
+              "accumulatedTradingValueRaw": "6588000000",
+              "accumulatedTradingVolumeRaw": "108582"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 58523,
+            "tradingValue": 4113208950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0930",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 43895,
+            "tradingValue": 2655625300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,700",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "3",
+                "text": "����",
+                "name": "UNCHANGED"
+              },
+              "compareToPreviousClosePrice": "0",
+              "fluctuationsRatio": "0.00",
+              "localTradedAt": "2026-09-18T09:30:38.003303+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "108,760",
+              "accumulatedTradingValue": "66��",
+              "accumulatedTradingVolumeRaw": "108760",
+              "accumulatedTradingValueRaw": "6599000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 58878,
+            "tradingValue": 4138064950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0931",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60700,
+            "previousClose": 60700,
+            "change": 0,
+            "changePct": 0,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 44179,
+            "tradingValue": 2672846200,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:31:35.679662+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "109,072",
+              "accumulatedTradingValue": "66.2��",
+              "accumulatedTradingVolumeRaw": "109072",
+              "accumulatedTradingValueRaw": "6618000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 60712,
+            "tradingValue": 4266709750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0932",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 44913,
+            "tradingValue": 2717274700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:32:36.168592+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "109,587",
+              "accumulatedTradingValue": "66.5��",
+              "accumulatedTradingValueRaw": "6649000000",
+              "accumulatedTradingVolumeRaw": "109587"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 61473,
+            "tradingValue": 4320125950,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0933",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 45115,
+            "tradingValue": 2729507000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:33:35.664922+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "109,687",
+              "accumulatedTradingValue": "66.6��",
+              "accumulatedTradingVolumeRaw": "109687",
+              "accumulatedTradingValueRaw": "6655000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 62039,
+            "tradingValue": 4359845750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0934",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 61100,
+            "previousClose": 60700,
+            "change": 400,
+            "changePct": 0.66,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 47609,
+            "tradingValue": 2881447700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "61,000",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "300",
+              "fluctuationsRatio": "0.49",
+              "localTradedAt": "2026-09-18T09:34:36.152433+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "111,202",
+              "accumulatedTradingValue": "67.5��",
+              "accumulatedTradingVolumeRaw": "111202",
+              "accumulatedTradingValueRaw": "6748000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 62859,
+            "tradingValue": 4417337150,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0935",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60900,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 48006,
+            "tradingValue": 2905654600,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,800",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.16",
+              "localTradedAt": "2026-09-18T09:35:36.215067+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "111,535",
+              "accumulatedTradingValue": "67.7��",
+              "accumulatedTradingVolumeRaw": "111535",
+              "accumulatedTradingValueRaw": "6768000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70150,
+            "previousClose": 69100,
+            "change": 1050,
+            "changePct": 1.52,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 63278,
+            "tradingValue": 4446710800,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0936",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 49518,
+            "tradingValue": 2997457400,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:36:36.055489+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "111,868",
+              "accumulatedTradingValue": "67.9��",
+              "accumulatedTradingVolumeRaw": "111868",
+              "accumulatedTradingValueRaw": "6788000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 64901,
+            "tradingValue": 4560434550,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0937",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60600,
+            "previousClose": 60700,
+            "change": 100,
+            "changePct": 0.16,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 49615,
+            "tradingValue": 3003340100,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,600",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-100",
+              "fluctuationsRatio": "-0.16",
+              "localTradedAt": "2026-09-18T09:37:35.833105+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "112,090",
+              "accumulatedTradingValue": "68��",
+              "accumulatedTradingVolumeRaw": "112090",
+              "accumulatedTradingValueRaw": "6802000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 65375,
+            "tradingValue": 4593653450,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0938",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60400,
+            "previousClose": 60700,
+            "change": 300,
+            "changePct": 0.49,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 50534,
+            "tradingValue": 3058939800,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,400",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-300",
+              "fluctuationsRatio": "-0.49",
+              "localTradedAt": "2026-09-18T09:38:36.575846+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "112,567",
+              "accumulatedTradingValue": "68.3��",
+              "accumulatedTradingVolumeRaw": "112567",
+              "accumulatedTradingValueRaw": "6831000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70000,
+            "previousClose": 69100,
+            "change": 900,
+            "changePct": 1.3,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 66144,
+            "tradingValue": 4647536650,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0939",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60500,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 50661,
+            "tradingValue": 3066624300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,400",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-300",
+              "fluctuationsRatio": "-0.49",
+              "localTradedAt": "2026-09-18T09:39:36.375905+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "113,037",
+              "accumulatedTradingValue": "68.6��",
+              "accumulatedTradingVolumeRaw": "113037",
+              "accumulatedTradingValueRaw": "6859000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70200,
+            "previousClose": 69100,
+            "change": 1100,
+            "changePct": 1.59,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 66642,
+            "tradingValue": 4682460650,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260918 0940",
+        "stocks": {
+          "295310": {
+            "code": "295310",
+            "name": "����ġ���̿�",
+            "currentPrice": 60500,
+            "previousClose": 60700,
+            "change": 200,
+            "changePct": 0.33,
+            "open": 61000,
+            "high": 61300,
+            "low": 59600,
+            "volume": 50883,
+            "tradingValue": 3080055300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "60,500",
+              "openPrice": "61,500",
+              "highPrice": "62,400",
+              "lowPrice": "59,000",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-200",
+              "fluctuationsRatio": "-0.33",
+              "localTradedAt": "2026-09-18T09:40:36.629769+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1789683021.899,
+              "accumulatedTradingVolume": "113,193",
+              "accumulatedTradingValue": "68.7��",
+              "accumulatedTradingVolumeRaw": "113193",
+              "accumulatedTradingValueRaw": "6868000000"
+            }
+          },
+          "064400": {
+            "code": "064400",
+            "name": "LG��������",
+            "currentPrice": 70100,
+            "previousClose": 69100,
+            "change": 1000,
+            "changePct": 1.45,
+            "open": 70300,
+            "high": 70900,
+            "low": 70000,
+            "volume": 67366,
+            "tradingValue": 4733225550,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      }
+    ]
+  },
+  "latest": {
+    "atKst": "20260918 0940",
+    "stocks": {
+      "295310": {
+        "code": "295310",
+        "name": "����ġ���̿�",
+        "currentPrice": 60500,
+        "previousClose": 60700,
+        "change": 200,
+        "changePct": 0.33,
+        "open": 61000,
+        "high": 61300,
+        "low": 59600,
+        "volume": 50883,
+        "tradingValue": 3080055300,
+        "marketStatus": "OPEN",
+        "pollingIntervalMs": 7000,
+        "nxtOverMarketPriceInfo": {
+          "tradingSessionType": "REGULAR_MARKET",
+          "overMarketStatus": "OPEN",
+          "overPrice": "60,500",
+          "openPrice": "61,500",
+          "highPrice": "62,400",
+          "lowPrice": "59,000",
+          "compareToPreviousPrice": {
+            "code": "5",
+            "text": "�϶�",
+            "name": "FALLING"
+          },
+          "compareToPreviousClosePrice": "-200",
+          "fluctuationsRatio": "-0.33",
+          "localTradedAt": "2026-09-18T09:40:36.629769+09:00",
+          "tradeStopType": {
+            "code": "1",
+            "text": "�.Trading",
+            "name": "TRADING"
+          },
+          "tradableStatus": "tradable",
+          "tradableStatusCode": "ok",
+          "tradableStatusUpdatedAt": 1789683021.899,
+          "accumulatedTradingVolume": "113,193",
+          "accumulatedTradingValue": "68.7��",
+          "accumulatedTradingVolumeRaw": "113193",
+          "accumulatedTradingValueRaw": "6868000000"
+        }
+      },
+      "064400": {
+        "code": "064400",
+        "name": "LG��������",
+        "currentPrice": 70100,
+        "previousClose": 69100,
+        "change": 1000,
+        "changePct": 1.45,
+        "open": 70300,
+        "high": 70900,
+        "low": 70000,
+        "volume": 67366,
+        "tradingValue": 4733225550,
+        "marketStatus": "OPEN",
+        "pollingIntervalMs": 7000,
+        "nxtOverMarketPriceInfo": null
+      }
+    }
+  },
+  "indexes": {
+    "KOSPI": {
+      "value": 685179,
+      "change": 13638,
+      "changePct": 2.03,
+      "open": 688570,
+      "high": 688570,
+      "low": 683095,
+      "volume": 125648,
+      "tradingValue": 6972970,
+      "marketStatus": "OPEN"
+    },
+    "KOSDAQ": {
+      "value": 82914,
+      "change": 696,
+      "changePct": 0.85,
+      "open": 83272,
+      "high": 83357,
+      "low": 82692,
+      "volume": 279500,
+      "tradingValue": 3130190,
+      "marketStatus": "OPEN"
+    }
+  },
+  "scan": {
+    "volumeTop": [
+      {
+        "rank": 1,
+        "code": "000660",
+        "name": "SK하이닉스",
+        "price": 1825000,
+        "changePct": 4.58
+      },
+      {
+        "rank": 2,
+        "code": "005930",
+        "name": "삼성전자",
+        "price": 259000,
+        "changePct": 2.57
+      },
+      {
+        "rank": 3,
+        "code": "010170",
+        "name": "대한광통신",
+        "price": 18090,
+        "changePct": 12.15
+      },
+      {
+        "rank": 4,
+        "code": "009150",
+        "name": "삼성전기",
+        "price": 1396000,
+        "changePct": 4.96
+      },
+      {
+        "rank": 5,
+        "code": "005935",
+        "name": "삼성전자우",
+        "price": 196200,
+        "changePct": 1.5
+      },
+      {
+        "rank": 6,
+        "code": "000500",
+        "name": "가온전선",
+        "price": 316000,
+        "changePct": 21.31
+      },
+      {
+        "rank": 7,
+        "code": "043260",
+        "name": "성호전자",
+        "price": 24950,
+        "changePct": 15.51
+      },
+      {
+        "rank": 8,
+        "code": "001820",
+        "name": "삼화콘덴서",
+        "price": 147900,
+        "changePct": 7.49
+      },
+      {
+        "rank": 9,
+        "code": "028050",
+        "name": "삼성E&A",
+        "price": 53700,
+        "changePct": 5.09
+      },
+      {
+        "rank": 10,
+        "code": "001440",
+        "name": "대한전선",
+        "price": 31150,
+        "changePct": 10.07
+      },
+      {
+        "rank": 11,
+        "code": "046970",
+        "name": "우리로",
+        "price": 8420,
+        "changePct": 19.94
+      },
+      {
+        "rank": 12,
+        "code": "006340",
+        "name": "대원전선",
+        "price": 13930,
+        "changePct": 8.32
+      },
+      {
+        "rank": 13,
+        "code": "035420",
+        "name": "NAVER",
+        "price": 196700,
+        "changePct": -1.16
+      },
+      {
+        "rank": 14,
+        "code": "005690",
+        "name": "파미셀",
+        "price": 12930,
+        "changePct": 11.66
+      },
+      {
+        "rank": 15,
+        "code": "000150",
+        "name": "두산",
+        "price": 1440000,
+        "changePct": 2.49
+      },
+      {
+        "rank": 16,
+        "code": "402340",
+        "name": "SK스퀘어",
+        "price": 1041000,
+        "changePct": 3.27
+      },
+      {
+        "rank": 17,
+        "code": "036930",
+        "name": "주성엔지니어링",
+        "price": 204500,
+        "changePct": 0.25
+      },
+      {
+        "rank": 18,
+        "code": "047040",
+        "name": "대우건설",
+        "price": 19270,
+        "changePct": 4.22
+      },
+      {
+        "rank": 19,
+        "code": "024840",
+        "name": "KBI메탈",
+        "price": 6570,
+        "changePct": 11.73
+      },
+      {
+        "rank": 20,
+        "code": "001210",
+        "name": "금호전기",
+        "price": 12000,
+        "changePct": 13.1
+      }
+    ],
+    "risingLiquid": [
+      {
+        "rank": 87,
+        "code": "007610",
+        "name": "선도전기",
+        "price": 4945,
+        "changePct": 29.96
+      },
+      {
+        "rank": 93,
+        "code": "265740",
+        "name": "엔에프씨",
+        "price": 8055,
+        "changePct": 26.85
+      },
+      {
+        "rank": 6,
+        "code": "000500",
+        "name": "가온전선",
+        "price": 316000,
+        "changePct": 21.31
+      },
+      {
+        "rank": 11,
+        "code": "046970",
+        "name": "우리로",
+        "price": 8420,
+        "changePct": 19.94
+      },
+      {
+        "rank": 7,
+        "code": "043260",
+        "name": "성호전자",
+        "price": 24950,
+        "changePct": 15.51
+      },
+      {
+        "rank": 38,
+        "code": "229640",
+        "name": "LS에코에너지",
+        "price": 61200,
+        "changePct": 15.47
+      },
+      {
+        "rank": 25,
+        "code": "125490",
+        "name": "한라캐스트",
+        "price": 12700,
+        "changePct": 13.6
+      },
+      {
+        "rank": 20,
+        "code": "001210",
+        "name": "금호전기",
+        "price": 12000,
+        "changePct": 13.1
+      },
+      {
+        "rank": 3,
+        "code": "010170",
+        "name": "대한광통신",
+        "price": 18090,
+        "changePct": 12.15
+      },
+      {
+        "rank": 36,
+        "code": "456010",
+        "name": "아이씨티케이",
+        "price": 22950,
+        "changePct": 11.95
+      },
+      {
+        "rank": 19,
+        "code": "024840",
+        "name": "KBI메탈",
+        "price": 6570,
+        "changePct": 11.73
+      },
+      {
+        "rank": 14,
+        "code": "005690",
+        "name": "파미셀",
+        "price": 12930,
+        "changePct": 11.66
+      },
+      {
+        "rank": 35,
+        "code": "218410",
+        "name": "RFHIC",
+        "price": 58800,
+        "changePct": 10.11
+      },
+      {
+        "rank": 10,
+        "code": "001440",
+        "name": "대한전선",
+        "price": 31150,
+        "changePct": 10.07
+      },
+      {
+        "rank": 48,
+        "code": "052710",
+        "name": "아모텍",
+        "price": 17440,
+        "changePct": 9.82
+      },
+      {
+        "rank": 42,
+        "code": "103590",
+        "name": "일진전기",
+        "price": 76600,
+        "changePct": 9.12
+      },
+      {
+        "rank": 12,
+        "code": "006340",
+        "name": "대원전선",
+        "price": 13930,
+        "changePct": 8.32
+      },
+      {
+        "rank": 85,
+        "code": "078350",
+        "name": "한양디지텍",
+        "price": 24100,
+        "changePct": 7.83
+      },
+      {
+        "rank": 81,
+        "code": "131970",
+        "name": "두산테스나",
+        "price": 84850,
+        "changePct": 7.54
+      },
+      {
+        "rank": 8,
+        "code": "001820",
+        "name": "삼화콘덴서",
+        "price": 147900,
+        "changePct": 7.49
+      }
+    ]
+  }
+}
