@@ -1,8 +1,8 @@
 {
   "status": "OK",
   "tradeDate": "20260918",
-  "publishedAtUtc": "2026-09-18T01:39:53.300Z",
-  "publishedAtKst": "2026-09-18 10:39:53.300 KST",
+  "publishedAtUtc": "2026-09-18T01:59:35.636Z",
+  "publishedAtKst": "2026-09-18 10:59:35.636 KST",
   "source": "NAVER_PUBLIC_WEB_ENDPOINT",
   "watchlist": [
     "295310",
@@ -2705,25 +2705,25 @@
   },
   "indexes": {
     "KOSPI": {
-      "value": 685179,
-      "change": 13638,
-      "changePct": 2.03,
+      "value": 685338,
+      "change": 13797,
+      "changePct": 2.05,
       "open": 688570,
       "high": 688570,
       "low": 683095,
-      "volume": 125648,
-      "tradingValue": 6972970,
+      "volume": 136672,
+      "tradingValue": 7632746,
       "marketStatus": "OPEN"
     },
     "KOSDAQ": {
-      "value": 82914,
-      "change": 696,
-      "changePct": 0.85,
+      "value": 82770,
+      "change": 552,
+      "changePct": 0.67,
       "open": 83272,
       "high": 83357,
       "low": 82692,
-      "volume": 279500,
-      "tradingValue": 3130190,
+      "volume": 302132,
+      "tradingValue": 3421367,
       "marketStatus": "OPEN"
     }
   },
@@ -2733,8 +2733,8 @@
         "rank": 1,
         "code": "000660",
         "name": "SK하이닉스",
-        "price": 1825000,
-        "changePct": 4.58
+        "price": 1824000,
+        "changePct": 4.53
       },
       {
         "rank": 2,
@@ -2747,269 +2747,269 @@
         "rank": 3,
         "code": "010170",
         "name": "대한광통신",
-        "price": 18090,
-        "changePct": 12.15
+        "price": 18320,
+        "changePct": 13.58
       },
       {
         "rank": 4,
         "code": "009150",
         "name": "삼성전기",
-        "price": 1396000,
-        "changePct": 4.96
+        "price": 1400000,
+        "changePct": 5.26
       },
       {
         "rank": 5,
         "code": "005935",
         "name": "삼성전자우",
-        "price": 196200,
-        "changePct": 1.5
+        "price": 196000,
+        "changePct": 1.4
       },
       {
         "rank": 6,
-        "code": "000500",
-        "name": "가온전선",
-        "price": 316000,
-        "changePct": 21.31
+        "code": "043260",
+        "name": "성호전자",
+        "price": 25800,
+        "changePct": 19.44
       },
       {
         "rank": 7,
-        "code": "043260",
-        "name": "성호전자",
-        "price": 24950,
-        "changePct": 15.51
+        "code": "000500",
+        "name": "가온전선",
+        "price": 313500,
+        "changePct": 20.35
       },
       {
         "rank": 8,
         "code": "001820",
         "name": "삼화콘덴서",
-        "price": 147900,
-        "changePct": 7.49
+        "price": 146900,
+        "changePct": 6.76
       },
       {
         "rank": 9,
         "code": "028050",
         "name": "삼성E&A",
-        "price": 53700,
-        "changePct": 5.09
+        "price": 53100,
+        "changePct": 3.91
       },
       {
         "rank": 10,
         "code": "001440",
         "name": "대한전선",
-        "price": 31150,
-        "changePct": 10.07
+        "price": 31050,
+        "changePct": 9.72
       },
       {
         "rank": 11,
         "code": "046970",
         "name": "우리로",
-        "price": 8420,
-        "changePct": 19.94
+        "price": 8290,
+        "changePct": 18.09
       },
       {
         "rank": 12,
         "code": "006340",
         "name": "대원전선",
-        "price": 13930,
-        "changePct": 8.32
+        "price": 13890,
+        "changePct": 8.01
       },
       {
         "rank": 13,
         "code": "035420",
         "name": "NAVER",
-        "price": 196700,
-        "changePct": -1.16
+        "price": 196400,
+        "changePct": -1.31
       },
       {
         "rank": 14,
         "code": "005690",
         "name": "파미셀",
-        "price": 12930,
-        "changePct": 11.66
+        "price": 12970,
+        "changePct": 12
       },
       {
         "rank": 15,
         "code": "000150",
         "name": "두산",
-        "price": 1440000,
-        "changePct": 2.49
+        "price": 1450000,
+        "changePct": 3.2
       },
       {
         "rank": 16,
         "code": "402340",
         "name": "SK스퀘어",
-        "price": 1041000,
-        "changePct": 3.27
+        "price": 1043000,
+        "changePct": 3.47
       },
       {
         "rank": 17,
         "code": "036930",
         "name": "주성엔지니어링",
-        "price": 204500,
-        "changePct": 0.25
+        "price": 203500,
+        "changePct": -0.25
       },
       {
         "rank": 18,
         "code": "047040",
         "name": "대우건설",
-        "price": 19270,
-        "changePct": 4.22
+        "price": 19250,
+        "changePct": 4.11
       },
       {
         "rank": 19,
-        "code": "024840",
-        "name": "KBI메탈",
-        "price": 6570,
-        "changePct": 11.73
+        "code": "001210",
+        "name": "금호전기",
+        "price": 11830,
+        "changePct": 11.5
       },
       {
         "rank": 20,
-        "code": "001210",
-        "name": "금호전기",
-        "price": 12000,
-        "changePct": 13.1
+        "code": "007660",
+        "name": "이수페타시스",
+        "price": 100400,
+        "changePct": -5.28
       }
     ],
     "risingLiquid": [
       {
         "rank": 87,
-        "code": "007610",
-        "name": "선도전기",
-        "price": 4945,
-        "changePct": 29.96
-      },
-      {
-        "rank": 93,
         "code": "265740",
         "name": "엔에프씨",
-        "price": 8055,
-        "changePct": 26.85
+        "price": 8250,
+        "changePct": 29.92
+      },
+      {
+        "rank": 81,
+        "code": "007610",
+        "name": "선도전기",
+        "price": 4830,
+        "changePct": 26.94
+      },
+      {
+        "rank": 7,
+        "code": "000500",
+        "name": "가온전선",
+        "price": 313500,
+        "changePct": 20.35
       },
       {
         "rank": 6,
-        "code": "000500",
-        "name": "가온전선",
-        "price": 316000,
-        "changePct": 21.31
+        "code": "043260",
+        "name": "성호전자",
+        "price": 25800,
+        "changePct": 19.44
       },
       {
         "rank": 11,
         "code": "046970",
         "name": "우리로",
-        "price": 8420,
-        "changePct": 19.94
+        "price": 8290,
+        "changePct": 18.09
       },
       {
-        "rank": 7,
-        "code": "043260",
-        "name": "성호전자",
-        "price": 24950,
-        "changePct": 15.51
-      },
-      {
-        "rank": 38,
+        "rank": 40,
         "code": "229640",
         "name": "LS에코에너지",
-        "price": 61200,
-        "changePct": 15.47
-      },
-      {
-        "rank": 25,
-        "code": "125490",
-        "name": "한라캐스트",
-        "price": 12700,
-        "changePct": 13.6
-      },
-      {
-        "rank": 20,
-        "code": "001210",
-        "name": "금호전기",
-        "price": 12000,
-        "changePct": 13.1
+        "price": 60800,
+        "changePct": 14.72
       },
       {
         "rank": 3,
         "code": "010170",
         "name": "대한광통신",
-        "price": 18090,
-        "changePct": 12.15
-      },
-      {
-        "rank": 36,
-        "code": "456010",
-        "name": "아이씨티케이",
-        "price": 22950,
-        "changePct": 11.95
-      },
-      {
-        "rank": 19,
-        "code": "024840",
-        "name": "KBI메탈",
-        "price": 6570,
-        "changePct": 11.73
+        "price": 18320,
+        "changePct": 13.58
       },
       {
         "rank": 14,
         "code": "005690",
         "name": "파미셀",
-        "price": 12930,
-        "changePct": 11.66
+        "price": 12970,
+        "changePct": 12
       },
       {
-        "rank": 35,
+        "rank": 30,
         "code": "218410",
         "name": "RFHIC",
-        "price": 58800,
-        "changePct": 10.11
+        "price": 59800,
+        "changePct": 11.99
+      },
+      {
+        "rank": 19,
+        "code": "001210",
+        "name": "금호전기",
+        "price": 11830,
+        "changePct": 11.5
+      },
+      {
+        "rank": 23,
+        "code": "125490",
+        "name": "한라캐스트",
+        "price": 12460,
+        "changePct": 11.45
+      },
+      {
+        "rank": 39,
+        "code": "456010",
+        "name": "아이씨티케이",
+        "price": 22825,
+        "changePct": 11.34
+      },
+      {
+        "rank": 21,
+        "code": "024840",
+        "name": "KBI메탈",
+        "price": 6520,
+        "changePct": 10.88
       },
       {
         "rank": 10,
         "code": "001440",
         "name": "대한전선",
-        "price": 31150,
-        "changePct": 10.07
+        "price": 31050,
+        "changePct": 9.72
       },
       {
-        "rank": 48,
+        "rank": 53,
         "code": "052710",
         "name": "아모텍",
-        "price": 17440,
-        "changePct": 9.82
+        "price": 17400,
+        "changePct": 9.57
       },
       {
         "rank": 42,
         "code": "103590",
         "name": "일진전기",
-        "price": 76600,
-        "changePct": 9.12
+        "price": 76700,
+        "changePct": 9.26
+      },
+      {
+        "rank": 90,
+        "code": "078350",
+        "name": "한양디지텍",
+        "price": 24400,
+        "changePct": 9.17
+      },
+      {
+        "rank": 84,
+        "code": "131970",
+        "name": "두산테스나",
+        "price": 85400,
+        "changePct": 8.24
       },
       {
         "rank": 12,
         "code": "006340",
         "name": "대원전선",
-        "price": 13930,
-        "changePct": 8.32
+        "price": 13890,
+        "changePct": 8.01
       },
       {
-        "rank": 85,
-        "code": "078350",
-        "name": "한양디지텍",
-        "price": 24100,
+        "rank": 35,
+        "code": "327260",
+        "name": "RF머트리얼즈",
+        "price": 48900,
         "changePct": 7.83
-      },
-      {
-        "rank": 81,
-        "code": "131970",
-        "name": "두산테스나",
-        "price": 84850,
-        "changePct": 7.54
-      },
-      {
-        "rank": 8,
-        "code": "001820",
-        "name": "삼화콘덴서",
-        "price": 147900,
-        "changePct": 7.49
       }
     ]
   }
