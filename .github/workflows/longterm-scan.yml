@@ -58,14 +58,14 @@ jobs:
           TRADE_DATE=$(jq -r '.tradeDate // ""' longterm-scan.json)
           METHOD=$(jq -r '.methodologyVersion // ""' longterm-scan.json)
           ALLC=$(jq -r '.counts.allCandidates // -1' longterm-scan.json)
+          QUALIFIED=$(jq -r '.counts.qualifiedPool // -1' longterm-scan.json)
           BRIEFING=$(jq -r '.counts.briefingCandidates // -1' longterm-scan.json)
           CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' longterm-scan.json)
           MAX_CAND_RATIO=$(jq -r '.maxCandidateRatioForPass // 0.25' longterm-scan-config.json)
-          MAX_BRIEFING=$(jq -r '.maxBriefingCandidatesForPass // 100' longterm-scan-config.json)
 
           KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
           KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
-          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC briefingCandidates=$BRIEFING candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO maxBriefing=$MAX_BRIEFING"
+          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC qualifiedPool=$QUALIFIED briefingCandidates=$BRIEFING candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO"
 
           if [ "$STATUS" != "PASS" ] && [ "$STATUS" != "PARTIAL" ]; then
             echo "scanner did not produce a usable result"
@@ -79,6 +79,11 @@ jobs:
 
           if ! jq -e '.allCandidates | type=="array"' longterm-scan.json >/dev/null; then
             echo "allCandidates schema missing"
+            exit 1
+          fi
+
+          if ! jq -e '.qualifiedPool | type=="array"' longterm-scan.json >/dev/null; then
+            echo "qualifiedPool schema missing"
             exit 1
           fi
 
@@ -97,10 +102,6 @@ jobs:
             exit 1
           fi
 
-          if [ "$BRIEFING" -gt "$MAX_BRIEFING" ]; then
-            echo "briefing selectivity gate failed: count=$BRIEFING max=$MAX_BRIEFING"
-            exit 1
-          fi
 
           # Push-triggered validation may run during market hours. It may test the scanner,
           # but it must never overwrite the canonical after-close output before 15:40 KST.

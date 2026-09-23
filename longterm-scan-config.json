@@ -86,9 +86,15 @@
   ],
   "retestMaxPullbackTradingValueRatio": 0.85,
   "retestMaxPullbackVolumeRatio": 0.9,
-  "briefingPreJindolMaxDistancePct": 3.5,
-  "briefingMinCoreScore": 8,
-  "briefingMinAvg20TradingValueKrw": 10000000000,
-  "briefingAbcMinScore": 80,
-  "maxBriefingCandidatesForPass": 100
+  "qualifiedPreJindolMaxDistancePct": 3.5,
+  "qualifiedMinCoreScore": 8,
+  "qualifiedMinAvg20TradingValueKrw": 10000000000,
+  "qualifiedAbcMinScore": 80,
+  "briefingMinActionScore": 70,
+  "briefingMinStructuralRR": 1.15,
+  "briefingExplosionWarningCount": 25,
+  "actionScoreExtendedPct": 12,
+  "actionScoreVeryExtendedPct": 20,
+  "actionScoreMinCoreSourceCount": 2,
+  "actionScoreMinNextResistanceGapPct": 2
 }

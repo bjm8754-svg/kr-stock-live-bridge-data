@@ -67,3 +67,24 @@ The scanner deliberately separates pattern-state retention from next-session bri
 A pullback/retest is accepted only when price holds the reference-candle area **and** intervening trading value/volume contract versus the reference candle. The exact contraction thresholds are implementation inferences and remain configurable.
 
 Named historical securities are not part of production methodology, ranking, prompts, or special-case logic. Historical source examples are isolated as opaque QA fixtures only and confer no production priority.
+
+
+## Fresh re-ranking and action-value shortlist
+The first-stage quality set is now called `qualifiedPool`; it is not the user-facing briefing list.
+
+Every session:
+`full universe -> structural states -> qualifiedPool -> fresh actionScore -> briefingCandidates -> watchlist/attack selection`.
+
+`actionScore` is recomputed from current observable state only:
+- Structure 0–25
+- Money quality 0–20
+- Entry quality 0–25
+- Structural R/R 0–15
+- Acceptance/follow-through 0–10
+- Risk penalty 0 to -20
+
+Structural R/R uses detected support/resistance references only. It never manufactures a price by adding or subtracting an arbitrary percentage from the current price.
+
+Critical anti-anchoring rule: past selection, rejection, rank, watchlist membership, briefing inclusion, or a prior Gadol warning are audit history only. They are never next-session score inputs. Objective time-series facts such as reference candles, support/resistance, MA/cloud position, money expansion and retest behavior remain available because they are market-state evidence, not selection memory.
+
+A stock filtered out today can rank at the top tomorrow if fresh market data improves its action value. A stock ranked highly today receives no carry-over bonus tomorrow.

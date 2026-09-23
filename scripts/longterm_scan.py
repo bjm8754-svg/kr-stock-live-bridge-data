@@ -474,6 +474,20 @@ def build_core_resistance(hist, reference_price, cfg):
     candidates.sort(key=lambda c: (c["score"], -abs(c["distancePct"] or 999)), reverse=True)
     best = candidates[0]
     pad = float(cfg["coreZonePaddingPct"]) / 100.0
+
+    alternatives = []
+    for c in sorted(candidates, key=lambda z: z["line"]):
+        alternatives.append({
+            "line": rnum(c["line"], 2),
+            "zoneLow": rnum(min(c["low"], c["line"]*(1-pad)), 2),
+            "zoneHigh": rnum(max(c["high"], c["line"]*(1+pad)), 2),
+            "score": rnum(c["score"], 2),
+            "touches": int(c["touches"]),
+            "sourceCount": int(c["sourceCount"]),
+            "sources": c["sources"],
+            "distanceFromReferencePct": rnum(c["distancePct"]),
+        })
+
     return {
         "line": rnum(best["line"], 2),
         "zoneLow": rnum(min(best["low"], best["line"]*(1-pad)), 2),
@@ -484,6 +498,7 @@ def build_core_resistance(hist, reference_price, cfg):
         "sources": best["sources"],
         "distanceFromReferencePct": rnum(best["distancePct"]),
         "candidateCount": len(candidates),
+        "alternatives": alternatives[:12],
     }
 
 
@@ -498,6 +513,249 @@ def classify_breakout(break_core, cur_tv, tv_ratio, vol_ratio, close_loc, relati
     acceptance_ok = close_loc >= float(cfg["jindolMinCloseLocation"])
     relative_ok = relative_prior is None or relative_prior >= float(cfg["jindolMinRelativePriorMoney"])
     return "JINDOL_CONFIRMED" if money_ok and acceptance_ok and relative_ok else "GADOL_RISK"
+
+
+def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
+    """Construct an observable, non-arbitrary reference plan for ranking only.
+
+    This does NOT create a buy price by adding/subtracting a percentage from current price.
+    Entry/support/target references come only from detected structural levels.
+    """
+    close = float(cur["Close"])
+    candidates = []
+
+    def add_support(value, source):
+        if value is None:
+            return
+        try:
+            v = float(value)
+        except Exception:
+            return
+        if math.isfinite(v) and 0 < v <= close:
+            candidates.append((v, source))
+
+    if core:
+        add_support(core.get("zoneLow"), "CORE_ZONE_LOW")
+        add_support(core.get("line"), "CORE_LINE")
+
+    for ref, prefix in ((recent_anchor, "RECENT_REFERENCE"), (prior_event, "PRIOR_REFERENCE")):
+        if ref:
+            add_support(ref.get("open"), prefix + "_OPEN")
+            add_support(ref.get("close"), prefix + "_CLOSE")
+            add_support(ref.get("low"), prefix + "_LOW")
+
+    for p in ("240", "480", "600", "1000"):
+        add_support(ma.get(p), "MA" + p)
+
+    candidates.sort(key=lambda z: z[0], reverse=True)
+    support = candidates[0] if candidates else (None, None)
+
+    overhead = []
+    if core:
+        for c in core.get("alternatives") or []:
+            zl = c.get("zoneLow")
+            line = c.get("line")
+            if zl is None or line is None:
+                continue
+            if float(zl) > close and pct(float(zl), close) >= float(cfg["actionScoreMinNextResistanceGapPct"]):
+                overhead.append(c)
+    overhead.sort(key=lambda c: float(c["zoneLow"]))
+    nxt = overhead[0] if overhead else None
+
+    risk_pct = pct(close, support[0]) if support[0] else None
+    reward_pct = pct((nxt or {}).get("zoneLow"), close) if nxt else None
+    rr = None
+    if risk_pct is not None and reward_pct is not None and risk_pct > 0 and reward_pct > 0:
+        rr = reward_pct / risk_pct
+
+    return {
+        "evaluationReference": rnum(close, 2),
+        "nearestSupport": rnum(support[0], 2),
+        "supportSource": support[1],
+        "distanceToSupportPct": rnum(risk_pct),
+        "nextResistance": rnum((nxt or {}).get("zoneLow"), 2) if nxt else None,
+        "nextResistanceLine": rnum((nxt or {}).get("line"), 2) if nxt else None,
+        "nextResistanceSources": (nxt or {}).get("sources") if nxt else None,
+        "distanceToNextResistancePct": rnum(reward_pct),
+        "structuralRR": rnum(rr, 2),
+        "note": "Ranking reference only; actual intraday entry requires trigger confirmation.",
+    }
+
+
+def compute_action_score(x, cfg):
+    """Session-independent action-value score.
+
+    Only current observable chart/flow state is used. Prior selection/rejection/rank is
+    deliberately absent, so being filtered today cannot penalize or promote tomorrow.
+    """
+    sig = x.get("signal")
+    abc = x.get("abc") or {}
+    money = x.get("money") or {}
+    core = x.get("coreResistance") or {}
+    cloud = x.get("cloud") or {}
+    plan = x.get("entryPlan") or {}
+    retest = x.get("retestSupply") or {}
+
+    # STRUCTURE 0..25
+    structure = min(12.0, (float(abc.get("score") or 0) / 100.0) * 12.0)
+    if abc.get("bPlus"):
+        structure += 3.0
+    if cloud.get("state") == "ABOVE":
+        structure += 3.0
+    elif cloud.get("state") == "INSIDE":
+        structure += 1.0
+    structure += min(5.0, float(core.get("score") or 0) / 3.0)
+    if int(core.get("sourceCount") or 0) >= int(cfg["actionScoreMinCoreSourceCount"]):
+        structure += 2.0
+    structure = min(25.0, structure)
+
+    # MONEY QUALITY 0..20
+    tv = float(money.get("tradingValue") or 0)
+    tvr = float(money.get("tradingValueRatio20Estimated") or 0)
+    vr = float(money.get("volumeRatio20") or 0)
+    rel = money.get("relativeToPriorReferenceMoney")
+    close_loc = float(x.get("closeLocation") or 0)
+    money_score = 0.0
+    if tv >= float(cfg["veryStrongTradingValueKrw"]):
+        money_score += 9.0
+    elif tv >= float(cfg["jindolMinTradingValueKrw"]):
+        money_score += 7.0
+    elif tv >= float(cfg["discoveryMinTradingValueKrw"]):
+        money_score += 4.0
+    if tvr >= 2.0:
+        money_score += 4.0
+    elif tvr >= 1.5:
+        money_score += 3.0
+    elif tvr >= 1.3:
+        money_score += 2.0
+    elif tvr >= 1.0:
+        money_score += 1.0
+    if vr >= 2.0:
+        money_score += 4.0
+    elif vr >= 1.5:
+        money_score += 3.0
+    elif vr >= 1.2:
+        money_score += 1.5
+    if rel is not None:
+        rel = float(rel)
+        if rel >= 1.0:
+            money_score += 2.0
+        elif rel >= float(cfg["jindolMinRelativePriorMoney"]):
+            money_score += 1.0
+    if close_loc >= 0.7:
+        money_score += 1.0
+    money_score = min(20.0, money_score)
+
+    # ENTRY QUALITY 0..25
+    entry_map = {
+        "REACCELERATION": 25.0,
+        "JINDOL_CONFIRMED": 23.0,
+        "RETEST_OK": 22.0,
+        "DEOYANGBONG_C_TRIGGER": 20.0,
+        "B_PLUS": 12.0,
+        "ABC_CANDIDATE": 8.0,
+        "NEW_LISTING_SETUP": 12.0,
+        "MA600_BREAKOUT": 8.0,
+        "NEAR_MA600": 4.0,
+        "GADOL_RISK": 2.0,
+        "DATA_WARNING": 0.0,
+    }
+    entry = entry_map.get(sig, 0.0)
+    if sig == "PRE_JINDOL":
+        dist = x.get("distanceToCorePct")
+        if dist is not None and 0 <= float(dist) <= 1.5:
+            entry = 18.0
+        elif dist is not None and 0 <= float(dist) <= float(cfg["qualifiedPreJindolMaxDistancePct"]):
+            entry = 14.0
+        else:
+            entry = 8.0
+
+    # R/R 0..15 from structural levels only.
+    rr = plan.get("structuralRR")
+    rr_score = 0.0
+    if rr is not None:
+        rr = float(rr)
+        if rr >= 3.0:
+            rr_score = 15.0
+        elif rr >= 2.0:
+            rr_score = 12.0
+        elif rr >= 1.5:
+            rr_score = 9.0
+        elif rr >= float(cfg["briefingMinStructuralRR"]):
+            rr_score = 6.0
+        elif rr >= 0.8:
+            rr_score = 2.0
+
+    # ACCEPTANCE / FOLLOW-THROUGH 0..10
+    acceptance = 0.0
+    if retest.get("supplyDry"):
+        acceptance += 4.0
+    if x.get("reacceleration") or x.get("yangEumYang"):
+        acceptance += 3.0
+    if close_loc >= 0.7:
+        acceptance += 2.0
+    elif close_loc >= 0.55:
+        acceptance += 1.0
+    if x.get("breakoutClass") == "JINDOL_CONFIRMED":
+        acceptance += 1.0
+    acceptance = min(10.0, acceptance)
+
+    # RISK PENALTY 0..20
+    penalty = 0.0
+    penalty_reasons = []
+    if sig == "GADOL_RISK":
+        penalty += 12.0
+        penalty_reasons.append("WEAK_BREAKOUT_QUALITY")
+    if sig == "DATA_WARNING":
+        penalty += 20.0
+        penalty_reasons.append("DATA_WARNING")
+    dist_support = plan.get("distanceToSupportPct")
+    if dist_support is not None:
+        ds = float(dist_support)
+        if ds >= float(cfg["actionScoreVeryExtendedPct"]):
+            penalty += 12.0
+            penalty_reasons.append("VERY_EXTENDED_FROM_SUPPORT")
+        elif ds >= float(cfg["actionScoreExtendedPct"]):
+            penalty += 6.0
+            penalty_reasons.append("EXTENDED_FROM_SUPPORT")
+    if close_loc < 0.35 and float(x.get("dayChangePct") or 0) > 0:
+        penalty += 4.0
+        penalty_reasons.append("WEAK_CLOSE_UPPER_SUPPLY")
+    rel = money.get("relativeToPriorReferenceMoney")
+    if x.get("breakCoreResistance") and rel is not None and float(rel) < float(cfg["jindolMinRelativePriorMoney"]):
+        penalty += 4.0
+        penalty_reasons.append("WEAKER_THAN_PRIOR_REFERENCE_MONEY")
+    if cloud.get("state") == "BELOW":
+        penalty += 2.0
+        penalty_reasons.append("CLOUD_OVERHEAD")
+    penalty = min(20.0, penalty)
+
+    base = structure + money_score + entry + rr_score + acceptance
+    total = max(0.0, min(95.0, base - penalty))
+    actionable = bool(
+        sig not in ("GADOL_RISK", "DATA_WARNING", "NONE", "NEAR_MA600")
+        and total >= float(cfg["briefingMinActionScore"])
+        and (
+            rr is None
+            or float(rr) >= float(cfg["briefingMinStructuralRR"])
+            or sig in ("REACCELERATION", "JINDOL_CONFIRMED", "DEOYANGBONG_C_TRIGGER")
+        )
+    )
+
+    return {
+        "total": rnum(total, 1),
+        "components": {
+            "structure": rnum(structure, 1),
+            "moneyQuality": rnum(money_score, 1),
+            "entryQuality": rnum(entry, 1),
+            "structuralRR": rnum(rr_score, 1),
+            "acceptance": rnum(acceptance, 1),
+            "riskPenalty": rnum(penalty, 1),
+        },
+        "actionableForBriefing": actionable,
+        "penaltyReasons": penalty_reasons,
+        "selectionMemoryUsed": False,
+    }
 
 
 def analyze_frame(meta, raw_df, cfg):
@@ -774,6 +1032,8 @@ def analyze_frame(meta, raw_df, cfg):
         else "LIGHT"
     )
 
+    entry_plan = build_structural_entry_plan(cur, core, ma, prior_event, anchor, cfg)
+
     warnings = []
     if anomaly:
         warnings.append(f"HIST_PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(anomaly[-3:])}")
@@ -818,6 +1078,7 @@ def analyze_frame(meta, raw_df, cfg):
         "yangEumYang": bool(yey),
         "recentReferenceCandle": anchor,
         "newListingSetup": bool(new_listing_setup),
+        "entryPlan": entry_plan,
         "money": {
             "band": money_band,
             "tradingValue": rnum(cur_tv, 0),
@@ -860,12 +1121,11 @@ SIGNAL_PRIORITY = {
 }
 
 
-def is_briefing_candidate(x, cfg):
-    """Strict next-session discovery layer.
+def is_qualified_candidate(x, cfg):
+    """First-stage quality pool, not the user-facing briefing shortlist.
 
-    The full state map stays in allCandidates/radarCandidates so early structures are
-    not lost. briefingCandidates is intentionally narrower and is the layer meant to
-    be summarized exhaustively in the next 08:15 plan.
+    This keeps sufficiently strong structures for fresh daily re-ranking. Membership
+    here is recalculated from current market data every run and carries no selection memory.
     """
     sig = x.get("signal")
     money = x.get("money") or {}
@@ -891,31 +1151,31 @@ def is_briefing_candidate(x, cfg):
 
     if sig == "PRE_JINDOL":
         return bool(
-            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
-            and core_score >= float(cfg["briefingMinCoreScore"])
+            avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"])
+            and core_score >= float(cfg["qualifiedMinCoreScore"])
             and dist_core is not None
-            and 0 <= dist_core <= float(cfg["briefingPreJindolMaxDistancePct"])
+            and 0 <= dist_core <= float(cfg["qualifiedPreJindolMaxDistancePct"])
             and (
                 abc.get("bPlus")
                 or (ref.get("tradingValueEstimated") or 0) >= float(cfg["deoyangbongMinTradingValueKrw"])
-                or (abc.get("score") or 0) >= float(cfg["briefingAbcMinScore"])
+                or (abc.get("score") or 0) >= float(cfg["qualifiedAbcMinScore"])
             )
         )
 
     if sig == "B_PLUS":
-        return bool(avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"]))
+        return bool(avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"]))
 
     if sig == "ABC_CANDIDATE":
         return bool(
-            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
-            and (abc.get("score") or 0) >= float(cfg["briefingAbcMinScore"])
+            avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"])
+            and (abc.get("score") or 0) >= float(cfg["qualifiedAbcMinScore"])
             and dist_core is not None
-            and 0 <= dist_core <= float(cfg["briefingPreJindolMaxDistancePct"])
+            and 0 <= dist_core <= float(cfg["qualifiedPreJindolMaxDistancePct"])
         )
 
     if sig == "NEW_LISTING_SETUP":
         return bool(
-            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
+            avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"])
             and (ref.get("tradingValueEstimated") or 0) >= float(cfg["deoyangbongMinTradingValueKrw"])
         )
 
@@ -927,6 +1187,19 @@ def is_briefing_candidate(x, cfg):
         )
 
     return False
+
+
+def sort_action(xs):
+    return sorted(
+        xs,
+        key=lambda x: (
+            float((x.get("actionScore") or {}).get("total") or -1),
+            SIGNAL_PRIORITY.get(x.get("signal"), 0),
+            x.get("rawScore", x.get("score", 0)),
+            ((x.get("money") or {}).get("tradingValueRatio20Estimated") or 0),
+        ),
+        reverse=True,
+    )
 
 
 def sortit(xs):
@@ -971,16 +1244,14 @@ def run(cfg):
     ]
     by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
     allc = sortit([x for x in cur if x["signal"] != "NONE"])
-    briefing = sortit([x for x in allc if is_briefing_candidate(x, cfg)])
+    qualified = sortit([x for x in allc if is_qualified_candidate(x, cfg)])
     risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK"])
-    briefing_codes = {x["code"] for x in briefing}
-    risk_codes = {x["code"] for x in risk_warnings}
-    radar = sortit([x for x in allc if x["code"] not in briefing_codes and x["code"] not in risk_codes])
 
-    # Candidate flow enrichment is briefing-first, then risk warnings, then the broad radar.
+    # Candidate flow enrichment is qualified-pool first, then risk warnings, then broad radar.
+    # Flow is supporting evidence only; actionScore itself stays reproducible from chart/flow price data.
     flow_pool = []
     seen = set()
-    for x in briefing + risk_warnings + allc:
+    for x in qualified + risk_warnings + allc:
         if x["code"] not in seen:
             seen.add(x["code"])
             flow_pool.append(x)
@@ -1000,19 +1271,40 @@ def run(cfg):
                     x["investorFlow"] = {"status": "ERROR", "error": f"{type(e).__name__}: {e}"}
                     flow_errors.append({"code": x["code"], "error": f"{type(e).__name__}: {e}"})
 
+    # Fresh ranking every run: no prior shortlist/rejection/rank is read or reused.
+    for x in qualified:
+        x["actionScore"] = compute_action_score(x, cfg)
+    briefing = sort_action([
+        x for x in qualified
+        if (x.get("actionScore") or {}).get("actionableForBriefing")
+    ])
+    briefing_codes = {x["code"] for x in briefing}
+    risk_codes = {x["code"] for x in risk_warnings}
+    qualified_codes = {x["code"] for x in qualified}
+    radar = sortit([
+        x for x in allc
+        if x["code"] not in briefing_codes
+        and x["code"] not in risk_codes
+        and x["code"] not in qualified_codes
+    ] + [
+        x for x in qualified
+        if x["code"] not in briefing_codes
+    ])
+
     er = len(errors) / max(1, len(uni))
     sr = (len(ok) - len(cur)) / max(1, len(ok))
     candidate_ratio = len(allc) / max(1, len(cur))
+    qualified_ratio = len(qualified) / max(1, len(cur))
     briefing_ratio = len(briefing) / max(1, len(cur))
     status = "PASS" if (
         er <= float(cfg["maxErrorRatioForPass"])
         and sr <= float(cfg["maxStaleRatioForPass"])
         and candidate_ratio <= float(cfg["maxCandidateRatioForPass"])
-        and len(briefing) <= int(cfg["maxBriefingCandidatesForPass"])
     ) else "PARTIAL"
     lim = int(cfg["maxPerBucket"])
     counts = {name: len(xs) for name, xs in by_signal.items()}
     counts["allCandidates"] = len(allc)
+    counts["qualifiedPool"] = len(qualified)
     counts["briefingCandidates"] = len(briefing)
     counts["riskWarnings"] = len(risk_warnings)
     counts["radarCandidates"] = len(radar)
@@ -1048,6 +1340,8 @@ def run(cfg):
             "StructuralGrade is this system's grade, not the source teacher's S/A/B grade.",
             "Current trading value is exact KRX Amount when available; historical trading value is estimated from typical price x volume.",
             "Core resistance is built from pre-current data only to avoid look-ahead leakage.",
+            "Past shortlist/rejection/rank is audit-only and is never used as a next-session scoring input.",
+            "Every run rebuilds qualifiedPool and actionScore from current observable market state.",
         ],
         "coverage": {
             "universe": len(uni),
@@ -1063,7 +1357,9 @@ def run(cfg):
             "flowEnriched": flow_n,
             "flowErrors": len(flow_errors),
             "candidateRatio": round(candidate_ratio, 4),
+            "qualifiedPoolRatio": round(qualified_ratio, 4),
             "briefingCandidateRatio": round(briefing_ratio, 4),
+            "briefingSelectivityWarning": len(briefing) > int(cfg["briefingExplosionWarningCount"]),
         },
         "counts": counts,
         "reacceleration": take("REACCELERATION"),
@@ -1077,6 +1373,7 @@ def run(cfg):
         "newListing": take("NEW_LISTING_SETUP"),
         "ma600": sortit(take("MA600_BREAKOUT") + take("NEAR_MA600"))[:lim],
         "warnings": take("DATA_WARNING"),
+        "qualifiedPool": qualified,
         "briefingCandidates": briefing,
         "riskWarnings": risk_warnings,
         "radarCandidates": radar[:int(cfg["maxAllCandidates"])],
@@ -1104,7 +1401,9 @@ def main():
             "code": x.get("code"),
             "name": x.get("name"),
             "signal": x.get("signal"),
+            "actionScore": (x.get("actionScore") or {}).get("total"),
             "score": x.get("score"),
+            "structuralRR": (x.get("entryPlan") or {}).get("structuralRR"),
             "coreLine": (x.get("coreResistance") or {}).get("line"),
             "tradingValue": (x.get("money") or {}).get("tradingValue"),
         })

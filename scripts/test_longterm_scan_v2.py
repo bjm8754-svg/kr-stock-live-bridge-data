@@ -68,6 +68,30 @@ weak = {
     "distanceToCorePct":1.0,
     "retestSupply":{"supplyDry":True},
 }
-assert not scan.is_briefing_candidate(weak, cfg)
+assert not scan.is_qualified_candidate(weak, cfg)
+
+# Selection-memory invariant: action score depends only on current observable fields.
+sample = {
+    "signal":"PRE_JINDOL",
+    "abc":{"score":90,"bPlus":True},
+    "money":{"tradingValue":120_000_000_000,"tradingValueRatio20Estimated":1.6,
+             "volumeRatio20":1.7,"relativeToPriorReferenceMoney":0.9},
+    "coreResistance":{"score":12,"sourceCount":3},
+    "cloud":{"state":"ABOVE"},
+    "entryPlan":{"structuralRR":2.1,"distanceToSupportPct":5.0},
+    "retestSupply":{"supplyDry":False},
+    "closeLocation":0.72,
+    "distanceToCorePct":1.0,
+    "breakCoreResistance":False,
+    "reacceleration":False,
+    "yangEumYang":False,
+}
+s1 = scan.compute_action_score(sample, cfg)
+sample["yesterdayRejected"] = True
+sample["previousRank"] = 999
+sample["wasBriefed"] = False
+s2 = scan.compute_action_score(sample, cfg)
+assert s1 == s2
+assert s1["selectionMemoryUsed"] is False
 
 print("V2 self-tests: PASS")
