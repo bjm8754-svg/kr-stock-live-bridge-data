@@ -441,6 +441,7 @@ def build_core_resistance(hist, reference_price, cfg):
         "zoneHigh": rnum(max(best["high"], best["line"]*(1+pad)), 2),
         "score": rnum(best["score"], 2),
         "touches": int(best["touches"]),
+        "sourceCount": int(best["sourceCount"]),
         "sources": best["sources"],
         "distanceFromReferencePct": rnum(best["distancePct"]),
         "candidateCount": len(candidates),
@@ -490,7 +491,10 @@ def analyze_frame(meta, raw_df, cfg):
 
     lb = min(len(df) - 1, int(cfg["corporateActionGuardLookback"]))
     moves = df["Close"].pct_change().iloc[-lb:].abs()
-    anomaly = list(moves[moves > float(cfg["corporateActionJumpPct"]) / 100.0].index.strftime("%Y%m%d"))
+    jump_mask = moves > float(cfg["corporateActionJumpPct"]) / 100.0
+    anomaly = list(moves[jump_mask].index.strftime("%Y%m%d"))
+    recent_moves = moves.iloc[-int(cfg["recentDataWarningLookbackSessions"]):]
+    recent_anomaly = list(recent_moves[recent_moves > float(cfg["corporateActionJumpPct"]) / 100.0].index.strftime("%Y%m%d"))
 
     events = rolling_event_mask(df, cfg)
     prior_event_pos = latest_event_position(events, int(cfg["priorIgnitionLookbackSessions"]), exclude_last=True)
@@ -513,12 +517,47 @@ def analyze_frame(meta, raw_df, cfg):
     core = build_core_resistance(df.iloc[:-1], float(prev["Close"]), cfg)
 
     break_core = False
-    pre_jindol = False
+    pre_jindol_raw = False
     if core:
         zhi = float(core["zoneHigh"])
         break_core = bool(prev["Close"] <= zhi and cur["Close"] > zhi)
         dist = pct(core["line"], cur["Close"])
-        pre_jindol = bool(not break_core and dist is not None and 0 <= dist <= float(cfg["preJindolMaxDistancePct"]))
+        pre_jindol_raw = bool(not break_core and dist is not None and 0 <= dist <= float(cfg["preJindolMaxDistancePct"]))
+
+    avg_liquid = bool(pd.notna(avg20_tv) and float(avg20_tv) >= float(cfg["discoveryMinAvg20TradingValueKrw"]))
+    recent_reference = bool(
+        prior_event_pos is not None
+        and (len(df) - 1 - prior_event_pos) <= int(cfg["preJindolPriorReferenceLookbackSessions"])
+    )
+    d600_abs = None
+    if long_track and pd.notna(cur.get("MA600")):
+        d600_abs = abs(pct(cur["Close"], cur["MA600"]) or 999)
+    abc_candidate = bool(
+        avg_liquid and (
+            abc.get("state") == "C_ACTIVE"
+            or (
+                abc.get("state") == "B_BASE"
+                and d600_abs is not None
+                and d600_abs <= float(cfg["abcCandidateMaxDistanceMa600Pct"])
+            )
+        )
+    )
+    core_quality = bool(
+        core
+        and float(core.get("score") or 0) >= float(cfg["preJindolMinCoreScore"])
+        and int(core.get("sourceCount") or 0) >= int(cfg["preJindolMinCoreSourceCount"])
+    )
+    pre_jindol = bool(
+        pre_jindol_raw
+        and avg_liquid
+        and core_quality
+        and (
+            abc.get("bPlus")
+            or abc_candidate
+            or recent_reference
+            or not long_track
+        )
+    )
 
     breakout_class = classify_breakout(
         break_core, cur_tv, tv_ratio, vol_ratio, close_loc, rel_prior_money, cfg
@@ -588,13 +627,21 @@ def analyze_frame(meta, raw_df, cfg):
                     rng_pct is not None and rng_pct <= float(cfg["newListingMaxPostEventRangePct"])
                 )
 
-    if anomaly:
+    gaodol_actionable = bool(
+        breakout_class == "GADOL_RISK"
+        and (
+            cur_tv >= float(cfg["gaodolMinTradingValueKrw"])
+            or (tv_ratio or 0) >= float(cfg["gaodolMinTurnoverRatio20"])
+        )
+    )
+
+    if recent_anomaly:
         signal = "DATA_WARNING"
     elif reaccel or yey:
         signal = "REACCELERATION"
     elif breakout_class == "JINDOL_CONFIRMED":
         signal = "JINDOL_CONFIRMED"
-    elif breakout_class == "GADOL_RISK":
+    elif gaodol_actionable:
         signal = "GADOL_RISK"
     elif retest_ok:
         signal = "RETEST_OK"
@@ -602,9 +649,9 @@ def analyze_frame(meta, raw_df, cfg):
         signal = "DEOYANGBONG_C_TRIGGER"
     elif pre_jindol:
         signal = "PRE_JINDOL"
-    elif abc.get("bPlus"):
+    elif abc.get("bPlus") and avg_liquid:
         signal = "B_PLUS"
-    elif abc.get("state") in ("B_BASE", "C_ACTIVE", "A_TO_B"):
+    elif abc_candidate:
         signal = "ABC_CANDIDATE"
     elif new_listing_setup:
         signal = "NEW_LISTING_SETUP"
@@ -646,8 +693,10 @@ def analyze_frame(meta, raw_df, cfg):
         structure_score += 8
     if reaccel or yey:
         structure_score += 15
-    if anomaly:
+    if recent_anomaly:
         structure_score -= 60
+    elif anomaly:
+        structure_score -= 8
     total_score = max(0, min(100, structure_score + money_score))
 
     structural_grade = "STRONG" if total_score >= 80 else ("GOOD" if total_score >= 65 else ("WATCH" if total_score >= 50 else "EARLY"))
@@ -660,7 +709,9 @@ def analyze_frame(meta, raw_df, cfg):
 
     warnings = []
     if anomaly:
-        warnings.append(f"PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(anomaly[-3:])}")
+        warnings.append(f"HIST_PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(anomaly[-3:])}")
+    if recent_anomaly:
+        warnings.append(f"RECENT_PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(recent_anomaly[-3:])}")
     if tv_quality == "ESTIMATED":
         warnings.append("CURRENT_TRADING_VALUE_ESTIMATED")
 
@@ -782,7 +833,12 @@ def run(cfg):
 
     er = len(errors) / max(1, len(uni))
     sr = (len(ok) - len(cur)) / max(1, len(ok))
-    status = "PASS" if er <= float(cfg["maxErrorRatioForPass"]) and sr <= float(cfg["maxStaleRatioForPass"]) else "PARTIAL"
+    candidate_ratio = len(allc) / max(1, len(cur))
+    status = "PASS" if (
+        er <= float(cfg["maxErrorRatioForPass"])
+        and sr <= float(cfg["maxStaleRatioForPass"])
+        and candidate_ratio <= float(cfg["maxCandidateRatioForPass"])
+    ) else "PARTIAL"
     lim = int(cfg["maxPerBucket"])
     counts = {name: len(xs) for name, xs in by_signal.items()}
     counts["allCandidates"] = len(allc)
@@ -832,6 +888,7 @@ def run(cfg):
             "tradeDateCounts": dict(dates.most_common(5)),
             "flowEnriched": flow_n,
             "flowErrors": len(flow_errors),
+            "candidateRatio": round(candidate_ratio, 4),
         },
         "counts": counts,
         "reacceleration": take("REACCELERATION"),
