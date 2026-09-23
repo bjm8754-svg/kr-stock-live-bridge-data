@@ -54,7 +54,17 @@ jobs:
           TRADE_DATE=$(jq -r '.tradeDate // ""' longterm-scan.json)
 
           KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
-          echo "status=$STATUS tradeDate=$TRADE_DATE kstToday=$KST_TODAY universe=$UNIVERSE current=$CURRENT"
+          KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
+          echo "status=$STATUS tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT"
+
+          # Push-triggered validation may run during market hours. It may test the scanner,
+          # but it must never overwrite the canonical after-close output before 15:40 KST.
+          if [ "$KST_HHMM" -lt 1540 ]; then
+            echo "pre-close validation run; do not commit canonical scan"
+            echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
+            git checkout -- longterm-scan.json
+            exit 0
+          fi
 
           if [ "$TRADE_DATE" != "$KST_TODAY" ]; then
             echo "no fresh Korean session data yet (holiday or data not ready); skip commit"
