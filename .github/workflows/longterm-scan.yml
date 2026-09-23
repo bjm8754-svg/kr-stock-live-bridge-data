@@ -36,7 +36,7 @@ jobs:
       - name: Install scanner dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade FinanceDataReader pandas
+          pip install --upgrade finance-datareader pandas
 
       - name: Run full KOSPI/KOSDAQ scan
         run: |
