@@ -77,9 +77,20 @@ GitHub Actions runs weekdays at **16:30 KST**. Holiday/stale data is detected an
 ## Validation
 Every workflow run now performs local V2 self-tests before the full-market scan. Coverage and methodology-version gates must also pass before a canonical result can be committed.
 
-## Downstream
-Intended pipeline:
+## Output and downstream
+Operational layers are intentionally separated:
 
-`after-close full-market V2 scan -> next 08:15 candidate compression -> watchlist -> Cloudflare/live bridge -> 09:35/09:40 intraday follow-through validation`.
+- `allCandidates`: diagnostic union of all non-NONE structural states.
+- `qualifiedPool`: first-stage quality pool. This is recalculated fresh each run and is not user-facing.
+- `actionScore`: fresh session score built from structure, money quality, entry quality, structural R/R, acceptance/follow-through and risk penalty.
+- `briefingCandidates`: user-facing shortlist that passes the current action-value threshold. No fixed-N cutoff is imposed.
+- `riskWarnings`: Gadol/weak-breakout quality warnings, kept separate from positive discovery.
+- `radarCandidates`: earlier or less-confirmed states retained for observation without selection-memory bonus.
 
-Master/08:15/09:35/09:40 prompts should be updated only after the V2 scanner itself is validated.
+Selection-memory rule: previous shortlist inclusion/exclusion, prior rank, prior watchlist membership and prior Gadol labeling are audit history only and never become next-session score inputs. Objective time-series state such as reference candles, support/resistance, MA/cloud position, money expansion and retest behavior remains available.
+
+Current pipeline:
+
+`after-close full-market V2 scan -> fresh qualifiedPool/actionScore -> next 08:15 briefing shortlist -> watchlist -> Cloudflare/live bridge -> 09:35/09:40 intraday follow-through validation`.
+
+The Canonical Master and the 08:15/09:35/09:40 automations have been migrated to the V2 schema.

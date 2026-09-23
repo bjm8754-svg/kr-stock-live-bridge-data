@@ -57,12 +57,14 @@ These are structural states, not automatic buy/sell instructions.
 
 
 ## Operational output layers
-The scanner deliberately separates pattern-state retention from next-session briefing discovery.
+The scanner deliberately separates structural-state retention, first-stage qualification, fresh action-value ranking and user-facing disclosure.
 
-- `briefingCandidates`: strict positive discovery layer intended to be summarized exhaustively in the next 08:15 plan.
-- `riskWarnings`: weak-breakout / Gadol quality warnings; kept separate from positive discovery.
-- `radarCandidates`: earlier or less-confirmed structures retained for continuity without crowding the briefing.
 - `allCandidates`: diagnostic union of non-NONE states.
+- `qualifiedPool`: first-stage quality pool recalculated from current market state every run; not user-facing.
+- `actionScore`: fresh session action-value score. It does not read prior selection/rejection/rank.
+- `briefingCandidates`: user-facing positive shortlist that passes the current action-value threshold; there is no fixed-number cutoff.
+- `riskWarnings`: weak-breakout / Gadol quality warnings, kept separate from positive discovery.
+- `radarCandidates`: earlier or less-confirmed structures retained for observation without carry-over selection bonus.
 
 A pullback/retest is accepted only when price holds the reference-candle area **and** intervening trading value/volume contract versus the reference candle. The exact contraction thresholds are implementation inferences and remain configurable.
 
