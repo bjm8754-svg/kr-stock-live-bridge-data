@@ -202,7 +202,8 @@ def analyze(meta, cfg):
 
     lb = min(len(df) - 1, int(cfg["corporateActionGuardLookback"]))
     moves = df["Close"].pct_change().iloc[-lb:].abs()
-    anomaly = list(df.index[moves > float(cfg["corporateActionJumpPct"]) / 100.0].strftime("%Y%m%d"))
+    jump_mask = moves > float(cfg["corporateActionJumpPct"]) / 100.0
+    anomaly = list(moves[jump_mask].index.strftime("%Y%m%d"))
 
     strong = bool(
         cross600
