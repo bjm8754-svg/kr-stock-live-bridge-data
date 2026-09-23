@@ -231,6 +231,11 @@ def ma_slope_pct(series, lookback):
 
 
 def abc_features(df, cfg):
+    """ABC heuristic anchored to the base that existed BEFORE a recent MA600 recovery.
+
+    This avoids a common false negative in mature C-stage charts: once price has already
+    advanced strongly, the current last-120-session range no longer resembles the old B base.
+    """
     n = len(df)
     if n < int(cfg["minLongHistoryRows"]) or pd.isna(df.iloc[-1].get("MA600")):
         return {
@@ -243,25 +248,52 @@ def abc_features(df, cfg):
             "cActive": False,
             "cross600Today": False,
             "bPlus": False,
+            "cStartDate": None,
         }
 
-    look = min(n - 1, int(cfg["abcAWindowSessions"]))
-    hist = df.iloc[-look-1:-1]
-    a_decline = None
-    if len(hist) >= 120:
-        peak_i = int(np.argmax(hist["High"].values))
-        peak = float(hist["High"].iloc[peak_i])
-        trough = float(hist.iloc[peak_i:]["Low"].min())
-        a_decline = (peak - trough) / peak * 100.0 if peak > 0 else None
+    cur = df.iloc[-1]
+    c_active = bool(pd.notna(cur["MA600"]) and cur["Close"] > cur["MA600"])
+    cross_flags = (
+        (df["Close"].shift(1) <= df["MA600"].shift(1))
+        & (df["Close"] > df["MA600"])
+    ).fillna(False)
+    search_start = max(1, n - int(cfg["abcCSearchLookbackSessions"]))
+    cross_pos = np.where(cross_flags.iloc[search_start:].values)[0]
+    c_pos = (search_start + int(cross_pos[-1])) if len(cross_pos) else None
 
-    blook = min(int(cfg["abcBaseLookbackSessions"]), n - 1)
-    base = df.iloc[-blook-1:-1]
+    # If C has started, inspect the base immediately before that recovery.
+    # Otherwise inspect the current pre-session base.
+    base_end = c_pos if c_pos is not None else n - 1
+    blook = int(cfg["abcBaseLookbackSessions"])
+    base_start = max(0, base_end - blook)
+    base = df.iloc[base_start:base_end]
+
     b_range = None
     if len(base) >= 20:
         lo, hi = float(base["Low"].min()), float(base["High"].max())
         b_range = (hi / lo - 1.0) * 100.0 if lo > 0 else None
 
-    slope600 = ma_slope_pct(df["MA600"], int(cfg["abcMaSlopeLookbackSessions"]))
+    slope_ref = c_pos if c_pos is not None else n - 1
+    slope_lb = int(cfg["abcMaSlopeLookbackSessions"])
+    slope600 = None
+    if slope_ref - slope_lb >= 0:
+        v1, v0 = df["MA600"].iloc[slope_ref], df["MA600"].iloc[slope_ref-slope_lb]
+        if pd.notna(v1) and pd.notna(v0):
+            slope600 = pct(v1, v0)
+
+    # A is measured over the long window ending at C-start/current base end, allowing
+    # the trough to occur inside the B base after the long decline.
+    a_end = max(base_end, 1)
+    a_start = max(0, a_end - int(cfg["abcAWindowSessions"]))
+    ahist = df.iloc[a_start:a_end]
+    a_decline = None
+    if len(ahist) >= 120:
+        peak_i = int(np.argmax(ahist["High"].values))
+        peak = float(ahist["High"].iloc[peak_i])
+        after = ahist.iloc[peak_i:]
+        trough = float(after["Low"].min()) if len(after) else peak
+        a_decline = (peak - trough) / peak * 100.0 if peak > 0 else None
+
     a_ok = bool(a_decline is not None and a_decline >= float(cfg["abcMinDeclinePct"]))
     b_ok = bool(
         b_range is not None
@@ -270,28 +302,25 @@ def abc_features(df, cfg):
         and abs(slope600) <= float(cfg["abcMa600MaxAbsSlopePct"])
     )
 
-    cur, prev = df.iloc[-1], df.iloc[-2]
-    cross600 = bool(
-        pd.notna(cur["MA600"]) and pd.notna(prev["MA600"])
-        and prev["Close"] <= prev["MA600"] and cur["Close"] > cur["MA600"]
-    )
-    c_active = bool(
-        pd.notna(cur["MA600"]) and cur["Close"] > cur["MA600"]
-        and (pd.isna(cur.get("MA240")) or cur["Close"] > cur["MA240"])
-    )
-    recent = df.iloc[-min(60, n):]
-    b_plus = bool(
-        b_ok
-        and ((recent["TV_EST"] >= float(cfg["deoyangbongMinTradingValueKrw"]))
-             & (recent["VOL_RATIO20"] >= float(cfg["bPlusMinVolumeRatio20"]))).fillna(False).any()
-        and (cross600 or c_active)
-    )
+    # B+ proxy: meaningful money/volume arrived around the C transition, not merely
+    # sometime in the distant recent window.
+    b_plus = False
+    if c_pos is not None:
+        w0, w1 = max(0, c_pos - 5), min(n, c_pos + 11)
+        around = df.iloc[w0:w1]
+        b_plus = bool(
+            b_ok
+            and ((around["TV_EST"] >= float(cfg["deoyangbongMinTradingValueKrw"]))
+                 & (around["VOL_RATIO20"] >= float(cfg["bPlusMinVolumeRatio20"]))).fillna(False).any()
+        )
 
     score = (30 if a_ok else 0) + (30 if b_ok else 0) + (30 if c_active else 0) + (10 if b_plus else 0)
     if a_ok and b_ok and c_active:
         state = "C_ACTIVE"
     elif a_ok and b_ok:
         state = "B_BASE"
+    elif a_ok and c_active:
+        state = "C_RECOVERY_NONCLASSIC_BASE"
     elif a_ok:
         state = "A_TO_B"
     elif c_active:
@@ -307,10 +336,10 @@ def abc_features(df, cfg):
         "bRangePct": rnum(b_range),
         "ma600Slope60Pct": rnum(slope600),
         "cActive": bool(c_active),
-        "cross600Today": bool(cross600),
+        "cross600Today": bool(c_pos == n - 1),
         "bPlus": bool(b_plus),
+        "cStartDate": df.index[c_pos].strftime("%Y%m%d") if c_pos is not None else None,
     }
-
 
 def round_levels(price):
     if price <= 0:
