@@ -90,11 +90,12 @@
   "qualifiedMinCoreScore": 8,
   "qualifiedMinAvg20TradingValueKrw": 10000000000,
   "qualifiedAbcMinScore": 80,
-  "briefingMinActionScore": 70,
+  "briefingMinActionScore": 58,
   "briefingMinStructuralRR": 1.15,
   "briefingExplosionWarningCount": 25,
   "actionScoreExtendedPct": 12,
   "actionScoreVeryExtendedPct": 20,
   "actionScoreMinCoreSourceCount": 2,
-  "actionScoreMinNextResistanceGapPct": 2
+  "actionScoreMinNextResistanceGapPct": 2,
+  "entryPlanMinMeaningfulSupportDistancePct": 0.5
 }

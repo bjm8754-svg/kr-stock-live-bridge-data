@@ -548,7 +548,13 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         add_support(ma.get(p), "MA" + p)
 
     candidates.sort(key=lambda z: z[0], reverse=True)
-    support = candidates[0] if candidates else (None, None)
+    support = (None, None)
+    if candidates:
+        meaningful = [
+            z for z in candidates
+            if (pct(close, z[0]) or 0) >= float(cfg["entryPlanMinMeaningfulSupportDistancePct"])
+        ]
+        support = meaningful[0] if meaningful else candidates[0]
 
     overhead = []
     if core:
@@ -611,6 +617,7 @@ def compute_action_score(x, cfg):
 
     # MONEY QUALITY 0..20
     tv = float(money.get("tradingValue") or 0)
+    avg_tv = float(money.get("avg20TradingValueEstimated") or 0)
     tvr = float(money.get("tradingValueRatio20Estimated") or 0)
     vr = float(money.get("volumeRatio20") or 0)
     rel = money.get("relativeToPriorReferenceMoney")
@@ -622,6 +629,14 @@ def compute_action_score(x, cfg):
         money_score += 7.0
     elif tv >= float(cfg["discoveryMinTradingValueKrw"]):
         money_score += 4.0
+
+    # A quiet pre-trigger day is not illiquidity if the stock normally trades enough money.
+    if avg_tv >= float(cfg["jindolMinTradingValueKrw"]):
+        money_score += 3.0
+    elif avg_tv >= float(cfg["discoveryMinTradingValueKrw"]):
+        money_score += 2.0
+    elif avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"]):
+        money_score += 1.0
     if tvr >= 2.0:
         money_score += 4.0
     elif tvr >= 1.5:
@@ -698,6 +713,8 @@ def compute_action_score(x, cfg):
         acceptance += 1.0
     if x.get("breakoutClass") == "JINDOL_CONFIRMED":
         acceptance += 1.0
+    if sig == "PRE_JINDOL" and 0 < tvr <= 0.8 and 0 < vr <= 0.9:
+        acceptance += 2.0
     acceptance = min(10.0, acceptance)
 
     # RISK PENALTY 0..20
@@ -742,8 +759,18 @@ def compute_action_score(x, cfg):
         )
     )
 
+    if actionable:
+        briefing_tier = (
+            "ACTION_NOW"
+            if total >= 70 and sig in ("REACCELERATION", "JINDOL_CONFIRMED", "RETEST_OK", "DEOYANGBONG_C_TRIGGER")
+            else "WATCH_TRIGGER"
+        )
+    else:
+        briefing_tier = "RADAR"
+
     return {
         "total": rnum(total, 1),
+        "briefingTier": briefing_tier,
         "components": {
             "structure": rnum(structure, 1),
             "moneyQuality": rnum(money_score, 1),

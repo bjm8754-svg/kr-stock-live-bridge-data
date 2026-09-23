@@ -88,3 +88,9 @@ Structural R/R uses detected support/resistance references only. It never manufa
 Critical anti-anchoring rule: past selection, rejection, rank, watchlist membership, briefing inclusion, or a prior Gadol warning are audit history only. They are never next-session score inputs. Objective time-series facts such as reference candles, support/resistance, MA/cloud position, money expansion and retest behavior remain available because they are market-state evidence, not selection memory.
 
 A stock filtered out today can rank at the top tomorrow if fresh market data improves its action value. A stock ranked highly today receives no carry-over bonus tomorrow.
+
+
+## Action-score calibration note
+For pre-trigger structures, today's quiet turnover is not automatically negative if normal liquidity is sufficient; average liquidity and controlled quietness can support a WATCH_TRIGGER classification. Structural R/R ignores near-duplicate support references that are effectively at the current close by preferring the next meaningful detected structural support. These are implementation heuristics, not source-quoted thresholds.
+
+The current user-facing threshold is config-driven (`briefingMinActionScore`) and does not impose a fixed number of stocks. `ACTION_NOW` and `WATCH_TRIGGER` are presentation tiers only and are freshly recomputed each run.

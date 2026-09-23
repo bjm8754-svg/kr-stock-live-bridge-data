@@ -93,5 +93,6 @@ sample["wasBriefed"] = False
 s2 = scan.compute_action_score(sample, cfg)
 assert s1 == s2
 assert s1["selectionMemoryUsed"] is False
+assert s1["briefingTier"] in ("ACTION_NOW", "WATCH_TRIGGER", "RADAR")
 
 print("V2 self-tests: PASS")
