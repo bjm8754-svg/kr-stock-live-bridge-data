@@ -47,7 +47,15 @@ jobs:
           CURRENT=$(jq -r '.coverage.currentTradeDate // 0' longterm-scan.json)
           TRADE_DATE=$(jq -r '.tradeDate // ""' longterm-scan.json)
 
-          echo "status=$STATUS tradeDate=$TRADE_DATE universe=$UNIVERSE current=$CURRENT"
+          KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
+          echo "status=$STATUS tradeDate=$TRADE_DATE kstToday=$KST_TODAY universe=$UNIVERSE current=$CURRENT"
+
+          if [ "$TRADE_DATE" != "$KST_TODAY" ]; then
+            echo "no fresh Korean session data yet (holiday or data not ready); skip commit"
+            echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
+            git checkout -- longterm-scan.json
+            exit 0
+          fi
 
           if [ "$STATUS" != "PASS" ] && [ "$STATUS" != "PARTIAL" ]; then
             echo "scanner did not produce a usable result"
@@ -60,6 +68,7 @@ jobs:
           fi
 
       - name: Commit scan result
+        if: env.SKIP_COMMIT != '1'
         shell: bash
         run: |
           set -euo pipefail
