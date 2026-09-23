@@ -9,8 +9,8 @@ on:
       - "longterm-scan-config.json"
       - ".github/workflows/longterm-scan.yml"
   schedule:
-    # 16:20 KST, Monday-Friday. Holiday runs are harmless; tradeDate freshness is recorded.
-    - cron: "20 7 * * 1-5"
+    # 16:30 KST, Monday-Friday. Holiday/stale runs are detected and not committed.
+    - cron: "30 7 * * 1-5"
 
 permissions:
   contents: write
