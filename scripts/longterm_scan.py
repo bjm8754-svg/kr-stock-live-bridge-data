@@ -10,7 +10,7 @@ Current daily turnover/market cap: KRX listing via FinanceDataReader.
 """
 
 from __future__ import annotations
-import argparse, concurrent.futures as cf, datetime as dt, json, math, re
+import argparse, concurrent.futures as cf, datetime as dt, json, math, re, urllib.parse, urllib.request
 from collections import Counter
 from pathlib import Path
 
@@ -34,6 +34,73 @@ def pct(a, b):
 
 def sma(s: pd.Series, n: int):
     return s.rolling(n, min_periods=n).mean()
+
+
+def parse_int_text(v):
+    if v is None:
+        return 0
+    s = str(v).replace(",", "").replace("+", "").strip()
+    if s in ("", "-", "N/A", "None"):
+        return 0
+    try:
+        return int(float(s))
+    except Exception:
+        return 0
+
+
+def fetch_investor_flow(code: str, limit: int = 20):
+    """Public Naver investor trend. Used only to enrich chart candidates."""
+    qs = urllib.parse.urlencode({"code": code})
+    url = f"https://m.stock.naver.com/front-api/stock/domestic/trend?{qs}"
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "application/json",
+            "User-Agent": "Mozilla/5.0 longterm-scan/1.0",
+            "Referer": f"https://m.stock.naver.com/domestic/stock/{code}/total",
+        },
+        method="GET",
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        payload = json.loads(resp.read().decode("utf-8"))
+    rows = payload.get("dealTrendInfos", payload) if isinstance(payload, dict) else payload
+    if not isinstance(rows, list):
+        return {"status": "BAD_SCHEMA", "rows": 0}
+    rows = rows[:limit]
+    norm = []
+    for x in rows:
+        if not isinstance(x, dict):
+            continue
+        f = parse_int_text(x.get("foreignerPureBuyQuant"))
+        o = parse_int_text(x.get("organPureBuyQuant"))
+        ind = parse_int_text(x.get("individualPureBuyQuant"))
+        vol = parse_int_text(x.get("accumulatedTradingVolume"))
+        norm.append({
+            "bizdate": str(x.get("bizdate", "")),
+            "foreign": f, "institution": o, "individual": ind, "volume": vol,
+            "foreignHoldRatio": x.get("foreignerHoldRatio"),
+        })
+    def agg(n):
+        rr = norm[:n]
+        fv = sum(x["foreign"] for x in rr)
+        ov = sum(x["institution"] for x in rr)
+        vv = sum(x["volume"] for x in rr)
+        return {
+            "foreignNetShares": fv,
+            "institutionNetShares": ov,
+            "combinedNetShares": fv + ov,
+            "netParticipationPct": rnum((fv + ov) / vv * 100.0) if vv else None,
+        }
+    return {
+        "status": "OK",
+        "source": "NAVER_PUBLIC_INVESTOR_TREND",
+        "latestBizdate": norm[0]["bizdate"] if norm else None,
+        "foreignHoldRatio": norm[0]["foreignHoldRatio"] if norm else None,
+        "rows": len(norm),
+        "d1": agg(1),
+        "d5": agg(min(5, len(norm))),
+        "d20": agg(min(20, len(norm))),
+    }
 
 
 def current_listing():
@@ -231,6 +298,21 @@ def run(cfg):
     failed = sortit([x for x in cur if x["signal"]=="FAILED_BREAKOUT_600"])
     allc = sortit([x for x in cur if x["signal"]!="NONE"])
 
+    # Enrich only the highest-ranked chart/flow candidates with foreign/institution flow.
+    # This avoids turning the scanner into thousands of extra investor-trend requests.
+    flow_n = min(int(cfg.get("flowEnrichTopN", 60)), len(allc))
+    flow_errors = []
+    if flow_n > 0:
+        with cf.ThreadPoolExecutor(max_workers=min(8, int(cfg["maxWorkers"]))) as ex:
+            fm2 = {ex.submit(fetch_investor_flow, x["code"], int(cfg.get("flowLookbackSessions", 20))): x for x in allc[:flow_n]}
+            for fut in cf.as_completed(fm2):
+                x = fm2[fut]
+                try:
+                    x["investorFlow"] = fut.result()
+                except Exception as e:
+                    x["investorFlow"] = {"status": "ERROR", "error": f"{type(e).__name__}: {e}"}
+                    flow_errors.append({"code": x["code"], "error": f"{type(e).__name__}: {e}"})
+
     er = len(errors)/max(1,len(uni)); sr = (len(ok)-len(cur))/max(1,len(ok))
     status = "PASS" if er <= float(cfg["maxErrorRatioForPass"]) and sr <= float(cfg["maxStaleRatioForPass"]) else "PARTIAL"
     lim = int(cfg["maxPerBucket"])
@@ -245,10 +327,10 @@ def run(cfg):
             "Current trading value is exact KRX Amount when available; 20-session comparison is estimated from typical price x volume."
         ],
         "thresholds":{k:cfg[k] for k in ["nearMa600Pct","strongBodyPct","strongTurnoverRatio20","minTurnoverRatio20","strongCloseLocation","minTurnoverWatchKrw","strongTurnoverKrw","volumeRatio20","acceptanceLookbackSessions"]},
-        "coverage":{"universe":len(uni),"ok":len(ok),"currentTradeDate":len(cur),"insufficientHistory":len(insufficient),"fetchErrors":len(errors),"staleRows":len(ok)-len(cur),"errorRatio":round(er,4),"staleRatio":round(sr,4),"tradeDateCounts":dict(dates.most_common(5))},
+        "coverage":{"universe":len(uni),"ok":len(ok),"currentTradeDate":len(cur),"insufficientHistory":len(insufficient),"fetchErrors":len(errors),"staleRows":len(ok)-len(cur),"errorRatio":round(er,4),"staleRatio":round(sr,4),"tradeDateCounts":dict(dates.most_common(5)),"flowEnriched":flow_n,"flowErrors":len(flow_errors)},
         "counts":{"strongBreakouts":len(strong),"allBreakouts":len(breaks),"nearBreakouts":len(near),"acceptanceOrReacceleration":len(acc),"failedBreakouts":len(failed),"allCandidates":len(allc)},
         "strongBreakouts":strong[:lim],"breakouts":breaks[:lim],"nearBreakouts":near[:lim],"acceptance":acc[:lim],"failedBreakouts":failed[:lim],
-        "allCandidates":allc[:int(cfg["maxAllCandidates"])],"sampleErrors":errors[:30]
+        "allCandidates":allc[:int(cfg["maxAllCandidates"])],"sampleErrors":errors[:30],"sampleFlowErrors":flow_errors[:20]
     }
 
 
