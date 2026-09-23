@@ -1,0 +1,43 @@
+name: YBM V2 Historical Replay
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/longterm_scan.py"
+      - "scripts/test_longterm_scan_v2.py"
+      - "scripts/replay_validate_v2.py"
+      - "longterm-scan-config.json"
+      - ".github/workflows/v2-replay.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ybm-v2-historical-replay
+  cancel-in-progress: true
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade finance-datareader pandas
+
+      - name: Run V2 self-tests
+        run: python scripts/test_longterm_scan_v2.py
+
+      - name: Replay source examples
+        run: python scripts/replay_validate_v2.py
