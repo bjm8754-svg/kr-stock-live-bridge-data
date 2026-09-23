@@ -2,6 +2,12 @@ name: Long-term MA600 Swing Scan
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/longterm_scan.py"
+      - "longterm-scan-config.json"
+      - ".github/workflows/longterm-scan.yml"
   schedule:
     # 16:20 KST, Monday-Friday. Holiday runs are harmless; tradeDate freshness is recorded.
     - cron: "20 7 * * 1-5"
