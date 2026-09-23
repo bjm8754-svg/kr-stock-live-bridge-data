@@ -50,7 +50,7 @@
   "preJindolMaxDistancePct": 6,
   "priorIgnitionLookbackSessions": 252,
   "acceptanceLookbackSessions": 20,
-  "anchorCloseUnderTolerancePct": 3,
+  "anchorCloseUnderTolerancePct": 4,
   "reaccelerationTurnoverRatio20": 1.5,
   "reaccelerationMinCloseLocation": 0.6,
   "yangEumYangMaxUnderFirstOpenPct": 2,
@@ -75,5 +75,6 @@
   "gaodolMinTradingValueKrw": 30000000000,
   "gaodolMinTurnoverRatio20": 1.3,
   "recentDataWarningLookbackSessions": 60,
-  "maxCandidateRatioForPass": 0.25
+  "maxCandidateRatioForPass": 0.25,
+  "abcCSearchLookbackSessions": 252
 }
