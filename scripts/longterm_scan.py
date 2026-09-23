@@ -264,14 +264,23 @@ def abc_features(df, cfg):
     # If C has started, inspect the base immediately before that recovery.
     # Otherwise inspect the current pre-session base.
     base_end = c_pos if c_pos is not None else n - 1
-    blook = int(cfg["abcBaseLookbackSessions"])
-    base_start = max(0, base_end - blook)
-    base = df.iloc[base_start:base_end]
-
-    b_range = None
-    if len(base) >= 20:
-        lo, hi = float(base["Low"].min()), float(base["High"].max())
-        b_range = (hi / lo - 1.0) * 100.0 if lo > 0 else None
+    base_choices = []
+    for w in [int(x) for x in cfg.get("abcBaseWindowCandidates", [cfg["abcBaseLookbackSessions"]])]:
+        if base_end >= w:
+            seg = df.iloc[base_end-w:base_end]
+            if len(seg) >= 20:
+                lo, hi = float(seg["Low"].min()), float(seg["High"].max())
+                rr = (hi / lo - 1.0) * 100.0 if lo > 0 else None
+                if rr is not None:
+                    base_choices.append((w, rr))
+    acceptable = [x for x in base_choices if x[1] <= float(cfg["abcBaseMaxRangePct"])]
+    if acceptable:
+        b_window, b_range = sorted(acceptable, key=lambda x: x[0], reverse=True)[0]
+    elif base_choices:
+        b_window, b_range = sorted(base_choices, key=lambda x: x[1])[0]
+    else:
+        b_window, b_range = None, None
+    base_start = max(0, base_end - (b_window or int(cfg["abcBaseLookbackSessions"])))
 
     slope_ref = c_pos if c_pos is not None else n - 1
     slope_lb = int(cfg["abcMaSlopeLookbackSessions"])
@@ -334,6 +343,7 @@ def abc_features(df, cfg):
         "score": int(score),
         "aDeclinePct": rnum(a_decline),
         "bRangePct": rnum(b_range),
+        "bWindowSessions": int(b_window) if b_window is not None else None,
         "ma600Slope60Pct": rnum(slope600),
         "cActive": bool(c_active),
         "cross600Today": bool(c_pos == n - 1),
