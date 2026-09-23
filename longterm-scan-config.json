@@ -31,7 +31,7 @@
   "abcAWindowSessions": 500,
   "abcMinDeclinePct": 25,
   "abcBaseLookbackSessions": 120,
-  "abcBaseMaxRangePct": 45,
+  "abcBaseMaxRangePct": 60,
   "abcMaSlopeLookbackSessions": 60,
   "abcMa600MaxAbsSlopePct": 12,
   "bPlusMinVolumeRatio20": 1.5,
@@ -76,5 +76,12 @@
   "gaodolMinTurnoverRatio20": 1.3,
   "recentDataWarningLookbackSessions": 60,
   "maxCandidateRatioForPass": 0.25,
-  "abcCSearchLookbackSessions": 252
+  "abcCSearchLookbackSessions": 252,
+  "abcBaseWindowCandidates": [
+    40,
+    60,
+    90,
+    120,
+    180
+  ]
 }
