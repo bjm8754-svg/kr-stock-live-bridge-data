@@ -57,10 +57,20 @@ jobs:
           KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
           echo "status=$STATUS tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT"
 
+          if [ "$STATUS" != "PASS" ] && [ "$STATUS" != "PARTIAL" ]; then
+            echo "scanner did not produce a usable result"
+            exit 1
+          fi
+
+          if [ "$UNIVERSE" -lt 1500 ] || [ "$CURRENT" -lt 1000 ]; then
+            echo "coverage gate failed"
+            exit 1
+          fi
+
           # Push-triggered validation may run during market hours. It may test the scanner,
           # but it must never overwrite the canonical after-close output before 15:40 KST.
           if [ "$KST_HHMM" -lt 1540 ]; then
-            echo "pre-close validation run; do not commit canonical scan"
+            echo "pre-close validation passed; do not commit canonical scan"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
             git checkout -- longterm-scan.json
             exit 0
@@ -71,16 +81,6 @@ jobs:
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
             git checkout -- longterm-scan.json
             exit 0
-          fi
-
-          if [ "$STATUS" != "PASS" ] && [ "$STATUS" != "PARTIAL" ]; then
-            echo "scanner did not produce a usable result"
-            exit 1
-          fi
-
-          if [ "$UNIVERSE" -lt 1500 ] || [ "$CURRENT" -lt 1000 ]; then
-            echo "coverage gate failed"
-            exit 1
           fi
 
       - name: Commit scan result
