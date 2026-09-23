@@ -66,5 +66,14 @@
   "maxPerBucket": 75,
   "maxAllCandidates": 250,
   "flowEnrichTopN": 60,
-  "flowLookbackSessions": 20
+  "flowLookbackSessions": 20,
+  "discoveryMinAvg20TradingValueKrw": 5000000000,
+  "preJindolMinCoreScore": 6,
+  "preJindolMinCoreSourceCount": 2,
+  "preJindolPriorReferenceLookbackSessions": 120,
+  "abcCandidateMaxDistanceMa600Pct": 10,
+  "gaodolMinTradingValueKrw": 30000000000,
+  "gaodolMinTurnoverRatio20": 1.3,
+  "recentDataWarningLookbackSessions": 60,
+  "maxCandidateRatioForPass": 0.25
 }
