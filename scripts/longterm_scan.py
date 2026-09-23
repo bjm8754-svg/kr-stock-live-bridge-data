@@ -37,7 +37,12 @@ def sma(s: pd.Series, n: int):
 
 
 def current_listing():
-    df = fdr.StockListing("KRX").copy()
+    # Prefer direct KRX same-day listing; fall back to FDR cache if KRX blocks the request.
+    try:
+        from FinanceDataReader.krx.listing import KrxMarcapListing
+        df = KrxMarcapListing("KRX").read().copy()
+    except Exception:
+        df = fdr.StockListing("KRX").copy()
     code_col = "Code" if "Code" in df.columns else "Symbol"
     df[code_col] = df[code_col].astype(str).str.zfill(6)
     df = df[df[code_col].str.fullmatch(r"\d{6}")].copy()
