@@ -57,4 +57,17 @@ assert out["abc"]["state"] == "NOT_APPLICABLE_LONG_MA"
 
 # Final output must be serializable with numpy/pandas values.
 json.dumps(out, ensure_ascii=False, default=scan.json_default)
+# Operational briefing layer must not promote a plain weak breakout warning.
+weak = {
+    "signal":"GADOL_RISK",
+    "money":{"avg20TradingValueEstimated":20_000_000_000,"tradingValue":50_000_000_000,
+             "tradingValueRatio20Estimated":2.0,"volumeRatio20":2.0},
+    "abc":{"score":90,"bPlus":True},
+    "deoyangbong":{"latestPrior":{"tradingValueEstimated":150_000_000_000}},
+    "coreResistance":{"score":12},
+    "distanceToCorePct":1.0,
+    "retestSupply":{"supplyDry":True},
+}
+assert not scan.is_briefing_candidate(weak, cfg)
+
 print("V2 self-tests: PASS")

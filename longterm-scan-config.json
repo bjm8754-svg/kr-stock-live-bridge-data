@@ -83,5 +83,12 @@
     90,
     120,
     180
-  ]
+  ],
+  "retestMaxPullbackTradingValueRatio": 0.85,
+  "retestMaxPullbackVolumeRatio": 0.9,
+  "briefingPreJindolMaxDistancePct": 3.5,
+  "briefingMinCoreScore": 8,
+  "briefingMinAvg20TradingValueKrw": 10000000000,
+  "briefingAbcMinScore": 80,
+  "maxBriefingCandidatesForPass": 100
 }

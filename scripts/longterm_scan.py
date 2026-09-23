@@ -601,6 +601,7 @@ def analyze_frame(meta, raw_df, cfg):
     breakout_class = classify_breakout(
         break_core, cur_tv, tv_ratio, vol_ratio, close_loc, rel_prior_money, cfg
     )
+    core_distance_now = pct(core["line"], cur["Close"]) if core else None
 
     ma, ma_dist = {}, {}
     for p in [int(x) for x in cfg["maPeriods"]]:
@@ -620,17 +621,43 @@ def analyze_frame(meta, raw_df, cfg):
     recent_anchor_pos = latest_event_position(events, int(cfg["acceptanceLookbackSessions"]), exclude_last=True)
     retest_ok = reaccel = False
     anchor = None
+    retest_supply = {
+        "pullbackTradingValueToAnchor": None,
+        "pullbackVolumeToAnchor": None,
+        "supplyDry": False,
+    }
     if recent_anchor_pos is not None:
         anchor = event_info(df, recent_anchor_pos)
         anchor_close = float(df["Close"].iloc[recent_anchor_pos])
         anchor_open = float(df["Open"].iloc[recent_anchor_pos])
+        anchor_tv = float(df["TV_EST"].iloc[recent_anchor_pos])
+        anchor_vol = float(df["Volume"].iloc[recent_anchor_pos])
         hold_line = max(anchor_open, anchor_close * (1 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0))
         post = df.iloc[recent_anchor_pos+1:]
         if len(post):
-            retest_ok = bool(
+            # On a reacceleration day, judge supply contraction on the intervening pullback,
+            # excluding today's renewed demand. If today is the first rest day, use today.
+            pullback = post.iloc[:-1] if len(post) >= 2 else post
+            pb_tv = float(pullback["TV_EST"].max()) if len(pullback) else 0.0
+            pb_vol = float(pullback["Volume"].max()) if len(pullback) else 0.0
+            pb_tv_ratio = pb_tv / anchor_tv if anchor_tv > 0 else None
+            pb_vol_ratio = pb_vol / anchor_vol if anchor_vol > 0 else None
+            supply_dry = bool(
+                pb_tv_ratio is not None
+                and pb_vol_ratio is not None
+                and pb_tv_ratio <= float(cfg["retestMaxPullbackTradingValueRatio"])
+                and pb_vol_ratio <= float(cfg["retestMaxPullbackVolumeRatio"])
+            )
+            retest_supply = {
+                "pullbackTradingValueToAnchor": rnum(pb_tv_ratio),
+                "pullbackVolumeToAnchor": rnum(pb_vol_ratio),
+                "supplyDry": supply_dry,
+            }
+            price_hold = bool(
                 float(post["Close"].min()) >= hold_line
                 and cur["Close"] >= anchor_close * (1 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0)
             )
+            retest_ok = bool(price_hold and supply_dry)
             if len(post) >= 2:
                 prior_high = float(post["High"].iloc[:-1].max())
                 reaccel = bool(
@@ -736,7 +763,8 @@ def analyze_frame(meta, raw_df, cfg):
         structure_score -= 60
     elif anomaly:
         structure_score -= 8
-    total_score = max(0, min(100, structure_score + money_score))
+    raw_score = max(0, structure_score + money_score)
+    total_score = min(100, raw_score)
 
     structural_grade = "STRONG" if total_score >= 80 else ("GOOD" if total_score >= 65 else ("WATCH" if total_score >= 50 else "EARLY"))
     money_band = (
@@ -764,6 +792,7 @@ def analyze_frame(meta, raw_df, cfg):
         "signal": signal,
         "structuralGrade": structural_grade,
         "score": int(total_score),
+        "rawScore": int(raw_score),
         "close": rnum(cur["Close"], 0),
         "open": rnum(cur["Open"], 0),
         "high": rnum(cur["High"], 0),
@@ -779,10 +808,12 @@ def analyze_frame(meta, raw_df, cfg):
         "abc": abc,
         "deoyangbong": {"today": bool(current_deoyang), "preferred15Pct": bool(current_deoyang_preferred), "latestPrior": prior_event},
         "coreResistance": core,
+        "distanceToCorePct": rnum(core_distance_now),
         "breakCoreResistance": bool(break_core),
         "breakoutClass": breakout_class,
         "preJindol": bool(pre_jindol),
         "retestOk": bool(retest_ok),
+        "retestSupply": retest_supply,
         "reacceleration": bool(reaccel),
         "yangEumYang": bool(yey),
         "recentReferenceCandle": anchor,
@@ -829,12 +860,81 @@ SIGNAL_PRIORITY = {
 }
 
 
+def is_briefing_candidate(x, cfg):
+    """Strict next-session discovery layer.
+
+    The full state map stays in allCandidates/radarCandidates so early structures are
+    not lost. briefingCandidates is intentionally narrower and is the layer meant to
+    be summarized exhaustively in the next 08:15 plan.
+    """
+    sig = x.get("signal")
+    money = x.get("money") or {}
+    core = x.get("coreResistance") or {}
+    abc = x.get("abc") or {}
+    ref = (x.get("deoyangbong") or {}).get("latestPrior") or {}
+    avg_tv = money.get("avg20TradingValueEstimated") or 0
+    tv = money.get("tradingValue") or 0
+    tv_ratio = money.get("tradingValueRatio20Estimated") or 0
+    vol_ratio = money.get("volumeRatio20") or 0
+    dist_core = x.get("distanceToCorePct")
+    core_score = core.get("score") or 0
+
+    if sig in ("REACCELERATION", "JINDOL_CONFIRMED", "DEOYANGBONG_C_TRIGGER"):
+        return True
+
+    if sig == "RETEST_OK":
+        return bool(
+            (x.get("retestSupply") or {}).get("supplyDry")
+            and (ref.get("tradingValueEstimated") or 0) >= float(cfg["deoyangbongMinTradingValueKrw"])
+            and avg_tv >= float(cfg["discoveryMinAvg20TradingValueKrw"])
+        )
+
+    if sig == "PRE_JINDOL":
+        return bool(
+            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
+            and core_score >= float(cfg["briefingMinCoreScore"])
+            and dist_core is not None
+            and 0 <= dist_core <= float(cfg["briefingPreJindolMaxDistancePct"])
+            and (
+                abc.get("bPlus")
+                or (ref.get("tradingValueEstimated") or 0) >= float(cfg["deoyangbongMinTradingValueKrw"])
+                or (abc.get("score") or 0) >= float(cfg["briefingAbcMinScore"])
+            )
+        )
+
+    if sig == "B_PLUS":
+        return bool(avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"]))
+
+    if sig == "ABC_CANDIDATE":
+        return bool(
+            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
+            and (abc.get("score") or 0) >= float(cfg["briefingAbcMinScore"])
+            and dist_core is not None
+            and 0 <= dist_core <= float(cfg["briefingPreJindolMaxDistancePct"])
+        )
+
+    if sig == "NEW_LISTING_SETUP":
+        return bool(
+            avg_tv >= float(cfg["briefingMinAvg20TradingValueKrw"])
+            and (ref.get("tradingValueEstimated") or 0) >= float(cfg["deoyangbongMinTradingValueKrw"])
+        )
+
+    if sig == "MA600_BREAKOUT":
+        return bool(
+            tv >= float(cfg["discoveryMinTradingValueKrw"])
+            and tv_ratio >= float(cfg["jindolMinTurnoverRatio20"])
+            and vol_ratio >= float(cfg["jindolMinVolumeRatio20"])
+        )
+
+    return False
+
+
 def sortit(xs):
     return sorted(
         xs,
         key=lambda x: (
             SIGNAL_PRIORITY.get(x.get("signal"), 0),
-            x.get("score", 0),
+            x.get("rawScore", x.get("score", 0)),
             ((x.get("money") or {}).get("tradingValueRatio20Estimated") or 0),
             ((x.get("money") or {}).get("tradingValue") or 0),
         ),
@@ -871,14 +971,26 @@ def run(cfg):
     ]
     by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
     allc = sortit([x for x in cur if x["signal"] != "NONE"])
+    briefing = sortit([x for x in allc if is_briefing_candidate(x, cfg)])
+    risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK"])
+    briefing_codes = {x["code"] for x in briefing}
+    risk_codes = {x["code"] for x in risk_warnings}
+    radar = sortit([x for x in allc if x["code"] not in briefing_codes and x["code"] not in risk_codes])
 
-    flow_n = min(int(cfg.get("flowEnrichTopN", 60)), len(allc))
+    # Candidate flow enrichment is briefing-first, then risk warnings, then the broad radar.
+    flow_pool = []
+    seen = set()
+    for x in briefing + risk_warnings + allc:
+        if x["code"] not in seen:
+            seen.add(x["code"])
+            flow_pool.append(x)
+    flow_n = min(int(cfg.get("flowEnrichTopN", 60)), len(flow_pool))
     flow_errors = []
     if flow_n:
         with cf.ThreadPoolExecutor(max_workers=min(8, int(cfg["maxWorkers"]))) as ex:
             fm2 = {
                 ex.submit(fetch_investor_flow, x["code"], int(cfg.get("flowLookbackSessions", 20))): x
-                for x in allc[:flow_n]
+                for x in flow_pool[:flow_n]
             }
             for fut in cf.as_completed(fm2):
                 x = fm2[fut]
@@ -891,14 +1003,19 @@ def run(cfg):
     er = len(errors) / max(1, len(uni))
     sr = (len(ok) - len(cur)) / max(1, len(ok))
     candidate_ratio = len(allc) / max(1, len(cur))
+    briefing_ratio = len(briefing) / max(1, len(cur))
     status = "PASS" if (
         er <= float(cfg["maxErrorRatioForPass"])
         and sr <= float(cfg["maxStaleRatioForPass"])
         and candidate_ratio <= float(cfg["maxCandidateRatioForPass"])
+        and len(briefing) <= int(cfg["maxBriefingCandidatesForPass"])
     ) else "PARTIAL"
     lim = int(cfg["maxPerBucket"])
     counts = {name: len(xs) for name, xs in by_signal.items()}
     counts["allCandidates"] = len(allc)
+    counts["briefingCandidates"] = len(briefing)
+    counts["riskWarnings"] = len(risk_warnings)
+    counts["radarCandidates"] = len(radar)
 
     def take(name):
         return by_signal[name][:lim]
@@ -946,6 +1063,7 @@ def run(cfg):
             "flowEnriched": flow_n,
             "flowErrors": len(flow_errors),
             "candidateRatio": round(candidate_ratio, 4),
+            "briefingCandidateRatio": round(briefing_ratio, 4),
         },
         "counts": counts,
         "reacceleration": take("REACCELERATION"),
@@ -959,6 +1077,9 @@ def run(cfg):
         "newListing": take("NEW_LISTING_SETUP"),
         "ma600": sortit(take("MA600_BREAKOUT") + take("NEAR_MA600"))[:lim],
         "warnings": take("DATA_WARNING"),
+        "briefingCandidates": briefing,
+        "riskWarnings": risk_warnings,
+        "radarCandidates": radar[:int(cfg["maxAllCandidates"])],
         "allCandidates": allc[:int(cfg["maxAllCandidates"])],
         "sampleErrors": errors[:30],
         "sampleFlowErrors": flow_errors[:20],
@@ -978,7 +1099,7 @@ def main():
     tmp.write_text(payload, encoding="utf-8")
     tmp.replace(args.output)
     preview = []
-    for x in (out.get("allCandidates") or [])[:15]:
+    for x in (out.get("briefingCandidates") or [])[:20]:
         preview.append({
             "code": x.get("code"),
             "name": x.get("name"),

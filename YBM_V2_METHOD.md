@@ -54,3 +54,16 @@ These are structural states, not automatic buy/sell instructions.
 - Foreign/institution flow is candidate-only supporting evidence.
 - News/catalyst is intentionally excluded from this scanner.
 - Corporate-action-like price jumps are flagged, not silently interpreted.
+
+
+## Operational output layers
+The scanner deliberately separates pattern-state retention from next-session briefing discovery.
+
+- `briefingCandidates`: strict positive discovery layer intended to be summarized exhaustively in the next 08:15 plan.
+- `riskWarnings`: weak-breakout / Gadol quality warnings; kept separate from positive discovery.
+- `radarCandidates`: earlier or less-confirmed structures retained for continuity without crowding the briefing.
+- `allCandidates`: diagnostic union of non-NONE states.
+
+A pullback/retest is accepted only when price holds the reference-candle area **and** intervening trading value/volume contract versus the reference candle. The exact contraction thresholds are implementation inferences and remain configurable.
+
+Named historical securities are not part of production methodology, ranking, prompts, or special-case logic. Historical source examples are isolated as opaque QA fixtures only and confer no production priority.

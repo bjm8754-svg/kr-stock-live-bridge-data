@@ -58,12 +58,14 @@ jobs:
           TRADE_DATE=$(jq -r '.tradeDate // ""' longterm-scan.json)
           METHOD=$(jq -r '.methodologyVersion // ""' longterm-scan.json)
           ALLC=$(jq -r '.counts.allCandidates // -1' longterm-scan.json)
+          BRIEFING=$(jq -r '.counts.briefingCandidates // -1' longterm-scan.json)
           CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' longterm-scan.json)
           MAX_CAND_RATIO=$(jq -r '.maxCandidateRatioForPass // 0.25' longterm-scan-config.json)
+          MAX_BRIEFING=$(jq -r '.maxBriefingCandidatesForPass // 100' longterm-scan-config.json)
 
           KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
           KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
-          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO"
+          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC briefingCandidates=$BRIEFING candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO maxBriefing=$MAX_BRIEFING"
 
           if [ "$STATUS" != "PASS" ] && [ "$STATUS" != "PARTIAL" ]; then
             echo "scanner did not produce a usable result"
@@ -80,6 +82,11 @@ jobs:
             exit 1
           fi
 
+          if ! jq -e '.briefingCandidates | type=="array"' longterm-scan.json >/dev/null; then
+            echo "briefingCandidates schema missing"
+            exit 1
+          fi
+
           if [ "$UNIVERSE" -lt 1500 ] || [ "$CURRENT" -lt 1000 ]; then
             echo "coverage gate failed"
             exit 1
@@ -87,6 +94,11 @@ jobs:
 
           if ! awk -v a="$CAND_RATIO" -v b="$MAX_CAND_RATIO" 'BEGIN { exit !(a <= b) }'; then
             echo "candidate selectivity gate failed: ratio=$CAND_RATIO max=$MAX_CAND_RATIO"
+            exit 1
+          fi
+
+          if [ "$BRIEFING" -gt "$MAX_BRIEFING" ]; then
+            echo "briefing selectivity gate failed: count=$BRIEFING max=$MAX_BRIEFING"
             exit 1
           fi
 

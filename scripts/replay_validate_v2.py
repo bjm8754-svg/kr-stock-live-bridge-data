@@ -18,14 +18,14 @@ spec.loader.exec_module(scan)
 cfg = json.loads((ROOT / "longterm-scan-config.json").read_text(encoding="utf-8"))
 
 CASES = [
-    # source material: found as A-grade on 2026-09-09; used for repeated Jindol/Gadol examples
-    {"code":"036540","name":"SFA반도체","date":"2026-09-09","expectedTrack":"LONG_HISTORY"},
-    # source material: 2026-09-03, +16.47%, meaningful ~KRW100bn money, ABC/B-grade discussion
-    {"code":"234690","name":"녹십자웰빙","date":"2026-09-03","expectedTrack":"LONG_HISTORY"},
-    # source material: new listing, 2026-05-12 small ABC + Neomoneomo + small Jindol example
-    {"code":"064400","name":"LG씨엔에스","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
-    # source material: KRW10,000 round figure + strong-candle/cloud breakout + rest/reacceleration example
-    {"code":"012210","name":"삼미금속","date":"2026-09-10","expectedTrack":"LONG_HISTORY"},
+    # source-derived calibration case: long-history breakout-quality example
+    {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY"},
+    # source-derived calibration case: long-MA recovery with strong money expansion
+    {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY"},
+    # source-derived calibration case: new-listing mini-structure
+    {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
+    # source-derived calibration case: reference candle -> controlled rest -> follow-through
+    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY"},
 ]
 
 rows = []
