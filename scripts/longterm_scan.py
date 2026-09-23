@@ -920,12 +920,23 @@ def main():
     tmp = Path(args.output + ".tmp")
     tmp.write_text(payload, encoding="utf-8")
     tmp.replace(args.output)
+    preview = []
+    for x in (out.get("allCandidates") or [])[:15]:
+        preview.append({
+            "code": x.get("code"),
+            "name": x.get("name"),
+            "signal": x.get("signal"),
+            "score": x.get("score"),
+            "coreLine": (x.get("coreResistance") or {}).get("line"),
+            "tradingValue": (x.get("money") or {}).get("tradingValue"),
+        })
     print(json.dumps({
         "status": out.get("status"),
         "tradeDate": out.get("tradeDate"),
         "methodologyVersion": out.get("methodologyVersion"),
         "coverage": out.get("coverage"),
         "counts": out.get("counts"),
+        "topPreview": preview,
     }, ensure_ascii=False, indent=2, default=json_default))
     return 0 if out.get("status") in ("PASS", "PARTIAL") else 2
 
