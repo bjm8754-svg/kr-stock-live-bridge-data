@@ -1,38 +1,57 @@
 #!/usr/bin/env python3
-"""Daily KRX long-term chart/flow scanner.
+"""Daily KRX structural chart/flow scanner - YBM Swing V2.
 
-Purpose: replace manual HTS condition-search/chart-sweep work.
-Primary setup: MA600 structural breakout + strong bullish candle + capital-flow expansion.
-News/catalyst is intentionally NOT used.
+Observable-only implementation:
+long decline/base -> long-MA recovery -> money-backed reference candle ->
+supply/resistance digestion -> real/weak breakout -> retest/reacceleration.
 
-Price history: FinanceDataReader/Naver (long history; adjusted-price behavior follows FDR).
-Current daily turnover/market cap: KRX listing via FinanceDataReader.
+No hidden operator/accumulation intent is inferred.
 """
 
 from __future__ import annotations
-import argparse, concurrent.futures as cf, datetime as dt, json, math, re, urllib.parse, urllib.request
+
+import argparse
+import concurrent.futures as cf
+import datetime as dt
+import json
+import math
+import urllib.parse
+import urllib.request
 from collections import Counter
 from pathlib import Path
 
 import FinanceDataReader as fdr
+import numpy as np
 import pandas as pd
 
 KST = dt.timezone(dt.timedelta(hours=9))
 
 
+def json_default(obj):
+    if isinstance(obj, np.generic):
+        return obj.item()
+    if isinstance(obj, (pd.Timestamp, dt.datetime, dt.date)):
+        return obj.isoformat()
+    raise TypeError(f"Object of type {type(obj).__name__} is not JSON serializable")
+
+
 def rnum(x, n=2):
-    if x is None or pd.isna(x) or not math.isfinite(float(x)):
+    if x is None or pd.isna(x):
         return None
-    return round(float(x), n)
+    try:
+        x = float(x)
+    except Exception:
+        return None
+    return round(x, n) if math.isfinite(x) else None
 
 
 def pct(a, b):
-    if b is None or pd.isna(b) or float(b) == 0:
+    if a is None or b is None or pd.isna(a) or pd.isna(b) or float(b) == 0:
         return None
     return (float(a) / float(b) - 1.0) * 100.0
 
 
-def sma(s: pd.Series, n: int):
+def sma(s, n):
     return s.rolling(n, min_periods=n).mean()
 
 
@@ -48,15 +67,14 @@ def parse_int_text(v):
         return 0
 
 
-def fetch_investor_flow(code: str, limit: int = 20):
-    """Public Naver investor trend. Used only to enrich chart candidates."""
+def fetch_investor_flow(code, limit=20):
     qs = urllib.parse.urlencode({"code": code})
     url = f"https://m.stock.naver.com/front-api/stock/domestic/trend?{qs}"
     req = urllib.request.Request(
         url,
         headers={
             "Accept": "application/json",
-            "User-Agent": "Mozilla/5.0 longterm-scan/1.0",
+            "User-Agent": "Mozilla/5.0 longterm-scan/2.0",
             "Referer": f"https://m.stock.naver.com/domestic/stock/{code}/total",
         },
         method="GET",
@@ -66,31 +84,35 @@ def fetch_investor_flow(code: str, limit: int = 20):
     rows = payload.get("dealTrendInfos", payload) if isinstance(payload, dict) else payload
     if not isinstance(rows, list):
         return {"status": "BAD_SCHEMA", "rows": 0}
-    rows = rows[:limit]
     norm = []
-    for x in rows:
+    for x in rows[:limit]:
         if not isinstance(x, dict):
             continue
-        f = parse_int_text(x.get("foreignerPureBuyQuant"))
-        o = parse_int_text(x.get("organPureBuyQuant"))
-        ind = parse_int_text(x.get("individualPureBuyQuant"))
+        foreign = parse_int_text(x.get("foreignerPureBuyQuant"))
+        inst = parse_int_text(x.get("organPureBuyQuant"))
+        indiv = parse_int_text(x.get("individualPureBuyQuant"))
         vol = parse_int_text(x.get("accumulatedTradingVolume"))
         norm.append({
             "bizdate": str(x.get("bizdate", "")),
-            "foreign": f, "institution": o, "individual": ind, "volume": vol,
+            "foreign": foreign,
+            "institution": inst,
+            "individual": indiv,
+            "volume": vol,
             "foreignHoldRatio": x.get("foreignerHoldRatio"),
         })
+
     def agg(n):
         rr = norm[:n]
         fv = sum(x["foreign"] for x in rr)
-        ov = sum(x["institution"] for x in rr)
+        iv = sum(x["institution"] for x in rr)
         vv = sum(x["volume"] for x in rr)
         return {
             "foreignNetShares": fv,
-            "institutionNetShares": ov,
-            "combinedNetShares": fv + ov,
-            "netParticipationPct": rnum((fv + ov) / vv * 100.0) if vv else None,
+            "institutionNetShares": iv,
+            "combinedNetShares": fv + iv,
+            "netParticipationPct": rnum((fv + iv) / vv * 100.0) if vv else None,
         }
+
     return {
         "status": "OK",
         "source": "NAVER_PUBLIC_INVESTOR_TREND",
@@ -104,12 +126,12 @@ def fetch_investor_flow(code: str, limit: int = 20):
 
 
 def current_listing():
-    # Prefer direct KRX same-day listing; fall back to FDR cache if KRX blocks the request.
     try:
         from FinanceDataReader.krx.listing import KrxMarcapListing
         df = KrxMarcapListing("KRX").read().copy()
     except Exception:
         df = fdr.StockListing("KRX").copy()
+
     code_col = "Code" if "Code" in df.columns else "Symbol"
     df[code_col] = df[code_col].astype(str).str.zfill(6)
     df = df[df[code_col].str.fullmatch(r"\d{6}")].copy()
@@ -117,6 +139,7 @@ def current_listing():
         df = df[df["Market"].isin(["KOSPI", "KOSDAQ"])]
     if "Name" in df.columns:
         df = df[~df["Name"].astype(str).str.contains(r"스팩|SPAC", case=False, regex=True, na=False)]
+
     out = []
     for _, x in df.iterrows():
         out.append({
@@ -129,183 +152,626 @@ def current_listing():
     return out
 
 
-def latest_cross(close: pd.Series, ma: pd.Series, lookback: int):
-    start = max(1, len(close) - lookback)
-    for i in range(len(close) - 1, start - 1, -1):
-        if pd.notna(ma.iloc[i]) and pd.notna(ma.iloc[i-1]):
-            if close.iloc[i-1] <= ma.iloc[i-1] and close.iloc[i] > ma.iloc[i]:
-                return i
-    return None
-
-
-def analyze(meta, cfg):
-    code = meta["code"]
-    start = (dt.date.today() - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()
-    df = fdr.DataReader(code, start)
-    if df is None or len(df) < 601:
-        return {"status": "INSUFFICIENT_HISTORY", **meta, "rows": 0 if df is None else len(df)}
-    need = ["Open", "High", "Low", "Close", "Volume"]
-    if any(c not in df.columns for c in need):
-        return {"status": "BAD_SCHEMA", **meta, "columns": list(df.columns)}
-    df = df[need].dropna().copy()
-    if len(df) < 601:
-        return {"status": "INSUFFICIENT_HISTORY", **meta, "rows": len(df)}
-
-    periods = [int(x) for x in cfg["maPeriods"]]
-    for p in periods:
+def add_indicators(df, cfg):
+    df = df.copy()
+    for p in [int(x) for x in cfg["maPeriods"]]:
         df[f"MA{p}"] = sma(df["Close"], p)
 
-    cur, prev = df.iloc[-1], df.iloc[-2]
-    ma600, pma600 = cur["MA600"], prev["MA600"]
-    if pd.isna(ma600) or pd.isna(pma600):
-        return {"status": "INSUFFICIENT_HISTORY", **meta, "rows": len(df)}
+    high9 = df["High"].rolling(9, min_periods=9).max()
+    low9 = df["Low"].rolling(9, min_periods=9).min()
+    high26 = df["High"].rolling(26, min_periods=26).max()
+    low26 = df["Low"].rolling(26, min_periods=26).min()
+    high52 = df["High"].rolling(52, min_periods=52).max()
+    low52 = df["Low"].rolling(52, min_periods=52).min()
+    tenkan = (high9 + low9) / 2.0
+    kijun = (high26 + low26) / 2.0
+    df["CLOUD_A"] = ((tenkan + kijun) / 2.0).shift(26)
+    df["CLOUD_B"] = ((high52 + low52) / 2.0).shift(26)
 
     typical = (df["Open"] + df["High"] + df["Low"] + df["Close"]) / 4.0
-    tv_est = typical * df["Volume"]
-    avg20_tv = tv_est.iloc[-21:-1].mean() if len(df) >= 21 else tv_est.iloc[:-1].mean()
-    cur_tv = meta.get("amount") if meta.get("amount") and meta["amount"] > 0 else float(tv_est.iloc[-1])
-    tv_quality = "KRX_EXACT_CURRENT__HIST20_ESTIMATED" if meta.get("amount") else "ESTIMATED"
-    tv_ratio = cur_tv / avg20_tv if avg20_tv and avg20_tv > 0 else None
+    df["TV_EST"] = typical * df["Volume"]
+    df["AVG20_TV_EST"] = df["TV_EST"].shift(1).rolling(20, min_periods=10).mean()
+    df["TV_RATIO20_EST"] = df["TV_EST"] / df["AVG20_TV_EST"]
+    df["AVG20_VOL"] = df["Volume"].shift(1).rolling(20, min_periods=10).mean()
+    df["VOL_RATIO20"] = df["Volume"] / df["AVG20_VOL"]
+    df["DAY_RETURN_PCT"] = df["Close"].pct_change() * 100.0
+    df["BODY_PCT"] = (df["Close"] / df["Open"] - 1.0) * 100.0
+    rng = (df["High"] - df["Low"]).replace(0, np.nan)
+    df["CLOSE_LOC"] = ((df["Close"] - df["Low"]) / rng).fillna(0.5)
+    return df
 
-    avg20_vol = df["Volume"].iloc[-21:-1].mean() if len(df) >= 21 else df["Volume"].iloc[:-1].mean()
-    vol_ratio = float(cur["Volume"]) / avg20_vol if avg20_vol and avg20_vol > 0 else None
-    body_pct = pct(cur["Close"], cur["Open"])
-    chg_pct = pct(cur["Close"], prev["Close"])
-    rng = float(cur["High"] - cur["Low"])
-    close_loc = float((cur["Close"] - cur["Low"]) / rng) if rng > 0 else 0.5
 
-    cross600 = bool(prev["Close"] <= pma600 and cur["Close"] > ma600)
-    dist600 = pct(cur["Close"], ma600)
-    near600 = bool((not cross600) and cur["Close"] <= ma600 and dist600 is not None and abs(dist600) <= float(cfg["nearMa600Pct"]))
-    failed600 = bool(cur["High"] > ma600 and cur["Close"] <= ma600 and (tv_ratio or 0) >= float(cfg["minTurnoverRatio20"]))
+def cloud_snapshot(row):
+    a, b = row.get("CLOUD_A"), row.get("CLOUD_B")
+    if pd.isna(a) or pd.isna(b):
+        return {"top": None, "bottom": None, "state": "UNAVAILABLE"}
+    top, bot = max(float(a), float(b)), min(float(a), float(b))
+    close = float(row["Close"])
+    state = "ABOVE" if close > top else ("BELOW" if close < bot else "INSIDE")
+    return {"top": rnum(top, 2), "bottom": rnum(bot, 2), "state": state}
 
-    high120 = float(df["High"].iloc[-121:-1].max()) if len(df) >= 121 else None
-    box120 = bool(high120 and cur["Close"] > high120)
 
-    cross_idx = latest_cross(df["Close"], df["MA600"], int(cfg["acceptanceLookbackSessions"]))
-    days_since = None if cross_idx is None else len(df) - 1 - cross_idx
-    acceptance = False
-    if cross_idx is not None and days_since is not None and days_since >= 1:
-        tol = float(cfg["acceptanceUnderMaTolerancePct"]) / 100.0
-        acceptance = True
-        for j in range(cross_idx + 1, len(df)):
-            if pd.notna(df["MA600"].iloc[j]) and df["Close"].iloc[j] < df["MA600"].iloc[j] * (1 - tol):
-                acceptance = False
-                break
-        acceptance = acceptance and cur["Close"] > ma600
+def rolling_event_mask(df, cfg):
+    """Historical observable proxy for a money-backed large bullish reference candle."""
+    return (
+        (df["Close"] > df["Open"])
+        & (df["DAY_RETURN_PCT"] >= float(cfg["deoyangbongMinReturnPct"]))
+        & (df["TV_EST"] >= float(cfg["deoyangbongMinTradingValueKrw"]))
+        & (df["VOL_RATIO20"] >= float(cfg["deoyangbongMinVolumeRatio20"]))
+        & (df["CLOSE_LOC"] >= float(cfg["deoyangbongMinCloseLocation"]))
+    ).fillna(False)
 
-    reaccel = False
-    if acceptance and days_since is not None and 2 <= days_since <= int(cfg["acceptanceLookbackSessions"]):
-        left = max(cross_idx, len(df) - 11)
-        prev_high = df["High"].iloc[left:-1].max()
-        reaccel = bool(cur["Close"] > prev_high and (tv_ratio or 0) >= float(cfg["reaccelerationTurnoverRatio20"]))
 
-    lb = min(len(df) - 1, int(cfg["corporateActionGuardLookback"]))
-    moves = df["Close"].pct_change().iloc[-lb:].abs()
-    jump_mask = moves > float(cfg["corporateActionJumpPct"]) / 100.0
-    anomaly = list(moves[jump_mask].index.strftime("%Y%m%d"))
-
-    strong = bool(
-        cross600
-        and (body_pct or -999) >= float(cfg["strongBodyPct"])
-        and (tv_ratio or 0) >= float(cfg["strongTurnoverRatio20"])
-        and close_loc >= float(cfg["strongCloseLocation"])
-        and cur_tv >= float(cfg["minTurnoverWatchKrw"])
-        and not anomaly
-    )
-
-    if reaccel:
-        signal = "REACCELERATION"
-    elif strong:
-        signal = "BREAKOUT_600_STRONG"
-    elif cross600:
-        signal = "BREAKOUT_600"
-    elif failed600:
-        signal = "FAILED_BREAKOUT_600"
-    elif acceptance:
-        signal = "ACCEPTANCE_600"
-    elif near600:
-        signal = "NEAR_BREAKOUT_600"
-    else:
-        signal = "NONE"
-
-    if strong: grade = "A"
-    elif cross600 and cur_tv >= float(cfg["minTurnoverWatchKrw"]) and (tv_ratio or 0) >= float(cfg["minTurnoverRatio20"]): grade = "B"
-    elif cross600: grade = "C"
-    elif near600: grade = "WATCH"
-    else: grade = "NONE"
-
-    score = 0
-    score += 35 if cross600 else 0
-    score += 18 if (tv_ratio or 0) >= float(cfg["strongTurnoverRatio20"]) else (8 if (tv_ratio or 0) >= float(cfg["minTurnoverRatio20"]) else 0)
-    score += 10 if cur_tv >= float(cfg["strongTurnoverKrw"]) else (5 if cur_tv >= float(cfg["minTurnoverWatchKrw"]) else 0)
-    score += 10 if (body_pct or -999) >= float(cfg["strongBodyPct"]) else 0
-    score += 8 if close_loc >= float(cfg["strongCloseLocation"]) else 0
-    score += 7 if box120 else 0
-    score += 5 if (vol_ratio or 0) >= float(cfg["volumeRatio20"]) else 0
-    score += 5 if pd.notna(cur.get("MA240")) and cur["Close"] > cur["MA240"] else 0
-    score += 8 if acceptance else 0
-    score += 10 if reaccel else 0
-    score -= 50 if anomaly else 0
-
-    mas, dists = {}, {}
-    for p in periods:
-        v = cur.get(f"MA{p}")
-        mas[str(p)] = rnum(v, 2)
-        dists[str(p)] = rnum(pct(cur["Close"], v), 2) if pd.notna(v) else None
-
+def event_info(df, idx):
+    x = df.iloc[idx]
     return {
-        "status": "OK", "code": code, "name": meta["name"], "market": meta["market"],
-        "tradeDate": df.index[-1].strftime("%Y%m%d"), "signal": signal, "grade": grade, "score": score,
-        "close": rnum(cur["Close"], 0), "open": rnum(cur["Open"], 0), "high": rnum(cur["High"], 0), "low": rnum(cur["Low"], 0),
-        "dayChangePct": rnum(chg_pct), "bodyPct": rnum(body_pct), "closeLocation": rnum(close_loc, 3),
-        "ma": mas, "distanceToMaPct": dists, "cross600": cross600, "near600": near600,
-        "box120Breakout": box120, "high120Prev": rnum(high120, 2),
-        "tradingValue": rnum(cur_tv, 0), "avg20TradingValueEstimated": rnum(avg20_tv, 0),
-        "tradingValueRatio20Estimated": rnum(tv_ratio), "tradingValueQuality": tv_quality,
-        "volume": rnum(cur["Volume"], 0), "avg20Volume": rnum(avg20_vol, 0), "volumeRatio20": rnum(vol_ratio),
-        "marketCap": rnum(meta.get("marcap"), 0), "turnoverToMarketCapPct": rnum(cur_tv/meta["marcap"]*100) if meta.get("marcap") else None,
-        "daysSinceCross600": days_since, "acceptance600": acceptance, "reacceleration": reaccel,
-        "rows": len(df), "dataWarnings": [f"PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(anomaly[-3:])}"] if anomaly else []
+        "date": df.index[idx].strftime("%Y%m%d"),
+        "open": rnum(x["Open"], 0),
+        "close": rnum(x["Close"], 0),
+        "high": rnum(x["High"], 0),
+        "low": rnum(x["Low"], 0),
+        "dayReturnPct": rnum(x["DAY_RETURN_PCT"]),
+        "tradingValueEstimated": rnum(x["TV_EST"], 0),
+        "volumeRatio20": rnum(x["VOL_RATIO20"]),
+        "closeLocation": rnum(x["CLOSE_LOC"], 3),
     }
 
 
+def latest_event_position(mask, max_lookback, exclude_last=True):
+    end = len(mask) - (1 if exclude_last else 0)
+    start = max(0, end - max_lookback)
+    vals = np.where(mask.iloc[start:end].values)[0]
+    return None if len(vals) == 0 else start + int(vals[-1])
+
+
+def ma_slope_pct(series, lookback):
+    if len(series) <= lookback or pd.isna(series.iloc[-1]) or pd.isna(series.iloc[-1-lookback]):
+        return None
+    return pct(series.iloc[-1], series.iloc[-1-lookback])
+
+
+def abc_features(df, cfg):
+    n = len(df)
+    if n < int(cfg["minLongHistoryRows"]) or pd.isna(df.iloc[-1].get("MA600")):
+        return {
+            "track": "NEW_LISTING",
+            "state": "NOT_APPLICABLE_LONG_MA",
+            "score": 0,
+            "aDeclinePct": None,
+            "bRangePct": None,
+            "ma600Slope60Pct": None,
+            "cActive": False,
+            "cross600Today": False,
+            "bPlus": False,
+        }
+
+    look = min(n - 1, int(cfg["abcAWindowSessions"]))
+    hist = df.iloc[-look-1:-1]
+    a_decline = None
+    if len(hist) >= 120:
+        peak_i = int(np.argmax(hist["High"].values))
+        peak = float(hist["High"].iloc[peak_i])
+        trough = float(hist.iloc[peak_i:]["Low"].min())
+        a_decline = (peak - trough) / peak * 100.0 if peak > 0 else None
+
+    blook = min(int(cfg["abcBaseLookbackSessions"]), n - 1)
+    base = df.iloc[-blook-1:-1]
+    b_range = None
+    if len(base) >= 20:
+        lo, hi = float(base["Low"].min()), float(base["High"].max())
+        b_range = (hi / lo - 1.0) * 100.0 if lo > 0 else None
+
+    slope600 = ma_slope_pct(df["MA600"], int(cfg["abcMaSlopeLookbackSessions"]))
+    a_ok = bool(a_decline is not None and a_decline >= float(cfg["abcMinDeclinePct"]))
+    b_ok = bool(
+        b_range is not None
+        and b_range <= float(cfg["abcBaseMaxRangePct"])
+        and slope600 is not None
+        and abs(slope600) <= float(cfg["abcMa600MaxAbsSlopePct"])
+    )
+
+    cur, prev = df.iloc[-1], df.iloc[-2]
+    cross600 = bool(
+        pd.notna(cur["MA600"]) and pd.notna(prev["MA600"])
+        and prev["Close"] <= prev["MA600"] and cur["Close"] > cur["MA600"]
+    )
+    c_active = bool(
+        pd.notna(cur["MA600"]) and cur["Close"] > cur["MA600"]
+        and (pd.isna(cur.get("MA240")) or cur["Close"] > cur["MA240"])
+    )
+    recent = df.iloc[-min(60, n):]
+    b_plus = bool(
+        b_ok
+        and ((recent["TV_EST"] >= float(cfg["deoyangbongMinTradingValueKrw"]))
+             & (recent["VOL_RATIO20"] >= float(cfg["bPlusMinVolumeRatio20"]))).fillna(False).any()
+        and (cross600 or c_active)
+    )
+
+    score = (30 if a_ok else 0) + (30 if b_ok else 0) + (30 if c_active else 0) + (10 if b_plus else 0)
+    if a_ok and b_ok and c_active:
+        state = "C_ACTIVE"
+    elif a_ok and b_ok:
+        state = "B_BASE"
+    elif a_ok:
+        state = "A_TO_B"
+    elif c_active:
+        state = "LONG_MA_RECOVERY_NONCLASSIC"
+    else:
+        state = "NONE"
+
+    return {
+        "track": "LONG_HISTORY",
+        "state": state,
+        "score": int(score),
+        "aDeclinePct": rnum(a_decline),
+        "bRangePct": rnum(b_range),
+        "ma600Slope60Pct": rnum(slope600),
+        "cActive": bool(c_active),
+        "cross600Today": bool(cross600),
+        "bPlus": bool(b_plus),
+    }
+
+
+def round_levels(price):
+    if price <= 0:
+        return []
+    digits = int(math.floor(math.log10(price))) + 1
+    base = 10 ** max(0, digits - 2)
+    steps = sorted(set([base, 5 * base, 10 * base]))
+    vals = set()
+    for step in steps:
+        k = math.floor(price / step)
+        for j in range(max(1, k - 2), k + 5):
+            vals.add(float(j * step))
+    return sorted(v for v in vals if v > 0)
+
+
+def cluster_levels(levels, tolerance_pct):
+    xs = sorted([x for x in levels if x[0] and x[0] > 0], key=lambda z: z[0])
+    groups = []
+    for p, w, source in xs:
+        if not groups:
+            groups.append({"items": [(p, w, source)]})
+            continue
+        g = groups[-1]
+        sw = sum(b for _, b, _ in g["items"])
+        center = sum(a*b for a, b, _ in g["items"]) / max(1e-9, sw)
+        if abs(p / center - 1.0) * 100.0 <= tolerance_pct:
+            g["items"].append((p, w, source))
+        else:
+            groups.append({"items": [(p, w, source)]})
+
+    out = []
+    for g in groups:
+        items = g["items"]
+        sw = sum(w for _, w, _ in items)
+        center = sum(p*w for p, w, _ in items) / sw
+        out.append({
+            "line": center,
+            "low": min(p for p, _, _ in items),
+            "high": max(p for p, _, _ in items),
+            "weight": sw,
+            "sourceCount": len(set(s for _, _, s in items)),
+            "sources": sorted(set(s for _, _, s in items)),
+        })
+    return out
+
+
+def build_core_resistance(hist, reference_price, cfg):
+    """Build resistance only from pre-current data to prevent look-ahead leakage."""
+    if len(hist) < 30 or reference_price <= 0:
+        return None
+
+    lo_bound = reference_price * (1 - float(cfg["coreLineBelowReferenceTolerancePct"]) / 100.0)
+    hi_bound = reference_price * (1 + float(cfg["coreLineMaxDistancePct"]) / 100.0)
+    levels = []
+
+    mask = rolling_event_mask(hist, cfg)
+    event_positions = np.where(mask.values)[0][-int(cfg["coreEventLookbackCount"]):]
+    for i in event_positions:
+        row = hist.iloc[i]
+        for field, weight in (("Open", 3.0), ("Close", 4.0), ("High", 2.0)):
+            p = float(row[field])
+            if lo_bound <= p <= hi_bound:
+                levels.append((p, weight, f"DEOYANGBONG_{field.upper()}"))
+
+    sw = int(cfg["swingHalfWindow"])
+    start = max(sw, len(hist) - int(cfg["coreSwingLookbackSessions"]))
+    for i in range(start, len(hist) - sw):
+        h = float(hist["High"].iloc[i])
+        if h >= float(hist["High"].iloc[i-sw:i+sw+1].max()) and lo_bound <= h <= hi_bound:
+            levels.append((h, 2.0, "SWING_HIGH"))
+
+    vp = hist.iloc[-min(len(hist), int(cfg["coreDensityLookbackSessions"])):].copy()
+    vp = vp[(vp["Close"] >= lo_bound * 0.95) & (vp["Close"] <= hi_bound * 1.02)]
+    if len(vp) >= 20:
+        pmin, pmax = float(vp["Low"].min()), float(vp["High"].max())
+        if pmax > pmin:
+            bins = int(cfg["coreDensityBins"])
+            edges = np.linspace(pmin, pmax, bins + 1)
+            inds = np.digitize(vp["Close"].values, edges) - 1
+            vols = []
+            for bi in range(bins):
+                vv = float(vp.loc[inds == bi, "Volume"].sum()) if np.any(inds == bi) else 0.0
+                vols.append((vv, (edges[bi] + edges[bi+1]) / 2.0))
+            for _, center in sorted(vols, reverse=True)[:int(cfg["coreDensityTopBins"])]:
+                if lo_bound <= center <= hi_bound:
+                    levels.append((float(center), 2.0, "CANDLE_DENSITY"))
+
+    for p in round_levels(reference_price):
+        if lo_bound <= p <= hi_bound:
+            levels.append((p, 1.0, "ROUND_FIGURE"))
+
+    last = hist.iloc[-1]
+    for field, label, weight in (
+        ("CLOUD_A", "CLOUD_EDGE", 1.5),
+        ("CLOUD_B", "CLOUD_EDGE", 1.5),
+        ("MA240", "MA240", 0.8),
+        ("MA480", "MA480", 1.0),
+        ("MA600", "MA600", 1.3),
+        ("MA1000", "MA1000", 1.3),
+    ):
+        if field in hist.columns and pd.notna(last.get(field)):
+            p = float(last[field])
+            if lo_bound <= p <= hi_bound:
+                levels.append((p, weight, label))
+
+    clusters = cluster_levels(levels, float(cfg["coreClusterTolerancePct"]))
+    if not clusters:
+        return None
+
+    touch_hist = hist.iloc[-min(len(hist), int(cfg["coreTouchLookbackSessions"])):]
+    tol = float(cfg["coreTouchTolerancePct"]) / 100.0
+    for c in clusters:
+        line = c["line"]
+        touches = int(((touch_hist["High"] >= line*(1-tol)) & (touch_hist["Low"] <= line*(1+tol))).sum())
+        c["touches"] = touches
+        c["score"] = c["weight"] + min(touches, 6) * 0.6 + c["sourceCount"] * 0.5
+        c["distancePct"] = pct(line, reference_price)
+
+    candidates = [c for c in clusters if lo_bound <= c["line"] <= hi_bound]
+    if not candidates:
+        return None
+    candidates.sort(key=lambda c: (c["score"], -abs(c["distancePct"] or 999)), reverse=True)
+    best = candidates[0]
+    pad = float(cfg["coreZonePaddingPct"]) / 100.0
+    return {
+        "line": rnum(best["line"], 2),
+        "zoneLow": rnum(min(best["low"], best["line"]*(1-pad)), 2),
+        "zoneHigh": rnum(max(best["high"], best["line"]*(1+pad)), 2),
+        "score": rnum(best["score"], 2),
+        "touches": int(best["touches"]),
+        "sources": best["sources"],
+        "distanceFromReferencePct": rnum(best["distancePct"]),
+        "candidateCount": len(candidates),
+    }
+
+
+def classify_breakout(break_core, cur_tv, tv_ratio, vol_ratio, close_loc, relative_prior, cfg):
+    if not break_core:
+        return "NO_BREAK"
+    money_ok = (
+        cur_tv >= float(cfg["jindolMinTradingValueKrw"])
+        and (tv_ratio or 0) >= float(cfg["jindolMinTurnoverRatio20"])
+        and (vol_ratio or 0) >= float(cfg["jindolMinVolumeRatio20"])
+    )
+    acceptance_ok = close_loc >= float(cfg["jindolMinCloseLocation"])
+    relative_ok = relative_prior is None or relative_prior >= float(cfg["jindolMinRelativePriorMoney"])
+    return "JINDOL_CONFIRMED" if money_ok and acceptance_ok and relative_ok else "GADOL_RISK"
+
+
+def analyze_frame(meta, raw_df, cfg):
+    if raw_df is None:
+        return {"status": "NO_DATA", **meta}
+    need = ["Open", "High", "Low", "Close", "Volume"]
+    if any(c not in raw_df.columns for c in need):
+        return {"status": "BAD_SCHEMA", **meta, "columns": list(raw_df.columns)}
+
+    df = raw_df[need].dropna().copy()
+    if len(df) < int(cfg["minNewListingRows"]):
+        return {"status": "INSUFFICIENT_HISTORY", **meta, "rows": len(df)}
+    df = add_indicators(df, cfg)
+
+    cur, prev = df.iloc[-1], df.iloc[-2]
+    long_track = len(df) >= int(cfg["minLongHistoryRows"]) and pd.notna(cur.get("MA600"))
+
+    avg20_tv = cur.get("AVG20_TV_EST")
+    cur_tv_est = float(cur["TV_EST"])
+    cur_tv = float(meta["amount"]) if meta.get("amount") and meta["amount"] > 0 else cur_tv_est
+    tv_quality = "KRX_EXACT_CURRENT__HIST_ESTIMATED" if meta.get("amount") else "ESTIMATED"
+    tv_ratio = cur_tv / float(avg20_tv) if pd.notna(avg20_tv) and float(avg20_tv) > 0 else None
+    avg20_vol = cur.get("AVG20_VOL")
+    vol_ratio = float(cur["Volume"]) / float(avg20_vol) if pd.notna(avg20_vol) and float(avg20_vol) > 0 else None
+
+    body_pct = pct(cur["Close"], cur["Open"])
+    chg_pct = pct(cur["Close"], prev["Close"])
+    close_loc = float(cur["CLOSE_LOC"])
+    cloud = cloud_snapshot(cur)
+
+    lb = min(len(df) - 1, int(cfg["corporateActionGuardLookback"]))
+    moves = df["Close"].pct_change().iloc[-lb:].abs()
+    anomaly = list(moves[moves > float(cfg["corporateActionJumpPct"]) / 100.0].index.strftime("%Y%m%d"))
+
+    events = rolling_event_mask(df, cfg)
+    prior_event_pos = latest_event_position(events, int(cfg["priorIgnitionLookbackSessions"]), exclude_last=True)
+    prior_event = event_info(df, prior_event_pos) if prior_event_pos is not None else None
+    prior_tv = float(df["TV_EST"].iloc[prior_event_pos]) if prior_event_pos is not None else None
+    rel_prior_money = cur_tv / prior_tv if prior_tv and prior_tv > 0 else None
+
+    current_deoyang = bool(
+        cur["Close"] > cur["Open"]
+        and (chg_pct or -999) >= float(cfg["deoyangbongMinReturnPct"])
+        and cur_tv >= float(cfg["deoyangbongMinTradingValueKrw"])
+        and (vol_ratio or 0) >= float(cfg["deoyangbongMinVolumeRatio20"])
+        and close_loc >= float(cfg["deoyangbongMinCloseLocation"])
+    )
+    current_deoyang_preferred = bool(
+        current_deoyang and (chg_pct or -999) >= float(cfg["deoyangbongPreferredReturnPct"])
+    )
+
+    abc = abc_features(df, cfg)
+    core = build_core_resistance(df.iloc[:-1], float(prev["Close"]), cfg)
+
+    break_core = False
+    pre_jindol = False
+    if core:
+        zhi = float(core["zoneHigh"])
+        break_core = bool(prev["Close"] <= zhi and cur["Close"] > zhi)
+        dist = pct(core["line"], cur["Close"])
+        pre_jindol = bool(not break_core and dist is not None and 0 <= dist <= float(cfg["preJindolMaxDistancePct"]))
+
+    breakout_class = classify_breakout(
+        break_core, cur_tv, tv_ratio, vol_ratio, close_loc, rel_prior_money, cfg
+    )
+
+    ma, ma_dist = {}, {}
+    for p in [int(x) for x in cfg["maPeriods"]]:
+        v = cur.get(f"MA{p}")
+        ma[str(p)] = rnum(v, 2) if pd.notna(v) else None
+        ma_dist[str(p)] = rnum(pct(cur["Close"], v), 2) if pd.notna(v) else None
+
+    cross600 = near600 = False
+    if long_track:
+        cross600 = bool(prev["Close"] <= prev["MA600"] and cur["Close"] > cur["MA600"])
+        d600 = pct(cur["Close"], cur["MA600"])
+        near600 = bool(
+            not cross600 and cur["Close"] <= cur["MA600"]
+            and d600 is not None and abs(d600) <= float(cfg["nearMa600Pct"])
+        )
+
+    recent_anchor_pos = latest_event_position(events, int(cfg["acceptanceLookbackSessions"]), exclude_last=True)
+    retest_ok = reaccel = False
+    anchor = None
+    if recent_anchor_pos is not None:
+        anchor = event_info(df, recent_anchor_pos)
+        anchor_close = float(df["Close"].iloc[recent_anchor_pos])
+        anchor_open = float(df["Open"].iloc[recent_anchor_pos])
+        hold_line = max(anchor_open, anchor_close * (1 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0))
+        post = df.iloc[recent_anchor_pos+1:]
+        if len(post):
+            retest_ok = bool(
+                float(post["Close"].min()) >= hold_line
+                and cur["Close"] >= anchor_close * (1 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0)
+            )
+            if len(post) >= 2:
+                prior_high = float(post["High"].iloc[:-1].max())
+                reaccel = bool(
+                    retest_ok and cur["Close"] > prior_high
+                    and (tv_ratio or 0) >= float(cfg["reaccelerationTurnoverRatio20"])
+                    and close_loc >= float(cfg["reaccelerationMinCloseLocation"])
+                )
+
+    yey = False
+    if len(df) >= 3:
+        first, rest, now = df.iloc[-3], df.iloc[-2], df.iloc[-1]
+        first_event = bool(events.iloc[-3])
+        controlled_rest = bool(
+            rest["Close"] < rest["Open"]
+            and rest["Close"] >= first["Open"]
+            and rest["Low"] >= first["Open"] * (1 - float(cfg["yangEumYangMaxUnderFirstOpenPct"]) / 100.0)
+        )
+        final_up = bool(
+            now["Close"] > now["Open"] and now["Close"] > rest["High"]
+            and (tv_ratio or 0) >= float(cfg["yangEumYangMinTurnoverRatio20"])
+        )
+        yey = bool(first_event and controlled_rest and final_up)
+
+    new_listing_setup = False
+    if not long_track:
+        ev_pos = latest_event_position(events, int(cfg["newListingEventLookbackSessions"]), exclude_last=False)
+        if ev_pos is not None:
+            since = df.iloc[ev_pos:]
+            if len(since) >= 3:
+                lo, hi = float(since["Low"].min()), float(since["High"].max())
+                rng_pct = (hi / lo - 1.0) * 100.0 if lo > 0 else None
+                new_listing_setup = bool(
+                    rng_pct is not None and rng_pct <= float(cfg["newListingMaxPostEventRangePct"])
+                )
+
+    if anomaly:
+        signal = "DATA_WARNING"
+    elif reaccel or yey:
+        signal = "REACCELERATION"
+    elif breakout_class == "JINDOL_CONFIRMED":
+        signal = "JINDOL_CONFIRMED"
+    elif breakout_class == "GADOL_RISK":
+        signal = "GADOL_RISK"
+    elif retest_ok:
+        signal = "RETEST_OK"
+    elif current_deoyang and abc.get("cActive"):
+        signal = "DEOYANGBONG_C_TRIGGER"
+    elif pre_jindol:
+        signal = "PRE_JINDOL"
+    elif abc.get("bPlus"):
+        signal = "B_PLUS"
+    elif abc.get("state") in ("B_BASE", "C_ACTIVE", "A_TO_B"):
+        signal = "ABC_CANDIDATE"
+    elif new_listing_setup:
+        signal = "NEW_LISTING_SETUP"
+    elif cross600:
+        signal = "MA600_BREAKOUT"
+    elif near600:
+        signal = "NEAR_MA600"
+    else:
+        signal = "NONE"
+
+    money_score = 0
+    if cur_tv >= float(cfg["veryStrongTradingValueKrw"]):
+        money_score += 20
+    elif cur_tv >= float(cfg["jindolMinTradingValueKrw"]):
+        money_score += 14
+    elif cur_tv >= float(cfg["discoveryMinTradingValueKrw"]):
+        money_score += 6
+    if (tv_ratio or 0) >= 2:
+        money_score += 8
+    elif (tv_ratio or 0) >= 1.3:
+        money_score += 4
+    if (vol_ratio or 0) >= 2:
+        money_score += 8
+    elif (vol_ratio or 0) >= 1.5:
+        money_score += 4
+    if close_loc >= 0.7:
+        money_score += 4
+
+    structure_score = int(abc.get("score", 0))
+    if cloud["state"] == "ABOVE":
+        structure_score += 8
+    if core:
+        structure_score += min(12, int(round(float(core["score"]))))
+    if current_deoyang:
+        structure_score += 10
+    if breakout_class == "JINDOL_CONFIRMED":
+        structure_score += 18
+    if retest_ok:
+        structure_score += 8
+    if reaccel or yey:
+        structure_score += 15
+    if anomaly:
+        structure_score -= 60
+    total_score = max(0, min(100, structure_score + money_score))
+
+    structural_grade = "STRONG" if total_score >= 80 else ("GOOD" if total_score >= 65 else ("WATCH" if total_score >= 50 else "EARLY"))
+    money_band = (
+        "VERY_STRONG_300B_PLUS" if cur_tv >= float(cfg["veryStrongTradingValueKrw"])
+        else "YBM_CORE_100B_PLUS" if cur_tv >= float(cfg["jindolMinTradingValueKrw"])
+        else "DISCOVERY_30B_PLUS" if cur_tv >= float(cfg["discoveryMinTradingValueKrw"])
+        else "LIGHT"
+    )
+
+    warnings = []
+    if anomaly:
+        warnings.append(f"PRICE_JUMP>{cfg['corporateActionJumpPct']}%:{','.join(anomaly[-3:])}")
+    if tv_quality == "ESTIMATED":
+        warnings.append("CURRENT_TRADING_VALUE_ESTIMATED")
+
+    return {
+        "status": "OK",
+        "code": meta["code"],
+        "name": meta["name"],
+        "market": meta["market"],
+        "tradeDate": df.index[-1].strftime("%Y%m%d"),
+        "track": "LONG_HISTORY" if long_track else "NEW_LISTING",
+        "signal": signal,
+        "structuralGrade": structural_grade,
+        "score": int(total_score),
+        "close": rnum(cur["Close"], 0),
+        "open": rnum(cur["Open"], 0),
+        "high": rnum(cur["High"], 0),
+        "low": rnum(cur["Low"], 0),
+        "dayChangePct": rnum(chg_pct),
+        "bodyPct": rnum(body_pct),
+        "closeLocation": rnum(close_loc, 3),
+        "ma": ma,
+        "distanceToMaPct": ma_dist,
+        "cross600": bool(cross600),
+        "near600": bool(near600),
+        "cloud": cloud,
+        "abc": abc,
+        "deoyangbong": {"today": bool(current_deoyang), "preferred15Pct": bool(current_deoyang_preferred), "latestPrior": prior_event},
+        "coreResistance": core,
+        "breakCoreResistance": bool(break_core),
+        "breakoutClass": breakout_class,
+        "preJindol": bool(pre_jindol),
+        "retestOk": bool(retest_ok),
+        "reacceleration": bool(reaccel),
+        "yangEumYang": bool(yey),
+        "recentReferenceCandle": anchor,
+        "newListingSetup": bool(new_listing_setup),
+        "money": {
+            "band": money_band,
+            "tradingValue": rnum(cur_tv, 0),
+            "tradingValueEstimatedFromOhlcv": rnum(cur_tv_est, 0),
+            "avg20TradingValueEstimated": rnum(avg20_tv, 0),
+            "tradingValueRatio20Estimated": rnum(tv_ratio),
+            "tradingValueQuality": tv_quality,
+            "volume": rnum(cur["Volume"], 0),
+            "avg20Volume": rnum(avg20_vol, 0),
+            "volumeRatio20": rnum(vol_ratio),
+            "relativeToPriorReferenceMoney": rnum(rel_prior_money),
+            "marketCap": rnum(meta.get("marcap"), 0),
+            "turnoverToMarketCapPct": rnum(cur_tv/meta["marcap"]*100.0) if meta.get("marcap") else None,
+        },
+        "rows": len(df),
+        "dataWarnings": warnings,
+    }
+
+
+def analyze(meta, cfg):
+    start = (dt.date.today() - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()
+    df = fdr.DataReader(meta["code"], start)
+    return analyze_frame(meta, df, cfg)
+
+
 def sortit(xs):
-    return sorted(xs, key=lambda x: (x.get("score",0), x.get("tradingValueRatio20Estimated") or 0, x.get("tradingValue") or 0), reverse=True)
+    return sorted(
+        xs,
+        key=lambda x: (
+            x.get("score", 0),
+            ((x.get("money") or {}).get("tradingValueRatio20Estimated") or 0),
+            ((x.get("money") or {}).get("tradingValue") or 0),
+        ),
+        reverse=True,
+    )
 
 
 def run(cfg):
     uni = current_listing()
     if len(uni) < int(cfg["minUniverseCount"]):
-        return {"status":"FAIL_UNIVERSE","generatedAtKst":dt.datetime.now(KST).isoformat(),"universeCount":len(uni)}
+        return {"status": "FAIL_UNIVERSE", "generatedAtKst": dt.datetime.now(KST).isoformat(), "universeCount": len(uni)}
 
     results, errors = [], []
     with cf.ThreadPoolExecutor(max_workers=int(cfg["maxWorkers"])) as ex:
-        fm = {ex.submit(analyze, m, cfg):m for m in uni}
+        fm = {ex.submit(analyze, m, cfg): m for m in uni}
         for fut in cf.as_completed(fm):
             m = fm[fut]
-            try: results.append(fut.result())
-            except Exception as e: errors.append({"code":m["code"],"name":m["name"],"error":f"{type(e).__name__}: {e}"})
+            try:
+                results.append(fut.result())
+            except Exception as e:
+                errors.append({"code": m["code"], "name": m["name"], "error": f"{type(e).__name__}: {e}"})
 
-    ok = [x for x in results if x.get("status")=="OK"]
-    insufficient = [x for x in results if x.get("status")=="INSUFFICIENT_HISTORY"]
+    ok = [x for x in results if x.get("status") == "OK"]
+    insufficient = [x for x in results if x.get("status") == "INSUFFICIENT_HISTORY"]
+    bad_schema = [x for x in results if x.get("status") == "BAD_SCHEMA"]
     dates = Counter(x.get("tradeDate") for x in ok if x.get("tradeDate"))
     td = dates.most_common(1)[0][0] if dates else None
-    cur = [x for x in ok if x.get("tradeDate")==td]
-    strong = sortit([x for x in cur if x["signal"]=="BREAKOUT_600_STRONG"])
-    breaks = sortit([x for x in cur if x["signal"] in ("BREAKOUT_600_STRONG","BREAKOUT_600")])
-    near = sortit([x for x in cur if x["signal"]=="NEAR_BREAKOUT_600"])
-    acc = sortit([x for x in cur if x["signal"] in ("ACCEPTANCE_600","REACCELERATION")])
-    failed = sortit([x for x in cur if x["signal"]=="FAILED_BREAKOUT_600"])
-    allc = sortit([x for x in cur if x["signal"]!="NONE"])
+    cur = [x for x in ok if x.get("tradeDate") == td]
 
-    # Enrich only the highest-ranked chart/flow candidates with foreign/institution flow.
-    # This avoids turning the scanner into thousands of extra investor-trend requests.
+    bucket_names = [
+        "REACCELERATION", "JINDOL_CONFIRMED", "RETEST_OK", "DEOYANGBONG_C_TRIGGER",
+        "PRE_JINDOL", "B_PLUS", "ABC_CANDIDATE", "GADOL_RISK",
+        "NEW_LISTING_SETUP", "MA600_BREAKOUT", "NEAR_MA600", "DATA_WARNING"
+    ]
+    by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
+    allc = sortit([x for x in cur if x["signal"] != "NONE"])
+
     flow_n = min(int(cfg.get("flowEnrichTopN", 60)), len(allc))
     flow_errors = []
-    if flow_n > 0:
+    if flow_n:
         with cf.ThreadPoolExecutor(max_workers=min(8, int(cfg["maxWorkers"]))) as ex:
-            fm2 = {ex.submit(fetch_investor_flow, x["code"], int(cfg.get("flowLookbackSessions", 20))): x for x in allc[:flow_n]}
+            fm2 = {
+                ex.submit(fetch_investor_flow, x["code"], int(cfg.get("flowLookbackSessions", 20))): x
+                for x in allc[:flow_n]
+            }
             for fut in cf.as_completed(fm2):
                 x = fm2[fut]
                 try:
@@ -314,32 +780,98 @@ def run(cfg):
                     x["investorFlow"] = {"status": "ERROR", "error": f"{type(e).__name__}: {e}"}
                     flow_errors.append({"code": x["code"], "error": f"{type(e).__name__}: {e}"})
 
-    er = len(errors)/max(1,len(uni)); sr = (len(ok)-len(cur))/max(1,len(ok))
+    er = len(errors) / max(1, len(uni))
+    sr = (len(ok) - len(cur)) / max(1, len(ok))
     status = "PASS" if er <= float(cfg["maxErrorRatioForPass"]) and sr <= float(cfg["maxStaleRatioForPass"]) else "PARTIAL"
     lim = int(cfg["maxPerBucket"])
+    counts = {name: len(xs) for name, xs in by_signal.items()}
+    counts["allCandidates"] = len(allc)
+
+    def take(name):
+        return by_signal[name][:lim]
+
     return {
-        "status":status, "generatedAtKst":dt.datetime.now(KST).isoformat(), "tradeDate":td,
-        "methodologyVersion":cfg["methodologyVersion"],
-        "primaryLogic":"MA600 structural breakout + turnover expansion + bullish close quality",
-        "notes":[
+        "status": status,
+        "generatedAtKst": dt.datetime.now(KST).isoformat(),
+        "tradeDate": td,
+        "methodologyVersion": cfg["methodologyVersion"],
+        "primaryLogic": "ABC/base + MA240/480/600/1000 + Deoyangbong + core resistance + money quality + Jindol/Gadol + retest/reacceleration",
+        "sourceBoundary": {
+            "sourceDerived": [
+                "ABC long decline -> long base -> MA600 recovery/N-wave framing",
+                "MA600/MA1000 major anchors; MA240 earlier recovery clue",
+                "large bullish reference candle and its open/close as primary support/resistance evidence",
+                "previous high/candle-density/round figure as secondary support/resistance evidence",
+                "both volume and trading value matter; KRW 100bn is the taught minimum money reference",
+                "cloud/overhead supply, Neomoneomo digestion, Jindol/Gadol, Yang-Eum-Yang",
+            ],
+            "implementationInference": [
+                "exact ABC windows/range/slope thresholds",
+                "resistance clustering weights/tolerances",
+                "relative-money threshold and structural score",
+                "new-listing mini-track thresholds",
+            ],
+        },
+        "notes": [
             "News/catalyst is intentionally excluded.",
-            "MA600 is primary; MA240/1000/1200 and 120-session box are secondary evidence.",
-            "A-grade is a chart/flow candidate, not a buy signal.",
-            "Current trading value is exact KRX Amount when available; 20-session comparison is estimated from typical price x volume."
+            "No hidden operator/accumulation intent is inferred.",
+            "StructuralGrade is this system's grade, not the source teacher's S/A/B grade.",
+            "Current trading value is exact KRX Amount when available; historical trading value is estimated from typical price x volume.",
+            "Core resistance is built from pre-current data only to avoid look-ahead leakage.",
         ],
-        "thresholds":{k:cfg[k] for k in ["nearMa600Pct","strongBodyPct","strongTurnoverRatio20","minTurnoverRatio20","strongCloseLocation","minTurnoverWatchKrw","strongTurnoverKrw","volumeRatio20","acceptanceLookbackSessions"]},
-        "coverage":{"universe":len(uni),"ok":len(ok),"currentTradeDate":len(cur),"insufficientHistory":len(insufficient),"fetchErrors":len(errors),"staleRows":len(ok)-len(cur),"errorRatio":round(er,4),"staleRatio":round(sr,4),"tradeDateCounts":dict(dates.most_common(5)),"flowEnriched":flow_n,"flowErrors":len(flow_errors)},
-        "counts":{"strongBreakouts":len(strong),"allBreakouts":len(breaks),"nearBreakouts":len(near),"acceptanceOrReacceleration":len(acc),"failedBreakouts":len(failed),"allCandidates":len(allc)},
-        "strongBreakouts":strong[:lim],"breakouts":breaks[:lim],"nearBreakouts":near[:lim],"acceptance":acc[:lim],"failedBreakouts":failed[:lim],
-        "allCandidates":allc[:int(cfg["maxAllCandidates"])],"sampleErrors":errors[:30],"sampleFlowErrors":flow_errors[:20]
+        "coverage": {
+            "universe": len(uni),
+            "ok": len(ok),
+            "currentTradeDate": len(cur),
+            "insufficientHistory": len(insufficient),
+            "badSchema": len(bad_schema),
+            "fetchErrors": len(errors),
+            "staleRows": len(ok) - len(cur),
+            "errorRatio": round(er, 4),
+            "staleRatio": round(sr, 4),
+            "tradeDateCounts": dict(dates.most_common(5)),
+            "flowEnriched": flow_n,
+            "flowErrors": len(flow_errors),
+        },
+        "counts": counts,
+        "reacceleration": take("REACCELERATION"),
+        "jindol": take("JINDOL_CONFIRMED"),
+        "retest": take("RETEST_OK"),
+        "deoyangC": take("DEOYANGBONG_C_TRIGGER"),
+        "preJindol": take("PRE_JINDOL"),
+        "bPlus": take("B_PLUS"),
+        "abc": take("ABC_CANDIDATE"),
+        "gaodol": take("GADOL_RISK"),
+        "newListing": take("NEW_LISTING_SETUP"),
+        "ma600": sortit(take("MA600_BREAKOUT") + take("NEAR_MA600"))[:lim],
+        "warnings": take("DATA_WARNING"),
+        "allCandidates": allc[:int(cfg["maxAllCandidates"])],
+        "sampleErrors": errors[:30],
+        "sampleFlowErrors": flow_errors[:20],
     }
 
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--config",default="longterm-scan-config.json"); ap.add_argument("--output",default="longterm-scan.json"); a=ap.parse_args()
-    cfg=json.loads(Path(a.config).read_text(encoding="utf-8")); out=run(cfg)
-    tmp=Path(a.output+".tmp"); tmp.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8"); tmp.replace(a.output)
-    print(json.dumps({"status":out.get("status"),"tradeDate":out.get("tradeDate"),"coverage":out.get("coverage"),"counts":out.get("counts")},ensure_ascii=False,indent=2))
-    return 0 if out.get("status") in ("PASS","PARTIAL") else 2
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--config", default="longterm-scan-config.json")
+    ap.add_argument("--output", default="longterm-scan.json")
+    args = ap.parse_args()
 
-if __name__=="__main__": raise SystemExit(main())
+    cfg = json.loads(Path(args.config).read_text(encoding="utf-8"))
+    out = run(cfg)
+    payload = json.dumps(out, ensure_ascii=False, indent=2, default=json_default)
+    tmp = Path(args.output + ".tmp")
+    tmp.write_text(payload, encoding="utf-8")
+    tmp.replace(args.output)
+    print(json.dumps({
+        "status": out.get("status"),
+        "tradeDate": out.get("tradeDate"),
+        "methodologyVersion": out.get("methodologyVersion"),
+        "coverage": out.get("coverage"),
+        "counts": out.get("counts"),
+    }, ensure_ascii=False, indent=2, default=json_default))
+    return 0 if out.get("status") in ("PASS", "PARTIAL") else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
