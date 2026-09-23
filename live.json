@@ -1,8 +1,8 @@
 {
   "status": "OK",
   "tradeDate": "20260923",
-  "publishedAtUtc": "2026-09-23T00:36:00.465Z",
-  "publishedAtKst": "2026-09-23 09:36:00.465 KST",
+  "publishedAtUtc": "2026-09-23T00:41:17.023Z",
+  "publishedAtKst": "2026-09-23 09:41:17.023 KST",
   "source": "NAVER_PUBLIC_WEB_ENDPOINT",
   "watchlist": [
     "009150",
@@ -16,9 +16,9 @@
     "041190"
   ],
   "history": {
-    "count": 36,
+    "count": 41,
     "from": "20260923 0900",
-    "to": "20260923 0935",
+    "to": "20260923 0940",
     "rows": [
       {
         "atKst": "20260923 0900",
@@ -10243,30 +10243,1450 @@
             "nxtOverMarketPriceInfo": null
           }
         }
+      },
+      {
+        "atKst": "20260923 0936",
+        "stocks": {
+          "222800": {
+            "code": "222800",
+            "name": "����",
+            "currentPrice": 148300,
+            "previousClose": 148100,
+            "change": 200,
+            "changePct": 0.14,
+            "open": 148200,
+            "high": 152800,
+            "low": 147500,
+            "volume": 150446,
+            "tradingValue": 22585613700,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "148,200",
+              "openPrice": "152,000",
+              "highPrice": "152,800",
+              "lowPrice": "147,600",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.07",
+              "localTradedAt": "2026-09-23T09:36:55.283240+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115020.129,
+              "accumulatedTradingVolume": "325,745",
+              "accumulatedTradingValue": "489��",
+              "accumulatedTradingVolumeRaw": "325745",
+              "accumulatedTradingValueRaw": "48920000000"
+            }
+          },
+          "353200": {
+            "code": "353200",
+            "name": "�������",
+            "currentPrice": 114400,
+            "previousClose": 112300,
+            "change": 2100,
+            "changePct": 1.87,
+            "open": 113600,
+            "high": 118700,
+            "low": 111000,
+            "volume": 468487,
+            "tradingValue": 54025832750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "009150": {
+            "code": "009150",
+            "name": "�Ｚ����",
+            "currentPrice": 1491000,
+            "previousClose": 1486000,
+            "change": 5000,
+            "changePct": 0.34,
+            "open": 1543000,
+            "high": 1544000,
+            "low": 1490000,
+            "volume": 131342,
+            "tradingValue": 198951454000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,492,000",
+              "openPrice": "1,506,000",
+              "highPrice": "1,541,000",
+              "lowPrice": "1,490,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "6,000",
+              "fluctuationsRatio": "0.40",
+              "localTradedAt": "2026-09-23T09:36:55.295618+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.851,
+              "accumulatedTradingVolume": "239,503",
+              "accumulatedTradingValue": "3,649��",
+              "accumulatedTradingVolumeRaw": "239503",
+              "accumulatedTradingValueRaw": "364873000000"
+            }
+          },
+          "007810": {
+            "code": "007810",
+            "name": "�ڸ��ƽ�ŰƮ",
+            "currentPrice": 63600,
+            "previousClose": 65600,
+            "change": 2000,
+            "changePct": 3.05,
+            "open": 66000,
+            "high": 66200,
+            "low": 63400,
+            "volume": 230069,
+            "tradingValue": 14864806850,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "63,600",
+              "openPrice": "65,700",
+              "highPrice": "70,000",
+              "lowPrice": "63,400",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-2,000",
+              "fluctuationsRatio": "-3.05",
+              "localTradedAt": "2026-09-23T09:36:55.284953+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.749,
+              "accumulatedTradingVolume": "731,117",
+              "accumulatedTradingValue": "481��",
+              "accumulatedTradingVolumeRaw": "731117",
+              "accumulatedTradingValueRaw": "48134000000"
+            }
+          },
+          "000660": {
+            "code": "000660",
+            "name": "SK���̴н�",
+            "currentPrice": 1866000,
+            "previousClose": 1840000,
+            "change": 26000,
+            "changePct": 1.41,
+            "open": 1899000,
+            "high": 1900000,
+            "low": 1863000,
+            "volume": 620581,
+            "tradingValue": 1167042044000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,866,000",
+              "openPrice": "1,891,000",
+              "highPrice": "1,910,000",
+              "lowPrice": "1,863,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "26,000",
+              "fluctuationsRatio": "1.41",
+              "localTradedAt": "2026-09-23T09:36:55.293830+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115012.062,
+              "accumulatedTradingVolume": "706,558",
+              "accumulatedTradingValue": "1�� 3,355��",
+              "accumulatedTradingVolumeRaw": "706558",
+              "accumulatedTradingValueRaw": "1335508000000"
+            }
+          },
+          "036540": {
+            "code": "036540",
+            "name": "SFA�ݵ�ü",
+            "currentPrice": 10370,
+            "previousClose": 10620,
+            "change": 250,
+            "changePct": 2.35,
+            "open": 10710,
+            "high": 10900,
+            "low": 10260,
+            "volume": 1924642,
+            "tradingValue": 20219197705,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "005930": {
+            "code": "005930",
+            "name": "�Ｚ����",
+            "currentPrice": 284250,
+            "previousClose": 276500,
+            "change": 7750,
+            "changePct": 2.8,
+            "open": 284500,
+            "high": 285000,
+            "low": 283000,
+            "volume": 3492441,
+            "tradingValue": 992323025500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "284,000",
+              "openPrice": "282,500",
+              "highPrice": "284,500",
+              "lowPrice": "281,500",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "7,500",
+              "fluctuationsRatio": "2.71",
+              "localTradedAt": "2026-09-23T09:36:55.500356+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.438,
+              "accumulatedTradingVolume": "4,150,568",
+              "accumulatedTradingValue": "1�� 1,755��",
+              "accumulatedTradingVolumeRaw": "4150568",
+              "accumulatedTradingValueRaw": "1175542000000"
+            }
+          },
+          "003530": {
+            "code": "003530",
+            "name": "��ȭ��������",
+            "currentPrice": 4640,
+            "previousClose": 4665,
+            "change": 25,
+            "changePct": 0.54,
+            "open": 4675,
+            "high": 4700,
+            "low": 4635,
+            "volume": 108182,
+            "tradingValue": 504004676,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "041190": {
+            "code": "041190",
+            "name": "�츮�������",
+            "currentPrice": 5950,
+            "previousClose": 5980,
+            "change": 30,
+            "changePct": 0.5,
+            "open": 5990,
+            "high": 6010,
+            "low": 5810,
+            "volume": 528522,
+            "tradingValue": 3133760895,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260923 0937",
+        "stocks": {
+          "222800": {
+            "code": "222800",
+            "name": "����",
+            "currentPrice": 148100,
+            "previousClose": 148100,
+            "change": 0,
+            "changePct": 0,
+            "open": 148200,
+            "high": 152800,
+            "low": 147500,
+            "volume": 153870,
+            "tradingValue": 23093327000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "148,200",
+              "openPrice": "152,000",
+              "highPrice": "152,800",
+              "lowPrice": "147,600",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "100",
+              "fluctuationsRatio": "0.07",
+              "localTradedAt": "2026-09-23T09:37:55.233999+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115020.129,
+              "accumulatedTradingVolume": "327,638",
+              "accumulatedTradingValue": "492��",
+              "accumulatedTradingVolumeRaw": "327638",
+              "accumulatedTradingValueRaw": "49201000000"
+            }
+          },
+          "353200": {
+            "code": "353200",
+            "name": "�������",
+            "currentPrice": 114600,
+            "previousClose": 112300,
+            "change": 2300,
+            "changePct": 2.05,
+            "open": 113600,
+            "high": 118700,
+            "low": 111000,
+            "volume": 470699,
+            "tradingValue": 54279061350,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "009150": {
+            "code": "009150",
+            "name": "�Ｚ����",
+            "currentPrice": 1488000,
+            "previousClose": 1486000,
+            "change": 2000,
+            "changePct": 0.13,
+            "open": 1543000,
+            "high": 1544000,
+            "low": 1486000,
+            "volume": 136236,
+            "tradingValue": 206234411000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,487,000",
+              "openPrice": "1,506,000",
+              "highPrice": "1,541,000",
+              "lowPrice": "1,486,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "1,000",
+              "fluctuationsRatio": "0.07",
+              "localTradedAt": "2026-09-23T09:37:55.233373+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.851,
+              "accumulatedTradingVolume": "242,485",
+              "accumulatedTradingValue": "3,693��",
+              "accumulatedTradingVolumeRaw": "242485",
+              "accumulatedTradingValueRaw": "369312000000"
+            }
+          },
+          "007810": {
+            "code": "007810",
+            "name": "�ڸ��ƽ�ŰƮ",
+            "currentPrice": 63800,
+            "previousClose": 65600,
+            "change": 1800,
+            "changePct": 2.74,
+            "open": 66000,
+            "high": 66200,
+            "low": 63400,
+            "volume": 233794,
+            "tradingValue": 15101849500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "63,800",
+              "openPrice": "65,700",
+              "highPrice": "70,000",
+              "lowPrice": "63,400",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-1,800",
+              "fluctuationsRatio": "-2.74",
+              "localTradedAt": "2026-09-23T09:37:55.228798+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.749,
+              "accumulatedTradingVolume": "733,621",
+              "accumulatedTradingValue": "483��",
+              "accumulatedTradingVolumeRaw": "733621",
+              "accumulatedTradingValueRaw": "48293000000"
+            }
+          },
+          "000660": {
+            "code": "000660",
+            "name": "SK���̴н�",
+            "currentPrice": 1863000,
+            "previousClose": 1840000,
+            "change": 23000,
+            "changePct": 1.25,
+            "open": 1899000,
+            "high": 1900000,
+            "low": 1863000,
+            "volume": 629492,
+            "tradingValue": 1183655224000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,863,000",
+              "openPrice": "1,891,000",
+              "highPrice": "1,910,000",
+              "lowPrice": "1,862,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "23,000",
+              "fluctuationsRatio": "1.25",
+              "localTradedAt": "2026-09-23T09:37:55.217344+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115012.062,
+              "accumulatedTradingVolume": "713,331",
+              "accumulatedTradingValue": "1�� 3,481��",
+              "accumulatedTradingValueRaw": "1348134000000",
+              "accumulatedTradingVolumeRaw": "713331"
+            }
+          },
+          "036540": {
+            "code": "036540",
+            "name": "SFA�ݵ�ü",
+            "currentPrice": 10360,
+            "previousClose": 10620,
+            "change": 260,
+            "changePct": 2.45,
+            "open": 10710,
+            "high": 10900,
+            "low": 10260,
+            "volume": 1949752,
+            "tradingValue": 20479584540,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "005930": {
+            "code": "005930",
+            "name": "�Ｚ����",
+            "currentPrice": 284000,
+            "previousClose": 276500,
+            "change": 7500,
+            "changePct": 2.71,
+            "open": 284500,
+            "high": 285000,
+            "low": 283000,
+            "volume": 3609126,
+            "tradingValue": 1025463874750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "284,000",
+              "openPrice": "282,500",
+              "highPrice": "284,500",
+              "lowPrice": "281,500",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "7,500",
+              "fluctuationsRatio": "2.71",
+              "localTradedAt": "2026-09-23T09:37:55.422858+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.438,
+              "accumulatedTradingVolume": "4,164,820",
+              "accumulatedTradingValue": "1�� 1,796��",
+              "accumulatedTradingVolumeRaw": "4164820",
+              "accumulatedTradingValueRaw": "1179589000000"
+            }
+          },
+          "003530": {
+            "code": "003530",
+            "name": "��ȭ��������",
+            "currentPrice": 4640,
+            "previousClose": 4665,
+            "change": 25,
+            "changePct": 0.54,
+            "open": 4675,
+            "high": 4700,
+            "low": 4630,
+            "volume": 110545,
+            "tradingValue": 514955121,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "041190": {
+            "code": "041190",
+            "name": "�츮�������",
+            "currentPrice": 5950,
+            "previousClose": 5980,
+            "change": 30,
+            "changePct": 0.5,
+            "open": 5990,
+            "high": 6010,
+            "low": 5810,
+            "volume": 536099,
+            "tradingValue": 3178814975,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260923 0938",
+        "stocks": {
+          "222800": {
+            "code": "222800",
+            "name": "����",
+            "currentPrice": 148700,
+            "previousClose": 148100,
+            "change": 600,
+            "changePct": 0.41,
+            "open": 148200,
+            "high": 152800,
+            "low": 147500,
+            "volume": 161670,
+            "tradingValue": 24250482900,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "148,800",
+              "openPrice": "152,000",
+              "highPrice": "152,800",
+              "lowPrice": "147,600",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "700",
+              "fluctuationsRatio": "0.47",
+              "localTradedAt": "2026-09-23T09:38:55.422420+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115020.129,
+              "accumulatedTradingVolume": "328,950",
+              "accumulatedTradingValue": "494��",
+              "accumulatedTradingVolumeRaw": "328950",
+              "accumulatedTradingValueRaw": "49395000000"
+            }
+          },
+          "353200": {
+            "code": "353200",
+            "name": "�������",
+            "currentPrice": 114600,
+            "previousClose": 112300,
+            "change": 2300,
+            "changePct": 2.05,
+            "open": 113600,
+            "high": 118700,
+            "low": 111000,
+            "volume": 472148,
+            "tradingValue": 54445019750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "009150": {
+            "code": "009150",
+            "name": "�Ｚ����",
+            "currentPrice": 1490000,
+            "previousClose": 1486000,
+            "change": 4000,
+            "changePct": 0.27,
+            "open": 1543000,
+            "high": 1544000,
+            "low": 1486000,
+            "volume": 139023,
+            "tradingValue": 210381299000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,490,000",
+              "openPrice": "1,506,000",
+              "highPrice": "1,541,000",
+              "lowPrice": "1,486,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "4,000",
+              "fluctuationsRatio": "0.27",
+              "localTradedAt": "2026-09-23T09:38:56.026715+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.851,
+              "accumulatedTradingVolume": "244,522",
+              "accumulatedTradingValue": "3,723��",
+              "accumulatedTradingVolumeRaw": "244522",
+              "accumulatedTradingValueRaw": "372342000000"
+            }
+          },
+          "007810": {
+            "code": "007810",
+            "name": "�ڸ��ƽ�ŰƮ",
+            "currentPrice": 63700,
+            "previousClose": 65600,
+            "change": 1900,
+            "changePct": 2.9,
+            "open": 66000,
+            "high": 66200,
+            "low": 63400,
+            "volume": 234843,
+            "tradingValue": 15168706000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "63,700",
+              "openPrice": "65,700",
+              "highPrice": "70,000",
+              "lowPrice": "63,400",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-1,900",
+              "fluctuationsRatio": "-2.90",
+              "localTradedAt": "2026-09-23T09:38:56.044581+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.749,
+              "accumulatedTradingVolume": "734,811",
+              "accumulatedTradingValue": "484��",
+              "accumulatedTradingVolumeRaw": "734811",
+              "accumulatedTradingValueRaw": "48369000000"
+            }
+          },
+          "000660": {
+            "code": "000660",
+            "name": "SK���̴н�",
+            "currentPrice": 1867000,
+            "previousClose": 1840000,
+            "change": 27000,
+            "changePct": 1.47,
+            "open": 1899000,
+            "high": 1900000,
+            "low": 1862000,
+            "volume": 646838,
+            "tradingValue": 1215990696500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,866,000",
+              "openPrice": "1,891,000",
+              "highPrice": "1,910,000",
+              "lowPrice": "1,862,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "26,000",
+              "fluctuationsRatio": "1.41",
+              "localTradedAt": "2026-09-23T09:38:55.424499+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115012.062,
+              "accumulatedTradingVolume": "717,758",
+              "accumulatedTradingValue": "1�� 3,564��",
+              "accumulatedTradingValueRaw": "1356383000000",
+              "accumulatedTradingVolumeRaw": "717758"
+            }
+          },
+          "036540": {
+            "code": "036540",
+            "name": "SFA�ݵ�ü",
+            "currentPrice": 10390,
+            "previousClose": 10620,
+            "change": 230,
+            "changePct": 2.17,
+            "open": 10710,
+            "high": 10900,
+            "low": 10260,
+            "volume": 1980178,
+            "tradingValue": 20794892395,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "005930": {
+            "code": "005930",
+            "name": "�Ｚ����",
+            "currentPrice": 284250,
+            "previousClose": 276500,
+            "change": 7750,
+            "changePct": 2.8,
+            "open": 284500,
+            "high": 285000,
+            "low": 283000,
+            "volume": 3657312,
+            "tradingValue": 1039158660000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "284,500",
+              "openPrice": "282,500",
+              "highPrice": "284,500",
+              "lowPrice": "281,500",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "8,000",
+              "fluctuationsRatio": "2.89",
+              "localTradedAt": "2026-09-23T09:38:56.108411+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.438,
+              "accumulatedTradingVolume": "4,177,022",
+              "accumulatedTradingValue": "1�� 1,831��",
+              "accumulatedTradingVolumeRaw": "4177022",
+              "accumulatedTradingValueRaw": "1183055000000"
+            }
+          },
+          "003530": {
+            "code": "003530",
+            "name": "��ȭ��������",
+            "currentPrice": 4635,
+            "previousClose": 4665,
+            "change": 30,
+            "changePct": 0.64,
+            "open": 4675,
+            "high": 4700,
+            "low": 4630,
+            "volume": 110647,
+            "tradingValue": 515428316,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "041190": {
+            "code": "041190",
+            "name": "�츮�������",
+            "currentPrice": 5950,
+            "previousClose": 5980,
+            "change": 30,
+            "changePct": 0.5,
+            "open": 5990,
+            "high": 6010,
+            "low": 5810,
+            "volume": 542176,
+            "tradingValue": 3214940285,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260923 0939",
+        "stocks": {
+          "222800": {
+            "code": "222800",
+            "name": "����",
+            "currentPrice": 148200,
+            "previousClose": 148100,
+            "change": 100,
+            "changePct": 0.07,
+            "open": 148200,
+            "high": 152800,
+            "low": 147500,
+            "volume": 162943,
+            "tradingValue": 24439504000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "148,400",
+              "openPrice": "152,000",
+              "highPrice": "152,800",
+              "lowPrice": "147,600",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "300",
+              "fluctuationsRatio": "0.20",
+              "localTradedAt": "2026-09-23T09:39:56.217500+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115020.129,
+              "accumulatedTradingVolume": "329,991",
+              "accumulatedTradingValue": "496��",
+              "accumulatedTradingVolumeRaw": "329991",
+              "accumulatedTradingValueRaw": "49550000000"
+            }
+          },
+          "353200": {
+            "code": "353200",
+            "name": "�������",
+            "currentPrice": 114600,
+            "previousClose": 112300,
+            "change": 2300,
+            "changePct": 2.05,
+            "open": 113600,
+            "high": 118700,
+            "low": 111000,
+            "volume": 479628,
+            "tradingValue": 55304096300,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "009150": {
+            "code": "009150",
+            "name": "�Ｚ����",
+            "currentPrice": 1494000,
+            "previousClose": 1486000,
+            "change": 8000,
+            "changePct": 0.54,
+            "open": 1543000,
+            "high": 1544000,
+            "low": 1486000,
+            "volume": 142654,
+            "tradingValue": 215800396500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,495,000",
+              "openPrice": "1,506,000",
+              "highPrice": "1,541,000",
+              "lowPrice": "1,486,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "9,000",
+              "fluctuationsRatio": "0.61",
+              "localTradedAt": "2026-09-23T09:39:55.698419+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.851,
+              "accumulatedTradingVolume": "245,856",
+              "accumulatedTradingValue": "3,743��",
+              "accumulatedTradingVolumeRaw": "245856",
+              "accumulatedTradingValueRaw": "374333000000"
+            }
+          },
+          "007810": {
+            "code": "007810",
+            "name": "�ڸ��ƽ�ŰƮ",
+            "currentPrice": 63600,
+            "previousClose": 65600,
+            "change": 2000,
+            "changePct": 3.05,
+            "open": 66000,
+            "high": 66200,
+            "low": 63400,
+            "volume": 237695,
+            "tradingValue": 15350250900,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "63,600",
+              "openPrice": "65,700",
+              "highPrice": "70,000",
+              "lowPrice": "63,400",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-2,000",
+              "fluctuationsRatio": "-3.05",
+              "localTradedAt": "2026-09-23T09:39:56.302813+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.749,
+              "accumulatedTradingVolume": "737,183",
+              "accumulatedTradingValue": "485��",
+              "accumulatedTradingVolumeRaw": "737183",
+              "accumulatedTradingValueRaw": "48520000000"
+            }
+          },
+          "000660": {
+            "code": "000660",
+            "name": "SK���̴н�",
+            "currentPrice": 1869000,
+            "previousClose": 1840000,
+            "change": 29000,
+            "changePct": 1.58,
+            "open": 1899000,
+            "high": 1900000,
+            "low": 1862000,
+            "volume": 657682,
+            "tradingValue": 1236252968500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,869,000",
+              "openPrice": "1,891,000",
+              "highPrice": "1,910,000",
+              "lowPrice": "1,862,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "29,000",
+              "fluctuationsRatio": "1.58",
+              "localTradedAt": "2026-09-23T09:39:55.612928+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115012.062,
+              "accumulatedTradingVolume": "720,546",
+              "accumulatedTradingValue": "1�� 3,616��",
+              "accumulatedTradingVolumeRaw": "720546",
+              "accumulatedTradingValueRaw": "1361589000000"
+            }
+          },
+          "036540": {
+            "code": "036540",
+            "name": "SFA�ݵ�ü",
+            "currentPrice": 10360,
+            "previousClose": 10620,
+            "change": 260,
+            "changePct": 2.45,
+            "open": 10710,
+            "high": 10900,
+            "low": 10260,
+            "volume": 1992871,
+            "tradingValue": 20926701060,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "005930": {
+            "code": "005930",
+            "name": "�Ｚ����",
+            "currentPrice": 284500,
+            "previousClose": 276500,
+            "change": 8000,
+            "changePct": 2.89,
+            "open": 284500,
+            "high": 285000,
+            "low": 283000,
+            "volume": 3725176,
+            "tradingValue": 1058463243500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "284,500",
+              "openPrice": "282,500",
+              "highPrice": "284,500",
+              "lowPrice": "281,500",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "8,000",
+              "fluctuationsRatio": "2.89",
+              "localTradedAt": "2026-09-23T09:39:56.396185+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.438,
+              "accumulatedTradingVolume": "4,206,833",
+              "accumulatedTradingValue": "1�� 1,915��",
+              "accumulatedTradingVolumeRaw": "4206833",
+              "accumulatedTradingValueRaw": "1191536000000"
+            }
+          },
+          "003530": {
+            "code": "003530",
+            "name": "��ȭ��������",
+            "currentPrice": 4640,
+            "previousClose": 4665,
+            "change": 25,
+            "changePct": 0.54,
+            "open": 4675,
+            "high": 4700,
+            "low": 4630,
+            "volume": 111743,
+            "tradingValue": 520508726,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "041190": {
+            "code": "041190",
+            "name": "�츮�������",
+            "currentPrice": 5940,
+            "previousClose": 5980,
+            "change": 40,
+            "changePct": 0.67,
+            "open": 5990,
+            "high": 6010,
+            "low": 5810,
+            "volume": 548100,
+            "tradingValue": 3250146385,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
+      },
+      {
+        "atKst": "20260923 0940",
+        "stocks": {
+          "222800": {
+            "code": "222800",
+            "name": "����",
+            "currentPrice": 148500,
+            "previousClose": 148100,
+            "change": 400,
+            "changePct": 0.27,
+            "open": 148200,
+            "high": 152800,
+            "low": 147500,
+            "volume": 164232,
+            "tradingValue": 24630749450,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "148,600",
+              "openPrice": "152,000",
+              "highPrice": "152,800",
+              "lowPrice": "147,600",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "500",
+              "fluctuationsRatio": "0.34",
+              "localTradedAt": "2026-09-23T09:41:14.588350+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115020.129,
+              "accumulatedTradingVolume": "331,901",
+              "accumulatedTradingValue": "498��",
+              "accumulatedTradingVolumeRaw": "331901",
+              "accumulatedTradingValueRaw": "49833000000"
+            }
+          },
+          "353200": {
+            "code": "353200",
+            "name": "�������",
+            "currentPrice": 115150,
+            "previousClose": 112300,
+            "change": 2850,
+            "changePct": 2.54,
+            "open": 113600,
+            "high": 118700,
+            "low": 111000,
+            "volume": 483041,
+            "tradingValue": 55696038750,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "009150": {
+            "code": "009150",
+            "name": "�Ｚ����",
+            "currentPrice": 1494000,
+            "previousClose": 1486000,
+            "change": 8000,
+            "changePct": 0.54,
+            "open": 1543000,
+            "high": 1544000,
+            "low": 1486000,
+            "volume": 144781,
+            "tradingValue": 218975810500,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,494,000",
+              "openPrice": "1,506,000",
+              "highPrice": "1,541,000",
+              "lowPrice": "1,486,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "8,000",
+              "fluctuationsRatio": "0.54",
+              "localTradedAt": "2026-09-23T09:41:14.543640+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.851,
+              "accumulatedTradingVolume": "247,459",
+              "accumulatedTradingValue": "3,767��",
+              "accumulatedTradingVolumeRaw": "247459",
+              "accumulatedTradingValueRaw": "376728000000"
+            }
+          },
+          "007810": {
+            "code": "007810",
+            "name": "�ڸ��ƽ�ŰƮ",
+            "currentPrice": 63600,
+            "previousClose": 65600,
+            "change": 2000,
+            "changePct": 3.05,
+            "open": 66000,
+            "high": 66200,
+            "low": 63400,
+            "volume": 241643,
+            "tradingValue": 15601107200,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "63,500",
+              "openPrice": "65,700",
+              "highPrice": "70,000",
+              "lowPrice": "63,400",
+              "compareToPreviousPrice": {
+                "code": "5",
+                "text": "�϶�",
+                "name": "FALLING"
+              },
+              "compareToPreviousClosePrice": "-2,100",
+              "fluctuationsRatio": "-3.20",
+              "localTradedAt": "2026-09-23T09:41:14.530333+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.749,
+              "accumulatedTradingVolume": "741,595",
+              "accumulatedTradingValue": "488��",
+              "accumulatedTradingVolumeRaw": "741595",
+              "accumulatedTradingValueRaw": "48801000000"
+            }
+          },
+          "000660": {
+            "code": "000660",
+            "name": "SK���̴н�",
+            "currentPrice": 1870000,
+            "previousClose": 1840000,
+            "change": 30000,
+            "changePct": 1.63,
+            "open": 1899000,
+            "high": 1900000,
+            "low": 1862000,
+            "volume": 668182,
+            "tradingValue": 1255875165000,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "1,870,000",
+              "openPrice": "1,891,000",
+              "highPrice": "1,910,000",
+              "lowPrice": "1,862,000",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "30,000",
+              "fluctuationsRatio": "1.63",
+              "localTradedAt": "2026-09-23T09:41:14.546437+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115012.062,
+              "accumulatedTradingVolume": "723,300",
+              "accumulatedTradingValue": "1�� 3,667��",
+              "accumulatedTradingVolumeRaw": "723300",
+              "accumulatedTradingValueRaw": "1366734000000"
+            }
+          },
+          "036540": {
+            "code": "036540",
+            "name": "SFA�ݵ�ü",
+            "currentPrice": 10430,
+            "previousClose": 10620,
+            "change": 190,
+            "changePct": 1.79,
+            "open": 10710,
+            "high": 10900,
+            "low": 10260,
+            "volume": 2019416,
+            "tradingValue": 21203643280,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "005930": {
+            "code": "005930",
+            "name": "�Ｚ����",
+            "currentPrice": 284750,
+            "previousClose": 276500,
+            "change": 8250,
+            "changePct": 2.98,
+            "open": 284500,
+            "high": 285000,
+            "low": 283000,
+            "volume": 4002930,
+            "tradingValue": 1137500037250,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": {
+              "tradingSessionType": "REGULAR_MARKET",
+              "overMarketStatus": "OPEN",
+              "overPrice": "284,500",
+              "openPrice": "282,500",
+              "highPrice": "284,500",
+              "lowPrice": "281,500",
+              "compareToPreviousPrice": {
+                "code": "2",
+                "text": "���",
+                "name": "RISING"
+              },
+              "compareToPreviousClosePrice": "8,000",
+              "fluctuationsRatio": "2.89",
+              "localTradedAt": "2026-09-23T09:41:14.725948+09:00",
+              "tradeStopType": {
+                "code": "1",
+                "text": "�.Trading",
+                "name": "TRADING"
+              },
+              "tradableStatus": "tradable",
+              "tradableStatusCode": "ok",
+              "tradableStatusUpdatedAt": 1790115013.438,
+              "accumulatedTradingVolume": "4,339,182",
+              "accumulatedTradingValue": "1�� 2,292��",
+              "accumulatedTradingVolumeRaw": "4339182",
+              "accumulatedTradingValueRaw": "1229188000000"
+            }
+          },
+          "003530": {
+            "code": "003530",
+            "name": "��ȭ��������",
+            "currentPrice": 4640,
+            "previousClose": 4665,
+            "change": 25,
+            "changePct": 0.54,
+            "open": 4675,
+            "high": 4700,
+            "low": 4630,
+            "volume": 112310,
+            "tradingValue": 523139626,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          },
+          "041190": {
+            "code": "041190",
+            "name": "�츮�������",
+            "currentPrice": 5970,
+            "previousClose": 5980,
+            "change": 10,
+            "changePct": 0.17,
+            "open": 5990,
+            "high": 6010,
+            "low": 5810,
+            "volume": 553013,
+            "tradingValue": 3279364045,
+            "marketStatus": "OPEN",
+            "pollingIntervalMs": 7000,
+            "nxtOverMarketPriceInfo": null
+          }
+        }
       }
     ]
   },
   "latest": {
-    "atKst": "20260923 0935",
+    "atKst": "20260923 0940",
     "stocks": {
       "222800": {
         "code": "222800",
         "name": "����",
-        "currentPrice": 149000,
+        "currentPrice": 148500,
         "previousClose": 148100,
-        "change": 900,
-        "changePct": 0.61,
+        "change": 400,
+        "changePct": 0.27,
         "open": 148200,
         "high": 152800,
         "low": 147500,
-        "volume": 146454,
-        "tradingValue": 21992608400,
+        "volume": 164232,
+        "tradingValue": 24630749450,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": {
           "tradingSessionType": "REGULAR_MARKET",
           "overMarketStatus": "OPEN",
-          "overPrice": "148,900",
+          "overPrice": "148,600",
           "openPrice": "152,000",
           "highPrice": "152,800",
           "lowPrice": "147,600",
@@ -10275,9 +11695,9 @@
             "text": "���",
             "name": "RISING"
           },
-          "compareToPreviousClosePrice": "800",
-          "fluctuationsRatio": "0.54",
-          "localTradedAt": "2026-09-23T09:35:57.947267+09:00",
+          "compareToPreviousClosePrice": "500",
+          "fluctuationsRatio": "0.34",
+          "localTradedAt": "2026-09-23T09:41:14.588350+09:00",
           "tradeStopType": {
             "code": "1",
             "text": "�.Trading",
@@ -10286,24 +11706,24 @@
           "tradableStatus": "tradable",
           "tradableStatusCode": "ok",
           "tradableStatusUpdatedAt": 1790115020.129,
-          "accumulatedTradingVolume": "322,019",
-          "accumulatedTradingValue": "484��",
-          "accumulatedTradingVolumeRaw": "322019",
-          "accumulatedTradingValueRaw": "48367000000"
+          "accumulatedTradingVolume": "331,901",
+          "accumulatedTradingValue": "498��",
+          "accumulatedTradingVolumeRaw": "331901",
+          "accumulatedTradingValueRaw": "49833000000"
         }
       },
       "353200": {
         "code": "353200",
         "name": "�������",
-        "currentPrice": 114400,
+        "currentPrice": 115150,
         "previousClose": 112300,
-        "change": 2100,
-        "changePct": 1.87,
+        "change": 2850,
+        "changePct": 2.54,
         "open": 113600,
         "high": 118700,
         "low": 111000,
-        "volume": 465290,
-        "tradingValue": 53660255900,
+        "volume": 483041,
+        "tradingValue": 55696038750,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": null
@@ -10311,32 +11731,32 @@
       "009150": {
         "code": "009150",
         "name": "�Ｚ����",
-        "currentPrice": 1491000,
+        "currentPrice": 1494000,
         "previousClose": 1486000,
-        "change": 5000,
-        "changePct": 0.34,
+        "change": 8000,
+        "changePct": 0.54,
         "open": 1543000,
         "high": 1544000,
-        "low": 1490000,
-        "volume": 128461,
-        "tradingValue": 194654630500,
+        "low": 1486000,
+        "volume": 144781,
+        "tradingValue": 218975810500,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": {
           "tradingSessionType": "REGULAR_MARKET",
           "overMarketStatus": "OPEN",
-          "overPrice": "1,491,000",
+          "overPrice": "1,494,000",
           "openPrice": "1,506,000",
           "highPrice": "1,541,000",
-          "lowPrice": "1,490,000",
+          "lowPrice": "1,486,000",
           "compareToPreviousPrice": {
             "code": "2",
             "text": "���",
             "name": "RISING"
           },
-          "compareToPreviousClosePrice": "5,000",
-          "fluctuationsRatio": "0.34",
-          "localTradedAt": "2026-09-23T09:35:57.936578+09:00",
+          "compareToPreviousClosePrice": "8,000",
+          "fluctuationsRatio": "0.54",
+          "localTradedAt": "2026-09-23T09:41:14.543640+09:00",
           "tradeStopType": {
             "code": "1",
             "text": "�.Trading",
@@ -10345,10 +11765,10 @@
           "tradableStatus": "tradable",
           "tradableStatusCode": "ok",
           "tradableStatusUpdatedAt": 1790115013.851,
-          "accumulatedTradingVolume": "238,177",
-          "accumulatedTradingValue": "3,629��",
-          "accumulatedTradingVolumeRaw": "238177",
-          "accumulatedTradingValueRaw": "362896000000"
+          "accumulatedTradingVolume": "247,459",
+          "accumulatedTradingValue": "3,767��",
+          "accumulatedTradingVolumeRaw": "247459",
+          "accumulatedTradingValueRaw": "376728000000"
         }
       },
       "007810": {
@@ -10360,9 +11780,9 @@
         "changePct": 3.05,
         "open": 66000,
         "high": 66200,
-        "low": 63500,
-        "volume": 227090,
-        "tradingValue": 14675613300,
+        "low": 63400,
+        "volume": 241643,
+        "tradingValue": 15601107200,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": {
@@ -10371,7 +11791,7 @@
           "overPrice": "63,500",
           "openPrice": "65,700",
           "highPrice": "70,000",
-          "lowPrice": "63,500",
+          "lowPrice": "63,400",
           "compareToPreviousPrice": {
             "code": "5",
             "text": "�϶�",
@@ -10379,7 +11799,7 @@
           },
           "compareToPreviousClosePrice": "-2,100",
           "fluctuationsRatio": "-3.20",
-          "localTradedAt": "2026-09-23T09:35:57.912887+09:00",
+          "localTradedAt": "2026-09-23T09:41:14.530333+09:00",
           "tradeStopType": {
             "code": "1",
             "text": "�.Trading",
@@ -10388,41 +11808,41 @@
           "tradableStatus": "tradable",
           "tradableStatusCode": "ok",
           "tradableStatusUpdatedAt": 1790115013.749,
-          "accumulatedTradingVolume": "726,815",
-          "accumulatedTradingValue": "479��",
-          "accumulatedTradingVolumeRaw": "726815",
-          "accumulatedTradingValueRaw": "47861000000"
+          "accumulatedTradingVolume": "741,595",
+          "accumulatedTradingValue": "488��",
+          "accumulatedTradingVolumeRaw": "741595",
+          "accumulatedTradingValueRaw": "48801000000"
         }
       },
       "000660": {
         "code": "000660",
         "name": "SK���̴н�",
-        "currentPrice": 1867000,
+        "currentPrice": 1870000,
         "previousClose": 1840000,
-        "change": 27000,
-        "changePct": 1.47,
+        "change": 30000,
+        "changePct": 1.63,
         "open": 1899000,
         "high": 1900000,
-        "low": 1863000,
-        "volume": 613511,
-        "tradingValue": 1153843362000,
+        "low": 1862000,
+        "volume": 668182,
+        "tradingValue": 1255875165000,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": {
           "tradingSessionType": "REGULAR_MARKET",
           "overMarketStatus": "OPEN",
-          "overPrice": "1,867,000",
+          "overPrice": "1,870,000",
           "openPrice": "1,891,000",
           "highPrice": "1,910,000",
-          "lowPrice": "1,863,000",
+          "lowPrice": "1,862,000",
           "compareToPreviousPrice": {
             "code": "2",
             "text": "���",
             "name": "RISING"
           },
-          "compareToPreviousClosePrice": "27,000",
-          "fluctuationsRatio": "1.47",
-          "localTradedAt": "2026-09-23T09:35:57.913449+09:00",
+          "compareToPreviousClosePrice": "30,000",
+          "fluctuationsRatio": "1.63",
+          "localTradedAt": "2026-09-23T09:41:14.546437+09:00",
           "tradeStopType": {
             "code": "1",
             "text": "�.Trading",
@@ -10431,24 +11851,24 @@
           "tradableStatus": "tradable",
           "tradableStatusCode": "ok",
           "tradableStatusUpdatedAt": 1790115012.062,
-          "accumulatedTradingVolume": "704,488",
-          "accumulatedTradingValue": "1�� 3,316��",
-          "accumulatedTradingVolumeRaw": "704488",
-          "accumulatedTradingValueRaw": "1331644000000"
+          "accumulatedTradingVolume": "723,300",
+          "accumulatedTradingValue": "1�� 3,667��",
+          "accumulatedTradingVolumeRaw": "723300",
+          "accumulatedTradingValueRaw": "1366734000000"
         }
       },
       "036540": {
         "code": "036540",
         "name": "SFA�ݵ�ü",
-        "currentPrice": 10370,
+        "currentPrice": 10430,
         "previousClose": 10620,
-        "change": 250,
-        "changePct": 2.35,
+        "change": 190,
+        "changePct": 1.79,
         "open": 10710,
         "high": 10900,
         "low": 10260,
-        "volume": 1888829,
-        "tradingValue": 19847966630,
+        "volume": 2019416,
+        "tradingValue": 21203643280,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": null
@@ -10456,21 +11876,21 @@
       "005930": {
         "code": "005930",
         "name": "�Ｚ����",
-        "currentPrice": 283750,
+        "currentPrice": 284750,
         "previousClose": 276500,
-        "change": 7250,
-        "changePct": 2.62,
+        "change": 8250,
+        "changePct": 2.98,
         "open": 284500,
         "high": 285000,
         "low": 283000,
-        "volume": 3445522,
-        "tradingValue": 978996052500,
+        "volume": 4002930,
+        "tradingValue": 1137500037250,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": {
           "tradingSessionType": "REGULAR_MARKET",
           "overMarketStatus": "OPEN",
-          "overPrice": "284,000",
+          "overPrice": "284,500",
           "openPrice": "282,500",
           "highPrice": "284,500",
           "lowPrice": "281,500",
@@ -10479,9 +11899,9 @@
             "text": "���",
             "name": "RISING"
           },
-          "compareToPreviousClosePrice": "7,500",
-          "fluctuationsRatio": "2.71",
-          "localTradedAt": "2026-09-23T09:35:58.659247+09:00",
+          "compareToPreviousClosePrice": "8,000",
+          "fluctuationsRatio": "2.89",
+          "localTradedAt": "2026-09-23T09:41:14.725948+09:00",
           "tradeStopType": {
             "code": "1",
             "text": "�.Trading",
@@ -10490,24 +11910,24 @@
           "tradableStatus": "tradable",
           "tradableStatusCode": "ok",
           "tradableStatusUpdatedAt": 1790115013.438,
-          "accumulatedTradingVolume": "4,116,590",
-          "accumulatedTradingValue": "1�� 1,659��",
-          "accumulatedTradingVolumeRaw": "4116590",
-          "accumulatedTradingValueRaw": "1165892000000"
+          "accumulatedTradingVolume": "4,339,182",
+          "accumulatedTradingValue": "1�� 2,292��",
+          "accumulatedTradingVolumeRaw": "4339182",
+          "accumulatedTradingValueRaw": "1229188000000"
         }
       },
       "003530": {
         "code": "003530",
         "name": "��ȭ��������",
-        "currentPrice": 4650,
+        "currentPrice": 4640,
         "previousClose": 4665,
-        "change": 15,
-        "changePct": 0.32,
+        "change": 25,
+        "changePct": 0.54,
         "open": 4675,
         "high": 4700,
-        "low": 4640,
-        "volume": 105388,
-        "tradingValue": 491040861,
+        "low": 4630,
+        "volume": 112310,
+        "tradingValue": 523139626,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": null
@@ -10515,15 +11935,15 @@
       "041190": {
         "code": "041190",
         "name": "�츮�������",
-        "currentPrice": 5950,
+        "currentPrice": 5970,
         "previousClose": 5980,
-        "change": 30,
-        "changePct": 0.5,
+        "change": 10,
+        "changePct": 0.17,
         "open": 5990,
         "high": 6010,
         "low": 5810,
-        "volume": 526287,
-        "tradingValue": 3120439255,
+        "volume": 553013,
+        "tradingValue": 3279364045,
         "marketStatus": "OPEN",
         "pollingIntervalMs": 7000,
         "nxtOverMarketPriceInfo": null
@@ -10532,25 +11952,25 @@
   },
   "indexes": {
     "KOSPI": {
-      "value": 710218,
-      "change": 8427,
-      "changePct": 1.2,
+      "value": 711320,
+      "change": 9529,
+      "changePct": 1.36,
       "open": 715399,
       "high": 715399,
-      "low": 710218,
-      "volume": 52627,
-      "tradingValue": 4401991,
+      "low": 709701,
+      "volume": 57323,
+      "tradingValue": 4883045,
       "marketStatus": "OPEN"
     },
     "KOSDAQ": {
-      "value": 84329,
-      "change": 891,
-      "changePct": 1.07,
+      "value": 84311,
+      "change": 873,
+      "changePct": 1.05,
       "open": 84173,
       "high": 84735,
       "low": 83896,
-      "volume": 148969,
-      "tradingValue": 2076439,
+      "volume": 164338,
+      "tradingValue": 2283258,
       "marketStatus": "OPEN"
     }
   },
@@ -10560,57 +11980,57 @@
         "rank": 1,
         "code": "000660",
         "name": "SK하이닉스",
-        "price": 1868000,
-        "changePct": 1.52
+        "price": 1869000,
+        "changePct": 1.58
       },
       {
         "rank": 2,
         "code": "005930",
         "name": "삼성전자",
-        "price": 284000,
-        "changePct": 2.71
+        "price": 284250,
+        "changePct": 2.8
       },
       {
         "rank": 3,
         "code": "005935",
         "name": "삼성전자우",
-        "price": 219750,
-        "changePct": 3.9
+        "price": 219000,
+        "changePct": 3.55
       },
       {
         "rank": 4,
-        "code": "0010S0",
-        "name": "와이즈플래닛컴퍼니",
-        "price": 41500,
-        "changePct": 245.83
+        "code": "009150",
+        "name": "삼성전기",
+        "price": 1493000,
+        "changePct": 0.47
       },
       {
         "rank": 5,
-        "code": "009150",
-        "name": "삼성전기",
-        "price": 1494000,
-        "changePct": 0.54
+        "code": "0010S0",
+        "name": "와이즈플래닛컴퍼니",
+        "price": 40800,
+        "changePct": 240
       },
       {
         "rank": 6,
         "code": "356680",
         "name": "엑스게이트",
-        "price": 19150,
-        "changePct": 15.78
+        "price": 19300,
+        "changePct": 16.69
       },
       {
         "rank": 7,
         "code": "240810",
         "name": "원익IPS",
-        "price": 139700,
-        "changePct": 7.21
+        "price": 139000,
+        "changePct": 6.68
       },
       {
         "rank": 8,
         "code": "402340",
         "name": "SK스퀘어",
-        "price": 1175000,
-        "changePct": 3.71
+        "price": 1173000,
+        "changePct": 3.53
       },
       {
         "rank": 9,
@@ -10623,115 +12043,115 @@
         "rank": 10,
         "code": "093370",
         "name": "후성",
-        "price": 14090,
-        "changePct": 3.6
+        "price": 14170,
+        "changePct": 4.19
       },
       {
         "rank": 11,
-        "code": "353200",
-        "name": "대덕전자",
-        "price": 114500,
-        "changePct": 1.96
+        "code": "034020",
+        "name": "두산에너빌리티",
+        "price": 84300,
+        "changePct": -2.54
       },
       {
         "rank": 12,
         "code": "006400",
         "name": "삼성SDI",
-        "price": 522000,
-        "changePct": -1.32
+        "price": 524000,
+        "changePct": -0.95
       },
       {
         "rank": 13,
-        "code": "034020",
-        "name": "두산에너빌리티",
-        "price": 84700,
-        "changePct": -2.08
+        "code": "353200",
+        "name": "대덕전자",
+        "price": 115200,
+        "changePct": 2.58
       },
       {
         "rank": 14,
-        "code": "003490",
-        "name": "대한항공",
-        "price": 31550,
-        "changePct": 0.48
+        "code": "010170",
+        "name": "대한광통신",
+        "price": 17980,
+        "changePct": 0.95
       },
       {
         "rank": 15,
-        "code": "010170",
-        "name": "대한광통신",
-        "price": 17920,
-        "changePct": 0.62
+        "code": "047040",
+        "name": "대우건설",
+        "price": 17870,
+        "changePct": -4.95
       },
       {
         "rank": 16,
-        "code": "047040",
-        "name": "대우건설",
-        "price": 17920,
-        "changePct": -4.68
+        "code": "003490",
+        "name": "대한항공",
+        "price": 31500,
+        "changePct": 0.32
       },
       {
         "rank": 17,
-        "code": "440110",
-        "name": "파두",
-        "price": 78800,
-        "changePct": 8.99
+        "code": "386380",
+        "name": "스카이랩스",
+        "price": 23500,
+        "changePct": -1.88
       },
       {
         "rank": 18,
-        "code": "001820",
-        "name": "삼화콘덴서",
-        "price": 146600,
-        "changePct": -0.54
+        "code": "096770",
+        "name": "SK이노베이션",
+        "price": 150500,
+        "changePct": 6.74
       },
       {
         "rank": 19,
-        "code": "096770",
-        "name": "SK이노베이션",
-        "price": 149600,
-        "changePct": 6.1
+        "code": "440110",
+        "name": "파두",
+        "price": 79200,
+        "changePct": 9.54
       },
       {
         "rank": 20,
-        "code": "386380",
-        "name": "스카이랩스",
-        "price": 23800,
-        "changePct": -0.63
+        "code": "001820",
+        "name": "삼화콘덴서",
+        "price": 146300,
+        "changePct": -0.75
       }
     ],
     "risingLiquid": [
       {
-        "rank": 4,
+        "rank": 5,
         "code": "0010S0",
         "name": "와이즈플래닛컴퍼니",
-        "price": 41500,
-        "changePct": 245.83
+        "price": 40800,
+        "changePct": 240
       },
       {
-        "rank": 43,
+        "rank": 31,
         "code": "393210",
         "name": "토마토시스템",
-        "price": 4015,
-        "changePct": 21.12
+        "price": 4305,
+        "changePct": 29.86
       },
       {
-        "rank": 73,
+        "rank": 75,
         "code": "446540",
         "name": "메가터치",
-        "price": 11150,
-        "changePct": 18.11
+        "price": 11320,
+        "changePct": 19.92
       },
       {
         "rank": 6,
         "code": "356680",
         "name": "엑스게이트",
-        "price": 19150,
-        "changePct": 15.78
+        "price": 19300,
+        "changePct": 16.69
       },
       {
-        "rank": 46,
+        "rank": 50,
         "code": "092870",
         "name": "엑시콘",
-        "price": 43100,
-        "changePct": 13.42
+        "price": 43050,
+        "changePct": 13.29
       },
       {
         "rank": 9,
@@ -10741,102 +12161,102 @@
         "changePct": 12.83
       },
       {
-        "rank": 53,
-        "code": "115440",
-        "name": "우리넷",
-        "price": 10290,
-        "changePct": 10.29
+        "rank": 39,
+        "code": "072950",
+        "name": "빛샘전자",
+        "price": 14630,
+        "changePct": 12.54
       },
       {
-        "rank": 17,
-        "code": "440110",
-        "name": "파두",
-        "price": 78800,
-        "changePct": 8.99
-      },
-      {
-        "rank": 56,
-        "code": "089970",
-        "name": "브이엠",
-        "price": 61500,
-        "changePct": 8.66
-      },
-      {
-        "rank": 62,
-        "code": "299660",
-        "name": "셀리드",
-        "price": 3130,
-        "changePct": 8.49
-      },
-      {
-        "rank": 74,
+        "rank": 69,
         "code": "229640",
         "name": "LS에코에너지",
-        "price": 64400,
-        "changePct": 8.24
+        "price": 66300,
+        "changePct": 11.43
       },
       {
-        "rank": 31,
+        "rank": 55,
+        "code": "115440",
+        "name": "우리넷",
+        "price": 10270,
+        "changePct": 10.08
+      },
+      {
+        "rank": 19,
+        "code": "440110",
+        "name": "파두",
+        "price": 79200,
+        "changePct": 9.54
+      },
+      {
+        "rank": 33,
         "code": "203650",
         "name": "드림시큐리티",
-        "price": 2907,
-        "changePct": 8.07
+        "price": 2910,
+        "changePct": 8.18
       },
       {
-        "rank": 28,
+        "rank": 30,
         "code": "010060",
         "name": "OCI홀딩스",
-        "price": 202500,
-        "changePct": 7.71
+        "price": 203000,
+        "changePct": 7.98
+      },
+      {
+        "rank": 71,
+        "code": "299660",
+        "name": "셀리드",
+        "price": 3110,
+        "changePct": 7.8
+      },
+      {
+        "rank": 61,
+        "code": "089970",
+        "name": "브이엠",
+        "price": 61000,
+        "changePct": 7.77
+      },
+      {
+        "rank": 18,
+        "code": "096770",
+        "name": "SK이노베이션",
+        "price": 150500,
+        "changePct": 6.74
       },
       {
         "rank": 7,
         "code": "240810",
         "name": "원익IPS",
-        "price": 139700,
-        "changePct": 7.21
-      },
-      {
-        "rank": 77,
-        "code": "319660",
-        "name": "피에스케이",
-        "price": 139700,
-        "changePct": 6.72
-      },
-      {
-        "rank": 55,
-        "code": "253590",
-        "name": "네오셈",
-        "price": 14050,
-        "changePct": 6.44
-      },
-      {
-        "rank": 58,
-        "code": "095610",
-        "name": "테스",
-        "price": 158100,
-        "changePct": 6.39
-      },
-      {
-        "rank": 19,
-        "code": "096770",
-        "name": "SK이노베이션",
-        "price": 149600,
-        "changePct": 6.1
+        "price": 139000,
+        "changePct": 6.68
       },
       {
         "rank": 22,
         "code": "009830",
         "name": "한화솔루션",
-        "price": 29050,
-        "changePct": 5.83
+        "price": 29225,
+        "changePct": 6.47
       },
       {
-        "rank": 39,
-        "code": "456010",
-        "name": "아이씨티케이",
-        "price": 23400,
-        "changePct": 5.17
+        "rank": 62,
+        "code": "253590",
+        "name": "네오셈",
+        "price": 14040,
+        "changePct": 6.36
+      },
+      {
+        "rank": 76,
+        "code": "319660",
+        "name": "피에스케이",
+        "price": 138900,
+        "changePct": 6.11
+      },
+      {
+        "rank": 56,
+        "code": "095610",
+        "name": "테스",
+        "price": 157300,
+        "changePct": 5.85
       }
     ]
   }
