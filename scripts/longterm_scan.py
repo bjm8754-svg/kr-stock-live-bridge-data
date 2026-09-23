@@ -812,10 +812,28 @@ def analyze(meta, cfg):
     return analyze_frame(meta, df, cfg)
 
 
+SIGNAL_PRIORITY = {
+    "REACCELERATION": 100,
+    "JINDOL_CONFIRMED": 95,
+    "RETEST_OK": 90,
+    "DEOYANGBONG_C_TRIGGER": 85,
+    "PRE_JINDOL": 80,
+    "B_PLUS": 70,
+    "ABC_CANDIDATE": 60,
+    "NEW_LISTING_SETUP": 55,
+    "MA600_BREAKOUT": 45,
+    "NEAR_MA600": 35,
+    "GADOL_RISK": 25,
+    "DATA_WARNING": 0,
+    "NONE": -1,
+}
+
+
 def sortit(xs):
     return sorted(
         xs,
         key=lambda x: (
+            SIGNAL_PRIORITY.get(x.get("signal"), 0),
             x.get("score", 0),
             ((x.get("money") or {}).get("tradingValueRatio20Estimated") or 0),
             ((x.get("money") or {}).get("tradingValue") or 0),
