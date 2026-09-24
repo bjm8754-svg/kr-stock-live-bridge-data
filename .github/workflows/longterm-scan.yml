@@ -46,22 +46,22 @@ jobs:
         run: |
           python scripts/longterm_scan.py \
             --config longterm-scan-config.json \
-            --output longterm-scan.json \
-            --brief-output longterm-scan-brief.json
+            --output /tmp/longterm-scan-full.json \
+            --brief-output longterm-scan.json
 
       - name: Validate scan output
         shell: bash
         run: |
           set -euo pipefail
-          STATUS=$(jq -r '.status // "MISSING"' longterm-scan.json)
-          UNIVERSE=$(jq -r '.coverage.universe // 0' longterm-scan.json)
-          CURRENT=$(jq -r '.coverage.currentTradeDate // 0' longterm-scan.json)
-          TRADE_DATE=$(jq -r '.tradeDate // ""' longterm-scan.json)
-          METHOD=$(jq -r '.methodologyVersion // ""' longterm-scan.json)
-          ALLC=$(jq -r '.counts.allCandidates // -1' longterm-scan.json)
-          QUALIFIED=$(jq -r '.counts.qualifiedPool // -1' longterm-scan.json)
-          BRIEFING=$(jq -r '.counts.briefingCandidates // -1' longterm-scan.json)
-          CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' longterm-scan.json)
+          STATUS=$(jq -r '.status // "MISSING"' /tmp/longterm-scan-full.json)
+          UNIVERSE=$(jq -r '.coverage.universe // 0' /tmp/longterm-scan-full.json)
+          CURRENT=$(jq -r '.coverage.currentTradeDate // 0' /tmp/longterm-scan-full.json)
+          TRADE_DATE=$(jq -r '.tradeDate // ""' /tmp/longterm-scan-full.json)
+          METHOD=$(jq -r '.methodologyVersion // ""' /tmp/longterm-scan-full.json)
+          ALLC=$(jq -r '.counts.allCandidates // -1' /tmp/longterm-scan-full.json)
+          QUALIFIED=$(jq -r '.counts.qualifiedPool // -1' /tmp/longterm-scan-full.json)
+          BRIEFING=$(jq -r '.counts.briefingCandidates // -1' /tmp/longterm-scan-full.json)
+          CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' /tmp/longterm-scan-full.json)
           MAX_CAND_RATIO=$(jq -r '.maxCandidateRatioForPass // 0.25' longterm-scan-config.json)
 
           KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
@@ -78,23 +78,23 @@ jobs:
             *) echo "unexpected methodologyVersion=$METHOD"; exit 1 ;;
           esac
 
-          if ! jq -e '.allCandidates | type=="array"' longterm-scan.json >/dev/null; then
+          if ! jq -e '.allCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
             echo "allCandidates schema missing"
             exit 1
           fi
 
-          if ! jq -e '.qualifiedPool | type=="array"' longterm-scan.json >/dev/null; then
+          if ! jq -e '.qualifiedPool | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
             echo "qualifiedPool schema missing"
             exit 1
           fi
 
-          if ! jq -e '.briefingCandidates | type=="array"' longterm-scan.json >/dev/null; then
+          if ! jq -e '.briefingCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
             echo "briefingCandidates schema missing"
             exit 1
           fi
 
-          if ! jq -e '.schemaVersion=="YBM_BRIEF_V1" and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array")' longterm-scan-brief.json >/dev/null; then
-            echo "compact brief schema missing"
+          if ! jq -e '.schemaVersion=="YBM_BRIEF_V1" and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array")' longterm-scan.json >/dev/null; then
+            echo "compact canonical schema missing"
             exit 1
           fi
 
@@ -131,6 +131,16 @@ jobs:
             exit 0
           fi
 
+      - name: Upload short-retention full scan for diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: longterm-scan-full-${{ github.run_id }}
+          path: /tmp/longterm-scan-full.json
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 9
+
       - name: Commit scan result
         if: env.SKIP_COMMIT != '1'
         shell: bash
@@ -138,7 +148,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add longterm-scan.json longterm-scan-brief.json
+          git add longterm-scan.json
           if git diff --cached --quiet; then
             echo "no scan changes"
             exit 0
