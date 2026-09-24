@@ -695,8 +695,33 @@ def compute_chart_grade(x, cfg):
         or (new_listing_structure and exceptional_money and core_strong)
     ):
         grade = "A"
-    elif reference_usable and money_anchor and core_good and (strong_structure or good_structure or new_listing_structure):
-        grade = "B_PLUS"
+    else:
+        money = x.get("money") or {}
+        current_tv = float(money.get("tradingValue") or 0)
+        current_tv_ratio = float(money.get("tradingValueRatio20Estimated") or 0)
+        current_vol_ratio = float(money.get("volumeRatio20") or 0)
+        current_money_active = bool(
+            current_tv >= float(cfg["discoveryMinTradingValueKrw"])
+            and current_tv_ratio >= float(cfg["jindolMinTurnoverRatio20"])
+            and current_vol_ratio >= float(cfg["bPlusMinVolumeRatio20"])
+        )
+        if (
+            reference_usable
+            and money_anchor
+            and core_good
+            and (strong_structure or good_structure or new_listing_structure)
+        ):
+            grade = "B_PLUS"
+        elif (
+            current_money_active
+            and core_good
+            and cloud.get("state") != "BELOW"
+            and (strong_structure or good_structure or new_listing_structure)
+        ):
+            # Discovery-grade fallback: an obsolete/broken historical reference candle must
+            # not permanently veto a fresh long-structure + resistance + money expansion.
+            # This is intentionally capped at B+; S/A still require a usable strong reference.
+            grade = "B_PLUS"
 
     reasons = [
         "STRUCT_STRONG" if strong_structure else (
