@@ -1,6 +1,6 @@
 {
   "status": "FAIL",
-  "checkedAtKst": "2026-09-24 17:01:10 KST",
+  "checkedAtKst": "2026-09-24 17:15:07 KST",
   "expectedTradeDate": "20260924",
   "liveTradeDate": "20260924",
   "watchlistTradeDate": "20260923",
@@ -26,5 +26,6 @@
     "MARKET_STATUS_CLOSED_OR_STALE",
     "INSUFFICIENT_INTRADAY_CHANGE",
     "STALE_SOURCE_TIMESTAMP"
-  ]
+  ],
+  "warnings": []
 }
