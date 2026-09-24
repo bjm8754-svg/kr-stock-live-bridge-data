@@ -60,7 +60,17 @@
       ],
       "distanceToNextResistancePct": 2.7,
       "structuralRR": 1.12,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 6474.0,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 5920.19,
+        "longMaSupportSource": "MA240"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -346,7 +356,17 @@
       ],
       "distanceToNextResistancePct": 2.33,
       "structuralRR": 0.24,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 9761.16,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 9800.92,
+        "longMaSupportSource": "MA240"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -576,7 +596,17 @@
       ],
       "distanceToNextResistancePct": 4.38,
       "structuralRR": 2.4,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": 68100.0,
+        "primaryReferenceSource": "PRIOR_REFERENCE_CLOSE",
+        "referenceLowInvalidationCandidate": 61600.0,
+        "referenceLowSource": "PRIOR_REFERENCE_LOW",
+        "coreSupport": 72848.96,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 66246.25,
+        "longMaSupportSource": "MA240"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "NEW_LISTING",
@@ -815,7 +845,17 @@
       ],
       "distanceToNextResistancePct": 2.38,
       "structuralRR": 0.12,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": 10270.0,
+        "primaryReferenceSource": "RECENT_REFERENCE_OPEN",
+        "referenceLowInvalidationCandidate": 10040.0,
+        "referenceLowSource": "RECENT_REFERENCE_LOW",
+        "coreSupport": null,
+        "coreSupportSource": null,
+        "longMaSupport": 10546.44,
+        "longMaSupportSource": "MA240"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1044,7 +1084,17 @@
       ],
       "distanceToNextResistancePct": 3.89,
       "structuralRR": 0.25,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": null,
+        "coreSupportSource": null,
+        "longMaSupport": 7985.45,
+        "longMaSupportSource": "MA600"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1297,7 +1347,17 @@
       ],
       "distanceToNextResistancePct": 3.93,
       "structuralRR": 0.36,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 5759.58,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 5318.69,
+        "longMaSupportSource": "MA1000"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1568,7 +1628,17 @@
       ],
       "distanceToNextResistancePct": 5.07,
       "structuralRR": 1.63,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 110280.0,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 78359.17,
+        "longMaSupportSource": "MA240"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1736,7 +1806,17 @@
       "nextResistanceSources": null,
       "distanceToNextResistancePct": null,
       "structuralRR": null,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 68085.71,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 37777.95,
+        "longMaSupportSource": "MA1000"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1947,7 +2027,17 @@
       ],
       "distanceToNextResistancePct": 3.62,
       "structuralRR": 0.22,
-      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 65636.36,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 60380.69,
+        "longMaSupportSource": "MA480"
+      },
+      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
     "abc": {
       "track": "LONG_HISTORY",
