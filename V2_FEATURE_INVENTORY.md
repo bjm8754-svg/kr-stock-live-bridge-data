@@ -28,9 +28,9 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 | Feature | Current evidence | Status |
 | --- | --- | --- |
 | 09:00~09:35/09:40 watched-symbol minute path | `live.json.history` + semantic freshness validator | IMPLEMENTED / REAL-SESSION REVALIDATION NOT DONE |
-| Market Ignition | Canonical Master requires market/breadth/cluster ignition; `live.json` exposes indexes + scan | PARTIAL — no dedicated deterministic regression test for ignition classification |
-| Turnover Ignition | Canonical Master requires absolute turnover, acceleration and same-time-relative expansion where available | PARTIAL — current live scan is not yet proven to provide full-market same-time turnover acceleration |
-| NEW CHALLENGER outside morning watchlist | Canonical Master requires competition against the existing watchlist using live market scan evidence | PARTIAL — operational contract exists, but full-market discovery coverage and regression test are not yet proven |
+| Market Ignition | Canonical Master requires market/breadth/cluster ignition; hardened Worker exposes indexes + money-aware ranked scan | IMPLEMENTED / REAL-SESSION CLASSIFICATION REVALIDATION NOT DONE |
+| Turnover Ignition | Hardened Worker stores 09:30/09:35/09:40 money-aware ranked scans and publishes `scan.turnoverTop` plus `scanDelta.turnoverAcceleration` | IMPLEMENTED FOR RANKED-SCAN DELTA / REAL-SESSION REVALIDATION NOT DONE; not claimed as full-market same-time average |
+| NEW CHALLENGER outside morning watchlist | Canonical Master uses `scan.turnoverTop`, `scan.volumeTop`, `scan.risingLiquid`, `scanDelta.newEntries` and explicitly forbids claiming full-market completeness beyond coverage | IMPLEMENTED FOR RANKED-SCAN DISCOVERY / REAL-SESSION REVALIDATION NOT DONE |
 | 08:15 plan vs actual follow-through | 09:35/09:40 Master contracts + minute path | IMPLEMENTED / REAL-SESSION REVALIDATION NOT DONE |
 | Trigger / Retest / Reacceleration intraday confirmation | Master maps completed-daily setup to actual minute path | IMPLEMENTED / PRECISION NOT DONE |
 
@@ -44,6 +44,8 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 - False-negative discovery fix: `790b0f7c22749937115b427ff6179741867de5e1` plus regression test `da0f7467fe692e46b1f798ed95c1570bee3732fc`. It permits a fresh money-backed long-structure/core/cloud setup to enter B+ even when an obsolete historical reference has failed, while S/A still require a usable strong reference.
 - Full-market regression after that fix: run `35983214306` concluded `success`; self-test, full scan and validation all passed, and the non-trading-day canonical commit was correctly skipped.
 - Current `scripts/test_longterm_scan_v2.py` explicitly checks the agreed structural field contract, long-MA keys, Jindol/Gadol boundary, new-listing rail, selection-memory independence, chart-grade/reference integrity and the fresh-discovery B+ fallback.
+- Money-aware market-scan commit `b933e27a701aaee99a645d562df3878dbd37d8fe`; regression-test commit `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`; CI run `35986527136` concluded `success`.
+- Live-health noncritical scan-warning commits `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`; CI run `35986620061` concluded `success`.
 
 ## Validation still required before final PASS
 
