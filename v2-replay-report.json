@@ -33,13 +33,13 @@
     },
     "qualified": false,
     "actionScore": {
-      "total": 19.1,
+      "total": 17.1,
       "briefingTier": "RADAR",
       "components": {
         "structure": 15.1,
         "moneyQuality": 14.0,
         "entryQuality": 2.0,
-        "structuralRR": 2.0,
+        "structuralRR": 0.0,
         "acceptance": 2.0,
         "riskPenalty": 16.0
       },
@@ -55,13 +55,16 @@
       "nearestSupport": 6474.0,
       "supportSource": "CORE_LINE",
       "distanceToSupportPct": 2.41,
+      "invalidationCandidate": 6400.0,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 3.59,
       "nextResistance": 6809.22,
       "nextResistanceLine": 6840.0,
       "nextResistanceSources": [
         "DEOYANGBONG_OPEN"
       ],
       "distanceToNextResistancePct": 2.7,
-      "structuralRR": 1.12,
+      "structuralRR": 0.75,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -72,7 +75,7 @@
         "longMaSupport": 5920.19,
         "longMaSupportSource": "MA240"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -352,6 +355,9 @@
       "nearestSupport": 9800.92,
       "supportSource": "MA240",
       "distanceToSupportPct": 9.68,
+      "invalidationCandidate": 9622.04,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 11.72,
       "nextResistance": 11000.0,
       "nextResistanceLine": 11140.0,
       "nextResistanceSources": [
@@ -360,7 +366,7 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 2.33,
-      "structuralRR": 0.24,
+      "structuralRR": 0.2,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -371,7 +377,7 @@
         "longMaSupport": 9800.92,
         "longMaSupportSource": "MA240"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -578,13 +584,13 @@
     },
     "qualified": true,
     "actionScore": {
-      "total": 53.0,
+      "total": 41.0,
       "briefingTier": "RADAR",
       "components": {
         "structure": 10.0,
         "moneyQuality": 19.0,
         "entryQuality": 12.0,
-        "structuralRR": 12.0,
+        "structuralRR": 0.0,
         "acceptance": 0.0,
         "riskPenalty": 0.0
       },
@@ -597,13 +603,16 @@
       "nearestSupport": 71689.58,
       "supportSource": "CORE_ZONE_LOW",
       "distanceToSupportPct": 1.83,
+      "invalidationCandidate": 61600.0,
+      "invalidationSource": "PRIOR_REFERENCE_LOW",
+      "distanceToInvalidationPct": 18.51,
       "nextResistance": 76200.0,
       "nextResistanceLine": 76550.0,
       "nextResistanceSources": [
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 4.38,
-      "structuralRR": 2.4,
+      "structuralRR": 0.24,
       "supportHierarchy": {
         "primaryReferenceSupport": 68100.0,
         "primaryReferenceSource": "PRIOR_REFERENCE_CLOSE",
@@ -614,7 +623,7 @@
         "longMaSupport": 66246.25,
         "longMaSupportSource": "MA240"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -845,6 +854,9 @@
       "nearestSupport": 10546.44,
       "supportSource": "MA240",
       "distanceToSupportPct": 19.76,
+      "invalidationCandidate": 10040.0,
+      "invalidationSource": "RECENT_REFERENCE_LOW",
+      "distanceToInvalidationPct": 25.8,
       "nextResistance": 12930.0,
       "nextResistanceLine": 13018.46,
       "nextResistanceSources": [
@@ -855,7 +867,7 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 2.38,
-      "structuralRR": 0.12,
+      "structuralRR": 0.09,
       "supportHierarchy": {
         "primaryReferenceSupport": 10270.0,
         "primaryReferenceSource": "RECENT_REFERENCE_OPEN",
@@ -866,7 +878,7 @@
         "longMaSupport": 10546.44,
         "longMaSupportSource": "MA240"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": {
       "type": "REFERENCE_LEVEL",
@@ -1096,6 +1108,9 @@
       "nearestSupport": 7985.45,
       "supportSource": "MA600",
       "distanceToSupportPct": 15.46,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 9578.75,
       "nextResistanceLine": 9669.44,
       "nextResistanceSources": [
@@ -1103,7 +1118,7 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 3.89,
-      "structuralRR": 0.25,
+      "structuralRR": null,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1114,7 +1129,7 @@
         "longMaSupport": 7985.45,
         "longMaSupportSource": "MA600"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -1363,13 +1378,16 @@
       "nearestSupport": 5759.58,
       "supportSource": "CORE_LINE",
       "distanceToSupportPct": 10.95,
+      "invalidationCandidate": 5700.0,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 12.11,
       "nextResistance": 6641.33,
       "nextResistanceLine": 6671.35,
       "nextResistanceSources": [
         "CANDLE_DENSITY"
       ],
       "distanceToNextResistancePct": 3.93,
-      "structuralRR": 0.36,
+      "structuralRR": 0.32,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1380,7 +1398,7 @@
         "longMaSupport": 5318.69,
         "longMaSupportSource": "MA1000"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": {
       "type": "SUPPORT_RANGE",
@@ -1635,13 +1653,13 @@
     },
     "qualified": false,
     "actionScore": {
-      "total": 32.8,
+      "total": 29.8,
       "briefingTier": "RADAR",
       "components": {
         "structure": 17.8,
         "moneyQuality": 16.0,
         "entryQuality": 2.0,
-        "structuralRR": 9.0,
+        "structuralRR": 6.0,
         "acceptance": 0.0,
         "riskPenalty": 12.0
       },
@@ -1656,13 +1674,16 @@
       "nearestSupport": 110280.0,
       "supportSource": "CORE_LINE",
       "distanceToSupportPct": 3.1,
+      "invalidationCandidate": 109783.74,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 3.57,
       "nextResistance": 119460.0,
       "nextResistanceLine": 120000.0,
       "nextResistanceSources": [
         "ROUND_FIGURE"
       ],
       "distanceToNextResistancePct": 5.07,
-      "structuralRR": 1.63,
+      "structuralRR": 1.42,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1673,7 +1694,7 @@
         "longMaSupport": 78359.17,
         "longMaSupportSource": "MA240"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -1839,6 +1860,9 @@
       "nearestSupport": 68085.71,
       "supportSource": "CORE_LINE",
       "distanceToSupportPct": 15.44,
+      "invalidationCandidate": 67000.0,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 17.31,
       "nextResistance": null,
       "nextResistanceLine": null,
       "nextResistanceSources": null,
@@ -1854,7 +1878,7 @@
         "longMaSupport": 37777.95,
         "longMaSupportSource": "MA1000"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -2060,6 +2084,9 @@
       "nearestSupport": 65636.36,
       "supportSource": "CORE_LINE",
       "distanceToSupportPct": 16.4,
+      "invalidationCandidate": 65000.0,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 17.54,
       "nextResistance": 79167.47,
       "nextResistanceLine": 79525.33,
       "nextResistanceSources": [
@@ -2067,7 +2094,7 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 3.62,
-      "structuralRR": 0.22,
+      "structuralRR": 0.21,
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -2078,7 +2105,7 @@
         "longMaSupport": 60380.69,
         "longMaSupportSource": "MA480"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
@@ -2320,6 +2347,9 @@
       "nearestSupport": 1774.19,
       "supportSource": "MA600",
       "distanceToSupportPct": 6.53,
+      "invalidationCandidate": 1646.06,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 14.82,
       "nextResistance": null,
       "nextResistanceLine": null,
       "nextResistanceSources": null,
@@ -2335,7 +2365,7 @@
         "longMaSupport": 1774.19,
         "longMaSupportSource": "MA600"
       },
-      "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
     },
     "sourceLevelCalibration": null,
     "abc": {
