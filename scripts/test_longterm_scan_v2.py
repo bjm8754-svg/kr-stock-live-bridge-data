@@ -182,4 +182,27 @@ cg_damaged = scan.compute_chart_grade(damaged_ref_sample, cfg)
 assert cg_damaged["referenceState"] == "DAMAGED"
 assert cg_damaged["grade"] == "B_PLUS"
 
+
+
+# A fresh current reference must replace an older larger-money anchor for structural grading.
+fresh_over_old = {
+    "signal":"DEOYANGBONG_C_TRIGGER",
+    "track":"LONG_HISTORY",
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "cloud":{"state":"ABOVE"},
+    "coreResistance":{"score":14,"sourceCount":4},
+    "deoyangbong":{"today":True,"latestPrior":{
+        "open":20000,"close":23000,"high":23500,"low":19500,
+        "tradingValueEstimated":600_000_000_000}},
+    "money":{"tradingValue":150_000_000_000},
+    "close":12000,"low":10500,
+    "newListingSetup":False,
+    "dataWarnings":[],
+}
+cg_fresh = scan.compute_chart_grade(fresh_over_old, cfg)
+assert cg_fresh["referenceMoneySource"] == "CURRENT_COMPLETED_REFERENCE"
+assert cg_fresh["referenceMoneyKrw"] == 150_000_000_000
+assert cg_fresh["referenceState"] == "CURRENT"
+assert cg_fresh["grade"] == "S"
+
 print("V2 self-tests: PASS")
