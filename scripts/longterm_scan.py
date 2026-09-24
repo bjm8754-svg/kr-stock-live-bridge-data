@@ -621,7 +621,10 @@ def compute_chart_grade(x, cfg):
     if deoyang.get("today"):
         current_ref_tv = float((x.get("money") or {}).get("tradingValue") or 0)
 
-    if current_ref_tv >= prior_ref_tv and current_ref_tv > 0:
+    # A completed current reference candle resets the structural anchor even when an older
+    # reference had more absolute money. Relative strength versus the prior reference is a
+    # separate quality question; it must not make the scanner ignore a fresh valid anchor.
+    if deoyang.get("today") and current_ref_tv > 0:
         ref_tv = current_ref_tv
         ref_source = "CURRENT_COMPLETED_REFERENCE"
     else:
