@@ -34,6 +34,8 @@ CASES = [
     {"code":"161890","name":"CASE_G","date":"2026-07-02","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     {"code":"001820","name":"CASE_H","date":"2026-05-20","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     {"code":"126340","name":"CASE_I","date":"2026-09-16","sourceLabel":"B_PLUS","sourceDiscoveryFloor":"B_PLUS"},
+    # explicit negative calibration: source says pattern fit but volume/money were insufficient, so not A-grade
+    {"code":"066980","name":"CASE_J","date":"2026-05-20","sourceLabel":"NOT_A_LOW_MONEY","sourceMaxChartGrade":"B_PLUS"},
 ]
 
 rows = []
@@ -58,6 +60,7 @@ for case in CASES:
     action_score = scan.compute_action_score(out, cfg)
     grade_rank = {"BELOW_B_PLUS": 0, "B_PLUS": 1, "A": 2, "S": 3}
     expected_grade = case.get("sourceDiscoveryFloor")
+    max_grade = case.get("sourceMaxChartGrade")
     if expected_grade:
         source_alignment = (
             "MATCH"
@@ -67,12 +70,23 @@ for case in CASES:
     else:
         source_alignment = "NOT_ASSERTED"
 
+    if max_grade:
+        source_max_alignment = (
+            "MATCH"
+            if grade_rank.get(chart_grade.get("grade"), -1) <= grade_rank[max_grade]
+            else "MISMATCH"
+        )
+    else:
+        source_max_alignment = "NOT_ASSERTED"
+
     rows.append({
         "case": case["name"],
         "code": case["code"],
         "sourceLabel": case.get("sourceLabel"),
         "sourceDiscoveryFloor": expected_grade,
         "sourceDiscoveryAlignment": source_alignment,
+        "sourceMaxChartGrade": max_grade,
+        "sourceMaxAlignment": source_max_alignment,
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
