@@ -7,7 +7,8 @@ on:
     paths:
       - "scripts/longterm_scan.py"
       - "scripts/test_longterm_scan_v2.py"
-      - "longterm-scan-config.json"\n      - "requirements-scanner.txt"
+      - "longterm-scan-config.json"
+      - "requirements-scanner.txt"
       - ".github/workflows/longterm-scan.yml"
   schedule:
     # 16:30 KST, Monday-Friday. Holiday/stale runs are detected and not committed.
@@ -61,12 +62,13 @@ jobs:
           ALLC=$(jq -r '.counts.allCandidates // -1' /tmp/longterm-scan-full.json)
           QUALIFIED=$(jq -r '.counts.qualifiedPool // -1' /tmp/longterm-scan-full.json)
           BRIEFING=$(jq -r '.counts.briefingCandidates // -1' /tmp/longterm-scan-full.json)
+          CHART=$(jq -r '.counts.chartCandidates // -1' /tmp/longterm-scan-full.json)
           CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' /tmp/longterm-scan-full.json)
           MAX_CAND_RATIO=$(jq -r '.maxCandidateRatioForPass // 0.25' longterm-scan-config.json)
 
           KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
           KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
-          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC qualifiedPool=$QUALIFIED briefingCandidates=$BRIEFING candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO"
+          echo "status=$STATUS method=$METHOD tradeDate=$TRADE_DATE kstToday=$KST_TODAY kstHHMM=$KST_HHMM universe=$UNIVERSE current=$CURRENT allCandidates=$ALLC qualifiedPool=$QUALIFIED chartCandidates=$CHART briefingCandidates=$BRIEFING candidateRatio=$CAND_RATIO maxCandidateRatio=$MAX_CAND_RATIO"
 
           if [ "$STATUS" != "PASS" ]; then
             echo "canonical scanner requires PASS; status=$STATUS"
@@ -78,22 +80,17 @@ jobs:
             *) echo "unexpected methodologyVersion=$METHOD"; exit 1 ;;
           esac
 
-          if ! jq -e '.allCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
-            echo "allCandidates schema missing"
-            exit 1
-          fi
+          jq -e '.allCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null
+          jq -e '.qualifiedPool | type=="array"' /tmp/longterm-scan-full.json >/dev/null
+          jq -e '.chartCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null
+          jq -e '.briefingCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null
 
-          if ! jq -e '.qualifiedPool | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
-            echo "qualifiedPool schema missing"
-            exit 1
-          fi
-
-          if ! jq -e '.briefingCandidates | type=="array"' /tmp/longterm-scan-full.json >/dev/null; then
-            echo "briefingCandidates schema missing"
-            exit 1
-          fi
-
-          if ! jq -e '.schemaVersion=="YBM_BRIEF_V2" and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array")' longterm-scan.json >/dev/null; then
+          if ! jq -e '
+            .schemaVersion=="YBM_BRIEF_V2" and
+            (.chartCandidates|type=="array") and
+            (.qualifiedPool|type=="array") and
+            (.briefingCandidates|type=="array")
+          ' longterm-scan.json >/dev/null; then
             echo "compact canonical V2 schema missing"
             exit 1
           fi
@@ -108,15 +105,13 @@ jobs:
             echo "current-date coverage gate failed: ratio=$CURRENT_COVERAGE"
             exit 1
           fi
-
           if ! awk -v a="$CAND_RATIO" -v b="$MAX_CAND_RATIO" 'BEGIN { exit !(a <= b) }'; then
             echo "candidate selectivity gate failed: ratio=$CAND_RATIO max=$MAX_CAND_RATIO"
             exit 1
           fi
 
-
-          # Push-triggered validation may run during market hours. It may test the scanner,
-          # but it must never overwrite the canonical after-close output before 15:40 KST.
+          # Push-triggered validation may run during market hours, but canonical daily
+          # output must never be overwritten by an unfinished daily bar.
           if [ "$KST_HHMM" -lt 1540 ]; then
             echo "pre-close validation passed; do not commit canonical scan"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
@@ -153,6 +148,6 @@ jobs:
             echo "no scan changes"
             exit 0
           fi
-          git commit -m "update long-term MA600 swing scan"
+          git commit -m "update chart-first long-term scan"
           git pull --rebase origin main
           git push
