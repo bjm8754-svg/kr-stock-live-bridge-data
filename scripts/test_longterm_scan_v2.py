@@ -95,4 +95,29 @@ assert s1 == s2
 assert s1["selectionMemoryUsed"] is False
 assert s1["briefingTier"] in ("ACTION_NOW", "WATCH_TRIGGER", "RADAR")
 
+
+# Chart-grade invariant: completed-daily chart quality must be independent of timing/action fields.
+chart_sample = {
+    "signal":"PRE_JINDOL",
+    "track":"LONG_HISTORY",
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "cloud":{"state":"ABOVE"},
+    "coreResistance":{"score":14,"sourceCount":4},
+    "deoyangbong":{"latestPrior":{"tradingValueEstimated":350_000_000_000}},
+    "newListingSetup":False,
+    "dataWarnings":[],
+    "entryPlan":{"structuralRR":0.2,"distanceToSupportPct":20.0},
+    "distanceToCorePct":25.0,
+}
+cg1 = scan.compute_chart_grade(chart_sample, cfg)
+chart_sample["entryPlan"] = {"structuralRR":9.0,"distanceToSupportPct":0.5}
+chart_sample["distanceToCorePct"] = 0.1
+chart_sample["previousRank"] = 1
+chart_sample["wasBriefed"] = True
+cg2 = scan.compute_chart_grade(chart_sample, cfg)
+assert cg1 == cg2
+assert cg1["grade"] == "S"
+assert cg1["timingInputsUsed"] is False
+assert cg1["selectionMemoryUsed"] is False
+
 print("V2 self-tests: PASS")
