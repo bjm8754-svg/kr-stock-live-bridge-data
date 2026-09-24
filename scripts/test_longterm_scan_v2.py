@@ -103,7 +103,12 @@ chart_sample = {
     "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
     "cloud":{"state":"ABOVE"},
     "coreResistance":{"score":14,"sourceCount":4},
-    "deoyangbong":{"latestPrior":{"tradingValueEstimated":350_000_000_000}},
+    "deoyangbong":{"today":False,"latestPrior":{
+        "open":10000,"close":12000,"high":12200,"low":9800,
+        "tradingValueEstimated":350_000_000_000}},
+    "money":{"tradingValue":50_000_000_000},
+    "close":11800,
+    "low":11600,
     "newListingSetup":False,
     "dataWarnings":[],
     "entryPlan":{"structuralRR":0.2,"distanceToSupportPct":20.0},
