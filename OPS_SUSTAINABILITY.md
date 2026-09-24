@@ -32,6 +32,14 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 - **Live publisher ownership/source — UNKNOWN**
   - `live.json` is committed around 09:36/09:41 by the account, but no version-controlled publisher implementation was found in the repo or recovered project files.
   - do not mark the live-publish path sustainable until the publisher service/source and credential ownership are identified.
+- **Scanner durability / feature-contract execution — PASS**
+  - feature-contract commit: `87b3e492974869c63c701223e951a399f8a1e937`
+  - replay run: `35977284215` / conclusion `success`
+  - full-market scan run: `35977284250` / conclusion `success`
+  - on the 2026-09-24 non-trading day, the canonical commit step was correctly `skipped`.
+- **Current canonical scan migration — PARTIAL**
+  - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
+  - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
 
 ## Manual deployment checklist
