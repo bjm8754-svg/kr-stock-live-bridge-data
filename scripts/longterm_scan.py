@@ -588,6 +588,86 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
     }
 
 
+def compute_chart_grade(x, cfg):
+    """Chart-only structural grade.
+
+    This deliberately ignores current entry R/R, current distance-to-support, current
+    action score, prior shortlist/rank and news. It answers only: is this chart worth
+    carrying forward for human review based on completed daily structure and money evidence?
+    Thresholds are implementation inferences and remain configurable.
+    """
+    abc = x.get("abc") or {}
+    core = x.get("coreResistance") or {}
+    cloud = x.get("cloud") or {}
+    ref = (x.get("deoyangbong") or {}).get("latestPrior") or {}
+    warnings = x.get("dataWarnings") or []
+
+    if warnings or x.get("signal") == "DATA_WARNING":
+        return {
+            "grade": "BELOW_B_PLUS",
+            "eligible": False,
+            "reasons": ["DATA_WARNING"],
+            "selectionMemoryUsed": False,
+            "timingInputsUsed": False,
+        }
+
+    ref_tv = float(ref.get("tradingValueEstimated") or 0)
+    money_anchor = ref_tv >= float(cfg["deoyangbongMinTradingValueKrw"])
+    exceptional_money = ref_tv >= float(cfg["chartGradeExceptionalReferenceKrw"])
+
+    core_score = float(core.get("score") or 0)
+    core_sources = int(core.get("sourceCount") or 0)
+    core_good = (
+        core_sources >= int(cfg["chartGradeCoreGoodSourceCount"])
+        and core_score >= float(cfg["chartGradeCoreGoodScore"])
+    )
+    core_strong = (
+        core_sources >= int(cfg["chartGradeCoreStrongSourceCount"])
+        and core_score >= float(cfg["chartGradeCoreStrongScore"])
+    )
+
+    abc_state = abc.get("state")
+    strong_structure = bool(abc_state == "C_ACTIVE" and int(abc.get("score") or 0) >= 90)
+    good_structure = abc_state in (
+        "C_RECOVERY_NONCLASSIC_BASE",
+        "LONG_MA_RECOVERY_NONCLASSIC",
+        "B_BASE",
+    )
+    new_listing_structure = bool(x.get("track") == "NEW_LISTING" and x.get("newListingSetup"))
+
+    grade = "BELOW_B_PLUS"
+    if strong_structure and money_anchor and core_strong and cloud.get("state") == "ABOVE":
+        grade = "S"
+    elif (
+        (strong_structure and money_anchor and core_good and cloud.get("state") != "BELOW")
+        or (good_structure and exceptional_money and core_strong and cloud.get("state") == "ABOVE")
+        or (new_listing_structure and exceptional_money and core_strong)
+    ):
+        grade = "A"
+    elif money_anchor and core_good and (strong_structure or good_structure or new_listing_structure):
+        grade = "B_PLUS"
+
+    reasons = [
+        "STRUCT_STRONG" if strong_structure else (
+            "STRUCT_GOOD" if good_structure else (
+                "NEW_LISTING_STRUCT" if new_listing_structure else "STRUCT_WEAK"
+            )
+        ),
+        "REF_MONEY_300B_PLUS" if exceptional_money else (
+            "REF_MONEY_100B_PLUS" if money_anchor else "NO_REF_100B"
+        ),
+        "CORE_STRONG" if core_strong else ("CORE_GOOD" if core_good else "CORE_WEAK"),
+        f"CLOUD_{cloud.get('state', 'UNAVAILABLE')}",
+    ]
+    return {
+        "grade": grade,
+        "eligible": grade in ("S", "A", "B_PLUS"),
+        "reasons": reasons,
+        "selectionMemoryUsed": False,
+        "timingInputsUsed": False,
+    }
+
+
 def compute_action_score(x, cfg):
     """Session-independent action-value score.
 
@@ -1298,9 +1378,24 @@ def run(cfg):
                     x["investorFlow"] = {"status": "ERROR", "error": f"{type(e).__name__}: {e}"}
                     flow_errors.append({"code": x["code"], "error": f"{type(e).__name__}: {e}"})
 
-    # Fresh ranking every run: no prior shortlist/rejection/rank is read or reused.
+    # Chart quality and timing/action value are intentionally separate.
+    # Chart grade is completed-daily structure only; actionScore is current timing/action value.
     for x in qualified:
+        x["chartGrade"] = compute_chart_grade(x, cfg)
         x["actionScore"] = compute_action_score(x, cfg)
+
+    grade_priority = {"S": 3, "A": 2, "B_PLUS": 1, "BELOW_B_PLUS": 0}
+    chart_candidates = sorted(
+        [x for x in qualified if (x.get("chartGrade") or {}).get("eligible")],
+        key=lambda x: (
+            grade_priority.get((x.get("chartGrade") or {}).get("grade"), 0),
+            int((x.get("abc") or {}).get("score") or 0),
+            float((x.get("coreResistance") or {}).get("score") or 0),
+            float(((x.get("deoyangbong") or {}).get("latestPrior") or {}).get("tradingValueEstimated") or 0),
+        ),
+        reverse=True,
+    )
+
     briefing = sort_action([
         x for x in qualified
         if (x.get("actionScore") or {}).get("actionableForBriefing")
@@ -1333,6 +1428,10 @@ def run(cfg):
     counts["allCandidates"] = len(allc)
     counts["qualifiedPool"] = len(qualified)
     counts["briefingCandidates"] = len(briefing)
+    counts["chartCandidates"] = len(chart_candidates)
+    counts["chartGradeS"] = sum(1 for x in chart_candidates if (x.get("chartGrade") or {}).get("grade") == "S")
+    counts["chartGradeA"] = sum(1 for x in chart_candidates if (x.get("chartGrade") or {}).get("grade") == "A")
+    counts["chartGradeBPlus"] = sum(1 for x in chart_candidates if (x.get("chartGrade") or {}).get("grade") == "B_PLUS")
     counts["riskWarnings"] = len(risk_warnings)
     counts["radarCandidates"] = len(radar)
 
@@ -1401,6 +1500,7 @@ def run(cfg):
         "ma600": sortit(take("MA600_BREAKOUT") + take("NEAR_MA600"))[:lim],
         "warnings": take("DATA_WARNING"),
         "qualifiedPool": qualified,
+        "chartCandidates": chart_candidates,
         "briefingCandidates": briefing,
         "riskWarnings": risk_warnings,
         "radarCandidates": radar[:int(cfg["maxAllCandidates"])],
@@ -1449,6 +1549,7 @@ def compact_candidate(x):
         "newListingSetup": x.get("newListingSetup"),
         "entryPlan": x.get("entryPlan"),
         "money": x.get("money"),
+        "chartGrade": x.get("chartGrade"),
         "actionScore": x.get("actionScore"),
         "dataWarnings": x.get("dataWarnings"),
     }
@@ -1465,6 +1566,7 @@ def build_brief_output(out):
         "coverage": out.get("coverage"),
         "counts": out.get("counts"),
         "notes": out.get("notes"),
+        "chartCandidates": [compact_candidate(x) for x in (out.get("chartCandidates") or [])],
         "briefingCandidates": [compact_candidate(x) for x in (out.get("briefingCandidates") or [])],
         "qualifiedPool": [compact_candidate(x) for x in (out.get("qualifiedPool") or [])],
         "riskWarnings": [compact_candidate(x) for x in (out.get("riskWarnings") or [])],
