@@ -96,3 +96,37 @@ A stock filtered out today can rank at the top tomorrow if fresh market data imp
 For pre-trigger structures, today's quiet turnover is not automatically negative if normal liquidity is sufficient; average liquidity and controlled quietness can support a WATCH_TRIGGER classification. Structural R/R ignores near-duplicate support references that are effectively at the current close by preferring the next meaningful detected structural support. These are implementation heuristics, not source-quoted thresholds.
 
 The current user-facing threshold is config-driven (`briefingMinActionScore`) and does not impose a fixed number of stocks. `ACTION_NOW` and `WATCH_TRIGGER` are presentation tiers only and are freshly recomputed each run.
+
+## Chart-grade layer (chart quality, not buy ranking)
+Production now separates **chart quality** from **timing/action value**.
+
+Every completed-session row in the current KOSPI/KOSDAQ universe is independently evaluated for a system chart grade:
+- `S`
+- `A`
+- `B_PLUS`
+- `BELOW_B_PLUS`
+
+The chart grade is intentionally independent of:
+- prior shortlist/rejection/rank,
+- current Action Score,
+- current R/R,
+- distance to support/core,
+- news/catalyst,
+- foreign/institution flow.
+
+The grade uses completed daily structure only: ABC/long-MA recovery, a money-backed strong reference candle, multi-source structural resistance evidence, Ichimoku position, and reference-candle integrity.
+
+A completed current strong reference candle becomes the active structural anchor even when an older reference candle carried more absolute money. The older candle remains comparative evidence, not the active anchor.
+
+Reference-candle integrity follows the source hierarchy that strong-candle open/close are primary support/resistance evidence:
+- `CURRENT`: a new completed reference candle,
+- `HELD`: the prior reference support area remains respected,
+- `DAMAGED`: the primary hold area weakened but the candle low has not failed; grade is capped at B+,
+- `FAILED`: the reference candle itself has structurally failed and cannot continue to support an S/A/B+ grade.
+
+Historical audit warnings do not permanently blacklist a security. Only a current data-warning state is a hard chart-grade block.
+
+The chart-grade universe is computed **before** the timing-qualified pool. Therefore a chart may remain S/A/B+ even when the current entry is unattractive; conversely, a high timing score cannot manufacture an S/A/B+ chart grade.
+
+`Action Score` remains a secondary execution/timing aid. It is not the definition of an A-grade chart and is not the user's final buy decision.
+
