@@ -135,6 +135,28 @@ def main():
         else:
             warnings.append("STALE_AUX_SOURCE_TIMESTAMP")
 
+    scan = live.get("scan")
+    scan_delta = live.get("scanDelta")
+    if not isinstance(scan, dict):
+        warnings.append("MARKET_SCAN_MISSING")
+    else:
+        scan_status = scan.get("status")
+        if scan_status == "PARTIAL":
+            warnings.append("MARKET_SCAN_PARTIAL")
+        elif scan_status == "FAIL":
+            warnings.append("MARKET_SCAN_FAILED")
+        if not (scan.get("turnoverTop") or []):
+            warnings.append("TURNOVER_TOP_MISSING")
+        if not (scan.get("risingLiquid") or []):
+            warnings.append("RISING_LIQUID_MISSING")
+
+    history_to = history.get("to") or ""
+    if isinstance(history_to, str) and history_to >= f"{expected_date} 0935":
+        if not isinstance(scan_delta, dict):
+            warnings.append("SCAN_DELTA_MISSING")
+        elif int(scan_delta.get("comparedCount") or 0) == 0:
+            warnings.append("SCAN_DELTA_EMPTY")
+
     published = live.get("publishedAtKst")
     if not isinstance(published, str) or expected_date not in published.replace("-", ""):
         reasons.append("PUBLISHED_AT_DATE_MISMATCH")
