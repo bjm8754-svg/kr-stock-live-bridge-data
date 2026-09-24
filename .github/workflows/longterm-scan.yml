@@ -7,7 +7,7 @@ on:
     paths:
       - "scripts/longterm_scan.py"
       - "scripts/test_longterm_scan_v2.py"
-      - "longterm-scan-config.json"
+      - "longterm-scan-config.json"\n      - "requirements-scanner.txt"
       - ".github/workflows/longterm-scan.yml"
   schedule:
     # 16:30 KST, Monday-Friday. Holiday/stale runs are detected and not committed.
@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -105,7 +105,7 @@ jobs:
             echo "universe coverage gate failed: universe=$UNIVERSE min=$MIN_UNIVERSE"
             exit 1
           fi
-          if ! awk -v r="$CURRENT_COVERAGE" 'BEGIN { exit !(r >= 0.90) }'; then
+          if ! awk -v r="$CURRENT_COVERAGE" 'BEGIN { exit !(r >= 0.99) }'; then
             echo "current-date coverage gate failed: ratio=$CURRENT_COVERAGE"
             exit 1
           fi
@@ -134,7 +134,7 @@ jobs:
 
       - name: Upload short-retention full scan for diagnostics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: longterm-scan-full-${{ github.run_id }}
           path: /tmp/longterm-scan-full.json
