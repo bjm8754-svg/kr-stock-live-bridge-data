@@ -97,5 +97,10 @@
   "actionScoreVeryExtendedPct": 20,
   "actionScoreMinCoreSourceCount": 2,
   "actionScoreMinNextResistanceGapPct": 2,
-  "entryPlanMinMeaningfulSupportDistancePct": 0.5
+  "entryPlanMinMeaningfulSupportDistancePct": 0.5,
+  "chartGradeExceptionalReferenceKrw": 300000000000,
+  "chartGradeCoreGoodSourceCount": 2,
+  "chartGradeCoreStrongSourceCount": 3,
+  "chartGradeCoreGoodScore": 6,
+  "chartGradeCoreStrongScore": 10
 }
