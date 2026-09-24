@@ -94,8 +94,8 @@ jobs:
             exit 1
           fi
 
-          if ! jq -e '.schemaVersion=="YBM_BRIEF_V1" and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array")' longterm-scan.json >/dev/null; then
-            echo "compact canonical schema missing"
+          if ! jq -e '.schemaVersion=="YBM_BRIEF_V2" and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array")' longterm-scan.json >/dev/null; then
+            echo "compact canonical V2 schema missing"
             exit 1
           fi
 
