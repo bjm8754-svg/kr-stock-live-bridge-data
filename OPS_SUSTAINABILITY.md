@@ -47,6 +47,9 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 - **Current canonical scan migration — PARTIAL**
   - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
+- **Master publisher contract read-back — PASS**
+  - Library Canonical Master current version: V8 / Library version 44.
+  - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
 
 ## Manual deployment checklist
