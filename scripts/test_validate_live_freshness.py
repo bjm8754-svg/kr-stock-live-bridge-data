@@ -34,6 +34,15 @@ def build_case(codes, rows, watch_date=DATE, live_date=DATE):
                 "to": rows[-1]["atKst"] if rows else None,
                 "rows": rows,
             },
+            "scan": {
+                "status": "PASS",
+                "turnoverTop": [{"code":"000001","tradingValue":1000}],
+                "risingLiquid": [{"code":"000001","changePct":1.0}],
+            },
+            "scanDelta": {
+                "comparedCount": 1,
+                "turnoverAcceleration": [{"code":"000001","deltaTradingValue":100}],
+            },
         },
         "watch": {"tradeDate": watch_date, "codes": codes},
     }
@@ -149,6 +158,25 @@ class LiveFreshnessTests(unittest.TestCase):
             "STALE_SOURCE_TIMESTAMP",
         ):
             self.assertIn(reason, out["reasons"])
+
+    def test_missing_scan_is_warning_only(self):
+        codes = ["000001", "000002"]
+        rows = []
+        for minute in range(36):
+            rows.append({
+                "atKst": f"{DATE} 09{minute:02d}",
+                "stocks": {
+                    "000001": stock(1000 + minute, 100 + minute, 1000 + minute),
+                    "000002": stock(2000 + minute, 200 + minute, 2000 + minute),
+                },
+            })
+        case = build_case(codes, rows)
+        case["live"].pop("scan", None)
+        case["live"].pop("scanDelta", None)
+        out = run_validator(case)
+        self.assertEqual(out["status"], "PASS")
+        self.assertIn("MARKET_SCAN_MISSING", out["warnings"])
+        self.assertIn("SCAN_DELTA_MISSING", out["warnings"])
 
     def test_watchlist_date_mismatch_fails(self):
         codes = ["000001"]
