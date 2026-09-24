@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "watchlist.json"
+      - ".github/workflows/sync-watchlist.yml"
   workflow_dispatch:
 
 permissions:
