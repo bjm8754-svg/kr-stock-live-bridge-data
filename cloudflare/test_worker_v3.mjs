@@ -8,20 +8,49 @@ class KV {
 
 let mode = 'OPEN';
 let failCode = null;
+let githubWrites = [];
 globalThis.fetch = async function(input, init={}) {
   const u = new URL(typeof input === 'string' ? input : input.url);
+
   if (u.hostname === 'polling.finance.naver.com') {
     const q = decodeURIComponent(u.searchParams.get('query') || '');
+    if (q.startsWith('SERVICE_INDEX:')) {
+      return new Response(JSON.stringify({
+        result:{areas:[{datas:[
+          {cd:'KOSPI',nv:'3000',cv:'10',cr:'0.3',ov:'2990',hv:'3010',lv:'2980',aq:'1',aa:'2',ms:mode},
+          {cd:'KOSDAQ',nv:'900',cv:'5',cr:'0.5',ov:'895',hv:'905',lv:'890',aq:'3',aa:'4',ms:mode}
+        ]}]}
+      }), {status:200,headers:{'Content-Type':'application/json'}});
+    }
+
     const code = q.split(':')[1];
     if (code === failCode) throw new Error('simulated upstream failure');
-    const ms = mode;
     return new Response(JSON.stringify({
       result:{pollingInterval:1000,areas:[{datas:[{
-        cd:code,nm:`N${code}`,nv:'1000',sv:'990',cv:'10',cr:'1.01',ov:'995',hv:'1010',lv:'990',aq:'12345',aa:'67890',ms,
+        cd:code,nm:`N${code}`,nv:'1000',sv:'990',cv:'10',cr:'1.01',ov:'995',hv:'1010',lv:'990',aq:'12345',aa:'67890',ms:mode,
         nxtOverMarketPriceInfo:{localTradedAt:'2026-09-24T09:00:00+09:00'}
       }]}]}
     }), {status:200,headers:{'Content-Type':'application/json'}});
   }
+
+  if (u.hostname === 'stock.naver.com') {
+    return new Response(JSON.stringify([
+      {itemcode:'000001',itemname:'N000001',nowPrice:'1000',prevChangeRate:'1.0'},
+      {itemcode:'000002',itemname:'N000002',nowPrice:'2000',prevChangeRate:'2.0'}
+    ]), {status:200,headers:{'Content-Type':'application/json'}});
+  }
+
+  if (u.hostname === 'api.github.com') {
+    if ((init.method || 'GET') === 'GET') {
+      return new Response(JSON.stringify({sha:'old-live-sha'}), {status:200,headers:{'Content-Type':'application/json'}});
+    }
+    if (init.method === 'PUT') {
+      const body = JSON.parse(init.body);
+      githubWrites.push(body);
+      return new Response(JSON.stringify({commit:{sha:'new-live-commit'}}), {status:200,headers:{'Content-Type':'application/json'}});
+    }
+  }
+
   throw new Error('unexpected fetch '+u);
 };
 
@@ -92,6 +121,71 @@ const sched = Date.parse('2026-09-24T00:00:00Z');
   res=await worker.fetch(new Request('https://x/run-now',{method:'POST',headers:{Authorization:'Bearer secret'}}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===409,'closed run-now should skip');
   assert(!kv.m.has('latest_minute'),'closed run-now overwrote latest');
+}
+
+
+function minuteRow(date, minute, codes=['000001','000002']) {
+  const stocks = {};
+  for (const [i,code] of codes.entries()) {
+    stocks[code] = {
+      code,
+      name: `N${code}`,
+      currentPrice: 1000 + i + minute,
+      volume: 10000 + minute,
+      tradingValue: 100000 + minute,
+      marketStatus: 'OPEN'
+    };
+  }
+  return {atKst: `${date} 09${String(minute).padStart(2,'0')}`, guard:{openRatio:1}, stocks};
+}
+
+// 7) 09:35 with a complete minute chain publishes a versioned live.json snapshot.
+{
+  mode='OPEN'; failCode=null; githubWrites=[];
+  const init={watchlist:JSON.stringify(['000001','000002'])};
+  for(let m=0;m<35;m++) init[`minute:20260924:09${String(m).padStart(2,'0')}`] = JSON.stringify(minuteRow('20260924',m));
+  const kv=new KV(init);
+  await worker.scheduled(
+    {scheduledTime:Date.parse('2026-09-24T00:35:00Z')},
+    {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_PUBLISH_TOKEN:'gh-token'}
+  );
+  assert(githubWrites.length===1,'09:35 did not publish live.json');
+  const req=githubWrites[0];
+  assert(req.sha==='old-live-sha','publisher did not preserve live.json sha');
+  const payload=JSON.parse(Buffer.from(req.content,'base64').toString('utf8'));
+  assert(payload.tradeDate==='20260924','wrong published tradeDate');
+  assert(payload.history.count===36,'wrong 09:35 history count');
+  assert(payload.history.from==='20260924 0900','wrong history start');
+  assert(payload.history.to==='20260924 0935','wrong history end');
+  assert(payload.latest.atKst==='20260924 0935','wrong latest minute');
+  assert(payload.watchlist.join(',')==='000001,000002','wrong published watchlist');
+  assert(payload.publisher.type==='CLOUDFLARE_WORKER_GITHUB_CONTENTS_API','publisher identity missing');
+  const ps=JSON.parse(kv.m.get('last_publish_status'));
+  assert(ps.status==='PASS' && ps.commitSha==='new-live-commit','publish status not recorded');
+}
+
+// 8) 09:35 refuses to publish a discontinuous/incomplete minute chain.
+{
+  mode='OPEN'; failCode=null; githubWrites=[];
+  const kv=new KV({
+    watchlist:JSON.stringify(['000001','000002']),
+    'minute:20260924:0900':JSON.stringify(minuteRow('20260924',0))
+  });
+  let threw=false;
+  try {
+    await worker.scheduled(
+      {scheduledTime:Date.parse('2026-09-24T00:35:00Z')},
+      {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_PUBLISH_TOKEN:'gh-token'}
+    );
+  } catch (e) {
+    threw=true;
+    assert(String(e.message).includes('INCOMPLETE_PUBLISH_HISTORY'),'unexpected incomplete-history error');
+  }
+  assert(threw,'incomplete history did not fail publisher');
+  assert(githubWrites.length===0,'incomplete history was published');
+  assert(kv.m.has('minute:20260924:0935'),'valid minute capture should survive publisher failure');
+  const ps=JSON.parse(kv.m.get('last_publish_status'));
+  assert(ps.status==='FAIL','publisher failure status missing');
 }
 
 console.log('ALL_TESTS_PASS');
