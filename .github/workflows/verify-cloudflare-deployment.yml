@@ -1,0 +1,49 @@
+name: Verify Cloudflare Worker Deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Verify deployed write-path security
+        shell: bash
+        env:
+          CLOUDFLARE_WRITE_TOKEN: ${{ secrets.CLOUDFLARE_WRITE_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CLOUDFLARE_WRITE_TOKEN:-}" ]; then
+            echo "MISSING_CLOUDFLARE_WRITE_TOKEN"
+            exit 1
+          fi
+
+          CODES=$(jq -r '.codes | join(",")' watchlist.json)
+          EXPECTED=$(jq -c '.codes' watchlist.json)
+          BASE="https://kr-stock-live-bridge.bjm8754.workers.dev"
+
+          READ=$(curl --fail --silent --show-error "$BASE/watchlist")
+          READ_CODES=$(printf '%s' "$READ" | jq -c '.codes // []')
+          test "$READ_CODES" = "$EXPECTED"
+
+          GET_CODE=$(curl --silent --output /tmp/get-body --write-out "%{http_code}" "$BASE/watchlist?codes=${CODES}")
+          test "$GET_CODE" = "405"
+
+          POST_CODE=$(curl --silent --output /tmp/post-body --write-out "%{http_code}" --request POST "$BASE/watchlist?codes=${CODES}")
+          test "$POST_CODE" = "401"
+
+          AUTH=$(curl --fail --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer ${CLOUDFLARE_WRITE_TOKEN}" \
+            "$BASE/watchlist?codes=${CODES}")
+          test "$(printf '%s' "$AUTH" | jq -r '.status // empty')" = "WATCHLIST_SAVED"
+          test "$(printf '%s' "$AUTH" | jq -c '.codes // []')" = "$EXPECTED"
+
+          echo "CLOUDFLARE_DEPLOYMENT_SECURITY_PASS"
