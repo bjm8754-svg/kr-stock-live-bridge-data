@@ -1572,12 +1572,80 @@ def run(cfg):
     }
 
 
-def compact_candidate(x):
-    """Compact handoff for ChatGPT/automation reads.
+def compact_reference(ref):
+    if not ref:
+        return None
+    return {
+        "date": ref.get("date"),
+        "open": ref.get("open"),
+        "close": ref.get("close"),
+        "high": ref.get("high"),
+        "low": ref.get("low"),
+        "dayReturnPct": ref.get("dayReturnPct"),
+        "tradingValueEstimated": ref.get("tradingValueEstimated"),
+        "volumeRatio20": ref.get("volumeRatio20"),
+        "closeLocation": ref.get("closeLocation"),
+    }
 
-    The full scan remains the audit artifact. This view keeps only fields needed for
-    chart-grade/timing review so connector size limits cannot silently hide the scan.
+
+def compact_core(core):
+    if not core:
+        return None
+    return {
+        "line": core.get("line"),
+        "zoneLow": core.get("zoneLow"),
+        "zoneHigh": core.get("zoneHigh"),
+        "score": core.get("score"),
+        "touches": core.get("touches"),
+        "sourceCount": core.get("sourceCount"),
+        "sources": core.get("sources"),
+        "distanceFromReferencePct": core.get("distanceFromReferencePct"),
+    }
+
+
+def active_reference_anchor(x):
+    deoyang = x.get("deoyangbong") or {}
+    cg = x.get("chartGrade") or {}
+    if cg.get("referenceMoneySource") == "CURRENT_COMPLETED_REFERENCE" and deoyang.get("today"):
+        return {
+            "date": x.get("tradeDate"),
+            "open": x.get("open"),
+            "close": x.get("close"),
+            "high": x.get("high"),
+            "low": x.get("low"),
+            "tradingValue": (x.get("money") or {}).get("tradingValue"),
+            "source": "CURRENT_COMPLETED_REFERENCE",
+        }
+    ref = compact_reference(deoyang.get("latestPrior"))
+    if ref:
+        ref["source"] = "PRIOR_REFERENCE"
+    return ref
+
+
+def compact_money(money):
+    money = money or {}
+    return {
+        "band": money.get("band"),
+        "tradingValue": money.get("tradingValue"),
+        "avg20TradingValueEstimated": money.get("avg20TradingValueEstimated"),
+        "tradingValueRatio20Estimated": money.get("tradingValueRatio20Estimated"),
+        "tradingValueQuality": money.get("tradingValueQuality"),
+        "volume": money.get("volume"),
+        "avg20Volume": money.get("avg20Volume"),
+        "volumeRatio20": money.get("volumeRatio20"),
+        "relativeToPriorReferenceMoney": money.get("relativeToPriorReferenceMoney"),
+        "marketCap": money.get("marketCap"),
+        "turnoverToMarketCapPct": money.get("turnoverToMarketCapPct"),
+    }
+
+
+def compact_chart_candidate(x):
+    """Durable chart-first handoff.
+
+    Keep enough completed-daily structure for S/A/B+ review without committing the
+    multi-megabyte diagnostic payload or resistance alternatives to Git history.
     """
+    ma = x.get("ma") or {}
     return {
         "code": x.get("code"),
         "name": x.get("name"),
@@ -1585,20 +1653,18 @@ def compact_candidate(x):
         "tradeDate": x.get("tradeDate"),
         "track": x.get("track"),
         "signal": x.get("signal"),
-        "structuralGrade": x.get("structuralGrade"),
-        "score": x.get("score"),
-        "rawScore": x.get("rawScore"),
         "close": x.get("close"),
         "open": x.get("open"),
         "high": x.get("high"),
         "low": x.get("low"),
         "dayChangePct": x.get("dayChangePct"),
         "closeLocation": x.get("closeLocation"),
+        "chartGrade": x.get("chartGrade"),
         "abc": x.get("abc"),
         "cloud": x.get("cloud"),
-        "ma": x.get("ma"),
-        "deoyangbong": x.get("deoyangbong"),
-        "coreResistance": x.get("coreResistance"),
+        "ma": {k: ma.get(k) for k in ("20", "60", "120", "240", "480", "600", "1000")},
+        "referenceCandleAnchor": active_reference_anchor(x),
+        "setupCoreResistance": compact_core(x.get("coreResistance")),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
@@ -1607,11 +1673,33 @@ def compact_candidate(x):
         "retestSupply": x.get("retestSupply"),
         "reacceleration": x.get("reacceleration"),
         "yangEumYang": x.get("yangEumYang"),
-        "recentReferenceCandle": x.get("recentReferenceCandle"),
+        "retestAnchor": compact_reference(x.get("recentReferenceCandle")),
         "newListingSetup": x.get("newListingSetup"),
         "entryPlan": x.get("entryPlan"),
-        "money": x.get("money"),
-        "chartGrade": x.get("chartGrade"),
+        "money": compact_money(x.get("money")),
+        "actionScore": x.get("actionScore"),
+        "dataWarnings": x.get("dataWarnings"),
+    }
+
+
+def compact_timing_candidate(x):
+    cg = x.get("chartGrade") or {}
+    return {
+        "code": x.get("code"),
+        "name": x.get("name"),
+        "market": x.get("market"),
+        "signal": x.get("signal"),
+        "close": x.get("close"),
+        "chartGrade": cg.get("grade"),
+        "referenceState": cg.get("referenceState"),
+        "distanceToCorePct": x.get("distanceToCorePct"),
+        "breakoutClass": x.get("breakoutClass"),
+        "entryPlan": x.get("entryPlan"),
+        "money": {
+            "tradingValue": (x.get("money") or {}).get("tradingValue"),
+            "tradingValueRatio20Estimated": (x.get("money") or {}).get("tradingValueRatio20Estimated"),
+            "volumeRatio20": (x.get("money") or {}).get("volumeRatio20"),
+        },
         "actionScore": x.get("actionScore"),
         "dataWarnings": x.get("dataWarnings"),
     }
@@ -1619,19 +1707,28 @@ def compact_candidate(x):
 
 def build_brief_output(out):
     return {
-        "schemaVersion": "YBM_BRIEF_V1",
+        "schemaVersion": "YBM_BRIEF_V2",
         "status": out.get("status"),
         "generatedAtKst": out.get("generatedAtKst"),
         "tradeDate": out.get("tradeDate"),
         "methodologyVersion": out.get("methodologyVersion"),
         "primaryLogic": out.get("primaryLogic"),
+        "role": {
+            "primary": "completed-daily CHART S/A/B+ discovery",
+            "secondary": "timing/action prioritization",
+            "finalBuyDecision": "human review with news and same-day flow",
+        },
         "coverage": out.get("coverage"),
         "counts": out.get("counts"),
-        "notes": out.get("notes"),
-        "chartCandidates": [compact_candidate(x) for x in (out.get("chartCandidates") or [])],
-        "briefingCandidates": [compact_candidate(x) for x in (out.get("briefingCandidates") or [])],
-        "qualifiedPool": [compact_candidate(x) for x in (out.get("qualifiedPool") or [])],
-        "riskWarnings": [compact_candidate(x) for x in (out.get("riskWarnings") or [])],
+        "notes": (out.get("notes") or []) + [
+            "chartCandidates are chart-quality candidates, not automatic buy recommendations.",
+            "Action Score is secondary timing/action context and does not define chart grade.",
+            "setupCoreResistance is pre-current structural supply/resistance; referenceCandleAnchor is the active strong-candle anchor; retestAnchor is the recent acceptance/retest anchor.",
+        ],
+        "chartCandidates": [compact_chart_candidate(x) for x in (out.get("chartCandidates") or [])],
+        "briefingCandidates": [compact_timing_candidate(x) for x in (out.get("briefingCandidates") or [])],
+        "qualifiedPool": [compact_timing_candidate(x) for x in (out.get("qualifiedPool") or [])],
+        "riskWarnings": [compact_timing_candidate(x) for x in (out.get("riskWarnings") or [])],
     }
 
 
