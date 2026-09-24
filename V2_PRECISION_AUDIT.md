@@ -48,3 +48,21 @@ The source hierarchy emphasizes strong-reference open/close first, then meaningf
 - **Low-money negative control — PASS:** Hanseong Clean Tech 066980 / 2026-05-20 was source-labeled as pattern-compatible but not A-grade because volume/money were insufficient. Replay case CASE_J produced `BELOW_B_PLUS`, `qualified=false`, Action Score 18.8 / RADAR. Replay commit `7b62676c385262a5d7e9d01ce3ce3ead492d26f5`; run `35985982065` concluded success.
 - **Source-level calibration — PASS for two explicit examples:** replay commit `ccbb4b4db718c5e9d1e589d4ecf078f3d03cf9b6`; run `35986185265` concluded success. Sammi Metal's source 10,000 reference was matched by structural reference-low 10,040 (0.4% gap). Kumkang Steel's source support 5,800~6,000 was matched by core support 5,759.58 (0.685% below the range). These are calibration matches, not a statistical precision claim.
 - **Positive discovery controls:** six source-labeled A/B+ examples currently all meet at least the B+ discovery floor in replay. This supports FN control but is still too small to claim a population precision/recall rate.
+
+
+## Structural R/R invalidation separation
+
+The prior ranking R/R used the nearest structural support as the risk denominator. That was too optimistic when the actual thesis invalidation sat deeper than the nearest tactical support.
+
+- scanner commit `834f13b92cbe0b5eb64dfe03d40ff281faded45e`
+- regression-test commit `38c033e1dfcb5287ca4b53f004772ecfc2abb937`
+- replay run `35987234904` concluded success
+
+Current rule:
+1. nearest support remains the extension/ranking reference;
+2. invalidation prefers the active strong-reference low;
+3. if no valid reference exists, core-zone low can serve as structural invalidation;
+4. a long MA by itself is context, not a hard invalidation;
+5. structural R/R is calculated from current evaluation reference to the explicit invalidation and next resistance; if either is absent, R/R is null.
+
+This change intentionally lowers some historical R/R values rather than manufacturing a tighter stop to make the trade look better.
