@@ -45,13 +45,21 @@ for case in CASES:
     )
     assert out["status"] == "OK", (case, out)
     assert out["track"] == case["expectedTrack"], (case, out["track"])
+    chart_grade = scan.compute_chart_grade(out, cfg)
+    action_score = scan.compute_action_score(out, cfg)
     rows.append({
         "case": case["name"],
+        "code": case["code"],
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
         "score": out["score"],
+        "close": out["close"],
         "dayChangePct": out["dayChangePct"],
+        "chartGrade": chart_grade,
+        "qualified": scan.is_qualified_candidate(out, cfg),
+        "actionScore": action_score,
+        "entryPlan": out["entryPlan"],
         "abc": out["abc"],
         "deoyangbong": out["deoyangbong"],
         "coreResistance": out["coreResistance"],
