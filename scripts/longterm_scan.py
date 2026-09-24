@@ -1410,18 +1410,85 @@ def run(cfg):
     }
 
 
+def compact_candidate(x):
+    """Compact handoff for ChatGPT/automation reads.
+
+    The full scan remains the audit artifact. This view keeps only fields needed for
+    chart-grade/timing review so connector size limits cannot silently hide the scan.
+    """
+    return {
+        "code": x.get("code"),
+        "name": x.get("name"),
+        "market": x.get("market"),
+        "tradeDate": x.get("tradeDate"),
+        "track": x.get("track"),
+        "signal": x.get("signal"),
+        "structuralGrade": x.get("structuralGrade"),
+        "score": x.get("score"),
+        "rawScore": x.get("rawScore"),
+        "close": x.get("close"),
+        "open": x.get("open"),
+        "high": x.get("high"),
+        "low": x.get("low"),
+        "dayChangePct": x.get("dayChangePct"),
+        "closeLocation": x.get("closeLocation"),
+        "abc": x.get("abc"),
+        "cloud": x.get("cloud"),
+        "ma": x.get("ma"),
+        "deoyangbong": x.get("deoyangbong"),
+        "coreResistance": x.get("coreResistance"),
+        "distanceToCorePct": x.get("distanceToCorePct"),
+        "breakCoreResistance": x.get("breakCoreResistance"),
+        "breakoutClass": x.get("breakoutClass"),
+        "preJindol": x.get("preJindol"),
+        "retestOk": x.get("retestOk"),
+        "retestSupply": x.get("retestSupply"),
+        "reacceleration": x.get("reacceleration"),
+        "yangEumYang": x.get("yangEumYang"),
+        "recentReferenceCandle": x.get("recentReferenceCandle"),
+        "newListingSetup": x.get("newListingSetup"),
+        "entryPlan": x.get("entryPlan"),
+        "money": x.get("money"),
+        "actionScore": x.get("actionScore"),
+        "dataWarnings": x.get("dataWarnings"),
+    }
+
+
+def build_brief_output(out):
+    return {
+        "schemaVersion": "YBM_BRIEF_V1",
+        "status": out.get("status"),
+        "generatedAtKst": out.get("generatedAtKst"),
+        "tradeDate": out.get("tradeDate"),
+        "methodologyVersion": out.get("methodologyVersion"),
+        "primaryLogic": out.get("primaryLogic"),
+        "coverage": out.get("coverage"),
+        "counts": out.get("counts"),
+        "notes": out.get("notes"),
+        "briefingCandidates": [compact_candidate(x) for x in (out.get("briefingCandidates") or [])],
+        "qualifiedPool": [compact_candidate(x) for x in (out.get("qualifiedPool") or [])],
+        "riskWarnings": [compact_candidate(x) for x in (out.get("riskWarnings") or [])],
+    }
+
+
+def atomic_write_json(path, obj):
+    payload = json.dumps(obj, ensure_ascii=False, indent=2, default=json_default)
+    tmp = Path(str(path) + ".tmp")
+    tmp.write_text(payload, encoding="utf-8")
+    tmp.replace(path)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="longterm-scan-config.json")
     ap.add_argument("--output", default="longterm-scan.json")
+    ap.add_argument("--brief-output", default="longterm-scan-brief.json")
     args = ap.parse_args()
 
     cfg = json.loads(Path(args.config).read_text(encoding="utf-8"))
     out = run(cfg)
-    payload = json.dumps(out, ensure_ascii=False, indent=2, default=json_default)
-    tmp = Path(args.output + ".tmp")
-    tmp.write_text(payload, encoding="utf-8")
-    tmp.replace(args.output)
+    atomic_write_json(args.output, out)
+    atomic_write_json(args.brief_output, build_brief_output(out))
     preview = []
     for x in (out.get("briefingCandidates") or [])[:20]:
         preview.append({
