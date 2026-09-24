@@ -18,9 +18,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Validate watchlist schema
         shell: bash
@@ -34,45 +37,89 @@ jobs:
           ' watchlist.json >/dev/null
 
       - name: Sync watchlist to Cloudflare Worker
+        id: sync
+        continue-on-error: true
         shell: bash
+        env:
+          CLOUDFLARE_WRITE_TOKEN: ${{ secrets.CLOUDFLARE_WRITE_TOKEN }}
         run: |
           set -euo pipefail
           CODES=$(jq -r '.codes | join(",")' watchlist.json)
+          REQUESTED=$(jq -c '.codes' watchlist.json)
+          echo "requested=$REQUESTED" >> "$GITHUB_OUTPUT"
+
+          if [ -z "${CLOUDFLARE_WRITE_TOKEN:-}" ]; then
+            echo "reason=MISSING_CLOUDFLARE_WRITE_TOKEN" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
 
           URL="https://kr-stock-live-bridge.bjm8754.workers.dev/watchlist?codes=${CODES}"
+          set +e
           RESPONSE=$(curl --fail --silent --show-error \
+            --request POST \
+            --header "Authorization: Bearer ${CLOUDFLARE_WRITE_TOKEN}" \
             --connect-timeout 10 --max-time 30 \
             --retry 3 --retry-delay 2 --retry-all-errors \
             "$URL")
-          echo "$RESPONSE"
+          CURL_STATUS=$?
+          set -e
+
+          if [ "$CURL_STATUS" -ne 0 ]; then
+            echo "reason=CLOUDFLARE_HTTP_OR_NETWORK_FAIL" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
 
           STATUS=$(echo "$RESPONSE" | jq -r '.status // empty')
           RETURNED=$(echo "$RESPONSE" | jq -c '.codes // []')
-          REQUESTED=$(jq -c '.codes' watchlist.json)
 
           if [ "$STATUS" != "WATCHLIST_SAVED" ]; then
-            echo "unexpected status: $STATUS"
+            echo "reason=UNEXPECTED_WORKER_STATUS" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
           if [ "$RETURNED" != "$REQUESTED" ]; then
-            echo "code mismatch"
-            echo "requested=$REQUESTED"
-            echo "returned=$RETURNED"
+            echo "reason=WATCHLIST_CODE_MISMATCH" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
+          echo "worker_status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "reason=NONE" >> "$GITHUB_OUTPUT"
+
+      - name: Write sync status
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
           NOW_UTC=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          TRADE_DATE=$(jq -r '.tradeDate' watchlist.json)
+          REQUESTED=$(jq -c '.codes' watchlist.json)
+          OUTCOME="${{ steps.sync.outcome }}"
+          REASON="${{ steps.sync.outputs.reason }}"
+          WORKER_STATUS="${{ steps.sync.outputs.worker_status }}"
+
+          if [ -z "$REASON" ]; then REASON="SYNC_STEP_FAILED"; fi
+
+          if [ "$OUTCOME" = "success" ]; then
+            STATUS="PASS"
+          else
+            STATUS="FAIL"
+          fi
+
           cat > watchlist-sync-status.json <<EOF
           {
-            "status": "PASS",
+            "status": "$STATUS",
+            "tradeDate": "$TRADE_DATE",
             "syncedAtUtc": "$NOW_UTC",
             "codes": $REQUESTED,
-            "cloudflareStatus": "$STATUS"
+            "mode": "POST_BEARER",
+            "cloudflareStatus": "$WORKER_STATUS",
+            "reason": "$REASON"
           }
           EOF
+          jq . watchlist-sync-status.json
 
       - name: Commit sync status
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
@@ -81,8 +128,23 @@ jobs:
           git add watchlist-sync-status.json
           if git diff --cached --quiet; then
             echo "no status changes"
-            exit 0
+          else
+            git commit -m "record watchlist sync status"
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                break
+              fi
+              if [ "$i" -eq 3 ]; then
+                exit 1
+              fi
+              sleep 2
+            done
           fi
-          git commit -m "record watchlist sync status"
-          git pull --rebase origin main
-          git push
+
+      - name: Enforce fail-closed sync
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ steps.sync.outcome }}" = "success"
