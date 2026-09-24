@@ -13,7 +13,7 @@ on:
       - ".github/workflows/v2-replay.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: ybm-v2-historical-replay
@@ -41,4 +41,28 @@ jobs:
         run: python scripts/test_longterm_scan_v2.py
 
       - name: Replay source examples
-        run: python scripts/replay_validate_v2.py
+        run: |
+          python scripts/replay_validate_v2.py > v2-replay-report.json
+          python -m json.tool v2-replay-report.json >/dev/null
+          cat v2-replay-report.json
+
+      - name: Commit replay report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v2-replay-report.json
+          if git diff --cached --quiet; then
+            echo "no replay report changes"
+          else
+            git commit -m "update V2 replay report"
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                break
+              fi
+              if [ "$i" -eq 3 ]; then exit 1; fi
+              sleep 2
+            done
+          fi
