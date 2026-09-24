@@ -218,6 +218,34 @@ assert cg_fresh["grade"] == "S"
 
 
 
+
+# Fresh structural discovery must not be permanently vetoed by a stale/failed old reference.
+# This path is capped at B+: S/A still require a usable strong reference.
+fresh_discovery = {
+    "signal":"GADOL_RISK",
+    "track":"LONG_HISTORY",
+    "abc":{"state":"C_RECOVERY_NONCLASSIC_BASE","score":60,"bPlus":False},
+    "cloud":{"state":"INSIDE"},
+    "coreResistance":{"score":8,"sourceCount":2},
+    "deoyangbong":{"today":False,"latestPrior":{
+        "open":10000,"close":11000,"high":11200,"low":9000,
+        "tradingValueEstimated":350_000_000_000}},
+    "money":{"tradingValue":45_000_000_000,
+             "tradingValueRatio20Estimated":3.0,"volumeRatio20":3.0},
+    "close":7000,"low":6800,"newListingSetup":False,"dataWarnings":[],
+}
+cg_fresh_discovery = scan.compute_chart_grade(fresh_discovery, cfg)
+assert cg_fresh_discovery["referenceState"] == "FAILED"
+assert cg_fresh_discovery["grade"] == "B_PLUS"
+
+weak_fresh_discovery = dict(fresh_discovery)
+weak_fresh_discovery["money"] = {
+    "tradingValue":20_000_000_000,
+    "tradingValueRatio20Estimated":1.0,
+    "volumeRatio20":1.0,
+}
+assert scan.compute_chart_grade(weak_fresh_discovery, cfg)["grade"] == "BELOW_B_PLUS"
+
 # Compact canonical must stay chart-first and exclude bulky resistance alternatives.
 compact_sample = dict(current_ref_sample)
 compact_sample.update({
