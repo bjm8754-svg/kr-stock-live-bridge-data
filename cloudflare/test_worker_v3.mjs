@@ -33,11 +33,20 @@ globalThis.fetch = async function(input, init={}) {
     }), {status:200,headers:{'Content-Type':'application/json'}});
   }
 
-  if (u.hostname === 'stock.naver.com') {
-    return new Response(JSON.stringify([
-      {itemcode:'000001',itemname:'N000001',nowPrice:'1000',prevChangeRate:'1.0'},
-      {itemcode:'000002',itemname:'N000002',nowPrice:'2000',prevChangeRate:'2.0'}
-    ]), {status:200,headers:{'Content-Type':'application/json'}});
+  if (u.hostname === 'm.stock.naver.com') {
+    const sortType=u.searchParams.get('sortType');
+    const category=u.searchParams.get('category');
+    const base = category==='KOSPI' ? 0 : 100;
+    const rows = sortType==='quantTop'
+      ? [
+          {itemCode:String(base+1).padStart(6,'0'),stockName:`Q${category}1`,closePrice:'1000',fluctuationsRatio:'1.2',accumulatedTradingVolume:'500000',accumulatedTradingValue:'60000000000'},
+          {itemCode:String(base+2).padStart(6,'0'),stockName:`Q${category}2`,closePrice:'2000',fluctuationsRatio:'2.2',accumulatedTradingVolume:'400000',accumulatedTradingValue:'50000000000'}
+        ]
+      : [
+          {itemCode:String(base+3).padStart(6,'0'),stockName:`U${category}1`,closePrice:'3000',fluctuationsRatio:'12.5',accumulatedTradingVolume:'300000',accumulatedTradingValue:'70000000000'},
+          {itemCode:String(base+4).padStart(6,'0'),stockName:`U${category}2`,closePrice:'4000',fluctuationsRatio:'9.5',accumulatedTradingVolume:'250000',accumulatedTradingValue:'45000000000'}
+        ];
+    return new Response(JSON.stringify({result:{stocks:rows}}), {status:200,headers:{'Content-Type':'application/json'}});
   }
 
   if (u.hostname === 'api.github.com') {
@@ -144,6 +153,14 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   mode='OPEN'; failCode=null; githubWrites=[];
   const init={watchlist:JSON.stringify(['000001','000002'])};
   for(let m=0;m<35;m++) init[`minute:20260924:09${String(m).padStart(2,'0')}`] = JSON.stringify(minuteRow('20260924',m));
+  init['market_scan:20260924:0930']=JSON.stringify({
+    status:'PASS', atKst:'20260924 0930',
+    coverage:{requestedConfigs:4,successfulConfigs:4,failedConfigs:0,rowCount:4},
+    rankings:[],
+    volumeTop:[{code:'000001',name:'QKOSPI1',price:990,changePct:1,volume:450000,tradingValue:50000000000}],
+    turnoverTop:[{code:'000003',name:'UKOSPI1',price:2900,changePct:10,volume:250000,tradingValue:60000000000}],
+    risingLiquid:[{code:'000003',name:'UKOSPI1',price:2900,changePct:10,volume:250000,tradingValue:60000000000}]
+  });
   const kv=new KV(init);
   await worker.scheduled(
     {scheduledTime:Date.parse('2026-09-24T00:35:00Z')},
@@ -160,6 +177,11 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   assert(payload.latest.atKst==='20260924 0935','wrong latest minute');
   assert(payload.watchlist.join(',')==='000001,000002','wrong published watchlist');
   assert(payload.publisher.type==='CLOUDFLARE_WORKER_GITHUB_CONTENTS_API','publisher identity missing');
+  assert(payload.scan.status==='PASS','market scan did not publish PASS');
+  assert(payload.scan.turnoverTop.length>0,'turnoverTop missing');
+  assert(payload.scan.turnoverTop[0].tradingValue!=null,'turnover money missing');
+  assert(payload.scanDelta && payload.scanDelta.comparedCount>0,'scan delta missing');
+  assert(payload.scanDelta.turnoverAcceleration.some(x=>x.deltaTradingValue>0),'turnover acceleration missing');
   const ps=JSON.parse(kv.m.get('last_publish_status'));
   assert(ps.status==='PASS' && ps.commitSha==='new-live-commit','publish status not recorded');
 }
@@ -186,6 +208,20 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   assert(kv.m.has('minute:20260924:0935'),'valid minute capture should survive publisher failure');
   const ps=JSON.parse(kv.m.get('last_publish_status'));
   assert(ps.status==='FAIL','publisher failure status missing');
+}
+
+// 9) /scan preserves money-aware rise/volume/turnover rankings.
+{
+  mode='OPEN'; failCode=null;
+  const kv=new KV({});
+  const res=await worker.fetch(new Request('https://x/scan'),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  assert(res.status===200,'scan endpoint failed');
+  const body=await res.json();
+  assert(body.status==='PASS','scan status not PASS');
+  assert(body.volumeTop.length>0 && body.turnoverTop.length>0 && body.risingLiquid.length>0,'scan rankings missing');
+  assert(body.turnoverTop[0].tradingValue!=null,'scan tradingValue missing');
+  assert(body.volumeTop[0].volume!=null,'scan volume missing');
+  assert(body.coverage.successfulConfigs===4,'scan coverage incomplete');
 }
 
 console.log('ALL_TESTS_PASS');
