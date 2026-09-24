@@ -35,8 +35,11 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 - **Scanner durability / feature-contract execution — PASS**
   - feature-contract commit: `87b3e492974869c63c701223e951a399f8a1e937`
   - replay run: `35977284215` / conclusion `success`
-  - full-market scan run: `35977284250` / conclusion `success`
-  - on the 2026-09-24 non-trading day, the canonical commit step was correctly `skipped`.
+  - baseline full-market scan run: `35977284250` / conclusion `success`
+  - chart-discovery regression commits: `790b0f7c22749937115b427ff6179741867de5e1`, `da0f7467fe692e46b1f798ed95c1570bee3732fc`
+  - post-fix replay run: `35983214293` / conclusion `success`
+  - post-fix full-market scan run: `35983214306` / conclusion `success`
+  - on the 2026-09-24 non-trading day, both full-market validations passed and the canonical commit step was correctly `skipped`.
 - **Current canonical scan migration — PARTIAL**
   - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
