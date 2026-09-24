@@ -601,7 +601,18 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
     overhead.sort(key=lambda c: float(c["zoneLow"]))
     nxt = overhead[0] if overhead else None
 
-    risk_pct = pct(close, support[0]) if support[0] else None
+    support_distance_pct = pct(close, support[0]) if support[0] else None
+
+    # Invalidation is not the same thing as the nearest tactical support.
+    # Prefer the active strong-reference low. If no valid reference exists, fall back to
+    # the core zone low. A long MA alone is context, not a hard invalidation rule.
+    invalidation = (None, None)
+    if reference_low[0] is not None:
+        invalidation = reference_low
+    elif core_support[0] is not None and core and core.get("zoneLow") is not None:
+        invalidation = (float(core.get("zoneLow")), "CORE_ZONE_LOW")
+
+    risk_pct = pct(close, invalidation[0]) if invalidation[0] else None
     reward_pct = pct((nxt or {}).get("zoneLow"), close) if nxt else None
     rr = None
     if risk_pct is not None and reward_pct is not None and risk_pct > 0 and reward_pct > 0:
@@ -611,7 +622,10 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         "evaluationReference": rnum(close, 2),
         "nearestSupport": rnum(support[0], 2),
         "supportSource": support[1],
-        "distanceToSupportPct": rnum(risk_pct),
+        "distanceToSupportPct": rnum(support_distance_pct),
+        "invalidationCandidate": rnum(invalidation[0], 2),
+        "invalidationSource": invalidation[1],
+        "distanceToInvalidationPct": rnum(risk_pct),
         "nextResistance": rnum((nxt or {}).get("zoneLow"), 2) if nxt else None,
         "nextResistanceLine": rnum((nxt or {}).get("line"), 2) if nxt else None,
         "nextResistanceSources": (nxt or {}).get("sources") if nxt else None,
@@ -627,7 +641,7 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
             "longMaSupport": rnum(long_ma_support[0], 2),
             "longMaSupportSource": long_ma_support[1],
         },
-        "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation.",
+        "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation.",
     }
 
 
