@@ -59,7 +59,7 @@
   "newListingMaxPostEventRangePct": 45,
   "corporateActionGuardLookback": 1250,
   "corporateActionJumpPct": 35,
-  "minUniverseCount": 1500,
+  "minUniverseCount": 2200,
   "maxErrorRatioForPass": 0.1,
   "maxStaleRatioForPass": 0.05,
   "maxWorkers": 8,
