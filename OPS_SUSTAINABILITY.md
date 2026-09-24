@@ -29,9 +29,13 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - workflow: `.github/workflows/verify-cloudflare-deployment.yml`
   - commit: `354f7c2a676e8832ffe4258dbd1912f4313872af`
   - execution result remains `NOT DONE` until secrets/deployment are configured.
-- **Live publisher ownership/source — UNKNOWN**
-  - `live.json` is committed around 09:36/09:41 by the account, but no version-controlled publisher implementation was found in the repo or recovered project files.
-  - do not mark the live-publish path sustainable until the publisher service/source and credential ownership are identified.
+- **Live publisher source — PASS (source/test only)**
+  - canonical publisher is now versioned inside `cloudflare/worker_v3_hardened.mjs`.
+  - source commit: `ffec767d5243970adb2c58afd0f1df03dc072b3a`.
+  - publisher regression-test commit: `0508244cce048ff557e47fb395913663a488cce8`.
+  - CI run: `35984912894` / conclusion `success`.
+  - publish gate requires a complete contiguous 09:00~09:35 or 09:00~09:40 KV minute chain before writing `live.json`; incomplete history records FAIL and does not publish.
+  - **runtime remains NOT DONE** until the canonical Worker is deployed with `GITHUB_PUBLISH_TOKEN` and an actual GitHub `live.json` commit is verified.
 - **Scanner durability / feature-contract execution — PASS**
   - feature-contract commit: `87b3e492974869c63c701223e951a399f8a1e937`
   - replay run: `35977284215` / conclusion `success`
@@ -50,14 +54,15 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 1. Deploy `cloudflare/worker_v3_hardened.mjs` to Worker `kr-stock-live-bridge` while preserving the `STOCK_KV` binding.
 2. Set a strong Cloudflare Worker secret named `WRITE_TOKEN`.
 3. Set GitHub Actions secret `CLOUDFLARE_WRITE_TOKEN` to the same value.
-4. Run `Verify Cloudflare Worker Deployment` manually. It must confirm:
+4. Set Cloudflare Worker secret `GITHUB_PUBLISH_TOKEN` to a repository-scoped token that can update `live.json` only as narrowly as practical.
+5. Run `Verify Cloudflare Worker Deployment` manually. It must confirm:
    - public read-only `/watchlist` returns the current codes;
    - unauthenticated mutating GET is `405`;
    - unauthenticated mutating POST is `401`;
    - authenticated POST returns `WATCHLIST_SAVED` with exact codes.
-5. Re-run `Sync Cloudflare Watchlist`; require current-date `watchlist-sync-status.json` with `status=PASS`, `mode=POST_BEARER`, `reason=NONE`.
-6. Identify and version the actual `live.json` publisher source/trigger/credential path.
-7. On the next real KRX session, verify 08:15 -> watchlist sync -> 09:00~09:40 minute history -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION.
+6. Re-run `Sync Cloudflare Watchlist`; require current-date `watchlist-sync-status.json` with `status=PASS`, `mode=POST_BEARER`, `reason=NONE`.
+7. At 09:35/09:40 verify the deployed Worker writes `live.json` with `publisher.type=CLOUDFLARE_WORKER_GITHUB_CONTENTS_API`, exact watchlist, contiguous history and a matching `last_publish_status=PASS`.
+8. On the next real KRX session, verify 08:15 -> watchlist sync -> 09:00~09:40 minute history -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION.
 
 ## Restart rule
 
