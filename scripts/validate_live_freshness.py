@@ -33,6 +33,7 @@ def main():
     watch = load_json(a.watchlist)
 
     reasons = []
+    warnings = []
     rows = (live.get("history") or {}).get("rows") or []
     history = live.get("history") or {}
     live_codes = live.get("watchlist") or []
@@ -162,6 +163,7 @@ def main():
         "frozenStockRatio": round(frozen_ratio, 4),
         "sourceTimestampCount": len(source_dates),
         "reasons": reasons,
+        "warnings": warnings,
     }
     Path(a.output).write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(out, ensure_ascii=False))
