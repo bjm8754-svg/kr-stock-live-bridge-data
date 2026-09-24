@@ -591,27 +591,43 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
 def compute_chart_grade(x, cfg):
     """Chart-only structural grade.
 
-    This deliberately ignores current entry R/R, current distance-to-support, current
-    action score, prior shortlist/rank and news. It answers only: is this chart worth
-    carrying forward for human review based on completed daily structure and money evidence?
-    Thresholds are implementation inferences and remain configurable.
+    This deliberately ignores current entry R/R, distance-to-support/core, action score,
+    prior shortlist/rank and news. The grade answers only whether the completed daily chart
+    deserves S/A/B+ structural attention. It must therefore be computed independently from
+    the timing-qualified pool.
+
+    Historical warnings are not permanent vetoes. Only the current DATA_WARNING state is a
+    hard block; otherwise old corporate-action-like jumps remain audit evidence only.
     """
     abc = x.get("abc") or {}
     core = x.get("coreResistance") or {}
     cloud = x.get("cloud") or {}
-    ref = (x.get("deoyangbong") or {}).get("latestPrior") or {}
-    warnings = x.get("dataWarnings") or []
+    deoyang = x.get("deoyangbong") or {}
+    prior_ref = deoyang.get("latestPrior") or {}
 
-    if warnings or x.get("signal") == "DATA_WARNING":
+    if x.get("signal") == "DATA_WARNING":
         return {
             "grade": "BELOW_B_PLUS",
             "eligible": False,
-            "reasons": ["DATA_WARNING"],
+            "reasons": ["CURRENT_DATA_WARNING"],
+            "referenceMoneyKrw": None,
+            "referenceMoneySource": None,
             "selectionMemoryUsed": False,
             "timingInputsUsed": False,
         }
 
-    ref_tv = float(ref.get("tradingValueEstimated") or 0)
+    prior_ref_tv = float(prior_ref.get("tradingValueEstimated") or 0)
+    current_ref_tv = 0.0
+    if deoyang.get("today"):
+        current_ref_tv = float((x.get("money") or {}).get("tradingValue") or 0)
+
+    if current_ref_tv >= prior_ref_tv and current_ref_tv > 0:
+        ref_tv = current_ref_tv
+        ref_source = "CURRENT_COMPLETED_REFERENCE"
+    else:
+        ref_tv = prior_ref_tv
+        ref_source = "PRIOR_REFERENCE" if prior_ref_tv > 0 else None
+
     money_anchor = ref_tv >= float(cfg["deoyangbongMinTradingValueKrw"])
     exceptional_money = ref_tv >= float(cfg["chartGradeExceptionalReferenceKrw"])
 
@@ -663,6 +679,8 @@ def compute_chart_grade(x, cfg):
         "grade": grade,
         "eligible": grade in ("S", "A", "B_PLUS"),
         "reasons": reasons,
+        "referenceMoneyKrw": rnum(ref_tv, 0),
+        "referenceMoneySource": ref_source,
         "selectionMemoryUsed": False,
         "timingInputsUsed": False,
     }
@@ -1344,6 +1362,24 @@ def run(cfg):
     td = dates.most_common(1)[0][0] if dates else None
     cur = [x for x in ok if x.get("tradeDate") == td]
 
+    # Grade every current-market row before any timing/action filter. This is critical:
+    # chart quality must not disappear merely because today's entry is far away or the
+    # stock did not pass the action-qualified pool.
+    for x in cur:
+        x["chartGrade"] = compute_chart_grade(x, cfg)
+
+    grade_priority = {"S": 3, "A": 2, "B_PLUS": 1, "BELOW_B_PLUS": 0}
+    chart_candidates = sorted(
+        [x for x in cur if (x.get("chartGrade") or {}).get("eligible")],
+        key=lambda x: (
+            grade_priority.get((x.get("chartGrade") or {}).get("grade"), 0),
+            int((x.get("abc") or {}).get("score") or 0),
+            float((x.get("coreResistance") or {}).get("score") or 0),
+            float((x.get("chartGrade") or {}).get("referenceMoneyKrw") or 0),
+        ),
+        reverse=True,
+    )
+
     bucket_names = [
         "REACCELERATION", "JINDOL_CONFIRMED", "RETEST_OK", "DEOYANGBONG_C_TRIGGER",
         "PRE_JINDOL", "B_PLUS", "ABC_CANDIDATE", "GADOL_RISK",
@@ -1378,23 +1414,10 @@ def run(cfg):
                     x["investorFlow"] = {"status": "ERROR", "error": f"{type(e).__name__}: {e}"}
                     flow_errors.append({"code": x["code"], "error": f"{type(e).__name__}: {e}"})
 
-    # Chart quality and timing/action value are intentionally separate.
-    # Chart grade is completed-daily structure only; actionScore is current timing/action value.
+    # Timing/action value is computed only for the action-qualified pool. Chart grade above
+    # is already available market-wide and never depends on membership in this pool.
     for x in qualified:
-        x["chartGrade"] = compute_chart_grade(x, cfg)
         x["actionScore"] = compute_action_score(x, cfg)
-
-    grade_priority = {"S": 3, "A": 2, "B_PLUS": 1, "BELOW_B_PLUS": 0}
-    chart_candidates = sorted(
-        [x for x in qualified if (x.get("chartGrade") or {}).get("eligible")],
-        key=lambda x: (
-            grade_priority.get((x.get("chartGrade") or {}).get("grade"), 0),
-            int((x.get("abc") or {}).get("score") or 0),
-            float((x.get("coreResistance") or {}).get("score") or 0),
-            float(((x.get("deoyangbong") or {}).get("latestPrior") or {}).get("tradingValueEstimated") or 0),
-        ),
-        reverse=True,
-    )
 
     briefing = sort_action([
         x for x in qualified
