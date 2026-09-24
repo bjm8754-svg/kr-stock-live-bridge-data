@@ -287,7 +287,7 @@
   {
     "case": "CASE_B",
     "code": "234690",
-    "sourceLabel": "POSITIVE_NOT_BAD",
+    "sourceLabel": "B_GRADE",
     "sourceMinChartGrade": null,
     "sourceAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
@@ -1506,6 +1506,631 @@
       "top": 5785.0,
       "bottom": 5222.5,
       "state": "ABOVE"
+    }
+  },
+  {
+    "case": "CASE_G",
+    "code": "161890",
+    "sourceLabel": "A_GRADE",
+    "sourceMinChartGrade": "B_PLUS",
+    "sourceAlignment": "MATCH",
+    "date": "2026-07-02",
+    "track": "LONG_HISTORY",
+    "signal": "GADOL_RISK",
+    "score": 100,
+    "close": 113700.0,
+    "dayChangePct": 6.46,
+    "chartGrade": {
+      "grade": "B_PLUS",
+      "eligible": true,
+      "reasons": [
+        "STRUCT_STRONG",
+        "NO_REF_100B",
+        "CORE_GOOD",
+        "CLOUD_ABOVE",
+        "REFERENCE_NONE"
+      ],
+      "referenceMoneyKrw": 0.0,
+      "referenceMoneySource": null,
+      "referenceState": "NONE",
+      "referenceHoldLine": null,
+      "referenceLow": null,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": false,
+    "actionScore": {
+      "total": 32.8,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 17.8,
+        "moneyQuality": 16.0,
+        "entryQuality": 2.0,
+        "structuralRR": 9.0,
+        "acceptance": 0.0,
+        "riskPenalty": 12.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [
+        "WEAK_BREAKOUT_QUALITY"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 113700.0,
+      "nearestSupport": 110280.0,
+      "supportSource": "CORE_LINE",
+      "distanceToSupportPct": 3.1,
+      "nextResistance": 119460.0,
+      "nextResistanceLine": 120000.0,
+      "nextResistanceSources": [
+        "ROUND_FIGURE"
+      ],
+      "distanceToNextResistancePct": 5.07,
+      "structuralRR": 1.63,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
+    "abc": {
+      "track": "LONG_HISTORY",
+      "state": "C_ACTIVE",
+      "score": 90,
+      "aDeclinePct": 45.26,
+      "bRangePct": 33.83,
+      "bWindowSessions": 120,
+      "ma600Slope60Pct": 2.74,
+      "cActive": true,
+      "cross600Today": false,
+      "bPlus": false,
+      "cStartDate": "20260305"
+    },
+    "deoyangbong": {
+      "today": false,
+      "preferred15Pct": false,
+      "latestPrior": null
+    },
+    "coreResistance": {
+      "line": 110280.0,
+      "zoneLow": 109783.74,
+      "zoneHigh": 110776.26,
+      "score": 6.0,
+      "touches": 0,
+      "sourceCount": 2,
+      "sources": [
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceFromReferencePct": 3.26,
+      "candidateCount": 4,
+      "alternatives": [
+        {
+          "line": 106200.0,
+          "zoneLow": 105722.1,
+          "zoneHigh": 106677.9,
+          "score": 3.7,
+          "touches": 2,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": -0.56
+        },
+        {
+          "line": 110280.0,
+          "zoneLow": 109783.74,
+          "zoneHigh": 110776.26,
+          "score": 6.0,
+          "touches": 0,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 3.26
+        },
+        {
+          "line": 120000.0,
+          "zoneLow": 119460.0,
+          "zoneHigh": 120540.0,
+          "score": 1.5,
+          "touches": 0,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 12.36
+        },
+        {
+          "line": 130000.0,
+          "zoneLow": 129415.0,
+          "zoneHigh": 130585.0,
+          "score": 1.5,
+          "touches": 0,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 21.72
+        }
+      ]
+    },
+    "breakoutClass": "GADOL_RISK",
+    "preJindol": false,
+    "retestOk": false,
+    "reacceleration": false,
+    "yangEumYang": false,
+    "money": {
+      "band": "YBM_CORE_100B_PLUS",
+      "tradingValue": 138727577375.0,
+      "tradingValueEstimatedFromOhlcv": 138727577375.0,
+      "avg20TradingValueEstimated": 23270329805.0,
+      "tradingValueRatio20Estimated": 5.96,
+      "tradingValueQuality": "ESTIMATED",
+      "volume": 1223617.0,
+      "avg20Volume": 259528.0,
+      "volumeRatio20": 4.71,
+      "relativeToPriorReferenceMoney": null,
+      "marketCap": null,
+      "turnoverToMarketCapPct": null
+    },
+    "cloud": {
+      "top": 93800.0,
+      "bottom": 87250.0,
+      "state": "ABOVE"
+    }
+  },
+  {
+    "case": "CASE_H",
+    "code": "001820",
+    "sourceLabel": "A_GRADE",
+    "sourceMinChartGrade": "B_PLUS",
+    "sourceAlignment": "MATCH",
+    "date": "2026-05-20",
+    "track": "LONG_HISTORY",
+    "signal": "JINDOL_CONFIRMED",
+    "score": 100,
+    "close": 78600.0,
+    "dayChangePct": 23.0,
+    "chartGrade": {
+      "grade": "A",
+      "eligible": true,
+      "reasons": [
+        "STRUCT_STRONG",
+        "REF_MONEY_100B_PLUS",
+        "CORE_GOOD",
+        "CLOUD_ABOVE",
+        "REFERENCE_CURRENT"
+      ],
+      "referenceMoneyKrw": 209849375700.0,
+      "referenceMoneySource": "CURRENT_COMPLETED_REFERENCE",
+      "referenceState": "CURRENT",
+      "referenceHoldLine": 78600.0,
+      "referenceLow": 63000.0,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": true,
+    "actionScore": {
+      "total": 60.9,
+      "briefingTier": "WATCH_TRIGGER",
+      "components": {
+        "structure": 23.9,
+        "moneyQuality": 17.0,
+        "entryQuality": 23.0,
+        "structuralRR": 0.0,
+        "acceptance": 3.0,
+        "riskPenalty": 6.0
+      },
+      "actionableForBriefing": true,
+      "penaltyReasons": [
+        "EXTENDED_FROM_SUPPORT"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 78600.0,
+      "nearestSupport": 68085.71,
+      "supportSource": "CORE_LINE",
+      "distanceToSupportPct": 15.44,
+      "nextResistance": null,
+      "nextResistanceLine": null,
+      "nextResistanceSources": null,
+      "distanceToNextResistancePct": null,
+      "structuralRR": null,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
+    "abc": {
+      "track": "LONG_HISTORY",
+      "state": "C_ACTIVE",
+      "score": 100,
+      "aDeclinePct": 60.55,
+      "bRangePct": 54.85,
+      "bWindowSessions": 180,
+      "ma600Slope60Pct": -3.52,
+      "cActive": true,
+      "cross600Today": false,
+      "bPlus": true,
+      "cStartDate": "20260210"
+    },
+    "deoyangbong": {
+      "today": true,
+      "preferred15Pct": true,
+      "latestPrior": null
+    },
+    "coreResistance": {
+      "line": 68085.71,
+      "zoneLow": 67000.0,
+      "zoneHigh": 68800.0,
+      "score": 11.6,
+      "touches": 14,
+      "sourceCount": 2,
+      "sources": [
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceFromReferencePct": 6.55,
+      "candidateCount": 7,
+      "alternatives": [
+        {
+          "line": 63562.5,
+          "zoneLow": 63000.0,
+          "zoneHigh": 64000.0,
+          "score": 8.6,
+          "touches": 24,
+          "sourceCount": 2,
+          "sources": [
+            "CANDLE_DENSITY",
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": -0.53
+        },
+        {
+          "line": 65450.0,
+          "zoneLow": 65000.0,
+          "zoneHigh": 66000.0,
+          "score": 8.6,
+          "touches": 22,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 2.43
+        },
+        {
+          "line": 68085.71,
+          "zoneLow": 67000.0,
+          "zoneHigh": 68800.0,
+          "score": 11.6,
+          "touches": 14,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 6.55
+        },
+        {
+          "line": 70000.0,
+          "zoneLow": 69685.0,
+          "zoneHigh": 70315.0,
+          "score": 5.1,
+          "touches": 7,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 9.55
+        },
+        {
+          "line": 73000.0,
+          "zoneLow": 72671.5,
+          "zoneHigh": 73328.5,
+          "score": 3.7,
+          "touches": 2,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 14.24
+        },
+        {
+          "line": 75000.0,
+          "zoneLow": 74662.5,
+          "zoneHigh": 75337.5,
+          "score": 1.5,
+          "touches": 0,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 17.37
+        },
+        {
+          "line": 80000.0,
+          "zoneLow": 79640.0,
+          "zoneHigh": 80360.0,
+          "score": 1.5,
+          "touches": 0,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 25.2
+        }
+      ]
+    },
+    "breakoutClass": "JINDOL_CONFIRMED",
+    "preJindol": false,
+    "retestOk": false,
+    "reacceleration": false,
+    "yangEumYang": false,
+    "money": {
+      "band": "YBM_CORE_100B_PLUS",
+      "tradingValue": 209849375700.0,
+      "tradingValueEstimatedFromOhlcv": 209849375700.0,
+      "avg20TradingValueEstimated": 18043412766.0,
+      "tradingValueRatio20Estimated": 11.63,
+      "tradingValueQuality": "ESTIMATED",
+      "volume": 2943189.0,
+      "avg20Volume": 274165.0,
+      "volumeRatio20": 10.74,
+      "relativeToPriorReferenceMoney": null,
+      "marketCap": null,
+      "turnoverToMarketCapPct": null
+    },
+    "cloud": {
+      "top": 55575.0,
+      "bottom": 49175.0,
+      "state": "ABOVE"
+    }
+  },
+  {
+    "case": "CASE_I",
+    "code": "126340",
+    "sourceLabel": "B_PLUS",
+    "sourceMinChartGrade": "B_PLUS",
+    "sourceAlignment": "MATCH",
+    "date": "2026-09-16",
+    "track": "LONG_HISTORY",
+    "signal": "GADOL_RISK",
+    "score": 97,
+    "close": 76400.0,
+    "dayChangePct": 16.46,
+    "chartGrade": {
+      "grade": "B_PLUS",
+      "eligible": true,
+      "reasons": [
+        "STRUCT_GOOD",
+        "REF_MONEY_100B_PLUS",
+        "CORE_STRONG",
+        "CLOUD_INSIDE",
+        "REFERENCE_FAILED"
+      ],
+      "referenceMoneyKrw": 124942383150.0,
+      "referenceMoneySource": "PRIOR_REFERENCE",
+      "referenceState": "FAILED",
+      "referenceHoldLine": 176064.0,
+      "referenceLow": 149600.0,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": false,
+    "actionScore": {
+      "total": 10.7,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 13.7,
+        "moneyQuality": 13.0,
+        "entryQuality": 2.0,
+        "structuralRR": 0.0,
+        "acceptance": 2.0,
+        "riskPenalty": 20.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [
+        "WEAK_BREAKOUT_QUALITY",
+        "EXTENDED_FROM_SUPPORT",
+        "WEAKER_THAN_PRIOR_REFERENCE_MONEY"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 76400.0,
+      "nearestSupport": 65636.36,
+      "supportSource": "CORE_LINE",
+      "distanceToSupportPct": 16.4,
+      "nextResistance": 79167.47,
+      "nextResistanceLine": 79525.33,
+      "nextResistanceSources": [
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceToNextResistancePct": 3.62,
+      "structuralRR": 0.22,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
+    "abc": {
+      "track": "LONG_HISTORY",
+      "state": "C_RECOVERY_NONCLASSIC_BASE",
+      "score": 60,
+      "aDeclinePct": 78.88,
+      "bRangePct": 235.65,
+      "bWindowSessions": 40,
+      "ma600Slope60Pct": 13.7,
+      "cActive": true,
+      "cross600Today": false,
+      "bPlus": false,
+      "cStartDate": "20260731"
+    },
+    "deoyangbong": {
+      "today": false,
+      "preferred15Pct": false,
+      "latestPrior": {
+        "date": "20260429",
+        "open": 151700.0,
+        "close": 183400.0,
+        "high": 183400.0,
+        "low": 149600.0,
+        "dayReturnPct": 29.98,
+        "tradingValueEstimated": 124942383150.0,
+        "volumeRatio20": 4.64,
+        "closeLocation": 1.0
+      }
+    },
+    "coreResistance": {
+      "line": 65636.36,
+      "zoneLow": 65000.0,
+      "zoneHigh": 66006.25,
+      "score": 10.6,
+      "touches": 32,
+      "sourceCount": 3,
+      "sources": [
+        "CANDLE_DENSITY",
+        "CLOUD_EDGE",
+        "ROUND_FIGURE"
+      ],
+      "distanceFromReferencePct": 0.06,
+      "candidateCount": 9,
+      "alternatives": [
+        {
+          "line": 65636.36,
+          "zoneLow": 65000.0,
+          "zoneHigh": 66006.25,
+          "score": 10.6,
+          "touches": 32,
+          "sourceCount": 3,
+          "sources": [
+            "CANDLE_DENSITY",
+            "CLOUD_EDGE",
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 0.06
+        },
+        {
+          "line": 67500.0,
+          "zoneLow": 67000.0,
+          "zoneHigh": 68000.0,
+          "score": 6.1,
+          "touches": 32,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 2.9
+        },
+        {
+          "line": 69250.0,
+          "zoneLow": 68938.38,
+          "zoneHigh": 70000.0,
+          "score": 8.6,
+          "touches": 27,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 5.56
+        },
+        {
+          "line": 71314.58,
+          "zoneLow": 70500.0,
+          "zoneHigh": 71900.0,
+          "score": 10.6,
+          "touches": 18,
+          "sourceCount": 2,
+          "sources": [
+            "CANDLE_DENSITY",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 8.71
+        },
+        {
+          "line": 72900.0,
+          "zoneLow": 72571.95,
+          "zoneHigh": 73228.05,
+          "score": 6.1,
+          "touches": 16,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 11.13
+        },
+        {
+          "line": 75397.33,
+          "zoneLow": 75000.0,
+          "zoneHigh": 75736.62,
+          "score": 7.6,
+          "touches": 10,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 14.93
+        },
+        {
+          "line": 79525.33,
+          "zoneLow": 79167.47,
+          "zoneHigh": 80000.0,
+          "score": 7.6,
+          "touches": 10,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 21.23
+        },
+        {
+          "line": 81565.5,
+          "zoneLow": 81198.46,
+          "zoneHigh": 81932.54,
+          "score": 8.1,
+          "touches": 14,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 24.34
+        },
+        {
+          "line": 85000.0,
+          "zoneLow": 84617.5,
+          "zoneHigh": 85382.5,
+          "score": 5.1,
+          "touches": 22,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 29.57
+        }
+      ]
+    },
+    "breakoutClass": "GADOL_RISK",
+    "preJindol": false,
+    "retestOk": false,
+    "reacceleration": false,
+    "yangEumYang": false,
+    "money": {
+      "band": "DISCOVERY_30B_PLUS",
+      "tradingValue": 39462104700.0,
+      "tradingValueEstimatedFromOhlcv": 39462104700.0,
+      "avg20TradingValueEstimated": 4884514299.0,
+      "tradingValueRatio20Estimated": 8.08,
+      "tradingValueQuality": "ESTIMATED",
+      "volume": 538548.0,
+      "avg20Volume": 75724.0,
+      "volumeRatio20": 7.11,
+      "relativeToPriorReferenceMoney": 0.32,
+      "marketCap": null,
+      "turnoverToMarketCapPct": null
+    },
+    "cloud": {
+      "top": 105000.0,
+      "bottom": 61750.0,
+      "state": "INSIDE"
     }
   }
 ]
