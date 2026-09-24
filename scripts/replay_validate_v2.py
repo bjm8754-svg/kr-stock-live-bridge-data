@@ -25,11 +25,11 @@ CASES = [
     # source-derived calibration case: new-listing mini-structure
     {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
-    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW"},
+    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW","sourceReferenceLevel":10000},
     # source-labeled A-grade example from the 2026-09-03 review
     {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     # source-labeled B+ trading example from the same review
-    {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceDiscoveryFloor":"B_PLUS"},
+    {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceDiscoveryFloor":"B_PLUS","sourceSupportRange":[5800,6000]},
     # historical source labels used only as calibration controls, never as ranking memory
     {"code":"161890","name":"CASE_G","date":"2026-07-02","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     {"code":"001820","name":"CASE_H","date":"2026-05-20","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
@@ -37,6 +37,75 @@ CASES = [
     # explicit negative calibration: source says pattern fit but volume/money were insufficient, so not A-grade
     {"code":"066980","name":"CASE_J","date":"2026-05-20","sourceLabel":"NOT_A_LOW_MONEY","sourceMaxChartGrade":"B_PLUS"},
 ]
+
+
+def collect_structural_levels(entry_plan):
+    plan = entry_plan or {}
+    h = plan.get("supportHierarchy") or {}
+    raw = [
+        ("nearestSupport", plan.get("nearestSupport")),
+        ("primaryReferenceSupport", h.get("primaryReferenceSupport")),
+        ("referenceLowInvalidationCandidate", h.get("referenceLowInvalidationCandidate")),
+        ("coreSupport", h.get("coreSupport")),
+        ("longMaSupport", h.get("longMaSupport")),
+        ("nextResistance", plan.get("nextResistance")),
+        ("nextResistanceLine", plan.get("nextResistanceLine")),
+    ]
+    out = []
+    for name, value in raw:
+        if value is None:
+            continue
+        try:
+            v = float(value)
+        except Exception:
+            continue
+        if v > 0:
+            out.append((name, v))
+    return out
+
+
+def source_level_calibration(case, entry_plan):
+    levels = collect_structural_levels(entry_plan)
+    if not levels:
+        return None
+
+    if case.get("sourceSupportRange"):
+        lo, hi = map(float, case["sourceSupportRange"])
+        mid = (lo + hi) / 2.0
+        ranked = []
+        for name, value in levels:
+            if lo <= value <= hi:
+                gap = 0.0
+            elif value < lo:
+                gap = (lo - value) / mid * 100.0
+            else:
+                gap = (value - hi) / mid * 100.0
+            ranked.append((gap, name, value))
+        gap, name, value = min(ranked)
+        return {
+            "type": "SUPPORT_RANGE",
+            "sourceRange": [lo, hi],
+            "closestStructuralField": name,
+            "closestStructuralLevel": value,
+            "gapToRangePct": round(gap, 3),
+        }
+
+    if case.get("sourceReferenceLevel"):
+        target = float(case["sourceReferenceLevel"])
+        gap, name, value = min(
+            (abs(value - target) / target * 100.0, name, value)
+            for name, value in levels
+        )
+        return {
+            "type": "REFERENCE_LEVEL",
+            "sourceLevel": target,
+            "closestStructuralField": name,
+            "closestStructuralLevel": value,
+            "absoluteGapPct": round(gap, 3),
+        }
+
+    return None
+
 
 rows = []
 for case in CASES:
@@ -97,6 +166,7 @@ for case in CASES:
         "qualified": scan.is_qualified_candidate(out, cfg),
         "actionScore": action_score,
         "entryPlan": out["entryPlan"],
+        "sourceLevelCalibration": source_level_calibration(case, out["entryPlan"]),
         "abc": out["abc"],
         "deoyangbong": out["deoyangbong"],
         "coreResistance": out["coreResistance"],
