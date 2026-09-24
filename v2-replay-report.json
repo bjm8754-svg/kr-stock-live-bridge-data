@@ -1,11 +1,64 @@
 [
   {
     "case": "CASE_A",
+    "code": "036540",
     "date": "2026-09-09",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
     "score": 98,
+    "close": 6630.0,
     "dayChangePct": 9.77,
+    "chartGrade": {
+      "grade": "BELOW_B_PLUS",
+      "eligible": false,
+      "reasons": [
+        "STRUCT_GOOD",
+        "REF_MONEY_300B_PLUS",
+        "CORE_GOOD",
+        "CLOUD_INSIDE",
+        "REFERENCE_FAILED"
+      ],
+      "referenceMoneyKrw": 671202646115.0,
+      "referenceMoneySource": "PRIOR_REFERENCE",
+      "referenceState": "FAILED",
+      "referenceHoldLine": 9840.0,
+      "referenceLow": 8760.0,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": false,
+    "actionScore": {
+      "total": 19.1,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 15.1,
+        "moneyQuality": 14.0,
+        "entryQuality": 2.0,
+        "structuralRR": 2.0,
+        "acceptance": 2.0,
+        "riskPenalty": 16.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [
+        "WEAK_BREAKOUT_QUALITY",
+        "WEAKER_THAN_PRIOR_REFERENCE_MONEY"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 6630.0,
+      "nearestSupport": 6474.0,
+      "supportSource": "CORE_LINE",
+      "distanceToSupportPct": 2.41,
+      "nextResistance": 6809.22,
+      "nextResistanceLine": 6840.0,
+      "nextResistanceSources": [
+        "DEOYANGBONG_OPEN"
+      ],
+      "distanceToNextResistancePct": 2.7,
+      "structuralRR": 1.12,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
@@ -230,11 +283,65 @@
   },
   {
     "case": "CASE_B",
+    "code": "234690",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
     "score": 100,
+    "close": 10750.0,
     "dayChangePct": 16.47,
+    "chartGrade": {
+      "grade": "BELOW_B_PLUS",
+      "eligible": false,
+      "reasons": [
+        "STRUCT_STRONG",
+        "NO_REF_100B",
+        "CORE_STRONG",
+        "CLOUD_ABOVE",
+        "REFERENCE_NONE"
+      ],
+      "referenceMoneyKrw": 0.0,
+      "referenceMoneySource": null,
+      "referenceState": "NONE",
+      "referenceHoldLine": null,
+      "referenceLow": null,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": false,
+    "actionScore": {
+      "total": 31.0,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 25.0,
+        "moneyQuality": 15.0,
+        "entryQuality": 2.0,
+        "structuralRR": 0.0,
+        "acceptance": 1.0,
+        "riskPenalty": 12.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [
+        "WEAK_BREAKOUT_QUALITY"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 10750.0,
+      "nearestSupport": 9800.92,
+      "supportSource": "MA240",
+      "distanceToSupportPct": 9.68,
+      "nextResistance": 11000.0,
+      "nextResistanceLine": 11140.0,
+      "nextResistanceSources": [
+        "DEOYANGBONG_OPEN",
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceToNextResistancePct": 2.33,
+      "structuralRR": 0.24,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_ACTIVE",
@@ -407,11 +514,61 @@
   },
   {
     "case": "CASE_C",
+    "code": "064400",
     "date": "2026-05-12",
     "track": "NEW_LISTING",
     "signal": "NEW_LISTING_SETUP",
     "score": 50,
+    "close": 73000.0,
     "dayChangePct": 3.55,
+    "chartGrade": {
+      "grade": "B_PLUS",
+      "eligible": true,
+      "reasons": [
+        "NEW_LISTING_STRUCT",
+        "REF_MONEY_100B_PLUS",
+        "CORE_STRONG",
+        "CLOUD_ABOVE",
+        "REFERENCE_HELD"
+      ],
+      "referenceMoneyKrw": 175848723525.0,
+      "referenceMoneySource": "PRIOR_REFERENCE",
+      "referenceState": "HELD",
+      "referenceHoldLine": 65376.0,
+      "referenceLow": 61600.0,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": true,
+    "actionScore": {
+      "total": 53.0,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 10.0,
+        "moneyQuality": 19.0,
+        "entryQuality": 12.0,
+        "structuralRR": 12.0,
+        "acceptance": 0.0,
+        "riskPenalty": 0.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 73000.0,
+      "nearestSupport": 71689.58,
+      "supportSource": "CORE_ZONE_LOW",
+      "distanceToSupportPct": 1.83,
+      "nextResistance": 76200.0,
+      "nextResistanceLine": 76550.0,
+      "nextResistanceSources": [
+        "SWING_HIGH"
+      ],
+      "distanceToNextResistancePct": 4.38,
+      "structuralRR": 2.4,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
     "abc": {
       "track": "NEW_LISTING",
       "state": "NOT_APPLICABLE_LONG_MA",
@@ -587,11 +744,67 @@
   },
   {
     "case": "CASE_D",
+    "code": "012210",
     "date": "2026-09-10",
     "track": "LONG_HISTORY",
     "signal": "RETEST_OK",
     "score": 100,
+    "close": 12630.0,
     "dayChangePct": -3.07,
+    "chartGrade": {
+      "grade": "B_PLUS",
+      "eligible": true,
+      "reasons": [
+        "STRUCT_GOOD",
+        "REF_MONEY_100B_PLUS",
+        "CORE_STRONG",
+        "CLOUD_ABOVE",
+        "REFERENCE_HELD"
+      ],
+      "referenceMoneyKrw": 227090142685.0,
+      "referenceMoneySource": "PRIOR_REFERENCE",
+      "referenceState": "HELD",
+      "referenceHoldLine": 12509.0,
+      "referenceLow": 10040.0,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": true,
+    "actionScore": {
+      "total": 50.2,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 17.2,
+        "moneyQuality": 13.0,
+        "entryQuality": 22.0,
+        "structuralRR": 0.0,
+        "acceptance": 4.0,
+        "riskPenalty": 6.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [
+        "EXTENDED_FROM_SUPPORT"
+      ],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 12630.0,
+      "nearestSupport": 10546.44,
+      "supportSource": "MA240",
+      "distanceToSupportPct": 19.76,
+      "nextResistance": 12930.0,
+      "nextResistanceLine": 13018.46,
+      "nextResistanceSources": [
+        "CANDLE_DENSITY",
+        "DEOYANGBONG_CLOSE",
+        "DEOYANGBONG_HIGH",
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceToNextResistancePct": 2.38,
+      "structuralRR": 0.12,
+      "note": "Ranking reference only; actual intraday entry requires trigger confirmation."
+    },
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
