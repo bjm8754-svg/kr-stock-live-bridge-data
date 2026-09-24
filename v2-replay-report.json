@@ -74,6 +74,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
@@ -372,6 +373,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_ACTIVE",
@@ -614,6 +616,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "NEW_LISTING",
       "state": "NOT_APPLICABLE_LONG_MA",
@@ -865,6 +868,13 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": {
+      "type": "REFERENCE_LEVEL",
+      "sourceLevel": 10000.0,
+      "closestStructuralField": "referenceLowInvalidationCandidate",
+      "closestStructuralLevel": 10040.0,
+      "absoluteGapPct": 0.4
+    },
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
@@ -1106,6 +1116,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
@@ -1370,6 +1381,16 @@
         "longMaSupportSource": "MA1000"
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
+    },
+    "sourceLevelCalibration": {
+      "type": "SUPPORT_RANGE",
+      "sourceRange": [
+        5800.0,
+        6000.0
+      ],
+      "closestStructuralField": "coreSupport",
+      "closestStructuralLevel": 5759.58,
+      "gapToRangePct": 0.685
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1654,6 +1675,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_ACTIVE",
@@ -1834,6 +1856,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_ACTIVE",
@@ -2057,6 +2080,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_RECOVERY_NONCLASSIC_BASE",
@@ -2313,6 +2337,7 @@
       },
       "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation."
     },
+    "sourceLevelCalibration": null,
     "abc": {
       "track": "LONG_HISTORY",
       "state": "C_ACTIVE",
