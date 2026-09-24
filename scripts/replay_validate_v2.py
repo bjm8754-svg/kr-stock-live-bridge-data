@@ -21,7 +21,7 @@ CASES = [
     # source-derived calibration case: long-history breakout-quality example
     {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
     # source-derived calibration case: long-MA recovery with strong money expansion
-    {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"POSITIVE_NOT_BAD"},
+    {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"B_GRADE"},
     # source-derived calibration case: new-listing mini-structure
     {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
@@ -30,6 +30,10 @@ CASES = [
     {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
     # source-labeled B+ trading example from the same review
     {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceMinChartGrade":"B_PLUS"},
+    # historical source labels used only as calibration controls, never as ranking memory
+    {"code":"161890","name":"CASE_G","date":"2026-07-02","sourceLabel":"A_GRADE","sourceMinChartGrade":"B_PLUS"},
+    {"code":"001820","name":"CASE_H","date":"2026-05-20","sourceLabel":"A_GRADE","sourceMinChartGrade":"B_PLUS"},
+    {"code":"126340","name":"CASE_I","date":"2026-09-16","sourceLabel":"B_PLUS","sourceMinChartGrade":"B_PLUS"},
 ]
 
 rows = []
