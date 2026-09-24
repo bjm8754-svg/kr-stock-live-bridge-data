@@ -556,6 +556,39 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         ]
         support = meaningful[0] if meaningful else candidates[0]
 
+    # Keep the source hierarchy visible instead of collapsing every support into one price.
+    # Strong recent reference open/close is primary thesis support; core/zone is tactical
+    # structure; long MAs are secondary context. The ranking support above remains unchanged.
+    def nearest_level(items):
+        valid = []
+        for value, source in items:
+            try:
+                v = float(value)
+            except Exception:
+                continue
+            if math.isfinite(v) and 0 < v <= close:
+                valid.append((v, source))
+        return max(valid, key=lambda z: z[0]) if valid else (None, None)
+
+    active_ref = recent_anchor if recent_anchor else prior_event
+    reference_support = nearest_level([
+        ((active_ref or {}).get("open"), "RECENT_REFERENCE_OPEN" if recent_anchor else "PRIOR_REFERENCE_OPEN"),
+        ((active_ref or {}).get("close"), "RECENT_REFERENCE_CLOSE" if recent_anchor else "PRIOR_REFERENCE_CLOSE"),
+    ]) if active_ref else (None, None)
+    reference_low = nearest_level([
+        ((active_ref or {}).get("low"), "RECENT_REFERENCE_LOW" if recent_anchor else "PRIOR_REFERENCE_LOW"),
+    ]) if active_ref else (None, None)
+    core_support = nearest_level([
+        ((core or {}).get("zoneLow"), "CORE_ZONE_LOW"),
+        ((core or {}).get("line"), "CORE_LINE"),
+    ]) if core else (None, None)
+    long_ma_support = nearest_level([
+        (ma.get("240"), "MA240"),
+        (ma.get("480"), "MA480"),
+        (ma.get("600"), "MA600"),
+        (ma.get("1000"), "MA1000"),
+    ])
+
     overhead = []
     if core:
         for c in core.get("alternatives") or []:
@@ -584,7 +617,17 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         "nextResistanceSources": (nxt or {}).get("sources") if nxt else None,
         "distanceToNextResistancePct": rnum(reward_pct),
         "structuralRR": rnum(rr, 2),
-        "note": "Ranking reference only; actual intraday entry requires trigger confirmation.",
+        "supportHierarchy": {
+            "primaryReferenceSupport": rnum(reference_support[0], 2),
+            "primaryReferenceSource": reference_support[1],
+            "referenceLowInvalidationCandidate": rnum(reference_low[0], 2),
+            "referenceLowSource": reference_low[1],
+            "coreSupport": rnum(core_support[0], 2),
+            "coreSupportSource": core_support[1],
+            "longMaSupport": rnum(long_ma_support[0], 2),
+            "longMaSupportSource": long_ma_support[1],
+        },
+        "note": "Ranking support is the nearest detected structural support; supportHierarchy preserves thesis/tactical/long-MA roles. Actual intraday entry still requires trigger confirmation.",
     }
 
 
