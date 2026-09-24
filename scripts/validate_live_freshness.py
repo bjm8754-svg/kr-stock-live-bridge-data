@@ -114,15 +114,25 @@ def main():
     if n == 0:
         reasons.append("NO_VALID_STOCK_PAYLOAD")
     else:
-        if dynamic_ratio < 0.50:
-            reasons.append("INSUFFICIENT_INTRADAY_CHANGE")
+        # Hard fail only when the payload is semantically unusable.
+        # A minority of illiquid/suspended names must not invalidate an otherwise live market.
         if frozen_ratio == 1.0:
             reasons.append("FROZEN_HISTORY")
-        if open_ratio < 0.50 and dynamic_ratio < 0.50:
+        if open_ratio < 0.50:
             reasons.append("MARKET_STATUS_CLOSED_OR_STALE")
+        if dynamic_ratio < 0.50:
+            if open_ratio < 0.50 or frozen_ratio == 1.0:
+                reasons.append("INSUFFICIENT_INTRADAY_CHANGE")
+            else:
+                warnings.append("LOW_INTRADAY_CHANGE")
 
     if source_dates and all(d < expected_date for d in source_dates):
-        reasons.append("STALE_SOURCE_TIMESTAMP")
+        # NXT/auxiliary timestamps can legitimately lag for some KRX-only names.
+        # Treat them as a hard failure only when the main payload is also closed/frozen.
+        if open_ratio < 0.50 or frozen_ratio == 1.0:
+            reasons.append("STALE_SOURCE_TIMESTAMP")
+        else:
+            warnings.append("STALE_AUX_SOURCE_TIMESTAMP")
 
     published = live.get("publishedAtKst")
     if not isinstance(published, str) or expected_date not in published.replace("-", ""):
