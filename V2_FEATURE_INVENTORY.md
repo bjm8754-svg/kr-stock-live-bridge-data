@@ -1,6 +1,6 @@
 # V2 Feature Inventory
 
-Purpose: distinguish `implemented` from `precision-validated`. A field existing in JSON is not considered final trading-quality validation.
+Purpose: distinguish `implemented` from `precision-validated`. A field existing in JSON is not considered final trading-quality validation. The agreed V2 implementation/output contract is now PASS; empirical chart/timing precision remains NOT DONE.
 
 ## Agreed feature contract
 
@@ -27,7 +27,7 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 
 - Feature-contract/self-test change commit: `87b3e492974869c63c701223e951a399f8a1e937`.
 - Historical replay check for that commit: `success` (`35977284215`).
-- Full-market scan check from the same commit must also complete before this audit is closed.
+- Full-market scan check from the same commit: `success` (`35977284250`). On the 2026-09-24 non-trading day, validation passed and the canonical commit step was correctly skipped rather than overwriting the previous trading-day canonical.
 
 ## What 'precision NOT DONE' means
 
