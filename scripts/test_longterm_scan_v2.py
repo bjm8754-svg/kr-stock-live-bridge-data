@@ -55,6 +55,17 @@ assert out["status"] == "OK"
 assert out["track"] == "NEW_LISTING"
 assert out["abc"]["state"] == "NOT_APPLICABLE_LONG_MA"
 
+# Agreed V2 feature contract: analyzer must emit all structural/timing fields.
+required_v2_fields = (
+    "abc", "deoyangbong", "coreResistance", "cloud", "money",
+    "breakoutClass", "preJindol", "retestOk", "retestSupply",
+    "reacceleration", "yangEumYang", "newListingSetup", "entryPlan", "ma",
+)
+for field in required_v2_fields:
+    assert field in out, field
+for ma_key in ("20", "60", "120", "240", "480", "600", "1000"):
+    assert ma_key in out["ma"], ma_key
+
 # Final output must be serializable with numpy/pandas values.
 json.dumps(out, ensure_ascii=False, default=scan.json_default)
 # Operational briefing layer must not promote a plain weak breakout warning.
