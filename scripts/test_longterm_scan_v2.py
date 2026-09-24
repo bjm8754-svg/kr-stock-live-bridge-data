@@ -246,6 +246,25 @@ weak_fresh_discovery["money"] = {
 }
 assert scan.compute_chart_grade(weak_fresh_discovery, cfg)["grade"] == "BELOW_B_PLUS"
 
+# Entry plan must preserve support roles instead of collapsing every structural level.
+entry_cur = {"Close": 10000}
+entry_core = {
+    "zoneLow": 9600, "line": 9700,
+    "alternatives": [{"zoneLow": 10500, "line": 10600, "sources": ["SWING_HIGH"]}],
+}
+entry_ma = {"240": 9300, "480": 9000, "600": 8800, "1000": 8200}
+entry_prior = {"open": 9000, "close": 9400, "low": 8600}
+entry_recent = {"open": 9700, "close": 9800, "low": 9500}
+ep = scan.build_structural_entry_plan(entry_cur, entry_core, entry_ma, entry_prior, entry_recent, cfg)
+assert ep["nearestSupport"] == 9800
+assert ep["supportSource"] == "RECENT_REFERENCE_CLOSE"
+assert ep["supportHierarchy"]["primaryReferenceSupport"] == 9800
+assert ep["supportHierarchy"]["primaryReferenceSource"] == "RECENT_REFERENCE_CLOSE"
+assert ep["supportHierarchy"]["referenceLowInvalidationCandidate"] == 9500
+assert ep["supportHierarchy"]["coreSupport"] == 9700
+assert ep["supportHierarchy"]["longMaSupport"] == 9300
+assert ep["nextResistance"] == 10500
+
 # Compact canonical must stay chart-first and exclude bulky resistance alternatives.
 compact_sample = dict(current_ref_sample)
 compact_sample.update({
