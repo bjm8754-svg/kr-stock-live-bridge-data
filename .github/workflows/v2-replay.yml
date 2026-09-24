@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade finance-datareader pandas
+          pip install "finance-datareader==0.9.202" "pandas==3.0.6"
 
       - name: Run V2 self-tests
         run: python scripts/test_longterm_scan_v2.py
