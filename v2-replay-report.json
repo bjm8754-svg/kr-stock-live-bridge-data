@@ -12,8 +12,8 @@
     "close": 6630.0,
     "dayChangePct": 9.77,
     "chartGrade": {
-      "grade": "BELOW_B_PLUS",
-      "eligible": false,
+      "grade": "B_PLUS",
+      "eligible": true,
       "reasons": [
         "STRUCT_GOOD",
         "REF_MONEY_300B_PLUS",
@@ -297,8 +297,8 @@
     "close": 10750.0,
     "dayChangePct": 16.47,
     "chartGrade": {
-      "grade": "BELOW_B_PLUS",
-      "eligible": false,
+      "grade": "B_PLUS",
+      "eligible": true,
       "reasons": [
         "STRUCT_STRONG",
         "NO_REF_100B",
@@ -996,8 +996,8 @@
     "close": 9220.0,
     "dayChangePct": 18.81,
     "chartGrade": {
-      "grade": "BELOW_B_PLUS",
-      "eligible": false,
+      "grade": "B_PLUS",
+      "eligible": true,
       "reasons": [
         "STRUCT_GOOD",
         "REF_MONEY_100B_PLUS",
@@ -1242,7 +1242,7 @@
     "code": "053260",
     "sourceLabel": "B_PLUS_TRADING",
     "sourceMinChartGrade": "B_PLUS",
-    "sourceAlignment": "MISMATCH",
+    "sourceAlignment": "MATCH",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -1250,8 +1250,8 @@
     "close": 6390.0,
     "dayChangePct": 17.68,
     "chartGrade": {
-      "grade": "BELOW_B_PLUS",
-      "eligible": false,
+      "grade": "B_PLUS",
+      "eligible": true,
       "reasons": [
         "STRUCT_GOOD",
         "NO_REF_100B",
