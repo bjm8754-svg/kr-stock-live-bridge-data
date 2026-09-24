@@ -120,4 +120,34 @@ assert cg1["grade"] == "S"
 assert cg1["timingInputsUsed"] is False
 assert cg1["selectionMemoryUsed"] is False
 
+
+
+# Chart-grade must accept a completed current reference candle even when there is no prior one.
+current_ref_sample = {
+    "signal":"DEOYANGBONG_C_TRIGGER",
+    "track":"LONG_HISTORY",
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "cloud":{"state":"ABOVE"},
+    "coreResistance":{"score":14,"sourceCount":4},
+    "deoyangbong":{"today":True,"latestPrior":None},
+    "money":{"tradingValue":350_000_000_000},
+    "newListingSetup":False,
+    "dataWarnings":[],
+}
+cg3 = scan.compute_chart_grade(current_ref_sample, cfg)
+assert cg3["grade"] == "S"
+assert cg3["referenceMoneySource"] == "CURRENT_COMPLETED_REFERENCE"
+
+# Old audit warnings must not permanently veto a chart; only current DATA_WARNING is a hard block.
+old_warning_sample = dict(current_ref_sample)
+old_warning_sample["dataWarnings"] = ["HIST_PRICE_JUMP>35:20230102"]
+cg4 = scan.compute_chart_grade(old_warning_sample, cfg)
+assert cg4["grade"] == "S"
+
+current_warning_sample = dict(current_ref_sample)
+current_warning_sample["signal"] = "DATA_WARNING"
+cg5 = scan.compute_chart_grade(current_warning_sample, cfg)
+assert cg5["grade"] == "BELOW_B_PLUS"
+assert cg5["eligible"] is False
+
 print("V2 self-tests: PASS")
