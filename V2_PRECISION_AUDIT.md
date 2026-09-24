@@ -32,11 +32,11 @@ The fallback is capped at B+. S/A still require a usable strong reference, preve
 
 Kumkang Steel source guidance on 2026-09-03 was that the 5,800–6,000 area should hold for the upside thesis. The replayed structural engine produced nearest support 5,759.58. That is 0.70% below the source range's lower edge. This is close structural agreement, but one example is insufficient for a general PASS.
 
-The source hierarchy also emphasizes strong-reference open/close first, then meaningful prior highs / congestion / round figures, then moving averages. Current `entryPlan` exposes only one nearest support for ranking. It can therefore hide which support is primary thesis support versus nearer tactical support. This is a precision/interpretability gap, not proof that the selected nearest support is wrong.
+The source hierarchy emphasizes strong-reference open/close first, then meaningful prior highs / congestion / round figures, then moving averages. `entryPlan` now preserves that hierarchy explicitly under `supportHierarchy` while leaving the existing nearest-support ranking logic unchanged. It separately exposes primary reference support, reference-low invalidation candidate, tactical/core support, and nearest long-MA support, so one tactical level no longer hides the thesis support.
 
 ## Remaining precision gates
 
-- Add support hierarchy to the execution plan without manufacturing levels: primary reference support, tactical/core support, long-MA support, and the selected ranking support must remain distinguishable.
+- **Support hierarchy — PASS (implementation/contract):** scanner commit `fa542131f115c28e7b52e03871735183a36e445f`; regression-test commit `9af79231c5a036efaa7c2cc745a709b22081be87`; replay run `35984560851` concluded success. Levels remain observed structure only; no arbitrary percentage level is manufactured.
 - Compare support / invalidation / next-resistance levels against additional source examples with explicit prices.
 - Add explicit negative controls for non-ABC / weak-money setups where safely reproducible.
 - Review false positives where chart grade is strong but liquidity, market cap, catalyst quality or current R/R make the trade unattractive; keep chart quality separate from timing/action quality.
