@@ -10,25 +10,40 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-cloudflare-watchlist
+  cancel-in-progress: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate watchlist schema
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '
+            (.tradeDate | type=="string" and test("^[0-9]{8}$")) and
+            (.codes | type=="array" and length>0) and
+            ([.codes[] | select((type!="string") or (test("^[0-9]{6}$")|not))] | length==0) and
+            ((.codes | unique | length) == (.codes | length))
+          ' watchlist.json >/dev/null
 
       - name: Sync watchlist to Cloudflare Worker
         shell: bash
         run: |
           set -euo pipefail
           CODES=$(jq -r '.codes | join(",")' watchlist.json)
-          if [ -z "$CODES" ]; then
-            echo "watchlist codes empty"
-            exit 1
-          fi
 
           URL="https://kr-stock-live-bridge.bjm8754.workers.dev/watchlist?codes=${CODES}"
-          RESPONSE=$(curl --fail --silent --show-error "$URL")
+          RESPONSE=$(curl --fail --silent --show-error \
+            --connect-timeout 10 --max-time 30 \
+            --retry 3 --retry-delay 2 --retry-all-errors \
+            "$URL")
           echo "$RESPONSE"
 
           STATUS=$(echo "$RESPONSE" | jq -r '.status // empty')
@@ -69,4 +84,5 @@ jobs:
             exit 0
           fi
           git commit -m "record watchlist sync status"
+          git pull --rebase origin main
           git push
