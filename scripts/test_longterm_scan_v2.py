@@ -150,4 +150,31 @@ cg5 = scan.compute_chart_grade(current_warning_sample, cfg)
 assert cg5["grade"] == "BELOW_B_PLUS"
 assert cg5["eligible"] is False
 
+
+
+# Reference-candle integrity: a deeply failed old anchor cannot preserve S/A indefinitely.
+failed_ref_sample = {
+    "signal":"PRE_JINDOL",
+    "track":"LONG_HISTORY",
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "cloud":{"state":"ABOVE"},
+    "coreResistance":{"score":14,"sourceCount":4},
+    "deoyangbong":{"today":False,"latestPrior":{
+        "open":10000,"close":12000,"high":12200,"low":9800,
+        "tradingValueEstimated":350_000_000_000}},
+    "money":{"tradingValue":50_000_000_000},
+    "close":9000,"low":8900,
+    "newListingSetup":False,
+    "dataWarnings":[],
+}
+cg_failed = scan.compute_chart_grade(failed_ref_sample, cfg)
+assert cg_failed["referenceState"] == "FAILED"
+assert cg_failed["grade"] == "BELOW_B_PLUS"
+
+damaged_ref_sample = dict(failed_ref_sample)
+damaged_ref_sample["close"] = 10000
+cg_damaged = scan.compute_chart_grade(damaged_ref_sample, cfg)
+assert cg_damaged["referenceState"] == "DAMAGED"
+assert cg_damaged["grade"] == "B_PLUS"
+
 print("V2 self-tests: PASS")
