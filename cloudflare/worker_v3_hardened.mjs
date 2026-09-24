@@ -1,4 +1,7 @@
 const SOURCE = "NAVER_PUBLIC_WEB_ENDPOINT";
+const GITHUB_REPO = "bjm8754-svg/kr-stock-live-bridge-data";
+const GITHUB_BRANCH = "main";
+const LIVE_PUBLISH_TIMES = new Set(["0935", "0940"]);
 
 export default {
   async scheduled(controller, env) {
@@ -32,6 +35,21 @@ export default {
       "latest_minute",
       JSON.stringify(capture.data)
     );
+
+    if (LIVE_PUBLISH_TIMES.has(capture.time)) {
+      try {
+        await publishLiveSnapshot(env, codes, capture);
+      } catch (e) {
+        await env.STOCK_KV.put("last_publish_status", JSON.stringify({
+          status: "FAIL",
+          tradeDate: capture.date,
+          minute: capture.time,
+          reason: String(e?.message || e),
+          atUtc: new Date().toISOString()
+        }));
+        throw e;
+      }
+    }
   },
 
   async fetch(request, env) {
@@ -227,6 +245,136 @@ export default {
   }
 };
 
+
+
+async function publishLiveSnapshot(env, codes, capture) {
+  const token = String(env?.GITHUB_PUBLISH_TOKEN || "");
+  if (!token) throw new Error("MISSING_GITHUB_PUBLISH_TOKEN");
+
+  const rows = await readMinuteHistory(env.STOCK_KV, capture.date, capture.time);
+  const expectedCount = Number(capture.time.slice(2)) + 1;
+  if (rows.length !== expectedCount) {
+    throw new Error(`INCOMPLETE_PUBLISH_HISTORY_${rows.length}_OF_${expectedCount}`);
+  }
+  for (let i = 0; i < rows.length; i++) {
+    const expected = `${capture.date} 09${String(i).padStart(2, "0")}`;
+    if (rows[i]?.atKst !== expected) {
+      throw new Error(`NONCONTIGUOUS_PUBLISH_HISTORY_AT_${i}`);
+    }
+  }
+
+  const [indexesResult, scanResult] = await Promise.allSettled([
+    getIndexes(),
+    getMarketScan()
+  ]);
+  const warnings = [];
+  const indexes = indexesResult.status === "fulfilled" ? indexesResult.value : {};
+  if (indexesResult.status !== "fulfilled") warnings.push("INDEX_FETCH_FAILED");
+  const scan = scanResult.status === "fulfilled"
+    ? scanResult.value
+    : { volumeTop: [], risingLiquid: [] };
+  if (scanResult.status !== "fulfilled") warnings.push("SCAN_FETCH_FAILED");
+
+  const now = new Date();
+  const payload = {
+    status: "OK",
+    tradeDate: capture.date,
+    publishedAtUtc: now.toISOString(),
+    publishedAtKst: formatKstTimestamp(now),
+    source: SOURCE,
+    publisher: {
+      type: "CLOUDFLARE_WORKER_GITHUB_CONTENTS_API",
+      version: "worker_v3_hardened"
+    },
+    watchlist: codes,
+    history: {
+      count: rows.length,
+      from: rows[0]?.atKst ?? null,
+      to: rows.at(-1)?.atKst ?? null,
+      rows
+    },
+    latest: capture.data,
+    indexes,
+    scan
+  };
+  if (warnings.length) payload.warnings = warnings;
+
+  const saved = await putGithubLiveJson(token, payload);
+  await env.STOCK_KV.put("last_publish_status", JSON.stringify({
+    status: "PASS",
+    tradeDate: capture.date,
+    minute: capture.time,
+    commitSha: saved.commitSha,
+    publishedAtUtc: payload.publishedAtUtc
+  }));
+}
+
+async function readMinuteHistory(kv, date, toTime) {
+  const maxMinute = Number(toTime.slice(2));
+  const keys = [];
+  for (let m = 0; m <= maxMinute; m++) {
+    keys.push(`minute:${date}:09${String(m).padStart(2, "0")}`);
+  }
+  const values = await Promise.all(keys.map(key => kv.get(key)));
+  return values.filter(Boolean).map(v => JSON.parse(v));
+}
+
+async function putGithubLiveJson(token, payload) {
+  const api = `https://api.github.com/repos/${GITHUB_REPO}/contents/live.json`;
+  const headers = {
+    "Authorization": `Bearer ${token}`,
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "kr-stock-live-bridge-worker",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+
+  const current = await fetch(`${api}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, { headers });
+  let sha = null;
+  if (current.status === 200) {
+    const body = await current.json();
+    sha = body?.sha || null;
+  } else if (current.status !== 404) {
+    throw new Error(`GITHUB_LIVE_READ_HTTP_${current.status}`);
+  }
+
+  const body = {
+    message: `update live bridge ${payload.publishedAtUtc}`,
+    content: utf8ToBase64(JSON.stringify(payload, null, 2) + "\n"),
+    branch: GITHUB_BRANCH
+  };
+  if (sha) body.sha = sha;
+
+  const res = await fetch(api, {
+    method: "PUT",
+    headers: { ...headers, "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) throw new Error(`GITHUB_LIVE_WRITE_HTTP_${res.status}`);
+  const saved = await res.json();
+  return { commitSha: saved?.commit?.sha || null };
+}
+
+function utf8ToBase64(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = "";
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+  }
+  return btoa(binary);
+}
+
+function formatKstTimestamp(date) {
+  const kst = new Date(date.getTime() + 9 * 60 * 60 * 1000);
+  const y = kst.getUTCFullYear();
+  const mo = String(kst.getUTCMonth() + 1).padStart(2, "0");
+  const d = String(kst.getUTCDate()).padStart(2, "0");
+  const h = String(kst.getUTCHours()).padStart(2, "0");
+  const mi = String(kst.getUTCMinutes()).padStart(2, "0");
+  const sec = String(kst.getUTCSeconds()).padStart(2, "0");
+  const ms = String(kst.getUTCMilliseconds()).padStart(3, "0");
+  return `${y}-${mo}-${d} ${h}:${mi}:${sec}.${ms} KST`;
+}
 
 function normalizeSavedCodes(saved) {
   try {
