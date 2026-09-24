@@ -1,0 +1,24 @@
+name: Test Live Freshness Validator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/validate_live_freshness.py"
+      - "scripts/test_validate_live_freshness.py"
+      - ".github/workflows/test-live-validator.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Run validator regression tests
+        run: python scripts/test_validate_live_freshness.py
