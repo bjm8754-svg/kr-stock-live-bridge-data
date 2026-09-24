@@ -50,6 +50,16 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 - **Master publisher contract read-back — PASS**
   - Library Canonical Master current version: V8 / Library version 44.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
+- **Money-aware intraday ranked scan — PASS (source/test)**
+  - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
+  - regression-test commit: `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`.
+  - CI run: `35986527136` / conclusion `success`.
+  - stores 09:30/09:35/09:40 ranked scans and publishes absolute turnover plus 5-minute turnover/volume deltas.
+  - this is explicitly a ranked-scan discovery layer, not a claim of exhaustive full-market same-time statistics.
+- **Live-health scan degradation boundary — PASS**
+  - commits: `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`.
+  - CI run: `35986620061` / conclusion `success`.
+  - missing/partial scan evidence is Noncritical warning-only and cannot masquerade as 'no change'.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
 
 ## Manual deployment checklist
