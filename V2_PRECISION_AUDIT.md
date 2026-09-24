@@ -14,7 +14,7 @@ Evidence-only calibration record. Source labels are calibration controls, not gr
 | Vinatech 126340 / 2026-09-16 | source calls it B+ | chart B_PLUS; timing RADAR | PASS for chart-quality label; timing remains independently stricter |
 | Sammi Metal 012210 / 2026-09-10 | source reviews deoyang/cloud breakout and Yang-Eum-Yang sequence | chart B_PLUS; RETEST_OK | PARTIAL — structure aligns, execution-line precision still under review |
 
-Persisted replay evidence: `v2-replay-report.json`. Latest expanded replay run: `35983362185` / success.
+Persisted replay evidence: `v2-replay-report.json`. Source labels are now treated only as a discovery floor, not an exact A/B+ reproduction target. Replay semantics commit `bf8ce822011b12dcef1353525af10e19d2a841b5`; run `35985452972` concluded success.
 
 ## False-negative correction already made
 
