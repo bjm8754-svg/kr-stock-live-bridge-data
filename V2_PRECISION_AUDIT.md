@@ -41,3 +41,10 @@ The source hierarchy emphasizes strong-reference open/close first, then meaningf
 - Add explicit negative controls for non-ABC / weak-money setups where safely reproducible.
 - Review false positives where chart grade is strong but liquidity, market cap, catalyst quality or current R/R make the trade unattractive; keep chart quality separate from timing/action quality.
 - Expand replay beyond the current small calibration set before assigning any statistical precision rate.
+
+
+## Additional FP/FN evidence
+
+- **Low-money negative control — PASS:** Hanseong Clean Tech 066980 / 2026-05-20 was source-labeled as pattern-compatible but not A-grade because volume/money were insufficient. Replay case CASE_J produced `BELOW_B_PLUS`, `qualified=false`, Action Score 18.8 / RADAR. Replay commit `7b62676c385262a5d7e9d01ce3ce3ead492d26f5`; run `35985982065` concluded success.
+- **Source-level calibration — PASS for two explicit examples:** replay commit `ccbb4b4db718c5e9d1e589d4ecf078f3d03cf9b6`; run `35986185265` concluded success. Sammi Metal's source 10,000 reference was matched by structural reference-low 10,040 (0.4% gap). Kumkang Steel's source support 5,800~6,000 was matched by core support 5,759.58 (0.685% below the range). These are calibration matches, not a statistical precision claim.
+- **Positive discovery controls:** six source-labeled A/B+ examples currently all meet at least the B+ discovery floor in replay. This supports FN control but is still too small to claim a population precision/recall rate.
