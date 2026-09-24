@@ -205,4 +205,34 @@ assert cg_fresh["referenceMoneyKrw"] == 150_000_000_000
 assert cg_fresh["referenceState"] == "CURRENT"
 assert cg_fresh["grade"] == "S"
 
+
+
+# Compact canonical must stay chart-first and exclude bulky resistance alternatives.
+compact_sample = dict(current_ref_sample)
+compact_sample.update({
+    "market":"KOSDAQ","tradeDate":"20260923","close":12000,"open":10500,"high":12200,"low":10400,
+    "dayChangePct":12.0,"closeLocation":0.9,
+    "chartGrade":scan.compute_chart_grade(current_ref_sample, cfg),
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "ma":{"20":11000,"60":10000,"120":9500,"240":9000,"480":8500,"600":8000,"1000":7000},
+    "coreResistance":{"line":11500,"zoneLow":11400,"zoneHigh":11600,"score":14,"touches":3,
+                      "sourceCount":4,"sources":["SWING_HIGH"],"distanceFromReferencePct":2.0,
+                      "alternatives":[{"line":13000}]},
+    "distanceToCorePct":-4.0,"breakCoreResistance":True,"breakoutClass":"JINDOL_CONFIRMED",
+    "preJindol":False,"retestOk":False,"retestSupply":{"supplyDry":False},
+    "reacceleration":False,"yangEumYang":False,"recentReferenceCandle":None,
+    "entryPlan":{"nearestSupport":11500,"nextResistance":13000,"structuralRR":2.0},
+    "actionScore":{"total":70},"dataWarnings":[],
+})
+cc = scan.compact_chart_candidate(compact_sample)
+assert "setupCoreResistance" in cc and "referenceCandleAnchor" in cc and "retestAnchor" in cc
+assert "alternatives" not in (cc["setupCoreResistance"] or {})
+bo = scan.build_brief_output({
+    "status":"PASS","generatedAtKst":"x","tradeDate":"20260923","methodologyVersion":"x",
+    "primaryLogic":"x","coverage":{},"counts":{},"notes":[],
+    "chartCandidates":[compact_sample],"briefingCandidates":[],"qualifiedPool":[],"riskWarnings":[]
+})
+assert bo["schemaVersion"] == "YBM_BRIEF_V2"
+assert bo["role"]["primary"].startswith("completed-daily CHART")
+
 print("V2 self-tests: PASS")
