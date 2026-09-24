@@ -631,6 +631,35 @@ def compute_chart_grade(x, cfg):
     money_anchor = ref_tv >= float(cfg["deoyangbongMinTradingValueKrw"])
     exceptional_money = ref_tv >= float(cfg["chartGradeExceptionalReferenceKrw"])
 
+    # The strong reference candle is primary support/resistance evidence in the source
+    # method. A broken old reference cannot keep an S/A label indefinitely just because
+    # historical money was once large. Reuse the existing retest tolerance rather than
+    # inventing a new price level.
+    reference_state = "NONE"
+    reference_hold_line = None
+    reference_low = None
+    if ref_source == "CURRENT_COMPLETED_REFERENCE":
+        reference_state = "CURRENT"
+        reference_hold_line = float(x.get("close") or 0)
+        reference_low = float(x.get("low") or 0)
+    elif prior_ref:
+        ref_open = prior_ref.get("open")
+        ref_close = prior_ref.get("close")
+        ref_low = prior_ref.get("low")
+        cur_close = x.get("close")
+        if all(v is not None for v in (ref_open, ref_close, ref_low, cur_close)):
+            reference_hold_line = max(
+                float(ref_open),
+                float(ref_close) * (1.0 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0),
+            )
+            reference_low = float(ref_low)
+            if float(cur_close) >= reference_hold_line:
+                reference_state = "HELD"
+            elif float(cur_close) >= reference_low:
+                reference_state = "DAMAGED"
+            else:
+                reference_state = "FAILED"
+
     core_score = float(core.get("score") or 0)
     core_sources = int(core.get("sourceCount") or 0)
     core_good = (
@@ -652,15 +681,18 @@ def compute_chart_grade(x, cfg):
     new_listing_structure = bool(x.get("track") == "NEW_LISTING" and x.get("newListingSetup"))
 
     grade = "BELOW_B_PLUS"
-    if strong_structure and money_anchor and core_strong and cloud.get("state") == "ABOVE":
+    reference_usable = reference_state in ("CURRENT", "HELD", "DAMAGED")
+    reference_strong = reference_state in ("CURRENT", "HELD")
+
+    if reference_strong and strong_structure and money_anchor and core_strong and cloud.get("state") == "ABOVE":
         grade = "S"
-    elif (
+    elif reference_strong and (
         (strong_structure and money_anchor and core_good and cloud.get("state") != "BELOW")
         or (good_structure and exceptional_money and core_strong and cloud.get("state") == "ABOVE")
         or (new_listing_structure and exceptional_money and core_strong)
     ):
         grade = "A"
-    elif money_anchor and core_good and (strong_structure or good_structure or new_listing_structure):
+    elif reference_usable and money_anchor and core_good and (strong_structure or good_structure or new_listing_structure):
         grade = "B_PLUS"
 
     reasons = [
@@ -674,6 +706,7 @@ def compute_chart_grade(x, cfg):
         ),
         "CORE_STRONG" if core_strong else ("CORE_GOOD" if core_good else "CORE_WEAK"),
         f"CLOUD_{cloud.get('state', 'UNAVAILABLE')}",
+        f"REFERENCE_{reference_state}",
     ]
     return {
         "grade": grade,
@@ -681,6 +714,9 @@ def compute_chart_grade(x, cfg):
         "reasons": reasons,
         "referenceMoneyKrw": rnum(ref_tv, 0),
         "referenceMoneySource": ref_source,
+        "referenceState": reference_state,
+        "referenceHoldLine": rnum(reference_hold_line, 0),
+        "referenceLow": rnum(reference_low, 0),
         "selectionMemoryUsed": False,
         "timingInputsUsed": False,
     }
