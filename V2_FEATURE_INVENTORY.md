@@ -37,16 +37,20 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 ## Current automated evidence
 
 - Feature-contract/self-test change commit: `87b3e492974869c63c701223e951a399f8a1e937`.
-- Historical replay check for that commit: `success` (`35977284215`).
-- Full-market scan check from the same commit: `success` (`35977284250`). On the 2026-09-24 non-trading day, validation passed and the canonical commit step was correctly skipped rather than overwriting the prior trading-day canonical.
-- Current `scripts/test_longterm_scan_v2.py` explicitly checks the agreed structural field contract, long-MA keys, Jindol/Gadol boundary, new-listing rail, selection-memory independence and chart-grade/reference integrity.
+- Historical replay baseline: `success` (`35977284215`).
+- Feature-contract full-market baseline: `success` (`35977284250`). On the 2026-09-24 non-trading day, validation passed and the canonical commit step was correctly skipped rather than overwriting the prior trading-day canonical.
+- Source-labeled replay report is now persisted as `v2-replay-report.json`; replay workflow persistence commit `e8db6671decbbb0b0a3955ab033b206c4f88dcac`.
+- Replay observability expansion commit `f9957546b2f3909a5e1da110cf2de9e557a02086`; source-labeled control expansion commit `69b0d442225d769042c7edc6c750d14bc7e2ca4a`; latest replay run `35983362185` concluded `success`.
+- False-negative discovery fix: `790b0f7c22749937115b427ff6179741867de5e1` plus regression test `da0f7467fe692e46b1f798ed95c1570bee3732fc`. It permits a fresh money-backed long-structure/core/cloud setup to enter B+ even when an obsolete historical reference has failed, while S/A still require a usable strong reference.
+- Full-market regression after that fix: run `35983214306` concluded `success`; self-test, full scan and validation all passed, and the non-trading-day canonical commit was correctly skipped.
+- Current `scripts/test_longterm_scan_v2.py` explicitly checks the agreed structural field contract, long-MA keys, Jindol/Gadol boundary, new-listing rail, selection-memory independence, chart-grade/reference integrity and the fresh-discovery B+ fallback.
 
 ## Validation still required before final PASS
 
 1. **Core-line / reference / entry precision review** across a broad real-chart sample.
 2. **False Positive review**: identify structures promoted by the scanner that a disciplined chart review should reject, then tune only evidence-backed gates.
 3. **False Negative review**: identify high-quality charts missed by the scanner and determine whether the miss is data, feature extraction, threshold or ranking.
-4. **Historical Replay expansion**: current `replay_validate_v2.py` is a four-case calibration report, not a statistical precision test. Expand to positive and negative cases and record expected/actual state transitions.
+4. **Historical Replay expansion**: the persisted report now contains nine calibration controls, including source-labeled positive/B+ cases, but it is still too small to be a statistical precision test. Add negative controls and more entry/resistance examples before calling precision PASS.
 5. **Intraday Market/Turnover Ignition + NEW CHALLENGER validation** on a real KRX session, including whether the live scan actually covers enough of the market to replace manual HTS monitoring.
 6. **Real-session E2E** after Worker/security deployment: 08:15 -> secure watchlist sync -> 09:00~09:40 minute history -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION.
 
