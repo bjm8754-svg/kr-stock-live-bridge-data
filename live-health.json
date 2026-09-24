@@ -1,6 +1,6 @@
 {
   "status": "FAIL",
-  "checkedAtKst": "2026-09-24 17:15:07 KST",
+  "checkedAtKst": "2026-09-24 19:20:15 KST",
   "expectedTradeDate": "20260924",
   "liveTradeDate": "20260924",
   "watchlistTradeDate": "20260923",
@@ -27,5 +27,8 @@
     "INSUFFICIENT_INTRADAY_CHANGE",
     "STALE_SOURCE_TIMESTAMP"
   ],
-  "warnings": []
+  "warnings": [
+    "TURNOVER_TOP_MISSING",
+    "SCAN_DELTA_MISSING"
+  ]
 }
