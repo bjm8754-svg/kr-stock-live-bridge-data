@@ -2,6 +2,7 @@ const SOURCE = "NAVER_PUBLIC_WEB_ENDPOINT";
 const GITHUB_REPO = "bjm8754-svg/kr-stock-live-bridge-data";
 const GITHUB_BRANCH = "main";
 const LIVE_PUBLISH_TIMES = new Set(["0935", "0940"]);
+const MARKET_SCAN_TIMES = new Set(["0930", "0935", "0940"]);
 
 export default {
   async scheduled(controller, env) {
@@ -35,6 +36,33 @@ export default {
       "latest_minute",
       JSON.stringify(capture.data)
     );
+
+    if (MARKET_SCAN_TIMES.has(capture.time)) {
+      try {
+        const marketScan = await getMarketScan();
+        marketScan.atKst = `${capture.date} ${capture.time}`;
+        await env.STOCK_KV.put(
+          `market_scan:${capture.date}:${capture.time}`,
+          JSON.stringify(marketScan),
+          { expirationTtl: 604800 }
+        );
+        await env.STOCK_KV.put("last_market_scan_status", JSON.stringify({
+          status: marketScan.status,
+          tradeDate: capture.date,
+          minute: capture.time,
+          atUtc: new Date().toISOString(),
+          failedConfigs: marketScan.coverage?.failedConfigs ?? null
+        }));
+      } catch (e) {
+        await env.STOCK_KV.put("last_market_scan_status", JSON.stringify({
+          status: "FAIL",
+          tradeDate: capture.date,
+          minute: capture.time,
+          reason: String(e?.message || e),
+          atUtc: new Date().toISOString()
+        }));
+      }
+    }
 
     if (LIVE_PUBLISH_TIMES.has(capture.time)) {
       try {
@@ -263,17 +291,30 @@ async function publishLiveSnapshot(env, codes, capture) {
     }
   }
 
-  const [indexesResult, scanResult] = await Promise.allSettled([
-    getIndexes(),
-    getMarketScan()
-  ]);
+  const indexesResult = await Promise.allSettled([getIndexes()]);
   const warnings = [];
-  const indexes = indexesResult.status === "fulfilled" ? indexesResult.value : {};
-  if (indexesResult.status !== "fulfilled") warnings.push("INDEX_FETCH_FAILED");
-  const scan = scanResult.status === "fulfilled"
-    ? scanResult.value
-    : { volumeTop: [], risingLiquid: [] };
-  if (scanResult.status !== "fulfilled") warnings.push("SCAN_FETCH_FAILED");
+  const indexes = indexesResult[0].status === "fulfilled" ? indexesResult[0].value : {};
+  if (indexesResult[0].status !== "fulfilled") warnings.push("INDEX_FETCH_FAILED");
+
+  let scan = await readMarketScan(env.STOCK_KV, capture.date, capture.time);
+  if (!scan) {
+    try {
+      scan = await getMarketScan();
+      scan.atKst = `${capture.date} ${capture.time}`;
+      warnings.push("SCAN_RECOVERED_INLINE");
+    } catch {
+      scan = emptyMarketScan("FAIL");
+      scan.atKst = `${capture.date} ${capture.time}`;
+      warnings.push("SCAN_FETCH_FAILED");
+    }
+  }
+  if (scan.status === "PARTIAL") warnings.push("SCAN_PARTIAL");
+  if (scan.status === "FAIL") warnings.push("SCAN_FAILED");
+
+  const priorTime = capture.time === "0935" ? "0930" : (capture.time === "0940" ? "0935" : null);
+  const priorScan = priorTime ? await readMarketScan(env.STOCK_KV, capture.date, priorTime) : null;
+  const scanDelta = priorScan ? buildMarketScanDelta(priorScan, scan) : null;
+  if (!priorScan) warnings.push("SCAN_DELTA_BASELINE_MISSING");
 
   const now = new Date();
   const payload = {
@@ -295,7 +336,8 @@ async function publishLiveSnapshot(env, codes, capture) {
     },
     latest: capture.data,
     indexes,
-    scan
+    scan,
+    scanDelta
   };
   if (warnings.length) payload.warnings = warnings;
 
@@ -790,33 +832,161 @@ function swing(rows, period) {
 }
 
 async function getMarketScan() {
-  const url =
-    "https://stock.naver.com/api/domestic/market/stock/default" +
-    "?tradeType=KRX" +
-    "&marketType=ALL" +
-    "&orderType=priceTop" +
-    "&startIdx=0" +
-    "&pageSize=100";
+  const configs = [
+    ["KOSPI", "up"],
+    ["KOSDAQ", "up"],
+    ["KOSPI", "quantTop"],
+    ["KOSDAQ", "quantTop"]
+  ];
 
-  const data = await fetchJson(url);
-  const rows = Array.isArray(data) ? data : [];
+  const results = await Promise.all(configs.map(async ([market, sortType]) => {
+    const endpoint =
+      "https://m.stock.naver.com/front-api/stock/domestic/stockList" +
+      `?sortType=${encodeURIComponent(sortType)}` +
+      `&category=${encodeURIComponent(market)}&page=1&pageSize=20`;
 
-  const normalized = rows.map((r, i) => ({
-    rank: i + 1,
-    code: r.itemcode ?? null,
-    name: r.itemname ?? null,
-    price: looseNum(r.nowPrice),
-    changePct: looseNum(r.prevChangeRate)
+    try {
+      const j = await fetchJson(endpoint);
+      return {
+        market,
+        sortType,
+        rows: normalizeStockList(findFirstArray(j)).slice(0, 20)
+      };
+    } catch (e) {
+      return {
+        market,
+        sortType,
+        error: String(e?.message || e),
+        rows: []
+      };
+    }
   }));
 
+  const successful = results.filter(x => !x.error);
+  const upRows = dedupeScanRows(
+    results.filter(x => x.sortType === "up").flatMap(x => x.rows || [])
+  );
+  const quantRows = dedupeScanRows(
+    results.filter(x => x.sortType === "quantTop").flatMap(x => x.rows || [])
+  );
+  const allRows = dedupeScanRows([...upRows, ...quantRows]);
+
+  const failedConfigs = results.filter(x => x.error).length;
+  const status = failedConfigs === 0 ? "PASS" : (successful.length ? "PARTIAL" : "FAIL");
+
   return {
-    volumeTop: normalized.slice(0, 20),
-    risingLiquid: [...normalized]
+    status,
+    coverage: {
+      requestedConfigs: configs.length,
+      successfulConfigs: successful.length,
+      failedConfigs,
+      rowCount: allRows.length
+    },
+    rankings: results,
+    volumeTop: [...quantRows]
+      .filter(x => x.volume != null)
+      .sort((a, b) => (b.volume || 0) - (a.volume || 0))
+      .slice(0, 20),
+    turnoverTop: [...allRows]
+      .filter(x => x.tradingValue != null)
+      .sort((a, b) => (b.tradingValue || 0) - (a.tradingValue || 0))
+      .slice(0, 20),
+    risingLiquid: [...upRows]
       .filter(x => x.changePct != null)
-      .sort((a, b) => b.changePct - a.changePct)
+      .sort((a, b) =>
+        (b.changePct || 0) - (a.changePct || 0) ||
+        (b.tradingValue || 0) - (a.tradingValue || 0)
+      )
       .slice(0, 20)
   };
 }
+
+function emptyMarketScan(status = "FAIL") {
+  return {
+    status,
+    coverage: { requestedConfigs: 4, successfulConfigs: 0, failedConfigs: 4, rowCount: 0 },
+    rankings: [],
+    volumeTop: [],
+    turnoverTop: [],
+    risingLiquid: []
+  };
+}
+
+function dedupeScanRows(rows) {
+  const byCode = new Map();
+  for (const row of rows || []) {
+    if (!row?.code) continue;
+    const prev = byCode.get(row.code);
+    if (!prev || (row.tradingValue || 0) > (prev.tradingValue || 0)) {
+      byCode.set(row.code, row);
+    }
+  }
+  return [...byCode.values()];
+}
+
+async function readMarketScan(kv, date, time) {
+  const raw = await kv.get(`market_scan:${date}:${time}`);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+function buildMarketScanDelta(previous, current) {
+  const prevRows = dedupeScanRows([
+    ...(previous?.volumeTop || []),
+    ...(previous?.turnoverTop || []),
+    ...(previous?.risingLiquid || [])
+  ]);
+  const curRows = dedupeScanRows([
+    ...(current?.volumeTop || []),
+    ...(current?.turnoverTop || []),
+    ...(current?.risingLiquid || [])
+  ]);
+  const prevMap = new Map(prevRows.map(x => [x.code, x]));
+  const rows = curRows.map(cur => {
+    const prev = prevMap.get(cur.code);
+    const deltaTradingValue =
+      prev && cur.tradingValue != null && prev.tradingValue != null
+        ? cur.tradingValue - prev.tradingValue
+        : null;
+    const deltaVolume =
+      prev && cur.volume != null && prev.volume != null
+        ? cur.volume - prev.volume
+        : null;
+    return {
+      code: cur.code,
+      name: cur.name,
+      price: cur.price,
+      changePct: cur.changePct,
+      tradingValue: cur.tradingValue,
+      volume: cur.volume,
+      deltaTradingValue,
+      deltaVolume,
+      newInCurrentScan: !prev
+    };
+  });
+
+  const comparable = rows.filter(x => x.deltaTradingValue != null || x.deltaVolume != null);
+  const turnoverAcceleration = [...comparable]
+    .sort((a, b) =>
+      (b.deltaTradingValue || 0) - (a.deltaTradingValue || 0) ||
+      (b.deltaVolume || 0) - (a.deltaVolume || 0)
+    )
+    .slice(0, 30);
+  const newEntries = rows.filter(x => x.newInCurrentScan).slice(0, 30);
+
+  return {
+    fromAtKst: previous?.atKst ?? null,
+    toAtKst: current?.atKst ?? null,
+    comparedCount: comparable.length,
+    turnoverAcceleration,
+    newEntries
+  };
+}
+
 function normalizeStockList(arr) {
   if (!Array.isArray(arr)) {
     return [];
