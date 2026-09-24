@@ -19,13 +19,17 @@ cfg = json.loads((ROOT / "longterm-scan-config.json").read_text(encoding="utf-8"
 
 CASES = [
     # source-derived calibration case: long-history breakout-quality example
-    {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY"},
+    {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
     # source-derived calibration case: long-MA recovery with strong money expansion
-    {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY"},
+    {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"POSITIVE_NOT_BAD"},
     # source-derived calibration case: new-listing mini-structure
     {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
-    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY"},
+    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW"},
+    # source-labeled A-grade example from the 2026-09-03 review
+    {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
+    # source-labeled B+ trading example from the same review
+    {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceMinChartGrade":"B_PLUS"},
 ]
 
 rows = []
@@ -44,12 +48,27 @@ for case in CASES:
         cfg,
     )
     assert out["status"] == "OK", (case, out)
-    assert out["track"] == case["expectedTrack"], (case, out["track"])
+    if case.get("expectedTrack"):
+        assert out["track"] == case["expectedTrack"], (case, out["track"])
     chart_grade = scan.compute_chart_grade(out, cfg)
     action_score = scan.compute_action_score(out, cfg)
+    grade_rank = {"BELOW_B_PLUS": 0, "B_PLUS": 1, "A": 2, "S": 3}
+    expected_grade = case.get("sourceMinChartGrade")
+    if expected_grade:
+        source_alignment = (
+            "MATCH"
+            if grade_rank.get(chart_grade.get("grade"), -1) >= grade_rank[expected_grade]
+            else "MISMATCH"
+        )
+    else:
+        source_alignment = "NOT_ASSERTED"
+
     rows.append({
         "case": case["name"],
         "code": case["code"],
+        "sourceLabel": case.get("sourceLabel"),
+        "sourceMinChartGrade": expected_grade,
+        "sourceAlignment": source_alignment,
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
