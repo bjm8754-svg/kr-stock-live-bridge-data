@@ -19,7 +19,7 @@ cfg = json.loads((ROOT / "longterm-scan-config.json").read_text(encoding="utf-8"
 
 CASES = [
     # source-derived calibration case: long-history breakout-quality example
-    {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
+    {"code":"036540","name":"CASE_A","date":"2026-09-09","expectedTrack":"LONG_HISTORY","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     # source-derived calibration case: long-MA recovery with strong money expansion
     {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"B_GRADE"},
     # source-derived calibration case: new-listing mini-structure
@@ -27,13 +27,13 @@ CASES = [
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
     {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW"},
     # source-labeled A-grade example from the 2026-09-03 review
-    {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceMinChartGrade":"A"},
+    {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     # source-labeled B+ trading example from the same review
-    {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceMinChartGrade":"B_PLUS"},
+    {"code":"053260","name":"CASE_F","date":"2026-09-03","sourceLabel":"B_PLUS_TRADING","sourceDiscoveryFloor":"B_PLUS"},
     # historical source labels used only as calibration controls, never as ranking memory
-    {"code":"161890","name":"CASE_G","date":"2026-07-02","sourceLabel":"A_GRADE","sourceMinChartGrade":"B_PLUS"},
-    {"code":"001820","name":"CASE_H","date":"2026-05-20","sourceLabel":"A_GRADE","sourceMinChartGrade":"B_PLUS"},
-    {"code":"126340","name":"CASE_I","date":"2026-09-16","sourceLabel":"B_PLUS","sourceMinChartGrade":"B_PLUS"},
+    {"code":"161890","name":"CASE_G","date":"2026-07-02","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
+    {"code":"001820","name":"CASE_H","date":"2026-05-20","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
+    {"code":"126340","name":"CASE_I","date":"2026-09-16","sourceLabel":"B_PLUS","sourceDiscoveryFloor":"B_PLUS"},
 ]
 
 rows = []
@@ -57,7 +57,7 @@ for case in CASES:
     chart_grade = scan.compute_chart_grade(out, cfg)
     action_score = scan.compute_action_score(out, cfg)
     grade_rank = {"BELOW_B_PLUS": 0, "B_PLUS": 1, "A": 2, "S": 3}
-    expected_grade = case.get("sourceMinChartGrade")
+    expected_grade = case.get("sourceDiscoveryFloor")
     if expected_grade:
         source_alignment = (
             "MATCH"
@@ -71,8 +71,8 @@ for case in CASES:
         "case": case["name"],
         "code": case["code"],
         "sourceLabel": case.get("sourceLabel"),
-        "sourceMinChartGrade": expected_grade,
-        "sourceAlignment": source_alignment,
+        "sourceDiscoveryFloor": expected_grade,
+        "sourceDiscoveryAlignment": source_alignment,
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
