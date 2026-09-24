@@ -263,7 +263,24 @@ assert ep["supportHierarchy"]["primaryReferenceSource"] == "RECENT_REFERENCE_CLO
 assert ep["supportHierarchy"]["referenceLowInvalidationCandidate"] == 9500
 assert ep["supportHierarchy"]["coreSupport"] == 9700
 assert ep["supportHierarchy"]["longMaSupport"] == 9300
+assert ep["invalidationCandidate"] == 9500
+assert ep["invalidationSource"] == "RECENT_REFERENCE_LOW"
+assert round(ep["distanceToInvalidationPct"], 2) == 5.26
 assert ep["nextResistance"] == 10500
+assert round(ep["structuralRR"], 2) == 0.95
+
+entry_no_ref = scan.build_structural_entry_plan(
+    entry_cur, entry_core, entry_ma, None, None, cfg
+)
+assert entry_no_ref["invalidationCandidate"] == 9600
+assert entry_no_ref["invalidationSource"] == "CORE_ZONE_LOW"
+assert round(entry_no_ref["distanceToInvalidationPct"], 2) == 4.17
+
+entry_ma_only = scan.build_structural_entry_plan(
+    entry_cur, None, entry_ma, None, None, cfg
+)
+assert entry_ma_only["invalidationCandidate"] is None
+assert entry_ma_only["structuralRR"] is None
 
 # Compact canonical must stay chart-first and exclude bulky resistance alternatives.
 compact_sample = dict(current_ref_sample)
