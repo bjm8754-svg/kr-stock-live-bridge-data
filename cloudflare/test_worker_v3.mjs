@@ -64,12 +64,19 @@ globalThis.fetch = async function(input, init={}) {
 };
 
 function assert(cond,msg){ if(!cond) throw new Error('ASSERT: '+msg); }
+function watchlistValue(tradeDate='20260924', codes=['000001','000002']) {
+  return JSON.stringify({tradeDate,codes});
+}
+function nowKstDate() {
+  const d=new Date(Date.now()+9*60*60*1000);
+  return String(d.getUTCFullYear())+String(d.getUTCMonth()+1).padStart(2,'0')+String(d.getUTCDate()).padStart(2,'0');
+}
 const sched = Date.parse('2026-09-24T00:00:00Z');
 
 // 1) Closed/holiday payload must not create minute/latest keys.
 {
   mode='CLOSE'; failCode=null;
-  const kv=new KV({watchlist:JSON.stringify(['000001','000002'])});
+  const kv=new KV({watchlist:watchlistValue('20260924',['000001','000002'])});
   await worker.scheduled({scheduledTime:sched},{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(!kv.m.has('minute:20260924:0900'),'closed market wrote minute key');
   assert(!kv.m.has('latest_minute'),'closed market overwrote latest');
@@ -78,7 +85,7 @@ const sched = Date.parse('2026-09-24T00:00:00Z');
 // 2) Open market writes both minute and latest with PASS guard.
 {
   mode='OPEN'; failCode=null;
-  const kv=new KV({watchlist:JSON.stringify(['000001','000002'])});
+  const kv=new KV({watchlist:watchlistValue('20260924',['000001','000002'])});
   await worker.scheduled({scheduledTime:sched},{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(kv.m.has('minute:20260924:0900'),'open market missing minute');
   assert(kv.m.has('latest_minute'),'open market missing latest');
@@ -90,7 +97,7 @@ const sched = Date.parse('2026-09-24T00:00:00Z');
 // 3) Upstream degradation below 80% valid payload fails closed.
 {
   mode='OPEN'; failCode='000002';
-  const kv=new KV({watchlist:JSON.stringify(['000001','000002'])});
+  const kv=new KV({watchlist:watchlistValue('20260924',['000001','000002'])});
   await worker.scheduled({scheduledTime:sched},{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(!kv.m.has('minute:20260924:0900'),'degraded payload wrote minute');
   assert(!kv.m.has('latest_minute'),'degraded payload overwrote latest');
@@ -100,31 +107,33 @@ const sched = Date.parse('2026-09-24T00:00:00Z');
 // 4) Watchlist mutation: GET blocked; POST without token blocked; POST with token succeeds.
 {
   mode='OPEN';
-  const kv=new KV({watchlist:JSON.stringify(['000001'])});
-  let res=await worker.fetch(new Request('https://x/watchlist?codes=000002',{method:'GET'}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  const kv=new KV({watchlist:watchlistValue('20260924',['000001'])});
+  let res=await worker.fetch(new Request('https://x/watchlist?codes=000002&tradeDate=20260924',{method:'GET'}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===405,'mutating GET not blocked');
-  res=await worker.fetch(new Request('https://x/watchlist?codes=000002',{method:'POST'}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  res=await worker.fetch(new Request('https://x/watchlist?codes=000002&tradeDate=20260924',{method:'POST'}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===401,'unauthenticated POST not blocked');
-  res=await worker.fetch(new Request('https://x/watchlist?codes=000002',{method:'POST',headers:{Authorization:'Bearer secret'}}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  res=await worker.fetch(new Request('https://x/watchlist?codes=000002&tradeDate=20260924',{method:'POST',headers:{Authorization:'Bearer secret'}}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===200,'authenticated POST failed');
   const body=await res.json();
   assert(body.status==='WATCHLIST_SAVED','wrong save status');
-  assert(kv.m.get('watchlist')===JSON.stringify(['000002']),'watchlist not saved');
+  assert(kv.m.get('watchlist')===JSON.stringify({tradeDate:'20260924',codes:['000002']}),'watchlist not saved');
+  assert(body.tradeDate==='20260924','watchlist tradeDate not returned');
 }
 
 // 5) Public read remains available.
 {
-  const kv=new KV({watchlist:JSON.stringify(['000001'])});
+  const kv=new KV({watchlist:watchlistValue('20260924',['000001'])});
   const res=await worker.fetch(new Request('https://x/watchlist'),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===200,'read-only watchlist unavailable');
   const body=await res.json();
   assert(body.codes[0]==='000001','read-only watchlist incorrect');
+  assert(body.tradeDate==='20260924','read-only watchlist tradeDate missing');
 }
 
 // 6) run-now is protected and also fails closed on closed market.
 {
   mode='CLOSE';
-  const kv=new KV({watchlist:JSON.stringify(['000001','000002'])});
+  const kv=new KV({watchlist:watchlistValue(nowKstDate(),['000001','000002'])});
   let res=await worker.fetch(new Request('https://x/run-now',{method:'POST'}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===401,'run-now unauthenticated not blocked');
   res=await worker.fetch(new Request('https://x/run-now',{method:'POST',headers:{Authorization:'Bearer secret'}}),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
@@ -151,7 +160,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
 // 7) 09:35 with a complete minute chain publishes a versioned live.json snapshot.
 {
   mode='OPEN'; failCode=null; githubWrites=[];
-  const init={watchlist:JSON.stringify(['000001','000002'])};
+  const init={watchlist:watchlistValue('20260924',['000001','000002'])};
   for(let m=0;m<35;m++) init[`minute:20260924:09${String(m).padStart(2,'0')}`] = JSON.stringify(minuteRow('20260924',m));
   init['market_scan:20260924:0930']=JSON.stringify({
     status:'PASS', atKst:'20260924 0930',
@@ -190,7 +199,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
 {
   mode='OPEN'; failCode=null; githubWrites=[];
   const kv=new KV({
-    watchlist:JSON.stringify(['000001','000002']),
+    watchlist:watchlistValue('20260924',['000001','000002']),
     'minute:20260924:0900':JSON.stringify(minuteRow('20260924',0))
   });
   let threw=false;
@@ -233,6 +242,27 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   assert(body.build==='worker_v3_hardened_money_scan_v1','wrong build fingerprint');
   assert(body.capabilities.includes('MONEY_AWARE_MARKET_SCAN'),'money scan capability missing');
   assert(body.capabilities.includes('GITHUB_LIVE_PUBLISHER'),'publisher capability missing');
+}
+
+// 11) Scheduled capture rejects a stale watchlist trade date before touching live data.
+{
+  mode='OPEN'; failCode=null;
+  const kv=new KV({watchlist:watchlistValue('20260923',['000001','000002'])});
+  await worker.scheduled({scheduledTime:sched},{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  assert(!kv.m.has('minute:20260924:0900'),'stale watchlist wrote minute');
+  const guard=JSON.parse(kv.m.get('last_watchlist_guard_status'));
+  assert(guard.reason==='WATCHLIST_TRADE_DATE_MISMATCH','stale watchlist guard reason missing');
+}
+
+// 12) Authenticated mutation without tradeDate is rejected.
+{
+  const kv=new KV({});
+  const res=await worker.fetch(
+    new Request('https://x/watchlist?codes=000002',{method:'POST',headers:{Authorization:'Bearer secret'}}),
+    {STOCK_KV:kv,WRITE_TOKEN:'secret'}
+  );
+  assert(res.status===400,'missing tradeDate mutation not rejected');
+  assert(!kv.m.has('watchlist'),'invalid watchlist mutation wrote KV');
 }
 
 console.log('ALL_TESTS_PASS');
