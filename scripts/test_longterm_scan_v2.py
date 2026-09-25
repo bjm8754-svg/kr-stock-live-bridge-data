@@ -280,6 +280,24 @@ weak_fresh_discovery["money"] = {
 }
 assert scan.compute_chart_grade(weak_fresh_discovery, cfg)["grade"] == "BELOW_B_PLUS"
 
+# Current completed reference must supersede an older entry anchor for next-session planning.
+entry_current_ref = {
+    "date":"20260909","open":10000,"close":13000,"high":13200,"low":9900,
+    "source":"CURRENT_COMPLETED_REFERENCE",
+}
+ep_current = scan.build_structural_entry_plan(
+    {"Close":13000},
+    {"line":9800,"zoneLow":9700,"zoneHigh":9900,"alternatives":[{"line":14000,"zoneLow":13800,"zoneHigh":14200,"sources":["SWING_HIGH"]}]},
+    {"240":9500,"480":9000,"600":8500,"1000":8000},
+    {"open":8500,"close":9000,"low":8200},
+    entry_current_ref,
+    cfg,
+)
+assert ep_current["supportHierarchy"]["primaryReferenceSupport"] == 10000
+assert ep_current["supportHierarchy"]["primaryReferenceSource"] == "CURRENT_REFERENCE_OPEN"
+assert ep_current["invalidationCandidate"] == 9900
+assert ep_current["invalidationSource"] == "CURRENT_REFERENCE_LOW"
+
 # Entry plan must preserve support roles instead of collapsing every structural level.
 entry_cur = {"Close": 10000}
 entry_core = {
