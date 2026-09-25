@@ -6,21 +6,21 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 
 | Feature | Implementation evidence | Automated contract/test | Precision status |
 | --- | --- | --- | --- |
-| ABC long-decline/base/recovery | `abc_features`, `abc` output | output-contract test | NOT DONE |
-| Strong reference candle / 더양봉 | `rolling_event_mask`, `deoyangbong`, active reference anchor | reference-candle grading tests | NOT DONE |
-| Core resistance / supply zone / 네모네모 internal logic | `build_core_resistance`, clustered `coreResistance` | core clustering + pre-current construction | NOT DONE |
-| Long MA structure | MA20/60/120/240/480/600/1000 | output-contract test | NOT DONE |
-| Ichimoku cloud | `cloud` | output-contract test | NOT DONE |
-| Money / turnover quality | absolute trading value, avg20 ratio, volume ratio, relative reference money, market-cap turnover | breakout/action tests | NOT DONE |
-| Jindol / Gadol | `breakoutClass`, `classify_breakout` | JINDOL/GADOL tests | NOT DONE |
-| Pre-Jindol | `preJindol` | output-contract test | NOT DONE |
-| Acceptance / follow-through | Jindol close acceptance + `actionScore.components.acceptance` | action-score test path | NOT DONE |
-| Retest + supply contraction | `retestOk`, `retestSupply` | output-contract test | NOT DONE |
-| Reacceleration | `reacceleration` / Yang-Eum-Yang | output-contract test | NOT DONE |
-| New-listing separate rail | `track=NEW_LISTING`, `newListingSetup` | synthetic new-listing test | NOT DONE |
-| Structural entry / support / next resistance / R-R | `entryPlan` from detected structure only | no-arbitrary-price implementation + output contract | NOT DONE |
-| Chart quality S/A/B+ independent of timing | `chartGrade`, `chartCandidates` | chart-grade independence/reference-integrity tests | NOT DONE |
-| Fresh Action Score / anti-selection-memory | `actionScore` | selection-memory invariant test | NOT DONE |
+| ABC long-decline/base/recovery | `abc_features`, `abc` output | output-contract/self-test | IMPLEMENTED / PRECISION NOT DONE |
+| Strong reference candle / 더양봉 | `rolling_event_mask`, `deoyangbong`, active reference anchor | reference-candle grading/self-tests | IMPLEMENTED / PRECISION PARTIAL |
+| Core resistance / supply zone / 네모네모 internal logic | `build_core_resistance`, clustered `coreResistance` | pre-current construction + replay calibration | IMPLEMENTED / PRECISION PARTIAL |
+| Long MA structure | MA20/60/120/240/480/600/1000 | output-contract/self-test | IMPLEMENTED / CONTRACT PASS |
+| Ichimoku cloud | `cloud` | output-contract/self-test | IMPLEMENTED / CONTRACT PASS |
+| Money / turnover quality | absolute trading value, avg20 ratio, volume ratio, relative reference money, market-cap turnover | breakout/action/self-tests | IMPLEMENTED / PRECISION PARTIAL |
+| Jindol / Gadol | `breakoutClass`, `classify_breakout` | JINDOL/GADOL regression tests | IMPLEMENTED / PRECISION PARTIAL |
+| Pre-Jindol | `preJindol` | output-contract/self-test | IMPLEMENTED / PRECISION NOT DONE |
+| Acceptance / follow-through | Jindol close acceptance + `actionScore.components.acceptance` | action-score regression path | IMPLEMENTED / PRECISION NOT DONE |
+| Retest + supply contraction | `retestOk`, `retestSupply` | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
+| Reacceleration | `reacceleration` / Yang-Eum-Yang | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
+| New-listing separate rail | `track=NEW_LISTING`, `newListingSetup` | synthetic new-listing regression test | IMPLEMENTED / SYNTHETIC PASS; REAL SAMPLE NOT DONE |
+| Structural entry / support / next resistance / R-R | `entryPlan` from detected structure only | support hierarchy + invalidation/R-R regression + source-level replay | IMPLEMENTED / PRECISION PARTIAL |
+| Chart quality S/A/B+ independent of timing | `chartGrade`, `chartCandidates` | independence/reference-integrity tests | IMPLEMENTED / CALIBRATION PARTIAL |
+| Fresh Action Score / anti-selection-memory | `actionScore` | selection-memory invariant regression | IMPLEMENTED / INVARIANT PASS |
 | Compact canonical handoff | `YBM_BRIEF_V2` | compact-schema test | PARTIAL — current canonical scan is still the 2026-09-23 pre-chart-grade migration |
 
 ## Intraday operational contract
