@@ -1,15 +1,15 @@
 {
   "status": "FAIL",
-  "checkedAtKst": "2026-09-24 19:20:15 KST",
-  "expectedTradeDate": "20260924",
-  "liveTradeDate": "20260924",
+  "checkedAtKst": "2026-09-25 09:36:08 KST",
+  "expectedTradeDate": "20260925",
+  "liveTradeDate": "20260925",
   "watchlistTradeDate": "20260923",
-  "livePublishedAtKst": "2026-09-24 09:41:07.249 KST",
+  "livePublishedAtKst": "2026-09-25 09:36:00.430 KST",
   "history": {
-    "count": 41,
-    "from": "20260924 0900",
-    "to": "20260924 0940",
-    "rows": 41
+    "count": 36,
+    "from": "20260925 0900",
+    "to": "20260925 0935",
+    "rows": 36
   },
   "watchlistCount": 9,
   "validStockCount": 9,
@@ -19,7 +19,7 @@
   "openStockRatio": 0.0,
   "frozenStockCount": 9,
   "frozenStockRatio": 1.0,
-  "sourceTimestampCount": 205,
+  "sourceTimestampCount": 180,
   "reasons": [
     "WATCHLIST_TRADE_DATE_MISMATCH",
     "FROZEN_HISTORY",
