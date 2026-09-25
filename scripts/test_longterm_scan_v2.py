@@ -107,6 +107,40 @@ assert s1["selectionMemoryUsed"] is False
 assert s1["briefingTier"] in ("ACTION_NOW", "WATCH_TRIGGER", "RADAR")
 
 
+# Pre-Jindol qualification and acceptance scoring invariants.
+prej = {
+    "signal":"PRE_JINDOL",
+    "abc":{"score":90,"bPlus":True},
+    "money":{"avg20TradingValueEstimated":20_000_000_000,"tradingValue":40_000_000_000,
+             "tradingValueRatio20Estimated":0.7,"volumeRatio20":0.8},
+    "deoyangbong":{"latestPrior":{"tradingValueEstimated":120_000_000_000}},
+    "coreResistance":{"score":10,"sourceCount":3},
+    "distanceToCorePct":2.0,
+    "entryPlan":{"structuralRR":1.8,"distanceToSupportPct":4.0},
+    "retestSupply":{"supplyDry":False},
+    "closeLocation":0.60,
+    "breakoutClass":"NO_BREAK",
+    "reacceleration":False,
+    "yangEumYang":False,
+}
+assert scan.is_qualified_candidate(prej, cfg)
+prej_score = scan.compute_action_score(prej, cfg)
+# PRE_JINDOL with contracting turnover/volume gets explicit follow-through credit.
+assert prej_score["components"]["acceptance"] >= 3.0
+
+prej_too_far = dict(prej)
+prej_too_far["distanceToCorePct"] = float(cfg["qualifiedPreJindolMaxDistancePct"]) + 0.1
+assert not scan.is_qualified_candidate(prej_too_far, cfg)
+
+accept = dict(prej)
+accept["signal"] = "RETEST_OK"
+accept["retestSupply"] = {"supplyDry":True}
+accept["reacceleration"] = True
+accept["closeLocation"] = 0.75
+accept["breakoutClass"] = "JINDOL_CONFIRMED"
+accept_score = scan.compute_action_score(accept, cfg)
+assert accept_score["components"]["acceptance"] == 10.0
+
 # Chart-grade invariant: completed-daily chart quality must be independent of timing/action fields.
 chart_sample = {
     "signal":"PRE_JINDOL",
