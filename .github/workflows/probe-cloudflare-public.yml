@@ -1,0 +1,38 @@
+name: Probe Cloudflare Worker Public State
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/probe-cloudflare-public.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe public Worker endpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://kr-stock-live-bridge.bjm8754.workers.dev"
+
+          echo "=== ROOT ==="
+          ROOT=$(curl --fail --silent --show-error "$BASE/")
+          printf '%s
+' "$ROOT" | jq .
+
+          echo "=== WATCHLIST ==="
+          WATCH=$(curl --fail --silent --show-error "$BASE/watchlist")
+          printf '%s
+' "$WATCH" | jq .
+
+          echo "=== SUMMARY ==="
+          echo "build=$(printf '%s' "$ROOT" | jq -r '.build // "MISSING"')"
+          echo "message=$(printf '%s' "$ROOT" | jq -r '.message // "MISSING"')"
+          echo "watchlistTradeDate=$(printf '%s' "$WATCH" | jq -r '.tradeDate // "MISSING"')"
+          echo "watchlistCount=$(printf '%s' "$WATCH" | jq -r '(.codes // []) | length')"
