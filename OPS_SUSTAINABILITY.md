@@ -25,6 +25,12 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 - **Deployed Worker hardening — NOT DONE**
   - GitHub source/test success is not deployment evidence.
   - deployed Worker must be replaced with the canonical source and verified.
+- **Canonical deployed-build fingerprint — PASS (source/test only)**
+  - expected build: `worker_v3_hardened_money_scan_v1`
+  - Worker build commit: `4bd6cedad8692a263864ddc8b3719999c171945a`
+  - regression-test commit: `118a38779da6f91650c654c8573e1c59b72a6eab`
+  - CI run: `36121815540` / conclusion `success`
+  - deployment verifier now checks the exact build fingerprint and required capabilities before accepting runtime PASS.
 - **Deployment security verification workflow — DONE (source only)**
   - workflow: `.github/workflows/verify-cloudflare-deployment.yml`
   - commit: `354f7c2a676e8832ffe4258dbd1912f4313872af`
@@ -54,7 +60,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
 - **Master publisher contract read-back — PASS**
-  - Library Canonical Master current version: V8 / Library version 45.
+  - Library Canonical Master current version: V8 / Library version 46.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
 - **Money-aware intraday ranked scan — PASS (source/test)**
   - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
@@ -66,7 +72,18 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - commits: `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`.
   - CI run: `35986620061` / conclusion `success`.
   - missing/partial scan evidence is Noncritical warning-only and cannot masquerade as 'no change'.
+- **Real-session E2E validator — PASS (validator/test)**
+  - validator commit: `df460f9bbe6251de16b7388de879efde5ae48c1b`
+  - test commit: `f2c182b673921b778da6dd27ecc81ceb91c9ba76`
+  - CI workflow commit: `a14832dbcb0741ebf4ed2992e42c804807f1102e`
+  - CI run: `36122315157` / conclusion `success`
+  - manual verification workflow: `.github/workflows/verify-real-session-e2e.yml` (commit `7073385a27acee365e73b3ce281b169bcc234db7`)
+  - runtime execution remains NOT DONE until the hardened Worker is deployed and a real KRX session produces current 09:35/09:40 evidence.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
+
+- **Deployment cutover runbook — DONE**
+  - `DEPLOY_CUTOVER.md`
+  - commit: `d85c812f219dee46259370f555e2d6e8b4b8a8b1`
 
 ## Manual deployment checklist
 
