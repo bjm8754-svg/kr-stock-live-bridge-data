@@ -18,8 +18,24 @@ export default {
     const saved = await env.STOCK_KV.get("watchlist");
     if (!saved) return;
 
-    const codes = normalizeSavedCodes(saved);
+    const watch = normalizeSavedWatchlist(saved);
+    const codes = watch.codes;
     if (!codes.length) return;
+
+    const currentDate =
+      String(kst.getUTCFullYear()) +
+      String(kst.getUTCMonth() + 1).padStart(2, "0") +
+      String(kst.getUTCDate()).padStart(2, "0");
+    if (watch.tradeDate !== currentDate) {
+      await env.STOCK_KV.put("last_watchlist_guard_status", JSON.stringify({
+        status: "FAIL",
+        reason: "WATCHLIST_TRADE_DATE_MISMATCH",
+        expectedTradeDate: currentDate,
+        watchlistTradeDate: watch.tradeDate,
+        atUtc: new Date().toISOString()
+      }));
+      return;
+    }
 
     const capture = await buildGuardedCapture(codes, kst);
     if (capture.status !== "PASS") {
@@ -96,6 +112,7 @@ export default {
 
       if (url.pathname === "/watchlist") {
         const codes = parseCodes(url.searchParams.get("codes"));
+        const tradeDate = url.searchParams.get("tradeDate");
 
         // Read-only watchlist lookup remains public.
         if (!codes.length) {
@@ -103,18 +120,24 @@ export default {
             return methodNotAllowed(["GET", "HEAD"]);
           }
           const saved = await env.STOCK_KV.get("watchlist");
+          const watch = saved ? normalizeSavedWatchlist(saved) : { tradeDate: null, codes: [] };
           return json({
             status: "OK",
-            codes: saved ? normalizeSavedCodes(saved) : []
+            tradeDate: watch.tradeDate,
+            codes: watch.codes
           });
         }
 
-        // Mutating the watchlist requires POST + a shared Worker secret.
+        // Mutating the watchlist requires POST + a shared Worker secret + explicit trade date.
         if (request.method !== "POST") return methodNotAllowed(["POST"]);
         if (!isAuthorizedWrite(request, env)) return unauthorized();
+        if (!/^\d{8}$/.test(String(tradeDate || ""))) {
+          return json({ status: "INVALID_TRADE_DATE" }, 400);
+        }
 
-        await env.STOCK_KV.put("watchlist", JSON.stringify(codes));
-        return json({ status: "WATCHLIST_SAVED", codes });
+        const payload = { tradeDate: String(tradeDate), codes };
+        await env.STOCK_KV.put("watchlist", JSON.stringify(payload));
+        return json({ status: "WATCHLIST_SAVED", ...payload });
       }
 
       if (url.pathname === "/run-now") {
@@ -122,10 +145,24 @@ export default {
         if (!isAuthorizedWrite(request, env)) return unauthorized();
 
         const saved = await env.STOCK_KV.get("watchlist");
-        const codes = saved ? normalizeSavedCodes(saved) : [];
+        const watch = saved ? normalizeSavedWatchlist(saved) : { tradeDate: null, codes: [] };
+        const codes = watch.codes;
         if (!codes.length) return json({ status: "SKIPPED", reason: "EMPTY_WATCHLIST" }, 409);
 
         const kst = new Date(Date.now() + 9 * 60 * 60 * 1000);
+        const currentDate =
+          String(kst.getUTCFullYear()) +
+          String(kst.getUTCMonth() + 1).padStart(2, "0") +
+          String(kst.getUTCDate()).padStart(2, "0");
+        if (watch.tradeDate !== currentDate) {
+          return json({
+            status: "SKIPPED",
+            reason: "WATCHLIST_TRADE_DATE_MISMATCH",
+            expectedTradeDate: currentDate,
+            watchlistTradeDate: watch.tradeDate
+          }, 409);
+        }
+
         const capture = await buildGuardedCapture(codes, kst);
         if (capture.status !== "PASS") {
           return json({
@@ -428,14 +465,31 @@ function formatKstTimestamp(date) {
   return `${y}-${mo}-${d} ${h}:${mi}:${sec}.${ms} KST`;
 }
 
-function normalizeSavedCodes(saved) {
+function normalizeSavedWatchlist(saved) {
   try {
     const parsed = JSON.parse(saved);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.map(validateCode).filter(Boolean).slice(0, 20);
+    if (Array.isArray(parsed)) {
+      return {
+        tradeDate: null,
+        codes: parsed.map(validateCode).filter(Boolean).slice(0, 20)
+      };
+    }
+    if (!parsed || typeof parsed !== "object") {
+      return { tradeDate: null, codes: [] };
+    }
+    return {
+      tradeDate: /^\d{8}$/.test(String(parsed.tradeDate || "")) ? String(parsed.tradeDate) : null,
+      codes: Array.isArray(parsed.codes)
+        ? parsed.codes.map(validateCode).filter(Boolean).slice(0, 20)
+        : []
+    };
   } catch {
-    return [];
+    return { tradeDate: null, codes: [] };
   }
+}
+
+function normalizeSavedCodes(saved) {
+  return normalizeSavedWatchlist(saved).codes;
 }
 
 function isAuthorizedWrite(request, env) {
