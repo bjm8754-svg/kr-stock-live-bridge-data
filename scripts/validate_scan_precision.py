@@ -6,6 +6,7 @@ from pathlib import Path
 
 
 ALLOWED_INVALIDATION_SOURCES = {
+    "CURRENT_REFERENCE_LOW",
     "RECENT_REFERENCE_LOW",
     "PRIOR_REFERENCE_LOW",
     "CORE_ZONE_LOW",
@@ -66,7 +67,7 @@ def main():
                 # ranking support; this is diagnostic, not a structural error.
                 invalidation_above_ranking_support += 1
 
-            if invalidation_source in ("RECENT_REFERENCE_LOW", "PRIOR_REFERENCE_LOW"):
+            if invalidation_source in ("CURRENT_REFERENCE_LOW", "RECENT_REFERENCE_LOW", "PRIOR_REFERENCE_LOW"):
                 ref_low = hierarchy.get("referenceLowInvalidationCandidate")
                 if ref_low is None or not finite_number(ref_low) or not close_enough(invalidation, ref_low):
                     err(f"reference invalidation not traceable to hierarchy: {invalidation} vs {ref_low}")
