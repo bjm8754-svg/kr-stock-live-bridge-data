@@ -14,7 +14,7 @@ def fixture(cutoff="0935"):
     published=f"2026-09-25 09:{35 if cutoff=='0935' else 40}:01.000 KST"
     live={
       "tradeDate":DATE,"publishedAtKst":published,
-      "publisher":{"type":"CLOUDFLARE_WORKER_GITHUB_CONTENTS_API","version":"worker_v3_hardened_money_scan_v1"},
+      "publisher":{"type":"CLOUDFLARE_WORKER_GITHUB_CONTENTS_API","version":"worker_v3_hardened_money_scan_v2"},
       "watchlist":["000001"],
       "history":{"count":n,"from":f"{DATE} 0900","to":f"{DATE} {cutoff}","rows":[row(i) for i in range(n)]},
       "scan":{"status":"PASS","coverage":{"successfulConfigs":4},"turnoverTop":[{"code":"000001"}],"volumeTop":[{"code":"000001"}],"risingLiquid":[{"code":"000001"}]},
