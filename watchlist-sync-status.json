@@ -1,9 +1,9 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "tradeDate": "20260923",
-  "syncedAtUtc": "2026-09-25T10:13:36Z",
+  "syncedAtUtc": "2026-09-25T10:44:52Z",
   "codes": ["009150","353200","007810","000660","036540","222800","005930","003530","041190"],
   "mode": "POST_BEARER",
-  "cloudflareStatus": "",
-  "reason": "MISSING_CLOUDFLARE_WRITE_TOKEN"
+  "cloudflareStatus": "WATCHLIST_SAVED",
+  "reason": "NONE"
 }
