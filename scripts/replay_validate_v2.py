@@ -25,7 +25,7 @@ CASES = [
     # source-derived calibration case: new-listing mini-structure
     {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING","sourceLabel":"NEW_LISTING_SMALL_ABC","sourceDiscoveryFloor":"B_PLUS","sourceNewListingSetupExpected":True},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
-    {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW","sourceReferenceLevel":10000},
+    {"code":"012210","name":"CASE_D","date":"2026-09-09","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_CONFIRMED","sourceReferenceLevel":10000,"sourceYangEumYangExpected":True},
     # source-labeled A-grade example from the 2026-09-03 review
     {"code":"441270","name":"CASE_E","date":"2026-09-03","sourceLabel":"A_GRADE","sourceDiscoveryFloor":"B_PLUS"},
     # source-labeled B+ trading example from the same review
@@ -168,6 +168,11 @@ for case in CASES:
     else:
         source_new_listing_alignment = "NOT_ASSERTED"
 
+    if case.get("sourceYangEumYangExpected"):
+        source_yey_alignment = "MATCH" if bool(out.get("yangEumYang")) else "MISMATCH"
+    else:
+        source_yey_alignment = "NOT_ASSERTED"
+
     rows.append({
         "case": case["name"],
         "code": case["code"],
@@ -180,6 +185,8 @@ for case in CASES:
         "sourceAbcAlignment": source_abc_alignment,
         "sourceNewListingSetupExpected": case.get("sourceNewListingSetupExpected"),
         "sourceNewListingAlignment": source_new_listing_alignment,
+        "sourceYangEumYangExpected": case.get("sourceYangEumYangExpected"),
+        "sourceYangEumYangAlignment": source_yey_alignment,
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
