@@ -1,0 +1,76 @@
+name: Stage E2E Watchlist
+
+on:
+  workflow_dispatch:
+    inputs:
+      trade_date:
+        description: "KRX test trade date in YYYYMMDD"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage-e2e-watchlist
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Validate requested trade date
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATE="${{ inputs.trade_date }}"
+          if ! [[ "$DATE" =~ ^[0-9]{8}$ ]]; then
+            echo "INVALID_TRADE_DATE_FORMAT"
+            exit 1
+          fi
+          python - "$DATE" <<'PY'
+          import sys
+          from datetime import datetime
+          d=sys.argv[1]
+          dt=datetime.strptime(d,"%Y%m%d")
+          if dt.weekday() >= 5:
+              raise SystemExit("WEEKEND_NOT_ALLOWED")
+          print("TRADE_DATE_FORMAT_PASS", d)
+          PY
+
+      - name: Preserve codes and stage date
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATE="${{ inputs.trade_date }}"
+          jq --arg d "$DATE" '.tradeDate=$d | {tradeDate,codes}' watchlist.json > /tmp/watchlist.json
+          mv /tmp/watchlist.json watchlist.json
+          jq -e '.tradeDate == "'"$DATE"'" and (.codes|type=="array") and (.codes|length>0)' watchlist.json >/dev/null
+          cat watchlist.json
+
+      - name: Commit staged watchlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add watchlist.json
+          if git diff --cached --quiet; then
+            echo "NO_CHANGE"
+            exit 0
+          fi
+          git commit -m "stage E2E watchlist for ${{ inputs.trade_date }}"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "STAGE_E2E_WATCHLIST_PASS"
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo "STAGE_E2E_WATCHLIST_PUSH_FAIL"
+          exit 1
