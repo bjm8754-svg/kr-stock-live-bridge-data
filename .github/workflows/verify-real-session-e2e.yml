@@ -1,0 +1,38 @@
+name: Verify Real Session E2E
+
+on:
+  workflow_dispatch:
+    inputs:
+      cutoff:
+        description: "Live cutoff to verify"
+        required: true
+        type: choice
+        options:
+          - "0935"
+          - "0940"
+      asof_date:
+        description: "Optional YYYYMMDD override; leave blank for current KST date"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Validate real-session E2E evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARGS=(--cutoff "${{ inputs.cutoff }}")
+          if [ -n "${{ inputs.asof_date }}" ]; then
+            ARGS+=(--asof-date "${{ inputs.asof_date }}")
+          fi
+          python scripts/validate_real_session_e2e.py "${ARGS[@]}"
