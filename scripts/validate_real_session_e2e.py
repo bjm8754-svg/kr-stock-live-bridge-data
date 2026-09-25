@@ -5,7 +5,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 KST=ZoneInfo("Asia/Seoul")
-BUILD="worker_v3_hardened_money_scan_v1"
+BUILD="worker_v3_hardened_money_scan_v2"
 
 def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
 
