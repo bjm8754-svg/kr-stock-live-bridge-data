@@ -23,7 +23,7 @@ CASES = [
     # source-derived calibration case: long-MA recovery with strong money expansion
     {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"B_GRADE"},
     # source-derived calibration case: new-listing mini-structure
-    {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING","sourceLabel":"NEW_LISTING_SMALL_ABC","sourceDiscoveryFloor":"B_PLUS","sourceNewListingSetupExpected":true},
+    {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING","sourceLabel":"NEW_LISTING_SMALL_ABC","sourceDiscoveryFloor":"B_PLUS","sourceNewListingSetupExpected":True},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
     {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW","sourceReferenceLevel":10000},
     # source-labeled A-grade example from the 2026-09-03 review
@@ -37,7 +37,7 @@ CASES = [
     # explicit negative calibration: source says pattern fit but volume/money were insufficient, so not A-grade
     {"code":"066980","name":"CASE_J","date":"2026-05-20","sourceLabel":"NOT_A_LOW_MONEY","sourceMaxChartGrade":"B_PLUS"},
     # explicit source-labeled ABC candidate; source later deprioritized it for small-cap/credit-risk context
-    {"code":"255440","name":"CASE_K","date":"2026-08-18","expectedTrack":"LONG_HISTORY","sourceLabel":"ABC_CANDIDATE_LOW_CAP","sourceAbcExpected":true},
+    {"code":"255440","name":"CASE_K","date":"2026-08-18","expectedTrack":"LONG_HISTORY","sourceLabel":"ABC_CANDIDATE_LOW_CAP","sourceAbcExpected":True},
 ]
 
 
