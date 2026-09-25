@@ -108,15 +108,21 @@ jobs:
                 (.entryPlan|has("invalidationCandidate")|not) or
                 (.entryPlan|has("nextResistance")|not) or
                 (.entryPlan|has("structuralRR")|not) or
-                (.money|type)!="object" or
-                (.actionScore|type)!="object"
+                (.money|type)!="object"
               )
             ] | length)==0 and
-            ([.briefingCandidates[],.qualifiedPool[],.riskWarnings[] |
+            ([.briefingCandidates[],.qualifiedPool[] |
               select(
                 (.entryPlan|type)!="object" or
                 (.money|type)!="object" or
                 (.actionScore|type)!="object"
+              )
+            ] | length)==0 and
+            ([.riskWarnings[] |
+              select(
+                (.entryPlan|type)!="object" or
+                (.money|type)!="object" or
+                ((.actionScore != null) and ((.actionScore|type)!="object"))
               )
             ] | length)==0
           ' longterm-scan.json >/dev/null; then
