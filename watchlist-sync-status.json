@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "tradeDate": "20260923",
-  "syncedAtUtc": "2026-09-25T10:44:52Z",
+  "tradeDate": "20260928",
+  "syncedAtUtc": "2026-09-25T10:46:36Z",
   "codes": ["009150","353200","007810","000660","036540","222800","005930","003530","041190"],
   "mode": "POST_BEARER",
   "cloudflareStatus": "WATCHLIST_SAVED",
