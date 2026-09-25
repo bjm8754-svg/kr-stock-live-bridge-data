@@ -6,18 +6,18 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 
 | Feature | Implementation evidence | Automated contract/test | Precision status |
 | --- | --- | --- | --- |
-| ABC long-decline/base/recovery | `abc_features`, `abc` output | output-contract/self-test | IMPLEMENTED / PRECISION NOT DONE |
+| ABC long-decline/base/recovery | `abc_features`, `abc` output | output-contract/self-test + source-labeled replay | IMPLEMENTED / PRECISION PARTIAL — real ABC candidate replay match confirmed |
 | Strong reference candle / 더양봉 | `rolling_event_mask`, `deoyangbong`, active reference anchor | reference-candle grading/self-tests | IMPLEMENTED / PRECISION PARTIAL |
 | Core resistance / supply zone / 네모네모 internal logic | `build_core_resistance`, clustered `coreResistance` | pre-current construction + replay calibration | IMPLEMENTED / PRECISION PARTIAL |
 | Long MA structure | MA20/60/120/240/480/600/1000 | output-contract/self-test | IMPLEMENTED / CONTRACT PASS |
 | Ichimoku cloud | `cloud` | output-contract/self-test | IMPLEMENTED / CONTRACT PASS |
 | Money / turnover quality | absolute trading value, avg20 ratio, volume ratio, relative reference money, market-cap turnover | breakout/action/self-tests | IMPLEMENTED / PRECISION PARTIAL |
 | Jindol / Gadol | `breakoutClass`, `classify_breakout` | JINDOL/GADOL regression tests | IMPLEMENTED / PRECISION PARTIAL |
-| Pre-Jindol | `preJindol` | output-contract/self-test | IMPLEMENTED / PRECISION NOT DONE |
-| Acceptance / follow-through | Jindol close acceptance + `actionScore.components.acceptance` | action-score regression path | IMPLEMENTED / PRECISION NOT DONE |
+| Pre-Jindol | `preJindol` | output-contract + qualification/action regression | IMPLEMENTED / CONTRACT PASS; REAL-SAMPLE PRECISION NOT DONE |
+| Acceptance / follow-through | Jindol close acceptance + `actionScore.components.acceptance` | explicit action-score regression path | IMPLEMENTED / CONTRACT PASS; REAL-SAMPLE PRECISION NOT DONE |
 | Retest + supply contraction | `retestOk`, `retestSupply` | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
 | Reacceleration | `reacceleration` / Yang-Eum-Yang | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
-| New-listing separate rail | `track=NEW_LISTING`, `newListingSetup` | synthetic new-listing regression test | IMPLEMENTED / SYNTHETIC PASS; REAL SAMPLE NOT DONE |
+| New-listing separate rail | `track=NEW_LISTING`, `newListingSetup` | synthetic regression + source-labeled real replay | IMPLEMENTED / PRECISION PARTIAL — real new-listing small-ABC replay match confirmed |
 | Structural entry / support / next resistance / R-R | `entryPlan` from detected structure only | support hierarchy + invalidation/R-R regression + source-level replay | IMPLEMENTED / PRECISION PARTIAL |
 | Chart quality S/A/B+ independent of timing | `chartGrade`, `chartCandidates` | independence/reference-integrity tests | IMPLEMENTED / CALIBRATION PARTIAL |
 | Fresh Action Score / anti-selection-memory | `actionScore` | selection-memory invariant regression | IMPLEMENTED / INVARIANT PASS |
@@ -47,6 +47,7 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 - Money-aware market-scan commit `b933e27a701aaee99a645d562df3878dbd37d8fe`; regression-test commit `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`; CI run `35986527136` concluded `success`.
 - Live-health noncritical scan-warning commits `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`; CI run `35986620061` concluded `success`.
 - Canonical compact migration run `36126406033` concluded `success`; `longterm-scan.json` read-back SHA `846e2999f729c5a92deb49779f7e5070317a00f5`, `schemaVersion=YBM_BRIEF_V2`, `tradeDate=20260923`, `chartCandidates=119`, `qualifiedPool=74`, `briefingCandidates=2`, `riskWarnings=86`.
+- ABC/new-listing calibration replay commit `06609a39733001b5efe0af610845c73d10d46be4`; run `36126782084` concluded `success`; persisted report SHA `f22e2ed84d463f969215abf44095725f975805e9`. CASE_C matched the real new-listing setup/floor and CASE_K matched the source-labeled ABC candidate while remaining non-qualified on money/reference quality.
 
 ## Validation still required before final PASS
 
