@@ -25,13 +25,13 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - workflow: `.github/workflows/sync-watchlist.yml`
   - hardening commit: `d8cb5d7918de20ac68a8c078a75ef5f1466c6054`
   - self-test trigger commit: `a53be1d306a9b28d4589a07d18cdd0bec4bcd7dc`
-- **Secure watchlist sync runtime — PARTIAL**
-  - latest `watchlist-sync-status.json` reports `status=FAIL`
-  - reason: `MISSING_CLOUDFLARE_WRITE_TOKEN`
-  - this is expected fail-closed behavior until the secret exists.
-- **Deployed Worker hardening — NOT DONE**
-  - GitHub source/test success is not deployment evidence.
-  - deployed Worker must be replaced with the canonical source and verified.
+- **Secure watchlist sync runtime — PASS**
+  - secure migration run `36125633721` concluded `success`.
+  - next-session staging sync run `36125788350` concluded `success`.
+  - latest verified contract: `status=PASS`, `mode=POST_BEARER`, `cloudflareStatus=WATCHLIST_SAVED`, `reason=NONE`.
+- **Deployed Worker hardening — PASS**
+  - deployed runtime build `worker_v3_hardened_money_scan_v3` verified by public probe.
+  - full deployment security verification run `36125721271` concluded `success`.
 - **Canonical deployed-build fingerprint — PASS (source/test only)**
   - expected build: `worker_v3_hardened_money_scan_v3`
   - Worker build commit: `4bd6cedad8692a263864ddc8b3719999c171945a`
@@ -40,17 +40,16 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - baseline CI run: `36121815540` / conclusion `success`
   - v2 Worker regression run: `36122879058` / conclusion `success`
   - deployment verifier now checks the exact build fingerprint and required capabilities before accepting runtime PASS.
-- **Deployment security verification workflow — DONE (source only)**
+- **Deployment security verification — PASS (runtime)**
   - workflow: `.github/workflows/verify-cloudflare-deployment.yml`
-  - commit: `354f7c2a676e8832ffe4258dbd1912f4313872af`
-  - execution result remains `NOT DONE` until secrets/deployment are configured.
+  - runtime run `36125721271` concluded `success` after secrets/deployment were configured.
 - **Live publisher source — PASS (source/test only)**
   - canonical publisher is now versioned inside `cloudflare/worker_v3_hardened.mjs`.
   - source commit: `ffec767d5243970adb2c58afd0f1df03dc072b3a`.
   - publisher regression-test commit: `0508244cce048ff557e47fb395913663a488cce8`.
   - CI run: `35984912894` / conclusion `success`.
   - publish gate requires a complete contiguous 09:00~09:35 or 09:00~09:40 KV minute chain before writing `live.json`; incomplete history records FAIL and does not publish.
-  - **runtime remains NOT DONE** until the canonical Worker is deployed with `GITHUB_TOKEN` and an actual GitHub `live.json` commit is verified.
+  - deployed build and credential path are now verified; actual 09:35/09:40 `live.json` publication on a real KRX session remains NOT DONE.
 - **Scanner durability / feature-contract execution — PASS**
   - feature-contract commit: `87b3e492974869c63c701223e951a399f8a1e937`
   - replay run: `35977284215` / conclusion `success`
@@ -72,9 +71,10 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - replay run: `35987234904` / conclusion `success`
   - full-market scan run: `35987234840` / conclusion `success`
   - self-test, full KOSPI/KOSDAQ scan and output validation all passed; canonical commit was skipped because the run did not have a new current trading-day payload.
-- **Current canonical scan migration — PARTIAL**
-  - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
-  - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
+- **Current canonical scan migration — PASS**
+  - migration run `36126406033` concluded `success` from the validated full-scan artifact of the latest completed session.
+  - `longterm-scan.json` read-back SHA `846e2999f729c5a92deb49779f7e5070317a00f5`.
+  - `schemaVersion=YBM_BRIEF_V2`, `status=PASS`, `tradeDate=20260923`, `chartCandidates=119`, `qualifiedPool=74`, `briefingCandidates=2`, `riskWarnings=86`.
 - **Master publisher contract read-back — PASS**
   - Library Canonical Master current version: V8 / Library version 47.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_TOKEN`, publisher identity and runtime read-back requirement.
@@ -124,15 +124,10 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
 
 ## Runtime deployment probe
 
-- **Public deployed Worker probe — FAIL / runtime is still legacy**
-  - read-only probe workflow: `.github/workflows/probe-cloudflare-public.yml`
-  - workflow source commit: `7d31756095bba34f0612c0e9494cf8573ab6b5ae`
-  - run: `36123641662` / conclusion `success`
-  - observed root message: `KR Stock Live Bridge V2`
-  - observed root build: `MISSING`
-  - observed watchlist tradeDate: `MISSING`
-  - observed watchlist count: `9`
-  - conclusion: GitHub canonical hardened Worker `worker_v3_hardened_money_scan_v3` is **not deployed yet**. Source/test PASS must not be treated as runtime PASS.
+- **Public deployed Worker probe — PASS**
+  - read-only probe workflow: `.github/workflows/probe-cloudflare-public.yml`.
+  - post-deploy probe job `108039989785`: `build=worker_v3_hardened_money_scan_v3`.
+  - post-staging probe job `108041584860`: `watchlistTradeDate=20260928`, `watchlistCount=9`.
 
 
 - **Manual E2E watchlist staging — READY / not executed**
