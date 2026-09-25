@@ -1,4 +1,5 @@
 const SOURCE = "NAVER_PUBLIC_WEB_ENDPOINT";
+const BUILD_ID = "worker_v3_hardened_money_scan_v1";
 const GITHUB_REPO = "bjm8754-svg/kr-stock-live-bridge-data";
 const GITHUB_BRANCH = "main";
 const LIVE_PUBLISH_TIMES = new Set(["0935", "0940"]);
@@ -170,6 +171,15 @@ export default {
         return json({
           status: "OK",
           message: "KR Stock Live Bridge V2",
+          build: BUILD_ID,
+          capabilities: [
+            "SECURE_WATCHLIST_WRITE",
+            "SEMANTIC_MARKET_GUARD",
+            "CONTIGUOUS_MINUTE_HISTORY",
+            "MONEY_AWARE_MARKET_SCAN",
+            "TURNOVER_ACCELERATION",
+            "GITHUB_LIVE_PUBLISHER"
+          ],
           endpoints: {
             live: "/live?codes=295310,064400",
             chart: "/chart?code=295310",
@@ -325,7 +335,7 @@ async function publishLiveSnapshot(env, codes, capture) {
     source: SOURCE,
     publisher: {
       type: "CLOUDFLARE_WORKER_GITHUB_CONTENTS_API",
-      version: "worker_v3_hardened"
+      version: BUILD_ID
     },
     watchlist: codes,
     history: {
