@@ -1,0 +1,25 @@
+name: Test Real Session E2E Validator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/validate_real_session_e2e.py"
+      - "scripts/test_real_session_e2e.py"
+      - ".github/workflows/test-real-session-e2e.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Run E2E validator tests
+        run: python scripts/test_real_session_e2e.py
