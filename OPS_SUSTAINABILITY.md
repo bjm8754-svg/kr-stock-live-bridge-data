@@ -26,7 +26,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - GitHub source/test success is not deployment evidence.
   - deployed Worker must be replaced with the canonical source and verified.
 - **Canonical deployed-build fingerprint — PASS (source/test only)**
-  - expected build: `worker_v3_hardened_money_scan_v1`
+  - expected build: `worker_v3_hardened_money_scan_v2`
   - Worker build commit: `4bd6cedad8692a263864ddc8b3719999c171945a`
   - regression-test commit: `118a38779da6f91650c654c8573e1c59b72a6eab`
   - CI run: `36121815540` / conclusion `success`
