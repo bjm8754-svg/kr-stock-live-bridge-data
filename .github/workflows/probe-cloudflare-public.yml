@@ -23,18 +23,14 @@ jobs:
 
           echo "=== ROOT ==="
           ROOT=$(curl --fail --silent --show-error "$BASE/")
-          printf '%s
-' "$ROOT" | jq .
+          echo "$ROOT" | jq .
 
           echo "=== WATCHLIST ==="
           WATCH=$(curl --fail --silent --show-error "$BASE/watchlist")
-          printf '%s
-' "$WATCH" | jq .
+          echo "$WATCH" | jq .
 
           echo "=== SUMMARY ==="
-          echo "build=$(printf '%s' "$ROOT" | jq -r '.build // "MISSING"')"
-          echo "message=$(printf '%s' "$ROOT" | jq -r '.message // "MISSING"')"
-          echo "watchlistTradeDate=$(printf '%s' "$WATCH" | jq -r '.tradeDate // "MISSING"')"
-          echo "watchlistCount=$(printf '%s' "$WATCH" | jq -r '(.codes // []) | length')"
-
-# probe-trigger-v1
+          echo "build=$(echo "$ROOT" | jq -r '.build // "MISSING"')"
+          echo "message=$(echo "$ROOT" | jq -r '.message // "MISSING"')"
+          echo "watchlistTradeDate=$(echo "$WATCH" | jq -r '.tradeDate // "MISSING"')"
+          echo "watchlistCount=$(echo "$WATCH" | jq -r '(.codes // []) | length')"
