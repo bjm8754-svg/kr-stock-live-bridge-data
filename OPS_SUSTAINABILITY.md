@@ -33,7 +33,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - GitHub source/test success is not deployment evidence.
   - deployed Worker must be replaced with the canonical source and verified.
 - **Canonical deployed-build fingerprint — PASS (source/test only)**
-  - expected build: `worker_v3_hardened_money_scan_v2`
+  - expected build: `worker_v3_hardened_money_scan_v3`
   - Worker build commit: `4bd6cedad8692a263864ddc8b3719999c171945a`
   - regression-test commit: `118a38779da6f91650c654c8573e1c59b72a6eab`
   - v2 fingerprint/test commit: `7ac059717131c543d18cc20f41760ba3c076bb8d`
@@ -50,7 +50,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - publisher regression-test commit: `0508244cce048ff557e47fb395913663a488cce8`.
   - CI run: `35984912894` / conclusion `success`.
   - publish gate requires a complete contiguous 09:00~09:35 or 09:00~09:40 KV minute chain before writing `live.json`; incomplete history records FAIL and does not publish.
-  - **runtime remains NOT DONE** until the canonical Worker is deployed with `GITHUB_PUBLISH_TOKEN` and an actual GitHub `live.json` commit is verified.
+  - **runtime remains NOT DONE** until the canonical Worker is deployed with `GITHUB_TOKEN` and an actual GitHub `live.json` commit is verified.
 - **Scanner durability / feature-contract execution — PASS**
   - feature-contract commit: `87b3e492974869c63c701223e951a399f8a1e937`
   - replay run: `35977284215` / conclusion `success`
@@ -77,7 +77,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
 - **Master publisher contract read-back — PASS**
   - Library Canonical Master current version: V8 / Library version 47.
-  - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
+  - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_TOKEN`, publisher identity and runtime read-back requirement.
 - **Money-aware intraday ranked scan — PASS (source/test)**
   - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
   - regression-test commit: `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`.
@@ -107,7 +107,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 1. Deploy `cloudflare/worker_v3_hardened.mjs` to Worker `kr-stock-live-bridge` while preserving the `STOCK_KV` binding.
 2. Set a strong Cloudflare Worker secret named `WRITE_TOKEN`.
 3. Set GitHub Actions secret `CLOUDFLARE_WRITE_TOKEN` to the same value.
-4. Set Cloudflare Worker secret `GITHUB_PUBLISH_TOKEN` to a repository-scoped token that can update `live.json` only as narrowly as practical.
+4. Set Cloudflare Worker secret `GITHUB_TOKEN` to a repository-scoped token that can update `live.json` only as narrowly as practical.
 5. Run `Verify Cloudflare Worker Deployment` manually. It must confirm:
    - public read-only `/watchlist` returns the current codes;
    - unauthenticated mutating GET is `405`;
@@ -132,7 +132,7 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
   - observed root build: `MISSING`
   - observed watchlist tradeDate: `MISSING`
   - observed watchlist count: `9`
-  - conclusion: GitHub canonical hardened Worker `worker_v3_hardened_money_scan_v2` is **not deployed yet**. Source/test PASS must not be treated as runtime PASS.
+  - conclusion: GitHub canonical hardened Worker `worker_v3_hardened_money_scan_v3` is **not deployed yet**. Source/test PASS must not be treated as runtime PASS.
 
 
 - **Manual E2E watchlist staging — READY / not executed**
