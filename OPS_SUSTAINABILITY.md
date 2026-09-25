@@ -44,11 +44,17 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - post-fix replay run: `35983214293` / conclusion `success`
   - post-fix full-market scan run: `35983214306` / conclusion `success`
   - on the 2026-09-24 non-trading day, both full-market validations passed and the canonical commit step was correctly `skipped`.
+- **Post-R/R full-market regression — PASS**
+  - scanner invalidation/R-R commit: `834f13b92cbe0b5eb64dfe03d40ff281faded45e`
+  - regression-test commit: `38c033e1dfcb5287ca4b53f004772ecfc2abb937`
+  - replay run: `35987234904` / conclusion `success`
+  - full-market scan run: `35987234840` / conclusion `success`
+  - self-test, full KOSPI/KOSDAQ scan and output validation all passed; canonical commit was skipped because the run did not have a new current trading-day payload.
 - **Current canonical scan migration — PARTIAL**
   - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
 - **Master publisher contract read-back — PASS**
-  - Library Canonical Master current version: V8 / Library version 44.
+  - Library Canonical Master current version: V8 / Library version 45.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
 - **Money-aware intraday ranked scan — PASS (source/test)**
   - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
