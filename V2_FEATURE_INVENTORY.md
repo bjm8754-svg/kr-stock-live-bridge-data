@@ -21,7 +21,7 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 | Structural entry / support / next resistance / R-R | `entryPlan` from detected structure only | support hierarchy + invalidation/R-R regression + source-level replay | IMPLEMENTED / PRECISION PARTIAL |
 | Chart quality S/A/B+ independent of timing | `chartGrade`, `chartCandidates` | independence/reference-integrity tests | IMPLEMENTED / CALIBRATION PARTIAL |
 | Fresh Action Score / anti-selection-memory | `actionScore` | selection-memory invariant regression | IMPLEMENTED / INVARIANT PASS |
-| Compact canonical handoff | `YBM_BRIEF_V2` | compact-schema test | PARTIAL — current canonical scan is still the 2026-09-23 pre-chart-grade migration |
+| Compact canonical handoff | `YBM_BRIEF_V2` | compact-schema test + canonical read-back | PASS — latest completed 2026-09-23 session migrated to chart-first canonical |
 
 ## Intraday operational contract
 
@@ -46,6 +46,7 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 - Current `scripts/test_longterm_scan_v2.py` explicitly checks the agreed structural field contract, long-MA keys, Jindol/Gadol boundary, new-listing rail, selection-memory independence, chart-grade/reference integrity and the fresh-discovery B+ fallback.
 - Money-aware market-scan commit `b933e27a701aaee99a645d562df3878dbd37d8fe`; regression-test commit `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`; CI run `35986527136` concluded `success`.
 - Live-health noncritical scan-warning commits `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`; CI run `35986620061` concluded `success`.
+- Canonical compact migration run `36126406033` concluded `success`; `longterm-scan.json` read-back SHA `846e2999f729c5a92deb49779f7e5070317a00f5`, `schemaVersion=YBM_BRIEF_V2`, `tradeDate=20260923`, `chartCandidates=119`, `qualifiedPool=74`, `briefingCandidates=2`, `riskWarnings=86`.
 
 ## Validation still required before final PASS
 
