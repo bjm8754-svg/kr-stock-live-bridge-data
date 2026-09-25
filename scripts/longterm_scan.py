@@ -571,12 +571,28 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         return max(valid, key=lambda z: z[0]) if valid else (None, None)
 
     active_ref = recent_anchor if recent_anchor else prior_event
+    ref_source = (active_ref or {}).get("source")
+    if ref_source == "CURRENT_COMPLETED_REFERENCE":
+        ref_prefix = "CURRENT_REFERENCE"
+    elif recent_anchor:
+        ref_prefix = "RECENT_REFERENCE"
+    else:
+        ref_prefix = "PRIOR_REFERENCE"
+
+    ref_levels = [
+        ((active_ref or {}).get("open"), f"{ref_prefix}_OPEN"),
+        ((active_ref or {}).get("close"), f"{ref_prefix}_CLOSE"),
+    ] if active_ref else []
     reference_support = nearest_level([
-        ((active_ref or {}).get("open"), "RECENT_REFERENCE_OPEN" if recent_anchor else "PRIOR_REFERENCE_OPEN"),
-        ((active_ref or {}).get("close"), "RECENT_REFERENCE_CLOSE" if recent_anchor else "PRIOR_REFERENCE_CLOSE"),
+        (value, source)
+        for value, source in ref_levels
+        if value is not None and (pct(close, float(value)) or 0) >= float(cfg["entryPlanMinMeaningfulSupportDistancePct"])
     ]) if active_ref else (None, None)
+    if reference_support[0] is None and active_ref:
+        reference_support = nearest_level(ref_levels)
+
     reference_low = nearest_level([
-        ((active_ref or {}).get("low"), "RECENT_REFERENCE_LOW" if recent_anchor else "PRIOR_REFERENCE_LOW"),
+        ((active_ref or {}).get("low"), f"{ref_prefix}_LOW"),
     ]) if active_ref else (None, None)
     core_support = nearest_level([
         ((core or {}).get("zoneLow"), "CORE_ZONE_LOW"),
@@ -1278,7 +1294,18 @@ def analyze_frame(meta, raw_df, cfg):
         else "LIGHT"
     )
 
-    entry_plan = build_structural_entry_plan(cur, core, ma, prior_event, anchor, cfg)
+    # For next-session planning a newly completed strong reference candle supersedes
+    # the older acceptance anchor. This keeps entry/invalidation aligned with the same
+    # current-reference logic used by chart grading.
+    entry_anchor = anchor
+    if current_deoyang:
+        entry_anchor = event_info(df, len(df) - 1)
+        entry_anchor["source"] = "CURRENT_COMPLETED_REFERENCE"
+    elif entry_anchor:
+        entry_anchor = dict(entry_anchor)
+        entry_anchor["source"] = "RECENT_REFERENCE"
+
+    entry_plan = build_structural_entry_plan(cur, core, ma, prior_event, entry_anchor, cfg)
 
     warnings = []
     if anomaly:
