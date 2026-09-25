@@ -28,7 +28,22 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Detect future-staged watchlist
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
+          WATCH_DATE=$(jq -r '.tradeDate // empty' watchlist.json)
+          if [[ "$WATCH_DATE" =~ ^[0-9]{8}$ ]] && [ "$WATCH_DATE" > "$TODAY" ]; then
+            echo "skip_future=true" >> "$GITHUB_OUTPUT"
+            echo "FUTURE_WATCHLIST_STAGED_SKIP today=$TODAY watchDate=$WATCH_DATE"
+          else
+            echo "skip_future=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Validate semantic freshness
+        if: steps.gate.outputs.skip_future != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -36,6 +51,7 @@ jobs:
           cat live-health.json
 
       - name: Commit live health
+        if: steps.gate.outputs.skip_future != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -59,6 +75,7 @@ jobs:
           fi
 
       - name: Enforce fail-closed status
+        if: steps.gate.outputs.skip_future != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -68,3 +85,7 @@ jobs:
             jq . live-health.json
             exit 1
           fi
+
+      - name: Confirm future staging skip
+        if: steps.gate.outputs.skip_future == 'true'
+        run: echo "FUTURE_WATCHLIST_STAGING_PASS"
