@@ -78,3 +78,13 @@ A full-market structural-level validator is now part of the scanner workflow. It
 - conclusion: `success`
 
 The first validator run deliberately failed because it assumed invalidation must always sit below the selected ranking support. Artifact inspection showed that assumption was wrong: ranking support intentionally ignores levels that are too close to current price, while a valid reference-low invalidation can sit above the deeper ranking support. The validator was corrected to test traceability instead of enforcing the false ordering. This was a validator defect, not hidden by loosening the scanner.
+
+
+## ABC / new-listing separation
+
+Replay commit `06609a39733001b5efe0af610845c73d10d46be4`; run `36126782084` concluded success; persisted report SHA `f22e2ed84d463f969215abf44095725f975805e9`.
+
+- **CASE_C / 064400 / 2026-05-12:** source-labeled real new-listing small-ABC example. System returned `track=NEW_LISTING`, `signal=NEW_LISTING_SETUP`, chart grade `B_PLUS`, qualified=true. Both source discovery floor and new-listing setup alignment are `MATCH`.
+- **CASE_K / 255440 / 2026-08-18:** source-labeled ABC candidate that was separately deprioritized in the source context. System returned `signal=ABC_CANDIDATE` and ABC alignment `MATCH`, but chart grade `BELOW_B_PLUS`, qualified=false, Action Score RADAR because strong-reference/money quality was insufficient.
+
+This is desirable separation: recognizing an ABC-shaped structure does not automatically promote it to a tradable A/B+ candidate. Structural recognition and execution quality remain separate layers. These two cases improve calibration coverage but do not justify a population precision/recall claim.
