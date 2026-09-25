@@ -173,7 +173,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   const kv=new KV(init);
   await worker.scheduled(
     {scheduledTime:Date.parse('2026-09-24T00:35:00Z')},
-    {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_PUBLISH_TOKEN:'gh-token'}
+    {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_TOKEN:'gh-token'}
   );
   assert(githubWrites.length===1,'09:35 did not publish live.json');
   const req=githubWrites[0];
@@ -206,7 +206,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   try {
     await worker.scheduled(
       {scheduledTime:Date.parse('2026-09-24T00:35:00Z')},
-      {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_PUBLISH_TOKEN:'gh-token'}
+      {STOCK_KV:kv,WRITE_TOKEN:'secret',GITHUB_TOKEN:'gh-token'}
     );
   } catch (e) {
     threw=true;
@@ -239,7 +239,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   const res=await worker.fetch(new Request('https://x/'),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
   assert(res.status===200,'root endpoint failed');
   const body=await res.json();
-  assert(body.build==='worker_v3_hardened_money_scan_v2','wrong build fingerprint');
+  assert(body.build==='worker_v3_hardened_money_scan_v3','wrong build fingerprint');
   assert(body.capabilities.includes('MONEY_AWARE_MARKET_SCAN'),'money scan capability missing');
   assert(body.capabilities.includes('GITHUB_LIVE_PUBLISHER'),'publisher capability missing');
 }
