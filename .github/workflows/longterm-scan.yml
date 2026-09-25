@@ -7,6 +7,7 @@ on:
     paths:
       - "scripts/longterm_scan.py"
       - "scripts/test_longterm_scan_v2.py"
+      - "scripts/validate_scan_precision.py"
       - "longterm-scan-config.json"
       - "requirements-scanner.txt"
       - ".github/workflows/longterm-scan.yml"
@@ -49,6 +50,10 @@ jobs:
             --config longterm-scan-config.json \
             --output /tmp/longterm-scan-full.json \
             --brief-output longterm-scan.json
+
+      - name: Validate execution-level invariants
+        run: |
+          python scripts/validate_scan_precision.py /tmp/longterm-scan-full.json
 
       - name: Validate scan output
         shell: bash
