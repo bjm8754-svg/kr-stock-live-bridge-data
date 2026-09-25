@@ -120,3 +120,16 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
 ## Restart rule
 
 Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the remaining `NOT DONE` / `UNKNOWN` sustainability items above are resolved and the real-session E2E passes.
+
+
+## Runtime deployment probe
+
+- **Public deployed Worker probe — FAIL / runtime is still legacy**
+  - read-only probe workflow: `.github/workflows/probe-cloudflare-public.yml`
+  - workflow source commit: `7d31756095bba34f0612c0e9494cf8573ab6b5ae`
+  - run: `36123641662` / conclusion `success`
+  - observed root message: `KR Stock Live Bridge V2`
+  - observed root build: `MISSING`
+  - observed watchlist tradeDate: `MISSING`
+  - observed watchlist count: `9`
+  - conclusion: GitHub canonical hardened Worker `worker_v3_hardened_money_scan_v2` is **not deployed yet**. Source/test PASS must not be treated as runtime PASS.
