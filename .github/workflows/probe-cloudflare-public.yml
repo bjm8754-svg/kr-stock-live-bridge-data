@@ -36,3 +36,5 @@ jobs:
           echo "message=$(printf '%s' "$ROOT" | jq -r '.message // "MISSING"')"
           echo "watchlistTradeDate=$(printf '%s' "$WATCH" | jq -r '.tradeDate // "MISSING"')"
           echo "watchlistCount=$(printf '%s' "$WATCH" | jq -r '(.codes // []) | length')"
+
+# probe-trigger-v1
