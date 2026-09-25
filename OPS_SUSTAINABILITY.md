@@ -20,7 +20,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - CI run: `36122775314` / conclusion `success`
   - Worker KV now stores `{tradeDate,codes}`; scheduled capture fails closed before minute collection when the watchlist date is stale.
   - sync workflow trade-date commit: `1b234d6bcd29187b670a011d889b531ad205a97e`
-  - runtime sync remains FAIL until `CLOUDFLARE_WRITE_TOKEN` exists.
+  - runtime secure sync is now verified PASS; see `Secure watchlist sync runtime` below.
 - **Secure watchlist sync source — DONE**
   - workflow: `.github/workflows/sync-watchlist.yml`
   - hardening commit: `d8cb5d7918de20ac68a8c078a75ef5f1466c6054`
@@ -76,7 +76,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - `longterm-scan.json` read-back SHA `846e2999f729c5a92deb49779f7e5070317a00f5`.
   - `schemaVersion=YBM_BRIEF_V2`, `status=PASS`, `tradeDate=20260923`, `chartCandidates=119`, `qualifiedPool=74`, `briefingCandidates=2`, `riskWarnings=86`.
 - **Master publisher contract read-back — PASS**
-  - Library Canonical Master current version: V8 / Library version 47.
+  - Library Canonical Master: V8; latest read-back confirms the current v3 Worker/publisher contract.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_TOKEN`, publisher identity and runtime read-back requirement.
 - **Money-aware intraday ranked scan — PASS (source/test)**
   - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
@@ -95,27 +95,23 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - baseline CI run: `36122315157` / conclusion `success`
   - v2 E2E test run: `36122907705` / conclusion `success`
   - manual verification workflow: `.github/workflows/verify-real-session-e2e.yml` (commit `7073385a27acee365e73b3ce281b169bcc234db7`)
-  - runtime execution remains NOT DONE until the hardened Worker is deployed and a real KRX session produces current 09:35/09:40 evidence.
+  - hardened Worker deployment is PASS; runtime E2E remains NOT DONE until a real KRX session produces current 09:35/09:40 evidence.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
 
 - **Deployment cutover runbook — DONE**
   - `DEPLOY_CUTOVER.md`
   - commit: `d85c812f219dee46259370f555e2d6e8b4b8a8b1`
 
-## Manual deployment checklist
+## Cutover / remaining runtime checklist
 
-1. Deploy `cloudflare/worker_v3_hardened.mjs` to Worker `kr-stock-live-bridge` while preserving the `STOCK_KV` binding.
-2. Set a strong Cloudflare Worker secret named `WRITE_TOKEN`.
-3. Set GitHub Actions secret `CLOUDFLARE_WRITE_TOKEN` to the same value.
-4. Set Cloudflare Worker secret `GITHUB_TOKEN` to a repository-scoped token that can update `live.json` only as narrowly as practical.
-5. Run `Verify Cloudflare Worker Deployment` manually. It must confirm:
-   - public read-only `/watchlist` returns the current codes;
-   - unauthenticated mutating GET is `405`;
-   - unauthenticated mutating POST is `401`;
-   - authenticated POST returns `WATCHLIST_SAVED` with exact codes.
-6. Re-run `Sync Cloudflare Watchlist`; require current-date `watchlist-sync-status.json` with `status=PASS`, `mode=POST_BEARER`, `reason=NONE`.
-7. At 09:35/09:40 verify the deployed Worker writes `live.json` with `publisher.type=CLOUDFLARE_WORKER_GITHUB_CONTENTS_API`, exact watchlist, contiguous history and a matching `last_publish_status=PASS`.
-8. On the next real KRX session, verify 08:15 -> watchlist sync -> 09:00~09:40 minute history -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION.
+1. **DONE** — deploy canonical Worker with `STOCK_KV` preserved.
+2. **DONE** — configure Worker `WRITE_TOKEN`.
+3. **DONE** — configure matching GitHub Actions `CLOUDFLARE_WRITE_TOKEN`.
+4. **DONE** — reuse verified repository-scoped Worker `GITHUB_TOKEN` for `live.json` publication.
+5. **PASS** — deployment/security verification run `36125721271`.
+6. **PASS** — secure POST_BEARER watchlist sync; 2026-09-28 staging run `36125788350`.
+7. **NOT DONE** — on a real KRX session, verify 09:35/09:40 `live.json` publisher identity, exact watchlist, contiguous history and matching publication evidence.
+8. **NOT DONE** — complete full 08:15 -> sync -> 09:00~09:40 -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION E2E.
 
 ## Restart rule
 
@@ -130,11 +126,10 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
   - post-staging probe job `108041584860`: `watchlistTradeDate=20260928`, `watchlistCount=9`.
 
 
-- **Manual E2E watchlist staging — READY / not executed**
-  - workflow: `.github/workflows/stage-e2e-watchlist.yml`
-  - syntax/registration commit: `669f18edf0da25d8d2ea23f4e6f3beec46650d6a`
-  - push validation run: `36123864116`; job intentionally `skipped` because only workflow_dispatch may mutate the watchlist.
-  - purpose: stage only `tradeDate` for an infrastructure E2E while the three ChatGPT stock automations remain OFF; existing codes are preserved.
+- **Manual E2E watchlist staging — PASS / staged for 2026-09-28**
+  - workflow: `.github/workflows/stage-e2e-watchlist.yml` remains available for manual staging.
+  - actual 2026-09-28 staging was committed directly in `watchlist.json` with codes preserved; secure sync run `36125788350` concluded `success`.
+  - the three ChatGPT stock automations remain OFF pending real-session E2E.
 
 
 ## Secure runtime cutover
