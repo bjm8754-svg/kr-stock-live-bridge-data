@@ -30,6 +30,7 @@ def main():
     errors = []
     checked = 0
     rr_checked = 0
+    invalidation_above_ranking_support = 0
 
     for row in rows:
         code = str(row.get("code") or "?")
@@ -60,7 +61,20 @@ def main():
             if invalidation_source not in ALLOWED_INVALIDATION_SOURCES:
                 err(f"invalid invalidationSource={invalidation_source}")
             if nearest is not None and finite_number(nearest) and float(invalidation) > float(nearest) + 0.01:
-                err(f"invalidation above nearestSupport: {invalidation}>{nearest}")
+                # The ranking support intentionally ignores levels that are too close to current
+                # price. A valid reference-low invalidation can therefore sit above that deeper
+                # ranking support; this is diagnostic, not a structural error.
+                invalidation_above_ranking_support += 1
+
+            if invalidation_source in ("RECENT_REFERENCE_LOW", "PRIOR_REFERENCE_LOW"):
+                ref_low = hierarchy.get("referenceLowInvalidationCandidate")
+                if ref_low is None or not finite_number(ref_low) or not close_enough(invalidation, ref_low):
+                    err(f"reference invalidation not traceable to hierarchy: {invalidation} vs {ref_low}")
+            elif invalidation_source == "CORE_ZONE_LOW":
+                core = row.get("coreResistance") or {}
+                zone_low = core.get("zoneLow")
+                if zone_low is None or not finite_number(zone_low) or not close_enough(invalidation, zone_low):
+                    err(f"core invalidation not traceable to zoneLow: {invalidation} vs {zone_low}")
         elif invalidation_source is not None:
             err(f"invalidationSource without invalidation={invalidation_source}")
 
@@ -103,6 +117,7 @@ def main():
         "candidateCount": len(rows),
         "entryPlanChecked": checked,
         "rrChecked": rr_checked,
+        "invalidationAboveRankingSupportCount": invalidation_above_ranking_support,
         "errorCount": len(errors),
         "errors": errors[:100],
     }
