@@ -12,7 +12,7 @@ Evidence-only calibration record. Source labels are calibration controls, not gr
 | Korea Kolmar 161890 / 2026-07-02 | source calls the setup A-grade and describes supply/prior-high breakout | chart B_PLUS; timing RADAR | PASS for discovery floor; exact A mapping not asserted |
 | Samwha Capacitor 001820 / 2026-05-20 | source calls it A-grade | chart A; JINDOL_CONFIRMED; WATCH_TRIGGER | PASS |
 | Vinatech 126340 / 2026-09-16 | source calls it B+ | chart B_PLUS; timing RADAR | PASS for chart-quality label; timing remains independently stricter |
-| Sammi Metal 012210 / 2026-09-10 | source reviews deoyang/cloud breakout and Yang-Eum-Yang sequence | chart B_PLUS; RETEST_OK | PARTIAL — structure aligns, execution-line precision still under review |
+| Sammi Metal 012210 / 2026-09-09 | source confirms deoyang/cloud breakout + Yang-Eum-Yang sequence | chart B_PLUS; REACCELERATION; `yangEumYang=true`; qualified | PASS for pattern recognition / execution timing remains independently gated |
 
 Persisted replay evidence: `v2-replay-report.json`. Source labels are now treated only as a discovery floor, not an exact A/B+ reproduction target. Replay semantics commit `bf8ce822011b12dcef1353525af10e19d2a841b5`; run `35985452972` concluded success.
 
@@ -46,7 +46,7 @@ The source hierarchy emphasizes strong-reference open/close first, then meaningf
 ## Additional FP/FN evidence
 
 - **Low-money negative control — PASS:** Hanseong Clean Tech 066980 / 2026-05-20 was source-labeled as pattern-compatible but not A-grade because volume/money were insufficient. Replay case CASE_J produced `BELOW_B_PLUS`, `qualified=false`, Action Score 18.8 / RADAR. Replay commit `7b62676c385262a5d7e9d01ce3ce3ead492d26f5`; run `35985982065` concluded success.
-- **Source-level calibration — PASS for two explicit examples:** replay commit `ccbb4b4db718c5e9d1e589d4ecf078f3d03cf9b6`; run `35986185265` concluded success. Sammi Metal's source 10,000 reference was matched by structural reference-low 10,040 (0.4% gap). Kumkang Steel's source support 5,800~6,000 was matched by core support 5,759.58 (0.685% below the range). These are calibration matches, not a statistical precision claim.
+- **Source-level calibration — PASS for two explicit examples:** latest source-aligned replay run `36127517613` concluded success. Sammi Metal's source 10,000 reference was matched by core support 9,981.79 (0.182% gap); the same completed candle's structural invalidation is 10,040. Kumkang Steel's source support 5,800~6,000 was matched by core support 5,759.58 (0.685% below the range). These are calibration matches, not a statistical precision claim.
 - **Positive discovery controls:** six source-labeled A/B+ examples currently all meet at least the B+ discovery floor in replay. This supports FN control but is still too small to claim a population precision/recall rate.
 
 
@@ -88,3 +88,20 @@ Replay commit `06609a39733001b5efe0af610845c73d10d46be4`; run `36126782084` conc
 - **CASE_K / 255440 / 2026-08-18:** source-labeled ABC candidate that was separately deprioritized in the source context. System returned `signal=ABC_CANDIDATE` and ABC alignment `MATCH`, but chart grade `BELOW_B_PLUS`, qualified=false, Action Score RADAR because strong-reference/money quality was insufficient.
 
 This is desirable separation: recognizing an ABC-shaped structure does not automatically promote it to a tradable A/B+ candidate. Structural recognition and execution quality remain separate layers. These two cases improve calibration coverage but do not justify a population precision/recall claim.
+
+
+## Yang-Eum-Yang cutoff correction and current-reference entry plan
+
+The source discussion occurred shortly after midnight on 2026-09-10 and described the completed 2026-09-09 candle sequence. Replaying CASE_D at 2026-09-10 had therefore introduced a one-session look-ahead mismatch. The calibration cutoff was corrected to 2026-09-09 rather than changing the detector to fit a mislabeled date.
+
+- cutoff/alignment commit: `add345540c58c8532eb06ceb452196d9511f45a1`
+- replay run: `36127310717` / success
+- current-reference entry-plan fix: `eb821a46c5126887ad2d2241e4b6bbfbf302e576`
+- provenance validator update: `2448fc3e92a9b3eee84b6d7ef4e77479028f4bb7`
+- regression-test commit: `02bca730ab4ee331ad6c2e6488ff930b0a538965`
+- latest replay run: `36127517613` / success
+- persisted replay report SHA: `e0fe0dbd0ca2736491078037c4008918d450f2b1`
+
+After correction, CASE_D returns `signal=REACCELERATION`, `yangEumYang=true`, and source alignment `MATCH`. The next-session entry plan now uses the newly completed strong reference rather than an older anchor: primary reference support 10,270, current-reference low invalidation 10,040, with the source's 10,000 structural level independently recovered at core support 9,981.79.
+
+The case still remains `RADAR` because price closed far above structural support and no overhead resistance target was detected. That is intentional separation between pattern recognition and chase/no-chase execution quality.
