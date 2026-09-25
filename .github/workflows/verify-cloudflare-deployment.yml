@@ -1,6 +1,10 @@
 name: Verify Cloudflare Worker Deployment
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-cloudflare-deployment.yml"
   workflow_dispatch:
 
 permissions:
