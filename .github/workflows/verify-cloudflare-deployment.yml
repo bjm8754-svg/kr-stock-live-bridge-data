@@ -28,6 +28,12 @@ jobs:
           CODES=$(jq -r '.codes | join(",")' watchlist.json)
           EXPECTED=$(jq -c '.codes' watchlist.json)
           BASE="https://kr-stock-live-bridge.bjm8754.workers.dev"
+          EXPECTED_BUILD="worker_v3_hardened_money_scan_v1"
+
+          ROOT=$(curl --fail --silent --show-error "$BASE/")
+          test "$(printf '%s' "$ROOT" | jq -r '.build // empty')" = "$EXPECTED_BUILD"
+          printf '%s' "$ROOT" | jq -e '.capabilities | index("MONEY_AWARE_MARKET_SCAN") != null' >/dev/null
+          printf '%s' "$ROOT" | jq -e '.capabilities | index("GITHUB_LIVE_PUBLISHER") != null' >/dev/null
 
           READ=$(curl --fail --silent --show-error "$BASE/watchlist")
           READ_CODES=$(printf '%s' "$READ" | jq -c '.codes // []')
@@ -38,6 +44,12 @@ jobs:
 
           POST_CODE=$(curl --silent --output /tmp/post-body --write-out "%{http_code}" --request POST "$BASE/watchlist?codes=${CODES}")
           test "$POST_CODE" = "401"
+
+          RUN_NOW_CODE=$(curl --silent --output /tmp/run-now-body --write-out "%{http_code}" --request POST "$BASE/run-now")
+          test "$RUN_NOW_CODE" = "401"
+
+          KV_TEST_CODE=$(curl --silent --output /tmp/kv-test-body --write-out "%{http_code}" --request POST "$BASE/kv-test")
+          test "$KV_TEST_CODE" = "401"
 
           AUTH=$(curl --fail --silent --show-error \
             --request POST \
