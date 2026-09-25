@@ -7,6 +7,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-09",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -308,6 +312,10 @@
     "sourceDiscoveryAlignment": "NOT_ASSERTED",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -553,11 +561,15 @@
   {
     "case": "CASE_C",
     "code": "064400",
-    "sourceLabel": null,
-    "sourceDiscoveryFloor": null,
-    "sourceDiscoveryAlignment": "NOT_ASSERTED",
+    "sourceLabel": "NEW_LISTING_SMALL_ABC",
+    "sourceDiscoveryFloor": "B_PLUS",
+    "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": true,
+    "sourceNewListingAlignment": "MATCH",
     "date": "2026-05-12",
     "track": "NEW_LISTING",
     "signal": "NEW_LISTING_SETUP",
@@ -807,6 +819,10 @@
     "sourceDiscoveryAlignment": "NOT_ASSERTED",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-10",
     "track": "LONG_HISTORY",
     "signal": "RETEST_OK",
@@ -1061,6 +1077,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "MA600_BREAKOUT",
@@ -1331,6 +1351,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -1627,6 +1651,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-07-02",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -1813,6 +1841,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-05-20",
     "track": "LONG_HISTORY",
     "signal": "JINDOL_CONFIRMED",
@@ -2035,6 +2067,10 @@
     "sourceDiscoveryAlignment": "MATCH",
     "sourceMaxChartGrade": null,
     "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-09-16",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -2300,6 +2336,10 @@
     "sourceDiscoveryAlignment": "NOT_ASSERTED",
     "sourceMaxChartGrade": "B_PLUS",
     "sourceMaxAlignment": "MATCH",
+    "sourceAbcExpected": null,
+    "sourceAbcAlignment": "NOT_ASSERTED",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
     "date": "2026-05-20",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -2539,6 +2579,268 @@
       "top": 1392.75,
       "bottom": 1391.5,
       "state": "ABOVE"
+    }
+  },
+  {
+    "case": "CASE_K",
+    "code": "255440",
+    "sourceLabel": "ABC_CANDIDATE_LOW_CAP",
+    "sourceDiscoveryFloor": null,
+    "sourceDiscoveryAlignment": "NOT_ASSERTED",
+    "sourceMaxChartGrade": null,
+    "sourceMaxAlignment": "NOT_ASSERTED",
+    "sourceAbcExpected": true,
+    "sourceAbcAlignment": "MATCH",
+    "sourceNewListingSetupExpected": null,
+    "sourceNewListingAlignment": "NOT_ASSERTED",
+    "date": "2026-08-18",
+    "track": "LONG_HISTORY",
+    "signal": "ABC_CANDIDATE",
+    "score": 80,
+    "close": 8490.0,
+    "dayChangePct": 21.81,
+    "chartGrade": {
+      "grade": "BELOW_B_PLUS",
+      "eligible": false,
+      "reasons": [
+        "STRUCT_GOOD",
+        "NO_REF_100B",
+        "CORE_STRONG",
+        "CLOUD_INSIDE",
+        "REFERENCE_NONE"
+      ],
+      "referenceMoneyKrw": 0.0,
+      "referenceMoneySource": null,
+      "referenceState": "NONE",
+      "referenceHoldLine": null,
+      "referenceLow": null,
+      "selectionMemoryUsed": false,
+      "timingInputsUsed": false
+    },
+    "qualified": false,
+    "actionScore": {
+      "total": 44.2,
+      "briefingTier": "RADAR",
+      "components": {
+        "structure": 15.2,
+        "moneyQuality": 4.0,
+        "entryQuality": 8.0,
+        "structuralRR": 15.0,
+        "acceptance": 2.0,
+        "riskPenalty": 0.0
+      },
+      "actionableForBriefing": false,
+      "penaltyReasons": [],
+      "selectionMemoryUsed": false
+    },
+    "entryPlan": {
+      "evaluationReference": 8490.0,
+      "nearestSupport": 8370.0,
+      "supportSource": "CORE_ZONE_LOW",
+      "distanceToSupportPct": 1.43,
+      "invalidationCandidate": 8370.0,
+      "invalidationSource": "CORE_ZONE_LOW",
+      "distanceToInvalidationPct": 1.43,
+      "nextResistance": 8870.0,
+      "nextResistanceLine": 8962.35,
+      "nextResistanceSources": [
+        "MA600",
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceToNextResistancePct": 4.48,
+      "structuralRR": 3.12,
+      "supportHierarchy": {
+        "primaryReferenceSupport": null,
+        "primaryReferenceSource": null,
+        "referenceLowInvalidationCandidate": null,
+        "referenceLowSource": null,
+        "coreSupport": 8479.06,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": null,
+        "longMaSupportSource": null
+      },
+      "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
+    },
+    "sourceLevelCalibration": null,
+    "abc": {
+      "track": "LONG_HISTORY",
+      "state": "B_BASE",
+      "score": 60,
+      "aDeclinePct": 52.24,
+      "bRangePct": 48.82,
+      "bWindowSessions": 60,
+      "ma600Slope60Pct": -0.1,
+      "cActive": false,
+      "cross600Today": false,
+      "bPlus": false,
+      "cStartDate": "20260305"
+    },
+    "deoyangbong": {
+      "today": false,
+      "preferred15Pct": false,
+      "latestPrior": null
+    },
+    "coreResistance": {
+      "line": 8479.06,
+      "zoneLow": 8370.0,
+      "zoneHigh": 8586.8,
+      "score": 19.1,
+      "touches": 16,
+      "sourceCount": 3,
+      "sources": [
+        "MA480",
+        "ROUND_FIGURE",
+        "SWING_HIGH"
+      ],
+      "distanceFromReferencePct": 21.65,
+      "candidateCount": 9,
+      "alternatives": [
+        {
+          "line": 6972.76,
+          "zoneLow": 6900.0,
+          "zoneHigh": 7050.0,
+          "score": 13.1,
+          "touches": 26,
+          "sourceCount": 3,
+          "sources": [
+            "CANDLE_DENSITY",
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 0.04
+        },
+        {
+          "line": 7150.0,
+          "zoneLow": 7100.0,
+          "zoneHigh": 7200.0,
+          "score": 6.1,
+          "touches": 26,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 2.58
+        },
+        {
+          "line": 7313.33,
+          "zoneLow": 7280.42,
+          "zoneHigh": 7346.24,
+          "score": 7.6,
+          "touches": 25,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 4.93
+        },
+        {
+          "line": 7478.01,
+          "zoneLow": 7439.79,
+          "zoneHigh": 7525.0,
+          "score": 12.1,
+          "touches": 20,
+          "sourceCount": 4,
+          "sources": [
+            "CANDLE_DENSITY",
+            "CLOUD_EDGE",
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 7.29
+        },
+        {
+          "line": 7650.0,
+          "zoneLow": 7615.58,
+          "zoneHigh": 7684.42,
+          "score": 6.1,
+          "touches": 11,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 9.76
+        },
+        {
+          "line": 7935.42,
+          "zoneLow": 7880.0,
+          "zoneHigh": 8000.0,
+          "score": 10.1,
+          "touches": 19,
+          "sourceCount": 3,
+          "sources": [
+            "CANDLE_DENSITY",
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 13.85
+        },
+        {
+          "line": 8479.06,
+          "zoneLow": 8370.0,
+          "zoneHigh": 8586.8,
+          "score": 19.1,
+          "touches": 16,
+          "sourceCount": 3,
+          "sources": [
+            "MA480",
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 21.65
+        },
+        {
+          "line": 8650.0,
+          "zoneLow": 8611.08,
+          "zoneHigh": 8688.92,
+          "score": 6.1,
+          "touches": 7,
+          "sourceCount": 1,
+          "sources": [
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 24.1
+        },
+        {
+          "line": 8962.35,
+          "zoneLow": 8870.0,
+          "zoneHigh": 9002.68,
+          "score": 17.4,
+          "touches": 12,
+          "sourceCount": 3,
+          "sources": [
+            "MA600",
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 28.58
+        }
+      ]
+    },
+    "breakoutClass": "NO_BREAK",
+    "preJindol": false,
+    "retestOk": false,
+    "reacceleration": false,
+    "yangEumYang": false,
+    "money": {
+      "band": "LIGHT",
+      "tradingValue": 8575795648.0,
+      "tradingValueEstimatedFromOhlcv": 8575795648.0,
+      "avg20TradingValueEstimated": 5272352929.0,
+      "tradingValueRatio20Estimated": 1.63,
+      "tradingValueQuality": "ESTIMATED",
+      "volume": 1103351.0,
+      "avg20Volume": 968899.0,
+      "volumeRatio20": 1.14,
+      "relativeToPriorReferenceMoney": null,
+      "marketCap": null,
+      "turnoverToMarketCapPct": null
+    },
+    "cloud": {
+      "top": 9725.0,
+      "bottom": 7535.0,
+      "state": "INSIDE"
     }
   }
 ]
