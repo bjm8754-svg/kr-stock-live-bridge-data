@@ -133,3 +133,10 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
   - observed watchlist tradeDate: `MISSING`
   - observed watchlist count: `9`
   - conclusion: GitHub canonical hardened Worker `worker_v3_hardened_money_scan_v2` is **not deployed yet**. Source/test PASS must not be treated as runtime PASS.
+
+
+- **Manual E2E watchlist staging — READY / not executed**
+  - workflow: `.github/workflows/stage-e2e-watchlist.yml`
+  - syntax/registration commit: `669f18edf0da25d8d2ea23f4e6f3beec46650d6a`
+  - push validation run: `36123864116`; job intentionally `skipped` because only workflow_dispatch may mutate the watchlist.
+  - purpose: stage only `tradeDate` for an infrastructure E2E while the three ChatGPT stock automations remain OFF; existing codes are preserved.
