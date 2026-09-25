@@ -23,7 +23,7 @@ CASES = [
     # source-derived calibration case: long-MA recovery with strong money expansion
     {"code":"234690","name":"CASE_B","date":"2026-09-03","expectedTrack":"LONG_HISTORY","sourceLabel":"B_GRADE"},
     # source-derived calibration case: new-listing mini-structure
-    {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING"},
+    {"code":"064400","name":"CASE_C","date":"2026-05-12","expectedTrack":"NEW_LISTING","sourceLabel":"NEW_LISTING_SMALL_ABC","sourceDiscoveryFloor":"B_PLUS","sourceNewListingSetupExpected":true},
     # source-derived calibration case: reference candle -> controlled rest -> follow-through
     {"code":"012210","name":"CASE_D","date":"2026-09-10","expectedTrack":"LONG_HISTORY","sourceLabel":"YANG_EUM_YANG_REVIEW","sourceReferenceLevel":10000},
     # source-labeled A-grade example from the 2026-09-03 review
@@ -36,6 +36,8 @@ CASES = [
     {"code":"126340","name":"CASE_I","date":"2026-09-16","sourceLabel":"B_PLUS","sourceDiscoveryFloor":"B_PLUS"},
     # explicit negative calibration: source says pattern fit but volume/money were insufficient, so not A-grade
     {"code":"066980","name":"CASE_J","date":"2026-05-20","sourceLabel":"NOT_A_LOW_MONEY","sourceMaxChartGrade":"B_PLUS"},
+    # explicit source-labeled ABC candidate; source later deprioritized it for small-cap/credit-risk context
+    {"code":"255440","name":"CASE_K","date":"2026-08-18","expectedTrack":"LONG_HISTORY","sourceLabel":"ABC_CANDIDATE_LOW_CAP","sourceAbcExpected":true},
 ]
 
 
@@ -148,6 +150,24 @@ for case in CASES:
     else:
         source_max_alignment = "NOT_ASSERTED"
 
+    if case.get("sourceAbcExpected"):
+        source_abc_alignment = "MATCH" if (
+            out.get("signal") == "ABC_CANDIDATE"
+            or (out.get("abc") or {}).get("cActive")
+            or (out.get("abc") or {}).get("bPlus")
+            or (out.get("abc") or {}).get("score", 0) >= int(cfg["qualifiedAbcMinScore"])
+        ) else "MISMATCH"
+    else:
+        source_abc_alignment = "NOT_ASSERTED"
+
+    if case.get("sourceNewListingSetupExpected"):
+        source_new_listing_alignment = "MATCH" if (
+            out.get("track") == "NEW_LISTING"
+            and bool(out.get("newListingSetup"))
+        ) else "MISMATCH"
+    else:
+        source_new_listing_alignment = "NOT_ASSERTED"
+
     rows.append({
         "case": case["name"],
         "code": case["code"],
@@ -156,6 +176,10 @@ for case in CASES:
         "sourceDiscoveryAlignment": source_alignment,
         "sourceMaxChartGrade": max_grade,
         "sourceMaxAlignment": source_max_alignment,
+        "sourceAbcExpected": case.get("sourceAbcExpected"),
+        "sourceAbcAlignment": source_abc_alignment,
+        "sourceNewListingSetupExpected": case.get("sourceNewListingSetupExpected"),
+        "sourceNewListingAlignment": source_new_listing_alignment,
         "date": case["date"],
         "track": out["track"],
         "signal": out["signal"],
