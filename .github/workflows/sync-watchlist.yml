@@ -157,3 +157,5 @@ jobs:
         run: |
           set -euo pipefail
           test "${{ steps.sync.outcome }}" = "success"
+
+# secure-sync-trigger-v3
