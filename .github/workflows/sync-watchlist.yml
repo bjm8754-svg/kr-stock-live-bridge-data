@@ -46,15 +46,17 @@ jobs:
         run: |
           set -euo pipefail
           CODES=$(jq -r '.codes | join(",")' watchlist.json)
+          TRADE_DATE=$(jq -r '.tradeDate' watchlist.json)
           REQUESTED=$(jq -c '.codes' watchlist.json)
           echo "requested=$REQUESTED" >> "$GITHUB_OUTPUT"
+          echo "trade_date=$TRADE_DATE" >> "$GITHUB_OUTPUT"
 
           if [ -z "${CLOUDFLARE_WRITE_TOKEN:-}" ]; then
             echo "reason=MISSING_CLOUDFLARE_WRITE_TOKEN" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
-          URL="https://kr-stock-live-bridge.bjm8754.workers.dev/watchlist?codes=${CODES}"
+          URL="https://kr-stock-live-bridge.bjm8754.workers.dev/watchlist?codes=${CODES}&tradeDate=${TRADE_DATE}"
           set +e
           RESPONSE=$(curl --fail --silent --show-error \
             --request POST \
@@ -72,6 +74,7 @@ jobs:
 
           STATUS=$(echo "$RESPONSE" | jq -r '.status // empty')
           RETURNED=$(echo "$RESPONSE" | jq -c '.codes // []')
+          RETURNED_DATE=$(echo "$RESPONSE" | jq -r '.tradeDate // empty')
 
           if [ "$STATUS" != "WATCHLIST_SAVED" ]; then
             echo "reason=UNEXPECTED_WORKER_STATUS" >> "$GITHUB_OUTPUT"
@@ -80,6 +83,11 @@ jobs:
 
           if [ "$RETURNED" != "$REQUESTED" ]; then
             echo "reason=WATCHLIST_CODE_MISMATCH" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+          if [ "$RETURNED_DATE" != "$TRADE_DATE" ]; then
+            echo "reason=WATCHLIST_TRADE_DATE_MISMATCH" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
