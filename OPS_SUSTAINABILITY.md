@@ -157,3 +157,10 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
   - secure sync run `36125788350`: conclusion `success`.
   - public probe re-run job `108041584860`: `build=worker_v3_hardened_money_scan_v3`, `watchlistTradeDate=20260928`, `watchlistCount=9`.
   - this is infrastructure-only staging; the three ChatGPT stock automations remain OFF pending real-session E2E.
+
+
+- **Future-staged watchlist validation noise — FIXED**
+  - future-date staging had caused an expected red `Validate Live Freshness` failure on the holiday/current date.
+  - workflow fix commit: `4cdf8c25af002f72f96a9bffea8eebd584eec05e`.
+  - verification run: `36125961071` / conclusion `success`; semantic freshness/health write/enforce steps were intentionally skipped and `FUTURE_WATCHLIST_STAGING_PASS` completed.
+  - same-day and past-date live validation remain fail-closed.
