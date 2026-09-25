@@ -1,5 +1,5 @@
 const SOURCE = "NAVER_PUBLIC_WEB_ENDPOINT";
-const BUILD_ID = "worker_v3_hardened_money_scan_v2";
+const BUILD_ID = "worker_v3_hardened_money_scan_v3";
 const GITHUB_REPO = "bjm8754-svg/kr-stock-live-bridge-data";
 const GITHUB_BRANCH = "main";
 const LIVE_PUBLISH_TIMES = new Set(["0935", "0940"]);
@@ -323,8 +323,8 @@ export default {
 
 
 async function publishLiveSnapshot(env, codes, capture) {
-  const token = String(env?.GITHUB_PUBLISH_TOKEN || "");
-  if (!token) throw new Error("MISSING_GITHUB_PUBLISH_TOKEN");
+  const token = String(env?.GITHUB_TOKEN || env?.GITHUB_PUBLISH_TOKEN || "");
+  if (!token) throw new Error("MISSING_GITHUB_TOKEN");
 
   const rows = await readMinuteHistory(env.STOCK_KV, capture.date, capture.time);
   const expectedCount = Number(capture.time.slice(2)) + 1;
