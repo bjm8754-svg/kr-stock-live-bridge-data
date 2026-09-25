@@ -224,4 +224,15 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   assert(body.coverage.successfulConfigs===4,'scan coverage incomplete');
 }
 
+// 10) Root endpoint must expose the exact deployable build fingerprint.
+{
+  const kv=new KV({});
+  const res=await worker.fetch(new Request('https://x/'),{STOCK_KV:kv,WRITE_TOKEN:'secret'});
+  assert(res.status===200,'root endpoint failed');
+  const body=await res.json();
+  assert(body.build==='worker_v3_hardened_money_scan_v1','wrong build fingerprint');
+  assert(body.capabilities.includes('MONEY_AWARE_MARKET_SCAN'),'money scan capability missing');
+  assert(body.capabilities.includes('GITHUB_LIVE_PUBLISHER'),'publisher capability missing');
+}
+
 console.log('ALL_TESTS_PASS');
