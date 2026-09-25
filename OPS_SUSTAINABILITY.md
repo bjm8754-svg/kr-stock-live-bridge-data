@@ -14,6 +14,13 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - test commit: `3e5ad1675c372a3137340beb4ef901326f5363c9`
   - CI commit: `6f1a02d0fd43a9fc051194ac73b1a72e06f5445b`
   - CI run: `35975550058` / conclusion `success`
+- **Explicit watchlist trade-date binding — PASS (source/test)**
+  - Worker source commit: `688369894d180b4d1b150e787cc5add3a4d507f9`
+  - regression-test commit: `cbaf4d0be0f4333361875311f512050c92d19d55`
+  - CI run: `36122775314` / conclusion `success`
+  - Worker KV now stores `{tradeDate,codes}`; scheduled capture fails closed before minute collection when the watchlist date is stale.
+  - sync workflow trade-date commit: `1b234d6bcd29187b670a011d889b531ad205a97e`
+  - runtime sync remains FAIL until `CLOUDFLARE_WRITE_TOKEN` exists.
 - **Secure watchlist sync source — DONE**
   - workflow: `.github/workflows/sync-watchlist.yml`
   - hardening commit: `d8cb5d7918de20ac68a8c078a75ef5f1466c6054`
@@ -29,7 +36,9 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - expected build: `worker_v3_hardened_money_scan_v2`
   - Worker build commit: `4bd6cedad8692a263864ddc8b3719999c171945a`
   - regression-test commit: `118a38779da6f91650c654c8573e1c59b72a6eab`
-  - CI run: `36121815540` / conclusion `success`
+  - v2 fingerprint/test commit: `7ac059717131c543d18cc20f41760ba3c076bb8d`
+  - baseline CI run: `36121815540` / conclusion `success`
+  - v2 Worker regression run: `36122879058` / conclusion `success`
   - deployment verifier now checks the exact build fingerprint and required capabilities before accepting runtime PASS.
 - **Deployment security verification workflow — DONE (source only)**
   - workflow: `.github/workflows/verify-cloudflare-deployment.yml`
@@ -50,6 +59,13 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - post-fix replay run: `35983214293` / conclusion `success`
   - post-fix full-market scan run: `35983214306` / conclusion `success`
   - on the 2026-09-24 non-trading day, both full-market validations passed and the canonical commit step was correctly `skipped`.
+- **Cross-sectional execution-level precision invariants — PASS**
+  - validator source: `scripts/validate_scan_precision.py`
+  - initial validator commit: `58a5ddb2dd53f99afcc6a07d0490b21816627737`
+  - workflow integration: `f996142cd898e02d4cf4b3ae55cb237aebfc2ddb`
+  - first run `36121950677` correctly exposed an invalid test invariant rather than a scanner defect.
+  - corrected invariant commit: `cdb4e911612d152f1144bb92cc10ea038e9202f6`
+  - final full-market run: `36122568757` / conclusion `success`; self-tests, full scan, execution-level invariant validation and output validation all passed.
 - **Post-R/R full-market regression — PASS**
   - scanner invalidation/R-R commit: `834f13b92cbe0b5eb64dfe03d40ff281faded45e`
   - regression-test commit: `38c033e1dfcb5287ca4b53f004772ecfc2abb937`
@@ -60,7 +76,7 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - `longterm-scan.json` is compact instead of the old ~6.5 MB payload.
   - current 2026-09-23 source predates the chart-grade layer, so `compatibility.chartCandidatesAvailable=false`; empty `chartCandidates` must not be interpreted as no candidates.
 - **Master publisher contract read-back — PASS**
-  - Library Canonical Master current version: V8 / Library version 46.
+  - Library Canonical Master current version: V8 / Library version 47.
   - read-back confirms canonical Worker source `cloudflare/worker_v3_hardened.mjs`, fail-closed publication at 09:35/09:40, Worker Secret `GITHUB_PUBLISH_TOKEN`, publisher identity and runtime read-back requirement.
 - **Money-aware intraday ranked scan — PASS (source/test)**
   - Worker commit: `b933e27a701aaee99a645d562df3878dbd37d8fe`.
@@ -76,7 +92,8 @@ Evidence-only operating record for `bjm8754-svg/kr-stock-live-bridge-data`.
   - validator commit: `df460f9bbe6251de16b7388de879efde5ae48c1b`
   - test commit: `f2c182b673921b778da6dd27ecc81ceb91c9ba76`
   - CI workflow commit: `a14832dbcb0741ebf4ed2992e42c804807f1102e`
-  - CI run: `36122315157` / conclusion `success`
+  - baseline CI run: `36122315157` / conclusion `success`
+  - v2 E2E test run: `36122907705` / conclusion `success`
   - manual verification workflow: `.github/workflows/verify-real-session-e2e.yml` (commit `7073385a27acee365e73b3ce281b169bcc234db7`)
   - runtime execution remains NOT DONE until the hardened Worker is deployed and a real KRX session produces current 09:35/09:40 evidence.
 - **Real KRX trading-day E2E after hardening — NOT DONE**.
