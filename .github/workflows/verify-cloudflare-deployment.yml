@@ -29,7 +29,7 @@ jobs:
           TRADE_DATE=$(jq -r '.tradeDate' watchlist.json)
           EXPECTED=$(jq -c '.codes' watchlist.json)
           BASE="https://kr-stock-live-bridge.bjm8754.workers.dev"
-          EXPECTED_BUILD="worker_v3_hardened_money_scan_v1"
+          EXPECTED_BUILD="worker_v3_hardened_money_scan_v2"
 
           ROOT=$(curl --fail --silent --show-error "$BASE/")
           test "$(printf '%s' "$ROOT" | jq -r '.build // empty')" = "$EXPECTED_BUILD"
