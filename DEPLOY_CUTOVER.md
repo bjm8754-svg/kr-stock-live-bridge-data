@@ -5,7 +5,7 @@ This is the only manual cutover remaining before real-session E2E. Do not re-ena
 ## Canonical deployable source
 
 - Worker source: `cloudflare/worker_v3_hardened.mjs`
-- expected build fingerprint: `worker_v3_hardened_money_scan_v2`
+- expected build fingerprint: `worker_v3_hardened_money_scan_v3`
 - Worker name / public host: `kr-stock-live-bridge` / `kr-stock-live-bridge.bjm8754.workers.dev`
 - preserve existing KV binding: `STOCK_KV`
 - preserve existing weekday 09:00~09:40 KST minute schedule
@@ -19,7 +19,7 @@ Two unrelated credentials are required.
    - GitHub Actions secret `CLOUDFLARE_WRITE_TOKEN` must contain the exact same value.
    - Purpose: protect `/watchlist` mutation, `/run-now`, and `/kv-test`.
 
-2. `GITHUB_PUBLISH_TOKEN`
+2. `GITHUB_TOKEN`
    - Cloudflare Worker secret only.
    - Repository-scoped GitHub credential with the narrowest practical permission needed to read/update `live.json` in `bjm8754-svg/kr-stock-live-bridge-data`.
    - Purpose: publish validated 09:35/09:40 `live.json`.
@@ -30,11 +30,11 @@ Never place either token in source code, query strings, Library files, logs, or 
 ## Atomic cutover order
 
 1. Create/set Worker `WRITE_TOKEN`.
-2. Create/set Worker `GITHUB_PUBLISH_TOKEN`.
+2. Create/set Worker `GITHUB_TOKEN`.
 3. Set repository Actions secret `CLOUDFLARE_WRITE_TOKEN` to the same value as Worker `WRITE_TOKEN`.
 4. Deploy the exact canonical Worker source while preserving `STOCK_KV` and the schedule.
 5. Run GitHub workflow `Verify Cloudflare Worker Deployment`.
-6. Require workflow PASS and exact deployed build fingerprint `worker_v3_hardened_money_scan_v2`.
+6. Require workflow PASS and exact deployed build fingerprint `worker_v3_hardened_money_scan_v3`.
 7. Run `Sync Cloudflare Watchlist` and require `watchlist-sync-status.json`:
    - `status=PASS`
    - `mode=POST_BEARER`
@@ -68,7 +68,7 @@ On the first actual KRX trading day after cutover:
   - exact watchlist
   - history 09:00~09:35, count 36
   - `publisher.type=CLOUDFLARE_WORKER_GITHUB_CONTENTS_API`
-  - `publisher.version=worker_v3_hardened_money_scan_v2`
+  - `publisher.version=worker_v3_hardened_money_scan_v3`
   - money-aware `scan.turnoverTop / volumeTop / risingLiquid`
   - `scanDelta` based on 09:30→09:35
 - `live-health.json` is PASS for Critical freshness. Market-scan degradation may only be a declared Noncritical warning.
