@@ -11,6 +11,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-09-09",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -316,6 +318,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -570,6 +574,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": true,
     "sourceNewListingAlignment": "MATCH",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-05-12",
     "track": "NEW_LISTING",
     "signal": "NEW_LISTING_SETUP",
@@ -814,7 +820,7 @@
   {
     "case": "CASE_D",
     "code": "012210",
-    "sourceLabel": "YANG_EUM_YANG_REVIEW",
+    "sourceLabel": "YANG_EUM_YANG_CONFIRMED",
     "sourceDiscoveryFloor": null,
     "sourceDiscoveryAlignment": "NOT_ASSERTED",
     "sourceMaxChartGrade": null,
@@ -823,12 +829,14 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
-    "date": "2026-09-10",
+    "sourceYangEumYangExpected": true,
+    "sourceYangEumYangAlignment": "MATCH",
+    "date": "2026-09-09",
     "track": "LONG_HISTORY",
-    "signal": "RETEST_OK",
+    "signal": "REACCELERATION",
     "score": 100,
-    "close": 12630.0,
-    "dayChangePct": -3.07,
+    "close": 13030.0,
+    "dayChangePct": 29.91,
     "chartGrade": {
       "grade": "B_PLUS",
       "eligible": true,
@@ -837,61 +845,55 @@
         "REF_MONEY_100B_PLUS",
         "CORE_STRONG",
         "CLOUD_ABOVE",
-        "REFERENCE_HELD"
+        "REFERENCE_CURRENT"
       ],
       "referenceMoneyKrw": 227090142685.0,
-      "referenceMoneySource": "PRIOR_REFERENCE",
-      "referenceState": "HELD",
-      "referenceHoldLine": 12509.0,
+      "referenceMoneySource": "CURRENT_COMPLETED_REFERENCE",
+      "referenceState": "CURRENT",
+      "referenceHoldLine": 13030.0,
       "referenceLow": 10040.0,
       "selectionMemoryUsed": false,
       "timingInputsUsed": false
     },
     "qualified": true,
     "actionScore": {
-      "total": 50.2,
+      "total": 57.2,
       "briefingTier": "RADAR",
       "components": {
-        "structure": 17.2,
-        "moneyQuality": 13.0,
-        "entryQuality": 22.0,
+        "structure": 16.2,
+        "moneyQuality": 19.0,
+        "entryQuality": 25.0,
         "structuralRR": 0.0,
-        "acceptance": 4.0,
-        "riskPenalty": 6.0
+        "acceptance": 9.0,
+        "riskPenalty": 12.0
       },
       "actionableForBriefing": false,
       "penaltyReasons": [
-        "EXTENDED_FROM_SUPPORT"
+        "VERY_EXTENDED_FROM_SUPPORT"
       ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
-      "evaluationReference": 12630.0,
-      "nearestSupport": 10546.44,
+      "evaluationReference": 13030.0,
+      "nearestSupport": 10510.94,
       "supportSource": "MA240",
-      "distanceToSupportPct": 19.76,
-      "invalidationCandidate": 10040.0,
+      "distanceToSupportPct": 23.97,
+      "invalidationCandidate": 8420.0,
       "invalidationSource": "RECENT_REFERENCE_LOW",
-      "distanceToInvalidationPct": 25.8,
-      "nextResistance": 12930.0,
-      "nextResistanceLine": 13018.46,
-      "nextResistanceSources": [
-        "CANDLE_DENSITY",
-        "DEOYANGBONG_CLOSE",
-        "DEOYANGBONG_HIGH",
-        "ROUND_FIGURE",
-        "SWING_HIGH"
-      ],
-      "distanceToNextResistancePct": 2.38,
-      "structuralRR": 0.09,
+      "distanceToInvalidationPct": 54.75,
+      "nextResistance": null,
+      "nextResistanceLine": null,
+      "nextResistanceSources": null,
+      "distanceToNextResistancePct": null,
+      "structuralRR": null,
       "supportHierarchy": {
-        "primaryReferenceSupport": 10270.0,
-        "primaryReferenceSource": "RECENT_REFERENCE_OPEN",
-        "referenceLowInvalidationCandidate": 10040.0,
+        "primaryReferenceSupport": 10200.0,
+        "primaryReferenceSource": "RECENT_REFERENCE_CLOSE",
+        "referenceLowInvalidationCandidate": 8420.0,
         "referenceLowSource": "RECENT_REFERENCE_LOW",
-        "coreSupport": null,
-        "coreSupportSource": null,
-        "longMaSupport": 10546.44,
+        "coreSupport": 9981.79,
+        "coreSupportSource": "CORE_LINE",
+        "longMaSupport": 10510.94,
         "longMaSupportSource": "MA240"
       },
       "note": "Ranking support is the nearest detected structural support; invalidation is a deeper observed structure (reference low first, then core-zone low). Structural R/R uses invalidation, not the nearest support. Actual intraday entry still requires trigger confirmation."
@@ -899,9 +901,9 @@
     "sourceLevelCalibration": {
       "type": "REFERENCE_LEVEL",
       "sourceLevel": 10000.0,
-      "closestStructuralField": "referenceLowInvalidationCandidate",
-      "closestStructuralLevel": 10040.0,
-      "absoluteGapPct": 0.4
+      "closestStructuralField": "coreSupport",
+      "closestStructuralLevel": 9981.79,
+      "absoluteGapPct": 0.182
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -917,149 +919,156 @@
       "cStartDate": "20260803"
     },
     "deoyangbong": {
-      "today": false,
-      "preferred15Pct": false,
+      "today": true,
+      "preferred15Pct": true,
       "latestPrior": {
-        "date": "20260909",
-        "open": 10270.0,
-        "close": 13030.0,
-        "high": 13030.0,
-        "low": 10040.0,
-        "dayReturnPct": 29.91,
-        "tradingValueEstimated": 227090142685.0,
-        "volumeRatio20": 10.94,
-        "closeLocation": 1.0
+        "date": "20260907",
+        "open": 8660.0,
+        "close": 10200.0,
+        "high": 10850.0,
+        "low": 8420.0,
+        "dayReturnPct": 22.16,
+        "tradingValueEstimated": 164777307930.0,
+        "volumeRatio20": 35.28,
+        "closeLocation": 0.733
       }
     },
     "coreResistance": {
-      "line": 13018.46,
-      "zoneLow": 12930.0,
-      "zoneHigh": 13120.0,
-      "score": 19.1,
-      "touches": 24,
-      "sourceCount": 5,
+      "line": 9981.79,
+      "zoneLow": 9936.87,
+      "zoneHigh": 10026.7,
+      "score": 12.1,
+      "touches": 14,
+      "sourceCount": 3,
       "sources": [
         "CANDLE_DENSITY",
-        "DEOYANGBONG_CLOSE",
-        "DEOYANGBONG_HIGH",
         "ROUND_FIGURE",
         "SWING_HIGH"
       ],
-      "distanceFromReferencePct": -0.09,
-      "candidateCount": 7,
+      "distanceFromReferencePct": -0.48,
+      "candidateCount": 8,
       "alternatives": [
         {
-          "line": 13018.46,
-          "zoneLow": 12930.0,
-          "zoneHigh": 13120.0,
-          "score": 19.1,
-          "touches": 24,
-          "sourceCount": 5,
-          "sources": [
-            "CANDLE_DENSITY",
-            "DEOYANGBONG_CLOSE",
-            "DEOYANGBONG_HIGH",
-            "ROUND_FIGURE",
-            "SWING_HIGH"
-          ],
-          "distanceFromReferencePct": -0.09
-        },
-        {
-          "line": 13940.0,
-          "zoneLow": 13850.0,
-          "zoneHigh": 14050.0,
-          "score": 16.6,
-          "touches": 35,
-          "sourceCount": 4,
-          "sources": [
-            "CANDLE_DENSITY",
-            "DEOYANGBONG_CLOSE",
-            "ROUND_FIGURE",
-            "SWING_HIGH"
-          ],
-          "distanceFromReferencePct": 6.98
-        },
-        {
-          "line": 14290.0,
-          "zoneLow": 14225.7,
-          "zoneHigh": 14354.3,
-          "score": 6.1,
-          "touches": 39,
-          "sourceCount": 1,
-          "sources": [
-            "CANDLE_DENSITY"
-          ],
-          "distanceFromReferencePct": 9.67
-        },
-        {
-          "line": 14880.0,
-          "zoneLow": 14813.04,
-          "zoneHigh": 15000.0,
-          "score": 7.6,
-          "touches": 35,
-          "sourceCount": 2,
-          "sources": [
-            "DEOYANGBONG_HIGH",
-            "ROUND_FIGURE"
-          ],
-          "distanceFromReferencePct": 14.2
-        },
-        {
-          "line": 15400.0,
-          "zoneLow": 15330.7,
-          "zoneHigh": 15469.3,
-          "score": 6.1,
-          "touches": 28,
-          "sourceCount": 1,
-          "sources": [
-            "SWING_HIGH"
-          ],
-          "distanceFromReferencePct": 18.19
-        },
-        {
-          "line": 15946.67,
-          "zoneLow": 15800.0,
-          "zoneHigh": 16018.43,
-          "score": 14.1,
-          "touches": 20,
+          "line": 9981.79,
+          "zoneLow": 9936.87,
+          "zoneHigh": 10026.7,
+          "score": 12.1,
+          "touches": 14,
           "sourceCount": 3,
           "sources": [
             "CANDLE_DENSITY",
             "ROUND_FIGURE",
             "SWING_HIGH"
           ],
-          "distanceFromReferencePct": 22.38
+          "distanceFromReferencePct": -0.48
         },
         {
-          "line": 16190.0,
-          "zoneLow": 16117.15,
-          "zoneHigh": 16262.85,
-          "score": 6.1,
+          "line": 10207.92,
+          "zoneLow": 10161.98,
+          "zoneHigh": 10253.85,
+          "score": 10.6,
           "touches": 17,
+          "sourceCount": 2,
+          "sources": [
+            "CANDLE_DENSITY",
+            "DEOYANGBONG_CLOSE"
+          ],
+          "distanceFromReferencePct": 1.77
+        },
+        {
+          "line": 10493.4,
+          "zoneLow": 10446.18,
+          "zoneHigh": 10540.62,
+          "score": 7.4,
+          "touches": 18,
+          "sourceCount": 2,
+          "sources": [
+            "CANDLE_DENSITY",
+            "MA240"
+          ],
+          "distanceFromReferencePct": 4.62
+        },
+        {
+          "line": 10962.5,
+          "zoneLow": 10850.0,
+          "zoneHigh": 11056.25,
+          "score": 10.1,
+          "touches": 19,
+          "sourceCount": 3,
+          "sources": [
+            "CANDLE_DENSITY",
+            "DEOYANGBONG_HIGH",
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 9.3
+        },
+        {
+          "line": 11223.33,
+          "zoneLow": 11172.83,
+          "zoneHigh": 11273.84,
+          "score": 10.1,
+          "touches": 19,
           "sourceCount": 1,
           "sources": [
             "SWING_HIGH"
           ],
-          "distanceFromReferencePct": 24.25
+          "distanceFromReferencePct": 11.9
+        },
+        {
+          "line": 11780.0,
+          "zoneLow": 11726.99,
+          "zoneHigh": 11833.01,
+          "score": 7.1,
+          "touches": 20,
+          "sourceCount": 1,
+          "sources": [
+            "DEOYANGBONG_OPEN"
+          ],
+          "distanceFromReferencePct": 17.45
+        },
+        {
+          "line": 12000.0,
+          "zoneLow": 11946.0,
+          "zoneHigh": 12054.0,
+          "score": 5.1,
+          "touches": 21,
+          "sourceCount": 1,
+          "sources": [
+            "ROUND_FIGURE"
+          ],
+          "distanceFromReferencePct": 19.64
+        },
+        {
+          "line": 12986.67,
+          "zoneLow": 12928.23,
+          "zoneHigh": 13045.11,
+          "score": 7.6,
+          "touches": 22,
+          "sourceCount": 2,
+          "sources": [
+            "ROUND_FIGURE",
+            "SWING_HIGH"
+          ],
+          "distanceFromReferencePct": 29.48
         }
       ]
     },
     "breakoutClass": "NO_BREAK",
-    "preJindol": true,
+    "preJindol": false,
     "retestOk": true,
-    "reacceleration": false,
-    "yangEumYang": false,
+    "reacceleration": true,
+    "yangEumYang": true,
     "money": {
-      "band": "DISCOVERY_30B_PLUS",
-      "tradingValue": 83287544120.0,
-      "tradingValueEstimatedFromOhlcv": 83287544120.0,
-      "avg20TradingValueEstimated": 28172660883.0,
-      "tradingValueRatio20Estimated": 2.96,
+      "band": "YBM_CORE_100B_PLUS",
+      "tradingValue": 227090142685.0,
+      "tradingValueEstimatedFromOhlcv": 227090142685.0,
+      "avg20TradingValueEstimated": 16836568215.0,
+      "tradingValueRatio20Estimated": 13.49,
       "tradingValueQuality": "ESTIMATED",
-      "volume": 6527237.0,
-      "avg20Volume": 2766722.0,
-      "volumeRatio20": 2.36,
-      "relativeToPriorReferenceMoney": 0.37,
+      "volume": 19589402.0,
+      "avg20Volume": 1789843.0,
+      "volumeRatio20": 10.94,
+      "relativeToPriorReferenceMoney": 1.38,
       "marketCap": null,
       "turnoverToMarketCapPct": null
     },
@@ -1081,6 +1090,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "MA600_BREAKOUT",
@@ -1355,6 +1366,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-09-03",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -1655,6 +1668,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-07-02",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -1845,6 +1860,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-05-20",
     "track": "LONG_HISTORY",
     "signal": "JINDOL_CONFIRMED",
@@ -2071,6 +2088,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-09-16",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -2340,6 +2359,8 @@
     "sourceAbcAlignment": "NOT_ASSERTED",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-05-20",
     "track": "LONG_HISTORY",
     "signal": "GADOL_RISK",
@@ -2593,6 +2614,8 @@
     "sourceAbcAlignment": "MATCH",
     "sourceNewListingSetupExpected": null,
     "sourceNewListingAlignment": "NOT_ASSERTED",
+    "sourceYangEumYangExpected": null,
+    "sourceYangEumYangAlignment": "NOT_ASSERTED",
     "date": "2026-08-18",
     "track": "LONG_HISTORY",
     "signal": "ABC_CANDIDATE",
