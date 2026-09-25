@@ -94,9 +94,33 @@ jobs:
             .schemaVersion=="YBM_BRIEF_V2" and
             (.chartCandidates|type=="array") and
             (.qualifiedPool|type=="array") and
-            (.briefingCandidates|type=="array")
+            (.briefingCandidates|type=="array") and
+            (.riskWarnings|type=="array") and
+            ([.chartCandidates[] |
+              select(
+                ((.chartGrade.grade // "") | IN("S","A","B_PLUS") | not) or
+                (.abc|type)!="object" or
+                (.cloud|type)!="object" or
+                (.ma|type)!="object" or
+                ([.ma["20"],.ma["60"],.ma["120"],.ma["240"],.ma["480"],.ma["600"],.ma["1000"]] | length != 7) or
+                (.entryPlan|type)!="object" or
+                (.entryPlan|has("nearestSupport")|not) or
+                (.entryPlan|has("invalidationCandidate")|not) or
+                (.entryPlan|has("nextResistance")|not) or
+                (.entryPlan|has("structuralRR")|not) or
+                (.money|type)!="object" or
+                (.actionScore|type)!="object"
+              )
+            ] | length)==0 and
+            ([.briefingCandidates[],.qualifiedPool[],.riskWarnings[] |
+              select(
+                (.entryPlan|type)!="object" or
+                (.money|type)!="object" or
+                (.actionScore|type)!="object"
+              )
+            ] | length)==0
           ' longterm-scan.json >/dev/null; then
-            echo "compact canonical V2 schema missing"
+            echo "compact canonical V2 field contract missing"
             exit 1
           fi
 
