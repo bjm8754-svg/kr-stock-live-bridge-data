@@ -1,5 +1,5 @@
 const SOURCE = "NAVER_PUBLIC_WEB_ENDPOINT";
-const BUILD_ID = "worker_v3_hardened_money_scan_v1";
+const BUILD_ID = "worker_v3_hardened_money_scan_v2";
 const GITHUB_REPO = "bjm8754-svg/kr-stock-live-bridge-data";
 const GITHUB_BRANCH = "main";
 const LIVE_PUBLISH_TIMES = new Set(["0935", "0940"]);
