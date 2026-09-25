@@ -140,3 +140,20 @@ Do not re-enable the 08:15 / 09:35 / 09:40 ChatGPT stock automations until the r
   - syntax/registration commit: `669f18edf0da25d8d2ea23f4e6f3beec46650d6a`
   - push validation run: `36123864116`; job intentionally `skipped` because only workflow_dispatch may mutate the watchlist.
   - purpose: stage only `tradeDate` for an infrastructure E2E while the three ChatGPT stock automations remain OFF; existing codes are preserved.
+
+
+## Secure runtime cutover
+
+- **Secure runtime cutover — PASS**
+  - Cloudflare deployed build: `worker_v3_hardened_money_scan_v3`.
+  - public runtime probe re-run job `108039989785`: build fingerprint PASS.
+  - repository secret `CLOUDFLARE_WRITE_TOKEN` was added manually by the user; the secret value is not recorded in source/logs.
+  - secure watchlist migration run `36125633721`: conclusion `success`.
+  - `watchlist-sync-status.json`: `status=PASS`, `mode=POST_BEARER`, `cloudflareStatus=WATCHLIST_SAVED`, `reason=NONE`.
+  - full deployment security verification run `36125721271`: conclusion `success`; exact build, public read, 405 mutating GET, 401 unauthenticated mutation/run-now/kv-test, authenticated POST and exact tradeDate/codes all passed.
+- **Next-session infrastructure staging — PASS**
+  - staged watchlist tradeDate: `20260928`; existing nine codes preserved.
+  - staging commit: `0f6100f9dae246e166f66c97041a7bc754bd8885`.
+  - secure sync run `36125788350`: conclusion `success`.
+  - public probe re-run job `108041584860`: `build=worker_v3_hardened_money_scan_v3`, `watchlistTradeDate=20260928`, `watchlistCount=9`.
+  - this is infrastructure-only staging; the three ChatGPT stock automations remain OFF pending real-session E2E.
