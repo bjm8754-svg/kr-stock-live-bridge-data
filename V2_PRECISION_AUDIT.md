@@ -66,3 +66,15 @@ Current rule:
 5. structural R/R is calculated from current evaluation reference to the explicit invalidation and next resistance; if either is absent, R/R is null.
 
 This change intentionally lowers some historical R/R values rather than manufacturing a tighter stop to make the trade look better.
+
+
+## Cross-sectional invariant sweep
+
+A full-market structural-level validator is now part of the scanner workflow. It checks that structural R/R is traceable to observed invalidation/target levels, forbids long-MA-only hard invalidation, validates R/R arithmetic, and verifies reference/core invalidation provenance.
+
+- validator commit: `58a5ddb2dd53f99afcc6a07d0490b21816627737`
+- corrected invariant commit: `cdb4e911612d152f1144bb92cc10ea038e9202f6`
+- full-market run: `36122568757`
+- conclusion: `success`
+
+The first validator run deliberately failed because it assumed invalidation must always sit below the selected ranking support. Artifact inspection showed that assumption was wrong: ranking support intentionally ignores levels that are too close to current price, while a valid reference-low invalidation can sit above the deeper ranking support. The validator was corrected to test traceability instead of enforcing the false ordering. This was a validator defect, not hidden by loosening the scanner.
