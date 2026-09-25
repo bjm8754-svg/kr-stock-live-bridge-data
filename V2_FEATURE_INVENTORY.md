@@ -16,7 +16,7 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 | Pre-Jindol | `preJindol` | output-contract + qualification/action regression | IMPLEMENTED / CONTRACT PASS; REAL-SAMPLE PRECISION NOT DONE |
 | Acceptance / follow-through | Jindol close acceptance + `actionScore.components.acceptance` | explicit action-score regression path | IMPLEMENTED / CONTRACT PASS; REAL-SAMPLE PRECISION NOT DONE |
 | Retest + supply contraction | `retestOk`, `retestSupply` | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
-| Reacceleration | `reacceleration` / Yang-Eum-Yang | output-contract/replay path | IMPLEMENTED / PRECISION PARTIAL |
+| Reacceleration | `reacceleration` / Yang-Eum-Yang | output-contract + source-timestamp-aligned replay | IMPLEMENTED / PRECISION PARTIAL — real Yang-Eum-Yang replay MATCH |
 | New-listing separate rail | `track=NEW_LISTING`, `newListingSetup` | synthetic regression + source-labeled real replay | IMPLEMENTED / PRECISION PARTIAL — real new-listing small-ABC replay match confirmed |
 | Structural entry / support / next resistance / R-R | `entryPlan` from detected structure only | support hierarchy + invalidation/R-R regression + source-level replay | IMPLEMENTED / PRECISION PARTIAL |
 | Chart quality S/A/B+ independent of timing | `chartGrade`, `chartCandidates` | independence/reference-integrity tests | IMPLEMENTED / CALIBRATION PARTIAL |
@@ -40,21 +40,23 @@ Purpose: distinguish `implemented` from `precision-validated`. A field existing 
 - Historical replay baseline: `success` (`35977284215`).
 - Feature-contract full-market baseline: `success` (`35977284250`). On the 2026-09-24 non-trading day, validation passed and the canonical commit step was correctly skipped rather than overwriting the prior trading-day canonical.
 - Source-labeled replay report is now persisted as `v2-replay-report.json`; replay workflow persistence commit `e8db6671decbbb0b0a3955ab033b206c4f88dcac`.
-- Replay observability expansion commit `f9957546b2f3909a5e1da110cf2de9e557a02086`; source-labeled control expansion commit `69b0d442225d769042c7edc6c750d14bc7e2ca4a`; latest replay run `35983362185` concluded `success`.
+- Replay observability expansion commit `f9957546b2f3909a5e1da110cf2de9e557a02086`; source-labeled controls now total 11 cases. Latest source-timestamp-aligned replay run `36127517613` concluded `success`.
 - False-negative discovery fix: `790b0f7c22749937115b427ff6179741867de5e1` plus regression test `da0f7467fe692e46b1f798ed95c1570bee3732fc`. It permits a fresh money-backed long-structure/core/cloud setup to enter B+ even when an obsolete historical reference has failed, while S/A still require a usable strong reference.
 - Full-market regression after that fix: run `35983214306` concluded `success`; self-test, full scan and validation all passed, and the non-trading-day canonical commit was correctly skipped.
 - Current `scripts/test_longterm_scan_v2.py` explicitly checks the agreed structural field contract, long-MA keys, Jindol/Gadol boundary, new-listing rail, selection-memory independence, chart-grade/reference integrity and the fresh-discovery B+ fallback.
 - Money-aware market-scan commit `b933e27a701aaee99a645d562df3878dbd37d8fe`; regression-test commit `54d7c2adfb27caf0d25e2736d4b68ea6e283178f`; CI run `35986527136` concluded `success`.
 - Live-health noncritical scan-warning commits `3b3c12baf1568803222f66e76ab1f717eb774ad4`, `7815e3f354f8d85af6a66f3fb4d66237cd755afd`; CI run `35986620061` concluded `success`.
 - Canonical compact migration run `36126406033` concluded `success`; `longterm-scan.json` read-back SHA `846e2999f729c5a92deb49779f7e5070317a00f5`, `schemaVersion=YBM_BRIEF_V2`, `tradeDate=20260923`, `chartCandidates=119`, `qualifiedPool=74`, `briefingCandidates=2`, `riskWarnings=86`.
-- ABC/new-listing calibration replay commit `06609a39733001b5efe0af610845c73d10d46be4`; run `36126782084` concluded `success`; persisted report SHA `f22e2ed84d463f969215abf44095725f975805e9`. CASE_C matched the real new-listing setup/floor and CASE_K matched the source-labeled ABC candidate while remaining non-qualified on money/reference quality.
+- ABC/new-listing calibration replay commit `06609a39733001b5efe0af610845c73d10d46be4`; run `36126782084` concluded `success`. CASE_C matched the real new-listing setup/floor and CASE_K matched the source-labeled ABC candidate while remaining non-qualified on money/reference quality.
+- Pre-Jindol/acceptance regression commit `89976d0612c0c369450c02c159dfdbfd22c137e6`; replay/self-test run `36127062717` concluded `success`.
+- Yang-Eum-Yang cutoff correction commit `add345540c58c8532eb06ceb452196d9511f45a1`; current-reference entry-plan commits `eb821a46c5126887ad2d2241e4b6bbfbf302e576`, `2448fc3e92a9b3eee84b6d7ef4e77479028f4bb7`, `02bca730ab4ee331ad6c2e6488ff930b0a538965`; latest replay run `36127517613` concluded `success`; persisted report SHA `e0fe0dbd0ca2736491078037c4008918d450f2b1`.
 
 ## Validation still required before final PASS
 
 1. **Core-line / reference / entry precision review** across a broad real-chart sample.
 2. **False Positive review**: identify structures promoted by the scanner that a disciplined chart review should reject, then tune only evidence-backed gates.
 3. **False Negative review**: identify high-quality charts missed by the scanner and determine whether the miss is data, feature extraction, threshold or ranking.
-4. **Historical Replay expansion**: the persisted report now contains nine calibration controls, including source-labeled positive/B+ cases, but it is still too small to be a statistical precision test. Add negative controls and more entry/resistance examples before calling precision PASS.
+4. **Historical Replay expansion**: the persisted report now contains 11 calibration controls spanning positive A/B+, low-money negative, ABC, real new-listing, Jindol and Yang-Eum-Yang/reacceleration examples. It is still too small to be a statistical precision test; expand only when additional high-quality labeled examples materially improve coverage.
 5. **Intraday Market/Turnover Ignition + NEW CHALLENGER validation** on a real KRX session, including whether the live scan actually covers enough of the market to replace manual HTS monitoring.
 6. **Real-session E2E** after Worker/security deployment: 08:15 -> secure watchlist sync -> 09:00~09:40 minute history -> live-health -> 09:35 -> 09:40 -> Evidence/NEXT_SESSION.
 
