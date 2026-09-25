@@ -1,9 +1,9 @@
 {
   "status": "FAIL",
-  "checkedAtKst": "2026-09-25 09:41:25 KST",
+  "checkedAtKst": "2026-09-25 19:46:34 KST",
   "expectedTradeDate": "20260925",
   "liveTradeDate": "20260925",
-  "watchlistTradeDate": "20260923",
+  "watchlistTradeDate": "20260928",
   "livePublishedAtKst": "2026-09-25 09:41:15.114 KST",
   "history": {
     "count": 41,
