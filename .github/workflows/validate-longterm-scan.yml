@@ -1,0 +1,106 @@
+name: Validate Long-term Scan Freshness
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/validate_longterm_scan_freshness.py"
+      - "scripts/test_longterm_scan_freshness.py"
+      - ".github/workflows/validate-longterm-scan.yml"
+  schedule:
+    - cron: "0 22 * * 0-4"
+    - cron: "40 22 * * 0-4"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: longterm-scan-freshness
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Unit tests
+        run: python scripts/test_longterm_scan_freshness.py
+
+      - name: Resolve phase
+        shell: bash
+        run: |
+          set -euo pipefail
+          SCHEDULE='\${{ github.event.schedule }}'
+          if [ "$SCHEDULE" = "0 22 * * 0-4" ]; then
+            PHASE=PRECHECK
+          elif [ "$SCHEDULE" = "40 22 * * 0-4" ]; then
+            PHASE=FINAL
+          else
+            PHASE=TEST
+          fi
+          echo "PHASE=$PHASE" >> "$GITHUB_ENV"
+          echo "phase=$PHASE"
+
+      - name: Validate latest completed KRX session
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/validate_longterm_scan_freshness.py --scan longterm-scan.json --output longterm-scan-health.json
+          STATUS=$(jq -r '.status' longterm-scan-health.json)
+          jq --arg phase "$PHASE" '. + {phase:$phase}' longterm-scan-health.json > /tmp/h.json
+          mv /tmp/h.json longterm-scan-health.json
+          echo "FRESHNESS_STATUS=$STATUS" >> "$GITHUB_ENV"
+          cat longterm-scan-health.json
+
+      - name: Dispatch repair scan only when stale
+        if: env.PHASE == 'PRECHECK' && env.FRESHNESS_STATUS == 'STALE'
+        shell: bash
+        env:
+          GH_TOKEN: \${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/longterm-scan.yml/dispatches" \
+            -d '{"ref":"main"}'
+          jq '. + {repairDispatched:true, repairWorkflow:"longterm-scan.yml"}' longterm-scan-health.json > /tmp/h.json
+          mv /tmp/h.json longterm-scan-health.json
+          echo "stale scanner detected; repair workflow dispatched"
+
+      - name: Persist freshness health
+        if: env.PHASE != 'PRECHECK' || env.FRESHNESS_STATUS != 'PASS'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add longterm-scan-health.json
+          if git diff --cached --quiet; then
+            echo "no health change"
+          else
+            git commit -m "update long-term scan freshness health"
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push; then
+                break
+              fi
+              if [ "$i" -eq 3 ]; then exit 1; fi
+              sleep 2
+            done
+          fi
+
+      - name: Enforce final/test freshness
+        if: env.PHASE != 'PRECHECK'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$FRESHNESS_STATUS" = "PASS"
+          echo "LONGTERM_SCAN_FRESHNESS_PASS"
