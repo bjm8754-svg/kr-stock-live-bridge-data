@@ -29,8 +29,15 @@ jobs:
           WATCH=$(curl --fail --silent --show-error "$BASE/watchlist")
           echo "$WATCH" | jq .
 
+          echo "=== SCAN ==="
+          SCAN=$(curl --fail --silent --show-error "$BASE/scan")
+          echo "$SCAN" | jq '{status,coverage,rankings:[.rankings[]? | {market,sortType,endpoint,error,rowCount:(.rows|length)}],volumeTopCount:(.volumeTop|length),turnoverTopCount:(.turnoverTop|length),risingLiquidCount:(.risingLiquid|length)}'
+
           echo "=== SUMMARY ==="
           echo "build=$(echo "$ROOT" | jq -r '.build // "MISSING"')"
           echo "message=$(echo "$ROOT" | jq -r '.message // "MISSING"')"
           echo "watchlistTradeDate=$(echo "$WATCH" | jq -r '.tradeDate // "MISSING"')"
           echo "watchlistCount=$(echo "$WATCH" | jq -r '(.codes // []) | length')"
+          echo "scanStatus=$(echo "$SCAN" | jq -r '.status // "MISSING"')"
+          echo "scanSuccessfulConfigs=$(echo "$SCAN" | jq -r '.coverage.successfulConfigs // -1')"
+          echo "scanFailedConfigs=$(echo "$SCAN" | jq -r '.coverage.failedConfigs // -1')"
