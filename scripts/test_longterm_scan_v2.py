@@ -354,6 +354,9 @@ compact_sample.update({
 cc = scan.compact_chart_candidate(compact_sample)
 assert "setupCoreResistance" in cc and "referenceCandleAnchor" in cc and "retestAnchor" in cc
 assert "alternatives" not in (cc["setupCoreResistance"] or {})
+assert "ybmTrace" in cc
+assert cc["ybmTrace"]["sourceLineMapping"]["hotpink"] == "MA600"
+assert cc["chartGradeOrigin"] == "SYSTEM_STRUCTURAL_NOT_SOURCE_FINAL_GRADE"
 tc = scan.compact_timing_candidate(compact_sample)
 assert "ybmTrace" in tc
 assert tc["ybmTrace"]["abc"]["state"] == "C_ACTIVE"
