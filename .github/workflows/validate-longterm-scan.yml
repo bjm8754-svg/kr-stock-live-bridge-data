@@ -35,7 +35,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          SCHEDULE='\${{ github.event.schedule }}'
+          SCHEDULE='${{ github.event.schedule }}'
           if [ "$SCHEDULE" = "0 22 * * 0-4" ]; then
             PHASE=PRECHECK
           elif [ "$SCHEDULE" = "40 22 * * 0-4" ]; then
@@ -61,7 +61,7 @@ jobs:
         if: env.PHASE == 'PRECHECK' && env.FRESHNESS_STATUS == 'STALE'
         shell: bash
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           curl --fail --silent --show-error -L \
