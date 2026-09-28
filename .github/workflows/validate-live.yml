@@ -35,7 +35,7 @@ jobs:
           set -euo pipefail
           TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
           WATCH_DATE=$(jq -r '.tradeDate // empty' watchlist.json)
-          if [[ "$WATCH_DATE" =~ ^[0-9]{8}$ ]] && [ "$WATCH_DATE" > "$TODAY" ]; then
+          if [[ "$WATCH_DATE" =~ ^[0-9]{8}$ && "$WATCH_DATE" > "$TODAY" ]]; then
             echo "skip_future=true" >> "$GITHUB_OUTPUT"
             echo "FUTURE_WATCHLIST_STAGED_SKIP today=$TODAY watchDate=$WATCH_DATE"
           else
