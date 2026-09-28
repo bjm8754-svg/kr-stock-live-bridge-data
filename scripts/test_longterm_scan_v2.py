@@ -361,6 +361,11 @@ assert tc["ybmTrace"]["ma"]["600"] == 8000
 assert tc["ybmTrace"]["setupCoreResistance"]["line"] == 11500
 assert tc["ybmTrace"]["breakCoreResistance"] is True
 assert tc["ybmTrace"]["referenceCandleAnchor"] is not None
+assert tc["ybmTrace"]["sourceLineMapping"]["hotpink"] == "MA600"
+assert tc["ybmTrace"]["sourceLineMapping"]["whiteLine"] == "UNRESOLVED_FROM_TEXT"
+assert tc["ybmTrace"]["sourceConfluence"]["abcCActive"] is True
+assert tc["ybmTrace"]["sourceConfluence"]["hotpinkMa600Above"] is True
+assert tc["chartGradeOrigin"] == "SYSTEM_STRUCTURAL_NOT_SOURCE_FINAL_GRADE"
 bo = scan.build_brief_output({
     "status":"PASS","generatedAtKst":"x","tradeDate":"20260923","methodologyVersion":"x",
     "primaryLogic":"x","coverage":{},"counts":{},"notes":[],
