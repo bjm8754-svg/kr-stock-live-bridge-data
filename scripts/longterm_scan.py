@@ -1769,6 +1769,8 @@ def compact_chart_candidate(x):
         "dayChangePct": x.get("dayChangePct"),
         "closeLocation": x.get("closeLocation"),
         "chartGrade": x.get("chartGrade"),
+        "chartGradeOrigin": "SYSTEM_STRUCTURAL_NOT_SOURCE_FINAL_GRADE",
+        "ybmTrace": compact_ybm_trace(x),
         "abc": x.get("abc"),
         "cloud": x.get("cloud"),
         "ma": {k: ma.get(k) for k in ("20", "60", "120", "240", "480", "600", "1000")},
