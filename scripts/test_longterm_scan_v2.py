@@ -354,6 +354,13 @@ compact_sample.update({
 cc = scan.compact_chart_candidate(compact_sample)
 assert "setupCoreResistance" in cc and "referenceCandleAnchor" in cc and "retestAnchor" in cc
 assert "alternatives" not in (cc["setupCoreResistance"] or {})
+tc = scan.compact_timing_candidate(compact_sample)
+assert "ybmTrace" in tc
+assert tc["ybmTrace"]["abc"]["state"] == "C_ACTIVE"
+assert tc["ybmTrace"]["ma"]["600"] == 8000
+assert tc["ybmTrace"]["setupCoreResistance"]["line"] == 11500
+assert tc["ybmTrace"]["breakCoreResistance"] is True
+assert tc["ybmTrace"]["referenceCandleAnchor"] is not None
 bo = scan.build_brief_output({
     "status":"PASS","generatedAtKst":"x","tradeDate":"20260923","methodologyVersion":"x",
     "primaryLogic":"x","coverage":{},"counts":{},"notes":[],
