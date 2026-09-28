@@ -904,26 +904,39 @@ async function getMarketScan() {
   ];
 
   const results = await Promise.all(configs.map(async ([market, sortType]) => {
-    const endpoint =
+    const endpoints = [
       "https://m.stock.naver.com/front-api/stock/domestic/stockList" +
-      `?sortType=${encodeURIComponent(sortType)}` +
-      `&category=${encodeURIComponent(market)}&page=1&pageSize=20`;
+        `?sortType=${encodeURIComponent(sortType)}` +
+        `&category=${encodeURIComponent(market)}&page=1&pageSize=20`,
+      `https://m.stock.naver.com/api/stocks/${encodeURIComponent(sortType)}/${encodeURIComponent(market)}?page=1&pageSize=20`
+    ];
 
-    try {
-      const j = await fetchJson(endpoint);
-      return {
-        market,
-        sortType,
-        rows: normalizeStockList(findFirstArray(j)).slice(0, 20)
-      };
-    } catch (e) {
-      return {
-        market,
-        sortType,
-        error: String(e?.message || e),
-        rows: []
-      };
+    const errors = [];
+    for (const endpoint of endpoints) {
+      try {
+        const j = await fetchJson(endpoint);
+        const rows = normalizeStockList(findFirstArray(j)).slice(0, 20);
+        if (!rows.length) {
+          errors.push(`${endpoint}:EMPTY_ROWS`);
+          continue;
+        }
+        return {
+          market,
+          sortType,
+          endpoint,
+          rows
+        };
+      } catch (e) {
+        errors.push(`${endpoint}:${String(e?.message || e)}`);
+      }
     }
+
+    return {
+      market,
+      sortType,
+      error: errors.join(" | "),
+      rows: []
+    };
   }));
 
   const successful = results.filter(x => !x.error);
@@ -1134,7 +1147,7 @@ async function fetchJson(url) {
           "application/json,text/plain,*/*",
 
         "Referer":
-          "https://finance.naver.com/"
+          "https://m.stock.naver.com/"
       }
     });
 
