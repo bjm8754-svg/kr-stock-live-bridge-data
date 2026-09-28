@@ -1799,19 +1799,71 @@ def compact_ybm_trace(x):
     downstream narration must not invent a YBM label when the corresponding field is absent.
     """
     ma = x.get("ma") or {}
+    abc = x.get("abc") or {}
+    cloud = x.get("cloud") or {}
+    core = compact_core(x.get("coreResistance"))
+    close = x.get("close")
+    ma600 = ma.get("600")
+    ma1000 = ma.get("1000")
+
+    def above(level):
+        if close is None or level is None:
+            return None
+        try:
+            return float(close) > float(level)
+        except Exception:
+            return None
+
+    hotpink_above = above(ma600)
+    ma1000_above = above(ma1000)
+    abc_c = bool(abc.get("state") == "C_ACTIVE" and abc.get("cActive"))
+    cloud_above = cloud.get("state") == "ABOVE"
+    core_defined = core is not None
+    jindol = x.get("breakoutClass") == "JINDOL_CONFIRMED"
+    pre_jindol = bool(x.get("preJindol"))
+
+    # Source text explicitly maps hot-pink to MA600. The text available to this
+    # implementation does NOT explicitly map the nickname "white line" to MA1000,
+    # so MA1000 is exposed by name without inventing that nickname.
+    if abc_c and hotpink_above is True and cloud_above and core_defined and jindol:
+        confluence = "CORE_SOURCE_CONFLUENCE_JINDOL"
+    elif abc_c and hotpink_above is True and cloud_above and core_defined and pre_jindol:
+        confluence = "CORE_SOURCE_CONFLUENCE_PRE_JINDOL"
+    elif abc_c and hotpink_above is True and core_defined:
+        confluence = "PARTIAL_SOURCE_CONFLUENCE"
+    else:
+        confluence = "WEAK_OR_INCOMPLETE_SOURCE_CONFLUENCE"
+
     return {
         "abc": x.get("abc"),
         "ma": {k: ma.get(k) for k in ("20", "60", "120", "240", "480", "600", "1000")},
+        "sourceLineMapping": {
+            "hotpink": "MA600",
+            "hotpinkAbove": hotpink_above,
+            "ma1000Above": ma1000_above,
+            "whiteLine": "UNRESOLVED_FROM_TEXT",
+        },
         "cloud": x.get("cloud"),
         "referenceCandleAnchor": active_reference_anchor(x),
-        "setupCoreResistance": compact_core(x.get("coreResistance")),
+        "setupCoreResistance": core,
         "breakCoreResistance": x.get("breakCoreResistance"),
+        "breakoutClass": x.get("breakoutClass"),
         "preJindol": x.get("preJindol"),
         "retestOk": x.get("retestOk"),
         "retestSupply": x.get("retestSupply"),
         "reacceleration": x.get("reacceleration"),
         "yangEumYang": x.get("yangEumYang"),
         "newListingSetup": x.get("newListingSetup"),
+        "sourceConfluence": {
+            "state": confluence,
+            "abcCActive": abc_c,
+            "hotpinkMa600Above": hotpink_above,
+            "cloudAbove": cloud_above,
+            "coreSupplyDefined": core_defined,
+            "jindolConfirmed": jindol,
+            "preJindol": pre_jindol,
+            "whiteLineCheck": "UNRESOLVED_FROM_TEXT",
+        },
     }
 
 
@@ -1824,6 +1876,7 @@ def compact_timing_candidate(x):
         "signal": x.get("signal"),
         "close": x.get("close"),
         "chartGrade": cg.get("grade"),
+        "chartGradeOrigin": "SYSTEM_STRUCTURAL_NOT_SOURCE_FINAL_GRADE",
         "referenceState": cg.get("referenceState"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakoutClass": x.get("breakoutClass"),
