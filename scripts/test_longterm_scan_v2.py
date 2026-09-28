@@ -176,7 +176,7 @@ assert cg1["selectionMemoryUsed"] is False
 current_ref_sample = {
     "signal":"DEOYANGBONG_C_TRIGGER",
     "track":"LONG_HISTORY",
-    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True,"cActive":True,"cStartDate":"20260901"},
     "cloud":{"state":"ABOVE"},
     "coreResistance":{"score":14,"sourceCount":4},
     "deoyangbong":{"today":True,"latestPrior":None},
@@ -206,7 +206,7 @@ assert cg5["eligible"] is False
 failed_ref_sample = {
     "signal":"PRE_JINDOL",
     "track":"LONG_HISTORY",
-    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True,"cActive":True,"cStartDate":"20260901"},
     "cloud":{"state":"ABOVE"},
     "coreResistance":{"score":14,"sourceCount":4},
     "deoyangbong":{"today":False,"latestPrior":{
@@ -233,7 +233,7 @@ assert cg_damaged["grade"] == "B_PLUS"
 fresh_over_old = {
     "signal":"DEOYANGBONG_C_TRIGGER",
     "track":"LONG_HISTORY",
-    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True,"cActive":True,"cStartDate":"20260901"},
     "cloud":{"state":"ABOVE"},
     "coreResistance":{"score":14,"sourceCount":4},
     "deoyangbong":{"today":True,"latestPrior":{
@@ -340,7 +340,7 @@ compact_sample.update({
     "market":"KOSDAQ","tradeDate":"20260923","close":12000,"open":10500,"high":12200,"low":10400,
     "dayChangePct":12.0,"closeLocation":0.9,
     "chartGrade":scan.compute_chart_grade(current_ref_sample, cfg),
-    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True,"cActive":True,"cStartDate":"20260901"},
     "ma":{"20":11000,"60":10000,"120":9500,"240":9000,"480":8500,"600":8000,"1000":7000},
     "coreResistance":{"line":11500,"zoneLow":11400,"zoneHigh":11600,"score":14,"touches":3,
                       "sourceCount":4,"sources":["SWING_HIGH"],"distanceFromReferencePct":2.0,
