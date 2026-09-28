@@ -1,4 +1,5 @@
 name: Test Real Session E2E Validator
+# rerun validator regression after live bridge scan fix
 
 on:
   push:
