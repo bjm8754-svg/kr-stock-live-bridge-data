@@ -145,7 +145,7 @@ assert accept_score["components"]["acceptance"] == 10.0
 chart_sample = {
     "signal":"PRE_JINDOL",
     "track":"LONG_HISTORY",
-    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True},
+    "abc":{"state":"C_ACTIVE","score":100,"bPlus":True,"cActive":True,"cStartDate":"20260901"},
     "cloud":{"state":"ABOVE"},
     "coreResistance":{"score":14,"sourceCount":4},
     "deoyangbong":{"today":False,"latestPrior":{
