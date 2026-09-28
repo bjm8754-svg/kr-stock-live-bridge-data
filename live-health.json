@@ -1,34 +1,30 @@
 {
-  "status": "FAIL",
-  "checkedAtKst": "2026-09-25 19:46:34 KST",
-  "expectedTradeDate": "20260925",
-  "liveTradeDate": "20260925",
+  "status": "PASS",
+  "checkedAtKst": "2026-09-28 10:03:38 KST",
+  "expectedTradeDate": "20260928",
+  "liveTradeDate": "20260928",
   "watchlistTradeDate": "20260928",
-  "livePublishedAtKst": "2026-09-25 09:41:15.114 KST",
+  "livePublishedAtKst": "2026-09-28 09:40:32.953 KST",
   "history": {
     "count": 41,
-    "from": "20260925 0900",
-    "to": "20260925 0940",
+    "from": "20260928 0900",
+    "to": "20260928 0940",
     "rows": 41
   },
   "watchlistCount": 9,
   "validStockCount": 9,
-  "dynamicStockCount": 0,
-  "dynamicStockRatio": 0.0,
-  "openStockCount": 0,
-  "openStockRatio": 0.0,
-  "frozenStockCount": 9,
-  "frozenStockRatio": 1.0,
+  "dynamicStockCount": 9,
+  "dynamicStockRatio": 1.0,
+  "openStockCount": 9,
+  "openStockRatio": 1.0,
+  "frozenStockCount": 0,
+  "frozenStockRatio": 0.0,
   "sourceTimestampCount": 205,
-  "reasons": [
-    "WATCHLIST_TRADE_DATE_MISMATCH",
-    "FROZEN_HISTORY",
-    "MARKET_STATUS_CLOSED_OR_STALE",
-    "INSUFFICIENT_INTRADAY_CHANGE",
-    "STALE_SOURCE_TIMESTAMP"
-  ],
+  "reasons": [],
   "warnings": [
+    "MARKET_SCAN_FAILED",
     "TURNOVER_TOP_MISSING",
-    "SCAN_DELTA_MISSING"
+    "RISING_LIQUID_MISSING",
+    "SCAN_DELTA_EMPTY"
   ]
 }
