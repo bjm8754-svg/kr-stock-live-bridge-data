@@ -34,8 +34,18 @@ globalThis.fetch = async function(input, init={}) {
   }
 
   if (u.hostname === 'm.stock.naver.com') {
-    const sortType=u.searchParams.get('sortType');
-    const category=u.searchParams.get('category');
+    // Reproduce the real-session failure mode: legacy front-api ranking route returns 404.
+    if (u.pathname === '/front-api/stock/domestic/stockList') {
+      return new Response('not found', {status:404});
+    }
+
+    const parts=u.pathname.split('/').filter(Boolean);
+    if (parts[0] !== 'api' || parts[1] !== 'stocks' || parts.length < 4) {
+      return new Response('not found', {status:404});
+    }
+
+    const sortType=parts[2];
+    const category=parts[3];
     const base = category==='KOSPI' ? 0 : 100;
     const rows = sortType==='quantTop'
       ? [
@@ -231,6 +241,7 @@ function minuteRow(date, minute, codes=['000001','000002']) {
   assert(body.turnoverTop[0].tradingValue!=null,'scan tradingValue missing');
   assert(body.volumeTop[0].volume!=null,'scan volume missing');
   assert(body.coverage.successfulConfigs===4,'scan coverage incomplete');
+  assert(body.rankings.every(x=>String(x.endpoint||'').includes('/api/stocks/')),'scan fallback endpoint was not used');
 }
 
 // 10) Root endpoint must expose the exact deployable build fingerprint.
