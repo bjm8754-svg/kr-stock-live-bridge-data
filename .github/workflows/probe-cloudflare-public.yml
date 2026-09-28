@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
       - name: Probe public Worker endpoints
         shell: bash
         run: |
@@ -30,15 +33,70 @@ jobs:
           WATCH=$(curl --fail --silent --show-error "$BASE/watchlist")
           echo "$WATCH" | jq .
 
-          echo "=== SCAN ==="
+          DATE=$(TZ=Asia/Seoul date +%Y%m%d)
+
+          echo "=== HISTORY ==="
+          HISTORY=$(curl --fail --silent --show-error "$BASE/history?date=$DATE")
+          echo "$HISTORY" | jq '{status,date,count,from:(.rows[0].atKst // null),to:(.rows[-1].atKst // null)}'
+          test "$(echo "$HISTORY" | jq -r '.count')" = "41"
+          test "$(echo "$HISTORY" | jq -r '.rows[0].atKst')" = "$DATE 0900"
+          test "$(echo "$HISTORY" | jq -r '.rows[-1].atKst')" = "$DATE 0940"
+
+          echo "=== SCAN #1 ==="
           SCAN=$(curl --fail --silent --show-error "$BASE/scan")
+          echo "$SCAN" > /tmp/scan1.json
           echo "$SCAN" | jq '{status,coverage,rankings:[.rankings[]? | {market,sortType,endpoint,error,rowCount:(.rows|length)}],volumeTopCount:(.volumeTop|length),turnoverTopCount:(.turnoverTop|length),risingLiquidCount:(.risingLiquid|length)}'
+          test "$(echo "$SCAN" | jq -r '.status')" = "PASS"
+          test "$(echo "$SCAN" | jq -r '.coverage.successfulConfigs')" = "4"
+          test "$(echo "$SCAN" | jq -r '.coverage.failedConfigs')" = "0"
+
+          sleep 2
+
+          echo "=== SCAN #2 / SHADOW DELTA ==="
+          SCAN2=$(curl --fail --silent --show-error "$BASE/scan")
+          echo "$SCAN2" > /tmp/scan2.json
+          test "$(echo "$SCAN2" | jq -r '.status')" = "PASS"
+          test "$(echo "$SCAN2" | jq -r '.coverage.successfulConfigs')" = "4"
+          python - <<'PY'
+          import json
+          def load(p):
+              with open(p,encoding="utf-8") as f: return json.load(f)
+          def rows(s):
+              by={}
+              for key in ("volumeTop","turnoverTop","risingLiquid"):
+                  for r in s.get(key) or []:
+                      if r.get("code"):
+                          by[r["code"]]=r
+              return by
+          a,b=rows(load("/tmp/scan1.json")),rows(load("/tmp/scan2.json"))
+          common=sorted(set(a)&set(b))
+          comparable=[
+              c for c in common
+              if a[c].get("tradingValue") is not None and b[c].get("tradingValue") is not None
+              and a[c].get("volume") is not None and b[c].get("volume") is not None
+          ]
+          print("SHADOW_DELTA_COMMON",len(common))
+          print("SHADOW_DELTA_COMPARABLE",len(comparable))
+          if not comparable:
+              raise SystemExit("NO_COMPARABLE_SCAN_ROWS")
+          PY
+
+          echo "=== REPO EVIDENCE ==="
+          test "$(jq -r '.status' live-health.json)" = "PASS"
+          test "$(jq -r '.tradeDate' live.json)" = "$DATE"
+          test "$(jq -r '.publisher.type' live.json)" = "CLOUDFLARE_WORKER_GITHUB_CONTENTS_API"
+          test "$(jq -r '.publisher.version' live.json)" = "worker_v3_hardened_money_scan_v3"
+          test "$(jq -r '.history.count' live.json)" = "41"
+          test "$(jq -r '.history.from' live.json)" = "$DATE 0900"
+          test "$(jq -r '.history.to' live.json)" = "$DATE 0940"
 
           echo "=== SUMMARY ==="
           echo "build=$(echo "$ROOT" | jq -r '.build // "MISSING"')"
           echo "message=$(echo "$ROOT" | jq -r '.message // "MISSING"')"
           echo "watchlistTradeDate=$(echo "$WATCH" | jq -r '.tradeDate // "MISSING"')"
           echo "watchlistCount=$(echo "$WATCH" | jq -r '(.codes // []) | length')"
+          echo "historyCount=$(echo "$HISTORY" | jq -r '.count // -1')"
           echo "scanStatus=$(echo "$SCAN" | jq -r '.status // "MISSING"')"
           echo "scanSuccessfulConfigs=$(echo "$SCAN" | jq -r '.coverage.successfulConfigs // -1')"
           echo "scanFailedConfigs=$(echo "$SCAN" | jq -r '.coverage.failedConfigs // -1')"
+          echo "SHADOW_LIVE_E2E_PASS"
