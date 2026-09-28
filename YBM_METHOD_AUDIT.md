@@ -57,6 +57,12 @@ Core source concepts reviewed:
 7. Missing evidence remains UNKNOWN. Do not backfill narrative.
 8. Hidden operator intent ("accumulation", "energy gathering", etc.) is not asserted as fact; use observable price/volume language.
 9. Downstream Hard Filter/R/R may reject a good YBM structure, but must not rewrite the structural interpretation itself.
+10. Preserve distinct source setup families instead of forcing every pattern into one score:
+   - ABC_SWING_*: long-horizon/worker-friendly ABC and MA600 recovery track.
+   - JINDOL_TACTICAL: money-confirmed breakout trading track even when full ABC confluence is absent.
+   - ABC_JINDOL_CONFLUENCE: ABC + MA600 + cloud/supply context + Jindol overlap.
+   A tactical Jindol must not be mislabeled as full ABC confluence, and a valid tactical Jindol must not be deleted merely because it is not full ABC.
+11. SYSTEM STRUCTURAL GRADE is chart-only. Source-style final quality requires the downstream company/material/industry-cycle context; never present system S/A/B_PLUS as the teacher's final S/A/B grade.
 
 ## 4. Required trace chain
 
