@@ -1,4 +1,5 @@
 name: Probe Cloudflare Worker Public State
+# runtime recheck after Cloudflare deploy 8394f68d
 
 on:
   push:
