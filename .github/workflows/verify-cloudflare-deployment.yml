@@ -1,4 +1,5 @@
 name: Verify Cloudflare Worker Deployment
+# reverify after runtime scan endpoint fix
 
 on:
   push:
