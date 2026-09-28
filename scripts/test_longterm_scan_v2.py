@@ -368,6 +368,7 @@ assert tc["ybmTrace"]["sourceLineMapping"]["hotpink"] == "MA600"
 assert tc["ybmTrace"]["sourceLineMapping"]["whiteLine"] == "UNRESOLVED_FROM_TEXT"
 assert tc["ybmTrace"]["sourceConfluence"]["abcCActive"] is True
 assert tc["ybmTrace"]["sourceConfluence"]["hotpinkMa600Above"] is True
+assert tc["ybmTrace"]["setupFamily"] in ("ABC_JINDOL_CONFLUENCE","ABC_SWING_BUILDUP")
 assert tc["chartGradeOrigin"] == "SYSTEM_STRUCTURAL_NOT_SOURCE_FINAL_GRADE"
 bo = scan.build_brief_output({
     "status":"PASS","generatedAtKst":"x","tradeDate":"20260923","methodologyVersion":"x",
