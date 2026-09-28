@@ -1791,6 +1791,30 @@ def compact_chart_candidate(x):
     }
 
 
+def compact_ybm_trace(x):
+    """Audit trail for YBM-style interpretation.
+
+    Keep the observable structure used to explain ABC/reference-candle/core-resistance/
+    breakout/retest/reacceleration judgments. This is intentionally evidence-first:
+    downstream narration must not invent a YBM label when the corresponding field is absent.
+    """
+    ma = x.get("ma") or {}
+    return {
+        "abc": x.get("abc"),
+        "ma": {k: ma.get(k) for k in ("20", "60", "120", "240", "480", "600", "1000")},
+        "cloud": x.get("cloud"),
+        "referenceCandleAnchor": active_reference_anchor(x),
+        "setupCoreResistance": compact_core(x.get("coreResistance")),
+        "breakCoreResistance": x.get("breakCoreResistance"),
+        "preJindol": x.get("preJindol"),
+        "retestOk": x.get("retestOk"),
+        "retestSupply": x.get("retestSupply"),
+        "reacceleration": x.get("reacceleration"),
+        "yangEumYang": x.get("yangEumYang"),
+        "newListingSetup": x.get("newListingSetup"),
+    }
+
+
 def compact_timing_candidate(x):
     cg = x.get("chartGrade") or {}
     return {
@@ -1803,11 +1827,14 @@ def compact_timing_candidate(x):
         "referenceState": cg.get("referenceState"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakoutClass": x.get("breakoutClass"),
+        "ybmTrace": compact_ybm_trace(x),
         "entryPlan": x.get("entryPlan"),
         "money": {
             "tradingValue": (x.get("money") or {}).get("tradingValue"),
             "tradingValueRatio20Estimated": (x.get("money") or {}).get("tradingValueRatio20Estimated"),
             "volumeRatio20": (x.get("money") or {}).get("volumeRatio20"),
+            "relativeToPriorReferenceMoney": (x.get("money") or {}).get("relativeToPriorReferenceMoney"),
+            "turnoverToMarketCapPct": (x.get("money") or {}).get("turnoverToMarketCapPct"),
         },
         "actionScore": x.get("actionScore"),
         "dataWarnings": x.get("dataWarnings"),
