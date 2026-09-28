@@ -1829,12 +1829,22 @@ def compact_ybm_trace(x):
     # so MA1000 is exposed by name without inventing that nickname.
     if abc_c and hotpink_above is True and cloud_above and core_defined and jindol:
         confluence = "CORE_SOURCE_CONFLUENCE_JINDOL"
+        setup_family = "ABC_JINDOL_CONFLUENCE"
     elif abc_c and hotpink_above is True and cloud_above and core_defined and pre_jindol:
         confluence = "CORE_SOURCE_CONFLUENCE_PRE_JINDOL"
+        setup_family = "ABC_SWING_PRE_JINDOL"
     elif abc_c and hotpink_above is True and core_defined:
         confluence = "PARTIAL_SOURCE_CONFLUENCE"
+        setup_family = "ABC_SWING_BUILDUP"
+    elif jindol:
+        confluence = "WEAK_OR_INCOMPLETE_SOURCE_CONFLUENCE"
+        setup_family = "JINDOL_TACTICAL"
+    elif pre_jindol:
+        confluence = "WEAK_OR_INCOMPLETE_SOURCE_CONFLUENCE"
+        setup_family = "PRE_JINDOL_TACTICAL_WATCH"
     else:
         confluence = "WEAK_OR_INCOMPLETE_SOURCE_CONFLUENCE"
+        setup_family = "OTHER_YBM_STRUCTURAL_WATCH"
 
     return {
         "abc": x.get("abc"),
@@ -1856,6 +1866,7 @@ def compact_ybm_trace(x):
         "reacceleration": x.get("reacceleration"),
         "yangEumYang": x.get("yangEumYang"),
         "newListingSetup": x.get("newListingSetup"),
+        "setupFamily": setup_family,
         "sourceConfluence": {
             "state": confluence,
             "abcCActive": abc_c,
