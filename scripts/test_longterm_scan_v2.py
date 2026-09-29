@@ -501,6 +501,40 @@ assert cont["compression"] is True
 assert cont["pressureTouches"] >= int(cfg["continuationMinHighPressureTouches"])
 assert cont["state"] in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT")
 
+
+
+# RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
+rsi_idx = pd.bdate_range("2026-01-01", periods=80)
+rsi_df = pd.DataFrame({
+    "Open":np.full(80,100.0),
+    "High":np.full(80,102.0),
+    "Low":np.full(80,98.0),
+    "Close":np.full(80,100.0),
+    "Volume":np.full(80,1_000_000),
+    "RSI":np.linspace(45.0,50.0,80),
+}, index=rsi_idx)
+# Price makes a lower low while RSI makes a higher low.
+rsi_df.iloc[35, rsi_df.columns.get_loc("Low")] = 90.0
+rsi_df.iloc[35, rsi_df.columns.get_loc("RSI")] = 25.0
+rsi_df.iloc[58, rsi_df.columns.get_loc("Low")] = 85.0
+rsi_df.iloc[58, rsi_df.columns.get_loc("RSI")] = 35.0
+rsi_bull = scan.rsi_context(rsi_df, cfg)
+assert rsi_bull["divergence"] == "BULLISH_DIVERGENCE"
+assert rsi_bull["priceFirst"] is True
+assert rsi_bull["auto7030Trigger"] is False
+
+rsi_df2 = rsi_df.copy()
+rsi_df2["Low"] = 98.0
+rsi_df2["High"] = 102.0
+rsi_df2["RSI"] = np.linspace(50.0,48.0,80)
+rsi_df2.iloc[35, rsi_df2.columns.get_loc("High")] = 110.0
+rsi_df2.iloc[35, rsi_df2.columns.get_loc("RSI")] = 75.0
+rsi_df2.iloc[58, rsi_df2.columns.get_loc("High")] = 115.0
+rsi_df2.iloc[58, rsi_df2.columns.get_loc("RSI")] = 65.0
+rsi_bear = scan.rsi_context(rsi_df2, cfg)
+assert rsi_bear["divergence"] == "BEARISH_DIVERGENCE"
+assert rsi_bear["auto7030Trigger"] is False
+
 # Structure warnings must penalize a failed breakout without depending on dayChangePct sign.
 warning_sample = {
     "signal":"HIGH_TREND_PRESSURE",
