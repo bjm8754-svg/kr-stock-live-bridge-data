@@ -571,6 +571,15 @@ fail_df = scan.add_indicators(fail_raw, cfg)
 fail_ctx = scan.recent_box_breakout_context(fail_df, cfg)
 assert fail_ctx["state"] == "BOX_CORE_FAILURE"
 
+# Flat prices should map to neutral RSI rather than false oversold/overbought.
+flat_idx = pd.bdate_range("2026-01-01", periods=40)
+flat_raw = pd.DataFrame({
+    "Open":np.full(40,100.0),"High":np.full(40,101.0),"Low":np.full(40,99.0),
+    "Close":np.full(40,100.0),"Volume":np.full(40,1_000_000),
+}, index=flat_idx)
+flat_df = scan.add_indicators(flat_raw, cfg)
+assert round(float(flat_df["RSI"].iloc[-1]), 2) == 50.0
+
 # RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
 rsi_idx = pd.bdate_range("2026-01-01", periods=80)
 rsi_df = pd.DataFrame({
