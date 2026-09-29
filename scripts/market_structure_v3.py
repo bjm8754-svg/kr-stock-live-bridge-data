@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import concurrent.futures as cf
 import datetime as dt
+import copy
 import json
 from pathlib import Path
 
@@ -64,6 +65,7 @@ def main():
     p.add_argument("--config", default="market-structure-v3-config.json")
     p.add_argument("--output", default="market-structure-v3.json")
     p.add_argument("--full-output", default="/tmp/market-structure-v3-full.json")
+    p.add_argument("--review-output", default="/tmp/market-structure-v3-review.json")
     args = p.parse_args()
 
     cfg = json.loads(Path(args.config).read_text(encoding="utf-8"))
@@ -86,11 +88,29 @@ def main():
                 })
 
     now = dt.datetime.now(KST).isoformat()
-    compact = build_output(rows, errors, cfg, now)
+    compact_with_traces = build_output(rows, errors, cfg, now)
 
-    # Keep the diagnostic artifact compact. Recent chart traces are already preserved
-    # for the bounded assistant deep-review queue in the compact output; storing them
-    # for the entire market would add weight without improving auditability.
+    # Heavy chart traces are ephemeral review evidence, not canonical Git history.
+    # Keep the committed canonical output lightweight and upload the review packet as
+    # a short-retention workflow artifact.
+    review_packet = {
+        "status": compact_with_traces["status"],
+        "schemaVersion": "MARKET_STRUCTURE_V3_REVIEW_PACKET",
+        "methodologyVersion": compact_with_traces["methodologyVersion"],
+        "generatedAtKst": now,
+        "tradeDate": compact_with_traces["tradeDate"],
+        "sourceSchemaVersion": compact_with_traces["schemaVersion"],
+        "count": len(compact_with_traces.get("deepReviewQueue") or []),
+        "deepReviewQueue": compact_with_traces.get("deepReviewQueue") or [],
+    }
+
+    compact = copy.deepcopy(compact_with_traces)
+    for item in compact.get("deepReviewQueue") or []:
+        review = item.get("review") or {}
+        review.pop("chartTrace", None)
+
+    # Keep the full diagnostic artifact compact as well. The dedicated review packet
+    # is the only artifact that carries multi-timeframe chart traces.
     full_rows = []
     for row in rows:
         x = dict(row)
@@ -115,6 +135,7 @@ def main():
 
     Path(args.output).write_text(json.dumps(compact, ensure_ascii=False, indent=2), encoding="utf-8")
     Path(args.full_output).write_text(json.dumps(full, ensure_ascii=False, indent=2), encoding="utf-8")
+    Path(args.review_output).write_text(json.dumps(review_packet, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(json.dumps({
         "status": compact["status"],
@@ -123,6 +144,8 @@ def main():
         "counts": compact["counts"],
         "output": args.output,
         "fullOutput": args.full_output,
+        "reviewOutput": args.review_output,
+        "reviewPacketCount": review_packet["count"],
     }, ensure_ascii=False))
 
     if compact["status"] not in ("PASS", "PARTIAL"):
