@@ -20,7 +20,7 @@ from .levels import (
 from .setups import confirmation_context, detect_setups
 
 
-def _trim_levels(levels, close, cfg):
+def _trim_levels(levels, close, cfg, pinned_prices=None):
     """Keep the output compact without changing detection.
 
     Preserve nearest levels on each side plus high-evidence zones and all special
@@ -35,13 +35,20 @@ def _trim_levels(levels, close, cfg):
 
     special = [
         x for x in levels
-        if any(k.startswith(("BOX_", "TREND_BRIDGE", "EVENT_")) for k in (x.get("kinds") or []))
+        if any(k.startswith(("BOX_", "TREND_BRIDGE", "EVENT_", "TRADE_DENSITY")) for k in (x.get("kinds") or []))
     ]
     evidence = sorted(levels, key=lambda x: (int(x.get("evidenceCount") or 0), float(x.get("strength") or 0)), reverse=True)
     near = sorted(levels, key=distance)
 
+    pins = [float(x) for x in (pinned_prices or []) if x is not None]
+    pinned = []
+    for lv in levels:
+        line = float(lv["line"])
+        if any(abs(line-p) <= max(0.03, abs(p)*0.0005) for p in pins):
+            pinned.append(lv)
+
     keep, seen = [], set()
-    for group in (special, near[:8], evidence[:8]):
+    for group in (pinned, special, near[:8], evidence[:8]):
         for x in group:
             key = (x.get("zoneLow"), x.get("zoneHigh"), tuple(x.get("kinds") or []))
             if key in seen:
@@ -99,7 +106,16 @@ def analyze_frame(meta, raw_df, cfg):
     if money.get("quality") == "ESTIMATED":
         data_warnings.append("CURRENT_TRADING_VALUE_ESTIMATED")
 
-    output_levels = _trim_levels(roles, close, cfg)
+    output_levels = _trim_levels(
+        roles,
+        close,
+        cfg,
+        pinned_prices=[
+            execution.get("nearestAcceptedSupport"),
+            execution.get("nextResistance"),
+            execution.get("entryReference"),
+        ],
+    )
 
     return {
         "status": "OK",
