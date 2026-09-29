@@ -12,6 +12,7 @@ from .levels import (
     bridge_levels,
     discover_event_levels,
     discover_recent_box,
+    discover_trade_density_levels,
     discover_swing_levels,
     discover_trend_bridge,
     merge_levels,
@@ -72,6 +73,7 @@ def analyze_frame(meta, raw_df, cfg):
 
     raw_levels = []
     raw_levels.extend(discover_event_levels(df, cfg))
+    raw_levels.extend(discover_trade_density_levels(df, cfg))
     raw_levels.extend(box_levels(box, cfg))
     raw_levels.extend(bridge_levels(bridge, cfg))
     raw_levels.extend(discover_swing_levels(df, cfg))
