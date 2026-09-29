@@ -99,7 +99,7 @@ def review_tier(row):
     return "BACKGROUND"
 
 
-def build_review_context(df, structure, setups, confirmation, execution, cfg):
+def build_review_context(df, structure, setups, confirmation, execution, cfg, include_trace=True):
     primary = (setups or {}).get("primary") or {}
     core_levels = [
         lv for lv in (structure.get("levels") or [])
@@ -127,7 +127,7 @@ def build_review_context(df, structure, setups, confirmation, execution, cfg):
             "Do close acceptance/rejection, volume and time support the same interpretation?",
             "Does a higher-level chart context invalidate or downgrade the machine hypothesis?",
         ],
-        "chartTrace": _chart_trace(df, cfg),
+        "chartTrace": _chart_trace(df, cfg) if include_trace else None,
     }
 
 
