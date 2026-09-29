@@ -75,5 +75,11 @@
   "baseReversalMinPriorDeclinePct": 25,
   "baseReversalMaxBaseRangePct": 35,
   "pullbackMoneyContractionRatio": 0.8,
-  "minExecutableStructuralRR": 1.15
+  "minExecutableStructuralRR": 1.15,
+  "densityLookbackSessions": 180,
+  "densityBins": 24,
+  "densityTopBins": 4,
+  "densityMinSessions": 4,
+  "coreLevelMinEvidenceCount": 3,
+  "coreLevelMinStrength": 3
 }
