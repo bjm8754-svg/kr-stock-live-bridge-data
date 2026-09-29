@@ -503,6 +503,41 @@ assert cont["state"] in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT")
 
 
 
+
+
+# Generic time-accumulated box proxy: relative compression + repeated boundary reactions.
+box_idx = pd.bdate_range("2025-01-02", periods=81)
+broad_x = np.linspace(0, 4*np.pi, 40)
+box_x = np.linspace(0, 4*np.pi, 40)
+broad_close = 100.0 + 18.0*np.sin(broad_x)
+box_close = 100.0 + 9.0*np.sin(box_x)
+box_raw = pd.DataFrame({
+    "Open": np.r_[broad_close, box_close, [108.0]],
+    "High": np.r_[broad_close + 12.0, box_close + 1.5, [113.0]],
+    "Low": np.r_[broad_close - 12.0, box_close - 1.5, [107.0]],
+    "Close": np.r_[broad_close, box_close, [112.0]],
+    "Volume": np.r_[np.full(40,1_000_000), np.full(40,1_000_000), [1_500_000]],
+}, index=box_idx)
+box_df = scan.add_indicators(box_raw, cfg)
+box_ctx = scan.box_structure_context(box_df, cfg)
+assert box_ctx["detected"] is True
+assert box_ctx["state"] == "BOX_BREAKOUT_PENDING"
+assert box_ctx["box"]["upperTouches"] >= int(cfg["boxMinUpperTouches"])
+assert box_ctx["box"]["lowerTouches"] >= int(cfg["boxMinLowerTouches"])
+assert box_ctx["box"]["algorithmicProxy"] is True
+assert box_ctx["roleEvidenceOnly"] is True
+
+spring_raw = box_raw.copy()
+spring_raw.iloc[-1, spring_raw.columns.get_loc("Open")] = 96.0
+spring_raw.iloc[-1, spring_raw.columns.get_loc("High")] = 100.0
+spring_raw.iloc[-1, spring_raw.columns.get_loc("Low")] = 87.0
+spring_raw.iloc[-1, spring_raw.columns.get_loc("Close")] = 95.0
+spring_df = scan.add_indicators(spring_raw, cfg)
+spring_ctx = scan.box_structure_context(spring_df, cfg)
+assert spring_ctx["detected"] is True
+assert spring_ctx["springState"] == "SPRING_RECLAIM_TODAY"
+assert spring_ctx["roleEvidenceOnly"] is True
+
 # RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
 rsi_idx = pd.bdate_range("2026-01-01", periods=80)
 rsi_df = pd.DataFrame({
