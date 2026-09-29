@@ -2377,6 +2377,7 @@ def run(cfg):
             "Core resistance is built from pre-current data only to avoid look-ahead leakage.",
             "Past shortlist/rejection/rank is audit-only and is never used as a next-session scoring input.",
             "Every run rebuilds qualifiedPool and actionScore from current observable market state.",
+            "Box/spring, trend-bridge and RSI fields are observation-only context and do not promote candidates or add action score.",
         ],
         "coverage": {
             "universe": len(uni),
