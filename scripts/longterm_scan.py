@@ -1401,6 +1401,10 @@ def analyze_frame(meta, raw_df, cfg):
         structure_warnings.append("UPPER_REJECTION")
 
     continuation = high_trend_pressure_features(df, cfg)
+    continuation_liquid = bool(
+        pd.notna(avg20_tv)
+        and float(avg20_tv) >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
+    )
 
     if recent_anomaly:
         signal = "DATA_WARNING"
@@ -1418,7 +1422,7 @@ def analyze_frame(meta, raw_df, cfg):
         signal = "PRE_JINDOL"
     elif abc.get("bPlus") and avg_liquid:
         signal = "B_PLUS"
-    elif continuation.get("state") in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT"):
+    elif continuation_liquid and continuation.get("state") in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT"):
         signal = "HIGH_TREND_PRESSURE"
     elif abc_candidate:
         signal = "ABC_CANDIDATE"
@@ -1731,7 +1735,7 @@ def run(cfg):
         "NEW_LISTING_SETUP", "MA600_BREAKOUT", "NEAR_MA600", "DATA_WARNING"
     ]
     by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
-    allc = sortit([x for x in cur if x["signal"] != "NONE" or (x.get("structureWarnings") or [])])
+    allc = sortit([x for x in cur if x["signal"] != "NONE" or "FAILED_BREAKOUT" in (x.get("structureWarnings") or [])])
     qualified = sortit([x for x in allc if is_qualified_candidate(x, cfg)])
     risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK" or (x.get("structureWarnings") or [])])
 
@@ -1826,6 +1830,8 @@ def run(cfg):
                 "resistance clustering weights/tolerances",
                 "relative-money threshold and structural score",
                 "new-listing mini-track thresholds",
+                "core level role-state acceptance rules",
+                "high-trend continuation compression/pressure thresholds",
             ],
         },
         "notes": [
