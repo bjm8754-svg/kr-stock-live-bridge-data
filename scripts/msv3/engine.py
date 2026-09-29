@@ -18,6 +18,7 @@ from .levels import (
     merge_levels,
 )
 from .setups import confirmation_context, detect_setups
+from .review import build_review_context, select_deep_review_queue
 
 
 def _trim_levels(levels, close, cfg, pinned_prices=None):
@@ -94,6 +95,15 @@ def analyze_frame(meta, raw_df, cfg):
     confirmation = confirmation_context(df, money, rsi, setups.get("primary"), cfg)
     execution = build_execution_plan(df, roles, setups, confirmation, money, cfg)
 
+    review = build_review_context(
+        df,
+        {"box": box, "trendBridge": bridge, "levels": roles},
+        setups,
+        confirmation,
+        execution,
+        cfg,
+    )
+
     ma = {}
     for p in cfg.get("maPeriods", [20, 60, 120, 240, 600]):
         v = cur.get(f"MA{int(p)}")
@@ -143,6 +153,7 @@ def analyze_frame(meta, raw_df, cfg):
         "setups": setups,
         "confirmation": confirmation,
         "execution": execution,
+        "review": review,
         "warnings": warnings,
         "dataWarnings": data_warnings,
         "rows": len(df),
@@ -176,6 +187,8 @@ def build_output(rows, errors, cfg, generated_at_kst):
     watch = [x for x in candidates if (x.get("execution") or {}).get("readiness") == "WATCH_TRIGGER"]
     radar = [x for x in candidates if (x.get("execution") or {}).get("readiness") == "RADAR"]
 
+    deep_review = select_deep_review_queue(candidates, cfg)
+
     warning_rows = [
         x for x in current
         if any(w in (x.get("warnings") or []) for w in ("FAILED_BREAKOUT", "SUPPORT_BREAK"))
@@ -193,7 +206,21 @@ def build_output(rows, errors, cfg, generated_at_kst):
     ):
         status = "PARTIAL"
 
-    def compact(x):
+    def compact(x, include_review_trace=False):
+        review = x.get("review") or {}
+        review_out = {
+            "assistantReviewRequired": review.get("assistantReviewRequired"),
+            "machineScope": review.get("machineScope"),
+            "machineReadiness": review.get("machineReadiness"),
+            "reviewTier": review.get("reviewTier"),
+            "hypothesis": review.get("hypothesis"),
+            "coreLevelCount": review.get("coreLevelCount"),
+            "questions": review.get("questions"),
+        }
+        if include_review_trace:
+            review_out["traceSchema"] = review.get("traceSchema")
+            review_out["chartTrace"] = review.get("chartTrace")
+
         return {
             "code": x["code"],
             "name": x["name"],
@@ -204,6 +231,7 @@ def build_output(rows, errors, cfg, generated_at_kst):
             "setups": x.get("setups"),
             "confirmation": x.get("confirmation"),
             "execution": x.get("execution"),
+            "review": review_out,
             "structure": x.get("structure"),
             "ma": x.get("ma"),
             "warnings": x.get("warnings"),
@@ -222,6 +250,7 @@ def build_output(rows, errors, cfg, generated_at_kst):
             "hiddenIntentInference": False,
             "rsiRole": "confirmation/warning only",
             "legacyYbmRole": "not a governing architecture; reusable ideas may survive only as generic structure evidence",
+            "machineRole": "universe compression and evidence packaging only; final chart judgement requires assistant deep review",
         },
         "coverage": {
             "universeProcessed": len(rows) + len(errors),
@@ -239,10 +268,12 @@ def build_output(rows, errors, cfg, generated_at_kst):
             "watchTrigger": len(watch),
             "radar": len(radar),
             "structureWarnings": len(warning_rows),
+            "deepReviewQueue": len(deep_review),
         },
         "executable": [compact(x) for x in executable[:max_out]],
         "watchTrigger": [compact(x) for x in watch[:max_out]],
         "radar": [compact(x) for x in radar[:max_out]],
+        "deepReviewQueue": [compact(x, include_review_trace=True) for x in deep_review],
         "structureWarnings": [compact(x) for x in warning_rows[:max_out]],
         "sourceBoundary": {
             "studyDerived": [
