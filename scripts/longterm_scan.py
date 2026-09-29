@@ -387,11 +387,16 @@ def rsi_context(df, cfg):
 
     lows, highs = [], []
     for i in range(half, len(sub) - half):
-        wlow = sub["Low"].iloc[i-half:i+half+1]
-        whigh = sub["High"].iloc[i-half:i+half+1]
-        if float(sub["Low"].iloc[i]) <= float(wlow.min()):
+        low_now = float(sub["Low"].iloc[i])
+        high_now = float(sub["High"].iloc[i])
+        left_low = float(sub["Low"].iloc[i-half:i].min())
+        right_low = float(sub["Low"].iloc[i+1:i+half+1].min())
+        left_high = float(sub["High"].iloc[i-half:i].max())
+        right_high = float(sub["High"].iloc[i+1:i+half+1].max())
+        # Strict extrema avoid treating a flat plateau as dozens of fake swing points.
+        if low_now < left_low and low_now < right_low:
             lows.append(i)
-        if float(sub["High"].iloc[i]) >= float(whigh.max()):
+        if high_now > left_high and high_now > right_high:
             highs.append(i)
 
     divergence = "NONE"
