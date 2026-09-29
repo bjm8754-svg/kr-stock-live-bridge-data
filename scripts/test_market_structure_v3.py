@@ -9,7 +9,7 @@ from msv3.engine import analyze_frame
 from msv3.execution import build_execution_plan
 from msv3.features import add_indicators, rsi_context
 from msv3.levels import attach_roles, classify_role, discover_trend_bridge, merge_levels
-from msv3.setups import detect_box_setup, detect_high_trend
+from msv3.setups import detect_box_setup, detect_high_trend, detect_bridge_setup, detect_level_retest
 
 ROOT = Path(__file__).resolve().parents[1]
 cfg = json.loads((ROOT / "market-structure-v3-config.json").read_text(encoding="utf-8"))
@@ -91,6 +91,25 @@ bridge_df = add_indicators(bridge_raw, cfg)
 bridge = discover_trend_bridge(bridge_df, cfg)
 assert bridge is not None
 assert bridge["impulsePct"] >= cfg["bridgeMinImpulsePct"]
+assert bridge["direction"] == "UP"
+
+# Falling impulse -> pause -> falling resume is retained as resistance evidence,
+# but it must not manufacture a bullish trend-bridge setup.
+dclose = np.full(80, 120.0)
+dclose[:40] = np.linspace(140,120,40)
+dclose[40:46] = np.linspace(120,102,6)
+dclose[46:50] = [103,104,103,103]
+dclose[50:60] = np.linspace(102,88,10)
+dclose[60:] = np.linspace(90,95,20)
+down_raw = pd.DataFrame({
+    "Open":dclose*1.005, "High":dclose*1.015, "Low":dclose*0.985, "Close":dclose,
+    "Volume":np.full(80,1_000_000),
+}, index=bidx)
+down_df = add_indicators(down_raw, cfg)
+down_bridge = discover_trend_bridge(down_df, cfg)
+assert down_bridge is not None
+assert down_bridge["direction"] == "DOWN"
+assert detect_bridge_setup(down_df, down_bridge, [], cfg) is None
 
 
 # 5) High-trend continuation is state-based, not merely high-distance.
@@ -129,6 +148,19 @@ plan = build_execution_plan(decision_df, roles, setup_bundle, confirmation, mone
 assert plan["nearestAcceptedSupport"] is None
 assert plan["invalidation"] is None
 assert plan["readiness"] == "RADAR"
+
+# Generic role-reversal execution requires a CORE level with ACCEPTED_SUPPORT.
+supporting_accepted = dict(level)
+supporting_accepted["importance"] = "SUPPORTING"
+supporting_accepted["role"] = {"state":"ACCEPTED_SUPPORT","warnings":[]}
+assert detect_level_retest(accepted_df, [supporting_accepted], cfg) is None
+
+core_accepted = dict(level)
+core_accepted["importance"] = "CORE"
+core_accepted["role"] = {"state":"ACCEPTED_SUPPORT","warnings":[]}
+level_retest = detect_level_retest(accepted_df, [core_accepted], cfg)
+assert level_retest is not None
+assert level_retest["state"] == "LEVEL_RETEST"
 
 
 # 8) End-to-end schema contains no aggregate score field.
