@@ -1795,8 +1795,8 @@ def analyze_frame(meta, raw_df, cfg):
         structure_warnings.append("UPPER_REJECTION")
 
     continuation = high_trend_pressure_features(df, cfg)
-    box_ctx = box_structure_context(df, cfg)
     rsi_ctx = rsi_context(df, cfg)
+    box_ctx = None
     continuation_liquid = bool(
         pd.notna(avg20_tv)
         and float(avg20_tv) >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
@@ -1830,6 +1830,23 @@ def analyze_frame(meta, raw_df, cfg):
         signal = "NEAR_MA600"
     else:
         signal = "NONE"
+
+    # Box/spring analysis is observation-only and comparatively heavier. Compute it only
+    # for rows that already have independent structural relevance; it must not create its
+    # own discovery eligibility at this stage.
+    needs_box_context = bool(
+        signal != "NONE"
+        or continuation.get("state") != "NONE"
+        or (avg_liquid and int(abc.get("score") or 0) >= int(cfg.get("qualifiedAbcMinScore", 80)))
+    )
+    box_ctx = box_structure_context(df, cfg) if needs_box_context else {
+        "detected": False,
+        "state": "NOT_EVALUATED",
+        "springState": "NONE",
+        "box": None,
+        "postBreakout": None,
+        "roleEvidenceOnly": True,
+    }
 
     money_score = 0
     if cur_tv >= float(cfg["veryStrongTradingValueKrw"]):
