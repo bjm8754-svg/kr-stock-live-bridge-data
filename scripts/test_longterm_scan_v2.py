@@ -538,6 +538,39 @@ assert spring_ctx["detected"] is True
 assert spring_ctx["springState"] == "SPRING_RECLAIM_TODAY"
 assert spring_ctx["roleEvidenceOnly"] is True
 
+
+
+# Box breakout retest states: old box upper boundary is the shallow retest reference,
+# while the compressed box close is the deeper core reference.
+retest_idx = pd.bdate_range("2025-01-02", periods=82)
+retest_raw = pd.concat([
+    box_raw,
+    pd.DataFrame({
+        "Open":[111.0],"High":[112.0],"Low":[109.0],"Close":[111.5],"Volume":[700_000],
+    }, index=[retest_idx[-1]])
+])
+retest_raw.index = retest_idx
+retest_df = scan.add_indicators(retest_raw, cfg)
+retest_ctx = scan.recent_box_breakout_context(retest_df, cfg)
+assert retest_ctx["detected"] is True
+assert retest_ctx["state"] == "TOP_RETEST_HELD"
+assert retest_ctx["retestRangeHigh"] >= retest_ctx["retestRangeLow"]
+assert retest_ctx["roleEvidenceOnly"] is True
+
+deep_raw = retest_raw.copy()
+deep_raw.iloc[-1, deep_raw.columns.get_loc("Low")] = 99.0
+deep_raw.iloc[-1, deep_raw.columns.get_loc("Close")] = 101.0
+deep_df = scan.add_indicators(deep_raw, cfg)
+deep_ctx = scan.recent_box_breakout_context(deep_df, cfg)
+assert deep_ctx["state"] == "DEEP_RETEST_CORE_HELD"
+
+fail_raw = retest_raw.copy()
+fail_raw.iloc[-1, fail_raw.columns.get_loc("Low")] = 96.0
+fail_raw.iloc[-1, fail_raw.columns.get_loc("Close")] = 98.0
+fail_df = scan.add_indicators(fail_raw, cfg)
+fail_ctx = scan.recent_box_breakout_context(fail_df, cfg)
+assert fail_ctx["state"] == "BOX_CORE_FAILURE"
+
 # RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
 rsi_idx = pd.bdate_range("2026-01-01", periods=80)
 rsi_df = pd.DataFrame({
