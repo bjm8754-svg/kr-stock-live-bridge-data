@@ -441,6 +441,111 @@ def box_structure_context(df, cfg):
     }
 
 
+def trend_bridge_context(df, cfg):
+    """Find a historical pause that demonstrably connected two legs of the same trend.
+
+    The study source emphasizes the *role* of the pause, not small candles by themselves.
+    This proxy therefore requires: impulse -> controlled pause -> same-direction continuation.
+    The pause close is exposed as the key price and its wick range as context only.
+    """
+    empty = {
+        "detected": False,
+        "direction": "NONE",
+        "roleState": "NONE",
+        "bridgeClose": None,
+        "zoneLow": None,
+        "zoneHigh": None,
+        "pauseStartDate": None,
+        "pauseEndDate": None,
+        "continuationDate": None,
+        "ageSessions": None,
+        "algorithmicProxy": True,
+        "roleEvidenceOnly": True,
+    }
+    if df is None or len(df) < 30:
+        return empty
+
+    lookback = int(cfg.get("trendBridgeLookbackSessions", 80))
+    impulse_windows = [int(x) for x in cfg.get("trendBridgeImpulseWindows", [3, 5, 8])]
+    max_pause = int(cfg.get("trendBridgePauseMaxSessions", 4))
+    cont_max = int(cfg.get("trendBridgeContinuationMaxSessions", 5))
+    min_impulse = float(cfg.get("trendBridgeMinImpulsePct", 8.0))
+    max_pause_ratio = float(cfg.get("trendBridgeMaxPauseToImpulseRangeRatio", 0.55))
+    min_cont = float(cfg.get("trendBridgeMinContinuationPct", 2.0))
+
+    n = len(df)
+    earliest = max(max(impulse_windows) + 1, n - lookback)
+
+    # Search newest to oldest; the most recent valid bridge is the most actionable context.
+    for pause_end in range(n - cont_max - 1, earliest - 1, -1):
+        for pause_len in range(1, max_pause + 1):
+            pause_start = pause_end - pause_len + 1
+            if pause_start <= 1:
+                continue
+            pause = df.iloc[pause_start:pause_end+1]
+            pause_low = float(pause["Low"].min())
+            pause_high = float(pause["High"].max())
+            pause_range = pause_high - pause_low
+
+            for iw in impulse_windows:
+                impulse_start = pause_start - iw
+                if impulse_start < 0:
+                    continue
+                impulse = df.iloc[impulse_start:pause_start]
+                start_close = float(impulse["Close"].iloc[0])
+                end_close = float(impulse["Close"].iloc[-1])
+                impulse_pct = pct(end_close, start_close)
+                if impulse_pct is None or abs(float(impulse_pct)) < min_impulse:
+                    continue
+                direction = "UP" if impulse_pct > 0 else "DOWN"
+                impulse_range = float(impulse["High"].max()) - float(impulse["Low"].min())
+                if impulse_range <= 0:
+                    continue
+                if pause_range / impulse_range > max_pause_ratio:
+                    continue
+
+                after = df.iloc[pause_end+1:min(n, pause_end+1+cont_max)]
+                if len(after) == 0:
+                    continue
+                bridge_close = float(pause["Close"].iloc[-1])
+
+                if direction == "UP":
+                    threshold = bridge_close * (1.0 + min_cont / 100.0)
+                    hits = np.where(after["Close"].astype(float).values >= threshold)[0]
+                else:
+                    threshold = bridge_close * (1.0 - min_cont / 100.0)
+                    hits = np.where(after["Close"].astype(float).values <= threshold)[0]
+                if len(hits) == 0:
+                    continue
+
+                hit_offset = int(hits[0])
+                hit_pos = pause_end + 1 + hit_offset
+                current_close = float(df["Close"].iloc[-1])
+                if direction == "UP":
+                    role = "SUPPORT_CANDIDATE" if current_close >= bridge_close else "BROKEN_SUPPORT_CANDIDATE"
+                else:
+                    role = "RESISTANCE_CANDIDATE" if current_close <= bridge_close else "BROKEN_RESISTANCE_CANDIDATE"
+
+                return {
+                    "detected": True,
+                    "direction": direction,
+                    "roleState": role,
+                    "bridgeClose": rnum(bridge_close, 2),
+                    "zoneLow": rnum(pause_low, 2),
+                    "zoneHigh": rnum(pause_high, 2),
+                    "pauseStartDate": df.index[pause_start].strftime("%Y%m%d"),
+                    "pauseEndDate": df.index[pause_end].strftime("%Y%m%d"),
+                    "continuationDate": df.index[hit_pos].strftime("%Y%m%d"),
+                    "impulsePct": rnum(impulse_pct),
+                    "pauseToImpulseRangeRatio": rnum(pause_range / impulse_range, 3),
+                    "ageSessions": int(n - 1 - pause_end),
+                    "algorithmicProxy": True,
+                    "roleEvidenceOnly": True,
+                }
+
+    return empty
+
+
 def rsi_context(df, cfg):
     """Price-first RSI context: direction and divergence only.
 
@@ -1797,6 +1902,7 @@ def analyze_frame(meta, raw_df, cfg):
     continuation = high_trend_pressure_features(df, cfg)
     rsi_ctx = rsi_context(df, cfg)
     box_ctx = None
+    trend_bridge = None
     continuation_liquid = bool(
         pd.notna(avg20_tv)
         and float(avg20_tv) >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
@@ -1845,6 +1951,16 @@ def analyze_frame(meta, raw_df, cfg):
         "springState": "NONE",
         "box": None,
         "postBreakout": None,
+        "roleEvidenceOnly": True,
+    }
+    trend_bridge = trend_bridge_context(df, cfg) if needs_box_context else {
+        "detected": False,
+        "direction": "NONE",
+        "roleState": "NOT_EVALUATED",
+        "bridgeClose": None,
+        "zoneLow": None,
+        "zoneHigh": None,
+        "algorithmicProxy": True,
         "roleEvidenceOnly": True,
     }
 
@@ -1945,6 +2061,7 @@ def analyze_frame(meta, raw_df, cfg):
         "structureWarnings": structure_warnings,
         "continuation": continuation,
         "boxContext": box_ctx,
+        "trendBridge": trend_bridge,
         "rsiContext": rsi_ctx,
         "distanceToCorePct": rnum(core_distance_now),
         "breakCoreResistance": bool(break_core),
@@ -2249,6 +2366,7 @@ def run(cfg):
                 "high-trend continuation compression/pressure thresholds",
                 "RSI period/slope/divergence lookbacks and numeric tolerances",
                 "box window/compression/boundary-reaction proxy thresholds",
+                "trend-bridge impulse/pause/continuation proxy thresholds",
             ],
         },
         "notes": [
@@ -2440,6 +2558,7 @@ def compact_chart_candidate(x):
         "continuationState": (x.get("continuation") or {}).get("state"),
         "boxState": (x.get("boxContext") or {}).get("state"),
         "springState": (x.get("boxContext") or {}).get("springState"),
+        "trendBridgeRole": (x.get("trendBridge") or {}).get("roleState"),
         "rsiDivergence": (x.get("rsiContext") or {}).get("divergence"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
@@ -2527,6 +2646,7 @@ def compact_ybm_trace(x):
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
         "boxContext": compact_box_context(x.get("boxContext")),
+        "trendBridge": x.get("trendBridge"),
         "rsiContext": x.get("rsiContext"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
