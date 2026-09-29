@@ -307,7 +307,7 @@ entry_core = {
 entry_ma = {"240": 9300, "480": 9000, "600": 8800, "1000": 8200}
 entry_prior = {"open": 9000, "close": 9400, "low": 8600}
 entry_recent = {"open": 9700, "close": 9800, "low": 9500}
-ep = scan.build_structural_entry_plan(entry_cur, entry_core, entry_ma, entry_prior, entry_recent, cfg)
+ep = scan.build_structural_entry_plan(entry_cur, entry_core, entry_ma, entry_prior, entry_recent, cfg, "ACCEPTED_SUPPORT")
 assert ep["nearestSupport"] == 9800
 assert ep["supportSource"] == "RECENT_REFERENCE_CLOSE"
 assert ep["supportHierarchy"]["primaryReferenceSupport"] == 9800
@@ -322,7 +322,7 @@ assert ep["nextResistance"] == 10500
 assert round(ep["structuralRR"], 2) == 0.95
 
 entry_no_ref = scan.build_structural_entry_plan(
-    entry_cur, entry_core, entry_ma, None, None, cfg
+    entry_cur, entry_core, entry_ma, None, None, cfg, "ACCEPTED_SUPPORT"
 )
 assert entry_no_ref["invalidationCandidate"] == 9600
 assert entry_no_ref["invalidationSource"] == "CORE_ZONE_LOW"
@@ -377,5 +377,99 @@ bo = scan.build_brief_output({
 })
 assert bo["schemaVersion"] == "YBM_BRIEF_V2"
 assert bo["role"]["primary"].startswith("completed-daily CHART")
+
+
+
+# Market-structure regression: a resistance/decision zone must not become support
+# merely because its lower edge is below current price.
+generic_core = {
+    "line":105.0, "zoneLow":100.0, "zoneHigh":110.0,
+    "alternatives":[{"line":120.0,"zoneLow":118.0,"zoneHigh":122.0,"sources":["SYNTH_LEVEL"]}],
+}
+role_idx = pd.bdate_range("2026-01-01", periods=2)
+decision_df = pd.DataFrame({
+    "Open":[96.0, 103.0], "High":[99.0, 108.0], "Low":[94.0, 101.0],
+    "Close":[97.0, 105.0], "Volume":[1_000_000, 1_000_000],
+}, index=role_idx)
+decision_role = scan.classify_core_role_state(decision_df, generic_core)
+assert decision_role["state"] == "DECISION_ZONE"
+decision_plan = scan.build_structural_entry_plan(
+    decision_df.iloc[-1], generic_core,
+    {"240":None,"480":None,"600":None,"1000":None},
+    None, None, cfg, decision_role["state"],
+)
+assert decision_plan["supportHierarchy"]["coreSupport"] is None
+assert decision_plan["invalidationCandidate"] is None
+assert decision_plan["structuralRR"] is None
+
+# Intraday break + close back below the whole zone is a failed breakout regardless
+# of whether the daily return is positive or negative.
+failed_df = pd.DataFrame({
+    "Open":[112.0, 111.0], "High":[114.0, 113.0], "Low":[111.0, 97.0],
+    "Close":[112.0, 98.0], "Volume":[1_000_000, 1_200_000],
+}, index=role_idx)
+failed_role = scan.classify_core_role_state(failed_df, generic_core)
+assert failed_role["state"] == "FAILED_BREAKOUT"
+assert failed_role["failedBreakout"] is True
+assert failed_role["upperRejection"] is True
+
+# Repeated closes above the old resistance are the minimum observable acceptance
+# required before that zone can participate as support/invalidation in the entry plan.
+accepted_df = pd.DataFrame({
+    "Open":[111.0, 112.0], "High":[113.0, 114.0], "Low":[110.5, 111.0],
+    "Close":[112.0, 113.0], "Volume":[1_000_000, 1_000_000],
+}, index=role_idx)
+accepted_role = scan.classify_core_role_state(accepted_df, generic_core)
+assert accepted_role["state"] == "ACCEPTED_SUPPORT"
+accepted_plan = scan.build_structural_entry_plan(
+    accepted_df.iloc[-1], generic_core,
+    {"240":None,"480":None,"600":None,"1000":None},
+    None, None, cfg, accepted_role["state"],
+)
+assert accepted_plan["supportHierarchy"]["coreSupport"] == 105.0
+assert accepted_plan["invalidationCandidate"] == 100.0
+assert accepted_plan["invalidationSource"] == "CORE_ZONE_LOW"
+
+# Generic continuation fixture: an established trend compressing near its prior high
+# with repeated upper tests and rising lows must be discoverable without a fresh YBM event.
+cont_idx = pd.bdate_range("2023-01-02", periods=700)
+cont_close = np.linspace(50.0, 100.0, 700)
+cont_close[-20:] = np.linspace(99.0, 103.0, 20)
+cont_raw = pd.DataFrame({
+    "Open": cont_close * 0.997,
+    "High": cont_close * 1.012,
+    "Low": cont_close * 0.988,
+    "Close": cont_close,
+    "Volume": np.full(700, 2_000_000),
+}, index=cont_idx)
+cont_df = scan.add_indicators(cont_raw, cfg)
+cont = scan.high_trend_pressure_features(cont_df, cfg)
+assert cont["trendAlive"] is True
+assert cont["nearHigh"] is True
+assert cont["compression"] is True
+assert cont["pressureTouches"] >= int(cfg["continuationMinHighPressureTouches"])
+assert cont["state"] in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT")
+
+# Structure warnings must penalize a failed breakout without depending on dayChangePct sign.
+warning_sample = {
+    "signal":"HIGH_TREND_PRESSURE",
+    "abc":{"score":70,"bPlus":False},
+    "money":{"tradingValue":50_000_000_000,"avg20TradingValueEstimated":20_000_000_000,
+             "tradingValueRatio20Estimated":1.2,"volumeRatio20":1.2},
+    "coreResistance":{"score":10,"sourceCount":3},
+    "cloud":{"state":"ABOVE"},
+    "entryPlan":{"structuralRR":None,"distanceToSupportPct":3.0},
+    "retestSupply":{"supplyDry":False},
+    "closeLocation":0.15,
+    "dayChangePct":-4.0,
+    "structureWarnings":["FAILED_BREAKOUT"],
+    "continuation":{"state":"BREAKOUT_PRESSURE"},
+    "breakCoreResistance":False,
+    "reacceleration":False,
+    "yangEumYang":False,
+}
+warning_score = scan.compute_action_score(warning_sample, cfg)
+assert "FAILED_BREAKOUT" in warning_score["penaltyReasons"]
+assert not scan.is_qualified_candidate(warning_sample, cfg)
 
 print("V2 self-tests: PASS")
