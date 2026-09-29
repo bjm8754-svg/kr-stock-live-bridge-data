@@ -3,25 +3,7 @@ from __future__ import annotations
 import pandas as pd
 
 from .features import pct, rnum
-
-
-SETUP_MATURITY = {
-    "SPRING_CONFIRMED": 100,
-    "BOX_RETEST": 95,
-    "HIGH_RETEST": 92,
-    "TREND_BRIDGE_RETEST": 90,
-    "BOX_BREAKOUT_ACCEPTED": 88,
-    "HIGH_BREAKOUT": 86,
-    "LEVEL_RETEST": 84,
-    "BREAKOUT_PRESSURE": 75,
-    "BOX_BREAKOUT_PENDING": 72,
-    "SPRING_RECLAIM_PENDING": 70,
-    "BASE_BREAKOUT": 68,
-    "BASE_RECOVERY": 55,
-    "HIGH_BASE": 52,
-    "BOX_BUILDING": 45,
-    "TREND_BRIDGE_ACTIVE": 40,
-}
+from .taxonomy import setup_priority
 
 
 def _setup(family, state, evidence, trigger=None, invalidation=None, source=None):
@@ -32,7 +14,6 @@ def _setup(family, state, evidence, trigger=None, invalidation=None, source=None
         "triggerLevel": rnum(trigger, 2),
         "invalidationLevel": rnum(invalidation, 2),
         "source": source,
-        "maturity": SETUP_MATURITY.get(state, 0),
     }
 
 
@@ -187,15 +168,21 @@ def detect_base_reversal(df, cfg):
     lookback = int(cfg.get("baseReversalLookbackSessions", 252))
     base_n = int(cfg.get("baseReversalBaseSessions", 60))
     hist = df.iloc[-lookback:]
-    prior_high = float(hist["High"].max())
-    low = float(hist["Low"].min())
-    if prior_high <= 0:
+    base = df.iloc[-base_n:]
+    pre_base = hist.iloc[:-base_n]
+    if len(pre_base) < 20:
         return None
+    peak_pos = int(pre_base["High"].to_numpy().argmax())
+    prior_high = float(pre_base["High"].iloc[peak_pos])
+    decline_window = hist.iloc[peak_pos:len(hist)-base_n+1]
+    if prior_high <= 0 or len(decline_window) < 2:
+        return None
+    low = float(decline_window["Low"].min())
     decline = (1.0-low/prior_high)*100.0
     if decline < float(cfg.get("baseReversalMinPriorDeclinePct", 25.0)):
         return None
 
-    base = df.iloc[-base_n:]
+
     blo, bhi = float(base["Low"].min()), float(base["High"].max())
     if blo <= 0:
         return None
@@ -237,6 +224,8 @@ def detect_base_reversal(df, cfg):
 def detect_bridge_setup(df, bridge, levels, cfg):
     if not bridge:
         return None
+    if (bridge.get("direction") or "UP") != "UP":
+        return None
     close = float(df["Close"].iloc[-1])
     line = float(bridge["close"])
     zone_low, zone_high = float(bridge["zoneLow"]), float(bridge["zoneHigh"])
@@ -245,7 +234,7 @@ def detect_bridge_setup(df, bridge, levels, cfg):
     # Find the merged level carrying TREND_BRIDGE evidence, if present.
     role = None
     for lv in levels:
-        if "TREND_BRIDGE" in (lv.get("kinds") or []):
+        if any(k.startswith("TREND_BRIDGE_UP") for k in (lv.get("kinds") or [])):
             role = (lv.get("role") or {}).get("state")
             break
 
@@ -280,7 +269,9 @@ def detect_level_retest(df, levels, cfg):
     candidates = []
     for lv in levels:
         role = (lv.get("role") or {}).get("state")
-        if role not in ("ACCEPTED_SUPPORT", "SUPPORT_CANDIDATE"):
+        if role != "ACCEPTED_SUPPORT":
+            continue
+        if lv.get("importance") != "CORE":
             continue
         if int(lv.get("evidenceCount") or 0) < int(cfg.get("levelRetestMinEvidenceCount", 2)):
             continue
@@ -313,7 +304,7 @@ def detect_setups(df, box, bridge, levels, cfg):
         if x:
             setups.append(x)
 
-    setups.sort(key=lambda x: x.get("maturity",0), reverse=True)
+    setups.sort(key=lambda x: setup_priority(x.get("state")), reverse=True)
     return {
         "primary": setups[0] if setups else None,
         "all": setups,
