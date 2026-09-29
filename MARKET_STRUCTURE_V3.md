@@ -21,7 +21,7 @@ The existing data collection, KRX universe handling, daily-bar freshness gates, 
 4. **A price level and its role are different objects.**
 5. **Intraday penetration is not equal to a confirmed breakout.** Close acceptance matters.
 6. **RSI is confirmation/warning only.** RSI 70/30 never creates automatic buy/sell signals.
-7. **A small candle alone is not a trend-bridge level.** It must sit inside impulse -> pause -> same-direction resume.
+7. **A small candle alone is not a trend-bridge level.** It must sit inside impulse -> pause -> same-direction resume. Rising bridges are potential support evidence; falling bridges are potential resistance evidence.
 8. **A spring is a failed support-break attempt plus reclaim, not an automatic rally prediction.**
 9. **A box is an area with upper / compressed close / lower kept separately.**
 10. **Implementation thresholds are configuration, not doctrine.**
@@ -37,6 +37,7 @@ Reusable infrastructure:
 - current trading value when available
 - estimated historical trading value
 - MA20/60/120/240/480/600/1000
+- shorter-history listings are allowed into the common engine once enough bars exist for the setup being tested; there is no separate legacy "new listing doctrine"
 - ATR
 - RSI context
 
@@ -48,9 +49,10 @@ Independent evidence generators:
 - `EVENT_CLOSE` / `EVENT_BODY`
 - `BOX_UPPER` / `BOX_CLOSE` / `BOX_LOWER`
 - `TREND_BRIDGE`
+- `TRADE_DENSITY` (price-volume-time concentration)
 - `SWING_HIGH` / `SWING_LOW`
 
-Nearby evidence is merged into a zone while preserving its provenance.
+Nearby evidence is merged into a zone while preserving its provenance. Merged zones are classified as `CORE` or `SUPPORTING`; only `CORE` zones can drive hard failure warnings or execution support.
 
 ### 3. Role state
 
@@ -78,7 +80,7 @@ V3 currently recognizes:
 - `ROLE_REVERSAL`
 - `BOX` building state
 
-These families are peers. No family owns the engine.
+These families are peers. No family owns the engine. Setup precedence is categorical and internal; V3 does not emit a numeric setup score/maturity score.
 
 ### 5. Confirmation
 
@@ -99,7 +101,11 @@ Outputs are categorical:
 - `RADAR`
 - `REJECT`
 
+`BOX_BREAKOUT_ACCEPTED` and `SPRING_CONFIRMED` are still information/confirmation states; they do not become `EXECUTABLE` merely because price moved away from the level. V3 prefers an observable retest/role confirmation instead of chasing.
+
 No aggregate score is used.
+
+Execution references must be observed CORE structure. Supporting swing levels may add evidence but cannot independently become execution support.
 
 Execution references must be observed structure:
 - setup trigger level
