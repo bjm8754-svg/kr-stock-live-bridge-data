@@ -96,6 +96,13 @@ Not yet automated:
 - box-compression close as a distinct algorithmic level;
 - trend-bridge close/wick levels;
 - spring/reclaim state machine;
-- RSI divergence/strength overlay.
+- RSI divergence/strength overlay: IMPLEMENTED as price-first confirmation/warning only; never a discovery/action trigger.
 
 Those concepts remain study-canonical evidence until a generic, non-overfit detection rule and regression fixtures are established.
+
+### RSI implementation guardrails
+- RSI uses Wilder-style period 14 by default as an implementation parameter, not a source-mandated constant.
+- RSI direction/slope and price-vs-RSI divergence are exposed as context only.
+- RSI 70/30 never creates automatic buy/sell signals.
+- RSI does not promote candidates, change actionScore, or override price structure.
+- Divergence lookback, swing window and tolerances are implementation inference and must stay auditable in config.
