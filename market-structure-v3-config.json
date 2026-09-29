@@ -82,5 +82,8 @@
   "densityMinSessions": 4,
   "coreLevelMinEvidenceCount": 3,
   "coreLevelMinStrength": 3,
-  "continuationMaxAboveReferencePct": 10
+  "continuationMaxAboveReferencePct": 10,
+  "reviewTraceSessions": 90,
+  "maxDeepReviewCandidates": 36,
+  "maxDeepReviewPerFamily": 10
 }
