@@ -580,6 +580,49 @@ flat_raw = pd.DataFrame({
 flat_df = scan.add_indicators(flat_raw, cfg)
 assert round(float(flat_df["RSI"].iloc[-1]), 2) == 50.0
 
+
+
+# Generic trend-bridge proxy: impulse -> controlled pause -> same-direction continuation.
+tb_idx = pd.bdate_range("2026-01-01", periods=80)
+tb_close = np.full(80, 100.0)
+tb_close[40:45] = [100.0, 103.0, 106.0, 109.0, 112.0]
+tb_close[45:48] = [111.0, 110.8, 111.2]
+tb_close[48:53] = [114.0, 116.0, 118.0, 119.0, 120.0]
+tb_close[53:] = 120.0
+tb_raw = pd.DataFrame({
+    "Open":tb_close*0.998,
+    "High":tb_close+1.0,
+    "Low":tb_close-1.0,
+    "Close":tb_close,
+    "Volume":np.full(80,1_000_000),
+}, index=tb_idx)
+tb_df = scan.add_indicators(tb_raw, cfg)
+tb = scan.trend_bridge_context(tb_df, cfg)
+assert tb["detected"] is True
+assert tb["direction"] == "UP"
+assert tb["roleState"] == "SUPPORT_CANDIDATE"
+assert 109.0 <= tb["bridgeClose"] <= 113.0
+assert tb["algorithmicProxy"] is True
+assert tb["roleEvidenceOnly"] is True
+
+tb_down_close = np.full(80, 120.0)
+tb_down_close[40:45] = [120.0, 116.0, 112.0, 108.0, 104.0]
+tb_down_close[45:48] = [105.0, 105.3, 104.8]
+tb_down_close[48:53] = [102.0, 100.0, 98.0, 96.0, 95.0]
+tb_down_close[53:] = 95.0
+tb_down_raw = pd.DataFrame({
+    "Open":tb_down_close*1.002,
+    "High":tb_down_close+1.0,
+    "Low":tb_down_close-1.0,
+    "Close":tb_down_close,
+    "Volume":np.full(80,1_000_000),
+}, index=tb_idx)
+tb_down_df = scan.add_indicators(tb_down_raw, cfg)
+tb_down = scan.trend_bridge_context(tb_down_df, cfg)
+assert tb_down["detected"] is True
+assert tb_down["direction"] == "DOWN"
+assert tb_down["roleState"] == "RESISTANCE_CANDIDATE"
+
 # RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
 rsi_idx = pd.bdate_range("2026-01-01", periods=80)
 rsi_df = pd.DataFrame({
