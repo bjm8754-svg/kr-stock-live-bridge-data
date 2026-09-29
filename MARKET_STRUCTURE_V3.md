@@ -114,6 +114,32 @@ Execution references must be observed structure:
 - next structural resistance
 - structural R/R when both legs are real
 
+## Assistant deep-review layer
+
+V3 is deliberately hybrid.
+
+The scanner's job is **not** to encode every visual/context judgement from the chart-study material. Its machine scope is limited to:
+
+- compress the full market into a bounded candidate set,
+- surface observable price/volume/time evidence,
+- propose structural hypotheses,
+- calculate mechanically traceable reference levels and invalidation candidates,
+- attach a recent OHLCV/RSI trace for deeper review.
+
+Every surfaced candidate carries `assistantReviewRequired=true`. A bounded `deepReviewQueue` is selected with family diversity so one easily-detected pattern cannot dominate the review set.
+
+The later assistant review layer owns the higher-order judgements that are fragile when hard-coded:
+
+- whether the detected box/bridge is genuinely meaningful in full context,
+- whether the important price is actually the dominant market reference,
+- whether current location is attractive or already chased,
+- whether higher-timeframe context changes the interpretation,
+- whether several weak machine hypotheses are merely different names for the same structure.
+
+This separation is intentional: future chart-study improvements should usually improve the assistant review rubric first, not automatically create another detector or numeric threshold.
+
+The machine plan is therefore a **proposal**, not the final investment decision.
+
 ## Why V2 is not deleted immediately
 
 This is not because YBM must be preserved. V2 is retained temporarily as a **baseline control** so V3 can be judged against a known working scanner without contaminating V3 with V2 decisions.
@@ -148,11 +174,12 @@ V3 exposes every such threshold in config and keeps it regression-testable.
 
 ## Sustainability contract
 
-A future feature belongs in V3 only if it can answer all four:
+A future **machine-coded** feature belongs in V3 only if it can answer all five:
 
 1. What observable market behavior does it represent?
 2. Which layer owns it?
 3. Can it be tested with a generic synthetic fixture?
 4. Can it be added without creating a second hidden scoring system?
+5. Is hard-coding it actually better than leaving it to assistant deep review?
 
-If not, it stays outside the production decision engine.
+If the fifth answer is no, preserve the evidence needed for review instead of adding another detector. If the first four answers fail, it stays outside the production decision engine.
