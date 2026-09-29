@@ -178,7 +178,108 @@ def add_indicators(df, cfg):
     df["BODY_PCT"] = (df["Close"] / df["Open"] - 1.0) * 100.0
     rng = (df["High"] - df["Low"]).replace(0, np.nan)
     df["CLOSE_LOC"] = ((df["Close"] - df["Low"]) / rng).fillna(0.5)
+
+    # Wilder-style RSI context. RSI is confirmation/warning evidence only; 70/30 are
+    # deliberately not encoded as automatic sell/buy thresholds.
+    rsi_n = int(cfg.get("rsiPeriod", 14))
+    delta = df["Close"].diff()
+    gain = delta.clip(lower=0.0)
+    loss = -delta.clip(upper=0.0)
+    avg_gain = gain.ewm(alpha=1.0 / rsi_n, adjust=False, min_periods=rsi_n).mean()
+    avg_loss = loss.ewm(alpha=1.0 / rsi_n, adjust=False, min_periods=rsi_n).mean()
+    rs = avg_gain / avg_loss.replace(0, np.nan)
+    rsi = 100.0 - (100.0 / (1.0 + rs))
+    rsi = rsi.where(avg_loss > 0, 100.0)
+    rsi = rsi.where(avg_gain > 0, 0.0)
+    df["RSI"] = rsi
     return df
+
+
+def rsi_context(df, cfg):
+    """Price-first RSI context: direction and divergence only.
+
+    The source material explicitly rejects automatic RSI 70/30 buy/sell rules. This
+    function therefore emits confirmation/warning evidence without affecting discovery.
+    """
+    if df is None or len(df) < int(cfg.get("rsiDivergenceLookbackSessions", 60)) + 5:
+        return {
+            "period": int(cfg.get("rsiPeriod", 14)),
+            "value": None,
+            "slope5": None,
+            "direction": "UNAVAILABLE",
+            "divergence": "NONE",
+            "priceFirst": True,
+            "auto7030Trigger": False,
+        }
+
+    cur_rsi = df["RSI"].iloc[-1]
+    if pd.isna(cur_rsi):
+        return {
+            "period": int(cfg.get("rsiPeriod", 14)),
+            "value": None,
+            "slope5": None,
+            "direction": "UNAVAILABLE",
+            "divergence": "NONE",
+            "priceFirst": True,
+            "auto7030Trigger": False,
+        }
+
+    slope_n = int(cfg.get("rsiSlopeSessions", 5))
+    old = df["RSI"].iloc[-1-slope_n] if len(df) > slope_n else np.nan
+    slope = float(cur_rsi - old) if pd.notna(old) else None
+    direction = (
+        "STRENGTHENING" if slope is not None and slope >= float(cfg.get("rsiSlopeMeaningfulPoints", 2.0))
+        else "WEAKENING" if slope is not None and slope <= -float(cfg.get("rsiSlopeMeaningfulPoints", 2.0))
+        else "FLAT"
+    )
+
+    lb = int(cfg.get("rsiDivergenceLookbackSessions", 60))
+    half = int(cfg.get("rsiDivergenceSwingHalfWindow", 3))
+    min_price_pct = float(cfg.get("rsiDivergenceMinPriceDiffPct", 1.0))
+    min_rsi_pts = float(cfg.get("rsiDivergenceMinRsiDiffPoints", 3.0))
+    sub = df.iloc[-lb:].copy()
+
+    lows, highs = [], []
+    for i in range(half, len(sub) - half):
+        wlow = sub["Low"].iloc[i-half:i+half+1]
+        whigh = sub["High"].iloc[i-half:i+half+1]
+        if float(sub["Low"].iloc[i]) <= float(wlow.min()):
+            lows.append(i)
+        if float(sub["High"].iloc[i]) >= float(whigh.max()):
+            highs.append(i)
+
+    divergence = "NONE"
+    if len(lows) >= 2:
+        a, b = lows[-2], lows[-1]
+        pa, pb = float(sub["Low"].iloc[a]), float(sub["Low"].iloc[b])
+        ra, rb = sub["RSI"].iloc[a], sub["RSI"].iloc[b]
+        if (
+            pd.notna(ra) and pd.notna(rb)
+            and pb <= pa * (1.0 - min_price_pct / 100.0)
+            and float(rb) >= float(ra) + min_rsi_pts
+        ):
+            divergence = "BULLISH_DIVERGENCE"
+
+    if len(highs) >= 2:
+        a, b = highs[-2], highs[-1]
+        pa, pb = float(sub["High"].iloc[a]), float(sub["High"].iloc[b])
+        ra, rb = sub["RSI"].iloc[a], sub["RSI"].iloc[b]
+        if (
+            pd.notna(ra) and pd.notna(rb)
+            and pb >= pa * (1.0 + min_price_pct / 100.0)
+            and float(rb) <= float(ra) - min_rsi_pts
+        ):
+            divergence = "BEARISH_DIVERGENCE"
+
+    return {
+        "period": int(cfg.get("rsiPeriod", 14)),
+        "value": rnum(cur_rsi, 2),
+        "slope5": rnum(slope, 2),
+        "direction": direction,
+        "divergence": divergence,
+        "priceFirst": True,
+        "auto7030Trigger": False,
+    }
 
 
 def cloud_snapshot(row):
@@ -1443,6 +1544,7 @@ def analyze_frame(meta, raw_df, cfg):
         structure_warnings.append("UPPER_REJECTION")
 
     continuation = high_trend_pressure_features(df, cfg)
+    rsi_ctx = rsi_context(df, cfg)
     continuation_liquid = bool(
         pd.notna(avg20_tv)
         and float(avg20_tv) >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
@@ -1573,6 +1675,7 @@ def analyze_frame(meta, raw_df, cfg):
         "coreRoleState": core_role,
         "structureWarnings": structure_warnings,
         "continuation": continuation,
+        "rsiContext": rsi_ctx,
         "distanceToCorePct": rnum(core_distance_now),
         "breakCoreResistance": bool(break_core),
         "breakoutClass": breakout_class,
@@ -1874,6 +1977,7 @@ def run(cfg):
                 "new-listing mini-track thresholds",
                 "core level role-state acceptance rules",
                 "high-trend continuation compression/pressure thresholds",
+                "RSI period/slope/divergence lookbacks and numeric tolerances",
             ],
         },
         "notes": [
@@ -2024,6 +2128,7 @@ def compact_chart_candidate(x):
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
+        "rsiContext": x.get("rsiContext"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
@@ -2109,6 +2214,7 @@ def compact_ybm_trace(x):
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
+        "rsiContext": x.get("rsiContext"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
         "preJindol": x.get("preJindol"),
