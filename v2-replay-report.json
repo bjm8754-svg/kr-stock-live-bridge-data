@@ -58,26 +58,27 @@
     },
     "entryPlan": {
       "evaluationReference": 6630.0,
-      "nearestSupport": 6474.0,
-      "supportSource": "CORE_LINE",
-      "distanceToSupportPct": 2.41,
-      "invalidationCandidate": 6400.0,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 3.59,
+      "nearestSupport": 5920.19,
+      "supportSource": "MA240",
+      "distanceToSupportPct": 11.99,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 6809.22,
       "nextResistanceLine": 6840.0,
       "nextResistanceSources": [
         "DEOYANGBONG_OPEN"
       ],
       "distanceToNextResistancePct": 2.7,
-      "structuralRR": 0.75,
+      "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 6474.0,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 5920.19,
         "longMaSupportSource": "MA240"
       },
@@ -367,9 +368,9 @@
       "nearestSupport": 9800.92,
       "supportSource": "MA240",
       "distanceToSupportPct": 9.68,
-      "invalidationCandidate": 9622.04,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 11.72,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 11000.0,
       "nextResistanceLine": 11140.0,
       "nextResistanceSources": [
@@ -378,14 +379,15 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 2.33,
-      "structuralRR": 0.2,
+      "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 9761.16,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 9800.92,
         "longMaSupportSource": "MA240"
       },
@@ -602,7 +604,7 @@
     },
     "qualified": true,
     "actionScore": {
-      "total": 41.0,
+      "total": 36.0,
       "briefingTier": "RADAR",
       "components": {
         "structure": 10.0,
@@ -610,17 +612,19 @@
         "entryQuality": 12.0,
         "structuralRR": 0.0,
         "acceptance": 0.0,
-        "riskPenalty": 0.0
+        "riskPenalty": 5.0
       },
       "actionableForBriefing": false,
-      "penaltyReasons": [],
+      "penaltyReasons": [
+        "UPPER_REJECTION"
+      ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
       "evaluationReference": 73000.0,
-      "nearestSupport": 71689.58,
-      "supportSource": "CORE_ZONE_LOW",
-      "distanceToSupportPct": 1.83,
+      "nearestSupport": 68100.0,
+      "supportSource": "PRIOR_REFERENCE_CLOSE",
+      "distanceToSupportPct": 7.2,
       "invalidationCandidate": 61600.0,
       "invalidationSource": "PRIOR_REFERENCE_LOW",
       "distanceToInvalidationPct": 18.51,
@@ -631,13 +635,14 @@
       ],
       "distanceToNextResistancePct": 4.38,
       "structuralRR": 0.24,
+      "coreRoleState": "DECISION_ZONE",
       "supportHierarchy": {
         "primaryReferenceSupport": 68100.0,
         "primaryReferenceSource": "PRIOR_REFERENCE_CLOSE",
         "referenceLowInvalidationCandidate": 61600.0,
         "referenceLowSource": "PRIOR_REFERENCE_LOW",
-        "coreSupport": 72848.96,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 66246.25,
         "longMaSupportSource": "MA240"
       },
@@ -886,6 +891,7 @@
       "nextResistanceSources": null,
       "distanceToNextResistancePct": null,
       "structuralRR": null,
+      "coreRoleState": "ACCEPTED_SUPPORT",
       "supportHierarchy": {
         "primaryReferenceSupport": 10270.0,
         "primaryReferenceSource": "CURRENT_REFERENCE_OPEN",
@@ -1116,9 +1122,9 @@
       "selectionMemoryUsed": false,
       "timingInputsUsed": false
     },
-    "qualified": true,
+    "qualified": false,
     "actionScore": {
-      "total": 32.2,
+      "total": 22.2,
       "briefingTier": "RADAR",
       "components": {
         "structure": 17.2,
@@ -1126,11 +1132,12 @@
         "entryQuality": 8.0,
         "structuralRR": 0.0,
         "acceptance": 1.0,
-        "riskPenalty": 6.0
+        "riskPenalty": 16.0
       },
       "actionableForBriefing": false,
       "penaltyReasons": [
-        "EXTENDED_FROM_SUPPORT"
+        "EXTENDED_FROM_SUPPORT",
+        "FAILED_BREAKOUT"
       ],
       "selectionMemoryUsed": false
     },
@@ -1150,6 +1157,7 @@
       ],
       "distanceToNextResistancePct": 3.89,
       "structuralRR": null,
+      "coreRoleState": "FAILED_BREAKOUT",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1394,7 +1402,7 @@
     },
     "qualified": false,
     "actionScore": {
-      "total": 17.7,
+      "total": 9.7,
       "briefingTier": "RADAR",
       "components": {
         "structure": 15.7,
@@ -1402,36 +1410,38 @@
         "entryQuality": 2.0,
         "structuralRR": 0.0,
         "acceptance": 0.0,
-        "riskPenalty": 12.0
+        "riskPenalty": 20.0
       },
       "actionableForBriefing": false,
       "penaltyReasons": [
-        "WEAK_BREAKOUT_QUALITY"
+        "WEAK_BREAKOUT_QUALITY",
+        "VERY_EXTENDED_FROM_SUPPORT"
       ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
       "evaluationReference": 6390.0,
-      "nearestSupport": 5759.58,
-      "supportSource": "CORE_LINE",
-      "distanceToSupportPct": 10.95,
-      "invalidationCandidate": 5700.0,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 12.11,
+      "nearestSupport": 5318.69,
+      "supportSource": "MA1000",
+      "distanceToSupportPct": 20.14,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 6641.33,
       "nextResistanceLine": 6671.35,
       "nextResistanceSources": [
         "CANDLE_DENSITY"
       ],
       "distanceToNextResistancePct": 3.93,
-      "structuralRR": 0.32,
+      "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 5759.58,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 5318.69,
         "longMaSupportSource": "MA1000"
       },
@@ -1443,9 +1453,9 @@
         5800.0,
         6000.0
       ],
-      "closestStructuralField": "coreSupport",
-      "closestStructuralLevel": 5759.58,
-      "gapToRangePct": 0.685
+      "closestStructuralField": "longMaSupport",
+      "closestStructuralLevel": 5318.69,
+      "gapToRangePct": 8.158
     },
     "abc": {
       "track": "LONG_HISTORY",
@@ -1696,44 +1706,46 @@
     },
     "qualified": false,
     "actionScore": {
-      "total": 29.8,
+      "total": 15.8,
       "briefingTier": "RADAR",
       "components": {
         "structure": 17.8,
         "moneyQuality": 16.0,
         "entryQuality": 2.0,
-        "structuralRR": 6.0,
+        "structuralRR": 0.0,
         "acceptance": 0.0,
-        "riskPenalty": 12.0
+        "riskPenalty": 20.0
       },
       "actionableForBriefing": false,
       "penaltyReasons": [
-        "WEAK_BREAKOUT_QUALITY"
+        "WEAK_BREAKOUT_QUALITY",
+        "VERY_EXTENDED_FROM_SUPPORT"
       ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
       "evaluationReference": 113700.0,
-      "nearestSupport": 110280.0,
-      "supportSource": "CORE_LINE",
-      "distanceToSupportPct": 3.1,
-      "invalidationCandidate": 109783.74,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 3.57,
+      "nearestSupport": 78359.17,
+      "supportSource": "MA240",
+      "distanceToSupportPct": 45.1,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 119460.0,
       "nextResistanceLine": 120000.0,
       "nextResistanceSources": [
         "ROUND_FIGURE"
       ],
       "distanceToNextResistancePct": 5.07,
-      "structuralRR": 1.42,
+      "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 110280.0,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 78359.17,
         "longMaSupportSource": "MA240"
       },
@@ -1888,27 +1900,27 @@
     },
     "qualified": true,
     "actionScore": {
-      "total": 60.9,
-      "briefingTier": "WATCH_TRIGGER",
+      "total": 54.9,
+      "briefingTier": "RADAR",
       "components": {
         "structure": 23.9,
         "moneyQuality": 17.0,
         "entryQuality": 23.0,
         "structuralRR": 0.0,
         "acceptance": 3.0,
-        "riskPenalty": 6.0
+        "riskPenalty": 12.0
       },
-      "actionableForBriefing": true,
+      "actionableForBriefing": false,
       "penaltyReasons": [
-        "EXTENDED_FROM_SUPPORT"
+        "VERY_EXTENDED_FROM_SUPPORT"
       ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
       "evaluationReference": 78600.0,
-      "nearestSupport": 68085.71,
-      "supportSource": "CORE_LINE",
-      "distanceToSupportPct": 15.44,
+      "nearestSupport": 63200.0,
+      "supportSource": "RECENT_REFERENCE_OPEN",
+      "distanceToSupportPct": 24.37,
       "invalidationCandidate": 63000.0,
       "invalidationSource": "CURRENT_REFERENCE_LOW",
       "distanceToInvalidationPct": 24.76,
@@ -1917,13 +1929,14 @@
       "nextResistanceSources": null,
       "distanceToNextResistancePct": null,
       "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": 63200.0,
         "primaryReferenceSource": "CURRENT_REFERENCE_OPEN",
         "referenceLowInvalidationCandidate": 63000.0,
         "referenceLowSource": "CURRENT_REFERENCE_LOW",
-        "coreSupport": 68085.71,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 37777.95,
         "longMaSupportSource": "MA1000"
       },
@@ -2129,19 +2142,19 @@
       "actionableForBriefing": false,
       "penaltyReasons": [
         "WEAK_BREAKOUT_QUALITY",
-        "EXTENDED_FROM_SUPPORT",
+        "VERY_EXTENDED_FROM_SUPPORT",
         "WEAKER_THAN_PRIOR_REFERENCE_MONEY"
       ],
       "selectionMemoryUsed": false
     },
     "entryPlan": {
       "evaluationReference": 76400.0,
-      "nearestSupport": 65636.36,
-      "supportSource": "CORE_LINE",
-      "distanceToSupportPct": 16.4,
-      "invalidationCandidate": 65000.0,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 17.54,
+      "nearestSupport": 60380.69,
+      "supportSource": "MA480",
+      "distanceToSupportPct": 26.53,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 79167.47,
       "nextResistanceLine": 79525.33,
       "nextResistanceSources": [
@@ -2149,14 +2162,15 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 3.62,
-      "structuralRR": 0.21,
+      "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 65636.36,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 60380.69,
         "longMaSupportSource": "MA480"
       },
@@ -2408,21 +2422,22 @@
       "nearestSupport": 1774.19,
       "supportSource": "MA600",
       "distanceToSupportPct": 6.53,
-      "invalidationCandidate": 1646.06,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 14.82,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": null,
       "nextResistanceLine": null,
       "nextResistanceSources": null,
       "distanceToNextResistancePct": null,
       "structuralRR": null,
+      "coreRoleState": "BREAKOUT_PENDING",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 1653.5,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": 1774.19,
         "longMaSupportSource": "MA600"
       },
@@ -2642,13 +2657,13 @@
     },
     "qualified": false,
     "actionScore": {
-      "total": 44.2,
+      "total": 29.2,
       "briefingTier": "RADAR",
       "components": {
         "structure": 15.2,
         "moneyQuality": 4.0,
         "entryQuality": 8.0,
-        "structuralRR": 15.0,
+        "structuralRR": 0.0,
         "acceptance": 2.0,
         "riskPenalty": 0.0
       },
@@ -2658,12 +2673,12 @@
     },
     "entryPlan": {
       "evaluationReference": 8490.0,
-      "nearestSupport": 8370.0,
-      "supportSource": "CORE_ZONE_LOW",
-      "distanceToSupportPct": 1.43,
-      "invalidationCandidate": 8370.0,
-      "invalidationSource": "CORE_ZONE_LOW",
-      "distanceToInvalidationPct": 1.43,
+      "nearestSupport": null,
+      "supportSource": null,
+      "distanceToSupportPct": null,
+      "invalidationCandidate": null,
+      "invalidationSource": null,
+      "distanceToInvalidationPct": null,
       "nextResistance": 8870.0,
       "nextResistanceLine": 8962.35,
       "nextResistanceSources": [
@@ -2672,14 +2687,15 @@
         "SWING_HIGH"
       ],
       "distanceToNextResistancePct": 4.48,
-      "structuralRR": 3.12,
+      "structuralRR": null,
+      "coreRoleState": "DECISION_ZONE",
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
         "referenceLowInvalidationCandidate": null,
         "referenceLowSource": null,
-        "coreSupport": 8479.06,
-        "coreSupportSource": "CORE_LINE",
+        "coreSupport": null,
+        "coreSupportSource": null,
         "longMaSupport": null,
         "longMaSupportSource": null
       },
