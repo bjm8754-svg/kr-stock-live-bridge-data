@@ -502,6 +502,169 @@ def build_core_resistance(hist, reference_price, cfg):
     }
 
 
+def classify_core_role_state(df, core):
+    """Classify the CURRENT role of a previously detected resistance zone.
+
+    A detected price level and its current role are separate concepts. A resistance zone
+    is not allowed to become support merely because its lower edge is below current price.
+    The role changes only through observable close/acceptance behavior.
+    """
+    if not core or df is None or len(df) < 2:
+        return {
+            "state": "NONE",
+            "failedBreakout": False,
+            "upperRejection": False,
+            "zoneLow": None,
+            "zoneHigh": None,
+        }
+
+    zlo = core.get("zoneLow")
+    zhi = core.get("zoneHigh")
+    if zlo is None or zhi is None:
+        return {
+            "state": "NONE",
+            "failedBreakout": False,
+            "upperRejection": False,
+            "zoneLow": zlo,
+            "zoneHigh": zhi,
+        }
+
+    zlo, zhi = float(zlo), float(zhi)
+    cur = df.iloc[-1]
+    prev = df.iloc[-2]
+    close = float(cur["Close"])
+    high = float(cur["High"])
+    prev_close = float(prev["Close"])
+
+    upper_rejection = bool(high > zhi and close < zhi)
+    failed_breakout = bool(
+        (high > zhi and close < zlo)
+        or (prev_close > zhi and close < zlo)
+    )
+
+    if failed_breakout:
+        state = "FAILED_BREAKOUT"
+    elif zlo <= close <= zhi:
+        state = "DECISION_ZONE"
+    elif close > zhi:
+        # One close above resistance is a breakout candidate. Repeated closes above it
+        # are treated as observable acceptance, not as proof of future support.
+        state = "ACCEPTED_SUPPORT" if prev_close > zhi else "BREAKOUT_PENDING"
+    else:
+        state = "RESISTANCE"
+
+    return {
+        "state": state,
+        "failedBreakout": failed_breakout,
+        "upperRejection": upper_rejection,
+        "zoneLow": rnum(zlo, 2),
+        "zoneHigh": rnum(zhi, 2),
+    }
+
+
+def high_trend_pressure_features(df, cfg):
+    """State-based continuation discovery for already-established high trends.
+
+    This is deliberately not a simple 'within X% of 52-week high' rule. High proximity
+    is only evidence; trend alignment, compression, repeated upper tests and rising lows
+    must also be present for BREAKOUT_PRESSURE.
+    """
+    lookback = int(cfg.get("continuationHighLookbackSessions", 120))
+    base_n = int(cfg.get("continuationBaseLookbackSessions", 20))
+    need = max(lookback + 2, base_n + 10, 125)
+    if df is None or len(df) < need:
+        return {
+            "state": "NONE",
+            "trendAlive": False,
+            "nearHigh": False,
+            "compression": False,
+            "risingLows": False,
+            "pressureTouches": 0,
+            "distanceToPriorHighPct": None,
+            "baseRangePct": None,
+            "priorHigh": None,
+        }
+
+    cur = df.iloc[-1]
+    for c in ("MA20", "MA60", "MA120"):
+        if c not in df.columns or pd.isna(cur.get(c)):
+            return {
+                "state": "NONE",
+                "trendAlive": False,
+                "nearHigh": False,
+                "compression": False,
+                "risingLows": False,
+                "pressureTouches": 0,
+                "distanceToPriorHighPct": None,
+                "baseRangePct": None,
+                "priorHigh": None,
+            }
+
+    prior = df.iloc[-lookback-1:-1]
+    recent = df.iloc[-base_n:]
+    prior_high = float(prior["High"].max())
+    close = float(cur["Close"])
+    near_pct = float(cfg.get("continuationNearHighPct", 8.0))
+    touch_pct = float(cfg.get("continuationHighPressureTolerancePct", 4.0))
+    max_range = float(cfg.get("continuationMaxBaseRangePct", 14.0))
+    min_touches = int(cfg.get("continuationMinHighPressureTouches", 3))
+
+    trend_alive = bool(
+        close >= float(cur["MA20"])
+        and float(cur["MA20"]) >= float(cur["MA60"])
+        and float(cur["MA60"]) >= float(cur["MA120"])
+    )
+    dist_high = pct(prior_high, close)
+    near_high = bool(close >= prior_high * (1.0 - near_pct / 100.0))
+    rlo = float(recent["Low"].min())
+    rhi = float(recent["High"].max())
+    base_range_pct = (rhi / rlo - 1.0) * 100.0 if rlo > 0 else None
+    compression = bool(base_range_pct is not None and base_range_pct <= max_range)
+
+    edge = max(3, min(5, base_n // 4))
+    rising_lows = bool(
+        float(recent["Low"].iloc[-edge:].min())
+        >= float(recent["Low"].iloc[:edge].min())
+    )
+    pressure_line = prior_high * (1.0 - touch_pct / 100.0)
+    pressure_touches = int((recent["High"] >= pressure_line).sum())
+
+    tvr = float(cur.get("TV_RATIO20_EST") or 0)
+    vr = float(cur.get("VOL_RATIO20") or 0)
+    breakout_money = bool(
+        tvr >= float(cfg.get("continuationBreakoutTurnoverRatio20", 1.3))
+        or vr >= float(cfg.get("continuationBreakoutVolumeRatio20", 1.3))
+    )
+    breakout = bool(close > prior_high)
+
+    if trend_alive and breakout and breakout_money:
+        state = "HIGH_BREAKOUT"
+    elif (
+        trend_alive and near_high and compression and rising_lows
+        and pressure_touches >= min_touches
+    ):
+        state = "BREAKOUT_PRESSURE"
+    elif trend_alive and near_high and compression:
+        state = "HIGH_BASE"
+    elif trend_alive and near_high:
+        state = "HIGH_TREND"
+    else:
+        state = "NONE"
+
+    return {
+        "state": state,
+        "trendAlive": trend_alive,
+        "nearHigh": near_high,
+        "compression": compression,
+        "risingLows": rising_lows,
+        "pressureTouches": pressure_touches,
+        "distanceToPriorHighPct": rnum(dist_high),
+        "baseRangePct": rnum(base_range_pct),
+        "priorHigh": rnum(prior_high, 2),
+        "breakoutMoney": breakout_money,
+    }
+
+
 def classify_breakout(break_core, cur_tv, tv_ratio, vol_ratio, close_loc, relative_prior, cfg):
     if not break_core:
         return "NO_BREAK"
@@ -515,7 +678,7 @@ def classify_breakout(break_core, cur_tv, tv_ratio, vol_ratio, close_loc, relati
     return "JINDOL_CONFIRMED" if money_ok and acceptance_ok and relative_ok else "GADOL_RISK"
 
 
-def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
+def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg, core_role_state=None):
     """Construct an observable, non-arbitrary reference plan for ranking only.
 
     This does NOT create a buy price by adding/subtracting a percentage from current price.
@@ -534,7 +697,8 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         if math.isfinite(v) and 0 < v <= close:
             candidates.append((v, source))
 
-    if core:
+    core_support_allowed = core_role_state == "ACCEPTED_SUPPORT"
+    if core and core_support_allowed:
         add_support(core.get("zoneLow"), "CORE_ZONE_LOW")
         add_support(core.get("line"), "CORE_LINE")
 
@@ -597,7 +761,7 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
     core_support = nearest_level([
         ((core or {}).get("zoneLow"), "CORE_ZONE_LOW"),
         ((core or {}).get("line"), "CORE_LINE"),
-    ]) if core else (None, None)
+    ]) if core and core_support_allowed else (None, None)
     long_ma_support = nearest_level([
         (ma.get("240"), "MA240"),
         (ma.get("480"), "MA480"),
@@ -647,6 +811,7 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg):
         "nextResistanceSources": (nxt or {}).get("sources") if nxt else None,
         "distanceToNextResistancePct": rnum(reward_pct),
         "structuralRR": rnum(rr, 2),
+        "coreRoleState": core_role_state,
         "supportHierarchy": {
             "primaryReferenceSupport": rnum(reference_support[0], 2),
             "primaryReferenceSource": reference_support[1],
@@ -903,6 +1068,7 @@ def compute_action_score(x, cfg):
         "RETEST_OK": 22.0,
         "DEOYANGBONG_C_TRIGGER": 20.0,
         "B_PLUS": 12.0,
+        "HIGH_TREND_PRESSURE": 14.0,
         "ABC_CANDIDATE": 8.0,
         "NEW_LISTING_SETUP": 12.0,
         "MA600_BREAKOUT": 8.0,
@@ -970,7 +1136,14 @@ def compute_action_score(x, cfg):
         elif ds >= float(cfg["actionScoreExtendedPct"]):
             penalty += 6.0
             penalty_reasons.append("EXTENDED_FROM_SUPPORT")
-    if close_loc < 0.35 and float(x.get("dayChangePct") or 0) > 0:
+    structure_warnings = x.get("structureWarnings") or []
+    if "FAILED_BREAKOUT" in structure_warnings:
+        penalty += 10.0
+        penalty_reasons.append("FAILED_BREAKOUT")
+    elif "UPPER_REJECTION" in structure_warnings:
+        penalty += 5.0
+        penalty_reasons.append("UPPER_REJECTION")
+    elif close_loc < 0.35 and x.get("coreResistance"):
         penalty += 4.0
         penalty_reasons.append("WEAK_CLOSE_UPPER_SUPPLY")
     rel = money.get("relativeToPriorReferenceMoney")
@@ -1221,6 +1394,15 @@ def analyze_frame(meta, raw_df, cfg):
         )
     )
 
+    core_role = classify_core_role_state(df, core)
+    structure_warnings = []
+    if core_role.get("failedBreakout"):
+        structure_warnings.append("FAILED_BREAKOUT")
+    elif core_role.get("upperRejection"):
+        structure_warnings.append("UPPER_REJECTION")
+
+    continuation = high_trend_pressure_features(df, cfg)
+
     if recent_anomaly:
         signal = "DATA_WARNING"
     elif reaccel or yey:
@@ -1237,6 +1419,8 @@ def analyze_frame(meta, raw_df, cfg):
         signal = "PRE_JINDOL"
     elif abc.get("bPlus") and avg_liquid:
         signal = "B_PLUS"
+    elif continuation.get("state") in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT"):
+        signal = "HIGH_TREND_PRESSURE"
     elif abc_candidate:
         signal = "ABC_CANDIDATE"
     elif new_listing_setup:
@@ -1305,7 +1489,7 @@ def analyze_frame(meta, raw_df, cfg):
         entry_anchor = dict(entry_anchor)
         entry_anchor["source"] = "RECENT_REFERENCE"
 
-    entry_plan = build_structural_entry_plan(cur, core, ma, prior_event, entry_anchor, cfg)
+    entry_plan = build_structural_entry_plan(cur, core, ma, prior_event, entry_anchor, cfg, core_role.get("state"))
 
     warnings = []
     if anomaly:
@@ -1341,6 +1525,9 @@ def analyze_frame(meta, raw_df, cfg):
         "abc": abc,
         "deoyangbong": {"today": bool(current_deoyang), "preferred15Pct": bool(current_deoyang_preferred), "latestPrior": prior_event},
         "coreResistance": core,
+        "coreRoleState": core_role,
+        "structureWarnings": structure_warnings,
+        "continuation": continuation,
         "distanceToCorePct": rnum(core_distance_now),
         "breakCoreResistance": bool(break_core),
         "breakoutClass": breakout_class,
@@ -1384,6 +1571,7 @@ SIGNAL_PRIORITY = {
     "DEOYANGBONG_C_TRIGGER": 85,
     "PRE_JINDOL": 80,
     "B_PLUS": 70,
+    "HIGH_TREND_PRESSURE": 65,
     "ABC_CANDIDATE": 60,
     "NEW_LISTING_SETUP": 55,
     "MA600_BREAKOUT": 45,
@@ -1411,6 +1599,11 @@ def is_qualified_candidate(x, cfg):
     vol_ratio = money.get("volumeRatio20") or 0
     dist_core = x.get("distanceToCorePct")
     core_score = core.get("score") or 0
+    structure_warnings = x.get("structureWarnings") or []
+    continuation = x.get("continuation") or {}
+
+    if "FAILED_BREAKOUT" in structure_warnings:
+        return False
 
     if sig in ("REACCELERATION", "JINDOL_CONFIRMED", "DEOYANGBONG_C_TRIGGER"):
         return True
@@ -1437,6 +1630,12 @@ def is_qualified_candidate(x, cfg):
 
     if sig == "B_PLUS":
         return bool(avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"]))
+
+    if sig == "HIGH_TREND_PRESSURE":
+        return bool(
+            continuation.get("state") in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT")
+            and avg_tv >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
+        )
 
     if sig == "ABC_CANDIDATE":
         return bool(
@@ -1530,13 +1729,13 @@ def run(cfg):
 
     bucket_names = [
         "REACCELERATION", "JINDOL_CONFIRMED", "RETEST_OK", "DEOYANGBONG_C_TRIGGER",
-        "PRE_JINDOL", "B_PLUS", "ABC_CANDIDATE", "GADOL_RISK",
+        "PRE_JINDOL", "B_PLUS", "HIGH_TREND_PRESSURE", "ABC_CANDIDATE", "GADOL_RISK",
         "NEW_LISTING_SETUP", "MA600_BREAKOUT", "NEAR_MA600", "DATA_WARNING"
     ]
     by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
     allc = sortit([x for x in cur if x["signal"] != "NONE"])
     qualified = sortit([x for x in allc if is_qualified_candidate(x, cfg)])
-    risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK"])
+    risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK" or (x.get("structureWarnings") or [])])
 
     # Candidate flow enrichment is qualified-pool first, then risk warnings, then broad radar.
     # Flow is supporting evidence only; actionScore itself stays reproducible from chart/flow price data.
@@ -1614,7 +1813,7 @@ def run(cfg):
         "generatedAtKst": dt.datetime.now(KST).isoformat(),
         "tradeDate": td,
         "methodologyVersion": cfg["methodologyVersion"],
-        "primaryLogic": "ABC/base + MA240/480/600/1000 + Deoyangbong + core resistance + money quality + Jindol/Gadol + retest/reacceleration",
+        "primaryLogic": "ABC/base + MA240/480/600/1000 + Deoyangbong + role-aware structural levels + money quality + Jindol/Gadol + retest/reacceleration + high-trend pressure",
         "sourceBoundary": {
             "sourceDerived": [
                 "ABC long decline -> long base -> MA600 recovery/N-wave framing",
@@ -1776,6 +1975,9 @@ def compact_chart_candidate(x):
         "ma": {k: ma.get(k) for k in ("20", "60", "120", "240", "480", "600", "1000")},
         "referenceCandleAnchor": active_reference_anchor(x),
         "setupCoreResistance": compact_core(x.get("coreResistance")),
+        "coreRoleState": x.get("coreRoleState"),
+        "structureWarnings": x.get("structureWarnings"),
+        "continuation": x.get("continuation"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
@@ -1858,6 +2060,9 @@ def compact_ybm_trace(x):
         "cloud": x.get("cloud"),
         "referenceCandleAnchor": active_reference_anchor(x),
         "setupCoreResistance": core,
+        "coreRoleState": x.get("coreRoleState"),
+        "structureWarnings": x.get("structureWarnings"),
+        "continuation": x.get("continuation"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
         "preJindol": x.get("preJindol"),
