@@ -129,5 +129,6 @@
   "boxMinUpperTouches": 3,
   "boxMinLowerTouches": 3,
   "boxMaxRelativeRangeRatio": 0.85,
-  "boxMaxNetDisplacementToRange": 0.6
+  "boxMaxNetDisplacementToRange": 0.6,
+  "boxBreakoutLookbackSessions": 12
 }
