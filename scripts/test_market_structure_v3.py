@@ -200,7 +200,7 @@ eidx = pd.bdate_range("2023-01-02", periods=700)
 ec = np.linspace(50,120,700)
 eraw = pd.DataFrame({
     "Open":ec*0.995, "High":ec*1.015, "Low":ec*0.985, "Close":ec,
-    "Volume":np.full(700,1_500_000),
+    "Volume":np.full(700,100_000_000),
 }, index=eidx)
 out = analyze_frame(
     {"code":"000000","name":"SYNTH_CASE","market":"KOSPI","amount":50_000_000_000,"marcap":1_000_000_000_000},
