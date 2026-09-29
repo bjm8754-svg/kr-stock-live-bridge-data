@@ -1,0 +1,115 @@
+name: Market Structure V3 Shadow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/msv3/**"
+      - "scripts/market_structure_v3.py"
+      - "scripts/test_market_structure_v3.py"
+      - "scripts/validate_market_structure_v3.py"
+      - "market-structure-v3-config.json"
+      - ".github/workflows/market-structure-v3-shadow.yml"
+  schedule:
+    # Shadow EOD run. V2 remains the production baseline until explicit cutover.
+    - cron: "45 7 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-structure-v3-shadow
+  cancel-in-progress: true
+
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-scanner.txt
+
+      - name: Run generic V3 regression suite
+        run: python scripts/test_market_structure_v3.py
+
+      - name: Run full-market V3 shadow scan
+        run: |
+          python scripts/market_structure_v3.py \
+            --config market-structure-v3-config.json \
+            --output market-structure-v3.json \
+            --full-output /tmp/market-structure-v3-full.json
+
+      - name: Validate V3 invariants
+        run: python scripts/validate_market_structure_v3.py market-structure-v3.json
+
+      - name: Validate coverage and freshness
+        shell: bash
+        run: |
+          set -euo pipefail
+          STATUS=$(jq -r '.status' market-structure-v3.json)
+          SCHEMA=$(jq -r '.schemaVersion' market-structure-v3.json)
+          TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3.json)
+          PROCESSED=$(jq -r '.coverage.universeProcessed // 0' market-structure-v3.json)
+          CUR=$(jq -r '.coverage.currentTradeDate // 0' market-structure-v3.json)
+          CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' market-structure-v3.json)
+          MIN_UNIVERSE=$(jq -r '.minUniverseCount // 2200' market-structure-v3-config.json)
+          MAX_CAND=$(jq -r '.maxCandidateRatioForPass // 0.30' market-structure-v3-config.json)
+          KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
+          KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
+
+          echo "status=$STATUS schema=$SCHEMA tradeDate=$TRADE_DATE processed=$PROCESSED current=$CUR candidateRatio=$CAND_RATIO"
+
+          [ "$SCHEMA" = "MARKET_STRUCTURE_V3" ]
+          [ "$PROCESSED" -ge "$MIN_UNIVERSE" ]
+          awk -v a="$CAND_RATIO" -v b="$MAX_CAND" 'BEGIN { exit !(a <= b) }'
+
+          # Push-triggered runs during market hours are functional shadow tests only.
+          if [ "$KST_HHMM" -lt 1540 ]; then
+            echo "pre-close shadow validation passed; skip canonical V3 commit"
+            echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
+            git checkout -- market-structure-v3.json 2>/dev/null || rm -f market-structure-v3.json
+            exit 0
+          fi
+
+          if [ "$TRADE_DATE" != "$KST_TODAY" ]; then
+            echo "holiday/stale daily bar; skip V3 canonical commit"
+            echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
+            git checkout -- market-structure-v3.json 2>/dev/null || rm -f market-structure-v3.json
+            exit 0
+          fi
+
+          [ "$STATUS" = "PASS" ]
+
+      - name: Upload full diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: market-structure-v3-full-${{ github.run_id }}
+          path: /tmp/market-structure-v3-full.json
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 9
+
+      - name: Commit V3 shadow result
+        if: env.SKIP_COMMIT != '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market-structure-v3.json
+          if git diff --cached --quiet; then
+            echo "no V3 shadow changes"
+            exit 0
+          fi
+          git commit -m "update market structure v3 shadow"
+          git pull --rebase origin main
+          git push
