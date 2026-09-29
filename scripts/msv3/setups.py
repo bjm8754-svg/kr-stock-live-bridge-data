@@ -166,13 +166,20 @@ def detect_high_trend(df, cfg):
     else:
         return None
 
+    state_evidence = {
+        "BREAKOUT_PRESSURE": "REFERENCE_HIGH_PRESSURE",
+        "HIGH_BREAKOUT": "FIRST_CLOSE_ABOVE_REFERENCE_HIGH_WITH_PARTICIPATION",
+        "HIGH_RETEST": "REFERENCE_HIGH_RETEST_CLOSE_HOLD",
+        "HIGH_BASE": "ABOVE_REFERENCE_HIGH_BASE",
+    }[state]
+
     return _setup(
         "HIGH_TREND_CONTINUATION",
         state,
         [
             "MA20_GE_MA60_GE_MA120",
             "REFERENCE_HIGH_BEFORE_RECENT_BASE",
-            "HIGH_LEVEL_ACCEPTANCE",
+            state_evidence,
             "COMPRESSED_RANGE" if compressed else "RANGE_NOT_COMPRESSED",
             "RISING_LOWS" if rising_lows else "LOWS_NOT_RISING",
             f"UPPER_TESTS_{touches}",
@@ -260,7 +267,7 @@ def detect_bridge_setup(df, bridge, levels, cfg):
             break
 
     if close >= line and float(df["Low"].iloc[-1]) <= zone_high*(1+tol):
-        if role in ("ACCEPTED_SUPPORT", "SUPPORT_CANDIDATE", "SPRING_RECLAIM", "DECISION_ZONE"):
+        if role in ("ACCEPTED_SUPPORT", "SPRING_RECLAIM"):
             return _setup(
                 "TREND_BRIDGE",
                 "TREND_BRIDGE_RETEST",

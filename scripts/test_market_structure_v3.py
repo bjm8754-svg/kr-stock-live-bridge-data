@@ -94,6 +94,28 @@ assert bridge is not None
 assert bridge["impulsePct"] >= cfg["bridgeMinImpulsePct"]
 assert bridge["direction"] == "UP"
 
+# Trend-bridge retest becomes mature only after the bridge zone is accepted as support.
+# A mere decision/support-candidate role stays early/active rather than executable retest.
+bridge_stub = {
+    "date":"20260101","direction":"UP","close":105.0,
+    "zoneLow":100.0,"zoneHigh":110.0,
+}
+bridge_decision_level = {
+    "line":105.0,"zoneLow":100.0,"zoneHigh":110.0,
+    "kinds":["TREND_BRIDGE_UP"],"evidence":["SYNTH"],"evidenceCount":3,
+    "strength":3.0,"importance":"CORE",
+    "role":{"state":"DECISION_ZONE","warnings":[]},
+}
+bridge_early = detect_bridge_setup(accepted_df, bridge_stub, [bridge_decision_level], cfg)
+assert bridge_early is not None
+assert bridge_early["state"] == "TREND_BRIDGE_ACTIVE"
+
+bridge_support_level = dict(bridge_decision_level)
+bridge_support_level["role"] = {"state":"ACCEPTED_SUPPORT","warnings":[]}
+bridge_mature = detect_bridge_setup(accepted_df, bridge_stub, [bridge_support_level], cfg)
+assert bridge_mature is not None
+assert bridge_mature["state"] == "TREND_BRIDGE_RETEST"
+
 # Falling impulse -> pause -> falling resume is retained as resistance evidence,
 # but it must not manufacture a bullish trend-bridge setup.
 dclose = np.full(80, 120.0)
@@ -126,6 +148,7 @@ high_setup = detect_high_trend(high_df, cfg)
 assert high_setup is not None
 assert high_setup["family"] == "HIGH_TREND_CONTINUATION"
 assert high_setup["state"] in ("BREAKOUT_PRESSURE","HIGH_BREAKOUT","HIGH_RETEST","HIGH_BASE")
+assert "HIGH_LEVEL_ACCEPTANCE" not in high_setup["evidence"]
 
 # High-level retest must be reachable: reference high is fixed before the recent base.
 rt_close = np.concatenate([
