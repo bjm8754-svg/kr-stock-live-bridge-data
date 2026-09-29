@@ -214,8 +214,14 @@ assert "actionScore" not in out
 assert out["confirmation"]["rsi"]["auto7030Trigger"] is False
 assert out["review"]["assistantReviewRequired"] is True
 assert out["review"]["machineScope"] == "PREFILTER_AND_EVIDENCE_ONLY"
-assert len(out["review"]["chartTrace"]) <= cfg["reviewTraceSessions"]
-assert out["review"]["traceSchema"] == ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"]
+trace = out["review"]["chartTrace"]
+assert set(trace.keys()) == {"dailySchema","daily","weeklySchema","weekly","monthlySchema","monthly"}
+assert len(trace["daily"]) <= cfg["reviewDailyTraceSessions"]
+assert len(trace["weekly"]) <= cfg["reviewWeeklyTracePeriods"]
+assert len(trace["monthly"]) <= cfg["reviewMonthlyTracePeriods"]
+assert trace["dailySchema"] == ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"]
+assert trace["weeklySchema"] == ["date","open","high","low","close","volumeRatio","tradingValueRatio"]
+assert trace["monthlySchema"] == ["date","open","high","low","close","volumeRatio","tradingValueRatio"]
 
 # Machine output may propose structure, but every surfaced candidate still requires
 # assistant deep review; the scanner is not the final chart-judgement authority.
