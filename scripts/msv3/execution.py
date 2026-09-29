@@ -18,6 +18,14 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
     setup_state = (primary or {}).get("state")
     family = (primary or {}).get("family")
 
+    entry_reference = None
+    try:
+        raw_entry = (primary or {}).get("triggerLevel")
+        if raw_entry is not None and float(raw_entry) > 0:
+            entry_reference = float(raw_entry)
+    except Exception:
+        entry_reference = None
+
     accepted_supports = []
     overhead = []
     for lv in levels or []:
@@ -50,8 +58,23 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
         invalidation_source = "ACCEPTED_STRUCTURAL_LEVEL"
 
     reward_target = float(next_resistance["zoneLow"]) if next_resistance else None
-    risk_pct = pct(close, invalidation) if invalidation else None
-    reward_pct = pct(reward_target, close) if reward_target else None
+
+    # Structural risk/reward must use the planned entry reference, not today's close.
+    # Current-vs-entry distance is preserved separately so assistant review can judge
+    # whether a valid structure has already become a chase.
+    risk_reference = entry_reference if entry_reference is not None else close
+    current_vs_entry_pct = pct(close, entry_reference) if entry_reference is not None else None
+    valid_plan_invalidation = (
+        invalidation is not None
+        and risk_reference is not None
+        and float(invalidation) < float(risk_reference)
+    )
+    risk_pct = -pct(invalidation, risk_reference) if valid_plan_invalidation else None
+    reward_pct = (
+        pct(reward_target, risk_reference)
+        if reward_target is not None and risk_reference is not None and reward_target > risk_reference
+        else None
+    )
     rr = None
     if risk_pct is not None and reward_pct is not None and risk_pct > 0 and reward_pct > 0:
         rr = reward_pct / risk_pct
@@ -82,7 +105,7 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
         readiness = "RADAR"
         reason = "INSUFFICIENT_NORMAL_LIQUIDITY"
     elif setup_state in MATURE_EXECUTION_STATES:
-        if invalidation is None:
+        if not valid_plan_invalidation:
             readiness = "WATCH_TRIGGER"
             reason = "MATURE_SETUP_WITHOUT_VALID_INVALIDATION"
         elif rr is not None and rr < float(cfg.get("minExecutableStructuralRR", 1.15)):
@@ -104,7 +127,8 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
         "reason": reason,
         "mode": mode,
         "evaluationReference": rnum(close, 2),
-        "entryReference": rnum((primary or {}).get("triggerLevel"), 2),
+        "entryReference": rnum(entry_reference, 2),
+        "currentVsEntryPct": rnum(current_vs_entry_pct, 2),
         "invalidation": rnum(invalidation, 2),
         "invalidationSource": invalidation_source,
         "nearestAcceptedSupport": rnum((nearest_support or {}).get("line"), 2),

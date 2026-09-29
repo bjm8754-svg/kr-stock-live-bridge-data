@@ -94,12 +94,48 @@ def main():
             if not matched:
                 err(f"nearestAcceptedSupport not traceable to CORE accepted level: {nearest}")
 
+        price=row.get("price") or {}
+        close=price.get("close")
+        entry=execution.get("entryReference")
+        inv=execution.get("invalidation")
+        target=execution.get("nextResistance")
+        risk=execution.get("riskPct")
+        reward=execution.get("rewardPct")
+        rr=execution.get("structuralRR")
+        current_vs_entry=execution.get("currentVsEntryPct")
+
+        if finite(close) and finite(entry) and float(entry)>0:
+            expected_current_vs_entry=(float(close)/float(entry)-1.0)*100.0
+            if not finite(current_vs_entry) or abs(float(current_vs_entry)-expected_current_vs_entry)>0.06:
+                err(f"currentVsEntryPct inconsistent: {current_vs_entry} vs {expected_current_vs_entry:.4f}")
+
+        if finite(entry) and finite(inv) and float(entry)>0 and float(inv)<float(entry):
+            expected_risk=(float(entry)-float(inv))/float(entry)*100.0
+            if not finite(risk) or abs(float(risk)-expected_risk)>0.06:
+                err(f"riskPct inconsistent with planned entry: {risk} vs {expected_risk:.4f}")
+        elif risk is not None:
+            err("riskPct emitted without valid entry-above-invalidation geometry")
+
+        if finite(entry) and finite(target) and float(entry)>0 and float(target)>float(entry):
+            expected_reward=(float(target)-float(entry))/float(entry)*100.0
+            if not finite(reward) or abs(float(reward)-expected_reward)>0.06:
+                err(f"rewardPct inconsistent with planned entry: {reward} vs {expected_reward:.4f}")
+            if finite(risk) and float(risk)>0:
+                expected_rr=expected_reward/float(risk)
+                if not finite(rr) or abs(float(rr)-expected_rr)>0.06:
+                    err(f"structuralRR inconsistent: {rr} vs {expected_rr:.4f}")
+        elif reward is not None or rr is not None:
+            err("reward/RR emitted without valid overhead target geometry")
+
         if readiness=="EXECUTABLE":
             if not (setups.get("primary")):
                 err("executable without primary setup")
             inv=execution.get("invalidation")
+            entry=execution.get("entryReference")
             if inv is None or not finite(inv):
                 err("executable without finite invalidation")
+            if entry is None or not finite(entry) or float(inv) >= float(entry):
+                err("executable without valid planned-entry/invalidation geometry")
             if "FAILED_BREAKOUT" in (execution.get("warnings") or []):
                 err("executable despite failed breakout")
             rr=execution.get("structuralRR")

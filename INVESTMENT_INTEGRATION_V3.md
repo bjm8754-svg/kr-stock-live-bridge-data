@@ -155,6 +155,9 @@ Premarket plan uses confirmed prior-session data and current external evidence t
 
 Live data does not redesign the thesis from scratch. It answers whether the prewritten conditions are being confirmed or violated.
 
+Machine structural risk/reward is measured from the planned entry reference to structural invalidation and the next meaningful resistance. The current price's distance from that entry reference is carried separately so assistant review can reject a valid structure that has already become a chase.
+
+
 A strong premarket thesis may expand quickly after the planned trigger confirms; the system must not remain indefinitely at probe size merely because it began as a probe.
 
 ## 6. Position sizing

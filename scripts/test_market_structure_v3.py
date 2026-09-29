@@ -178,6 +178,32 @@ level_retest = detect_level_retest(accepted_df, [core_accepted], cfg)
 assert level_retest is not None
 assert level_retest["state"] == "LEVEL_RETEST"
 
+# Structural R/R is measured from the planned entry reference, while current
+# distance from that reference is preserved separately for chase judgement.
+rr_support = dict(core_accepted)
+rr_support["zoneLow"] = 100.0
+rr_support["zoneHigh"] = 110.0
+rr_support["line"] = 105.0
+rr_support["role"] = {"state":"ACCEPTED_SUPPORT","warnings":[]}
+rr_resistance = {
+    "line":130.0, "zoneLow":125.0, "zoneHigh":135.0,
+    "kinds":["GENERIC_LEVEL"], "evidence":["SYNTH"], "evidenceCount":3,
+    "strength":3.0, "importance":"CORE",
+    "role":{"state":"ACCEPTED_RESISTANCE","warnings":[]},
+}
+rr_bundle = {"primary":{
+    "family":"ROLE_REVERSAL","state":"LEVEL_RETEST","evidence":["SYNTH"],
+    "triggerLevel":110.0,"invalidationLevel":100.0,
+},"all":[]}
+rr_plan = build_execution_plan(
+    accepted_df, [rr_support, rr_resistance], rr_bundle,
+    {"warnings":[]}, {"avg20TradingValueEstimated":20_000_000_000}, cfg
+)
+assert abs(rr_plan["riskPct"] - 9.09) < 0.02
+assert abs(rr_plan["rewardPct"] - 13.64) < 0.02
+assert abs(rr_plan["structuralRR"] - 1.50) < 0.02
+assert abs(rr_plan["currentVsEntryPct"] - 3.64) < 0.02
+
 # A spring reclaim and an accepted breakout are information states, not chase entries.
 pending_money = {"avg20TradingValueEstimated":20_000_000_000}
 spring_bundle = {"primary":{
