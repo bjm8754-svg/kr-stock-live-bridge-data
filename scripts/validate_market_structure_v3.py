@@ -29,7 +29,7 @@ def main():
     if "score" in data or "actionScore" in data:
         errors.append("aggregate score leaked into root output")
 
-    sections=("executable","watchTrigger","radar","structureWarnings")
+    sections=("executable","watchTrigger","radar","deepReviewQueue","structureWarnings")
     rows=[]
     for section in sections:
         xs=data.get(section)
@@ -54,6 +54,19 @@ def main():
             err("watchTrigger section/readiness mismatch")
         if section=="radar" and readiness!="RADAR":
             err("radar section/readiness mismatch")
+
+        review=row.get("review") or {}
+        if review.get("assistantReviewRequired") is not True:
+            err("assistant deep review must be required for every surfaced candidate")
+        if review.get("machineScope") != "PREFILTER_AND_EVIDENCE_ONLY":
+            err("machine scope must remain prefilter/evidence only")
+        if section=="deepReviewQueue":
+            trace=review.get("chartTrace")
+            schema=review.get("traceSchema")
+            if not isinstance(trace,list) or not trace:
+                err("deepReviewQueue missing chart trace")
+            if schema != ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"]:
+                err("deepReviewQueue bad trace schema")
 
         setups=row.get("setups") or {}
         for setup in setups.get("all") or []:
@@ -97,6 +110,10 @@ def main():
             rr=execution.get("structuralRR")
             if rr is not None and (not finite(rr) or float(rr)<=0):
                 err(f"bad structuralRR={rr}")
+
+    philosophy=data.get("philosophy") or {}
+    if "final chart judgement requires assistant deep review" not in str(philosophy.get("machineRole") or ""):
+        errors.append("root philosophy does not preserve assistant deep-review authority")
 
     candidate_ratio=float((data.get("coverage") or {}).get("candidateRatio") or 0)
     if candidate_ratio > 0.30:
