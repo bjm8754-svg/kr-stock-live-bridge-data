@@ -206,6 +206,53 @@ def bridge_levels(bridge, cfg):
     ]
 
 
+def discover_trade_density_levels(df, cfg):
+    """Price-volume-time concentration zones.
+
+    This is a generic proxy for prices where meaningful transaction value accumulated
+    over time. It does not infer who traded or why.
+    """
+    if len(df) < 40:
+        return []
+    lookback = int(cfg.get("densityLookbackSessions", 180))
+    bins = int(cfg.get("densityBins", 24))
+    top_n = int(cfg.get("densityTopBins", 4))
+    min_sessions = int(cfg.get("densityMinSessions", 4))
+    sub = df.iloc[-lookback:-1].copy()
+    if len(sub) < 20:
+        return []
+    pmin = float(sub["Low"].min())
+    pmax = float(sub["High"].max())
+    if pmin <= 0 or pmax <= pmin:
+        return []
+
+    edges = np.linspace(pmin, pmax, bins + 1)
+    inds = np.digitize(sub["Close"].values, edges) - 1
+    out = []
+    stats = []
+    for bi in range(bins):
+        mask = inds == bi
+        n = int(mask.sum())
+        if n < min_sessions:
+            continue
+        seg = sub.loc[mask]
+        tv = float(seg["TV_EST"].sum())
+        if tv <= 0:
+            continue
+        center = float(np.average(seg["Close"], weights=seg["TV_EST"]))
+        stats.append((tv, n, center, float(edges[bi]), float(edges[bi+1])))
+
+    for tv, n, center, lo, hi in sorted(stats, reverse=True)[:top_n]:
+        out.append(_level(
+            center, lo, hi,
+            "TRADE_DENSITY",
+            ["TRADING_VALUE_CONCENTRATION", "TIME_ACCEPTANCE", f"SESSIONS_{n}"],
+            strength=2.5,
+            date=sub.index[-1].strftime("%Y%m%d"),
+        ))
+    return out
+
+
 def discover_swing_levels(df, cfg):
     if len(df) < 20:
         return []
@@ -251,6 +298,16 @@ def merge_levels(levels, cfg):
         center = float(np.average([float(x["price"]) for x in c], weights=weights))
         kinds = sorted(set(x["kind"] for x in c))
         evidence = sorted(set(e for x in c for e in x.get("evidence",[])))
+        special_kinds = {
+            "EVENT_CLOSE", "EVENT_BODY",
+            "BOX_UPPER", "BOX_CLOSE", "BOX_LOWER",
+            "TREND_BRIDGE", "TRADE_DENSITY",
+        }
+        importance = "CORE" if (
+            any(k in special_kinds for k in kinds)
+            or (len(c) >= int(cfg.get("coreLevelMinEvidenceCount", 3))
+                and sum(weights) >= float(cfg.get("coreLevelMinStrength", 3.0)))
+        ) else "SUPPORTING"
         out.append({
             "line": rnum(center, 2),
             "zoneLow": rnum(min(float(x["zoneLow"]) for x in c), 2),
@@ -259,6 +316,7 @@ def merge_levels(levels, cfg):
             "evidence": evidence,
             "evidenceCount": len(c),
             "strength": rnum(sum(weights), 2),
+            "importance": importance,
             "dates": sorted(set(x["date"] for x in c if x.get("date")))[-5:],
         })
     return out
@@ -278,9 +336,12 @@ def classify_role(df, level):
     l = float(cur["Low"])
     warnings = []
 
+    decision_relevant = level.get("importance") == "CORE"
+
     if h > hi and c < lo:
         state = "FAILED_BREAKOUT"
-        warnings.append("FAILED_BREAKOUT")
+        if decision_relevant:
+            warnings.append("FAILED_BREAKOUT")
     elif l < lo and c > hi:
         state = "SPRING_RECLAIM"
     elif lo <= c <= hi:
@@ -300,15 +361,16 @@ def classify_role(df, level):
         else:
             state = "RESISTANCE_CANDIDATE"
 
-    if h > hi and c < hi and "FAILED_BREAKOUT" not in warnings:
+    if decision_relevant and h > hi and c < hi and "FAILED_BREAKOUT" not in warnings:
         warnings.append("UPPER_REJECTION")
-    if l < lo and c > lo:
+    if decision_relevant and l < lo and c > lo:
         warnings.append("LOWER_RECLAIM")
 
     return {
         "state": state,
         "warnings": warnings,
         "distancePct": rnum(pct(c, level["line"]), 2),
+        "decisionRelevant": decision_relevant,
     }
 
 
