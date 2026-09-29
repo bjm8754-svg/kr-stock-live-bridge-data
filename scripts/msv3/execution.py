@@ -1,24 +1,7 @@
 from __future__ import annotations
 
 from .features import pct, rnum
-
-
-MATURE_EXECUTION_STATES = {
-    "SPRING_CONFIRMED",
-    "BOX_RETEST",
-    "HIGH_RETEST",
-    "TREND_BRIDGE_RETEST",
-    "LEVEL_RETEST",
-    "BOX_BREAKOUT_ACCEPTED",
-}
-
-PENDING_STATES = {
-    "SPRING_RECLAIM_PENDING",
-    "BOX_BREAKOUT_PENDING",
-    "HIGH_BREAKOUT",
-    "BREAKOUT_PRESSURE",
-    "BASE_BREAKOUT",
-}
+from .taxonomy import MATURE_EXECUTION_STATES, PENDING_STATES, READINESS_ORDER, setup_priority
 
 
 def _valid_below(v, close):
@@ -38,6 +21,8 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
     accepted_supports = []
     overhead = []
     for lv in levels or []:
+        if lv.get("importance") != "CORE":
+            continue
         role = (lv.get("role") or {}).get("state")
         if role in ("ACCEPTED_SUPPORT", "SPRING_RECLAIM"):
             if float(lv["zoneLow"]) < close:
@@ -113,12 +98,7 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
         readiness = "RADAR"
         reason = "EARLY_STRUCTURE"
 
-    # A bearish RSI divergence is a warning, not a veto. It can demote an executable
-    # breakout-style setup one step because price has not yet invalidated the structure.
-    if readiness == "EXECUTABLE" and "RSI_BEARISH_DIVERGENCE" in warnings:
-        readiness = "WATCH_TRIGGER"
-        reason = "PRICE_STRUCTURE_VALID_BUT_RSI_WARNING"
-
+    # RSI stays descriptive. It never overrides a valid price-structure execution state.
     return {
         "readiness": readiness,
         "reason": reason,
@@ -138,16 +118,15 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
 
 def rank_key(row):
     """Deterministic categorical ranking without an aggregate score."""
-    readiness_rank = {"EXECUTABLE":4, "WATCH_TRIGGER":3, "RADAR":2, "REJECT":0}
     primary = ((row.get("setups") or {}).get("primary") or {})
-    maturity = int(primary.get("maturity") or 0)
+    state_priority = setup_priority(primary.get("state"))
     money = row.get("money") or {}
     avg20 = float(money.get("avg20TradingValueEstimated") or 0)
     rr = ((row.get("execution") or {}).get("structuralRR"))
     rr = float(rr) if rr is not None else -1.0
     return (
-        readiness_rank.get((row.get("execution") or {}).get("readiness"), 0),
-        maturity,
+        READINESS_ORDER.get((row.get("execution") or {}).get("readiness"), 0),
+        state_priority,
         rr,
         avg20,
     )
