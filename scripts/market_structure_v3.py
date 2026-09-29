@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Market Structure V3 full-market scanner.
 
-This is a clean chart-decision engine built around:
-price/volume/time -> important levels -> role states -> setup families ->
-confirmation -> execution.
+The machine layer is a universe compressor and evidence packager:
+price/volume/time -> important levels -> role states -> setup hypotheses ->
+mechanical plan -> assistant deep review.
 
-It intentionally does not use an aggregate score and does not treat YBM as
-the governing architecture. Existing market-data infrastructure remains reusable.
+It intentionally does not claim to automate every chart-context judgement. YBM is
+not the governing architecture, and existing market-data infrastructure remains
+reusable.
 """
 
 from __future__ import annotations
@@ -87,6 +88,19 @@ def main():
     now = dt.datetime.now(KST).isoformat()
     compact = build_output(rows, errors, cfg, now)
 
+    # Keep the diagnostic artifact compact. Recent chart traces are already preserved
+    # for the bounded assistant deep-review queue in the compact output; storing them
+    # for the entire market would add weight without improving auditability.
+    full_rows = []
+    for row in rows:
+        x = dict(row)
+        if isinstance(x.get("review"), dict):
+            review = dict(x["review"])
+            review.pop("chartTrace", None)
+            review.pop("traceSchema", None)
+            x["review"] = review
+        full_rows.append(x)
+
     full = {
         "status": compact["status"],
         "schemaVersion": compact["schemaVersion"],
@@ -95,7 +109,7 @@ def main():
         "tradeDate": compact["tradeDate"],
         "coverage": compact["coverage"],
         "counts": compact["counts"],
-        "rows": rows,
+        "rows": full_rows,
         "errors": errors,
     }
 
