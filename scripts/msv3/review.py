@@ -9,14 +9,8 @@ from .execution import rank_key
 REVIEW_TIER_ORDER = {"NOW": 3, "SOON": 2, "BACKGROUND": 1}
 
 
-def _bar_trace(df, cfg):
-    """Compact recent OHLCV trace for assistant chart reading.
-
-    This is evidence, not a machine interpretation. It lets the later review layer
-    reconstruct the recent chart shape without forcing every visual/context judgement
-    into hard-coded detectors.
-    """
-    n = int(cfg.get("reviewTraceSessions", 90))
+def _daily_trace(df, cfg):
+    n = int(cfg.get("reviewDailyTraceSessions", 120))
     sub = df.iloc[-n:]
     out = []
     for idx, row in sub.iterrows():
@@ -32,6 +26,60 @@ def _bar_trace(df, cfg):
         ])
     return out
 
+
+def _higher_timeframe_trace(df, rule, periods, ratio_window):
+    if len(df) < 2:
+        return []
+    base = df[["Open","High","Low","Close","Volume","TV_EST"]].copy()
+    bars = base.resample(rule).agg({
+        "Open":"first",
+        "High":"max",
+        "Low":"min",
+        "Close":"last",
+        "Volume":"sum",
+        "TV_EST":"sum",
+    }).dropna()
+    if bars.empty:
+        return []
+
+    prior_vol = bars["Volume"].shift(1).rolling(ratio_window, min_periods=max(3, ratio_window//3)).mean()
+    prior_tv = bars["TV_EST"].shift(1).rolling(ratio_window, min_periods=max(3, ratio_window//3)).mean()
+    bars["VOL_RATIO"] = bars["Volume"] / prior_vol
+    bars["TV_RATIO"] = bars["TV_EST"] / prior_tv
+    bars = bars.iloc[-int(periods):]
+
+    out = []
+    for idx, row in bars.iterrows():
+        out.append([
+            idx.strftime("%Y%m%d"),
+            rnum(row["Open"], 2),
+            rnum(row["High"], 2),
+            rnum(row["Low"], 2),
+            rnum(row["Close"], 2),
+            rnum(row.get("VOL_RATIO"), 2),
+            rnum(row.get("TV_RATIO"), 2),
+        ])
+    return out
+
+
+def _chart_trace(df, cfg):
+    """Multi-timeframe evidence for actual assistant chart reading.
+
+    Daily detail supports entry-context reading; weekly/monthly traces preserve the
+    larger structure so the assistant does not overfit to a 2-4 month crop.
+    """
+    return {
+        "dailySchema": ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"],
+        "daily": _daily_trace(df, cfg),
+        "weeklySchema": ["date","open","high","low","close","volumeRatio","tradingValueRatio"],
+        "weekly": _higher_timeframe_trace(
+            df, "W-FRI", int(cfg.get("reviewWeeklyTracePeriods", 156)), 20
+        ),
+        "monthlySchema": ["date","open","high","low","close","volumeRatio","tradingValueRatio"],
+        "monthly": _higher_timeframe_trace(
+            df, "ME", int(cfg.get("reviewMonthlyTracePeriods", 72)), 12
+        ),
+    }
 
 def review_tier(row):
     execution = row.get("execution") or {}
@@ -79,8 +127,7 @@ def build_review_context(df, structure, setups, confirmation, execution, cfg):
             "Do close acceptance/rejection, volume and time support the same interpretation?",
             "Does a higher-level chart context invalidate or downgrade the machine hypothesis?",
         ],
-        "traceSchema": ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"],
-        "chartTrace": _bar_trace(df, cfg),
+        "chartTrace": _chart_trace(df, cfg),
     }
 
 
