@@ -402,6 +402,57 @@ assert decision_plan["supportHierarchy"]["coreSupport"] is None
 assert decision_plan["invalidationCandidate"] is None
 assert decision_plan["structuralRR"] is None
 
+
+
+# Damaged/failed reference candles remain observable evidence but cannot generate
+# support/invalidation until acceptance is re-established.
+damaged_ref = {"open":100.0,"close":110.0,"low":90.0,"source":"RECENT_REFERENCE"}
+assert scan.classify_reference_role_state(95.0, damaged_ref, cfg) == "DAMAGED"
+damaged_plan = scan.build_structural_entry_plan(
+    {"Close":95.0},
+    None,
+    {"240":80.0,"480":70.0,"600":60.0,"1000":50.0},
+    None,
+    damaged_ref,
+    cfg,
+    None,
+)
+assert damaged_plan["referenceRoleStates"]["recent"] == "DAMAGED"
+assert damaged_plan["supportHierarchy"]["primaryReferenceSupport"] is None
+assert damaged_plan["supportHierarchy"]["referenceLowInvalidationCandidate"] is None
+assert damaged_plan["invalidationCandidate"] is None
+
+failed_ref = {"open":100.0,"close":110.0,"low":90.0,"source":"RECENT_REFERENCE"}
+assert scan.classify_reference_role_state(85.0, failed_ref, cfg) == "FAILED"
+failed_plan = scan.build_structural_entry_plan(
+    {"Close":85.0},
+    None,
+    {"240":80.0,"480":70.0,"600":60.0,"1000":50.0},
+    None,
+    failed_ref,
+    cfg,
+    None,
+)
+assert failed_plan["referenceRoleStates"]["recent"] == "FAILED"
+assert failed_plan["supportHierarchy"]["primaryReferenceSupport"] is None
+assert failed_plan["supportHierarchy"]["referenceLowInvalidationCandidate"] is None
+assert failed_plan["invalidationCandidate"] is None
+
+held_ref = {"open":100.0,"close":110.0,"low":90.0,"source":"RECENT_REFERENCE"}
+assert scan.classify_reference_role_state(108.0, held_ref, cfg) == "HELD"
+held_plan = scan.build_structural_entry_plan(
+    {"Close":108.0},
+    None,
+    {"240":80.0,"480":70.0,"600":60.0,"1000":50.0},
+    None,
+    held_ref,
+    cfg,
+    None,
+)
+assert held_plan["referenceRoleStates"]["recent"] == "HELD"
+assert held_plan["supportHierarchy"]["primaryReferenceSupport"] == 100.0
+assert held_plan["invalidationCandidate"] == 90.0
+
 # Intraday break + close back below the whole zone is a failed breakout regardless
 # of whether the daily return is positive or negative.
 failed_df = pd.DataFrame({
