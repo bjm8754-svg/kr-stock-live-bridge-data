@@ -60,23 +60,8 @@ def main():
             err("assistant deep review must be required for every surfaced candidate")
         if review.get("machineScope") != "PREFILTER_AND_EVIDENCE_ONLY":
             err("machine scope must remain prefilter/evidence only")
-        if section=="deepReviewQueue":
-            trace=review.get("chartTrace") or {}
-            if not isinstance(trace,dict):
-                err("deepReviewQueue chart trace must be multi-timeframe object")
-            else:
-                if not isinstance(trace.get("daily"),list) or not trace.get("daily"):
-                    err("deepReviewQueue missing daily chart trace")
-                if not isinstance(trace.get("weekly"),list) or not trace.get("weekly"):
-                    err("deepReviewQueue missing weekly chart trace")
-                if not isinstance(trace.get("monthly"),list) or not trace.get("monthly"):
-                    err("deepReviewQueue missing monthly chart trace")
-                if trace.get("dailySchema") != ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"]:
-                    err("deepReviewQueue bad daily trace schema")
-                if trace.get("weeklySchema") != ["date","open","high","low","close","volumeRatio","tradingValueRatio"]:
-                    err("deepReviewQueue bad weekly trace schema")
-                if trace.get("monthlySchema") != ["date","open","high","low","close","volumeRatio","tradingValueRatio"]:
-                    err("deepReviewQueue bad monthly trace schema")
+        if "chartTrace" in review:
+            err("heavy chartTrace must not be committed in canonical output")
 
         setups=row.get("setups") or {}
         for setup in setups.get("all") or []:

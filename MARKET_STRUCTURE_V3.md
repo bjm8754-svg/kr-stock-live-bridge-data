@@ -140,6 +140,17 @@ This separation is intentional: future chart-study improvements should usually i
 
 The machine plan is therefore a **proposal**, not the final investment decision.
 
+## Storage / artifact boundary
+
+Multi-timeframe chart traces are **ephemeral review evidence**, not canonical Git history.
+
+- `market-structure-v3.json`: lightweight canonical state/evidence summary; no heavy chart traces.
+- `/tmp/market-structure-v3-review.json`: bounded assistant-review packet with daily/weekly/monthly traces.
+- `/tmp/market-structure-v3-full.json`: diagnostic market output without review traces.
+- The workflow uploads review/full diagnostics with short retention and commits only the lightweight canonical file.
+
+This prevents daily Git history from growing by several megabytes while preserving the evidence needed for deep chart review.
+
 ## Why V2 is not deleted immediately
 
 This is not because YBM must be preserved. V2 is retained temporarily as a **baseline control** so V3 can be judged against a known working scanner without contaminating V3 with V2 decisions.
