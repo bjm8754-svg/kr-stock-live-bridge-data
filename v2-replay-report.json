@@ -72,6 +72,11 @@
       "distanceToNextResistancePct": 2.7,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "FAILED",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -381,6 +386,11 @@
       "distanceToNextResistancePct": 2.33,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "NONE",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -636,6 +646,11 @@
       "distanceToNextResistancePct": 4.38,
       "structuralRR": 0.24,
       "coreRoleState": "DECISION_ZONE",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "HELD",
+        "active": "HELD"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": 68100.0,
         "primaryReferenceSource": "PRIOR_REFERENCE_CLOSE",
@@ -892,6 +907,11 @@
       "distanceToNextResistancePct": null,
       "structuralRR": null,
       "coreRoleState": "ACCEPTED_SUPPORT",
+      "referenceRoleStates": {
+        "recent": "CURRENT",
+        "prior": "HELD",
+        "active": "CURRENT"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": 10270.0,
         "primaryReferenceSource": "CURRENT_REFERENCE_OPEN",
@@ -1158,6 +1178,11 @@
       "distanceToNextResistancePct": 3.89,
       "structuralRR": null,
       "coreRoleState": "FAILED_BREAKOUT",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "FAILED",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1435,6 +1460,11 @@
       "distanceToNextResistancePct": 3.93,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "NONE",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1739,6 +1769,11 @@
       "distanceToNextResistancePct": 5.07,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "NONE",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -1930,6 +1965,11 @@
       "distanceToNextResistancePct": null,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "CURRENT",
+        "prior": "NONE",
+        "active": "CURRENT"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": 63200.0,
         "primaryReferenceSource": "CURRENT_REFERENCE_OPEN",
@@ -2164,6 +2204,11 @@
       "distanceToNextResistancePct": 3.62,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "FAILED",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -2431,6 +2476,11 @@
       "distanceToNextResistancePct": null,
       "structuralRR": null,
       "coreRoleState": "BREAKOUT_PENDING",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "NONE",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
@@ -2689,6 +2739,11 @@
       "distanceToNextResistancePct": 4.48,
       "structuralRR": null,
       "coreRoleState": "DECISION_ZONE",
+      "referenceRoleStates": {
+        "recent": "NONE",
+        "prior": "NONE",
+        "active": "NONE"
+      },
       "supportHierarchy": {
         "primaryReferenceSupport": null,
         "primaryReferenceSource": null,
