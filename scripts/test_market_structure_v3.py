@@ -126,6 +126,21 @@ assert high_setup is not None
 assert high_setup["family"] == "HIGH_TREND_CONTINUATION"
 assert high_setup["state"] in ("BREAKOUT_PRESSURE","HIGH_BREAKOUT","HIGH_RETEST","HIGH_BASE")
 
+# High-level retest must be reachable: reference high is fixed before the recent base.
+rt_close = np.concatenate([
+    np.linspace(60.0, 100.0, 160),
+    np.array([98.0,99.0,99.5,100.0,100.2,99.8,100.5,101.0,102.0,103.0,
+              103.0,102.5,103.5,104.0,103.5,103.0,102.5,102.0,102.5,102.5])
+])
+rt_raw = pd.DataFrame({
+    "Open":rt_close*0.997, "High":rt_close*1.01, "Low":rt_close*0.99, "Close":rt_close,
+    "Volume":np.full(180,2_000_000),
+}, index=hidx)
+rt_df = add_indicators(rt_raw, cfg)
+rt_setup = detect_high_trend(rt_df, cfg)
+assert rt_setup is not None
+assert rt_setup["state"] == "HIGH_RETEST"
+
 
 # 6) RSI 70/30 never creates an automatic trigger.
 r = rsi_context(high_df, cfg)
@@ -162,6 +177,22 @@ level_retest = detect_level_retest(accepted_df, [core_accepted], cfg)
 assert level_retest is not None
 assert level_retest["state"] == "LEVEL_RETEST"
 
+# A spring reclaim and an accepted breakout are information states, not chase entries.
+pending_money = {"avg20TradingValueEstimated":20_000_000_000}
+spring_bundle = {"primary":{
+    "family":"SPRING","state":"SPRING_CONFIRMED","evidence":["SYNTH"],
+    "triggerLevel":100.0,"invalidationLevel":95.0,
+},"all":[]}
+spring_plan = build_execution_plan(spring_confirm_df, [], spring_bundle, {"warnings":[]}, pending_money, cfg)
+assert spring_plan["readiness"] == "WATCH_TRIGGER"
+
+box_accept_bundle = {"primary":{
+    "family":"BOX_BREAKOUT","state":"BOX_BREAKOUT_ACCEPTED","evidence":["SYNTH"],
+    "triggerLevel":100.0,"invalidationLevel":95.0,
+},"all":[]}
+box_accept_plan = build_execution_plan(accepted_df, [], box_accept_bundle, {"warnings":[]}, pending_money, cfg)
+assert box_accept_plan["readiness"] == "WATCH_TRIGGER"
+
 
 # 8) End-to-end schema contains no aggregate score field.
 eidx = pd.bdate_range("2023-01-02", periods=700)
@@ -180,5 +211,21 @@ assert out["schemaVersion"] == "MARKET_STRUCTURE_V3"
 assert "score" not in out
 assert "actionScore" not in out
 assert out["confirmation"]["rsi"]["auto7030Trigger"] is False
+
+# Shorter-history listings are analyzable without a separate legacy/new-listing doctrine.
+short_cfg = dict(cfg)
+short_cfg["minHistoryRows"] = 60
+sidx = pd.bdate_range("2026-01-02", periods=80)
+sc = np.linspace(80.0,100.0,80)
+sraw = pd.DataFrame({
+    "Open":sc*0.997, "High":sc*1.01, "Low":sc*0.99, "Close":sc,
+    "Volume":np.full(80,1_000_000),
+}, index=sidx)
+short_out = analyze_frame(
+    {"code":"000000","name":"SYNTH_SHORT_HISTORY","market":"KOSDAQ","amount":20_000_000_000,"marcap":500_000_000_000},
+    sraw,
+    short_cfg,
+)
+assert short_out["status"] == "OK"
 
 print("Market Structure V3 self-tests: PASS")
