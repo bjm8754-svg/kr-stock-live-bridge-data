@@ -19,7 +19,8 @@ cfg = json.loads((ROOT / "market-structure-v3-config.json").read_text(encoding="
 idx = pd.bdate_range("2026-01-01", periods=3)
 level = {
     "line":105.0, "zoneLow":100.0, "zoneHigh":110.0,
-    "kinds":["GENERIC_LEVEL"], "evidence":["SYNTH"], "evidenceCount":2, "strength":2.0,
+    "kinds":["GENERIC_LEVEL"], "evidence":["SYNTH"], "evidenceCount":3, "strength":3.0,
+    "importance":"CORE",
 }
 decision_df = pd.DataFrame({
     "Open":[95.0,97.0,103.0], "High":[99.0,99.0,108.0], "Low":[94.0,95.0,101.0],
@@ -34,6 +35,14 @@ failed_df = pd.DataFrame({
 failed = classify_role(failed_df, level)
 assert failed["state"] == "FAILED_BREAKOUT"
 assert "FAILED_BREAKOUT" in failed["warnings"]
+
+# Weak supporting swing-like levels may still have a failed-breakout role state, but
+# they must not emit a hard structure warning by themselves.
+supporting_level = dict(level)
+supporting_level["importance"] = "SUPPORTING"
+supporting_failed = classify_role(failed_df, supporting_level)
+assert supporting_failed["state"] == "FAILED_BREAKOUT"
+assert "FAILED_BREAKOUT" not in supporting_failed["warnings"]
 
 accepted_df = pd.DataFrame({
     "Open":[111.0,112.0,113.0], "High":[113.0,114.0,115.0], "Low":[110.5,111.0,112.0],
