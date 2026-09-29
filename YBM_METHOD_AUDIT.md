@@ -1,7 +1,7 @@
 # YBM Method Audit
 
 Status: CANONICAL METHOD TRACE
-Updated: 2026-09-28
+Updated: 2026-09-29
 Purpose: keep the original YBM-based discovery logic distinguishable from later system enhancements.
 
 ## 1. Source-first principles
@@ -76,3 +76,26 @@ OBSERVED EVIDENCE
 -> ACTION
 
 This ordering is the audit contract. Later modules are overlays, not replacements for the original source method.
+
+
+## 5. Market-structure study overlay
+
+The 2026-09-29 chart-study canonical adds a separate observable market-structure layer. It is an overlay on the YBM discovery engine, not a replacement for it.
+
+Implemented Phase 1 rules:
+- keep **price level discovery** separate from **current role state**;
+- a detected resistance zone remains `RESISTANCE` / `DECISION_ZONE` until close behavior changes its role;
+- the first close above resistance is `BREAKOUT_PENDING`; repeated closes above it may become `ACCEPTED_SUPPORT`;
+- unresolved resistance must not be reused as support/invalidation merely because its lower edge is below current price;
+- intraday penetration followed by a close back below the zone is exposed as `UPPER_REJECTION` / `FAILED_BREAKOUT` without depending on the sign of the daily return;
+- `HIGH_TREND_PRESSURE` is a parallel continuation **discovery/radar** track for established trends near highs with compression, rising lows and repeated upper tests;
+- the continuation track is deliberately **not** an action-score bonus or automatic briefing trigger;
+- high-distance measurements are supporting evidence only; a simple "within X% of a high" rule is forbidden.
+
+Not yet automated:
+- box-compression close as a distinct algorithmic level;
+- trend-bridge close/wick levels;
+- spring/reclaim state machine;
+- RSI divergence/strength overlay.
+
+Those concepts remain study-canonical evidence until a generic, non-overfit detection rule and regression fixtures are established.
