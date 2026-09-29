@@ -678,6 +678,29 @@ def classify_breakout(break_core, cur_tv, tv_ratio, vol_ratio, close_loc, relati
     return "JINDOL_CONFIRMED" if money_ok and acceptance_ok and relative_ok else "GADOL_RISK"
 
 
+def classify_reference_role_state(cur_close, ref, cfg):
+    """Return whether a reference candle is still structurally usable as support.
+
+    DAMAGED/FAILED reference levels remain observable evidence, but they are not allowed
+    to generate support/invalidation until price has re-established acceptance.
+    """
+    if not ref:
+        return "NONE"
+    if ref.get("source") == "CURRENT_COMPLETED_REFERENCE":
+        return "CURRENT"
+    vals = (ref.get("open"), ref.get("close"), ref.get("low"))
+    if any(v is None for v in vals):
+        return "UNKNOWN"
+    ro, rc, rl = map(float, vals)
+    hold_line = max(ro, rc * (1.0 - float(cfg["anchorCloseUnderTolerancePct"]) / 100.0))
+    c = float(cur_close)
+    if c >= hold_line:
+        return "HELD"
+    if c >= rl:
+        return "DAMAGED"
+    return "FAILED"
+
+
 def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg, core_role_state=None):
     """Construct an observable, non-arbitrary reference plan for ranking only.
 
@@ -702,8 +725,14 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg, 
         add_support(core.get("zoneLow"), "CORE_ZONE_LOW")
         add_support(core.get("line"), "CORE_LINE")
 
-    for ref, prefix in ((recent_anchor, "RECENT_REFERENCE"), (prior_event, "PRIOR_REFERENCE")):
-        if ref:
+    recent_reference_state = classify_reference_role_state(close, recent_anchor, cfg)
+    prior_reference_state = classify_reference_role_state(close, prior_event, cfg)
+
+    for ref, prefix, role_state in (
+        (recent_anchor, "RECENT_REFERENCE", recent_reference_state),
+        (prior_event, "PRIOR_REFERENCE", prior_reference_state),
+    ):
+        if ref and role_state in ("CURRENT", "HELD"):
             add_support(ref.get("open"), prefix + "_OPEN")
             add_support(ref.get("close"), prefix + "_CLOSE")
             add_support(ref.get("low"), prefix + "_LOW")
@@ -734,7 +763,15 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg, 
                 valid.append((v, source))
         return max(valid, key=lambda z: z[0]) if valid else (None, None)
 
-    active_ref = recent_anchor if recent_anchor else prior_event
+    active_ref = None
+    active_ref_state = "NONE"
+    if recent_anchor and recent_reference_state in ("CURRENT", "HELD"):
+        active_ref = recent_anchor
+        active_ref_state = recent_reference_state
+    elif prior_event and prior_reference_state in ("CURRENT", "HELD"):
+        active_ref = prior_event
+        active_ref_state = prior_reference_state
+
     ref_source = (active_ref or {}).get("source")
     if ref_source == "CURRENT_COMPLETED_REFERENCE":
         ref_prefix = "CURRENT_REFERENCE"
@@ -812,6 +849,11 @@ def build_structural_entry_plan(cur, core, ma, prior_event, recent_anchor, cfg, 
         "distanceToNextResistancePct": rnum(reward_pct),
         "structuralRR": rnum(rr, 2),
         "coreRoleState": core_role_state,
+        "referenceRoleStates": {
+            "recent": recent_reference_state,
+            "prior": prior_reference_state,
+            "active": active_ref_state,
+        },
         "supportHierarchy": {
             "primaryReferenceSupport": rnum(reference_support[0], 2),
             "primaryReferenceSource": reference_support[1],
