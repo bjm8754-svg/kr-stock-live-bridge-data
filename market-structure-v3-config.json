@@ -83,7 +83,9 @@
   "coreLevelMinEvidenceCount": 3,
   "coreLevelMinStrength": 3,
   "continuationMaxAboveReferencePct": 10,
-  "reviewTraceSessions": 90,
   "maxDeepReviewCandidates": 36,
-  "maxDeepReviewPerFamily": 10
+  "maxDeepReviewPerFamily": 10,
+  "reviewDailyTraceSessions": 120,
+  "reviewWeeklyTracePeriods": 156,
+  "reviewMonthlyTracePeriods": 72
 }
