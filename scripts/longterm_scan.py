@@ -189,8 +189,12 @@ def add_indicators(df, cfg):
     avg_loss = loss.ewm(alpha=1.0 / rsi_n, adjust=False, min_periods=rsi_n).mean()
     rs = avg_gain / avg_loss.replace(0, np.nan)
     rsi = 100.0 - (100.0 / (1.0 + rs))
-    rsi = rsi.where(avg_loss > 0, 100.0)
-    rsi = rsi.where(avg_gain > 0, 0.0)
+    only_gain = (avg_gain > 0) & (avg_loss == 0)
+    only_loss = (avg_gain == 0) & (avg_loss > 0)
+    both_flat = (avg_gain == 0) & (avg_loss == 0)
+    rsi = rsi.mask(only_gain, 100.0)
+    rsi = rsi.mask(only_loss, 0.0)
+    rsi = rsi.mask(both_flat, 50.0)
     df["RSI"] = rsi
     return df
 
