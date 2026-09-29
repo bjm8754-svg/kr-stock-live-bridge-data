@@ -195,6 +195,152 @@ def add_indicators(df, cfg):
     return df
 
 
+def detect_box_candidate(hist, cfg):
+    """Detect a recent time-accumulated box candidate without turning it into a trade signal.
+
+    The source does not prescribe a universal box length or width. This proxy therefore
+    requires relative compression versus the immediately preceding window plus repeated
+    reactions near both boundaries. Numeric thresholds stay explicit in config.
+    """
+    if hist is None:
+        return None
+
+    windows = [int(x) for x in cfg.get("boxWindowCandidates", [20, 30, 40, 60])]
+    band_frac = float(cfg.get("boxBoundaryBandFraction", 0.15))
+    min_upper = int(cfg.get("boxMinUpperTouches", 3))
+    min_lower = int(cfg.get("boxMinLowerTouches", 3))
+    max_rel_range = float(cfg.get("boxMaxRelativeRangeRatio", 0.85))
+    max_disp = float(cfg.get("boxMaxNetDisplacementToRange", 0.60))
+
+    candidates = []
+    for w in windows:
+        if len(hist) < 2 * w:
+            continue
+        seg = hist.iloc[-w:]
+        before = hist.iloc[-2*w:-w]
+        top = float(seg["High"].max())
+        bottom = float(seg["Low"].min())
+        prev_top = float(before["High"].max())
+        prev_bottom = float(before["Low"].min())
+        rng = top - bottom
+        prev_rng = prev_top - prev_bottom
+        if rng <= 0 or prev_rng <= 0 or bottom <= 0:
+            continue
+
+        rel_range = rng / prev_rng
+        upper_cut = top - rng * band_frac
+        lower_cut = bottom + rng * band_frac
+        upper_touches = int((seg["High"] >= upper_cut).sum())
+        lower_touches = int((seg["Low"] <= lower_cut).sum())
+        net_disp = abs(float(seg["Close"].iloc[-1]) - float(seg["Close"].iloc[0])) / rng
+
+        if (
+            rel_range <= max_rel_range
+            and upper_touches >= min_upper
+            and lower_touches >= min_lower
+            and net_disp <= max_disp
+        ):
+            v = seg["Volume"].astype(float)
+            vw_close = (
+                float((seg["Close"].astype(float) * v).sum() / v.sum())
+                if float(v.sum()) > 0 else float(seg["Close"].median())
+            )
+            score = (
+                upper_touches + lower_touches
+                + max(0.0, 1.0 - rel_range) * 10.0
+                + max(0.0, 1.0 - net_disp) * 5.0
+            )
+            candidates.append({
+                "windowSessions": w,
+                "startDate": seg.index[0].strftime("%Y%m%d"),
+                "endDate": seg.index[-1].strftime("%Y%m%d"),
+                "boxOpen": rnum(seg["Open"].iloc[0], 2),
+                "boxHigh": rnum(top, 2),
+                "boxLow": rnum(bottom, 2),
+                "boxClose": rnum(seg["Close"].iloc[-1], 2),
+                "volumeWeightedCloseProxy": rnum(vw_close, 2),
+                "rangePct": rnum((top / bottom - 1.0) * 100.0),
+                "relativeRangeToPriorWindow": rnum(rel_range, 3),
+                "upperTouches": upper_touches,
+                "lowerTouches": lower_touches,
+                "netDisplacementToRange": rnum(net_disp, 3),
+                "score": rnum(score, 2),
+                "algorithmicProxy": True,
+            })
+
+    if not candidates:
+        return None
+    candidates.sort(
+        key=lambda x: (
+            float(x.get("score") or 0),
+            int(x.get("upperTouches") or 0) + int(x.get("lowerTouches") or 0),
+            int(x.get("windowSessions") or 0),
+        ),
+        reverse=True,
+    )
+    return candidates[0]
+
+
+def box_structure_context(df, cfg):
+    """Current relation to a previously formed box candidate.
+
+    This is observation only. It does not create entry/action score. The key output is
+    whether the close is inside, above, below or has reclaimed a prior lower boundary.
+    """
+    empty = {
+        "detected": False,
+        "state": "NONE",
+        "springState": "NONE",
+        "box": None,
+        "roleEvidenceOnly": True,
+    }
+    if df is None or len(df) < 42:
+        return empty
+
+    box = detect_box_candidate(df.iloc[:-1], cfg)
+    if not box:
+        return empty
+
+    cur = df.iloc[-1]
+    prev = df.iloc[-2]
+    top = float(box["boxHigh"])
+    bottom = float(box["boxLow"])
+    close = float(cur["Close"])
+    low = float(cur["Low"])
+    prev_close = float(prev["Close"])
+
+    if close > top:
+        state = "BOX_BREAKOUT_PENDING" if prev_close <= top else "BOX_ABOVE"
+    elif close < bottom:
+        state = "BOX_BREAKDOWN"
+    elif prev_close > top and close <= top:
+        state = "BOX_REENTRY"
+    else:
+        state = "IN_BOX"
+
+    spring_state = "NONE"
+    if low < bottom and close >= bottom:
+        spring_state = "SPRING_RECLAIM_TODAY"
+    else:
+        prior_box = detect_box_candidate(df.iloc[:-2], cfg) if len(df) >= 43 else None
+        if prior_box:
+            prior_bottom = float(prior_box["boxLow"])
+            if float(prev["Low"]) < prior_bottom and close >= prior_bottom:
+                spring_state = "SPRING_NEXT_BAR_RECLAIM"
+
+    return {
+        "detected": True,
+        "state": state,
+        "springState": spring_state,
+        "box": box,
+        "currentCloseVsBoxHighPct": rnum(pct(close, top)),
+        "currentCloseVsBoxLowPct": rnum(pct(close, bottom)),
+        "currentTradingValueRatio20": rnum(cur.get("TV_RATIO20_EST")),
+        "currentVolumeRatio20": rnum(cur.get("VOL_RATIO20")),
+        "roleEvidenceOnly": True,
+    }
+
+
 def rsi_context(df, cfg):
     """Price-first RSI context: direction and divergence only.
 
@@ -1544,6 +1690,7 @@ def analyze_frame(meta, raw_df, cfg):
         structure_warnings.append("UPPER_REJECTION")
 
     continuation = high_trend_pressure_features(df, cfg)
+    box_ctx = box_structure_context(df, cfg)
     rsi_ctx = rsi_context(df, cfg)
     continuation_liquid = bool(
         pd.notna(avg20_tv)
@@ -1675,6 +1822,7 @@ def analyze_frame(meta, raw_df, cfg):
         "coreRoleState": core_role,
         "structureWarnings": structure_warnings,
         "continuation": continuation,
+        "boxContext": box_ctx,
         "rsiContext": rsi_ctx,
         "distanceToCorePct": rnum(core_distance_now),
         "breakCoreResistance": bool(break_core),
@@ -1978,6 +2126,7 @@ def run(cfg):
                 "core level role-state acceptance rules",
                 "high-trend continuation compression/pressure thresholds",
                 "RSI period/slope/divergence lookbacks and numeric tolerances",
+                "box window/compression/boundary-reaction proxy thresholds",
             ],
         },
         "notes": [
@@ -2128,6 +2277,7 @@ def compact_chart_candidate(x):
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
+        "boxContext": x.get("boxContext"),
         "rsiContext": x.get("rsiContext"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
@@ -2214,6 +2364,7 @@ def compact_ybm_trace(x):
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
+        "boxContext": x.get("boxContext"),
         "rsiContext": x.get("rsiContext"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
