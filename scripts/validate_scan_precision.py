@@ -76,6 +76,9 @@ def main():
                 zone_low = core.get("zoneLow")
                 if zone_low is None or not finite_number(zone_low) or not close_enough(invalidation, zone_low):
                     err(f"core invalidation not traceable to zoneLow: {invalidation} vs {zone_low}")
+                role_state = (row.get("coreRoleState") or {}).get("state")
+                if role_state != "ACCEPTED_SUPPORT":
+                    err(f"core invalidation requires ACCEPTED_SUPPORT role, got={role_state}")
         elif invalidation_source is not None:
             err(f"invalidationSource without invalidation={invalidation_source}")
 
@@ -92,6 +95,11 @@ def main():
             value = hierarchy.get(key)
             if value is not None and (not finite_number(value) or not (0 < float(value) <= close)):
                 err(f"invalid hierarchy {key}={value} close={close}")
+
+        if hierarchy.get("coreSupport") is not None:
+            role_state = (row.get("coreRoleState") or {}).get("state")
+            if role_state != "ACCEPTED_SUPPORT":
+                err(f"coreSupport exposed before role acceptance: role={role_state}")
 
         if rr is not None:
             rr_checked += 1
