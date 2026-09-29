@@ -162,8 +162,9 @@ def discover_trend_bridge(df, cfg):
         before = float(df["Close"].iloc[pause_start-impulse_n])
         impulse_end = float(df["Close"].iloc[pause_start-1])
         impulse = pct(impulse_end, before)
-        if impulse is None or impulse < min_impulse:
+        if impulse is None or abs(float(impulse)) < min_impulse:
             continue
+        direction = "UP" if float(impulse) > 0 else "DOWN"
 
         for plen in range(pause_min, pause_max+1):
             pause_end = pause_start + plen
@@ -178,10 +179,15 @@ def discover_trend_bridge(df, cfg):
                 continue
             bridge_close = float(pause["Close"].iloc[-1])
             after = df.iloc[pause_end:pause_end+resume_n]
-            if float(after["Close"].max()) < bridge_close*(1+resume_pct/100.0):
+            if direction == "UP":
+                resumed = float(after["Close"].max()) >= bridge_close*(1+resume_pct/100.0)
+            else:
+                resumed = float(after["Close"].min()) <= bridge_close*(1-resume_pct/100.0)
+            if not resumed:
                 continue
             latest = {
                 "date": pause.index[-1].strftime("%Y%m%d"),
+                "direction": direction,
                 "close": rnum(bridge_close, 2),
                 "zoneLow": rnum(plo, 2),
                 "zoneHigh": rnum(phi, 2),
@@ -195,11 +201,12 @@ def discover_trend_bridge(df, cfg):
 def bridge_levels(bridge, cfg):
     if not bridge:
         return []
+    direction = bridge.get("direction") or "UP"
     return [
         _level(
             bridge["close"], bridge["zoneLow"], bridge["zoneHigh"],
-            "TREND_BRIDGE",
-            ["IMPULSE", "PAUSE", "SAME_DIRECTION_RESUME"],
+            f"TREND_BRIDGE_{direction}",
+            ["IMPULSE", "PAUSE", "SAME_DIRECTION_RESUME", f"DIRECTION_{direction}"],
             strength=3.0,
             date=bridge["date"],
         )
@@ -301,7 +308,7 @@ def merge_levels(levels, cfg):
         special_kinds = {
             "EVENT_CLOSE", "EVENT_BODY",
             "BOX_UPPER", "BOX_CLOSE", "BOX_LOWER",
-            "TREND_BRIDGE", "TRADE_DENSITY",
+            "TREND_BRIDGE_UP", "TREND_BRIDGE_DOWN", "TRADE_DENSITY",
         }
         importance = "CORE" if (
             any(k in special_kinds for k in kinds)
