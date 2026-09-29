@@ -92,13 +92,13 @@ Implemented Phase 1 rules:
 - the continuation track is deliberately **not** an action-score bonus or automatic briefing trigger;
 - high-distance measurements are supporting evidence only; a simple "within X% of a high" rule is forbidden.
 
-Not yet automated:
-- box compression / spring: IMPLEMENTED as non-action observation proxy only; box window/width is still an implementation inference, not source truth;
-- trend-bridge close/wick levels;
-- spring/reclaim state machine;
-- RSI divergence/strength overlay: IMPLEMENTED as price-first confirmation/warning only; never a discovery/action trigger.
+Still restricted / not promoted to execution:
+- box compression, spring/reclaim and box-breakout retest are implemented only as observable context; they do not create entries, action-score bonuses or briefing promotion;
+- exact box window/width and box-close selection remain implementation proxies rather than source-mandated constants;
+- trend-bridge close/wick levels are not yet automated;
+- RSI divergence/strength is implemented only as price-first confirmation/warning context.
 
-Those concepts remain study-canonical evidence until a generic, non-overfit detection rule and regression fixtures are established.
+Any future promotion from observation to execution requires a generic, non-overfit regression contract first.
 
 ### RSI implementation guardrails
 - RSI uses Wilder-style period 14 by default as an implementation parameter, not a source-mandated constant.
@@ -113,4 +113,4 @@ Those concepts remain study-canonical evidence until a generic, non-overfit dete
 - Box high / low / final close are exposed as evidence; no automatic buy is created from box lower-bound contact.
 - Spring is exposed only as an observed lower-bound breach and reclaim (`SPRING_RECLAIM_TODAY` / `SPRING_NEXT_BAR_RECLAIM`).
 - Box/spring context does not change discovery, actionScore, or briefing eligibility.
-- Post-breakout box-top / box-close execution logic remains unautomated until a generic retest-state regression contract is added.
+- Post-breakout box-top / box-close retest states are now observed (`TOP_RETEST_HELD`, `DEEP_RETEST_CORE_HELD`, `BOX_CORE_FAILURE`), but they remain non-action context until separately validated for execution.
