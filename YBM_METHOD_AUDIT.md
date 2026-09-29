@@ -95,7 +95,7 @@ Implemented Phase 1 rules:
 Still restricted / not promoted to execution:
 - box compression, spring/reclaim and box-breakout retest are implemented only as observable context; they do not create entries, action-score bonuses or briefing promotion;
 - exact box window/width and box-close selection remain implementation proxies rather than source-mandated constants;
-- trend-bridge close/wick levels are not yet automated;
+- trend-bridge close/wick levels are implemented as a non-action proxy requiring impulse -> controlled pause -> same-direction continuation;
 - RSI divergence/strength is implemented only as price-first confirmation/warning context.
 
 Any future promotion from observation to execution requires a generic, non-overfit regression contract first.
@@ -114,3 +114,10 @@ Any future promotion from observation to execution requires a generic, non-overf
 - Spring is exposed only as an observed lower-bound breach and reclaim (`SPRING_RECLAIM_TODAY` / `SPRING_NEXT_BAR_RECLAIM`).
 - Box/spring context does not change discovery, actionScore, or briefing eligibility.
 - Post-breakout box-top / box-close retest states are now observed (`TOP_RETEST_HELD`, `DEEP_RETEST_CORE_HELD`, `BOX_CORE_FAILURE`), but they remain non-action context until separately validated for execution.
+
+### Trend-bridge implementation guardrails
+- A small candle/pause is never important by size alone; it must demonstrably connect two same-direction trend legs.
+- The pause final close is exposed as `bridgeClose`; pause low/high are the wick/context zone.
+- UP bridges are only `SUPPORT_CANDIDATE`; DOWN bridges are only `RESISTANCE_CANDIDATE` until later price behavior validates the role.
+- Impulse size, pause compression and continuation thresholds are implementation inference and remain configurable/auditable.
+- Trend-bridge context does not enter actionScore, qualifiedPool or automatic briefing promotion.
