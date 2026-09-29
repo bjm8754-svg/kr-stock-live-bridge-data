@@ -118,5 +118,16 @@
   "rsiDivergenceLookbackSessions": 60,
   "rsiDivergenceSwingHalfWindow": 3,
   "rsiDivergenceMinPriceDiffPct": 1,
-  "rsiDivergenceMinRsiDiffPoints": 3
+  "rsiDivergenceMinRsiDiffPoints": 3,
+  "boxWindowCandidates": [
+    20,
+    30,
+    40,
+    60
+  ],
+  "boxBoundaryBandFraction": 0.15,
+  "boxMinUpperTouches": 3,
+  "boxMinLowerTouches": 3,
+  "boxMaxRelativeRangeRatio": 0.85,
+  "boxMaxNetDisplacementToRange": 0.6
 }
