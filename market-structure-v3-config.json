@@ -10,7 +10,7 @@
     1000
   ],
   "historyCalendarDays": 3300,
-  "minHistoryRows": 260,
+  "minHistoryRows": 60,
   "maxWorkers": 8,
   "minUniverseCount": 2200,
   "maxErrorRatioForPass": 0.01,
@@ -81,5 +81,6 @@
   "densityTopBins": 4,
   "densityMinSessions": 4,
   "coreLevelMinEvidenceCount": 3,
-  "coreLevelMinStrength": 3
+  "coreLevelMinStrength": 3,
+  "continuationMaxAboveReferencePct": 10
 }
