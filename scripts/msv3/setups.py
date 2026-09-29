@@ -91,8 +91,11 @@ def detect_box_setup(df, box, cfg):
 
 
 def detect_high_trend(df, cfg):
-    if len(df) < 130:
+    base_n = int(cfg.get("continuationBaseLookbackSessions", 20))
+    high_lb = int(cfg.get("continuationHighLookbackSessions", 120))
+    if len(df) < max(130, base_n + 60):
         return None
+
     cur = df.iloc[-1]
     for k in ("MA20", "MA60", "MA120"):
         if pd.isna(cur.get(k)):
@@ -103,13 +106,20 @@ def detect_high_trend(df, cfg):
     if not (close >= ma20 >= ma60 >= ma120):
         return None
 
-    high_lb = int(cfg.get("continuationHighLookbackSessions", 120))
-    base_n = int(cfg.get("continuationBaseLookbackSessions", 20))
-    prior = df.iloc[-high_lb-1:-1]
+    # Reference high is fixed BEFORE the recent base window. This allows the engine to
+    # distinguish first breakout, post-breakout acceptance and a later retest.
+    ref_end = len(df) - base_n
+    ref_start = max(0, ref_end - high_lb)
+    prior = df.iloc[ref_start:ref_end]
     recent = df.iloc[-base_n:]
-    prior_high = float(prior["High"].max())
+    if len(prior) < 20:
+        return None
+
+    reference_high = float(prior["High"].max())
     near_pct = float(cfg.get("continuationNearHighPct", 8.0))
-    if close < prior_high*(1-near_pct/100.0):
+    max_above_pct = float(cfg.get("continuationMaxAboveReferencePct", 10.0))
+    distance_pct = pct(close, reference_high)
+    if distance_pct is None or distance_pct < -near_pct or distance_pct > max_above_pct:
         return None
 
     rlo, rhi = float(recent["Low"].min()), float(recent["High"].max())
@@ -119,8 +129,9 @@ def detect_high_trend(df, cfg):
     compressed = range_pct <= float(cfg.get("continuationMaxBaseRangePct", 14.0))
     edge = max(3, min(5, base_n//4))
     rising_lows = float(recent["Low"].iloc[-edge:].min()) >= float(recent["Low"].iloc[:edge].min())
+
     touch_tol = float(cfg.get("continuationHighPressureTolerancePct", 4.0))/100.0
-    touches = int((recent["High"] >= prior_high*(1-touch_tol)).sum())
+    touches = int((recent["High"] >= reference_high*(1-touch_tol)).sum())
     min_touches = int(cfg.get("continuationMinHighPressureTouches", 3))
 
     money = float(cur.get("TV_RATIO20_EST") or 0)
@@ -130,17 +141,27 @@ def detect_high_trend(df, cfg):
         or vol >= float(cfg.get("continuationBreakoutVolumeRatio20", 1.3))
     )
 
-    if close > prior_high and breakout_money:
-        # If the previous close was already above the old high and today's low revisits it,
-        # treat it as a high-level retest instead of another breakout event.
-        prev = df.iloc[-2]
-        if float(prev["Close"]) > prior_high and float(cur["Low"]) <= prior_high*(1+touch_tol) and close >= prior_high:
-            state = "HIGH_RETEST"
-        else:
-            state = "HIGH_BREAKOUT"
-    elif compressed and rising_lows and touches >= min_touches:
+    prev = df.iloc[-2]
+    prior_recent = recent.iloc[:-1]
+    breakout_seen = bool((prior_recent["Close"] > reference_high).any())
+    first_breakout = bool(
+        close > reference_high
+        and float(prev["Close"]) <= reference_high
+        and breakout_money
+    )
+    retest = bool(
+        breakout_seen
+        and close >= reference_high
+        and float(cur["Low"]) <= reference_high*(1+touch_tol)
+    )
+
+    if retest:
+        state = "HIGH_RETEST"
+    elif first_breakout:
+        state = "HIGH_BREAKOUT"
+    elif close <= reference_high and compressed and rising_lows and touches >= min_touches:
         state = "BREAKOUT_PRESSURE"
-    elif compressed:
+    elif close >= reference_high and compressed:
         state = "HIGH_BASE"
     else:
         return None
@@ -150,16 +171,16 @@ def detect_high_trend(df, cfg):
         state,
         [
             "MA20_GE_MA60_GE_MA120",
+            "REFERENCE_HIGH_BEFORE_RECENT_BASE",
             "HIGH_LEVEL_ACCEPTANCE",
             "COMPRESSED_RANGE" if compressed else "RANGE_NOT_COMPRESSED",
             "RISING_LOWS" if rising_lows else "LOWS_NOT_RISING",
             f"UPPER_TESTS_{touches}",
         ],
-        trigger=prior_high,
+        trigger=reference_high,
         invalidation=float(recent["Low"].min()),
-        source=f"{high_lb}D_HIGH",
+        source=f"{high_lb}D_REFERENCE_HIGH_BEFORE_{base_n}D_BASE",
     )
-
 
 def detect_base_reversal(df, cfg):
     if len(df) < 260:
