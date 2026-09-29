@@ -1068,7 +1068,6 @@ def compute_action_score(x, cfg):
         "RETEST_OK": 22.0,
         "DEOYANGBONG_C_TRIGGER": 20.0,
         "B_PLUS": 12.0,
-        "HIGH_TREND_PRESSURE": 14.0,
         "ABC_CANDIDATE": 8.0,
         "NEW_LISTING_SETUP": 12.0,
         "MA600_BREAKOUT": 8.0,
@@ -1632,10 +1631,9 @@ def is_qualified_candidate(x, cfg):
         return bool(avg_tv >= float(cfg["qualifiedMinAvg20TradingValueKrw"]))
 
     if sig == "HIGH_TREND_PRESSURE":
-        return bool(
-            continuation.get("state") in ("BREAKOUT_PRESSURE", "HIGH_BREAKOUT")
-            and avg_tv >= float(cfg.get("continuationMinAvg20TradingValueKrw", cfg["qualifiedMinAvg20TradingValueKrw"]))
-        )
+        # Continuation is a parallel discovery/radar track. It must not become an
+        # action-score shortcut before an independent execution trigger exists.
+        return False
 
     if sig == "ABC_CANDIDATE":
         return bool(
@@ -1733,7 +1731,7 @@ def run(cfg):
         "NEW_LISTING_SETUP", "MA600_BREAKOUT", "NEAR_MA600", "DATA_WARNING"
     ]
     by_signal = {name: sortit([x for x in cur if x["signal"] == name]) for name in bucket_names}
-    allc = sortit([x for x in cur if x["signal"] != "NONE"])
+    allc = sortit([x for x in cur if x["signal"] != "NONE" or (x.get("structureWarnings") or [])])
     qualified = sortit([x for x in allc if is_qualified_candidate(x, cfg)])
     risk_warnings = sortit([x for x in allc if x.get("signal") == "GADOL_RISK" or (x.get("structureWarnings") or [])])
 
