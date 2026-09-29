@@ -130,5 +130,16 @@
   "boxMinLowerTouches": 3,
   "boxMaxRelativeRangeRatio": 0.85,
   "boxMaxNetDisplacementToRange": 0.6,
-  "boxBreakoutLookbackSessions": 12
+  "boxBreakoutLookbackSessions": 12,
+  "trendBridgeLookbackSessions": 80,
+  "trendBridgeImpulseWindows": [
+    3,
+    5,
+    8
+  ],
+  "trendBridgePauseMaxSessions": 4,
+  "trendBridgeContinuationMaxSessions": 5,
+  "trendBridgeMinImpulsePct": 8,
+  "trendBridgeMaxPauseToImpulseRangeRatio": 0.55,
+  "trendBridgeMinContinuationPct": 2
 }
