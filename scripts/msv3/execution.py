@@ -39,7 +39,7 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
     overhead = []
     for lv in levels or []:
         role = (lv.get("role") or {}).get("state")
-        if role in ("ACCEPTED_SUPPORT", "SUPPORT_CANDIDATE", "SPRING_RECLAIM"):
+        if role in ("ACCEPTED_SUPPORT", "SPRING_RECLAIM"):
             if float(lv["zoneLow"]) < close:
                 accepted_supports.append(lv)
         if float(lv["zoneLow"]) > close and role in (
