@@ -281,6 +281,100 @@ def detect_box_candidate(hist, cfg):
     return candidates[0]
 
 
+def recent_box_breakout_context(df, cfg):
+    """Find the most recent close-confirmed breakout from a pre-existing box proxy.
+
+    The returned retest band is boxHigh -> boxClose, matching the study material's
+    distinction between the former upper resistance and the deeper box-close reference.
+    This remains observation only and does not create an entry signal.
+    """
+    empty = {
+        "detected": False,
+        "state": "NONE",
+        "breakoutDate": None,
+        "retestRangeHigh": None,
+        "retestRangeLow": None,
+        "pullbackTradingValueToBreakout": None,
+        "pullbackVolumeToBreakout": None,
+        "supplyDry": False,
+        "roleEvidenceOnly": True,
+    }
+    if df is None or len(df) < 45:
+        return empty
+
+    lookback = int(cfg.get("boxBreakoutLookbackSessions", 12))
+    start = max(1, len(df) - lookback)
+    found = None
+    for i in range(start, len(df)):
+        hist = df.iloc[:i]
+        box = detect_box_candidate(hist, cfg)
+        if not box:
+            continue
+        top = float(box["boxHigh"])
+        prev_close = float(df["Close"].iloc[i-1])
+        close_i = float(df["Close"].iloc[i])
+        if prev_close <= top and close_i > top:
+            found = (i, box)
+
+    if not found:
+        return empty
+
+    bi, box = found
+    top = float(box["boxHigh"])
+    box_close = float(box["boxClose"])
+    core = min(top, box_close)
+    cur = df.iloc[-1]
+    cur_close = float(cur["Close"])
+    cur_low = float(cur["Low"])
+
+    if len(df) - 1 == bi:
+        state = "BREAKOUT_DAY"
+    elif cur_close < core:
+        state = "BOX_CORE_FAILURE"
+    elif cur_low <= core and cur_close >= core:
+        state = "DEEP_RETEST_CORE_HELD"
+    elif cur_low <= top and cur_close >= top:
+        state = "TOP_RETEST_HELD"
+    elif core <= cur_close <= top:
+        state = "RETEST_ZONE"
+    elif cur_close > top:
+        state = "ABOVE_BREAKOUT"
+    else:
+        state = "NONE"
+
+    breakout_row = df.iloc[bi]
+    breakout_tv = float(breakout_row.get("TV_EST") or 0)
+    breakout_vol = float(breakout_row.get("Volume") or 0)
+    post = df.iloc[bi+1:]
+    pb_tv_ratio = None
+    pb_vol_ratio = None
+    supply_dry = False
+    if len(post):
+        pb_tv = float(post["TV_EST"].max())
+        pb_vol = float(post["Volume"].max())
+        pb_tv_ratio = pb_tv / breakout_tv if breakout_tv > 0 else None
+        pb_vol_ratio = pb_vol / breakout_vol if breakout_vol > 0 else None
+        supply_dry = bool(
+            pb_tv_ratio is not None
+            and pb_vol_ratio is not None
+            and pb_tv_ratio <= float(cfg.get("retestMaxPullbackTradingValueRatio", 0.85))
+            and pb_vol_ratio <= float(cfg.get("retestMaxPullbackVolumeRatio", 0.90))
+        )
+
+    return {
+        "detected": True,
+        "state": state,
+        "breakoutDate": df.index[bi].strftime("%Y%m%d"),
+        "box": box,
+        "retestRangeHigh": rnum(top, 2),
+        "retestRangeLow": rnum(core, 2),
+        "pullbackTradingValueToBreakout": rnum(pb_tv_ratio),
+        "pullbackVolumeToBreakout": rnum(pb_vol_ratio),
+        "supplyDry": supply_dry,
+        "roleEvidenceOnly": True,
+    }
+
+
 def box_structure_context(df, cfg):
     """Current relation to a previously formed box candidate.
 
@@ -292,6 +386,7 @@ def box_structure_context(df, cfg):
         "state": "NONE",
         "springState": "NONE",
         "box": None,
+        "postBreakout": recent_box_breakout_context(df, cfg) if df is not None and len(df) >= 45 else None,
         "roleEvidenceOnly": True,
     }
     if df is None or len(df) < 42:
@@ -333,6 +428,7 @@ def box_structure_context(df, cfg):
         "state": state,
         "springState": spring_state,
         "box": box,
+        "postBreakout": recent_box_breakout_context(df, cfg),
         "currentCloseVsBoxHighPct": rnum(pct(close, top)),
         "currentCloseVsBoxLowPct": rnum(pct(close, bottom)),
         "currentTradingValueRatio20": rnum(cur.get("TV_RATIO20_EST")),
