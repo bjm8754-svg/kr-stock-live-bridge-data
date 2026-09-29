@@ -102,6 +102,9 @@ def main():
         risk=execution.get("riskPct")
         reward=execution.get("rewardPct")
         rr=execution.get("structuralRR")
+        planned_risk=execution.get("plannedRiskPct")
+        planned_reward=execution.get("plannedRewardPct")
+        planned_rr=execution.get("plannedStructuralRR")
         current_vs_entry=execution.get("currentVsEntryPct")
 
         if finite(close) and finite(entry) and float(entry)>0:
@@ -109,25 +112,41 @@ def main():
             if not finite(current_vs_entry) or abs(float(current_vs_entry)-expected_current_vs_entry)>0.06:
                 err(f"currentVsEntryPct inconsistent: {current_vs_entry} vs {expected_current_vs_entry:.4f}")
 
-        if finite(entry) and finite(inv) and float(entry)>0 and float(inv)<float(entry):
-            expected_risk=(float(entry)-float(inv))/float(entry)*100.0
+        if finite(close) and finite(inv) and float(close)>0 and float(inv)<float(close):
+            expected_risk=(float(close)-float(inv))/float(close)*100.0
             if not finite(risk) or abs(float(risk)-expected_risk)>0.06:
-                err(f"riskPct inconsistent with planned entry: {risk} vs {expected_risk:.4f}")
+                err(f"riskPct inconsistent with current price: {risk} vs {expected_risk:.4f}")
         elif risk is not None:
-            err("riskPct emitted without valid entry-above-invalidation geometry")
+            err("riskPct emitted without valid current-price/invalidation geometry")
+
+        if finite(close) and finite(target) and float(close)>0 and float(target)>float(close):
+            expected_reward=(float(target)-float(close))/float(close)*100.0
+            if not finite(reward) or abs(float(reward)-expected_reward)>0.06:
+                err(f"rewardPct inconsistent with current price: {reward} vs {expected_reward:.4f}")
+            if finite(inv) and float(inv)<float(close):
+                expected_rr=(float(target)-float(close))/(float(close)-float(inv))
+                if not finite(rr) or abs(float(rr)-expected_rr)>0.06:
+                    err(f"structuralRR inconsistent with current geometry: {rr} vs {expected_rr:.4f}")
+        elif reward is not None or rr is not None:
+            err("current reward/RR emitted without valid overhead target geometry")
+
+        if finite(entry) and finite(inv) and float(entry)>0 and float(inv)<float(entry):
+            expected_planned_risk=(float(entry)-float(inv))/float(entry)*100.0
+            if not finite(planned_risk) or abs(float(planned_risk)-expected_planned_risk)>0.06:
+                err(f"plannedRiskPct inconsistent: {planned_risk} vs {expected_planned_risk:.4f}")
+        elif planned_risk is not None:
+            err("plannedRiskPct emitted without valid planned-entry/invalidation geometry")
 
         if finite(entry) and finite(target) and float(entry)>0 and float(target)>float(entry):
-            expected_reward=(float(target)-float(entry))/float(entry)*100.0
-            if not finite(reward) or abs(float(reward)-expected_reward)>0.06:
-                err(f"rewardPct inconsistent with planned entry: {reward} vs {expected_reward:.4f}")
-            if finite(risk) and float(risk)>0:
-                # Compare R/R from the unrounded price geometry. riskPct/rewardPct are
-                # rounded display fields and must not be re-used as validator inputs.
-                expected_rr=(float(target)-float(entry))/(float(entry)-float(inv))
-                if not finite(rr) or abs(float(rr)-expected_rr)>0.06:
-                    err(f"structuralRR inconsistent: {rr} vs {expected_rr:.4f}")
-        elif reward is not None or rr is not None:
-            err("reward/RR emitted without valid overhead target geometry")
+            expected_planned_reward=(float(target)-float(entry))/float(entry)*100.0
+            if not finite(planned_reward) or abs(float(planned_reward)-expected_planned_reward)>0.06:
+                err(f"plannedRewardPct inconsistent: {planned_reward} vs {expected_planned_reward:.4f}")
+            if finite(inv) and float(inv)<float(entry):
+                expected_planned_rr=(float(target)-float(entry))/(float(entry)-float(inv))
+                if not finite(planned_rr) or abs(float(planned_rr)-expected_planned_rr)>0.06:
+                    err(f"plannedStructuralRR inconsistent: {planned_rr} vs {expected_planned_rr:.4f}")
+        elif planned_reward is not None or planned_rr is not None:
+            err("planned reward/RR emitted without valid planned target geometry")
 
         if readiness=="EXECUTABLE":
             if not (setups.get("primary")):

@@ -59,25 +59,46 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
 
     reward_target = float(next_resistance["zoneLow"]) if next_resistance else None
 
-    # Structural risk/reward must use the planned entry reference, not today's close.
-    # Current-vs-entry distance is preserved separately so assistant review can judge
-    # whether a valid structure has already become a chase.
-    risk_reference = entry_reference if entry_reference is not None else close
+    # Keep two geometries separate:
+    # 1) current structural R/R decides whether the setup is still actionable now;
+    # 2) planned structural R/R describes the original entry geometry.
+    # This prevents a valid setup from staying "executable" after price has already
+    # moved too far from the planned entry, while preserving the original plan.
     current_vs_entry_pct = pct(close, entry_reference) if entry_reference is not None else None
     valid_plan_invalidation = (
         invalidation is not None
-        and risk_reference is not None
-        and float(invalidation) < float(risk_reference)
+        and entry_reference is not None
+        and float(invalidation) < float(entry_reference)
     )
-    risk_pct = -pct(invalidation, risk_reference) if valid_plan_invalidation else None
+    valid_current_invalidation = (
+        invalidation is not None
+        and float(invalidation) < float(close)
+    )
+
+    risk_pct = -pct(invalidation, close) if valid_current_invalidation else None
     reward_pct = (
-        pct(reward_target, risk_reference)
-        if reward_target is not None and risk_reference is not None and reward_target > risk_reference
+        pct(reward_target, close)
+        if reward_target is not None and reward_target > close
         else None
     )
     rr = None
     if risk_pct is not None and reward_pct is not None and risk_pct > 0 and reward_pct > 0:
         rr = reward_pct / risk_pct
+
+    planned_risk_pct = -pct(invalidation, entry_reference) if valid_plan_invalidation else None
+    planned_reward_pct = (
+        pct(reward_target, entry_reference)
+        if reward_target is not None and entry_reference is not None and reward_target > entry_reference
+        else None
+    )
+    planned_rr = None
+    if (
+        planned_risk_pct is not None
+        and planned_reward_pct is not None
+        and planned_risk_pct > 0
+        and planned_reward_pct > 0
+    ):
+        planned_rr = planned_reward_pct / planned_risk_pct
 
     warnings = list(confirmation.get("warnings") or [])
     for lv in levels or []:
@@ -136,6 +157,9 @@ def build_execution_plan(df, levels, setup_bundle, confirmation, money, cfg):
         "riskPct": rnum(risk_pct, 2),
         "rewardPct": rnum(reward_pct, 2),
         "structuralRR": rnum(rr, 2),
+        "plannedRiskPct": rnum(planned_risk_pct, 2),
+        "plannedRewardPct": rnum(planned_reward_pct, 2),
+        "plannedStructuralRR": rnum(planned_rr, 2),
         "warnings": warnings,
     }
 

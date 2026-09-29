@@ -222,10 +222,14 @@ rr_plan = build_execution_plan(
     accepted_df, [rr_support, rr_resistance], rr_bundle,
     {"warnings":[]}, {"avg20TradingValueEstimated":20_000_000_000}, cfg
 )
-assert abs(rr_plan["riskPct"] - 9.09) < 0.02
-assert abs(rr_plan["rewardPct"] - 13.64) < 0.02
-assert abs(rr_plan["structuralRR"] - 1.50) < 0.02
+assert abs(rr_plan["riskPct"] - 12.28) < 0.02
+assert abs(rr_plan["rewardPct"] - 9.65) < 0.02
+assert abs(rr_plan["structuralRR"] - 0.79) < 0.02
+assert abs(rr_plan["plannedRiskPct"] - 9.09) < 0.02
+assert abs(rr_plan["plannedRewardPct"] - 13.64) < 0.02
+assert abs(rr_plan["plannedStructuralRR"] - 1.50) < 0.02
 assert abs(rr_plan["currentVsEntryPct"] - 3.64) < 0.02
+assert rr_plan["readiness"] == "RADAR"
 
 # A spring reclaim and an accepted breakout are information states, not chase entries.
 pending_money = {"avg20TradingValueEstimated":20_000_000_000}
