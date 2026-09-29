@@ -55,6 +55,11 @@ def main():
         if section=="radar" and readiness!="RADAR":
             err("radar section/readiness mismatch")
 
+        setups=row.get("setups") or {}
+        for setup in setups.get("all") or []:
+            if "maturity" in setup or "score" in setup:
+                err("numeric setup quality field forbidden")
+
         confirmation=row.get("confirmation") or {}
         rsi=confirmation.get("rsi") or {}
         if rsi.get("auto7030Trigger") is not False:
@@ -67,8 +72,22 @@ def main():
             if role not in ALLOWED_ROLE_STATES:
                 err(f"unknown role state={role}")
 
+        nearest=execution.get("nearestAcceptedSupport")
+        if nearest is not None:
+            matched=False
+            for lv in levels:
+                if lv.get("importance") != "CORE":
+                    continue
+                role=(lv.get("role") or {}).get("state")
+                line=lv.get("line")
+                if role in ("ACCEPTED_SUPPORT","SPRING_RECLAIM") and finite(line) and abs(float(line)-float(nearest)) <= max(0.03, abs(float(nearest))*0.0005):
+                    matched=True
+                    break
+            if not matched:
+                err(f"nearestAcceptedSupport not traceable to CORE accepted level: {nearest}")
+
         if readiness=="EXECUTABLE":
-            if not ((row.get("setups") or {}).get("primary")):
+            if not (setups.get("primary")):
                 err("executable without primary setup")
             inv=execution.get("invalidation")
             if inv is None or not finite(inv):
