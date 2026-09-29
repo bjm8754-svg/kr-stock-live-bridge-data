@@ -124,11 +124,11 @@ The scanner's job is **not** to encode every visual/context judgement from the c
 - surface observable price/volume/time evidence,
 - propose structural hypotheses,
 - calculate mechanically traceable reference levels and invalidation candidates,
-- attach a recent OHLCV/RSI trace for deeper review.
+- attach bounded **daily + weekly + monthly** price/participation traces for deeper review.
 
 Every surfaced candidate carries `assistantReviewRequired=true`. A bounded `deepReviewQueue` is selected with family diversity so one easily-detected pattern cannot dominate the review set.
 
-The later assistant review layer owns the higher-order judgements that are fragile when hard-coded:
+The later assistant review layer receives multiple timeframes so it does not overfit to a short crop. It owns the higher-order judgements that are fragile when hard-coded:
 
 - whether the detected box/bridge is genuinely meaningful in full context,
 - whether the important price is actually the dominant market reference,
