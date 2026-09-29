@@ -121,7 +121,9 @@ def main():
             if not finite(reward) or abs(float(reward)-expected_reward)>0.06:
                 err(f"rewardPct inconsistent with planned entry: {reward} vs {expected_reward:.4f}")
             if finite(risk) and float(risk)>0:
-                expected_rr=expected_reward/float(risk)
+                # Compare R/R from the unrounded price geometry. riskPct/rewardPct are
+                # rounded display fields and must not be re-used as validator inputs.
+                expected_rr=(float(target)-float(entry))/(float(entry)-float(inv))
                 if not finite(rr) or abs(float(rr)-expected_rr)>0.06:
                     err(f"structuralRR inconsistent: {rr} vs {expected_rr:.4f}")
         elif reward is not None or rr is not None:
