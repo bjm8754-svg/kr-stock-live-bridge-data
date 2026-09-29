@@ -111,5 +111,12 @@
   "continuationMinHighPressureTouches": 3,
   "continuationBreakoutTurnoverRatio20": 1.3,
   "continuationBreakoutVolumeRatio20": 1.3,
-  "continuationMinAvg20TradingValueKrw": 10000000000
+  "continuationMinAvg20TradingValueKrw": 10000000000,
+  "rsiPeriod": 14,
+  "rsiSlopeSessions": 5,
+  "rsiSlopeMeaningfulPoints": 2,
+  "rsiDivergenceLookbackSessions": 60,
+  "rsiDivergenceSwingHalfWindow": 3,
+  "rsiDivergenceMinPriceDiffPct": 1,
+  "rsiDivergenceMinRsiDiffPoints": 3
 }
