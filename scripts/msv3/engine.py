@@ -95,6 +95,11 @@ def analyze_frame(meta, raw_df, cfg):
     confirmation = confirmation_context(df, money, rsi, setups.get("primary"), cfg)
     execution = build_execution_plan(df, roles, setups, confirmation, money, cfg)
 
+    review_trace_needed = bool(setups.get("primary")) and (
+        float(money.get("avg20TradingValueEstimated") or 0)
+        >= float(cfg.get("minAvg20TradingValueKrw", 10_000_000_000))
+    ) and execution.get("readiness") != "REJECT"
+
     review = build_review_context(
         df,
         {"box": box, "trendBridge": bridge, "levels": roles},
@@ -102,6 +107,7 @@ def analyze_frame(meta, raw_df, cfg):
         confirmation,
         execution,
         cfg,
+        include_trace=review_trace_needed,
     )
 
     ma = {}
