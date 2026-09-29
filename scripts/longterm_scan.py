@@ -2351,6 +2351,45 @@ def compact_money(money):
     }
 
 
+def compact_box_context(ctx):
+    if not isinstance(ctx, dict):
+        return None
+    box = ctx.get("box") if isinstance(ctx.get("box"), dict) else None
+    post = ctx.get("postBreakout") if isinstance(ctx.get("postBreakout"), dict) else None
+    compact_box = None
+    if box:
+        compact_box = {
+            "windowSessions": box.get("windowSessions"),
+            "boxHigh": box.get("boxHigh"),
+            "boxClose": box.get("boxClose"),
+            "boxLow": box.get("boxLow"),
+            "upperTouches": box.get("upperTouches"),
+            "lowerTouches": box.get("lowerTouches"),
+            "relativeRangeToPriorWindow": box.get("relativeRangeToPriorWindow"),
+            "algorithmicProxy": box.get("algorithmicProxy"),
+        }
+    compact_post = None
+    if post:
+        compact_post = {
+            "detected": post.get("detected"),
+            "state": post.get("state"),
+            "breakoutDate": post.get("breakoutDate"),
+            "retestRangeHigh": post.get("retestRangeHigh"),
+            "retestRangeLow": post.get("retestRangeLow"),
+            "pullbackTradingValueToBreakout": post.get("pullbackTradingValueToBreakout"),
+            "pullbackVolumeToBreakout": post.get("pullbackVolumeToBreakout"),
+            "supplyDry": post.get("supplyDry"),
+        }
+    return {
+        "detected": ctx.get("detected"),
+        "state": ctx.get("state"),
+        "springState": ctx.get("springState"),
+        "box": compact_box,
+        "postBreakout": compact_post,
+        "roleEvidenceOnly": True,
+    }
+
+
 def compact_chart_candidate(x):
     """Durable chart-first handoff.
 
@@ -2381,9 +2420,10 @@ def compact_chart_candidate(x):
         "setupCoreResistance": compact_core(x.get("coreResistance")),
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
-        "continuation": x.get("continuation"),
-        "boxContext": x.get("boxContext"),
-        "rsiContext": x.get("rsiContext"),
+        "continuationState": (x.get("continuation") or {}).get("state"),
+        "boxState": (x.get("boxContext") or {}).get("state"),
+        "springState": (x.get("boxContext") or {}).get("springState"),
+        "rsiDivergence": (x.get("rsiContext") or {}).get("divergence"),
         "distanceToCorePct": x.get("distanceToCorePct"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
@@ -2469,7 +2509,7 @@ def compact_ybm_trace(x):
         "coreRoleState": x.get("coreRoleState"),
         "structureWarnings": x.get("structureWarnings"),
         "continuation": x.get("continuation"),
-        "boxContext": x.get("boxContext"),
+        "boxContext": compact_box_context(x.get("boxContext")),
         "rsiContext": x.get("rsiContext"),
         "breakCoreResistance": x.get("breakCoreResistance"),
         "breakoutClass": x.get("breakoutClass"),
