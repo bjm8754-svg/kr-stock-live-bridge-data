@@ -10,6 +10,7 @@ from msv3.execution import build_execution_plan
 from msv3.features import add_indicators, rsi_context
 from msv3.levels import attach_roles, classify_role, discover_trend_bridge, merge_levels
 from msv3.setups import detect_box_setup, detect_high_trend, detect_bridge_setup, detect_level_retest
+from msv3.review import build_review_context, select_deep_review_queue
 
 ROOT = Path(__file__).resolve().parents[1]
 cfg = json.loads((ROOT / "market-structure-v3-config.json").read_text(encoding="utf-8"))
@@ -211,6 +212,26 @@ assert out["schemaVersion"] == "MARKET_STRUCTURE_V3"
 assert "score" not in out
 assert "actionScore" not in out
 assert out["confirmation"]["rsi"]["auto7030Trigger"] is False
+assert out["review"]["assistantReviewRequired"] is True
+assert out["review"]["machineScope"] == "PREFILTER_AND_EVIDENCE_ONLY"
+assert len(out["review"]["chartTrace"]) <= cfg["reviewTraceSessions"]
+assert out["review"]["traceSchema"] == ["date","open","high","low","close","volumeRatio20","tradingValueRatio20","rsi"]
+
+# Machine output may propose structure, but every surfaced candidate still requires
+# assistant deep review; the scanner is not the final chart-judgement authority.
+review_rows = []
+for i, family in enumerate(("BOX_BREAKOUT","HIGH_TREND_CONTINUATION","ROLE_REVERSAL","SPRING")):
+    row = {
+        "code": f"SYNTH_{i}",
+        "money": {"avg20TradingValueEstimated": 20_000_000_000 + i},
+        "execution": {"readiness": "WATCH_TRIGGER", "structuralRR": 2.0},
+        "setups": {"primary": {"family": family, "state": "BOX_BREAKOUT_PENDING"}, "all": []},
+        "review": {"assistantReviewRequired": True},
+    }
+    review_rows.append(row)
+queue = select_deep_review_queue(review_rows, {**cfg, "maxDeepReviewCandidates": 3, "maxDeepReviewPerFamily": 1})
+assert len(queue) == 3
+assert all((x.get("review") or {}).get("assistantReviewRequired") is True for x in queue)
 
 # Shorter-history listings are analyzable without a separate legacy/new-listing doctrine.
 short_cfg = dict(cfg)
