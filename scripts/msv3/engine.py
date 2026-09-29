@@ -218,7 +218,6 @@ def build_output(rows, errors, cfg, generated_at_kst):
             "questions": review.get("questions"),
         }
         if include_review_trace:
-            review_out["traceSchema"] = review.get("traceSchema")
             review_out["chartTrace"] = review.get("chartTrace")
 
         return {
