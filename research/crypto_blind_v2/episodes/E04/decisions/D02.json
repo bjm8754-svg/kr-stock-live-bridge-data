@@ -1,0 +1,13 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":2,
+  "relativeDay":10,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":35,"stop":111.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":20,"stop":111.0},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":100.0}
+  ],
+  "cashPct":30,
+  "rationale":"ETH has continued to expand while remaining above the 20-, 50- and 100-day structures, and the prior attack has produced a large account gain. RSI near 70 is elevated but not sufficient to override a functioning trend. Increase the ETH 2x sleeve from 10% to 20%, keep ETH spot at 35%, and retain a smaller BTC spot sleeve while BTC remains below its 100-day line. Raise invalidation to 111 for ETH and 100 for BTC to protect the accumulated gain."
+}
