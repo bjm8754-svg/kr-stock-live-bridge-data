@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":6,
+  "relativeDay":30,
+  "verdict":"REENTER_PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":88.8}
+  ],
+  "cashPct":75,
+  "rationale":"BTC has spent multiple days compressing after the washout, volatility has contracted sharply, and price has reclaimed the 20-day mean with improving closes. That is materially better evidence than the earlier failed probes. It still sits below the 50-day and overhead supply, so keep this as spot-only probe exposure. ETH remains below its key medium-term structure and stays at zero."
+}
