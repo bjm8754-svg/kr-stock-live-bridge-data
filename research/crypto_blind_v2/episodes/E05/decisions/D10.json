@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":10,
+  "relativeDay":50,
+  "verdict":"HOLD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":120.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":120.5}
+  ],
+  "cashPct":60,
+  "rationale":"After the vertical breakout BTC has spent five days holding 124-130 rather than giving the move back, while RSI has cooled from the extreme without price damage. This is constructive time-based digestion, not a clear exit signal. Keep 30% BTC spot and 10% daily-2x unchanged, do not add into the still-extended price, and raise invalidation to 120.5 beneath the post-breakout acceptance zone."
+}
