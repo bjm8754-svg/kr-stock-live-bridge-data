@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":21,
+  "relativeDay":105,
+  "verdict":"EXIT_TO_CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Neither probe reached its structural stop, but the expected confirmation did not follow through. BTC has slipped back below its 20-day mean and ETH failed to hold above its 50-day reference after the rebound. The thesis has weakened before hard invalidation, so exit proactively rather than wait for full stop losses."
+}
