@@ -1,0 +1,13 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":17,
+  "relativeDay":85,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":30,"stop":85.5},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":85.5},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":10,"stop":84.0}
+  ],
+  "cashPct":50,
+  "rationale":"The ETH-only probe produced a strong follow-through: ETH has reclaimed the 20- and 50-day structures with large participation and is testing the 100-day area, while BTC has also recovered its 20/50-day cluster. Scale after confirmation rather than on the first reclaim. Concentrate exposure in the stronger ETH setup, add only a modest 2x sleeve, keep BTC as a smaller confirming spot sleeve, and retain 50% cash because major higher-timeframe resistance remains nearby."
+}
