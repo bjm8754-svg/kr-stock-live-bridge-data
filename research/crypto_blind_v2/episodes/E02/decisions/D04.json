@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":4,
+  "relativeDay":20,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":112.5},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":25,"stop":105.5}
+  ],
+  "cashPct":50,
+  "rationale":"The violent reclaim has now persisted for another five days and both assets have confirmed higher-high continuation above the reclaimed moving-average structure. This is no longer just a one-day reversal. Deploy moderate spot exposure, but do not use 2x because BTC in particular is materially extended from its 20/50-day structure. Use the newest breakout shelf/recent support as a tight invalidation rather than a distant moving-average stop."
+}
