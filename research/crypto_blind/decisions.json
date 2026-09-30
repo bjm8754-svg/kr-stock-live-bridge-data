@@ -1,16 +1,8 @@
 {
-  "schema": "CRYPTO_BLIND_TRADER_DECISIONS_V1",
-  "initialCapitalKrw": 10000000,
-  "rules": {
-    "futureVisibleAtDecision": false,
-    "entry": "next_utc_daily_open",
-    "maxHoldDays": 30,
-    "rebalanceAtNextCase": true,
-    "allowedVehicles": ["SPOT", "DAILY_2X"],
-    "noMarginBorrowing": true,
-    "daily2xOnlyWhenExplicit": true
-  },
-  "decisions": [
+  "schema":"CRYPTO_BLIND_TRADER_DECISIONS_V1",
+  "initialCapitalKrw":10000000,
+  "rules":{"futureVisibleAtDecision":false,"entry":"next_utc_daily_open","maxHoldDays":30,"rebalanceAtNextCase":true,"allowedVehicles":["SPOT","DAILY_2X"],"noMarginBorrowing":true,"daily2xOnlyWhenExplicit":true},
+  "decisions":[
     {"caseId":"C01","cutoff":"2020-02-15","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9050}],"cashPct":70,"verdict":"PROBE","rationale":"BTC uptrend is intact above rising 20/50-day structure, but the 10.5k rejection makes a full-size chase unattractive. ETH is substantially more extended with RSI near 80 and a sharp rejection candle, so no ETH entry."},
     {"caseId":"C02","cutoff":"2020-07-27","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9650},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":278}],"cashPct":60,"verdict":"PROBE","rationale":"Both assets broke multi-week ranges with strong participation, but RSI near 90 and large distance from the 20-day mean make a full attack a chase. BTC gets the larger probe because its breakout is less vertically extended than ETH."},
     {"caseId":"C03","cutoff":"2020-08-05","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":50,"stop":10480},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":348}],"cashPct":40,"verdict":"ATTACK_CANDIDATE","rationale":"BTC has held the July breakout and reconstructed above 11k after the 12.1k rejection, improving the structure enough to increase size. ETH remains much more stretched, so it stays a small satellite position. No 2x exposure because both are still extended."},
@@ -20,6 +12,11 @@
     {"caseId":"C07","cutoff":"2021-11-09","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":59350},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":4140}],"cashPct":45,"verdict":"ATTACK_CANDIDATE","rationale":"Both assets are in confirmed higher-high/higher-low trends with RSI below extreme levels and fresh price discovery. Location is still near the top of the range, so the position is meaningful but not full-size and no 2x product is used."},
     {"caseId":"C08","cutoff":"2022-02-06","portfolio":[],"cashPct":100,"verdict":"REJECT","rationale":"BTC and ETH have produced sharp rebounds from January lows, but both remain below falling 50/100-day structures while short RSI is already in the mid-to-high 70s. This is a poor place to chase a possible bear-market rally."},
     {"caseId":"C09","cutoff":"2022-07-01","portfolio":[],"cashPct":100,"verdict":"REJECT","rationale":"Both assets remain deeply below all medium-term reference averages with lower highs and lower lows. Being close to the range low alone is not a long signal; there is no accepted reversal structure yet."},
-    {"caseId":"C10","cutoff":"2022-12-01","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":15400},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":1065}],"cashPct":70,"verdict":"PROBE","rationale":"After the capitulation leg, both assets are stabilizing and have reclaimed their 20-day means, but they remain below the 50/100-day structures. That supports only a small bottoming probe with cash dominant and no 2x exposure."}
+    {"caseId":"C10","cutoff":"2022-12-01","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":15400},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":1065}],"cashPct":70,"verdict":"PROBE","rationale":"After the capitulation leg, both assets are stabilizing and have reclaimed their 20-day means, but they remain below the 50/100-day structures. That supports only a small bottoming probe with cash dominant and no 2x exposure."},
+    {"caseId":"C11","cutoff":"2023-01-10","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":16250},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":1175}],"cashPct":65,"verdict":"PROBE","rationale":"Both assets are emerging from compressed bases and reclaiming 20/50-day references with improving participation, but RSI is already high and price is near short-range highs. Small spot exposure only."},
+    {"caseId":"C12","cutoff":"2023-07-13","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":40,"stop":29400},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":1810}],"cashPct":45,"verdict":"ATTACK_CANDIDATE","rationale":"BTC and ETH are both above rising short and medium references with fresh high-volume breakout attempts. BTC has cleaner relative strength and gets the larger weight; location near range highs keeps the portfolio below full attack and avoids 2x."},
+    {"caseId":"C13","cutoff":"2023-10-19","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":26450}],"cashPct":65,"verdict":"PROBE","rationale":"BTC shows clear relative strength, reclaimed 20/50-day structure and recently tested 30k, while ETH remains below its key averages near the bottom of its range. BTC merits a probe, but resistance near 30k prevents aggressive sizing or 2x exposure."},
+    {"caseId":"C14","cutoff":"2023-11-14","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":33800},{"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":33800},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":1775}],"cashPct":35,"verdict":"ATTACK_CANDIDATE","rationale":"The broader uptrend is established and both assets have pulled back toward rising short-term structure after recent breakouts, resetting momentum without breaking the trend. This is the first setup strong enough for a small 2x BTC sleeve, capped at 10% of capital."},
+    {"caseId":"C15","cutoff":"2024-03-30","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":40,"stop":60400},{"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":60400},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":3040}],"cashPct":35,"verdict":"ATTACK_CANDIDATE","rationale":"BTC remains in a strong higher-timeframe trend after an ATH rejection and successful recovery from the 60k area, with RSI reset near neutral. ETH is weaker and below its 20-day mean, so it is smaller. A 10% 2x BTC sleeve is allowed, but total capital remains partially in cash due to high volatility."}
   ]
 }
