@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":16,
+  "relativeDay":80,
+  "verdict":"CASH_NO_CHASE",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"ETH has become the clear relative-strength leader with a high-participation breakout through its 20/50-day structure, but the move is vertically extended, RSI is above 90 and the 100-day reference is immediately overhead. Chasing here offers poor asymmetry. BTC remains below its key cluster. Stay in cash and wait for ETH to either accept above the higher reference or retest the breakout constructively."
+}
