@@ -1,0 +1,56 @@
+name: V3 Shadow Live Capture
+
+on:
+  workflow_dispatch:
+    inputs:
+      trade_date:
+        description: "KRX trade date YYYYMMDD"
+        required: true
+        type: string
+      codes:
+        description: "comma-separated V3 shadow candidate codes"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Capture read-only shadow minute path
+        run: |
+          python scripts/v3_shadow_live_capture.py \
+            --trade-date "${{ inputs.trade_date }}" \
+            --codes "${{ inputs.codes }}" \
+            --output /tmp/v3-shadow-live.json
+
+      - name: Validate production isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(jq -r '.status' /tmp/v3-shadow-live.json)" = "PASS"
+          test "$(jq -r '.schemaVersion' /tmp/v3-shadow-live.json)" = "V3_SHADOW_LIVE_CAPTURE_V1"
+          test "$(jq -r '.mode' /tmp/v3-shadow-live.json)" = "SHADOW_ONLY"
+          test "$(jq -r '.productionWriteAllowed' /tmp/v3-shadow-live.json)" = "false"
+          test "$(jq -r '.history.count' /tmp/v3-shadow-live.json)" = "41"
+          test "$(jq -r '.history.from' /tmp/v3-shadow-live.json)" = "${{ inputs.trade_date }} 0900"
+          test "$(jq -r '.history.to' /tmp/v3-shadow-live.json)" = "${{ inputs.trade_date }} 0940"
+          git diff --exit-code -- watchlist.json live.json live-health.json
+
+      - name: Upload shadow evidence only
+        uses: actions/upload-artifact@v7
+        with:
+          name: v3-shadow-live-${{ inputs.trade_date }}-${{ github.run_id }}
+          path: /tmp/v3-shadow-live.json
+          retention-days: 7
+          if-no-files-found: error
+          compression-level: 9
