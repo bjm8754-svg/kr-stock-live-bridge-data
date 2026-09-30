@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":12,
+  "relativeDay":60,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC has broken beneath the 20/50/100-day cluster and is sitting near the bottom of its 20/60-day ranges without a reclaim. ETH is making another structural low and remains below all trend references. There is no accepted reversal to buy; stay fully in cash."
+}
