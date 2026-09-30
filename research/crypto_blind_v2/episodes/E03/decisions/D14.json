@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":14,
+  "relativeDay":70,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":130.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":25,"stop":130.0}
+  ],
+  "cashPct":40,
+  "rationale":"BTC has broken to another high with strong acceptance and the existing attack position has generated a large account gain. Do not pyramid further after the fresh expansion; the effective exposure is already substantial. Keep the 35% spot and 25% daily-2x sleeves, but raise the common stop aggressively to 130.0, below the newest breakout zone, so a failed continuation cannot give back the bulk of the accumulated gain. ETH is also strong but remains highly correlated, so no additional correlated sleeve is added."
+}
