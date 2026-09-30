@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":23,
+  "relativeDay":115,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":130.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":130.0}
+  ],
+  "cashPct":50,
+  "rationale":"The BTC probe has now spent multiple sessions accepting around and above the 20/50-day cluster, then pushed back toward the top of the recent range. The existing 30% spot sleeve has produced a positive interval and the confirmation is stronger than at entry. Scale from probe to attack with 35% spot plus a 15% daily-2x sleeve, keeping 50% cash because the 136 area has not yet been decisively cleared. Raise invalidation to 130.0 beneath the reclaimed moving-average cluster. ETH has also improved, but correlated exposure is concentrated in the stronger BTC setup rather than duplicated."
+}
