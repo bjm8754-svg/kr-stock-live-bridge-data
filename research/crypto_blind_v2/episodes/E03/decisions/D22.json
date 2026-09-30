@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":22,
+  "relativeDay":110,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":126.0}
+  ],
+  "cashPct":70,
+  "rationale":"The BTC reclaim probe has neither confirmed nor failed. Price is sitting around the 20-day line and just below the 50-day line after several sessions of holding the reclaimed area. Keep the 30% spot probe, but do not add leverage until price decisively clears and accepts above the intermediate resistance. Raise the stop from 124.0 to 126.0 to reduce downside if the range resolves lower. ETH remains below both its 20- and 50-day structures and is excluded."
+}
