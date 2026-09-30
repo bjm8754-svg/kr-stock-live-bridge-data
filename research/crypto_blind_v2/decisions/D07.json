@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":7,
+  "relativeDay":35,
+  "verdict":"REDUCE_PROTECT",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":99.5}
+  ],
+  "cashPct":80,
+  "rationale":"BTC successfully reclaimed the 20/50-day structure and the probe is profitable, but the move is now short-term overbought and the latest high-volume candle rejected sharply from the local high. Do not convert a good probe into a chase. Take some risk off and raise invalidation to the reclaimed breakout/50-day area. ETH is improving but remains below its medium-term structure, so no rotation yet."
+}
