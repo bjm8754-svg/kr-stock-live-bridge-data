@@ -8,8 +8,10 @@ on:
       - "scripts/msv3/**"
       - "scripts/market_structure_v3.py"
       - "scripts/test_market_structure_v3.py"
+      - "scripts/test_market_structure_v3_freshness.py"
       - "scripts/validate_market_structure_v3.py"
       - "scripts/validate_market_structure_v3_review_packet.py"
+      - "scripts/validate_market_structure_v3_freshness.py"
       - "market-structure-v3-config.json"
       - ".github/workflows/market-structure-v3-shadow.yml"
   schedule:
@@ -40,6 +42,9 @@ jobs:
 
       - name: Run generic V3 regression suite
         run: python scripts/test_market_structure_v3.py
+
+      - name: Run V3 freshness semantic tests
+        run: python scripts/test_market_structure_v3_freshness.py
 
       - name: Run full-market V3 shadow scan
         run: |
@@ -72,7 +77,6 @@ jobs:
           MIN_UNIVERSE=$(jq -r '.minUniverseCount // 2200' market-structure-v3-config.json)
           MAX_CAND=$(jq -r '.maxCandidateRatioForPass // 0.30' market-structure-v3-config.json)
           MAX_REVIEW=$(jq -r '.maxDeepReviewCandidates // 36' market-structure-v3-config.json)
-          KST_TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
           KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
 
           echo "status=$STATUS schema=$SCHEMA tradeDate=$TRADE_DATE processed=$PROCESSED current=$CUR candidateRatio=$CAND_RATIO reviewCount=$REVIEW_COUNT"
@@ -82,7 +86,7 @@ jobs:
           [ "$REVIEW_COUNT" -le "$MAX_REVIEW" ]
           awk -v a="$CAND_RATIO" -v b="$MAX_CAND" 'BEGIN { exit !(a <= b) }'
 
-          # Push-triggered runs during market hours are functional shadow tests only.
+          # Push-triggered runs before the completed-daily cutoff are functional tests only.
           if [ "$KST_HHMM" -lt 1540 ]; then
             echo "pre-close shadow validation passed; skip canonical V3 commit"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
@@ -90,12 +94,13 @@ jobs:
             exit 0
           fi
 
-          if [ "$TRADE_DATE" != "$KST_TODAY" ]; then
-            echo "holiday/stale daily bar; skip V3 canonical commit"
-            echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
-            git checkout -- market-structure-v3.json 2>/dev/null || rm -f market-structure-v3.json
-            exit 0
-          fi
+          # Calendar today is not the freshness authority. A run after midnight may
+          # legitimately represent the prior KRX session. Resolve the latest completed
+          # KRX session from independent reference candles and fail closed on mismatch.
+          python scripts/validate_market_structure_v3_freshness.py \
+            --scan market-structure-v3.json \
+            --output /tmp/market-structure-v3-health.json \
+            --strict
 
           [ "$STATUS" = "PASS" ]
 
@@ -107,6 +112,7 @@ jobs:
           path: |
             /tmp/market-structure-v3-full.json
             /tmp/market-structure-v3-review.json
+            /tmp/market-structure-v3-health.json
           if-no-files-found: ignore
           retention-days: 7
           compression-level: 9
