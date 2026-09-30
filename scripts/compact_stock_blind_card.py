@@ -144,3 +144,5 @@ for x in candidates + held:
     (detail_dir / f'{aid}.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 print(json.dumps({'status':'PASS','matrix':str(matrix_path),'candidates':len(candidates),'held':len(held)}, ensure_ascii=False))
+
+# refresh marker: S01 step 2
