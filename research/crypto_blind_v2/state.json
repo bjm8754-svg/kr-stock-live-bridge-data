@@ -3,22 +3,22 @@
   "episodeId": "E01_LEGACY",
   "step": 24,
   "relativeDay": 120,
-  "episodeCommitment": "7375bcbb35aa1930c49658f04e1d3705217c4574af3d0efa4deafe73ecabb339",
-  "equityKrw": 11791546.15,
-  "returnPct": 17.915,
-  "maxDrawdownPct": -1.836,
+  "episodeCommitment": "96bddff1bd1ad03b8617a9c23f11c92b9077eab4c59ae64b1f7357b14eec4c3e",
+  "equityKrw": 9295460.77,
+  "returnPct": -7.045,
+  "maxDrawdownPct": -10.303,
   "previousInterval": {
     "step": 23,
-    "startEquity": 11852319.77,
-    "endEquity": 11791546.15,
-    "returnPct": -0.513,
+    "startEquity": 9121095.28,
+    "endEquity": 9295460.77,
+    "returnPct": 1.912,
     "sleeves": [
       {
         "symbol": "BTCUSDT",
         "vehicle": "SPOT",
         "capitalPct": 30,
-        "startValue": 3555695.93,
-        "endValue": 3520959.49,
+        "startValue": 2736328.58,
+        "endValue": 2894311.28,
         "stopped": false,
         "stopDay": null
       },
@@ -26,8 +26,8 @@
         "symbol": "ETHUSDT",
         "vehicle": "SPOT",
         "capitalPct": 20,
-        "startValue": 2370463.95,
-        "endValue": 2344426.78,
+        "startValue": 1824219.06,
+        "endValue": 1840601.85,
         "stopped": false,
         "stopDay": null
       }
