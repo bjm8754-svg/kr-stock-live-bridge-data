@@ -1,0 +1,18 @@
+{
+  "schema": "KOREA_STOCK_BLIND_STATE",
+  "episodeId": "S01",
+  "step": 0,
+  "relativeSession": 0,
+  "episodeCommitment": "44ce19851a24e12c32d6927a904af623f231f903a22d81bf5b18de26724fb4b5",
+  "equityKrw": 10000000.0,
+  "returnPct": 0.0,
+  "maxDrawdownPct": 0.0,
+  "cashKrw": 10000000.0,
+  "cashPct": 100.0,
+  "turnoverKrw": 0.0,
+  "transactionCostKrw": 0.0,
+  "positions": [],
+  "previousInterval": null,
+  "decisionsLocked": 0,
+  "futureIncluded": false
+}
