@@ -1,42 +1,48 @@
 {
   "schema": "KOREA_STOCK_BLIND_STATE",
   "episodeId": "S01",
-  "step": 3,
-  "relativeSession": 9,
+  "step": 4,
+  "relativeSession": 12,
   "episodeCommitment": "44ce19851a24e12c32d6927a904af623f231f903a22d81bf5b18de26724fb4b5",
-  "equityKrw": 9854767.78,
-  "returnPct": -1.452,
-  "maxDrawdownPct": -2.736,
-  "cashKrw": 6783840.43,
-  "cashPct": 68.84,
-  "turnoverKrw": 16507107.09,
-  "transactionCostKrw": 18235.44,
+  "equityKrw": 10059497.28,
+  "returnPct": 0.595,
+  "maxDrawdownPct": -2.902,
+  "cashKrw": 6352252.87,
+  "cashPct": 63.15,
+  "turnoverKrw": 20021499.0,
+  "transactionCostKrw": 22307.79,
   "positions": [
     {
-      "assetId": "A0E433D981",
-      "marketValueKrw": 3070927.35,
-      "capitalPct": 31.16,
-      "avgEntry": 81446.14,
-      "currentPrice": 85800.0,
-      "unrealizedPct": 5.35,
-      "stop": 79800,
+      "assetId": "A91ECD3412",
+      "marketValueKrw": 2169073.67,
+      "capitalPct": 21.56,
+      "avgEntry": 17318.65,
+      "currentPrice": 19050.0,
+      "unrealizedPct": 10.0,
+      "stop": 15450,
       "target": null,
-      "lastAction": "ADD"
+      "lastAction": "ENTER"
+    },
+    {
+      "assetId": "A0E433D981",
+      "marketValueKrw": 1538170.75,
+      "capitalPct": 15.29,
+      "avgEntry": 81446.14,
+      "currentPrice": 86400.0,
+      "unrealizedPct": 6.08,
+      "stop": 74500,
+      "target": null,
+      "lastAction": "REDUCE"
     }
   ],
   "previousInterval": {
-    "step": 2,
-    "startEquityKrw": 9854646.44,
-    "postTradeEquityKrw": 9853934.84,
-    "endEquityKrw": 9854767.78,
-    "returnPct": 0.001,
-    "stopped": [
-      {
-        "assetId": "A6D0F8C842",
-        "exitPrice": 334000.0
-      }
-    ]
+    "step": 3,
+    "startEquityKrw": 9854767.78,
+    "postTradeEquityKrw": 9850695.43,
+    "endEquityKrw": 10059497.28,
+    "returnPct": 2.077,
+    "stopped": []
   },
-  "decisionsLocked": 3,
+  "decisionsLocked": 4,
   "futureIncluded": false
 }
