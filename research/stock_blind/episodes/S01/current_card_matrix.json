@@ -1,5 +1,5 @@
 {
-  "schema": "KOREA_STOCK_BLIND_DECISION_TABLE",
+  "schema": "KOREA_STOCK_BLIND_MATRIX",
   "episodeId": "S01",
   "step": 1,
   "relativeSession": 3,
@@ -105,8 +105,7 @@
           1.08,
           73.44
         ]
-      ],
-      "detailFile": "current_details/AA3AC07C28.json"
+      ]
     },
     {
       "assetId": "A4DC61F478",
@@ -167,8 +166,7 @@
           0.41,
           50.66
         ]
-      ],
-      "detailFile": "current_details/A4DC61F478.json"
+      ]
     },
     {
       "assetId": "A6D93653CB",
@@ -229,8 +227,7 @@
           0.34,
           52.88
         ]
-      ],
-      "detailFile": "current_details/A6D93653CB.json"
+      ]
     },
     {
       "assetId": "A6D0F8C842",
@@ -290,8 +287,7 @@
           1.83,
           69.91
         ]
-      ],
-      "detailFile": "current_details/A6D0F8C842.json"
+      ]
     },
     {
       "assetId": "AC4007E7C1",
@@ -349,8 +345,7 @@
           0.29,
           34.57
         ]
-      ],
-      "detailFile": "current_details/AC4007E7C1.json"
+      ]
     },
     {
       "assetId": "AA2E69ADEF",
@@ -408,8 +403,7 @@
           0.71,
           41.68
         ]
-      ],
-      "detailFile": "current_details/AA2E69ADEF.json"
+      ]
     },
     {
       "assetId": "A92378724D",
@@ -469,8 +463,7 @@
           1.2,
           58.37
         ]
-      ],
-      "detailFile": "current_details/A92378724D.json"
+      ]
     },
     {
       "assetId": "A246A4E2F0",
@@ -528,8 +521,7 @@
           0.13,
           44.56
         ]
-      ],
-      "detailFile": "current_details/A246A4E2F0.json"
+      ]
     },
     {
       "assetId": "A6CF201569",
@@ -589,8 +581,7 @@
           0.54,
           45.89
         ]
-      ],
-      "detailFile": "current_details/A6CF201569.json"
+      ]
     },
     {
       "assetId": "AB2A31134F",
@@ -648,8 +639,7 @@
           0.6,
           68.53
         ]
-      ],
-      "detailFile": "current_details/AB2A31134F.json"
+      ]
     },
     {
       "assetId": "A2FCFC0760",
@@ -707,8 +697,7 @@
           0.39,
           57.6
         ]
-      ],
-      "detailFile": "current_details/A2FCFC0760.json"
+      ]
     },
     {
       "assetId": "AA6E21F577",
@@ -766,8 +755,7 @@
           0.44,
           58.47
         ]
-      ],
-      "detailFile": "current_details/AA6E21F577.json"
+      ]
     },
     {
       "assetId": "AF2D8D29D5",
@@ -828,8 +816,7 @@
           1.08,
           63.07
         ]
-      ],
-      "detailFile": "current_details/AF2D8D29D5.json"
+      ]
     },
     {
       "assetId": "ABAC025F11",
@@ -889,8 +876,7 @@
           0.09,
           42.34
         ]
-      ],
-      "detailFile": "current_details/ABAC025F11.json"
+      ]
     },
     {
       "assetId": "AF59EB04D4",
@@ -951,8 +937,7 @@
           0.31,
           56.52
         ]
-      ],
-      "detailFile": "current_details/AF59EB04D4.json"
+      ]
     },
     {
       "assetId": "A8FA1922F4",
@@ -1012,8 +997,7 @@
           2.14,
           61.66
         ]
-      ],
-      "detailFile": "current_details/A8FA1922F4.json"
+      ]
     },
     {
       "assetId": "A5F557F226",
@@ -1071,8 +1055,7 @@
           0.9,
           49.28
         ]
-      ],
-      "detailFile": "current_details/A5F557F226.json"
+      ]
     },
     {
       "assetId": "ACD34CC623",
@@ -1132,8 +1115,7 @@
           1.5,
           36.53
         ]
-      ],
-      "detailFile": "current_details/ACD34CC623.json"
+      ]
     }
   ],
   "heldAnalysis": [
@@ -1193,8 +1175,7 @@
           0.42,
           52.7
         ]
-      ],
-      "detailFile": "current_details/A0E433D981.json"
+      ]
     }
   ]
 }
