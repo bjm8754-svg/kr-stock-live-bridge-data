@@ -1,0 +1,13 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":7,
+  "relativeDay":35,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":104.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":104.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":99.5}
+  ],
+  "cashPct":40,
+  "rationale":"This is materially different from a one-day squeeze: both assets have spent roughly a month building a base and now trade above their 20-, 50- and 100-day structures, with BTC leading and both near the top of their 20-day ranges. The earlier BTC probe provides context and the base has accumulated time. Scale decisively: 30% BTC spot, 15% BTC daily-2x, 15% ETH spot, retain 40% cash. Invalidate BTC below 104.0 and ETH below 99.5, beneath the reclaimed cluster/base."
+}
