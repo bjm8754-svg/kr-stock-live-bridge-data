@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":0,
+  "relativeDay":0,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":25,"stop":88.0},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":92.0}
+  ],
+  "cashPct":60,
+  "rationale":"Both assets have recovered their 20- and 50-day structures after a large higher-timeframe decline, but both remain below the 100-day structure. ETH has the stronger relative recovery and receives the larger sleeve. Start with spot-only probes rather than 2x because the long-term overhead structure is not yet reclaimed. Invalidate BTC below 92 and ETH below 88, which would negate the recent recovery structure."
+}
