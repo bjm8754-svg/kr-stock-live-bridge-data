@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":10,
+  "relativeDay":50,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":113.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":113.5}
+  ],
+  "cashPct":50,
+  "rationale":"BTC remains accepted above the 20-, 50- and 100-day structures after the breakout and has spent another five sessions near the highs instead of rejecting. RSI is extremely elevated, but the position is already established with profit cushion; overbought alone is not a reason to cut a functioning trend. Hold both sleeves, avoid adding at this extension, and trail the structural stop to 113.5 so a failed breakout does not return most of the accumulated gain. ETH is improving but still lags BTC structurally and is not added."
+}
