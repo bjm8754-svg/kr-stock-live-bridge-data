@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":11,
+  "relativeDay":55,
+  "verdict":"HOLD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":126.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":126.0}
+  ],
+  "cashPct":60,
+  "rationale":"BTC has continued to make new highs and remains firmly above the 20-, 50- and 100-day structures. RSI is still elevated, so adding risk into the extension is not justified, but the trend itself has not weakened. Keep 30% BTC spot and 10% daily-2x unchanged, raise the common stop to 126.0 beneath the recent continuation base, and preserve 60% cash."
+}
