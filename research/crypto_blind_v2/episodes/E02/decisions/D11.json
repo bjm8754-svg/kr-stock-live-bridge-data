@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":11,
+  "relativeDay":55,
+  "verdict":"EXIT_WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The trailing stops were triggered immediately and price continued lower, confirming that the high-level continuation had failed for now. Both assets are below their 20-day averages after high-participation downside expansion, though still above longer 50/100-day structures. Do not immediately rebuy a first bounce. Stay in cash until a new base/reclaim demonstrates support and role reversal."
+}
