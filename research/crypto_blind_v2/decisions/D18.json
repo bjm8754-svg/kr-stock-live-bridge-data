@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":18,
+  "relativeDay":90,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Five days after capitulation, BTC has only stabilized near the lows and remains far below its 20/50/100-day references. ETH has bounced but is still below its 20/50-day cluster. Oversold conditions and sideways action at the low are not enough; stay in cash until a higher low plus accepted reclaim appears."
+}
