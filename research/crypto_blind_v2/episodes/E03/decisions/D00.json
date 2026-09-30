@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":0,
+  "relativeDay":0,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets are in clear damaged downtrends below their 20/50/100-day structures. ETH is especially weak and volatile. Recent rebound attempts have failed and price remains near the lower end of multi-week ranges. Do not bottom-fish. Stay fully in cash until a genuine base and structural reclaim appear."
+}
