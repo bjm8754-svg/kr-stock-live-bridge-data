@@ -1,0 +1,12 @@
+{
+  "episodeId": "S01",
+  "seed": 731904,
+  "initialCapitalKrw": 10000000,
+  "episodeSessions": 30,
+  "stepSessions": 3,
+  "historyStart": "2021-01-04",
+  "historyEnd": "2025-12-30",
+  "maxDeepReviewCandidates": 18,
+  "buyCostBps": 5,
+  "sellCostBps": 20
+}
