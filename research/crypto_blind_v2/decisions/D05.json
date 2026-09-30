@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":5,
+  "relativeDay":25,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The BTC re-entry probe failed and was stopped. BTC remains below its 20/50-day references and ETH remains materially weaker below all nearby structure. Repeatedly buying because price is near a prior low would be averaging into a damaged trend. Stay fully in cash until acceptance and role reversal are visible."
+}
