@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":9,
+  "relativeDay":45,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The D08 reclaim failed immediately and both assets are again below short/intermediate structure. BTC is below all major moving-average references; ETH is sitting near its 100-day line but remains below the 20- and 50-day lines after renewed heavy downside volatility. Stay fully in cash and require a more durable base/reclaim sequence before re-entering."
+}
