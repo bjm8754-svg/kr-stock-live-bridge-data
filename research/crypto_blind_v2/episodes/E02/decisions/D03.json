@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":3,
+  "relativeDay":15,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The rebound is structurally meaningful: both assets reclaimed the 20/50-day areas on expanding participation. However, the move is already a two-day vertical expansion into/through the prior supply zone with large upper-range candles. Strength is not the same as a good entry. Do not chase; wait for acceptance or a retest that holds the reclaimed zone before deploying capital."
+}
