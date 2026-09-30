@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":21,
+  "relativeDay":105,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The crash has stopped accelerating, but neither BTC nor ETH has reclaimed any of the important 20-, 50- or 100-day structures. Five days of stabilization after a violent breakdown is not enough to call a durable base. Stay fully in cash and require either a higher-low sequence with time acceptance or a meaningful reclaim before risking capital again."
+}
