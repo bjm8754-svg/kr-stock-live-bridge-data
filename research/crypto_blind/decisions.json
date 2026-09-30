@@ -1,0 +1,65 @@
+{
+  "schema": "CRYPTO_BLIND_TRADER_DECISIONS_V1",
+  "initialCapitalKrw": 10000000,
+  "rules": {
+    "futureVisibleAtDecision": false,
+    "entry": "next_utc_daily_open",
+    "maxHoldDays": 30,
+    "rebalanceAtNextCase": true,
+    "allowedVehicles": ["SPOT", "DAILY_2X"],
+    "noMarginBorrowing": true,
+    "daily2xOnlyWhenExplicit": true
+  },
+  "decisions": [
+    {
+      "caseId": "C01",
+      "cutoff": "2020-02-15",
+      "portfolio": [
+        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9050}
+      ],
+      "cashPct":70,
+      "verdict":"PROBE",
+      "rationale":"BTC uptrend is intact above rising 20/50-day structure, but the 10.5k rejection makes a full-size chase unattractive. ETH is substantially more extended with RSI near 80 and a sharp rejection candle, so no ETH entry."
+    },
+    {
+      "caseId": "C02",
+      "cutoff": "2020-07-27",
+      "portfolio": [
+        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9650},
+        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":278}
+      ],
+      "cashPct":60,
+      "verdict":"PROBE",
+      "rationale":"Both assets broke multi-week ranges with strong participation, but RSI near 90 and large distance from the 20-day mean make a full attack a chase. BTC gets the larger probe because its breakout is less vertically extended than ETH."
+    },
+    {
+      "caseId": "C03",
+      "cutoff": "2020-08-05",
+      "portfolio": [
+        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":50,"stop":10480},
+        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":348}
+      ],
+      "cashPct":40,
+      "verdict":"ATTACK_CANDIDATE",
+      "rationale":"BTC has held the July breakout and reconstructed above 11k after the 12.1k rejection, improving the structure enough to increase size. ETH remains much more stretched, so it stays a small satellite position. No 2x exposure because both are still extended."
+    },
+    {
+      "caseId": "C04",
+      "cutoff": "2021-01-04",
+      "portfolio": [],
+      "cashPct":100,
+      "verdict":"REJECT",
+      "rationale":"BTC and ETH are both in vertical price expansion, 20-50% above short moving averages with RSI in the high 80s and very wide daily ranges. Trend strength is not enough to justify the asymmetry at the current location."
+    },
+    {
+      "caseId": "C05",
+      "cutoff": "2021-05-14",
+      "portfolio": [
+        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":3450}
+      ],
+      "cashPct":80,
+      "verdict":"PROBE",
+      "rationale":"BTC has lost both the 20- and 50-day structures after repeated rejection from the high, so catching the falling move is rejected. ETH still shows superior relative strength and reclaimed from the 3.5k area, but it remains extended and volatile; only a small spot probe is justified."
+    }
+  ]
+}
