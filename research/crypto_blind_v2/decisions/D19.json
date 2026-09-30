@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":19,
+  "relativeDay":95,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC has stopped cascading lower but remains trapped in a low base well below its 20-day mean; there is still no higher-high or accepted reclaim. ETH is similarly below its 20/50-day cluster. Time at the low is beginning to matter, but confirmation is still missing. Stay in cash."
+}
