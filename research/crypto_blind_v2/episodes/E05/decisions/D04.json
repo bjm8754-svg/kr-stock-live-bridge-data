@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":4,
+  "relativeDay":20,
+  "verdict":"PROBE",
+  "portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":98.5}],
+  "cashPct":85,
+  "rationale":"BTC has made a second recovery attempt with a higher low versus the initial breakdown, reclaimed the 20-day and 100-day areas, and continues to show better relative strength than ETH. The 50-day line remains overhead, so keep this as a smaller probe rather than an attack. Re-enter 15% BTC spot with invalidation below 98.5 and retain 85% cash."
+}
