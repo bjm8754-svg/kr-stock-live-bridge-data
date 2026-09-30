@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":3,
+  "relativeDay":15,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The first 20-day reclaim attempt has not stabilized. BTC pushed toward 109 and was rejected back near 104 on stronger participation, while ETH suffered a sharper rejection from 112.8 back to 101.7. Overhead supply remains dominant and even the 20-day role is not secure. Stay fully in cash."
+}
