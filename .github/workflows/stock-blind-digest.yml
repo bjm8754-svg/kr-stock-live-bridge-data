@@ -1,0 +1,51 @@
+name: Korean Stock Blind Digest
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/stock_blind_digest.py"
+      - ".github/workflows/stock-blind-digest.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Build compact blind readouts
+        run: python scripts/stock_blind_digest.py
+      - name: Guard and commit readouts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,pathlib,re
+          cfg=json.load(open('research/stock_blind/ACTIVE_EPISODE.json',encoding='utf-8'))
+          root=pathlib.Path('research/stock_blind/episodes')/cfg['episodeId']/'readouts'
+          d=json.load(open(root/'current_digest.json',encoding='utf-8'))
+          assert d['futureIncluded'] is False
+          d10=re.compile(r'20\d{2}-\d{2}-\d{2}')
+          d8=re.compile(r'20\d{6}')
+          def leaked(x):
+              if isinstance(x,dict): return any(leaked(v) for v in x.values())
+              if isinstance(x,list): return any(leaked(v) for v in x)
+              if isinstance(x,str): return bool(d10.search(x) or d8.search(x))
+              return False
+          assert not leaked(d)
+          print('DIGEST_GUARD: PASS')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/stock_blind/episodes/*/readouts
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "update stock blind digest"
+          git pull --rebase origin main
+          git push
