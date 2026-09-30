@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":13,
+  "relativeDay":65,
+  "verdict":"REENTER_CONFIRMED_PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":92.5}
+  ],
+  "cashPct":70,
+  "rationale":"BTC has finally produced a higher-quality reclaim: the move out of the 86-90 base came with stronger participation and price is now holding above the 20/50/100-day cluster. Immediate resistance around 100-101 still limits asymmetry, so this is a confirmed probe rather than an attack. The stop sits below the reclaimed moving-average/role-reversal zone. ETH remains structurally weak and receives no capital."
+}
