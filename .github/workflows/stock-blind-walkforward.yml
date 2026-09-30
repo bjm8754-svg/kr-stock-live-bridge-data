@@ -38,17 +38,49 @@ jobs:
         run: python scripts/test_stock_blind_privacy.py
 
       - name: Blind-only methodology label
-        if: ${{ false }}
-        run: echo disabled-during-unit-gate
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('market-structure-v3-config.json')
+          cfg=json.loads(p.read_text(encoding='utf-8'))
+          cfg['methodologyVersion']='MARKET_STRUCTURE_V3_BLIND'
+          p.write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
 
       - name: Build blind stock card and portfolio state
-        if: ${{ false }}
-        run: echo disabled-during-unit-gate
+        run: python scripts/stock_blind_runner.py
 
       - name: Guard blind card
-        if: ${{ false }}
-        run: echo disabled-during-unit-gate
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          sys.path.insert(0, 'scripts')
+          from stock_blind_privacy import calendar_date_leak_paths
+          cfg=json.load(open('research/stock_blind/ACTIVE_EPISODE.json',encoding='utf-8'))
+          root=pathlib.Path('research/stock_blind/episodes')/cfg['episodeId']
+          st=json.load(open(root/'state.json',encoding='utf-8'))
+          assert st['futureIncluded'] is False
+          p=root/'current_card.json'
+          if p.exists():
+              card=json.loads(p.read_text(encoding='utf-8'))
+              assert card['futureIncluded'] is False
+              leaks=calendar_date_leak_paths(card)
+              assert not leaks, leaks[:20]
+          print('STOCK_BLIND_GUARD: PASS', root)
+          PY
 
       - name: Commit blind state
-        if: ${{ false }}
-        run: echo disabled-during-unit-gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -- market-structure-v3-config.json
+          git add research/stock_blind/episodes
+          if git diff --cached --quiet; then
+            echo "no stock blind state changes"
+            exit 0
+          fi
+          git commit -m "advance stock blind replay"
+          git pull --rebase origin main
+          git push
