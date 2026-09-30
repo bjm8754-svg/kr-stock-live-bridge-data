@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":14,
+  "relativeDay":70,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The D13 probe did not invalidate by stop, but its thesis has weakened: both BTC and ETH have slipped back below their 20-day structures and neither is progressing toward the 50/100-day overhead supply. Exit proactively rather than waiting for the hard stop. Return to full cash until the base resolves with renewed acceptance."
+}
