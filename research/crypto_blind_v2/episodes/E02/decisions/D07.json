@@ -1,0 +1,14 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":7,
+  "relativeDay":35,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":114.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":114.5},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":106.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":106.0}
+  ],
+  "cashPct":30,
+  "rationale":"After the initial vertical expansion, both assets spent several sessions consolidating above their reclaimed 20-day structures while RSI normalized and the breakout shelf held. This improves asymmetry materially versus chasing D03/D04. The higher-timeframe trend remains intact and the pullback is now a trend-bridge/retest rather than raw momentum. Increase directional exposure and introduce 2x sleeves, with tight structural invalidation below the bridge/support zones."
+}
