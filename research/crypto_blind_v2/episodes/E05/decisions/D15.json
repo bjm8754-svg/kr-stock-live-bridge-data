@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":15,
+  "relativeDay":75,
+  "verdict":"REDUCE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":169.0}
+  ],
+  "cashPct":75,
+  "rationale":"The trend remains powerful, but the account has just gained another 8.6% in five days and BTC is again vertically extended well above its 20-day average. The expected value of keeping 2x exposure here is poor relative to protecting a 30%+ account gain. Remove the 2x sleeve, trim BTC spot from 30% to 25%, raise invalidation to 169.0 beneath the latest acceleration zone, and keep 75% cash while retaining meaningful trend participation."
+}
