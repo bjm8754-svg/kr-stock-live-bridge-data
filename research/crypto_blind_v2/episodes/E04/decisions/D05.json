@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":5,
+  "relativeDay":25,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both BTC and ETH have broken to fresh lows and are trading below their major moving-average structures. RSI is deeply oversold, but downside structure remains active and there is no reclaim or stabilization. Stay fully in cash; oversold alone is not a long trigger."
+}
