@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":8,
+  "relativeDay":40,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":100.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":100.5}
+  ],
+  "cashPct":50,
+  "rationale":"BTC has reclaimed both 20- and 50-day structure, held the first pullback above the reclaimed zone, and volatility is materially lower than during the earlier washout. The latest recovery after testing roughly 102 creates better confirmation and asymmetry. Increase exposure and introduce a 2x sleeve as part of the discretionary allocation; the 15% size is chosen for this setup, not imposed as a rule. ETH remains structurally weaker and stays at zero."
+}
