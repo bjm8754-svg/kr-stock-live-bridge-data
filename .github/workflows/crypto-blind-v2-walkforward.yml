@@ -1,0 +1,51 @@
+name: Crypto Blind Walk-Forward V2
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/crypto_blind_v2_walkforward.py"
+      - "research/crypto_blind_v2/decisions/**"
+      - ".github/workflows/crypto-blind-v2-walkforward.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Build current blind card and account state
+        run: python scripts/crypto_blind_v2_walkforward.py
+      - name: Guard current card has no calendar date
+        run: |
+          python - <<'PY'
+          import json, pathlib, re
+          p=pathlib.Path('research/crypto_blind_v2/current_card.json')
+          if p.exists():
+              s=p.read_text(encoding='utf-8')
+              assert 'futureIncluded":false' in s
+              assert not re.search(r'20\d\d-\d\d-\d\d', s)
+          st=json.load(open('research/crypto_blind_v2/state.json',encoding='utf-8'))
+          assert st['futureIncluded'] is False
+          print('V2_BLIND_GUARD: PASS')
+          PY
+      - name: Commit staged state
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/crypto_blind_v2/current_card.json research/crypto_blind_v2/state.json research/crypto_blind_v2/FINAL_RESULT.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no staged changes"
+            exit 0
+          fi
+          git commit -m "advance crypto blind v2 state"
+          git pull --rebase origin main
+          git push
