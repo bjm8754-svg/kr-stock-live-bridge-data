@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":8,
+  "relativeDay":40,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":106.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":106.5}
+  ],
+  "cashPct":55,
+  "rationale":"The attack interval is modestly negative, but BTC has continued to hold above its 20-, 50- and 100-day structures and expanded to a new local high before consolidating. ETH has weakened back below its 50-day area and no longer deserves correlated risk. Remove ETH, keep 30% BTC spot plus 15% BTC daily-2x, raise BTC invalidation to 106.5 beneath the reclaimed moving-average cluster, and retain 55% cash."
+}
