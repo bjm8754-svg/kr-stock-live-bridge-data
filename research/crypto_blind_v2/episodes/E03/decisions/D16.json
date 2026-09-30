@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":16,
+  "relativeDay":80,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The 130 structural stop was hit and both BTC sleeves have been exited. BTC has bounced back near the stopped level but remains marginally below the 20-day structure, while ETH is also below its 20-day mean. Do not immediately negate a valid stop by re-entering on the first rebound. Stay fully in cash until BTC or ETH demonstrates renewed acceptance above the short-term structure and a credible higher-low/reclaim sequence."
+}
