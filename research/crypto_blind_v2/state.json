@@ -1,0 +1,12 @@
+{
+  "schema": "CRYPTO_BLIND_V2_STATE",
+  "step": 0,
+  "relativeDay": 0,
+  "episodeCommitment": "9ca8cf1291100b55d62e64a5640b67cd1602d88ef8cd151197c3bfa3fecbafe5",
+  "equityKrw": 10000000.0,
+  "returnPct": 0.0,
+  "maxDrawdownPct": 0.0,
+  "previousInterval": null,
+  "decisionsLocked": 0,
+  "futureIncluded": false
+}
