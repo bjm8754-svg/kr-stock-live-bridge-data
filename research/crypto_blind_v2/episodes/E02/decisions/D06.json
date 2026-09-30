@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":6,
+  "relativeDay":30,
+  "verdict":"ADD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":112.5},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":103.0}
+  ],
+  "cashPct":55,
+  "rationale":"BTC held the breakout shelf and recovered toward the highs, while ETH absorbed a pullback into the 103 area and returned above its 20/50-day structure. The trend/reclaim thesis is still intact and now has a successful retest component. Increase spot exposure moderately, but keep leverage off because participation has cooled and both assets remain near the upper end of their recent ranges."
+}
