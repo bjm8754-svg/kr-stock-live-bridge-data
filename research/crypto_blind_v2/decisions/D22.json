@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":22,
+  "relativeDay":110,
+  "verdict":"BTC_BASE_PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":71.5}
+  ],
+  "cashPct":85,
+  "rationale":"BTC has now spent roughly 25 days building time around the post-capitulation base, with repeated tests near 71-72 holding and a fresh close back above the 20-day mean. This is still below the 50-day structure, so only a small spot probe is justified. A break back through the repeated base lows invalidates the idea. ETH remains below its 20/50-day references and receives no capital."
+}
