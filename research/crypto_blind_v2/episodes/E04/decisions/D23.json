@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":23,
+  "relativeDay":115,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both BTC and ETH have stabilized after the crash but remain below their 20-, 50- and 100-day structures. The recent rebound is not yet a confirmed role reversal or durable reclaim. Do not force a trade simply because the episode is near its end; stay fully in cash and require structural confirmation before re-entering."
+}
