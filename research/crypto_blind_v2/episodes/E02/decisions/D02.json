@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":2,
+  "relativeDay":10,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets have fallen into their 100-day areas with deeply oversold RSI, but price is still in active downside expansion and neither asset has shown acceptance, reclaim, or a stable base. Oversold alone is not an entry signal. Stay fully in cash until a support/reclaim structure is visible."
+}
