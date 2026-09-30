@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":12,
+  "relativeDay":60,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":119.5}
+  ],
+  "cashPct":85,
+  "rationale":"BTC has produced a meaningful rebound from the 115-area retest and reclaimed its 20-day structure with strong participation, while ETH remains below its 20-day average and structurally weaker. The nearby 128-132 supply zone limits current asymmetry, so use only a small BTC spot probe with a tight stop under the newest reclaim shelf. Add only if overhead supply is accepted; otherwise exit quickly."
+}
