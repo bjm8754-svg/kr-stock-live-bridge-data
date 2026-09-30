@@ -1,56 +1,56 @@
 {
   "schema": "CRYPTO_BLIND_V2_STATE",
   "episodeId": "E02",
-  "step": 10,
-  "relativeDay": 50,
+  "step": 11,
+  "relativeDay": 55,
   "episodeCommitment": "792fe6c3bcfbc2dceef29c301e4974af308f687275474117cde585306020a254",
-  "equityKrw": 10781250.15,
-  "returnPct": 7.813,
-  "maxDrawdownPct": -3.31,
+  "equityKrw": 10386501.25,
+  "returnPct": 3.865,
+  "maxDrawdownPct": -3.661,
   "previousInterval": {
-    "step": 9,
-    "startEquity": 10637604.08,
-    "endEquity": 10781250.15,
-    "returnPct": 1.35,
+    "step": 10,
+    "startEquity": 10781250.15,
+    "endEquity": 10386501.25,
+    "returnPct": -3.661,
     "sleeves": [
       {
         "symbol": "BTCUSDT",
         "vehicle": "SPOT",
         "capitalPct": 25,
-        "startValue": 2659401.02,
-        "endValue": 2659941.24,
-        "stopped": false,
-        "stopDay": null
+        "startValue": 2695312.54,
+        "endValue": 2563586.56,
+        "stopped": true,
+        "stopDay": 51
       },
       {
         "symbol": "BTCUSDT",
         "vehicle": "DAILY_2X",
         "capitalPct": 10,
-        "startValue": 1063760.41,
-        "endValue": 1062169.94,
-        "stopped": false,
-        "stopDay": null
+        "startValue": 1078125.02,
+        "endValue": 972744.23,
+        "stopped": true,
+        "stopDay": 51
       },
       {
         "symbol": "ETHUSDT",
         "vehicle": "SPOT",
         "capitalPct": 20,
-        "startValue": 2127520.82,
-        "endValue": 2224263.32,
-        "stopped": false,
-        "stopDay": null
+        "startValue": 2156250.03,
+        "endValue": 2051155.27,
+        "stopped": true,
+        "stopDay": 51
       },
       {
         "symbol": "ETHUSDT",
         "vehicle": "DAILY_2X",
         "capitalPct": 5,
-        "startValue": 531880.2,
-        "endValue": 579834.03,
-        "stopped": false,
-        "stopDay": null
+        "startValue": 539062.51,
+        "endValue": 486515.12,
+        "stopped": true,
+        "stopDay": 51
       }
     ]
   },
-  "decisionsLocked": 10,
+  "decisionsLocked": 11,
   "futureIncluded": false
 }
