@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":2,
+  "relativeDay":10,
+  "verdict":"ROTATE_TO_RELATIVE_STRENGTH",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":100.2}
+  ],
+  "cashPct":65,
+  "rationale":"ETH invalidated the prior setup and was stopped; it is now below its 20-day structure and near its 50-day reference, so no immediate re-entry. BTC held materially better, remains above its 20-day mean and recovered after the recent pullback. Concentrate modest exposure in the relative-strength leader while keeping most capital in cash. No 2x until BTC accepts above the nearer 115-121 supply zone."
+}
