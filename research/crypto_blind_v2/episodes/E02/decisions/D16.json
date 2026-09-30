@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":16,
+  "relativeDay":80,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC and ETH are holding near their 100-day regions but remain below their 20/50-day structures, and the bounce attempts lack decisive acceptance. Low RSI and mere stabilization are not enough. Stay in cash until price demonstrates an actual reclaim or a higher-low structure with participation."
+}
