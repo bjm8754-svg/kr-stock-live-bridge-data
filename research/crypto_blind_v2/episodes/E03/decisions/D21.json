@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":21,
+  "relativeDay":105,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":124.0}
+  ],
+  "cashPct":70,
+  "rationale":"BTC has produced a deeper flush to roughly 121 and then reclaimed both the 20- and 50-day structures over several sessions, while ETH remains below its corresponding short/intermediate references. This creates a cleaner spring/reclaim asymmetry than the prior one-day whipsaws. Re-enter BTC with a meaningful 30% spot probe and a 124.0 invalidation below the reclaimed zone. Do not add 2x yet because the 133-136 overhead supply area has not been decisively cleared again."
+}
