@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":23,
+  "relativeDay":115,
+  "verdict":"SPRING_RECLAIM_PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":73.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":57.5}
+  ],
+  "cashPct":50,
+  "rationale":"Both assets undercut their established post-capitulation lows and then produced an immediate high-participation reclaim above the 20-day structure. That is qualitatively different from simply buying oversold weakness and supports re-entry. However, both are coming off a single vertical recovery candle with 50-day resistance immediately overhead, so use meaningful spot exposure but no 2x chase. Failure back below the reclaimed zone invalidates the spring thesis."
+}
