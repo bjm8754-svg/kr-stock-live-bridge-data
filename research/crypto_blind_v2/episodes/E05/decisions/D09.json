@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":9,
+  "relativeDay":45,
+  "verdict":"REDUCE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":114.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":114.5}
+  ],
+  "cashPct":60,
+  "rationale":"The BTC attack produced a large five-day gain and price has now expanded sharply above its moving-average cluster with RSI near 89 after a vertical breakout day. Do not add into this extension, but do not abandon the trend either. Keep 30% BTC spot, trim the daily-2x sleeve from 15% to 10%, raise invalidation to 114.5 beneath the breakout area, and hold 60% cash to protect the newly created equity cushion."
+}
