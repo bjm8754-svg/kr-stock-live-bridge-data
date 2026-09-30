@@ -1,0 +1,106 @@
+{
+  "schema": "CRYPTO_BLIND_REVIEW_INDEX_V1",
+  "futureIncluded": false,
+  "cases": [
+    {
+      "caseId": "C01",
+      "cutoff": "2020-02-15",
+      "file": "C01.json"
+    },
+    {
+      "caseId": "C02",
+      "cutoff": "2020-07-27",
+      "file": "C02.json"
+    },
+    {
+      "caseId": "C03",
+      "cutoff": "2020-08-05",
+      "file": "C03.json"
+    },
+    {
+      "caseId": "C04",
+      "cutoff": "2021-01-04",
+      "file": "C04.json"
+    },
+    {
+      "caseId": "C05",
+      "cutoff": "2021-05-14",
+      "file": "C05.json"
+    },
+    {
+      "caseId": "C06",
+      "cutoff": "2021-09-19",
+      "file": "C06.json"
+    },
+    {
+      "caseId": "C07",
+      "cutoff": "2021-11-09",
+      "file": "C07.json"
+    },
+    {
+      "caseId": "C08",
+      "cutoff": "2022-02-06",
+      "file": "C08.json"
+    },
+    {
+      "caseId": "C09",
+      "cutoff": "2022-07-01",
+      "file": "C09.json"
+    },
+    {
+      "caseId": "C10",
+      "cutoff": "2022-12-01",
+      "file": "C10.json"
+    },
+    {
+      "caseId": "C11",
+      "cutoff": "2023-01-10",
+      "file": "C11.json"
+    },
+    {
+      "caseId": "C12",
+      "cutoff": "2023-07-13",
+      "file": "C12.json"
+    },
+    {
+      "caseId": "C13",
+      "cutoff": "2023-10-19",
+      "file": "C13.json"
+    },
+    {
+      "caseId": "C14",
+      "cutoff": "2023-11-14",
+      "file": "C14.json"
+    },
+    {
+      "caseId": "C15",
+      "cutoff": "2024-03-30",
+      "file": "C15.json"
+    },
+    {
+      "caseId": "C16",
+      "cutoff": "2024-07-08",
+      "file": "C16.json"
+    },
+    {
+      "caseId": "C17",
+      "cutoff": "2024-12-09",
+      "file": "C17.json"
+    },
+    {
+      "caseId": "C18",
+      "cutoff": "2025-02-04",
+      "file": "C18.json"
+    },
+    {
+      "caseId": "C19",
+      "cutoff": "2025-07-21",
+      "file": "C19.json"
+    },
+    {
+      "caseId": "C20",
+      "cutoff": "2025-08-28",
+      "file": "C20.json"
+    }
+  ]
+}
