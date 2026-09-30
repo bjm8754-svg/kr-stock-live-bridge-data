@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":15,
+  "relativeDay":75,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":130.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":25,"stop":130.0}
+  ],
+  "cashPct":40,
+  "rationale":"BTC has pulled back from the newest high but remains above all major moving-average structures, held the 130 area, and has recovered while RSI cooled into the low-60s. The drawdown from the account peak is modest and the structural stop has not been threatened. Keep the established spot and 2x sleeves with the 130.0 stop unchanged. ETH has improved after digesting its vertical move, but adding another highly correlated risk sleeve is unnecessary while BTC exposure is already substantial."
+}
