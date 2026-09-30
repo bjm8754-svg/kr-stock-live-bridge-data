@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":22,
+  "relativeDay":110,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC has rebounded from a lower low back to its 20-day average, but remains below the 50/100-day structures; ETH is weaker and still below all major moving averages after a fresh low. This is a rebound attempt, not yet a structural reclaim. Stay in cash and require acceptance above the 20-day level or a clearer higher-low base before re-entry."
+}
