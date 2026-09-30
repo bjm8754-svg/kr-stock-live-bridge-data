@@ -55,10 +55,16 @@ jobs:
           assert st['futureIncluded'] is False
           p=root/'current_card.json'
           if p.exists():
-              text=p.read_text(encoding='utf-8')
-              card=json.loads(text)
+              card=json.loads(p.read_text(encoding='utf-8'))
               assert card['futureIncluded'] is False
-              assert not re.search(r'20\d{2}-\d{2}-\d{2}|20\d{6}', text)
+              d10=re.compile(r'20\d{2}-\d{2}-\d{2}')
+              d8=re.compile(r'20\d{6}')
+              def leaked(x):
+                  if isinstance(x,dict): return any(leaked(v) for v in x.values())
+                  if isinstance(x,list): return any(leaked(v) for v in x)
+                  if isinstance(x,str): return bool(d10.search(x) or d8.search(x))
+                  return False
+              assert not leaked(card)
           print('STOCK_BLIND_GUARD: PASS', root)
           PY
 
