@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":5,
+  "relativeDay":25,
+  "verdict":"HOLD_REDUCED",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":112.5}
+  ],
+  "cashPct":80,
+  "rationale":"ETH already invalidated the tight breakout-support thesis. BTC remains above the 113-area breakout shelf and has not invalidated, but momentum is stalling near the range highs, RSI is elevated, and participation has cooled sharply. Reduce BTC exposure rather than add or use leverage. Keep the same structural stop under the breakout shelf and remain mostly in cash."
+}
