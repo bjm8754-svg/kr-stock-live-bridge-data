@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":2,
+  "relativeDay":10,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC has made its first 20-day reclaim and ETH is testing its 20-day average, but both remain far below damaged 50/100-day structures. A first short-term reclaim inside a major downtrend is not enough. Stay in cash until BTC either accepts the 107-112 overhead zone or a pullback converts the 100-103 area into durable support."
+}
