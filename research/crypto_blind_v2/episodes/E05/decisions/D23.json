@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":23,
+  "relativeDay":115,
+  "verdict":"REDUCE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":5,"stop":252.0}
+  ],
+  "cashPct":95,
+  "rationale":"BTC has extended into another near-vertical leg, trading roughly 25% above its 20-day average with RSI above 80. The long-term trend is still powerful, but the marginal expected value of keeping even a 10% sleeve is now poor relative to protecting a 30%+ account gain. Trim BTC spot to a 5% runner, raise the stop to 252.0 beneath the latest acceleration shelf, and hold 95% cash."
+}
