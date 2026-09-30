@@ -1,0 +1,14 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":8,
+  "relativeDay":40,
+  "verdict":"HOLD_ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":115.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":115.5},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":108.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":108.0}
+  ],
+  "cashPct":30,
+  "rationale":"The attack thesis has held: both assets remain above their 20-day structures and are consolidating near the highs without breaking the trend bridge. Keep the same exposure rather than chase more size while participation remains muted. Raise invalidation to the newer consolidation floors to protect capital if the bridge fails."
+}
