@@ -1,0 +1,4136 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION_TABLE",
+  "episodeId": "S01",
+  "step": 1,
+  "relativeSession": 3,
+  "futureIncluded": false,
+  "portfolioState": {
+    "equityKrw": 9726374.24,
+    "returnPct": -2.736,
+    "cashPct": 84.42,
+    "positions": [
+      {
+        "assetId": "A0E433D981",
+        "marketValueKrw": 1514943.96,
+        "capitalPct": 15.58,
+        "avgEntry": 80340.15,
+        "currentPrice": 81100.0,
+        "unrealizedPct": 0.95,
+        "stop": 74100,
+        "target": null,
+        "lastAction": "ENTER"
+      }
+    ],
+    "previousInterval": {
+      "step": 0,
+      "startEquityKrw": 10000000.0,
+      "postTradeEquityKrw": 9997000.0,
+      "endEquityKrw": 9726374.24,
+      "returnPct": -2.736,
+      "stopped": [
+        {
+          "assetId": "AA5789FD84",
+          "exitPrice": 266500.0
+        },
+        {
+          "assetId": "AF3D02A914",
+          "exitPrice": 58000.0
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "universeReconstructed": 2592,
+    "analyzed": 2592,
+    "errors": 0,
+    "machineCandidates": 115,
+    "deepReviewCount": 18
+  },
+  "candidates": [
+    {
+      "assetId": "AA3AC07C28",
+      "market": "KOSDAQ",
+      "close": 28700.0,
+      "closeLocation": 0.762,
+      "atrPct": 7.92,
+      "ma": {
+        "20": 20216.5,
+        "60": 19078.83,
+        "120": 18885.42,
+        "240": 14441.83,
+        "480": 11343.17,
+        "600": 12346.18,
+        "1000": 14862.82
+      },
+      "moneyRatio20": 1.08,
+      "volumeRatio20": 0.96,
+      "family": "HIGH_TREND_CONTINUATION",
+      "state": "HIGH_RETEST",
+      "triggerLevel": 27950.0,
+      "setupInvalidation": 15260.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 27950.0,
+      "currentVsEntryPct": 2.68,
+      "invalidation": 15260.0,
+      "nearestAcceptedSupport": 21944.65,
+      "nextResistance": null,
+      "riskPct": 46.83,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 73.44,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "LOWER_RECLAIM"
+      ],
+      "nearestLevels": [
+        {
+          "line": 27950.0,
+          "role": {
+            "state": "SUPPORT_CANDIDATE",
+            "warnings": [],
+            "distancePct": 2.68,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 21944.65,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 30.78,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 19952.5,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 43.84,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 19544.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 46.85,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 18650.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 53.89,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          16690.0,
+          17100.0,
+          16350.0,
+          16990.0,
+          0.73,
+          0.69,
+          48.87
+        ],
+        [
+          "T-11D",
+          17100.0,
+          17200.0,
+          16470.0,
+          16490.0,
+          0.65,
+          0.63,
+          44.96
+        ],
+        [
+          "T-10D",
+          16650.0,
+          17230.0,
+          16430.0,
+          17110.0,
+          1.48,
+          1.45,
+          50.27
+        ],
+        [
+          "T-7D",
+          22200.0,
+          22200.0,
+          22200.0,
+          22200.0,
+          0.33,
+          0.44,
+          73.18
+        ],
+        [
+          "T-6D",
+          28550.0,
+          28850.0,
+          26650.0,
+          28850.0,
+          13.2,
+          22.12,
+          83.72
+        ],
+        [
+          "T-5D",
+          29500.0,
+          29550.0,
+          26000.0,
+          26650.0,
+          5.14,
+          6.67,
+          73.44
+        ],
+        [
+          "T-4D",
+          25300.0,
+          30650.0,
+          24400.0,
+          29100.0,
+          9.16,
+          10.91,
+          76.85
+        ],
+        [
+          "T-3D",
+          28300.0,
+          29200.0,
+          27400.0,
+          28000.0,
+          1.63,
+          1.89,
+          72.35
+        ],
+        [
+          "T+0D",
+          27250.0,
+          29450.0,
+          27150.0,
+          28500.0,
+          1.67,
+          1.88,
+          73.12
+        ],
+        [
+          "T+1D",
+          28600.0,
+          28950.0,
+          27900.0,
+          28700.0,
+          0.96,
+          1.08,
+          73.44
+        ]
+      ]
+    },
+    {
+      "assetId": "A4DC61F478",
+      "market": "KOSDAQ",
+      "close": 29400.0,
+      "closeLocation": 0.391,
+      "atrPct": 5.09,
+      "ma": {
+        "20": 29915.0,
+        "60": 26253.33,
+        "120": 25499.58,
+        "240": 31938.96,
+        "480": 34460.1,
+        "600": 34095.17,
+        "1000": 33916.5
+      },
+      "moneyRatio20": 0.41,
+      "volumeRatio20": 0.41,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 27450.0,
+      "setupInvalidation": 26400.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 27450.0,
+      "currentVsEntryPct": 7.1,
+      "invalidation": 26400.0,
+      "nearestAcceptedSupport": 27450.0,
+      "nextResistance": 42350.0,
+      "riskPct": 10.2,
+      "rewardPct": 44.05,
+      "structuralRR": 4.32,
+      "rsi": 50.66,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "LOWER_RECLAIM",
+        "UPPER_REJECTION"
+      ],
+      "nearestLevels": [
+        {
+          "line": 29447.64,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION",
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": -0.16,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 30100.0,
+          "role": {
+            "state": "RESISTANCE_CANDIDATE",
+            "warnings": [],
+            "distancePct": -2.33,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 28668.04,
+          "role": {
+            "state": "BREAKOUT_PENDING",
+            "warnings": [],
+            "distancePct": 2.55,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 28250.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 4.07,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 27803.63,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 5.74,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TRADE_DENSITY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          30450.0,
+          32900.0,
+          30300.0,
+          32350.0,
+          0.91,
+          0.98,
+          68.63
+        ],
+        [
+          "T-11D",
+          32550.0,
+          32700.0,
+          31600.0,
+          32100.0,
+          0.39,
+          0.43,
+          67.22
+        ],
+        [
+          "T-10D",
+          32300.0,
+          32450.0,
+          31450.0,
+          31800.0,
+          0.41,
+          0.45,
+          65.48
+        ],
+        [
+          "T-7D",
+          32100.0,
+          32550.0,
+          31000.0,
+          31650.0,
+          0.19,
+          0.21,
+          64.59
+        ],
+        [
+          "T-6D",
+          32250.0,
+          32450.0,
+          31100.0,
+          31200.0,
+          0.21,
+          0.22,
+          61.85
+        ],
+        [
+          "T-5D",
+          31350.0,
+          31750.0,
+          30550.0,
+          31350.0,
+          0.18,
+          0.2,
+          62.42
+        ],
+        [
+          "T-4D",
+          30800.0,
+          31950.0,
+          30650.0,
+          31550.0,
+          0.41,
+          0.43,
+          63.21
+        ],
+        [
+          "T-3D",
+          31600.0,
+          31600.0,
+          29900.0,
+          30000.0,
+          0.63,
+          0.66,
+          53.75
+        ],
+        [
+          "T+0D",
+          29250.0,
+          29850.0,
+          28700.0,
+          29150.0,
+          0.56,
+          0.55,
+          49.39
+        ],
+        [
+          "T+1D",
+          29750.0,
+          30100.0,
+          28950.0,
+          29400.0,
+          0.41,
+          0.41,
+          50.66
+        ]
+      ]
+    },
+    {
+      "assetId": "A6D93653CB",
+      "market": "KOSDAQ",
+      "close": 8090.0,
+      "closeLocation": 0.333,
+      "atrPct": 11.3,
+      "ma": {
+        "20": 7986.5,
+        "60": 7170.0,
+        "120": null,
+        "240": null,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 0.34,
+      "volumeRatio20": 0.35,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 7915.0,
+      "setupInvalidation": 7865.48,
+      "readiness": "EXECUTABLE",
+      "entryReference": 7915.0,
+      "currentVsEntryPct": 2.21,
+      "invalidation": 7865.48,
+      "nearestAcceptedSupport": 7915.0,
+      "nextResistance": 9452.5,
+      "riskPct": 2.78,
+      "rewardPct": 16.84,
+      "structuralRR": 6.07,
+      "rsi": 52.88,
+      "rsiDirection": "FLAT",
+      "warnings": [
+        "RSI_BEARISH_DIVERGENCE",
+        "UPPER_REJECTION"
+      ],
+      "nearestLevels": [
+        {
+          "line": 8050.19,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION"
+            ],
+            "distancePct": 0.49,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 7915.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 2.21,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 7795.63,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 3.78,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 8535.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -5.21,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 7630.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.03,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          9385.0,
+          9420.0,
+          8800.0,
+          8855.0,
+          1.0,
+          1.14,
+          65.54
+        ],
+        [
+          "T-11D",
+          8790.0,
+          8975.0,
+          8530.0,
+          8635.0,
+          0.81,
+          0.87,
+          62.66
+        ],
+        [
+          "T-10D",
+          9140.0,
+          9195.0,
+          8025.0,
+          8025.0,
+          1.41,
+          1.48,
+          55.39
+        ],
+        [
+          "T-7D",
+          8250.0,
+          8460.0,
+          8100.0,
+          8275.0,
+          0.5,
+          0.51,
+          57.56
+        ],
+        [
+          "T-6D",
+          8245.0,
+          8595.0,
+          7630.0,
+          7945.0,
+          1.26,
+          1.24,
+          53.84
+        ],
+        [
+          "T-5D",
+          8010.0,
+          8140.0,
+          7695.0,
+          7840.0,
+          0.21,
+          0.2,
+          52.67
+        ],
+        [
+          "T-4D",
+          7800.0,
+          10050.0,
+          7750.0,
+          9070.0,
+          7.9,
+          8.35,
+          62.84
+        ],
+        [
+          "T-3D",
+          8780.0,
+          8835.0,
+          8115.0,
+          8345.0,
+          0.86,
+          0.88,
+          55.3
+        ],
+        [
+          "T+0D",
+          8160.0,
+          8665.0,
+          7885.0,
+          8065.0,
+          0.86,
+          0.84,
+          52.67
+        ],
+        [
+          "T+1D",
+          8070.0,
+          8250.0,
+          8010.0,
+          8090.0,
+          0.35,
+          0.34,
+          52.88
+        ]
+      ]
+    },
+    {
+      "assetId": "A6D0F8C842",
+      "market": "KOSDAQ",
+      "close": 350000.0,
+      "closeLocation": 0.579,
+      "atrPct": 3.43,
+      "ma": {
+        "20": 329600.0,
+        "60": 289533.33,
+        "120": 280787.5,
+        "240": 255237.08,
+        "480": 195948.54,
+        "600": 182518.5,
+        "1000": 173610.5
+      },
+      "moneyRatio20": 1.83,
+      "volumeRatio20": 1.72,
+      "family": "HIGH_TREND_CONTINUATION",
+      "state": "HIGH_RETEST",
+      "triggerLevel": 332000.0,
+      "setupInvalidation": 300000.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 332000.0,
+      "currentVsEntryPct": 5.42,
+      "invalidation": 300000.0,
+      "nearestAcceptedSupport": 346000.0,
+      "nextResistance": null,
+      "riskPct": 14.29,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 69.91,
+      "rsiDirection": "STRENGTHENING",
+      "warnings": [
+        "LOWER_RECLAIM"
+      ],
+      "nearestLevels": [
+        {
+          "line": 346000.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 1.16,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "BOX_UPPER",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 334142.86,
+          "role": {
+            "state": "BREAKOUT_PENDING",
+            "warnings": [],
+            "distancePct": 4.75,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "BOX_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 321125.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 8.99,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 317000.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 10.41,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TREND_BRIDGE_UP"
+          ]
+        },
+        {
+          "line": 308250.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 13.54,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          335000.0,
+          337000.0,
+          329500.0,
+          330500.0,
+          0.35,
+          0.37,
+          64.37
+        ],
+        [
+          "T-11D",
+          333000.0,
+          340000.0,
+          327000.0,
+          330000.0,
+          1.09,
+          1.15,
+          63.96
+        ],
+        [
+          "T-10D",
+          332500.0,
+          336000.0,
+          329000.0,
+          334000.0,
+          0.45,
+          0.47,
+          65.84
+        ],
+        [
+          "T-7D",
+          331000.0,
+          340000.0,
+          328500.0,
+          330000.0,
+          0.35,
+          0.36,
+          62.33
+        ],
+        [
+          "T-6D",
+          328000.0,
+          339000.0,
+          325500.0,
+          337500.0,
+          0.59,
+          0.61,
+          66.0
+        ],
+        [
+          "T-5D",
+          338000.0,
+          338000.0,
+          327500.0,
+          337000.0,
+          0.47,
+          0.49,
+          65.54
+        ],
+        [
+          "T-4D",
+          335500.0,
+          342000.0,
+          331500.0,
+          331500.0,
+          0.42,
+          0.43,
+          60.56
+        ],
+        [
+          "T-3D",
+          329500.0,
+          337000.0,
+          327000.0,
+          335000.0,
+          0.6,
+          0.62,
+          62.51
+        ],
+        [
+          "T+0D",
+          327000.0,
+          339500.0,
+          325000.0,
+          335000.0,
+          0.74,
+          0.76,
+          62.51
+        ],
+        [
+          "T+1D",
+          342000.0,
+          358000.0,
+          339000.0,
+          350000.0,
+          1.72,
+          1.83,
+          69.91
+        ]
+      ]
+    },
+    {
+      "assetId": "AC4007E7C1",
+      "market": "KOSDAQ",
+      "close": 33050.0,
+      "closeLocation": 0.41,
+      "atrPct": 7.2,
+      "ma": {
+        "20": 39885.0,
+        "60": 36207.5,
+        "120": 27485.42,
+        "240": 24820.67,
+        "480": 17832.4,
+        "600": 15909.97,
+        "1000": 13524.59
+      },
+      "moneyRatio20": 0.29,
+      "volumeRatio20": 0.37,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 31200.0,
+      "setupInvalidation": 30050.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 31200.0,
+      "currentVsEntryPct": 5.93,
+      "invalidation": 30050.0,
+      "nearestAcceptedSupport": 31077.52,
+      "nextResistance": 38108.5,
+      "riskPct": 9.08,
+      "rewardPct": 15.31,
+      "structuralRR": 1.69,
+      "rsi": 34.57,
+      "rsiDirection": "WEAKENING",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 34675.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -4.69,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 31077.52,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.35,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "TRADE_DENSITY",
+            "TREND_BRIDGE_UP"
+          ]
+        },
+        {
+          "line": 28775.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 14.86,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 38300.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -13.71,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 27400.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 20.62,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_LOW"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          42750.0,
+          43650.0,
+          40400.0,
+          40600.0,
+          0.59,
+          0.56,
+          49.17
+        ],
+        [
+          "T-11D",
+          41050.0,
+          41400.0,
+          39700.0,
+          39900.0,
+          0.33,
+          0.3,
+          47.55
+        ],
+        [
+          "T-10D",
+          39100.0,
+          40325.0,
+          39000.0,
+          39450.0,
+          0.33,
+          0.3,
+          46.49
+        ],
+        [
+          "T-7D",
+          39000.0,
+          41300.0,
+          38900.0,
+          40550.0,
+          0.38,
+          0.36,
+          49.45
+        ],
+        [
+          "T-6D",
+          40600.0,
+          40800.0,
+          36600.0,
+          36800.0,
+          0.73,
+          0.67,
+          41.09
+        ],
+        [
+          "T-5D",
+          36800.0,
+          38150.0,
+          36500.0,
+          37500.0,
+          0.41,
+          0.37,
+          43.03
+        ],
+        [
+          "T-4D",
+          36700.0,
+          37500.0,
+          35800.0,
+          36250.0,
+          0.4,
+          0.35,
+          40.47
+        ],
+        [
+          "T-3D",
+          36300.0,
+          36450.0,
+          34450.0,
+          34550.0,
+          0.36,
+          0.31,
+          37.23
+        ],
+        [
+          "T+0D",
+          33500.0,
+          34400.0,
+          32850.0,
+          33300.0,
+          0.33,
+          0.27,
+          35.01
+        ],
+        [
+          "T+1D",
+          33850.0,
+          34200.0,
+          32250.0,
+          33050.0,
+          0.37,
+          0.29,
+          34.57
+        ]
+      ]
+    },
+    {
+      "assetId": "AA2E69ADEF",
+      "market": "KOSPI",
+      "close": 79300.0,
+      "closeLocation": 0.143,
+      "atrPct": 4.06,
+      "ma": {
+        "20": 83895.0,
+        "60": 79546.67,
+        "120": 72838.33,
+        "240": 66648.75,
+        "480": 57812.81,
+        "600": 57210.92,
+        "1000": 62724.95
+      },
+      "moneyRatio20": 0.71,
+      "volumeRatio20": 0.75,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 77680.0,
+      "setupInvalidation": 77112.5,
+      "readiness": "EXECUTABLE",
+      "entryReference": 77680.0,
+      "currentVsEntryPct": 2.09,
+      "invalidation": 77112.5,
+      "nearestAcceptedSupport": 77680.0,
+      "nextResistance": 86863.5,
+      "riskPct": 2.76,
+      "rewardPct": 9.54,
+      "structuralRR": 3.46,
+      "rsi": 41.68,
+      "rsiDirection": "WEAKENING",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 80500.0,
+          "role": {
+            "state": "FAILED_BREAKOUT",
+            "warnings": [],
+            "distancePct": -1.49,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 77680.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 2.09,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "BOX_LOWER",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 81900.0,
+          "role": {
+            "state": "RESISTANCE_CANDIDATE",
+            "warnings": [],
+            "distancePct": -3.17,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 74600.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.3,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 72700.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 9.08,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH",
+            "SWING_LOW"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          84400.0,
+          85900.0,
+          84300.0,
+          84600.0,
+          0.62,
+          0.64,
+          55.75
+        ],
+        [
+          "T-11D",
+          84400.0,
+          90800.0,
+          84400.0,
+          87000.0,
+          2.08,
+          2.18,
+          59.86
+        ],
+        [
+          "T-10D",
+          85300.0,
+          88100.0,
+          85300.0,
+          87200.0,
+          2.23,
+          2.32,
+          60.2
+        ],
+        [
+          "T-7D",
+          86400.0,
+          88500.0,
+          84500.0,
+          84900.0,
+          0.31,
+          0.32,
+          54.61
+        ],
+        [
+          "T-6D",
+          84100.0,
+          87100.0,
+          84100.0,
+          86400.0,
+          0.58,
+          0.6,
+          57.39
+        ],
+        [
+          "T-5D",
+          87800.0,
+          89000.0,
+          86500.0,
+          87600.0,
+          0.68,
+          0.71,
+          59.52
+        ],
+        [
+          "T-4D",
+          86500.0,
+          87700.0,
+          84600.0,
+          87000.0,
+          0.44,
+          0.45,
+          57.96
+        ],
+        [
+          "T-3D",
+          86000.0,
+          86500.0,
+          84000.0,
+          85000.0,
+          0.44,
+          0.45,
+          52.96
+        ],
+        [
+          "T+0D",
+          83000.0,
+          84400.0,
+          79300.0,
+          81000.0,
+          1.54,
+          1.5,
+          44.67
+        ],
+        [
+          "T+1D",
+          80600.0,
+          81100.0,
+          79000.0,
+          79300.0,
+          0.75,
+          0.71,
+          41.68
+        ]
+      ]
+    },
+    {
+      "assetId": "A92378724D",
+      "market": "KOSDAQ",
+      "close": 4800.0,
+      "closeLocation": 0.68,
+      "atrPct": 12.15,
+      "ma": {
+        "20": 4448.75,
+        "60": 4148.83,
+        "120": 3880.67,
+        "240": 3962.54,
+        "480": 4543.55,
+        "600": 4559.27,
+        "1000": 7698.41
+      },
+      "moneyRatio20": 1.2,
+      "volumeRatio20": 1.22,
+      "family": "HIGH_TREND_CONTINUATION",
+      "state": "HIGH_RETEST",
+      "triggerLevel": 4560.0,
+      "setupInvalidation": 3715.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 4560.0,
+      "currentVsEntryPct": 5.26,
+      "invalidation": 3715.0,
+      "nearestAcceptedSupport": 4515.0,
+      "nextResistance": null,
+      "riskPct": 22.6,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 58.37,
+      "rsiDirection": "STRENGTHENING",
+      "warnings": [
+        "LOWER_RECLAIM"
+      ],
+      "nearestLevels": [
+        {
+          "line": 4515.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 6.31,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 5140.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -6.61,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 4440.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [],
+            "distancePct": 8.11,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 4377.02,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 9.66,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 4220.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [],
+            "distancePct": 13.74,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          4200.0,
+          4330.0,
+          3800.0,
+          3800.0,
+          1.59,
+          1.33,
+          38.39
+        ],
+        [
+          "T-11D",
+          3760.0,
+          4060.0,
+          3715.0,
+          3825.0,
+          0.45,
+          0.36,
+          39.02
+        ],
+        [
+          "T-10D",
+          4185.0,
+          4740.0,
+          4090.0,
+          4485.0,
+          1.59,
+          1.47,
+          52.78
+        ],
+        [
+          "T-7D",
+          4680.0,
+          5140.0,
+          3915.0,
+          4070.0,
+          1.94,
+          1.83,
+          45.78
+        ],
+        [
+          "T-6D",
+          4105.0,
+          4465.0,
+          3975.0,
+          4355.0,
+          0.56,
+          0.5,
+          50.62
+        ],
+        [
+          "T-5D",
+          4385.0,
+          4490.0,
+          3960.0,
+          4120.0,
+          0.62,
+          0.56,
+          46.91
+        ],
+        [
+          "T-4D",
+          4020.0,
+          4285.0,
+          3970.0,
+          4180.0,
+          0.21,
+          0.18,
+          47.96
+        ],
+        [
+          "T-3D",
+          4195.0,
+          4265.0,
+          4130.0,
+          4170.0,
+          0.1,
+          0.09,
+          47.79
+        ],
+        [
+          "T+0D",
+          4280.0,
+          4390.0,
+          4050.0,
+          4325.0,
+          0.2,
+          0.18,
+          50.7
+        ],
+        [
+          "T+1D",
+          4275.0,
+          5120.0,
+          4120.0,
+          4800.0,
+          1.22,
+          1.2,
+          58.37
+        ]
+      ]
+    },
+    {
+      "assetId": "A246A4E2F0",
+      "market": "KOSDAQ",
+      "close": 15540.0,
+      "closeLocation": 0.359,
+      "atrPct": 8.12,
+      "ma": {
+        "20": 16610.0,
+        "60": 15092.0,
+        "120": 15212.67,
+        "240": 17824.33,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 0.13,
+      "volumeRatio20": 0.15,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 14380.0,
+      "setupInvalidation": 13980.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 14380.0,
+      "currentVsEntryPct": 8.07,
+      "invalidation": 13980.0,
+      "nearestAcceptedSupport": 15086.67,
+      "nextResistance": 17543.75,
+      "riskPct": 10.04,
+      "rewardPct": 12.89,
+      "structuralRR": 1.28,
+      "rsi": 44.56,
+      "rsiDirection": "WEAKENING",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 15845.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -1.92,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 15086.67,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 3.0,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 16410.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -5.3,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 14620.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.29,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 14370.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 8.14,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "SWING_LOW",
+            "TREND_BRIDGE_UP"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          18390.0,
+          19660.0,
+          17930.0,
+          18540.0,
+          3.71,
+          4.11,
+          70.69
+        ],
+        [
+          "T-11D",
+          18610.0,
+          19160.0,
+          18280.0,
+          18900.0,
+          1.03,
+          1.13,
+          72.2
+        ],
+        [
+          "T-10D",
+          19100.0,
+          19100.0,
+          17500.0,
+          17550.0,
+          0.67,
+          0.71,
+          59.73
+        ],
+        [
+          "T-7D",
+          17630.0,
+          17930.0,
+          17350.0,
+          17520.0,
+          0.2,
+          0.21,
+          59.48
+        ],
+        [
+          "T-6D",
+          17650.0,
+          17820.0,
+          16890.0,
+          17240.0,
+          0.31,
+          0.31,
+          57.12
+        ],
+        [
+          "T-5D",
+          17040.0,
+          18740.0,
+          16960.0,
+          17790.0,
+          1.21,
+          1.22,
+          60.44
+        ],
+        [
+          "T-4D",
+          17510.0,
+          17680.0,
+          16910.0,
+          16940.0,
+          0.27,
+          0.27,
+          53.54
+        ],
+        [
+          "T-3D",
+          17050.0,
+          17090.0,
+          15990.0,
+          16080.0,
+          0.26,
+          0.25,
+          47.61
+        ],
+        [
+          "T+0D",
+          15750.0,
+          15780.0,
+          15300.0,
+          15400.0,
+          0.14,
+          0.13,
+          43.5
+        ],
+        [
+          "T+1D",
+          15600.0,
+          15950.0,
+          15310.0,
+          15540.0,
+          0.15,
+          0.13,
+          44.56
+        ]
+      ]
+    },
+    {
+      "assetId": "A6CF201569",
+      "market": "KOSDAQ",
+      "close": 9058.0,
+      "closeLocation": 0.076,
+      "atrPct": 10.51,
+      "ma": {
+        "20": 9686.7,
+        "60": 8247.13,
+        "120": 7169.88,
+        "240": 8704.1,
+        "480": 10282.7,
+        "600": 10039.69,
+        "1000": 9787.36
+      },
+      "moneyRatio20": 0.54,
+      "volumeRatio20": 0.6,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 8857.51,
+      "setupInvalidation": 8700.5,
+      "readiness": "EXECUTABLE",
+      "entryReference": 8857.51,
+      "currentVsEntryPct": 2.26,
+      "invalidation": 8700.5,
+      "nearestAcceptedSupport": 8857.51,
+      "nextResistance": 9964.0,
+      "riskPct": 3.95,
+      "rewardPct": 10.0,
+      "structuralRR": 2.53,
+      "rsi": 45.89,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "RSI_BEARISH_DIVERGENCE"
+      ],
+      "nearestLevels": [
+        {
+          "line": 9113.0,
+          "role": {
+            "state": "FAILED_BREAKOUT",
+            "warnings": [],
+            "distancePct": -0.6,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 8857.51,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 2.26,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 8041.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 12.65,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 10083.0,
+          "role": {
+            "state": "BREAKDOWN_PENDING",
+            "warnings": [],
+            "distancePct": -10.17,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 10214.0,
+          "role": {
+            "state": "RESISTANCE_CANDIDATE",
+            "warnings": [],
+            "distancePct": -11.32,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          9582.0,
+          10322.0,
+          9397.0,
+          9449.0,
+          1.4,
+          1.35,
+          58.43
+        ],
+        [
+          "T-11D",
+          9582.0,
+          9774.0,
+          9113.0,
+          9187.0,
+          0.49,
+          0.46,
+          54.27
+        ],
+        [
+          "T-10D",
+          9201.0,
+          11824.0,
+          9201.0,
+          10965.0,
+          13.44,
+          14.36,
+          69.91
+        ],
+        [
+          "T-7D",
+          10846.0,
+          11919.0,
+          10679.0,
+          11871.0,
+          4.45,
+          5.11,
+          74.66
+        ],
+        [
+          "T-6D",
+          12038.0,
+          12324.0,
+          10775.0,
+          10870.0,
+          2.8,
+          3.18,
+          62.85
+        ],
+        [
+          "T-5D",
+          10894.0,
+          11752.0,
+          10798.0,
+          11394.0,
+          2.98,
+          3.24,
+          65.89
+        ],
+        [
+          "T-4D",
+          10989.0,
+          11513.0,
+          10298.0,
+          10536.0,
+          1.14,
+          1.18,
+          57.58
+        ],
+        [
+          "T-3D",
+          10727.0,
+          10751.0,
+          9988.0,
+          10179.0,
+          0.59,
+          0.59,
+          54.49
+        ],
+        [
+          "T+0D",
+          9893.0,
+          9988.0,
+          9497.0,
+          9582.0,
+          0.32,
+          0.3,
+          49.7
+        ],
+        [
+          "T+1D",
+          9797.0,
+          9916.0,
+          8987.0,
+          9058.0,
+          0.6,
+          0.54,
+          45.89
+        ]
+      ]
+    },
+    {
+      "assetId": "AB2A31134F",
+      "market": "KOSPI",
+      "close": 70700.0,
+      "closeLocation": 0.8,
+      "atrPct": 3.92,
+      "ma": {
+        "20": 67725.0,
+        "60": 57190.0,
+        "120": 54079.17,
+        "240": 56613.75,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 0.6,
+      "volumeRatio20": 0.56,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 65300.0,
+      "setupInvalidation": 62400.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 65300.0,
+      "currentVsEntryPct": 8.27,
+      "invalidation": 62400.0,
+      "nearestAcceptedSupport": 65325.0,
+      "nextResistance": null,
+      "riskPct": 11.74,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 68.53,
+      "rsiDirection": "FLAT",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 65325.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 8.23,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_LOW",
+            "TREND_BRIDGE_UP"
+          ]
+        },
+        {
+          "line": 64000.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 10.47,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 61000.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 15.9,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 60100.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 17.64,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 58400.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 21.06,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          66500.0,
+          67800.0,
+          65400.0,
+          66800.0,
+          0.47,
+          0.51,
+          67.24
+        ],
+        [
+          "T-11D",
+          66900.0,
+          71400.0,
+          66900.0,
+          68700.0,
+          1.13,
+          1.26,
+          70.47
+        ],
+        [
+          "T-10D",
+          68700.0,
+          69900.0,
+          66900.0,
+          67800.0,
+          0.42,
+          0.46,
+          67.1
+        ],
+        [
+          "T-7D",
+          68800.0,
+          69300.0,
+          67500.0,
+          68900.0,
+          0.22,
+          0.24,
+          69.05
+        ],
+        [
+          "T-6D",
+          69100.0,
+          71500.0,
+          68400.0,
+          68800.0,
+          0.42,
+          0.47,
+          68.65
+        ],
+        [
+          "T-5D",
+          71000.0,
+          71800.0,
+          69600.0,
+          69800.0,
+          0.54,
+          0.61,
+          70.48
+        ],
+        [
+          "T-4D",
+          70300.0,
+          72500.0,
+          69600.0,
+          71300.0,
+          0.65,
+          0.73,
+          73.02
+        ],
+        [
+          "T-3D",
+          71500.0,
+          71600.0,
+          69200.0,
+          70300.0,
+          0.31,
+          0.34,
+          68.77
+        ],
+        [
+          "T+0D",
+          68600.0,
+          70300.0,
+          67700.0,
+          69800.0,
+          0.55,
+          0.58,
+          66.68
+        ],
+        [
+          "T+1D",
+          70500.0,
+          71300.0,
+          68300.0,
+          70700.0,
+          0.56,
+          0.6,
+          68.53
+        ]
+      ]
+    },
+    {
+      "assetId": "A2FCFC0760",
+      "market": "KOSPI",
+      "close": 56500.0,
+      "closeLocation": 0.226,
+      "atrPct": 6.79,
+      "ma": {
+        "20": 54827.5,
+        "60": 44570.83,
+        "120": 41379.17,
+        "240": null,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 0.39,
+      "volumeRatio20": 0.37,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 54425.0,
+      "setupInvalidation": 54128.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 54425.0,
+      "currentVsEntryPct": 3.81,
+      "invalidation": 54128.0,
+      "nearestAcceptedSupport": 54425.0,
+      "nextResistance": 62486.0,
+      "riskPct": 4.2,
+      "rewardPct": 10.59,
+      "structuralRR": 2.52,
+      "rsi": 57.6,
+      "rsiDirection": "FLAT",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 54425.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 3.81,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 59100.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -4.4,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 52500.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 7.62,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 51550.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 9.6,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 62800.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -10.03,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          58300.0,
+          59600.0,
+          57700.0,
+          58800.0,
+          0.53,
+          0.59,
+          65.69
+        ],
+        [
+          "T-11D",
+          58300.0,
+          58500.0,
+          55100.0,
+          56100.0,
+          0.59,
+          0.63,
+          59.91
+        ],
+        [
+          "T-10D",
+          53600.0,
+          54600.0,
+          52800.0,
+          53700.0,
+          0.71,
+          0.71,
+          55.26
+        ],
+        [
+          "T-7D",
+          54400.0,
+          55700.0,
+          53100.0,
+          53300.0,
+          0.38,
+          0.38,
+          54.5
+        ],
+        [
+          "T-6D",
+          53900.0,
+          55700.0,
+          52500.0,
+          54800.0,
+          0.43,
+          0.44,
+          56.89
+        ],
+        [
+          "T-5D",
+          54400.0,
+          57500.0,
+          54400.0,
+          56700.0,
+          0.43,
+          0.44,
+          59.78
+        ],
+        [
+          "T-4D",
+          55700.0,
+          59000.0,
+          54800.0,
+          58300.0,
+          0.63,
+          0.66,
+          62.08
+        ],
+        [
+          "T-3D",
+          58100.0,
+          58400.0,
+          54000.0,
+          55800.0,
+          0.45,
+          0.46,
+          56.62
+        ],
+        [
+          "T+0D",
+          54400.0,
+          57700.0,
+          53600.0,
+          56700.0,
+          0.4,
+          0.41,
+          58.05
+        ],
+        [
+          "T+1D",
+          58000.0,
+          58900.0,
+          55800.0,
+          56500.0,
+          0.37,
+          0.39,
+          57.6
+        ]
+      ]
+    },
+    {
+      "assetId": "AA6E21F577",
+      "market": "KOSPI",
+      "close": 406000.0,
+      "closeLocation": 0.2,
+      "atrPct": 3.83,
+      "ma": {
+        "20": 400150.0,
+        "60": 368533.33,
+        "120": 365195.83,
+        "240": 398016.67,
+        "480": 405286.46,
+        "600": 392191.67,
+        "1000": 354501.0
+      },
+      "moneyRatio20": 0.44,
+      "volumeRatio20": 0.42,
+      "family": "HIGH_TREND_CONTINUATION",
+      "state": "HIGH_RETEST",
+      "triggerLevel": 401000.0,
+      "setupInvalidation": 340500.0,
+      "readiness": "RADAR",
+      "entryReference": 401000.0,
+      "currentVsEntryPct": 1.25,
+      "invalidation": 340500.0,
+      "nearestAcceptedSupport": 399125.0,
+      "nextResistance": 432000.0,
+      "riskPct": 16.13,
+      "rewardPct": 6.4,
+      "structuralRR": 0.4,
+      "rsi": 58.47,
+      "rsiDirection": "WEAKENING",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 408000.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -0.49,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 399125.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 1.72,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "TREND_BRIDGE_UP"
+          ]
+        },
+        {
+          "line": 388674.65,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 4.46,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 381912.65,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.31,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 373625.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 8.67,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "SWING_HIGH",
+            "SWING_LOW"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          402000.0,
+          431000.0,
+          399500.0,
+          422000.0,
+          2.06,
+          2.27,
+          74.79
+        ],
+        [
+          "T-11D",
+          428000.0,
+          444000.0,
+          420000.0,
+          426500.0,
+          1.7,
+          1.92,
+          75.89
+        ],
+        [
+          "T-10D",
+          423000.0,
+          432000.0,
+          417500.0,
+          428000.0,
+          1.03,
+          1.14,
+          76.26
+        ],
+        [
+          "T-7D",
+          435000.0,
+          435000.0,
+          418500.0,
+          421000.0,
+          0.6,
+          0.67,
+          70.78
+        ],
+        [
+          "T-6D",
+          415500.0,
+          424000.0,
+          408500.0,
+          412500.0,
+          0.77,
+          0.82,
+          64.71
+        ],
+        [
+          "T-5D",
+          415000.0,
+          419000.0,
+          402000.0,
+          405000.0,
+          0.61,
+          0.64,
+          59.83
+        ],
+        [
+          "T-4D",
+          405000.0,
+          418000.0,
+          399000.0,
+          411000.0,
+          0.55,
+          0.58,
+          62.28
+        ],
+        [
+          "T-3D",
+          417000.0,
+          417000.0,
+          406000.0,
+          411500.0,
+          0.4,
+          0.42,
+          62.48
+        ],
+        [
+          "T+0D",
+          411500.0,
+          411500.0,
+          399000.0,
+          404500.0,
+          0.6,
+          0.62,
+          57.74
+        ],
+        [
+          "T+1D",
+          408500.0,
+          412000.0,
+          404500.0,
+          406000.0,
+          0.42,
+          0.44,
+          58.47
+        ]
+      ]
+    },
+    {
+      "assetId": "AF2D8D29D5",
+      "market": "KOSDAQ",
+      "close": 10220.0,
+      "closeLocation": 0.609,
+      "atrPct": 8.38,
+      "ma": {
+        "20": 9186.75,
+        "60": 7325.63,
+        "120": 6537.88,
+        "240": 7511.86,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 1.08,
+      "volumeRatio20": 1.0,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 9249.0,
+      "setupInvalidation": 9193.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 9249.0,
+      "currentVsEntryPct": 10.5,
+      "invalidation": 9193.0,
+      "nearestAcceptedSupport": 9755.71,
+      "nextResistance": null,
+      "riskPct": 10.05,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 63.07,
+      "rsiDirection": "STRENGTHENING",
+      "warnings": [
+        "LOWER_RECLAIM",
+        "UPPER_REJECTION"
+      ],
+      "nearestLevels": [
+        {
+          "line": 10214.75,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION",
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 0.05,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 10493.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -2.6,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 9881.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 3.43,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 9755.71,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 4.76,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 9532.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 7.22,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          9174.0,
+          9457.0,
+          9080.0,
+          9155.0,
+          0.25,
+          0.27,
+          59.69
+        ],
+        [
+          "T-11D",
+          9193.0,
+          9994.0,
+          8665.0,
+          8684.0,
+          1.12,
+          1.16,
+          54.73
+        ],
+        [
+          "T-10D",
+          8750.0,
+          10540.0,
+          8741.0,
+          9749.0,
+          5.29,
+          5.66,
+          62.35
+        ],
+        [
+          "T-7D",
+          9607.0,
+          9777.0,
+          9287.0,
+          9466.0,
+          0.31,
+          0.33,
+          59.48
+        ],
+        [
+          "T-6D",
+          9494.0,
+          9532.0,
+          8901.0,
+          8957.0,
+          0.24,
+          0.24,
+          54.62
+        ],
+        [
+          "T-5D",
+          8957.0,
+          9287.0,
+          8797.0,
+          8948.0,
+          0.18,
+          0.18,
+          54.54
+        ],
+        [
+          "T-4D",
+          9089.0,
+          10135.0,
+          9014.0,
+          9165.0,
+          1.55,
+          1.61,
+          56.3
+        ],
+        [
+          "T-3D",
+          9551.0,
+          10775.0,
+          9325.0,
+          9984.0,
+          3.25,
+          3.57,
+          62.25
+        ],
+        [
+          "T+0D",
+          10154.0,
+          10540.0,
+          9400.0,
+          9777.0,
+          0.78,
+          0.84,
+          60.02
+        ],
+        [
+          "T+1D",
+          9777.0,
+          10559.0,
+          9692.0,
+          10220.0,
+          1.0,
+          1.08,
+          63.07
+        ]
+      ]
+    },
+    {
+      "assetId": "ABAC025F11",
+      "market": "KOSPI",
+      "close": 12500.0,
+      "closeLocation": 0.706,
+      "atrPct": 11.38,
+      "ma": {
+        "20": 15519.0,
+        "60": 11114.0,
+        "120": 10113.75,
+        "240": 9325.92,
+        "480": null,
+        "600": null,
+        "1000": null
+      },
+      "moneyRatio20": 0.09,
+      "volumeRatio20": 0.11,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 11852.0,
+      "setupInvalidation": 11750.95,
+      "readiness": "EXECUTABLE",
+      "entryReference": 11852.0,
+      "currentVsEntryPct": 5.47,
+      "invalidation": 11750.95,
+      "nearestAcceptedSupport": 11852.0,
+      "nextResistance": 14069.3,
+      "riskPct": 5.99,
+      "rewardPct": 12.55,
+      "structuralRR": 2.1,
+      "rsi": 42.34,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "RSI_BEARISH_DIVERGENCE"
+      ],
+      "nearestLevels": [
+        {
+          "line": 12416.67,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": 0.67,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 11852.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 5.47,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 11313.44,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 10.49,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "EVENT_CLOSE",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 14140.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -11.6,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 10655.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 17.32,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          17930.0,
+          18740.0,
+          16760.0,
+          17270.0,
+          0.74,
+          0.92,
+          71.61
+        ],
+        [
+          "T-11D",
+          17280.0,
+          18010.0,
+          16550.0,
+          16730.0,
+          0.62,
+          0.74,
+          67.32
+        ],
+        [
+          "T-10D",
+          16980.0,
+          17060.0,
+          15800.0,
+          16150.0,
+          0.37,
+          0.42,
+          62.96
+        ],
+        [
+          "T-7D",
+          16020.0,
+          16650.0,
+          15170.0,
+          16300.0,
+          0.51,
+          0.56,
+          63.61
+        ],
+        [
+          "T-6D",
+          16310.0,
+          16370.0,
+          14220.0,
+          14550.0,
+          0.52,
+          0.53,
+          52.02
+        ],
+        [
+          "T-5D",
+          14460.0,
+          14640.0,
+          13860.0,
+          13900.0,
+          0.27,
+          0.25,
+          48.49
+        ],
+        [
+          "T-4D",
+          13950.0,
+          14130.0,
+          13030.0,
+          13280.0,
+          0.3,
+          0.26,
+          45.33
+        ],
+        [
+          "T-3D",
+          13230.0,
+          13250.0,
+          12520.0,
+          12670.0,
+          0.33,
+          0.28,
+          42.4
+        ],
+        [
+          "T+0D",
+          12380.0,
+          12840.0,
+          12100.0,
+          12160.0,
+          0.11,
+          0.09,
+          40.06
+        ],
+        [
+          "T+1D",
+          12400.0,
+          12650.0,
+          12140.0,
+          12500.0,
+          0.11,
+          0.09,
+          42.34
+        ]
+      ]
+    },
+    {
+      "assetId": "AF59EB04D4",
+      "market": "KOSPI",
+      "close": 1982.0,
+      "closeLocation": 0.25,
+      "atrPct": 12.3,
+      "ma": {
+        "20": 1929.8,
+        "60": 1461.98,
+        "120": 1424.9,
+        "240": 1551.98,
+        "480": 1584.62,
+        "600": 1649.24,
+        "1000": 1978.02
+      },
+      "moneyRatio20": 0.31,
+      "volumeRatio20": 0.31,
+      "family": "HIGH_TREND_CONTINUATION",
+      "state": "HIGH_RETEST",
+      "triggerLevel": 1906.0,
+      "setupInvalidation": 1274.0,
+      "readiness": "RADAR",
+      "entryReference": 1906.0,
+      "currentVsEntryPct": 3.99,
+      "invalidation": 1274.0,
+      "nearestAcceptedSupport": 1791.15,
+      "nextResistance": 2051.69,
+      "riskPct": 35.72,
+      "rewardPct": 3.52,
+      "structuralRR": 0.1,
+      "rsi": 56.52,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "RSI_BEARISH_DIVERGENCE",
+        "UPPER_REJECTION"
+      ],
+      "nearestLevels": [
+        {
+          "line": 2034.5,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -2.58,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        },
+        {
+          "line": 2074.75,
+          "role": {
+            "state": "RESISTANCE_CANDIDATE",
+            "warnings": [],
+            "distancePct": -4.47,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 1855.17,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION"
+            ],
+            "distancePct": 6.84,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 1791.15,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 10.66,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 2185.0,
+          "role": {
+            "state": "RESISTANCE_CANDIDATE",
+            "warnings": [],
+            "distancePct": -9.29,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          2211.0,
+          2443.0,
+          2099.0,
+          2240.0,
+          8.21,
+          10.23,
+          76.95
+        ],
+        [
+          "T-11D",
+          2229.0,
+          2311.0,
+          2172.0,
+          2240.0,
+          1.58,
+          1.83,
+          76.95
+        ],
+        [
+          "T-10D",
+          2224.0,
+          2371.0,
+          2174.0,
+          2242.0,
+          1.56,
+          1.79,
+          76.99
+        ],
+        [
+          "T-7D",
+          2285.0,
+          2304.0,
+          2060.0,
+          2064.0,
+          0.61,
+          0.68,
+          66.18
+        ],
+        [
+          "T-6D",
+          2064.0,
+          2302.0,
+          2032.0,
+          2101.0,
+          1.86,
+          1.97,
+          67.21
+        ],
+        [
+          "T-5D",
+          2081.0,
+          2190.0,
+          1982.0,
+          2016.0,
+          0.51,
+          0.53,
+          62.49
+        ],
+        [
+          "T-4D",
+          2034.0,
+          2051.0,
+          1873.0,
+          1899.0,
+          0.31,
+          0.3,
+          56.61
+        ],
+        [
+          "T-3D",
+          1884.0,
+          2306.0,
+          1852.0,
+          2185.0,
+          3.01,
+          3.07,
+          65.23
+        ],
+        [
+          "T+0D",
+          2181.0,
+          2279.0,
+          1986.0,
+          2019.0,
+          0.73,
+          0.76,
+          58.02
+        ],
+        [
+          "T+1D",
+          2019.0,
+          2081.0,
+          1949.0,
+          1982.0,
+          0.31,
+          0.31,
+          56.52
+        ]
+      ]
+    },
+    {
+      "assetId": "A8FA1922F4",
+      "market": "KOSDAQ",
+      "close": 61100.0,
+      "closeLocation": 1.0,
+      "atrPct": 10.25,
+      "ma": {
+        "20": 50225.0,
+        "60": 48494.17,
+        "120": 38493.25,
+        "240": 29715.83,
+        "480": 22984.38,
+        "600": 21282.67,
+        "1000": 26294.3
+      },
+      "moneyRatio20": 2.14,
+      "volumeRatio20": 2.0,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "triggerLevel": 47450.0,
+      "setupInvalidation": 46500.0,
+      "readiness": "EXECUTABLE",
+      "entryReference": 47450.0,
+      "currentVsEntryPct": 28.77,
+      "invalidation": 46500.0,
+      "nearestAcceptedSupport": 57275.0,
+      "nextResistance": null,
+      "riskPct": 23.9,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 61.66,
+      "rsiDirection": "STRENGTHENING",
+      "warnings": [
+        "LOWER_RECLAIM"
+      ],
+      "nearestLevels": [
+        {
+          "line": 59450.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [],
+            "distancePct": 2.78,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 57275.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 6.68,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 53200.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 14.85,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 50441.67,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [
+              "LOWER_RECLAIM"
+            ],
+            "distancePct": 21.13,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "EVENT_CLOSE",
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 48500.0,
+          "role": {
+            "state": "BREAKOUT_PENDING",
+            "warnings": [],
+            "distancePct": 25.98,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          55300.0,
+          55700.0,
+          49850.0,
+          50300.0,
+          1.37,
+          1.4,
+          50.4
+        ],
+        [
+          "T-11D",
+          48200.0,
+          50000.0,
+          45000.0,
+          45300.0,
+          1.46,
+          1.33,
+          42.41
+        ],
+        [
+          "T-10D",
+          41400.0,
+          44600.0,
+          41050.0,
+          41150.0,
+          1.03,
+          0.84,
+          37.16
+        ],
+        [
+          "T-7D",
+          40400.0,
+          42000.0,
+          38500.0,
+          41000.0,
+          1.2,
+          0.95,
+          36.98
+        ],
+        [
+          "T-6D",
+          40200.0,
+          40850.0,
+          38150.0,
+          39000.0,
+          0.57,
+          0.45,
+          34.59
+        ],
+        [
+          "T-5D",
+          39200.0,
+          50700.0,
+          38900.0,
+          50700.0,
+          7.24,
+          6.49,
+          53.5
+        ],
+        [
+          "T-4D",
+          57200.0,
+          62500.0,
+          54000.0,
+          54700.0,
+          5.29,
+          6.22,
+          57.97
+        ],
+        [
+          "T-3D",
+          53100.0,
+          54200.0,
+          48000.0,
+          49000.0,
+          1.28,
+          1.3,
+          50.51
+        ],
+        [
+          "T+0D",
+          47000.0,
+          50700.0,
+          45150.0,
+          47000.0,
+          0.73,
+          0.69,
+          48.17
+        ],
+        [
+          "T+1D",
+          47300.0,
+          61100.0,
+          46250.0,
+          61100.0,
+          2.0,
+          2.14,
+          61.66
+        ]
+      ]
+    },
+    {
+      "assetId": "A5F557F226",
+      "market": "KOSPI",
+      "close": 48700.0,
+      "closeLocation": 0.0,
+      "atrPct": 2.02,
+      "ma": {
+        "20": 49197.5,
+        "60": 47014.17,
+        "120": 45507.5,
+        "240": 41457.92,
+        "480": 37343.44,
+        "600": 36691.75,
+        "1000": 35313.8
+      },
+      "moneyRatio20": 0.9,
+      "volumeRatio20": 0.89,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 47774.69,
+      "setupInvalidation": 47461.5,
+      "readiness": "EXECUTABLE",
+      "entryReference": 47774.69,
+      "currentVsEntryPct": 1.94,
+      "invalidation": 47461.5,
+      "nearestAcceptedSupport": 47774.69,
+      "nextResistance": 51242.5,
+      "riskPct": 2.54,
+      "rewardPct": 5.22,
+      "structuralRR": 2.05,
+      "rsi": 49.28,
+      "rsiDirection": "WEAKENING",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 48475.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": 0.46,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 47774.69,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 1.94,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "TRADE_DENSITY"
+          ]
+        },
+        {
+          "line": 49795.45,
+          "role": {
+            "state": "BREAKDOWN_PENDING",
+            "warnings": [],
+            "distancePct": -2.2,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "BOX_CLOSE",
+            "SWING_HIGH",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 47100.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 3.4,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_HIGH",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 46200.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 5.41,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          49800.0,
+          50900.0,
+          49700.0,
+          50700.0,
+          0.96,
+          1.0,
+          67.11
+        ],
+        [
+          "T-11D",
+          50800.0,
+          51500.0,
+          50400.0,
+          50700.0,
+          0.76,
+          0.8,
+          67.11
+        ],
+        [
+          "T-10D",
+          50200.0,
+          51000.0,
+          49750.0,
+          49750.0,
+          0.58,
+          0.6,
+          59.57
+        ],
+        [
+          "T-7D",
+          49550.0,
+          49950.0,
+          49300.0,
+          49600.0,
+          0.5,
+          0.52,
+          58.46
+        ],
+        [
+          "T-6D",
+          49250.0,
+          50000.0,
+          49250.0,
+          50000.0,
+          0.36,
+          0.37,
+          60.58
+        ],
+        [
+          "T-5D",
+          50400.0,
+          50500.0,
+          49800.0,
+          49800.0,
+          0.48,
+          0.5,
+          58.96
+        ],
+        [
+          "T-4D",
+          49450.0,
+          50600.0,
+          49450.0,
+          49850.0,
+          0.59,
+          0.6,
+          59.25
+        ],
+        [
+          "T-3D",
+          49650.0,
+          50000.0,
+          49400.0,
+          49850.0,
+          0.47,
+          0.48,
+          59.25
+        ],
+        [
+          "T+0D",
+          49300.0,
+          49800.0,
+          48850.0,
+          49600.0,
+          0.77,
+          0.78,
+          56.89
+        ],
+        [
+          "T+1D",
+          49800.0,
+          50000.0,
+          48700.0,
+          48700.0,
+          0.89,
+          0.9,
+          49.28
+        ]
+      ]
+    },
+    {
+      "assetId": "ACD34CC623",
+      "market": "KOSPI",
+      "close": 37950.0,
+      "closeLocation": 0.274,
+      "atrPct": 4.97,
+      "ma": {
+        "20": 41252.5,
+        "60": 42780.83,
+        "120": 40918.33,
+        "240": 39549.58,
+        "480": 40172.5,
+        "600": 41393.0,
+        "1000": 47718.95
+      },
+      "moneyRatio20": 1.5,
+      "volumeRatio20": 1.63,
+      "family": "ROLE_REVERSAL",
+      "state": "LEVEL_RETEST",
+      "triggerLevel": 36666.67,
+      "setupInvalidation": 36466.75,
+      "readiness": "EXECUTABLE",
+      "entryReference": 36666.67,
+      "currentVsEntryPct": 3.5,
+      "invalidation": 36466.75,
+      "nearestAcceptedSupport": 36666.67,
+      "nextResistance": 40943.75,
+      "riskPct": 3.91,
+      "rewardPct": 7.89,
+      "structuralRR": 2.02,
+      "rsi": 36.53,
+      "rsiDirection": "WEAKENING",
+      "warnings": [
+        "UPPER_REJECTION"
+      ],
+      "nearestLevels": [
+        {
+          "line": 38370.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION"
+            ],
+            "distancePct": -1.09,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY",
+            "EVENT_CLOSE"
+          ]
+        },
+        {
+          "line": 37300.0,
+          "role": {
+            "state": "SPRING_RECLAIM",
+            "warnings": [],
+            "distancePct": 1.74,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 36666.67,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 3.5,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 39610.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [],
+            "distancePct": -4.19,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "BOX_LOWER",
+            "EVENT_BODY",
+            "EVENT_CLOSE",
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 35950.0,
+          "role": {
+            "state": "DECISION_ZONE",
+            "warnings": [
+              "UPPER_REJECTION"
+            ],
+            "distancePct": 5.56,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "EVENT_BODY"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          41500.0,
+          41825.0,
+          40750.0,
+          41300.0,
+          0.58,
+          0.56,
+          44.4
+        ],
+        [
+          "T-11D",
+          41800.0,
+          42150.0,
+          40800.0,
+          41000.0,
+          0.87,
+          0.84,
+          43.23
+        ],
+        [
+          "T-10D",
+          41000.0,
+          41250.0,
+          40250.0,
+          40300.0,
+          0.85,
+          0.81,
+          40.53
+        ],
+        [
+          "T-7D",
+          40200.0,
+          42950.0,
+          40200.0,
+          42150.0,
+          1.32,
+          1.3,
+          49.49
+        ],
+        [
+          "T-6D",
+          44700.0,
+          45600.0,
+          43300.0,
+          43700.0,
+          1.89,
+          1.99,
+          55.53
+        ],
+        [
+          "T-5D",
+          43750.0,
+          44100.0,
+          42500.0,
+          42850.0,
+          0.76,
+          0.78,
+          51.87
+        ],
+        [
+          "T-4D",
+          41400.0,
+          41950.0,
+          39500.0,
+          39700.0,
+          1.95,
+          1.88,
+          41.06
+        ],
+        [
+          "T-3D",
+          39150.0,
+          40000.0,
+          38450.0,
+          40000.0,
+          0.75,
+          0.7,
+          42.29
+        ],
+        [
+          "T+0D",
+          38800.0,
+          39000.0,
+          37950.0,
+          38600.0,
+          0.59,
+          0.55,
+          38.26
+        ],
+        [
+          "T+1D",
+          38400.0,
+          40200.0,
+          37100.0,
+          37950.0,
+          1.63,
+          1.5,
+          36.53
+        ]
+      ]
+    }
+  ],
+  "heldAnalysis": [
+    {
+      "assetId": "A0E433D981",
+      "market": "KOSPI",
+      "close": 80200.0,
+      "closeLocation": 0.375,
+      "atrPct": 4.08,
+      "ma": {
+        "20": 81925.0,
+        "60": 72571.67,
+        "120": 67802.5,
+        "240": 64354.17,
+        "480": 70937.5,
+        "600": 76977.5,
+        "1000": 102919.7
+      },
+      "moneyRatio20": 0.42,
+      "volumeRatio20": 0.43,
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_ACTIVE",
+      "triggerLevel": 75100.0,
+      "setupInvalidation": 70600.0,
+      "readiness": "RADAR",
+      "entryReference": 75100.0,
+      "currentVsEntryPct": 6.79,
+      "invalidation": 70600.0,
+      "nearestAcceptedSupport": 75075.0,
+      "nextResistance": null,
+      "riskPct": 11.97,
+      "rewardPct": null,
+      "structuralRR": null,
+      "rsi": 52.7,
+      "rsiDirection": "FLAT",
+      "warnings": [],
+      "nearestLevels": [
+        {
+          "line": 80800.0,
+          "role": {
+            "state": "FAILED_BREAKOUT",
+            "warnings": [],
+            "distancePct": -0.74,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_LOW"
+          ]
+        },
+        {
+          "line": 78500.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 2.17,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 76100.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 5.39,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 85100.0,
+          "role": {
+            "state": "ACCEPTED_RESISTANCE",
+            "warnings": [],
+            "distancePct": -5.76,
+            "decisionRelevant": false
+          },
+          "importance": "SUPPORTING",
+          "kinds": [
+            "SWING_HIGH"
+          ]
+        },
+        {
+          "line": 75075.0,
+          "role": {
+            "state": "ACCEPTED_SUPPORT",
+            "warnings": [],
+            "distancePct": 6.83,
+            "decisionRelevant": true
+          },
+          "importance": "CORE",
+          "kinds": [
+            "SWING_LOW",
+            "TREND_BRIDGE_UP"
+          ]
+        }
+      ],
+      "dailyLast10": [
+        [
+          "T-12D",
+          80300.0,
+          81000.0,
+          75000.0,
+          78000.0,
+          1.02,
+          1.01,
+          51.44
+        ],
+        [
+          "T-11D",
+          78800.0,
+          81200.0,
+          78300.0,
+          78900.0,
+          0.57,
+          0.57,
+          53.46
+        ],
+        [
+          "T-10D",
+          80300.0,
+          85100.0,
+          80300.0,
+          83700.0,
+          1.31,
+          1.34,
+          62.45
+        ],
+        [
+          "T-7D",
+          83400.0,
+          84000.0,
+          82100.0,
+          82600.0,
+          0.31,
+          0.32,
+          59.61
+        ],
+        [
+          "T-6D",
+          82200.0,
+          82900.0,
+          79700.0,
+          80400.0,
+          0.5,
+          0.5,
+          54.29
+        ],
+        [
+          "T-5D",
+          80900.0,
+          82200.0,
+          80100.0,
+          80300.0,
+          0.27,
+          0.27,
+          54.05
+        ],
+        [
+          "T-4D",
+          80000.0,
+          83800.0,
+          79900.0,
+          81800.0,
+          0.67,
+          0.67,
+          57.07
+        ],
+        [
+          "T-3D",
+          81900.0,
+          83500.0,
+          81000.0,
+          81300.0,
+          0.47,
+          0.47,
+          55.76
+        ],
+        [
+          "T+0D",
+          80600.0,
+          81300.0,
+          78200.0,
+          81100.0,
+          0.66,
+          0.65,
+          55.21
+        ],
+        [
+          "T+1D",
+          79700.0,
+          81700.0,
+          79300.0,
+          80200.0,
+          0.43,
+          0.42,
+          52.7
+        ]
+      ],
+      "heldDailyLast15": [
+        [
+          -14,
+          83300.0,
+          85800.0,
+          80800.0,
+          82300.0,
+          0.7
+        ],
+        [
+          -13,
+          82400.0,
+          84500.0,
+          81900.0,
+          83200.0,
+          0.84
+        ],
+        [
+          -12,
+          84600.0,
+          85000.0,
+          82900.0,
+          84100.0,
+          0.36
+        ],
+        [
+          -11,
+          84300.0,
+          84700.0,
+          81300.0,
+          82900.0,
+          0.77
+        ],
+        [
+          -10,
+          83000.0,
+          83400.0,
+          80200.0,
+          80400.0,
+          0.58
+        ],
+        [
+          -9,
+          80300.0,
+          81000.0,
+          75000.0,
+          78000.0,
+          1.02
+        ],
+        [
+          -8,
+          78800.0,
+          81200.0,
+          78300.0,
+          78900.0,
+          0.57
+        ],
+        [
+          -7,
+          80300.0,
+          85100.0,
+          80300.0,
+          83700.0,
+          1.31
+        ],
+        [
+          -6,
+          83400.0,
+          84000.0,
+          82100.0,
+          82600.0,
+          0.31
+        ],
+        [
+          -5,
+          82200.0,
+          82900.0,
+          79700.0,
+          80400.0,
+          0.5
+        ],
+        [
+          -4,
+          80900.0,
+          82200.0,
+          80100.0,
+          80300.0,
+          0.27
+        ],
+        [
+          -3,
+          80000.0,
+          83800.0,
+          79900.0,
+          81800.0,
+          0.67
+        ],
+        [
+          -2,
+          81900.0,
+          83500.0,
+          81000.0,
+          81300.0,
+          0.47
+        ],
+        [
+          -1,
+          80600.0,
+          81300.0,
+          78200.0,
+          81100.0,
+          0.66
+        ],
+        [
+          0,
+          79700.0,
+          81700.0,
+          79300.0,
+          80200.0,
+          0.43
+        ]
+      ]
+    }
+  ]
+}
