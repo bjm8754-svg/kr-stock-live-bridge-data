@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":3,
+  "relativeDay":15,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The BTC probe did not hit its hard stop, but the thesis weakened materially: price pushed toward the 50-day area and then sharply rejected back below the 20-day structure, while ETH also deteriorated. Do not wait for the stop when the reclaim logic has failed. Exit the BTC probe and return to 100% cash until price rebuilds acceptance."
+}
