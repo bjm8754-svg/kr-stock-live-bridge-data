@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/stock_blind_walkforward.py"
+      - "scripts/stock_blind_runner.py"
       - "research/stock_blind/ACTIVE_EPISODE.json"
       - "research/stock_blind/episodes/**/decisions/**"
       - ".github/workflows/stock-blind-walkforward.yml"
@@ -42,7 +43,7 @@ jobs:
           PY
 
       - name: Build blind stock card and portfolio state
-        run: python scripts/stock_blind_walkforward.py
+        run: python scripts/stock_blind_runner.py
 
       - name: Guard blind card
         run: |
