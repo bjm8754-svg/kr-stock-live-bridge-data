@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":5,
+  "relativeDay":25,
+  "verdict":"HOLD",
+  "portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":100.0}],
+  "cashPct":85,
+  "rationale":"The second BTC probe is nearly flat and has not invalidated. Price is still holding around the 20-day area and above the 100-day structure, but the 50-day line remains overhead and ETH continues to lag. Maintain the 15% BTC spot probe, do not add, and raise the stop to 100.0 to require the developing higher-low/reclaim structure to keep holding."
+}
