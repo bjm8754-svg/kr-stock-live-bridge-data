@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":19,
+  "relativeDay":95,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Staying in cash avoided additional damage while both assets lost their 20-day structures and shifted from clean trend continuation into broad high-volatility ranges. BTC remains above its longer-term averages, but current price is below the short-term role zone and has not established a defended higher low or accepted breakout. Stay fully in cash until the range resolves or support is clearly reclaimed and held."
+}
