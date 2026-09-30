@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":20,
+  "relativeDay":100,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The ETH add failed and both assets are now back below their 20/50-day structures. Recent action is high-participation whipsaw: sharp breakdown, rebound, then another rejection. Repeated re-entry in this regime is likely to erode the earlier trend gain. Stay fully in cash until volatility compresses and a cleaner structural role emerges."
+}
