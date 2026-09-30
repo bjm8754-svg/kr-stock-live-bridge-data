@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":21,
+  "relativeDay":105,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both BTC and ETH are now below their 20-, 50-, and 100-day structures, with ETH making a fresh lower-range low. This is broader structural deterioration rather than a normal trend pullback. Stay fully in cash and require a meaningful base/reclaim before considering any new long exposure."
+}
