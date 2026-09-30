@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":12,
+  "relativeDay":60,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC is hovering just below its 20-day line but remains materially below the 50- and 100-day structures, while ETH remains weaker and below all major references. Stabilization alone is not enough after repeated failed reclaims in this episode. Stay fully in cash until a reclaim is followed by actual acceptance or a clear higher-low sequence develops."
+}
