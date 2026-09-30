@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":17,
+  "relativeDay":85,
+  "verdict":"CASH_AFTER_CAPITULATION",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The no-chase decision avoided a major liquidation event. BTC and ETH both broke sharply through all nearby structure on exceptional range/participation. Extremely low BTC RSI is a condition, not a reversal signal. Do not catch the first bounce after capitulation; require the liquidation low to hold and a new role-reversal/base to form."
+}
