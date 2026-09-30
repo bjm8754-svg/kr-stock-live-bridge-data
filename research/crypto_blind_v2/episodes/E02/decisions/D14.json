@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":14,
+  "relativeDay":70,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC failed to accept above the 127-128 supply zone and has fallen back below its 20/50-day cluster; ETH is similarly weak around/below its 20/50-day structure. This is still a lower-range test, not a confirmed support reversal. Stay fully in cash until the 115-118 region either proves durable support with a reclaim or the broader uptrend clearly deteriorates."
+}
