@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":12,
+  "relativeDay":60,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":120.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":25,"stop":120.5}
+  ],
+  "cashPct":40,
+  "rationale":"The larger BTC allocation worked as intended and the structure remains strong: price expanded to a new high, then held above the prior breakout area while RSI cooled into the low-70s. Do not reduce a working trend merely because the account has gained. Keep the 35% spot and 25% daily-2x sleeves, but trail the stop to 120.5 to lock in a meaningful portion of the move. ETH has gone near-vertical with RSI in the mid-80s and is not chased after the expansion."
+}
