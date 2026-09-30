@@ -1,0 +1,32 @@
+{
+  "step": 0,
+  "portfolio": [
+    {
+      "assetId": "AA5789FD84",
+      "capitalPct": 25,
+      "action": "ENTER",
+      "stop": 266500,
+      "target": null,
+      "thesis": "Strong rising multi-MA structure with accepted box breakout/retest around 275000; current location is close enough to the actionable role-reversal area and participation remains supportive. No manufactured target where no real overhead structural resistance is visible."
+    },
+    {
+      "assetId": "AF3D02A914",
+      "capitalPct": 20,
+      "action": "ENTER",
+      "stop": 58000,
+      "target": 67000,
+      "thesis": "Box breakout and retest has held, with the latest close recovering strongly above 60300. Use the deeper role-reversal invalidation near 58000 rather than the machine's overly tight 60200 line; first meaningful overhead supply is around the long-term MA240/67000 area."
+    },
+    {
+      "assetId": "A0E433D981",
+      "capitalPct": 15,
+      "action": "ENTER",
+      "stop": 74100,
+      "target": null,
+      "thesis": "Established rising trend with MA20 above MA60 above MA120, repeated high retest behavior and low current participation during the pullback. Position is smaller because structural invalidation is relatively wide."
+    }
+  ],
+  "cashPct": 40,
+  "portfolioView": "Selective risk-on. KOSPI is choppy rather than broadly impulsive and KOSDAQ is weakening, so keep dry powder for the next full-market discovery. Existing positions must compete with fresh candidates at the next review; rotate if a materially better setup appears.",
+  "blindIntegrity": "Decision made only from S01 step-0 blinded market context and candidate readouts; no hidden identity, calendar date or future data used."
+}
