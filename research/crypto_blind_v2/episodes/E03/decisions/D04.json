@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":4,
+  "relativeDay":20,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC intraday tested the 109 supply zone but was rejected back to 101.7 on roughly twice normal participation, while ETH returned to the lower end of its recent range. This confirms overhead supply rather than a breakout. Stay fully in cash."
+}
