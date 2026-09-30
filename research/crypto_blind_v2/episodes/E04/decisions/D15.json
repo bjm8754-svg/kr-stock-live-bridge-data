@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":15,
+  "relativeDay":75,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":77.0},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":10,"stop":81.5}
+  ],
+  "cashPct":75,
+  "rationale":"This reclaim has a different shape from the prior squeeze attempts. ETH swept below the established low and immediately recovered, then rebuilt above the 20-day line; BTC also held its base lows and moved back above the 20-day structure. Treat it as a spring/reclaim probe, not an attack: use small spot sleeves only and require further confirmation above the 50-day structures before adding leverage."
+}
