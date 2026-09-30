@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":19,
+  "relativeDay":95,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The D18 attack failed and both BTC sleeves were stopped at 128. BTC has bounced back above the 20-day line, but this is only the first reclaim after a whipsaw and the recent range has repeatedly crossed the same area. Do not re-attack immediately after a valid stop. Stay fully in cash until the 128-131 zone is accepted for several sessions or a cleaner breakout/retest sequence appears. ETH is also below its 20-day structure and provides no reason to override the wait."
+}
