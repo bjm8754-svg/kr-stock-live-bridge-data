@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":13,
+  "relativeDay":65,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":82.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":78.0}
+  ],
+  "cashPct":75,
+  "rationale":"Unlike the earlier one-day squeeze/reclaim attempts, both assets have now spent multiple weeks building a base above the washout lows and have moved back above their 20-day structures. The 50- and 100-day references remain overhead, so this is only a probe. Use small spot-only sleeves with invalidation beneath the recent higher-low areas and keep most capital in cash."
+}
