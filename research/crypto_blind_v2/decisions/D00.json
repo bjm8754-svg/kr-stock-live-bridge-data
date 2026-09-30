@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":0,
+  "relativeDay":0,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":89.2},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":92.8}
+  ],
+  "cashPct":65,
+  "rationale":"Both higher-timeframe structures are still strongly rising, but the immediately preceding vertical expansion and violent rejection make aggressive exposure unattractive. ETH is slightly cleaner around its 20-day structure; BTC volatility is higher. Start small, require the reclaimed selloff lows to hold, and keep most capital available for confirmation or failure. No 2x exposure yet."
+}
