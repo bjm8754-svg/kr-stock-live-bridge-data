@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":20,
+  "relativeDay":100,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets have suffered a violent breakdown after the failed higher-timeframe reclaim. BTC and ETH are now well below their 20-, 50- and 100-day structures, and the current RSI readings are not sufficient evidence of a bottom. The prior ETH stop prevented a much larger loss; do not negate that discipline by immediately bottom-fishing after the crash. Stay fully in cash until price forms a new base or a durable reclaim with time acceptance."
+}
