@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":11,
+  "relativeDay":55,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC is stabilizing above its longer-term reference but still has not accepted back above the 20/50-day cluster around 98-100. ETH remains below all nearby trend references. The current range is a possible base, not yet a confirmed role reversal. Preserve capital and wait for acceptance rather than front-running another bottom."
+}
