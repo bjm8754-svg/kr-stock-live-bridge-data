@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":7,
+  "relativeDay":35,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":92.0}
+  ],
+  "cashPct":80,
+  "rationale":"BTC remains structurally weak near fresh lows. ETH is showing relative strength: it remains above the 100-day structure, has reclaimed the 20-day line, and is pressing the 50-day area after forming a higher low versus the prior washout. Take a small spot probe with a 92 invalidation, but do not add 2x until the 50-day structure is reclaimed and accepted."
+}
