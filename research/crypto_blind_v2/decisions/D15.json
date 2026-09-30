@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":15,
+  "relativeDay":75,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC is compressing constructively above its 20-day mean, but remains directly beneath the 50/100-day cluster and has not accepted through it. ETH has rallied into its 50-day resistance while short-term RSI is already elevated. After repeated false reclaims, require the resistance cluster to become support before committing capital."
+}
