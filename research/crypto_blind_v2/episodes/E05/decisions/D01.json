@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":1,
+  "relativeDay":5,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Five days of stabilization have prevented an immediate continuation lower, but neither asset has converted the lost 20- and 50-day structures back into support. BTC is only hovering around its 100-day line and ETH remains below its short/intermediate moving averages. Stability alone is not enough after a violent breakdown; remain fully in cash until a genuine reclaim or higher-low structure is visible."
+}
