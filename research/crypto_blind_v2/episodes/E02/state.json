@@ -1,13 +1,38 @@
 {
   "schema": "CRYPTO_BLIND_V2_STATE",
   "episodeId": "E02",
-  "step": 0,
-  "relativeDay": 0,
+  "step": 1,
+  "relativeDay": 5,
   "episodeCommitment": "792fe6c3bcfbc2dceef29c301e4974af308f687275474117cde585306020a254",
-  "equityKrw": 10000000.0,
-  "returnPct": 0.0,
-  "maxDrawdownPct": 0.0,
-  "previousInterval": null,
-  "decisionsLocked": 0,
+  "equityKrw": 9793307.88,
+  "returnPct": -2.067,
+  "maxDrawdownPct": -2.067,
+  "previousInterval": {
+    "step": 0,
+    "startEquity": 10000000.0,
+    "endEquity": 9793307.88,
+    "returnPct": -2.067,
+    "sleeves": [
+      {
+        "symbol": "BTCUSDT",
+        "vehicle": "SPOT",
+        "capitalPct": 25,
+        "startValue": 2500000.0,
+        "endValue": 2375000.0,
+        "stopped": true,
+        "stopDay": 4
+      },
+      {
+        "symbol": "ETHUSDT",
+        "vehicle": "SPOT",
+        "capitalPct": 20,
+        "startValue": 2000000.0,
+        "endValue": 1918307.88,
+        "stopped": false,
+        "stopDay": null
+      }
+    ]
+  },
+  "decisionsLocked": 1,
   "futureIncluded": false
 }
