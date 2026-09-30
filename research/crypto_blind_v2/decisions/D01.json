@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":1,
+  "relativeDay":5,
+  "verdict":"ADD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":96.8},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":30,"stop":95.2}
+  ],
+  "cashPct":45,
+  "rationale":"The violent selloff lows held and both assets reclaimed their 20-day structures with momentum reset near neutral. This improves asymmetry enough to add, but the prior blowoff highs still create meaningful overhead supply. Increase spot exposure while keeping 45% cash; defer 2x until price accepts above the nearer resistance zone rather than merely rebounding inside it."
+}
