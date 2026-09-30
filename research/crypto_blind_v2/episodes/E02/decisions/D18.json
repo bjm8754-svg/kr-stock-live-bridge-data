@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":18,
+  "relativeDay":90,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":25,"stop":111.0},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":113.0}
+  ],
+  "cashPct":60,
+  "rationale":"The prior ETH probe was correctly stopped, but a new structure has now formed: both assets stabilized for several sessions and then printed high-participation rebound candles. ETH has reclaimed both its 20- and 50-day averages and is the stronger asset; BTC has reclaimed the 20-day and is testing the 50-day. Treat this as a fresh probe, not a continuation of the stopped trade. Use spot only until the reclaim is held."
+}
