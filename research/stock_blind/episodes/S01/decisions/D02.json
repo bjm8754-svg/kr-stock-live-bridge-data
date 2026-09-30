@@ -1,0 +1,29 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S01",
+  "step": 2,
+  "portfolio": [
+    {
+      "assetId": "A6D0F8C842",
+      "action": "HOLD",
+      "capitalPct": 25.7,
+      "entryReference": 351000,
+      "stop": 334000,
+      "target": null,
+      "reason": "Existing leader remains above the reclaimed 346k box-upper/role-reversal zone with a rising 20/60/120-day structure. The latest pullback/retest is being accepted rather than rejected. Raise the structural stop beneath the current base, but do not overtrade normal swing noise."
+    },
+    {
+      "assetId": "A0E433D981",
+      "action": "ADD",
+      "capitalPct": 30.0,
+      "entryReference": 88400,
+      "stop": 79800,
+      "target": null,
+      "reason": "Best capital-allocation opportunity in the current blind card. Price reclaimed the 87.9k box-upper area and closed almost at the session high while trading value expanded to about 1.9x normal. This is stronger confirmation than at the initial entry, so scale the swing rather than leave the strongest holding undersized. Keep a swing-width structural stop near the prior accepted 80k zone rather than a tight one-day stop."
+    }
+  ],
+  "cashPct": 44.3,
+  "portfolioThesis": "The broad indices remain corrective, so maintain meaningful cash, but capital should concentrate in the few holdings showing clear relative strength and fresh acceptance. Do not rotate into oversold support tests, weak-volume rebounds, or vertical event candles merely because the machine labels them executable.",
+  "rotationRule": "Continue full-market discovery at the next review. Either holding can be reduced or rotated before a nominal target if its accepted support fails or a materially stronger asymmetric swing appears. Do not average down through structural failure.",
+  "notes": "Locked blind D02 decision. No hidden date, identity, or future information used. Targets remain null because both positions are being managed as open-ended trend swings while no reliable next structural resistance is visible."
+}
