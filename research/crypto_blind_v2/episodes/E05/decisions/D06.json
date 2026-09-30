@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":6,
+  "relativeDay":30,
+  "verdict":"HOLD",
+  "portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":100.0}],
+  "cashPct":85,
+  "rationale":"BTC remains in a developing 98.8-109 consolidation and the 100.0 invalidation has not been violated. Price is still below the 50-day line and only around the 20-/100-day cluster, so there is no basis to add risk or use 2x exposure. Keep the 15% BTC spot probe unchanged with the same 100.0 stop and 85% cash."
+}
