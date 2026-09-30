@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":17,
+  "relativeDay":85,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":176.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":176.0}
+  ],
+  "cashPct":60,
+  "rationale":"The prior stop correctly protected equity during a violent flush, but the market has now produced a new and materially different signal: BTC plunged deeply, stabilized, then reclaimed the entire breakdown and returned to/newly challenged the highs within four days. That is a strong flush-reclaim rather than a simple oversold bounce. Re-enter decisively with 30% BTC spot plus 10% daily-2x, keep 60% cash, and invalidate below 176.0 beneath the reclaimed high-level structure."
+}
