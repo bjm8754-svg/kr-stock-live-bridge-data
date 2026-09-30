@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":4,
+  "relativeDay":20,
+  "verdict":"REENTER_PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":90.5}
+  ],
+  "cashPct":85,
+  "rationale":"BTC has stopped making immediate new lows after the washout and is consolidating near its 50-day reference, creating a possible spring/base attempt. It has not reclaimed the 20-day structure, so this is only a small re-entry probe with a tighter failure level under the recent consolidation. ETH remains structurally much weaker and stays at zero."
+}
