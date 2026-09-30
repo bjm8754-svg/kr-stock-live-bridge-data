@@ -1,24 +1,24 @@
 {
   "schema": "CRYPTO_BLIND_V2_STATE",
   "episodeId": "E03",
-  "step": 9,
-  "relativeDay": 45,
+  "step": 10,
+  "relativeDay": 50,
   "episodeCommitment": "b24cc91f698fb7914f59b9d7b03554d627ceeeb38e0ddac007d9bb52c3e45dc9",
-  "equityKrw": 10361839.59,
-  "returnPct": 3.618,
+  "equityKrw": 10587625.36,
+  "returnPct": 5.876,
   "maxDrawdownPct": -0.096,
   "previousInterval": {
-    "step": 8,
-    "startEquity": 10340029.57,
-    "endEquity": 10361839.59,
-    "returnPct": 0.211,
+    "step": 9,
+    "startEquity": 10361839.59,
+    "endEquity": 10587625.36,
+    "returnPct": 2.179,
     "sleeves": [
       {
         "symbol": "BTCUSDT",
         "vehicle": "SPOT",
         "capitalPct": 35,
-        "startValue": 3619010.35,
-        "endValue": 3630873.62,
+        "startValue": 3626643.86,
+        "endValue": 3748029.6,
         "stopped": false,
         "stopDay": null
       },
@@ -26,13 +26,13 @@
         "symbol": "BTCUSDT",
         "vehicle": "DAILY_2X",
         "capitalPct": 15,
-        "startValue": 1551004.44,
-        "endValue": 1560951.19,
+        "startValue": 1554275.94,
+        "endValue": 1658675.97,
         "stopped": false,
         "stopDay": null
       }
     ]
   },
-  "decisionsLocked": 9,
+  "decisionsLocked": 10,
   "futureIncluded": false
 }
