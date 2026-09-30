@@ -31,6 +31,16 @@ jobs:
       - name: Install scanner dependencies
         run: python -m pip install -r requirements-scanner.txt
 
+      - name: Blind-only methodology label
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('market-structure-v3-config.json')
+          cfg=json.loads(p.read_text(encoding='utf-8'))
+          cfg['methodologyVersion']='MARKET_STRUCTURE_V3_BLIND'
+          p.write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+
       - name: Build blind stock card and portfolio state
         run: python scripts/stock_blind_walkforward.py
 
@@ -57,6 +67,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -- market-structure-v3-config.json
           git add research/stock_blind/episodes
           if git diff --cached --quiet; then
             echo "no stock blind state changes"
