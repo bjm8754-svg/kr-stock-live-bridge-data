@@ -1,0 +1,14 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":8,
+  "relativeDay":40,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":92.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":92.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":25,"stop":100.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":100.0}
+  ],
+  "cashPct":30,
+  "rationale":"The ETH probe worked and both assets have now reclaimed their short, intermediate and 100-day structures after the washout. BTC's recovery is accompanied by a sharp participation expansion, while ETH remains structurally stronger. Scale into a diversified correlated attack with modest 2x sleeves on both assets, retain 30% cash, and use 92 BTC / 100 ETH as invalidation beneath the reclaimed zones."
+}
