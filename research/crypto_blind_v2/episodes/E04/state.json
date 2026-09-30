@@ -1,0 +1,13 @@
+{
+  "schema": "CRYPTO_BLIND_V2_STATE",
+  "episodeId": "E04",
+  "step": 0,
+  "relativeDay": 0,
+  "episodeCommitment": "f4ae220b586df5d2d23bf1f6042f9d10f854e66ff7672a83a9670a39a2686591",
+  "equityKrw": 10000000.0,
+  "returnPct": 0.0,
+  "maxDrawdownPct": 0.0,
+  "previousInterval": null,
+  "decisionsLocked": 0,
+  "futureIncluded": false
+}
