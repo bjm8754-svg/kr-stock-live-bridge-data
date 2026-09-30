@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":9,
+  "relativeDay":45,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The BTC attack failed cleanly: both spot and 2x sleeves hit the declared invalidation. BTC is back below its 20/50-day references and ETH is making fresh structural lows. Do not immediately revenge-trade or average down after a failed attack. Return to cash and wait for a new accepted base/reclaim."
+}
