@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":15,
+  "relativeDay":75,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets remain below their 20/50-day structures and are drifting toward the 100-day area. RSI is weak/oversold, but there is no reversal acceptance or role change yet. Do not buy simply because price is lower. Stay in cash until the 100-day region forms a real base or a 20-day reclaim is followed by a successful hold/retest."
+}
