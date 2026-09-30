@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":16,
+  "relativeDay":80,
+  "verdict":"HOLD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":172.0}
+  ],
+  "cashPct":75,
+  "rationale":"After reducing leverage the account stayed essentially flat while BTC remained in a strong high-level range, briefly testing the low-170s and then pushing toward 190. The trend remains intact, but RSI is still elevated and price remains materially above the 20-day average, so there is not enough asymmetry to reintroduce 2x exposure. Hold 25% BTC spot, raise the stop to 172.0 beneath the recent consolidation low, and keep 75% cash."
+}
