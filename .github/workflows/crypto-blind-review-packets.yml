@@ -1,0 +1,52 @@
+name: Crypto Blind Review Packets
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/crypto_blind_review_packet.py"
+      - ".github/workflows/crypto-blind-review-packets.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Build compact blind review packets
+        run: python scripts/crypto_blind_review_packet.py
+      - name: Guard no future leakage
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, glob
+          for p in glob.glob('research/crypto_blind/review/*.json'):
+              d=json.load(open(p,encoding='utf-8'))
+              assert d['futureIncluded'] is False
+              if p.endswith('manifest.json'): continue
+              cutoff=d['cutoff']
+              for a in d['assets'].values():
+                  for key in ('daily45','weekly20','monthly18'):
+                      assert all(x[0] <= cutoff for x in a[key])
+          print('CRYPTO_BLIND_REVIEW_NO_FUTURE_LEAK: PASS')
+          PY
+      - name: Commit review packets
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/crypto_blind/review
+          if git diff --cached --quiet; then
+            echo "no review packet changes"
+            exit 0
+          fi
+          git commit -m "update crypto blind review packets"
+          git pull --rebase origin main
+          git push
