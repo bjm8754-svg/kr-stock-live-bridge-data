@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":10,
+  "relativeDay":50,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets remain in active downside structure. BTC has revisited the low-80s and remains below all major moving averages; ETH has printed another fresh low and is below the 20-, 50- and 100-day references. The rebound on the latest candle is insufficient to establish a base. Stay fully in cash."
+}
