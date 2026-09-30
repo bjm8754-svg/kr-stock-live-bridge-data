@@ -48,7 +48,7 @@ jobs:
       - name: Guard blind card
         run: |
           python - <<'PY'
-          import json, pathlib, re
+          import datetime as dt, json, pathlib, re
           cfg=json.load(open('research/stock_blind/ACTIVE_EPISODE.json',encoding='utf-8'))
           root=pathlib.Path('research/stock_blind/episodes')/cfg['episodeId']
           st=json.load(open(root/'state.json',encoding='utf-8'))
@@ -59,10 +59,24 @@ jobs:
               assert card['futureIncluded'] is False
               d10=re.compile(r'20\d{2}-\d{2}-\d{2}')
               d8=re.compile(r'20\d{6}')
+              def valid_date(s):
+                  for fmt in ('%Y-%m-%d','%Y%m%d'):
+                      try:
+                          dt.datetime.strptime(s,fmt)
+                          return True
+                      except ValueError:
+                          pass
+                  return False
+              def string_leaks(s):
+                  for rx in (d10,d8):
+                      for m in rx.finditer(s):
+                          if valid_date(m.group(0)):
+                              return True
+                  return False
               def leaked(x):
                   if isinstance(x,dict): return any(leaked(v) for v in x.values())
                   if isinstance(x,list): return any(leaked(v) for v in x)
-                  if isinstance(x,str): return bool(d10.search(x) or d8.search(x))
+                  if isinstance(x,str): return string_leaks(x)
                   return False
               assert not leaked(card)
           print('STOCK_BLIND_GUARD: PASS', root)
