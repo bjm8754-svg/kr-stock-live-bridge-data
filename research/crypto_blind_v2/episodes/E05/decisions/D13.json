@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":13,
+  "relativeDay":65,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":139.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":139.0}
+  ],
+  "cashPct":60,
+  "rationale":"After the vertical breakout BTC has spent five days holding near the highs while RSI cooled from the low-80s to the high-60s. The pullback did not damage the higher-timeframe trend and price remains well above the 20-, 50- and 100-day structures. This is constructive time digestion after reducing leverage. Reintroduce a 10% daily-2x BTC sleeve alongside 30% spot, keep 60% cash, and invalidate below 139.0 beneath the post-breakout consolidation."
+}
