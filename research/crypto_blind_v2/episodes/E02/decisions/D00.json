@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":0,
+  "relativeDay":0,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":95.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":94.5}
+  ],
+  "cashPct":55,
+  "rationale":"Both assets remain above rising 20/50/100-day structures after a strong multi-week advance, but the current location is still below the recent 20-day highs and follows a sharp expansion/rejection sequence. Start with moderate spot exposure only. BTC invalidates below the nearby 50-day/support cluster; ETH invalidates below the recent pullback low/support zone. No 2x exposure until acceptance above the recent supply zone or a cleaner retest improves asymmetry."
+}
