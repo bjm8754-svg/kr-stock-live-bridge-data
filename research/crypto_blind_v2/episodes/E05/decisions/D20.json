@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":20,
+  "relativeDay":100,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":178.0}
+  ],
+  "cashPct":85,
+  "rationale":"BTC has rebuilt over five days from the low-170s into the high-180s, reclaimed the 20-day structure, and is showing a sequence of improving closes. The 194 range ceiling is still immediately overhead, so this is not an attack. Initiate a 15% BTC spot probe with invalidation below 178.0 and retain 85% cash. Add risk only if the range high is actually broken and accepted."
+}
