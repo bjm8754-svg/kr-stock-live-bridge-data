@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":22,
+  "relativeDay":110,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC and ETH remain below their 20-, 50- and 100-day structures and are pressing fresh lows. RSI in the mid-20s is not a sufficient reason to catch a falling knife. Preserve capital and remain fully in cash until there is either a durable base with higher lows and time acceptance or a meaningful structural reclaim."
+}
