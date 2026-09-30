@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":7,
+  "relativeDay":35,
+  "verdict":"ADD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":98.0}
+  ],
+  "cashPct":65,
+  "rationale":"The BTC probe has not produced immediate profit, but the structural evidence improved: price has held above the reclaimed 20-day and 50-day areas for several sessions while volatility and participation contracted into a tighter range. The reclaim thesis remains intact. Increase spot exposure to 35% and raise invalidation to 98.0. The 100-day structure remains overhead, so leverage is still premature. ETH remains materially weaker and stays at zero."
+}
