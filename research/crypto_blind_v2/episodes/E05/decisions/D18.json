@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":18,
+  "relativeDay":90,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The D17 flush-reclaim re-entry failed immediately and the stop correctly cut the position. BTC has recovered back toward the highs, but it is still oscillating inside a volatile 175-194 range rather than establishing fresh acceptance above resistance or a clean supported retest. Re-entering immediately would repeat the same whipsaw. Stay fully in cash and require either sustained acceptance above the range high or a clearly defended higher low before taking new risk."
+}
