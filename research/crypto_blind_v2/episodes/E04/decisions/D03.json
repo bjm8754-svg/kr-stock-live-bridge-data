@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":3,
+  "relativeDay":15,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":35,"stop":109.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":109.0}
+  ],
+  "cashPct":55,
+  "rationale":"The aggressive D02 allocation gave back too much of the early gain. BTC has lost its short-term structure and is removed. ETH remains above its 20-, 50- and 100-day references and did not invalidate the prior breakout, so keep the stronger asset but reduce the 2x sleeve from 20% to 10%. Raise ETH invalidation to 109 near the reclaimed short-term structure."
+}
