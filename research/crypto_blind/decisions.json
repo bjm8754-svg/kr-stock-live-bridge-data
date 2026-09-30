@@ -11,55 +11,15 @@
     "daily2xOnlyWhenExplicit": true
   },
   "decisions": [
-    {
-      "caseId": "C01",
-      "cutoff": "2020-02-15",
-      "portfolio": [
-        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9050}
-      ],
-      "cashPct":70,
-      "verdict":"PROBE",
-      "rationale":"BTC uptrend is intact above rising 20/50-day structure, but the 10.5k rejection makes a full-size chase unattractive. ETH is substantially more extended with RSI near 80 and a sharp rejection candle, so no ETH entry."
-    },
-    {
-      "caseId": "C02",
-      "cutoff": "2020-07-27",
-      "portfolio": [
-        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9650},
-        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":278}
-      ],
-      "cashPct":60,
-      "verdict":"PROBE",
-      "rationale":"Both assets broke multi-week ranges with strong participation, but RSI near 90 and large distance from the 20-day mean make a full attack a chase. BTC gets the larger probe because its breakout is less vertically extended than ETH."
-    },
-    {
-      "caseId": "C03",
-      "cutoff": "2020-08-05",
-      "portfolio": [
-        {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":50,"stop":10480},
-        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":348}
-      ],
-      "cashPct":40,
-      "verdict":"ATTACK_CANDIDATE",
-      "rationale":"BTC has held the July breakout and reconstructed above 11k after the 12.1k rejection, improving the structure enough to increase size. ETH remains much more stretched, so it stays a small satellite position. No 2x exposure because both are still extended."
-    },
-    {
-      "caseId": "C04",
-      "cutoff": "2021-01-04",
-      "portfolio": [],
-      "cashPct":100,
-      "verdict":"REJECT",
-      "rationale":"BTC and ETH are both in vertical price expansion, 20-50% above short moving averages with RSI in the high 80s and very wide daily ranges. Trend strength is not enough to justify the asymmetry at the current location."
-    },
-    {
-      "caseId": "C05",
-      "cutoff": "2021-05-14",
-      "portfolio": [
-        {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":3450}
-      ],
-      "cashPct":80,
-      "verdict":"PROBE",
-      "rationale":"BTC has lost both the 20- and 50-day structures after repeated rejection from the high, so catching the falling move is rejected. ETH still shows superior relative strength and reclaimed from the 3.5k area, but it remains extended and volatile; only a small spot probe is justified."
-    }
+    {"caseId":"C01","cutoff":"2020-02-15","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9050}],"cashPct":70,"verdict":"PROBE","rationale":"BTC uptrend is intact above rising 20/50-day structure, but the 10.5k rejection makes a full-size chase unattractive. ETH is substantially more extended with RSI near 80 and a sharp rejection candle, so no ETH entry."},
+    {"caseId":"C02","cutoff":"2020-07-27","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":9650},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":278}],"cashPct":60,"verdict":"PROBE","rationale":"Both assets broke multi-week ranges with strong participation, but RSI near 90 and large distance from the 20-day mean make a full attack a chase. BTC gets the larger probe because its breakout is less vertically extended than ETH."},
+    {"caseId":"C03","cutoff":"2020-08-05","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":50,"stop":10480},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":348}],"cashPct":40,"verdict":"ATTACK_CANDIDATE","rationale":"BTC has held the July breakout and reconstructed above 11k after the 12.1k rejection, improving the structure enough to increase size. ETH remains much more stretched, so it stays a small satellite position. No 2x exposure because both are still extended."},
+    {"caseId":"C04","cutoff":"2021-01-04","portfolio":[],"cashPct":100,"verdict":"REJECT","rationale":"BTC and ETH are both in vertical price expansion, 20-50% above short moving averages with RSI in the high 80s and very wide daily ranges. Trend strength is not enough to justify the asymmetry at the current location."},
+    {"caseId":"C05","cutoff":"2021-05-14","portfolio":[{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":3450}],"cashPct":80,"verdict":"PROBE","rationale":"BTC has lost both the 20- and 50-day structures after repeated rejection from the high, so catching the falling move is rejected. ETH still shows superior relative strength and reclaimed from the 3.5k area, but it remains extended and volatile; only a small spot probe is justified."},
+    {"caseId":"C06","cutoff":"2021-09-19","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":42750}],"cashPct":80,"verdict":"PROBE","rationale":"The September liquidation damaged both charts, but BTC has recovered toward its 50-day mean while remaining above the larger summer recovery structure. Participation is weak and the 20-day trend has not been reclaimed, so only a small BTC probe is justified; ETH is rejected because volatility is higher and structure is weaker."},
+    {"caseId":"C07","cutoff":"2021-11-09","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":59350},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":4140}],"cashPct":45,"verdict":"ATTACK_CANDIDATE","rationale":"Both assets are in confirmed higher-high/higher-low trends with RSI below extreme levels and fresh price discovery. Location is still near the top of the range, so the position is meaningful but not full-size and no 2x product is used."},
+    {"caseId":"C08","cutoff":"2022-02-06","portfolio":[],"cashPct":100,"verdict":"REJECT","rationale":"BTC and ETH have produced sharp rebounds from January lows, but both remain below falling 50/100-day structures while short RSI is already in the mid-to-high 70s. This is a poor place to chase a possible bear-market rally."},
+    {"caseId":"C09","cutoff":"2022-07-01","portfolio":[],"cashPct":100,"verdict":"REJECT","rationale":"Both assets remain deeply below all medium-term reference averages with lower highs and lower lows. Being close to the range low alone is not a long signal; there is no accepted reversal structure yet."},
+    {"caseId":"C10","cutoff":"2022-12-01","portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":15400},{"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":10,"stop":1065}],"cashPct":70,"verdict":"PROBE","rationale":"After the capitulation leg, both assets are stabilizing and have reclaimed their 20-day means, but they remain below the 50/100-day structures. That supports only a small bottoming probe with cash dominant and no 2x exposure."}
   ]
 }
