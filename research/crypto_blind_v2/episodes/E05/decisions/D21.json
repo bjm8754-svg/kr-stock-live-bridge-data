@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":21,
+  "relativeDay":105,
+  "verdict":"HOLD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":208.0}
+  ],
+  "cashPct":85,
+  "rationale":"The BTC probe has worked exceptionally well, but price has just advanced more than 20% in five days and is again materially extended above its 20-day average. The correct response is not to chase a winning entry with fresh leverage. Keep the existing 15% BTC spot position, raise the stop aggressively to 208.0 beneath the new breakout shelf, and retain 85% cash."
+}
