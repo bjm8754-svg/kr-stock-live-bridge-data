@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":20,
+  "relativeDay":100,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The failed reclaim has now deteriorated further. BTC is below both the 20- and 50-day structures and ETH has broken down more sharply below the same short- and intermediate-term references. RSI in the high-30s/low-40s does not create an entry while role support has been lost. Stay fully in cash until stabilization and a fresh reclaim sequence appear."
+}
