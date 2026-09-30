@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":1,
+  "relativeDay":5,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Price has stabilized for several sessions near the lows, but both assets remain below their 20/50/100-day structures and participation has contracted. This is only a tentative base, not a confirmed reversal. Stay in cash until price reclaims important overhead structure or produces a stronger higher-low/reclaim sequence."
+}
