@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":14,
+  "relativeDay":70,
+  "verdict":"HOLD",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":30,"stop":148.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":148.0}
+  ],
+  "cashPct":60,
+  "rationale":"The reintroduced BTC attack has worked and the trend remains firmly intact. Price has continued to make higher highs while RSI has normalized toward the low-70s, reducing the earlier extension risk. Keep 30% BTC spot plus 10% daily-2x unchanged, do not chase with additional size, and raise the common stop to 148.0 beneath the latest high-level acceptance zone."
+}
