@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":11,
+  "relativeDay":55,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":114.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":25,"stop":114.5}
+  ],
+  "cashPct":40,
+  "rationale":"BTC has held the breakout near 115-120 while RSI cooled sharply from extreme overbought to the mid-60s without material price damage. This is time-based digestion rather than price-based failure, and the 20/50/100-day structures all remain reclaimed. Increase the 2x sleeve from 15% to 25% because the setup quality has improved after consolidation; this is discretionary sizing, not a fixed leverage cap. Keep 40% cash and trail the structural stop to 114.5, just below the recent high-level acceptance zone. ETH remains secondary and is not added."
+}
