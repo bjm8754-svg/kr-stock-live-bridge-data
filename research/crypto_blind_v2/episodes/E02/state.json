@@ -1,19 +1,19 @@
 {
   "schema": "CRYPTO_BLIND_V2_STATE",
   "episodeId": "E02",
-  "step": 2,
-  "relativeDay": 10,
+  "step": 3,
+  "relativeDay": 15,
   "episodeCommitment": "792fe6c3bcfbc2dceef29c301e4974af308f687275474117cde585306020a254",
   "equityKrw": 9793307.88,
   "returnPct": -2.067,
   "maxDrawdownPct": -2.067,
   "previousInterval": {
-    "step": 1,
+    "step": 2,
     "startEquity": 9793307.88,
     "endEquity": 9793307.88,
     "returnPct": 0.0,
     "sleeves": []
   },
-  "decisionsLocked": 2,
+  "decisionsLocked": 3,
   "futureIncluded": false
 }
