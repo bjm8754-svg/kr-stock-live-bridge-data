@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/compact_stock_blind_card.py"
+      - "research/stock_blind/episodes/**/current_card.json"
       - ".github/workflows/stock-blind-card-summary.yml"
 
 permissions:
