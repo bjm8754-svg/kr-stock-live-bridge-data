@@ -1,0 +1,14 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":9,
+  "relativeDay":45,
+  "verdict":"HOLD_REDUCED",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":122.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":10,"stop":122.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":113.0},
+    {"symbol":"ETHUSDT","vehicle":"DAILY_2X","capitalPct":5,"stop":113.0}
+  ],
+  "cashPct":40,
+  "rationale":"The attack worked and both assets have broken to new highs, but current location is now at the extreme upper end of the recent ranges with RSI in the mid-70s. Preserve the winning spot core, reduce leveraged sleeves, and trail invalidation beneath the newest breakout shelves. The goal is to keep participating if the trend persists without giving back the entire attack gain if this becomes an exhaustion move."
+}
