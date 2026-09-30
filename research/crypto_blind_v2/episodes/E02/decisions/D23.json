@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":23,
+  "relativeDay":115,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":120.0},
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":20,"stop":109.5}
+  ],
+  "cashPct":65,
+  "rationale":"A genuinely new role reversal has appeared: BTC reclaimed the 20/50/100-day structures on two high-participation expansion days and ETH also recovered above its major averages. The move is already vertically extended, especially in BTC, so this is not a leverage chase. Re-enter with moderate spot exposure only and invalidate beneath the fresh breakout/reclaim shelves."
+}
