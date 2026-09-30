@@ -1,0 +1,54 @@
+name: Crypto Blind Replay Grade
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/crypto_blind_grade.py"
+      - ".github/workflows/crypto-blind-grade.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Verify decisions are locked before grading
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(jq -r '.decisions | length' research/crypto_blind/decisions.json)" = "20"
+          test "$(jq -r '.rules.futureVisibleAtDecision' research/crypto_blind/decisions.json)" = "false"
+          echo "LOCKED_DECISIONS=$(git log -1 --format=%H -- research/crypto_blind/decisions.json)"
+      - name: Reveal future and grade locked decisions
+        run: python scripts/crypto_blind_grade.py
+      - name: Sanity-check grading outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(jq -r '.schema' research/crypto_blind/results.json)" = "CRYPTO_BLIND_REPLAY_RESULT_V1"
+          test "$(jq -r '.cases | length' research/crypto_blind/results.json)" = "20"
+          jq '{decisionCommit,initialCapitalKrw,finalCapitalKrw,totalReturnPct,maxDrawdownPct,tradeCount,tradeWinRatePct,caseWinRatePct,profitFactor,btcBuyHoldPctSameCalendarSpan}' research/crypto_blind/results.json
+      - name: Commit immutable grading result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/crypto_blind/results.json research/crypto_blind/RESULTS.md
+          if git diff --cached --quiet; then
+            echo "no result changes"
+            exit 0
+          fi
+          git commit -m "grade locked crypto blind replay"
+          git pull --rebase origin main
+          git push
