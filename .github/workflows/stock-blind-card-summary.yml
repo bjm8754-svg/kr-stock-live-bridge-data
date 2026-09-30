@@ -1,0 +1,45 @@
+name: Stock Blind Card Summary
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/compact_stock_blind_card.py"
+      - ".github/workflows/stock-blind-card-summary.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-blind-card-summary
+  cancel-in-progress: true
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Build compact blind card summary
+        run: python scripts/compact_stock_blind_card.py
+
+      - name: Commit summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/stock_blind/episodes/*/current_card_summary.json
+          if git diff --cached --quiet; then
+            echo "no summary changes"
+            exit 0
+          fi
+          git commit -m "update stock blind card summary"
+          git pull --rebase origin main
+          git push
