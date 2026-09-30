@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":17,
+  "relativeDay":85,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":109.5}
+  ],
+  "cashPct":85,
+  "rationale":"ETH has reclaimed its 20-day average with improving participation and is showing better relative strength than BTC, while both assets continue to hold above their 100-day regions. The 50-day structure remains overhead, so this is only a small ETH spot probe. Invalidate beneath the recent 109-110 support shelf and add only if the 50-day area is accepted."
+}
