@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":1,
+  "relativeDay":5,
+  "verdict":"EXIT",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC invalidated the initial support/50-day thesis and ETH also closed below its 20/50-day structure after a sharp rejection from the recent supply zone. The original probe thesis is no longer intact. Exit remaining exposure rather than waiting for the hard stop and require a fresh reclaim/base before re-entry."
+}
