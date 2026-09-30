@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":13,
+  "relativeDay":65,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The BTC probe was stopped as price repeatedly crossed the 119-125 zone, and although BTC has reclaimed its 20/50-day averages again, role acceptance is still unstable. ETH also remains below its 20-day structure. Avoid repeated whipsaw entries at the same level. Stay in cash until BTC either accepts above 127-128 supply or demonstrates a cleaner hold/retest around the 120-area support cluster."
+}
