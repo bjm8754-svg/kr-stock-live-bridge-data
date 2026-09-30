@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":20,
+  "relativeDay":100,
+  "verdict":"REENTER_PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":25,"stop":59.0},
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":15,"stop":73.0}
+  ],
+  "cashPct":60,
+  "rationale":"The post-capitulation base is finally showing role change. ETH has reclaimed both its 20- and 50-day references with improving participation, while BTC has reclaimed its 20-day mean and is making a higher recovery attempt. Both remain below higher resistance, so use spot probes rather than 2x. ETH gets the larger weight because its reclaim is structurally stronger."
+}
