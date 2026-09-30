@@ -1,0 +1,55 @@
+name: Crypto Blind Replay Cases
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/crypto_blind_case_builder.py"
+      - ".github/workflows/crypto-blind-cases.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Build blind replay cases
+        run: python scripts/crypto_blind_case_builder.py
+      - name: Guard against future leakage
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, glob
+          for p in glob.glob('research/crypto_blind/cases/*.json'):
+              d=json.load(open(p,encoding='utf-8'))
+              if p.endswith('manifest.json'):
+                  assert d['futureIncluded'] is False
+                  continue
+              assert d['futureIncluded'] is False
+              cutoff=d['cutoff']
+              for a in d['assets'].values():
+                  assert a['cutoff']==cutoff
+                  for tf in ('daily','weekly','monthly'):
+                      assert all(x['date'] <= cutoff for x in a[tf])
+          print('CRYPTO_BLIND_NO_FUTURE_LEAK: PASS')
+          PY
+      - name: Commit blind cases
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/crypto_blind/cases
+          if git diff --cached --quiet; then
+            echo "no case changes"
+            exit 0
+          fi
+          git commit -m "update crypto blind replay cases"
+          git pull --rebase origin main
+          git push
