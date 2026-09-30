@@ -1,0 +1,3617 @@
+{
+  "schema": "CRYPTO_BLIND_REPLAY_RESULT_V1",
+  "decisionCommit": "372ce63d32aaff5a9544c66b1e7fdd5766eeb69e",
+  "initialCapitalKrw": 10000000.0,
+  "finalCapitalKrw": 8695980.27,
+  "totalReturnPct": -13.04,
+  "maxDrawdownPct": -21.882,
+  "tradeCount": 31,
+  "tradeWinRatePct": 25.81,
+  "caseActiveCount": 17,
+  "caseWinRatePct": 23.53,
+  "profitFactor": 0.713,
+  "btcBuyHoldPctSameCalendarSpan": 1006.934,
+  "assumptions": [
+    "No fees/slippage/taxes.",
+    "DAILY_2X is a generic daily-reset 2x underlying proxy, not literal BITU/ETHU historical prices.",
+    "Stops execute at stop unless the daily open gaps through the stop, in which case exit is at the open.",
+    "Positions are held up to 30 calendar days or until the next blind decision cutoff, whichever comes first."
+  ],
+  "cases": [
+    {
+      "caseId": "C01",
+      "cutoff": "2020-02-15",
+      "entryDate": "2020-02-16",
+      "endDate": "2020-03-16",
+      "verdict": "PROBE",
+      "startCapitalKrw": 10000000.0,
+      "endCapitalKrw": 9741189.32,
+      "returnPct": -2.588,
+      "cashPct": 70
+    },
+    {
+      "caseId": "C02",
+      "cutoff": "2020-07-27",
+      "entryDate": "2020-07-28",
+      "endDate": "2020-08-05",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9741189.32,
+      "endCapitalKrw": 10168946.43,
+      "returnPct": 4.391,
+      "cashPct": 60
+    },
+    {
+      "caseId": "C03",
+      "cutoff": "2020-08-05",
+      "entryDate": "2020-08-06",
+      "endDate": "2020-09-04",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 10168946.43,
+      "endCapitalKrw": 9582123.58,
+      "returnPct": -5.771,
+      "cashPct": 40
+    },
+    {
+      "caseId": "C04",
+      "cutoff": "2021-01-04",
+      "entryDate": "2021-01-05",
+      "endDate": "2021-02-03",
+      "verdict": "REJECT",
+      "startCapitalKrw": 9582123.58,
+      "endCapitalKrw": 9582123.58,
+      "returnPct": 0.0,
+      "cashPct": 100
+    },
+    {
+      "caseId": "C05",
+      "cutoff": "2021-05-14",
+      "entryDate": "2021-05-15",
+      "endDate": "2021-06-13",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9582123.58,
+      "endCapitalKrw": 9288185.45,
+      "returnPct": -3.068,
+      "cashPct": 80
+    },
+    {
+      "caseId": "C06",
+      "cutoff": "2021-09-19",
+      "entryDate": "2021-09-20",
+      "endDate": "2021-10-19",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9288185.45,
+      "endCapitalKrw": 9111561.14,
+      "returnPct": -1.902,
+      "cashPct": 80
+    },
+    {
+      "caseId": "C07",
+      "cutoff": "2021-11-09",
+      "entryDate": "2021-11-10",
+      "endDate": "2021-12-09",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 9111561.14,
+      "endCapitalKrw": 8521554.04,
+      "returnPct": -6.475,
+      "cashPct": 45
+    },
+    {
+      "caseId": "C08",
+      "cutoff": "2022-02-06",
+      "entryDate": "2022-02-07",
+      "endDate": "2022-03-08",
+      "verdict": "REJECT",
+      "startCapitalKrw": 8521554.04,
+      "endCapitalKrw": 8521554.04,
+      "returnPct": 0.0,
+      "cashPct": 100
+    },
+    {
+      "caseId": "C09",
+      "cutoff": "2022-07-01",
+      "entryDate": "2022-07-02",
+      "endDate": "2022-07-31",
+      "verdict": "REJECT",
+      "startCapitalKrw": 8521554.04,
+      "endCapitalKrw": 8521554.04,
+      "returnPct": 0.0,
+      "cashPct": 100
+    },
+    {
+      "caseId": "C10",
+      "cutoff": "2022-12-01",
+      "entryDate": "2022-12-02",
+      "endDate": "2022-12-31",
+      "verdict": "PROBE",
+      "startCapitalKrw": 8521554.04,
+      "endCapitalKrw": 8424236.8,
+      "returnPct": -1.142,
+      "cashPct": 70
+    },
+    {
+      "caseId": "C11",
+      "cutoff": "2023-01-10",
+      "entryDate": "2023-01-11",
+      "endDate": "2023-02-09",
+      "verdict": "PROBE",
+      "startCapitalKrw": 8424236.8,
+      "endCapitalKrw": 9082491.21,
+      "returnPct": 7.814,
+      "cashPct": 65
+    },
+    {
+      "caseId": "C12",
+      "cutoff": "2023-07-13",
+      "entryDate": "2023-07-14",
+      "endDate": "2023-08-12",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 9082491.21,
+      "endCapitalKrw": 8713038.23,
+      "returnPct": -4.068,
+      "cashPct": 45
+    },
+    {
+      "caseId": "C13",
+      "cutoff": "2023-10-19",
+      "entryDate": "2023-10-20",
+      "endDate": "2023-11-14",
+      "verdict": "PROBE",
+      "startCapitalKrw": 8713038.23,
+      "endCapitalKrw": 9439218.46,
+      "returnPct": 8.334,
+      "cashPct": 65
+    },
+    {
+      "caseId": "C14",
+      "cutoff": "2023-11-14",
+      "entryDate": "2023-11-15",
+      "endDate": "2023-12-14",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 9439218.46,
+      "endCapitalKrw": 10861443.59,
+      "returnPct": 15.067,
+      "cashPct": 35
+    },
+    {
+      "caseId": "C15",
+      "cutoff": "2024-03-30",
+      "entryDate": "2024-03-31",
+      "endDate": "2024-04-29",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 10861443.59,
+      "endCapitalKrw": 9788322.67,
+      "returnPct": -9.88,
+      "cashPct": 35
+    },
+    {
+      "caseId": "C16",
+      "cutoff": "2024-07-08",
+      "entryDate": "2024-07-09",
+      "endDate": "2024-08-07",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9788322.67,
+      "endCapitalKrw": 9698629.58,
+      "returnPct": -0.916,
+      "cashPct": 85
+    },
+    {
+      "caseId": "C17",
+      "cutoff": "2024-12-09",
+      "entryDate": "2024-12-10",
+      "endDate": "2025-01-08",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 9698629.58,
+      "endCapitalKrw": 9440085.73,
+      "returnPct": -2.666,
+      "cashPct": 35
+    },
+    {
+      "caseId": "C18",
+      "cutoff": "2025-02-04",
+      "entryDate": "2025-02-05",
+      "endDate": "2025-03-06",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9440085.73,
+      "endCapitalKrw": 9342127.62,
+      "returnPct": -1.038,
+      "cashPct": 85
+    },
+    {
+      "caseId": "C19",
+      "cutoff": "2025-07-21",
+      "entryDate": "2025-07-22",
+      "endDate": "2025-08-20",
+      "verdict": "PROBE",
+      "startCapitalKrw": 9342127.62,
+      "endCapitalKrw": 9280265.06,
+      "returnPct": -0.662,
+      "cashPct": 75
+    },
+    {
+      "caseId": "C20",
+      "cutoff": "2025-08-28",
+      "entryDate": "2025-08-29",
+      "endDate": "2025-09-27",
+      "verdict": "ATTACK_CANDIDATE",
+      "startCapitalKrw": 9280265.06,
+      "endCapitalKrw": 8695980.27,
+      "returnPct": -6.296,
+      "cashPct": 45
+    }
+  ],
+  "trades": [
+    {
+      "caseId": "C01",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 30,
+      "entryDate": "2020-02-16",
+      "entryPrice": 9904.46,
+      "exitDate": "2020-02-26",
+      "exitPrice": 9050.0,
+      "stop": 9050,
+      "stopped": true,
+      "pnlKrw": -258810.68,
+      "returnPct": -8.627,
+      "mfePct": 3.489,
+      "maePct": -12.831
+    },
+    {
+      "caseId": "C02",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 30,
+      "entryDate": "2020-07-28",
+      "entryPrice": 11029.96,
+      "exitDate": "2020-08-05",
+      "exitPrice": 11744.91,
+      "stop": 9650,
+      "stopped": false,
+      "pnlKrw": 189423.99,
+      "returnPct": 6.482,
+      "mfePct": 9.914,
+      "maePct": -4.637
+    },
+    {
+      "caseId": "C02",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 10,
+      "entryDate": "2020-07-28",
+      "entryPrice": 321.95,
+      "exitDate": "2020-08-05",
+      "exitPrice": 400.72,
+      "stop": 278,
+      "stopped": false,
+      "pnlKrw": 238333.12,
+      "returnPct": 24.467,
+      "mfePct": 29.166,
+      "maePct": -4.998
+    },
+    {
+      "caseId": "C03",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 50,
+      "entryDate": "2020-08-06",
+      "entryPrice": 11744.91,
+      "exitDate": "2020-09-03",
+      "exitPrice": 10480.0,
+      "stop": 10480,
+      "stopped": true,
+      "pnlKrw": -547590.49,
+      "returnPct": -10.77,
+      "mfePct": 6.157,
+      "maePct": -15.19
+    },
+    {
+      "caseId": "C03",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 10,
+      "entryDate": "2020-08-06",
+      "entryPrice": 400.72,
+      "exitDate": "2020-09-04",
+      "exitPrice": 385.26,
+      "stop": 348,
+      "stopped": false,
+      "pnlKrw": -39232.36,
+      "returnPct": -3.858,
+      "mfePct": 21.99,
+      "maePct": -10.91
+    },
+    {
+      "caseId": "C05",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2021-05-15",
+      "entryPrice": 4075.02,
+      "exitDate": "2021-05-16",
+      "exitPrice": 3450.0,
+      "stop": 3450,
+      "stopped": true,
+      "pnlKrw": -293938.13,
+      "returnPct": -15.338,
+      "mfePct": 1.449,
+      "maePct": -17.962
+    },
+    {
+      "caseId": "C06",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2021-09-20",
+      "entryPrice": 47241.75,
+      "exitDate": "2021-09-20",
+      "exitPrice": 42750.0,
+      "stop": 42750,
+      "stopped": true,
+      "pnlKrw": -176624.31,
+      "returnPct": -9.508,
+      "mfePct": 0.223,
+      "maePct": -10.037
+    },
+    {
+      "caseId": "C07",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 35,
+      "entryDate": "2021-11-10",
+      "entryPrice": 66947.67,
+      "exitDate": "2021-11-16",
+      "exitPrice": 59350.0,
+      "stop": 59350,
+      "stopped": true,
+      "pnlKrw": -361914.35,
+      "returnPct": -11.349,
+      "mfePct": 3.066,
+      "maePct": -12.508
+    },
+    {
+      "caseId": "C07",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2021-11-10",
+      "entryPrice": 4732.33,
+      "exitDate": "2021-11-16",
+      "exitPrice": 4140.0,
+      "stop": 4140,
+      "stopped": true,
+      "pnlKrw": -228092.76,
+      "returnPct": -12.517,
+      "mfePct": 2.867,
+      "maePct": -13.299
+    },
+    {
+      "caseId": "C10",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2022-12-02",
+      "entryPrice": 16978.0,
+      "exitDate": "2022-12-31",
+      "exitPrice": 16542.4,
+      "stop": 15400,
+      "stopped": false,
+      "pnlKrw": -43727.05,
+      "returnPct": -2.566,
+      "mfePct": 8.305,
+      "maePct": -4.251
+    },
+    {
+      "caseId": "C10",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 10,
+      "entryDate": "2022-12-02",
+      "entryPrice": 1276.4,
+      "exitDate": "2022-12-31",
+      "exitPrice": 1196.13,
+      "stop": 1065,
+      "stopped": false,
+      "pnlKrw": -53590.19,
+      "returnPct": -6.289,
+      "mfePct": 5.979,
+      "maePct": -9.863
+    },
+    {
+      "caseId": "C11",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 25,
+      "entryDate": "2023-01-11",
+      "entryPrice": 17440.64,
+      "exitDate": "2023-02-09",
+      "exitPrice": 21796.35,
+      "stop": 16250,
+      "stopped": false,
+      "pnlKrw": 525977.44,
+      "returnPct": 24.974,
+      "mfePct": 39.072,
+      "maePct": -0.717
+    },
+    {
+      "caseId": "C11",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 10,
+      "entryDate": "2023-01-11",
+      "entryPrice": 1335.63,
+      "exitDate": "2023-02-09",
+      "exitPrice": 1545.35,
+      "stop": 1175,
+      "stopped": false,
+      "pnlKrw": 132276.97,
+      "returnPct": 15.702,
+      "mfePct": 28.38,
+      "maePct": -1.092
+    },
+    {
+      "caseId": "C12",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 40,
+      "entryDate": "2023-07-14",
+      "entryPrice": 31454.23,
+      "exitDate": "2023-07-24",
+      "exitPrice": 29400.0,
+      "stop": 29400,
+      "stopped": true,
+      "pnlKrw": -237265.71,
+      "returnPct": -6.531,
+      "mfePct": 0.559,
+      "maePct": -8.242
+    },
+    {
+      "caseId": "C12",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 15,
+      "entryDate": "2023-07-14",
+      "entryPrice": 2004.49,
+      "exitDate": "2023-08-07",
+      "exitPrice": 1810.0,
+      "stop": 1810,
+      "stopped": true,
+      "pnlKrw": -132187.27,
+      "returnPct": -9.703,
+      "mfePct": 1.228,
+      "maePct": -10.102
+    },
+    {
+      "caseId": "C13",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 35,
+      "entryDate": "2023-10-20",
+      "entryPrice": 28713.71,
+      "exitDate": "2023-11-14",
+      "exitPrice": 35551.19,
+      "stop": 26450,
+      "stopped": false,
+      "pnlKrw": 726180.23,
+      "returnPct": 23.813,
+      "mfePct": 32.244,
+      "maePct": -0.472
+    },
+    {
+      "caseId": "C14",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 35,
+      "entryDate": "2023-11-15",
+      "entryPrice": 35551.2,
+      "exitDate": "2023-12-14",
+      "exitPrice": 43022.26,
+      "stop": 33800,
+      "stopped": false,
+      "pnlKrw": 694275.82,
+      "returnPct": 21.015,
+      "mfePct": 25.734,
+      "maePct": -0.538
+    },
+    {
+      "caseId": "C14",
+      "symbol": "BTCUSDT",
+      "vehicle": "DAILY_2X",
+      "capitalPct": 10,
+      "entryDate": "2023-11-15",
+      "entryPrice": 35551.2,
+      "exitDate": "2023-12-14",
+      "exitPrice": 43022.26,
+      "stop": 33800,
+      "stopped": false,
+      "pnlKrw": 407567.14,
+      "returnPct": 43.178,
+      "mfePct": 51.679,
+      "maePct": 0.0
+    },
+    {
+      "caseId": "C14",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2023-11-15",
+      "entryPrice": 1979.4,
+      "exitDate": "2023-12-14",
+      "exitPrice": 2315.32,
+      "stop": 1775,
+      "stopped": false,
+      "pnlKrw": 320382.16,
+      "returnPct": 16.971,
+      "mfePct": 21.4,
+      "maePct": -3.809
+    },
+    {
+      "caseId": "C15",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 40,
+      "entryDate": "2024-03-31",
+      "entryPrice": 69582.17,
+      "exitDate": "2024-04-17",
+      "exitPrice": 60400.0,
+      "stop": 60400,
+      "stopped": true,
+      "pnlKrw": -573317.11,
+      "returnPct": -13.196,
+      "mfePct": 4.622,
+      "maePct": -14.234
+    },
+    {
+      "caseId": "C15",
+      "symbol": "BTCUSDT",
+      "vehicle": "DAILY_2X",
+      "capitalPct": 10,
+      "entryDate": "2024-03-31",
+      "entryPrice": 69582.17,
+      "exitDate": "2024-04-17",
+      "exitPrice": 60400.0,
+      "stop": 60400,
+      "stopped": true,
+      "pnlKrw": -283397.53,
+      "returnPct": -26.092,
+      "mfePct": 5.098,
+      "maePct": -26.092
+    },
+    {
+      "caseId": "C15",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 15,
+      "entryDate": "2024-03-31",
+      "entryPrice": 3505.65,
+      "exitDate": "2024-04-13",
+      "exitPrice": 3040.0,
+      "stop": 3040,
+      "stopped": true,
+      "pnlKrw": -216406.28,
+      "returnPct": -13.283,
+      "mfePct": 6.42,
+      "maePct": -18.646
+    },
+    {
+      "caseId": "C16",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 15,
+      "entryDate": "2024-07-09",
+      "entryPrice": 56714.61,
+      "exitDate": "2024-08-05",
+      "exitPrice": 53250.0,
+      "stop": 53250,
+      "stopped": true,
+      "pnlKrw": -89693.08,
+      "returnPct": -6.109,
+      "mfePct": 23.566,
+      "maePct": -13.603
+    },
+    {
+      "caseId": "C17",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 35,
+      "entryDate": "2024-12-10",
+      "entryPrice": 97276.48,
+      "exitDate": "2025-01-08",
+      "exitPrice": 95060.61,
+      "stop": 90000,
+      "stopped": false,
+      "pnlKrw": -77324.1,
+      "returnPct": -2.278,
+      "mfePct": 11.387,
+      "maePct": -5.907
+    },
+    {
+      "caseId": "C17",
+      "symbol": "BTCUSDT",
+      "vehicle": "DAILY_2X",
+      "capitalPct": 10,
+      "entryDate": "2024-12-10",
+      "entryPrice": 97276.48,
+      "exitDate": "2025-01-08",
+      "exitPrice": 95060.61,
+      "stop": 90000,
+      "stopped": false,
+      "pnlKrw": -59986.89,
+      "returnPct": -6.185,
+      "mfePct": 18.629,
+      "maePct": -10.094
+    },
+    {
+      "caseId": "C17",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 20,
+      "entryDate": "2024-12-10",
+      "entryPrice": 3712.0,
+      "exitDate": "2024-12-19",
+      "exitPrice": 3480.0,
+      "stop": 3480,
+      "stopped": true,
+      "pnlKrw": -121232.87,
+      "returnPct": -6.25,
+      "mfePct": 10.663,
+      "maePct": -10.377
+    },
+    {
+      "caseId": "C18",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 15,
+      "entryDate": "2025-02-05",
+      "entryPrice": 97763.14,
+      "exitDate": "2025-02-25",
+      "exitPrice": 91000.0,
+      "stop": 91000,
+      "stopped": true,
+      "pnlKrw": -97958.12,
+      "returnPct": -6.918,
+      "mfePct": 2.429,
+      "maePct": -11.98
+    },
+    {
+      "caseId": "C19",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 25,
+      "entryDate": "2025-07-22",
+      "entryPrice": 117380.36,
+      "exitDate": "2025-08-20",
+      "exitPrice": 114271.24,
+      "stop": 109500,
+      "stopped": false,
+      "pnlKrw": -61862.55,
+      "returnPct": -2.649,
+      "mfePct": 6.043,
+      "maePct": -4.652
+    },
+    {
+      "caseId": "C20",
+      "symbol": "BTCUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 15,
+      "entryDate": "2025-08-29",
+      "entryPrice": 112566.9,
+      "exitDate": "2025-08-29",
+      "exitPrice": 108500.0,
+      "stop": 108500,
+      "stopped": true,
+      "pnlKrw": -50292.64,
+      "returnPct": -3.613,
+      "mfePct": 0.064,
+      "maePct": -4.533
+    },
+    {
+      "caseId": "C20",
+      "symbol": "ETHUSDT",
+      "vehicle": "SPOT",
+      "capitalPct": 30,
+      "entryDate": "2025-08-29",
+      "entryPrice": 4511.2,
+      "exitDate": "2025-09-25",
+      "exitPrice": 3990.0,
+      "stop": 3990,
+      "stopped": true,
+      "pnlKrw": -321657.71,
+      "returnPct": -11.553,
+      "mfePct": 5.723,
+      "maePct": -15.433
+    },
+    {
+      "caseId": "C20",
+      "symbol": "ETHUSDT",
+      "vehicle": "DAILY_2X",
+      "capitalPct": 10,
+      "entryDate": "2025-08-29",
+      "entryPrice": 4511.2,
+      "exitDate": "2025-09-25",
+      "exitPrice": 3990.0,
+      "stop": 3990,
+      "stopped": true,
+      "pnlKrw": -212334.44,
+      "returnPct": -22.88,
+      "mfePct": 8.313,
+      "maePct": -22.88
+    }
+  ],
+  "equity": [
+    {
+      "date": "2020-02-16",
+      "navKrw": 10003880.07,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-17",
+      "navKrw": 9939887.69,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-18",
+      "navKrw": 10078828.12,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-19",
+      "navKrw": 9905899.97,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-20",
+      "navKrw": 9906696.58,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-21",
+      "navKrw": 9931118.91,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-22",
+      "navKrw": 9923186.12,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-23",
+      "navKrw": 10009674.43,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-24",
+      "navKrw": 9924782.37,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-25",
+      "navKrw": 9821710.62,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-26",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-27",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-28",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-02-29",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-01",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-02",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-03",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-04",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-05",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-06",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-07",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-08",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-09",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-10",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-11",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-12",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-13",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-14",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-15",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-03-16",
+      "navKrw": 9741189.32,
+      "caseId": "C01"
+    },
+    {
+      "date": "2020-07-28",
+      "navKrw": 9692744.96,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-07-29",
+      "navKrw": 9747057.75,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-07-30",
+      "navKrw": 9798734.73,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-07-31",
+      "navKrw": 9895896.86,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-01",
+      "navKrw": 10142339.98,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-02",
+      "navKrw": 9904861.75,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-03",
+      "navKrw": 9985103.06,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-04",
+      "navKrw": 9988831.19,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-05",
+      "navKrw": 10168946.43,
+      "caseId": "C02"
+    },
+    {
+      "date": "2020-08-06",
+      "navKrw": 10161444.85,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-07",
+      "navKrw": 10049460.39,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-08",
+      "navKrw": 10166725.43,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-09",
+      "navKrw": 10114725.08,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-10",
+      "navKrw": 10219622.35,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-11",
+      "navKrw": 9961085.1,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-12",
+      "navKrw": 10056411.75,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-13",
+      "navKrw": 10244584.47,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-14",
+      "navKrw": 10270596.23,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-15",
+      "navKrw": 10295670.12,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-16",
+      "navKrw": 10324337.53,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-17",
+      "navKrw": 10477642.18,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-18",
+      "navKrw": 10309446.16,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-19",
+      "navKrw": 10190240.87,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-20",
+      "navKrw": 10254600.95,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-21",
+      "navKrw": 10044134.85,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-22",
+      "navKrw": 10119563.14,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-23",
+      "navKrw": 10101647.47,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-24",
+      "navKrw": 10188032.87,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-25",
+      "navKrw": 9939170.09,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-26",
+      "navKrw": 10008388.84,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-27",
+      "navKrw": 9945210.48,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-28",
+      "navKrw": 10060336.02,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-29",
+      "navKrw": 10042881.64,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-30",
+      "navKrw": 10225948.78,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-08-31",
+      "navKrw": 10211567.65,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-09-01",
+      "navKrw": 10435110.34,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-09-02",
+      "navKrw": 10113081.57,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-09-03",
+      "navKrw": 9572328.18,
+      "caseId": "C03"
+    },
+    {
+      "date": "2020-09-04",
+      "navKrw": 9582123.58,
+      "caseId": "C03"
+    },
+    {
+      "date": "2021-01-05",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-06",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-07",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-08",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-09",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-10",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-11",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-12",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-13",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-14",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-15",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-16",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-17",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-18",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-19",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-20",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-21",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-22",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-23",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-24",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-25",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-26",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-27",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-28",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-29",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-30",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-01-31",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-02-01",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-02-02",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-02-03",
+      "navKrw": 9582123.58,
+      "caseId": "C04"
+    },
+    {
+      "date": "2021-05-15",
+      "navKrw": 9380681.29,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-16",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-17",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-18",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-19",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-20",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-21",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-22",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-23",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-24",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-25",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-26",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-27",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-28",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-29",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-30",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-05-31",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-01",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-02",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-03",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-04",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-05",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-06",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-07",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-08",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-09",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-10",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-11",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-12",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-06-13",
+      "navKrw": 9288185.45,
+      "caseId": "C05"
+    },
+    {
+      "date": "2021-09-20",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-21",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-22",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-23",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-24",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-25",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-26",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-27",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-28",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-29",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-09-30",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-01",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-02",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-03",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-04",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-05",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-06",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-07",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-08",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-09",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-10",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-11",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-12",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-13",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-14",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-15",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-16",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-17",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-18",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-10-19",
+      "navKrw": 9111561.14,
+      "caseId": "C06"
+    },
+    {
+      "date": "2021-11-10",
+      "navKrw": 8973308.87,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-11",
+      "navKrw": 9002897.87,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-12",
+      "navKrw": 8951221.44,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-13",
+      "navKrw": 8955344.36,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-14",
+      "navKrw": 9002758.62,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-15",
+      "navKrw": 8887511.47,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-16",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-17",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-18",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-19",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-20",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-21",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-22",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-23",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-24",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-25",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-26",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-27",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-28",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-29",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-11-30",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-01",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-02",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-03",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-04",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-05",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-06",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-07",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-08",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2021-12-09",
+      "navKrw": 8521554.04,
+      "caseId": "C07"
+    },
+    {
+      "date": "2022-02-07",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-08",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-09",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-10",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-11",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-12",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-13",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-14",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-15",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-16",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-17",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-18",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-19",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-20",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-21",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-22",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-23",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-24",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-25",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-26",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-27",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-02-28",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-01",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-02",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-03",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-04",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-05",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-06",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-07",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-03-08",
+      "navKrw": 8521554.04,
+      "caseId": "C08"
+    },
+    {
+      "date": "2022-07-02",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-03",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-04",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-05",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-06",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-07",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-08",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-09",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-10",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-11",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-12",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-13",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-14",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-15",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-16",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-17",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-18",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-19",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-20",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-21",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-22",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-23",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-24",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-25",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-26",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-27",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-28",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-29",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-30",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-07-31",
+      "navKrw": 8521554.04,
+      "caseId": "C09"
+    },
+    {
+      "date": "2022-12-02",
+      "navKrw": 8545883.74,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-03",
+      "navKrw": 8488277.42,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-04",
+      "navKrw": 8536382.56,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-05",
+      "navKrw": 8509041.63,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-06",
+      "navKrw": 8529301.06,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-07",
+      "navKrw": 8477173.86,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-08",
+      "navKrw": 8548782.03,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-09",
+      "navKrw": 8527788.37,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-10",
+      "navKrw": 8529850.74,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-11",
+      "navKrw": 8523360.6,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-12",
+      "navKrw": 8544158.31,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-13",
+      "navKrw": 8631098.63,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-14",
+      "navKrw": 8625108.52,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-15",
+      "navKrw": 8552950.35,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-16",
+      "navKrw": 8413681.82,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-17",
+      "navKrw": 8441750.0,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-18",
+      "navKrw": 8435167.05,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-19",
+      "navKrw": 8394944.67,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-20",
+      "navKrw": 8473581.49,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-21",
+      "navKrw": 8464355.61,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-22",
+      "navKrw": 8466654.13,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-23",
+      "navKrw": 8463866.85,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-24",
+      "navKrw": 8469931.35,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-25",
+      "navKrw": 8468260.33,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-26",
+      "navKrw": 8483430.99,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-27",
+      "navKrw": 8450990.44,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-28",
+      "navKrw": 8420737.29,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-29",
+      "navKrw": 8436289.57,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-30",
+      "navKrw": 8433346.79,
+      "caseId": "C10"
+    },
+    {
+      "date": "2022-12-31",
+      "navKrw": 8424236.8,
+      "caseId": "C10"
+    },
+    {
+      "date": "2023-01-11",
+      "navKrw": 8518839.22,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-12",
+      "navKrw": 8644658.52,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-13",
+      "navKrw": 8797736.4,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-14",
+      "navKrw": 8983753.45,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-15",
+      "navKrw": 8975332.51,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-16",
+      "navKrw": 9028670.42,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-17",
+      "navKrw": 9015359.78,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-18",
+      "navKrw": 8925985.51,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-19",
+      "navKrw": 8998592.61,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-20",
+      "navKrw": 9259032.51,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-21",
+      "navKrw": 9252986.15,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-22",
+      "navKrw": 9244340.52,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-23",
+      "navKrw": 9268801.23,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-24",
+      "navKrw": 9190206.67,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-25",
+      "navKrw": 9277198.24,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-26",
+      "navKrw": 9264161.24,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-27",
+      "navKrw": 9269762.56,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-28",
+      "navKrw": 9247440.13,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-29",
+      "navKrw": 9380151.82,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-30",
+      "navKrw": 9219996.33,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-01-31",
+      "navKrw": 9268165.8,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-01",
+      "navKrw": 9377070.31,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-02",
+      "navKrw": 9348547.95,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-03",
+      "navKrw": 9354526.95,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-04",
+      "navKrw": 9343644.24,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-05",
+      "navKrw": 9272510.76,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-06",
+      "navKrw": 9242644.5,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-07",
+      "navKrw": 9336146.25,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-08",
+      "navKrw": 9289648.27,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-02-09",
+      "navKrw": 9082491.21,
+      "caseId": "C11"
+    },
+    {
+      "date": "2023-07-14",
+      "navKrw": 8905257.41,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-15",
+      "navKrw": 8898296.36,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-16",
+      "navKrw": 8885330.74,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-17",
+      "navKrw": 8867059.7,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-18",
+      "navKrw": 8825341.46,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-19",
+      "navKrw": 8825294.26,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-20",
+      "navKrw": 8814692.19,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-21",
+      "navKrw": 8826536.11,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-22",
+      "navKrw": 8796960.08,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-23",
+      "navKrw": 8845521.78,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-24",
+      "navKrw": 8740224.67,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-25",
+      "navKrw": 8745430.87,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-26",
+      "navKrw": 8755177.21,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-27",
+      "navKrw": 8747891.25,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-28",
+      "navKrw": 8756665.67,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-29",
+      "navKrw": 8760927.14,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-30",
+      "navKrw": 8748237.87,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-07-31",
+      "navKrw": 8744397.79,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-01",
+      "navKrw": 8756176.31,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-02",
+      "navKrw": 8733360.09,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-03",
+      "navKrw": 8730580.28,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-04",
+      "navKrw": 8726787.77,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-05",
+      "navKrw": 8731035.65,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-06",
+      "navKrw": 8726821.75,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-07",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-08",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-09",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-10",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-11",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-08-12",
+      "navKrw": 8713038.23,
+      "caseId": "C12"
+    },
+    {
+      "date": "2023-10-20",
+      "navKrw": 8814499.84,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-21",
+      "navKrw": 8840069.96,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-22",
+      "navKrw": 8848848.93,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-23",
+      "navKrw": 9175700.56,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-24",
+      "navKrw": 9266266.52,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-25",
+      "navKrw": 9327156.44,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-26",
+      "navKrw": 9290580.22,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-27",
+      "navKrw": 9263004.94,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-28",
+      "navKrw": 9283075.71,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-29",
+      "navKrw": 9330325.63,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-30",
+      "navKrw": 9324892.14,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-10-31",
+      "navKrw": 9342420.35,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-01",
+      "navKrw": 9425437.19,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-02",
+      "navKrw": 9374475.39,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-03",
+      "navKrw": 9350599.26,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-04",
+      "navKrw": 9387271.07,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-05",
+      "navKrw": 9381940.6,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-06",
+      "navKrw": 9385573.9,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-07",
+      "navKrw": 9423067.74,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-08",
+      "navKrw": 9447027.78,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-09",
+      "navKrw": 9561344.55,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-10",
+      "navKrw": 9625125.39,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-11",
+      "navKrw": 9606897.29,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-12",
+      "navKrw": 9599901.51,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-13",
+      "navKrw": 9536050.57,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-14",
+      "navKrw": 9439218.46,
+      "caseId": "C13"
+    },
+    {
+      "date": "2023-11-15",
+      "navKrw": 9851533.71,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-16",
+      "navKrw": 9506336.15,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-17",
+      "navKrw": 9571472.19,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-18",
+      "navKrw": 9566421.16,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-19",
+      "navKrw": 9729592.88,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-20",
+      "navKrw": 9752256.6,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-21",
+      "navKrw": 9414444.03,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-22",
+      "navKrw": 9781703.38,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-23",
+      "navKrw": 9763835.87,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-24",
+      "navKrw": 9843683.55,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-25",
+      "navKrw": 9855803.78,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-26",
+      "navKrw": 9786435.48,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-27",
+      "navKrw": 9722865.2,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-28",
+      "navKrw": 9827792.79,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-29",
+      "navKrw": 9814678.92,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-11-30",
+      "navKrw": 9817308.06,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-01",
+      "navKrw": 9993440.13,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-02",
+      "navKrw": 10182548.6,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-03",
+      "navKrw": 10288332.95,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-04",
+      "navKrw": 10643073.74,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-05",
+      "navKrw": 11012906.05,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-06",
+      "navKrw": 10906109.52,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-07",
+      "navKrw": 10946495.96,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-08",
+      "navKrw": 11089828.87,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-09",
+      "navKrw": 11000286.32,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-10",
+      "navKrw": 11023559.61,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-11",
+      "navKrw": 10503529.41,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-12",
+      "navKrw": 10519493.62,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-13",
+      "navKrw": 10785002.65,
+      "caseId": "C14"
+    },
+    {
+      "date": "2023-12-14",
+      "navKrw": 10861443.59,
+      "caseId": "C14"
+    },
+    {
+      "date": "2024-03-31",
+      "navKrw": 11085354.73,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-01",
+      "navKrw": 10865705.6,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-02",
+      "navKrw": 10369201.29,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-03",
+      "navKrw": 10429775.86,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-04",
+      "navKrw": 10669423.32,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-05",
+      "navKrw": 10602962.87,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-06",
+      "navKrw": 10718290.94,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-07",
+      "navKrw": 10809228.69,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-08",
+      "navKrw": 11131869.11,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-09",
+      "navKrw": 10811060.26,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-10",
+      "navKrw": 10967672.92,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-11",
+      "navKrw": 10889009.41,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-12",
+      "navKrw": 10495506.02,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-13",
+      "navKrw": 10109444.11,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-14",
+      "navKrw": 10267046.58,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-15",
+      "navKrw": 10061999.1,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-16",
+      "navKrw": 10095768.46,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-17",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-18",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-19",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-20",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-21",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-22",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-23",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-24",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-25",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-26",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-27",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-28",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-04-29",
+      "navKrw": 9788322.67,
+      "caseId": "C15"
+    },
+    {
+      "date": "2024-07-09",
+      "navKrw": 9822893.73,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-10",
+      "navKrw": 9814502.01,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-11",
+      "navKrw": 9804510.14,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-12",
+      "navKrw": 9818728.29,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-13",
+      "navKrw": 9852769.41,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-14",
+      "navKrw": 9894032.62,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-15",
+      "navKrw": 9995676.28,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-16",
+      "navKrw": 10003956.68,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-17",
+      "navKrw": 9979207.4,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-18",
+      "navKrw": 9976616.75,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-19",
+      "navKrw": 10045792.53,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-20",
+      "navKrw": 10058217.91,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-21",
+      "navKrw": 10084763.32,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-22",
+      "navKrw": 10068367.44,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-23",
+      "navKrw": 10027049.61,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-24",
+      "navKrw": 10012551.87,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-25",
+      "navKrw": 10023527.24,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-26",
+      "navKrw": 10078100.95,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-27",
+      "navKrw": 10077803.49,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-28",
+      "navKrw": 10086951.92,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-29",
+      "navKrw": 10049020.55,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-30",
+      "navKrw": 10033573.22,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-07-31",
+      "navKrw": 9993187.38,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-01",
+      "navKrw": 10011982.85,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-02",
+      "navKrw": 9912165.34,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-03",
+      "navKrw": 9891445.85,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-04",
+      "navKrw": 9825767.33,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-05",
+      "navKrw": 9698629.58,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-06",
+      "navKrw": 9698629.58,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-08-07",
+      "navKrw": 9698629.58,
+      "caseId": "C16"
+    },
+    {
+      "date": "2024-12-10",
+      "navKrw": 9617386.3,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-11",
+      "navKrw": 9971634.69,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-12",
+      "navKrw": 9935366.47,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-13",
+      "navKrw": 10027124.9,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-14",
+      "navKrw": 10007809.94,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-15",
+      "navKrw": 10223567.77,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-16",
+      "navKrw": 10327439.68,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-17",
+      "navKrw": 10282968.45,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-18",
+      "navKrw": 9808375.94,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-19",
+      "navKrw": 9580041.89,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-20",
+      "navKrw": 9598842.43,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-21",
+      "navKrw": 9570710.93,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-22",
+      "navKrw": 9455561.34,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-23",
+      "navKrw": 9439027.03,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-24",
+      "navKrw": 9643957.86,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-25",
+      "navKrw": 9686030.48,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-26",
+      "navKrw": 9485656.86,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-27",
+      "navKrw": 9404593.2,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-28",
+      "navKrw": 9458649.73,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-29",
+      "navKrw": 9373992.59,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-30",
+      "navKrw": 9323011.06,
+      "caseId": "C17"
+    },
+    {
+      "date": "2024-12-31",
+      "navKrw": 9365100.97,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-01",
+      "navKrw": 9419798.19,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-02",
+      "navKrw": 9549141.03,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-03",
+      "navKrw": 9613990.29,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-04",
+      "navKrw": 9616526.81,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-05",
+      "navKrw": 9624364.99,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-06",
+      "navKrw": 9836546.93,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-07",
+      "navKrw": 9543172.04,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-01-08",
+      "navKrw": 9440085.73,
+      "caseId": "C17"
+    },
+    {
+      "date": "2025-02-05",
+      "navKrw": 9423418.71,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-06",
+      "navKrw": 9422577.48,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-07",
+      "navKrw": 9421888.76,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-08",
+      "navKrw": 9420989.87,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-09",
+      "navKrw": 9421250.73,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-10",
+      "navKrw": 9435272.37,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-11",
+      "navKrw": 9411335.63,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-12",
+      "navKrw": 9441633.36,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-13",
+      "navKrw": 9423356.58,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-14",
+      "navKrw": 9436281.33,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-15",
+      "navKrw": 9437283.35,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-16",
+      "navKrw": 9416259.07,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-17",
+      "navKrw": 9411361.7,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-18",
+      "navKrw": 9409793.65,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-19",
+      "navKrw": 9423881.34,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-20",
+      "navKrw": 9447934.1,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-21",
+      "navKrw": 9417184.03,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-22",
+      "navKrw": 9422529.1,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-23",
+      "navKrw": 9418285.11,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-24",
+      "navKrw": 9350135.59,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-25",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-26",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-27",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-02-28",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-01",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-02",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-03",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-04",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-05",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-03-06",
+      "navKrw": 9342127.62,
+      "caseId": "C18"
+    },
+    {
+      "date": "2025-07-22",
+      "navKrw": 9393344.01,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-23",
+      "navKrw": 9369498.7,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-24",
+      "navKrw": 9361241.39,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-25",
+      "navKrw": 9346782.55,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-26",
+      "navKrw": 9352864.7,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-27",
+      "navKrw": 9382622.05,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-28",
+      "navKrw": 9355696.66,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-29",
+      "navKrw": 9353476.94,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-30",
+      "navKrw": 9351279.1,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-07-31",
+      "navKrw": 9309968.29,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-01",
+      "navKrw": 9260898.99,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-02",
+      "navKrw": 9245944.71,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-03",
+      "navKrw": 9279022.68,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-04",
+      "navKrw": 9295860.23,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-05",
+      "navKrw": 9277449.82,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-06",
+      "navKrw": 9294611.49,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-07",
+      "navKrw": 9343951.19,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-08",
+      "navKrw": 9328087.8,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-09",
+      "navKrw": 9323859.86,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-10",
+      "navKrw": 9380203.75,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-11",
+      "navKrw": 9368106.1,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-12",
+      "navKrw": 9396918.73,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-13",
+      "navKrw": 9460039.38,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-14",
+      "navKrw": 9360328.11,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-15",
+      "navKrw": 9341365.36,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-16",
+      "navKrw": 9342133.58,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-17",
+      "navKrw": 9342618.08,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-18",
+      "navKrw": 9319180.06,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-19",
+      "navKrw": 9252442.91,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-20",
+      "navKrw": 9280265.06,
+      "caseId": "C19"
+    },
+    {
+      "date": "2025-08-29",
+      "navKrw": 9074636.19,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-08-30",
+      "navKrw": 9088349.93,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-08-31",
+      "navKrw": 9106762.0,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-01",
+      "navKrw": 9028101.72,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-02",
+      "navKrw": 9040222.11,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-03",
+      "navKrw": 9165560.79,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-04",
+      "navKrw": 9009272.18,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-05",
+      "navKrw": 9019248.28,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-06",
+      "navKrw": 8984643.74,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-07",
+      "navKrw": 9017873.59,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-08",
+      "navKrw": 9018055.1,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-09",
+      "navKrw": 9021806.49,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-10",
+      "navKrw": 9061380.78,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-11",
+      "navKrw": 9172228.55,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-12",
+      "navKrw": 9431145.26,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-13",
+      "navKrw": 9383517.6,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-14",
+      "navKrw": 9319020.33,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-15",
+      "navKrw": 9235531.64,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-16",
+      "navKrw": 9212487.25,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-17",
+      "navKrw": 9303907.81,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-18",
+      "navKrw": 9300944.96,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-19",
+      "navKrw": 9178053.68,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-20",
+      "navKrw": 9190132.53,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-21",
+      "navKrw": 9153899.0,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-22",
+      "navKrw": 8903368.35,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-23",
+      "navKrw": 8868710.3,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-24",
+      "navKrw": 8857349.77,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-25",
+      "navKrw": 8695980.27,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-26",
+      "navKrw": 8695980.27,
+      "caseId": "C20"
+    },
+    {
+      "date": "2025-09-27",
+      "navKrw": 8695980.27,
+      "caseId": "C20"
+    }
+  ]
+}
