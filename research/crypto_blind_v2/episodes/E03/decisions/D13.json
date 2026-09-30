@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":13,
+  "relativeDay":65,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":123.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":25,"stop":123.5}
+  ],
+  "cashPct":40,
+  "rationale":"BTC continues to accept above the breakout, spending another five sessions in a tight 124-130 high-level range while RSI stays near 70 rather than re-accelerating to an extreme. The trend remains intact, so keep both sleeves rather than harvest early. Raise the common stop to 123.5, just below the recent high-level acceptance zone, to preserve the accumulated account gain if the structure fails. ETH remains volatile after its vertical expansion and is not chased."
+}
