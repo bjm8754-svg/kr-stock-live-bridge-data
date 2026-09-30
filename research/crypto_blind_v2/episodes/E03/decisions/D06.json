@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":6,
+  "relativeDay":30,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":25,"stop":96.0}
+  ],
+  "cashPct":75,
+  "rationale":"BTC has rebounded from the 91.9 washout with strong participation and has now reclaimed both the 20-day and 50-day structure. This is the first meaningful role-reversal attempt after a prolonged decline, but the 100-day structure near 113 remains overhead and ETH is still materially weaker below all major moving averages. Take a 25% BTC spot probe with invalidation below the reclaimed structure; no leverage yet."
+}
