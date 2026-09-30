@@ -145,4 +145,4 @@ for x in candidates + held:
 
 print(json.dumps({'status':'PASS','matrix':str(matrix_path),'candidates':len(candidates),'held':len(held)}, ensure_ascii=False))
 
-# refresh marker: S01 step 2
+# refresh marker: S01 step 3
