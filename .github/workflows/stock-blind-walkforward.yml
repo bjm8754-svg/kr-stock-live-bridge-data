@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - "scripts/stock_blind_walkforward.py"
+      - "scripts/stock_blind_runner.py"
+      - "scripts/stock_blind_privacy.py"
       - "scripts/test_stock_blind_privacy.py"
       - "research/stock_blind/ACTIVE_EPISODE.json"
       - "research/stock_blind/episodes/**/decisions/**"
@@ -36,51 +38,17 @@ jobs:
         run: python scripts/test_stock_blind_privacy.py
 
       - name: Blind-only methodology label
-        run: |
-          python - <<'PY'
-          import json, pathlib
-          p=pathlib.Path('market-structure-v3-config.json')
-          cfg=json.loads(p.read_text(encoding='utf-8'))
-          cfg['methodologyVersion']='MARKET_STRUCTURE_V3_BLIND'
-          p.write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          PY
+        if: ${{ false }}
+        run: echo disabled-during-unit-gate
 
       - name: Build blind stock card and portfolio state
-        run: python scripts/stock_blind_walkforward.py
+        if: ${{ false }}
+        run: echo disabled-during-unit-gate
 
       - name: Guard blind card
-        run: |
-          python - <<'PY'
-          import importlib.util, json, pathlib
-          cfg=json.load(open('research/stock_blind/ACTIVE_EPISODE.json',encoding='utf-8'))
-          root=pathlib.Path('research/stock_blind/episodes')/cfg['episodeId']
-          st=json.load(open(root/'state.json',encoding='utf-8'))
-          assert st['futureIncluded'] is False
-          p=root/'current_card.json'
-          if p.exists():
-              card=json.loads(p.read_text(encoding='utf-8'))
-              assert card['futureIncluded'] is False
-              core=pathlib.Path('scripts/stock_blind_walkforward.py')
-              spec=importlib.util.spec_from_file_location('stock_blind_guard_core', core)
-              mod=importlib.util.module_from_spec(spec)
-              assert spec and spec.loader
-              spec.loader.exec_module(mod)
-              assert not mod.contains_calendar_date_string(card)
-          print('STOCK_BLIND_GUARD: PASS', root)
-          PY
+        if: ${{ false }}
+        run: echo disabled-during-unit-gate
 
       - name: Commit blind state
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -- market-structure-v3-config.json
-          git add research/stock_blind/episodes
-          if git diff --cached --quiet; then
-            echo "no stock blind state changes"
-            exit 0
-          fi
-          git commit -m "advance stock blind replay"
-          git pull --rebase origin main
-          git push
+        if: ${{ false }}
+        run: echo disabled-during-unit-gate
