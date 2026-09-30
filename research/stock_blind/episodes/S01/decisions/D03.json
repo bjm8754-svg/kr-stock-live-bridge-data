@@ -1,0 +1,29 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S01",
+  "step": 3,
+  "portfolio": [
+    {
+      "assetId": "A0E433D981",
+      "action": "REDUCE",
+      "capitalPct": 15.5,
+      "entryReference": 81200,
+      "stop": 74500,
+      "target": null,
+      "reason": "The added tranche was justified by acceptance above the 87.9k box-upper area, but that specific breakout thesis failed as price returned to roughly 81.2k. Remove the tactical ADD rather than letting a failed breakout contaminate the original swing. Keep the original core because the larger rising structure and 75k accepted-support zone remain intact."
+    },
+    {
+      "assetId": "A91ECD3412",
+      "action": "ENTER",
+      "capitalPct": 20.0,
+      "entryReference": 17440,
+      "stop": 15450,
+      "target": null,
+      "reason": "Best fresh trend-following rotation candidate. The 20/60/120-day averages are aligned upward, participation has expanded materially for several sessions, and price is testing/holding the prior high area around 16.5k-16.9k. The latest upper wick argues against an oversized entry, so start at 20% with a swing-width stop below the emerging 15.7k-16.0k support cluster."
+    }
+  ],
+  "cashPct": 64.5,
+  "portfolioThesis": "Treat failed add-theses separately from intact core theses. The broad environment remains selective, so concentrate only in relative-strength trends and keep substantial cash rather than forcing exposure. Reject apparently attractive counter-trend spring R/R when the higher-timeframe downtrend still creates stacked overhead supply.",
+  "rotationRule": "Re-run full-market discovery at the next review. If A91ECD3412 accepts the 16.5k-16.9k high zone and participation persists, it can be scaled. If it loses that zone and the 15.7k support cluster, exit rather than average down. A0E433D981 remains a core only while the larger 75k support structure survives.",
+  "notes": "Locked blind D03 decision. A6D0F8C842 was stopped in the prior interval and is not re-entered. No hidden identity, date, or future data used."
+}
