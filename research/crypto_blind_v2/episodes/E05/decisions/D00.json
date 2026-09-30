@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":0,
+  "relativeDay":0,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"Both assets are coming directly off a violent multi-day breakdown after an extended advance. BTC is near its 100-day average, but the 20- and 50-day structures have already been lost and there has been no time acceptance or reclaim. ETH is even more volatile. Do not catch the first falling-knife touch of long-term support; stay fully in cash and require stabilization or a durable reclaim before risking capital."
+}
