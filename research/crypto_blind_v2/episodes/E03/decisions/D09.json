@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":9,
+  "relativeDay":45,
+  "verdict":"HOLD_ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":110.5},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":110.5}
+  ],
+  "cashPct":50,
+  "rationale":"BTC has held the 100-day breakout for five sessions and compressed tightly near the highs instead of rejecting the move. Elevated RSI is a warning but not, by itself, a reason to abandon a confirmed high-tight continuation while the existing position has a profit cushion. Maintain the 35% spot and 15% daily-2x sleeves, but raise invalidation aggressively to 110.5 to protect accumulated gains if the breakout fails. ETH remains secondary and is not added."
+}
