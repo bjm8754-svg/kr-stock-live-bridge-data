@@ -1,0 +1,1552 @@
+{
+  "schema": "KOREA_STOCK_BLIND_CANDIDATE_DETAIL",
+  "episodeId": "S01",
+  "step": 3,
+  "relativeSession": 9,
+  "futureIncluded": false,
+  "detail": {
+    "assetId": "AA7A756734",
+    "market": "KOSPI",
+    "price": {
+      "open": 13270.0,
+      "high": 13820.0,
+      "low": 12810.0,
+      "close": 13670.0,
+      "closeLocation": 0.851,
+      "atrPct": 8.23
+    },
+    "money": {
+      "tradingValue": 2982134760.0,
+      "avg20TradingValueEstimated": 25397019209.0,
+      "tradingValueRatio20Estimated": 0.12,
+      "volume": 222672.0,
+      "avg20Volume": 1409906.0,
+      "volumeRatio20": 0.16,
+      "quality": "ESTIMATED"
+    },
+    "ma": {
+      "20": 16287.5,
+      "60": 14881.33,
+      "120": 12301.33,
+      "240": 12509.62,
+      "480": 11099.75,
+      "600": 11012.93,
+      "1000": 12700.29
+    },
+    "primarySetup": {
+      "family": "TREND_BRIDGE",
+      "state": "TREND_BRIDGE_RETEST",
+      "evidence": [
+        "PRIOR_IMPULSE",
+        "PAUSE",
+        "RESUME",
+        "ROLE_ACCEPTED_SUPPORT"
+      ],
+      "triggerLevel": 12580.0,
+      "invalidationLevel": 12330.0,
+      "source": "T-83D"
+    },
+    "confirmation": {
+      "moneyState": "DRY",
+      "pullbackMoneyState": "CONTRACTING",
+      "rsi": {
+        "period": 14,
+        "value": 37.45,
+        "slope": -7.98,
+        "direction": "WEAKENING",
+        "divergence": "NONE",
+        "priceFirst": true,
+        "auto7030Trigger": false
+      },
+      "warnings": []
+    },
+    "execution": {
+      "readiness": "RADAR",
+      "reason": "STRUCTURAL_RR_TOO_LOW",
+      "mode": "PREPLANNED_LEVEL_MODE",
+      "evaluationReference": 13670.0,
+      "entryReference": 12580.0,
+      "currentVsEntryPct": 8.66,
+      "invalidation": 12330.0,
+      "invalidationSource": "SETUP_TREND_BRIDGE_TREND_BRIDGE_RETEST",
+      "nearestAcceptedSupport": 12782.06,
+      "nextResistance": 13950.0,
+      "riskPct": 9.8,
+      "rewardPct": 2.05,
+      "structuralRR": 0.21,
+      "plannedRiskPct": 1.99,
+      "plannedRewardPct": 10.89,
+      "plannedStructuralRR": 5.48,
+      "warnings": []
+    },
+    "warnings": [],
+    "levels": [
+      {
+        "line": 9745.0,
+        "zoneLow": 8940.0,
+        "zoneHigh": 10550.0,
+        "kinds": [
+          "EVENT_BODY"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE"
+        ],
+        "evidenceCount": 1,
+        "strength": 2.0,
+        "importance": "CORE",
+        "dates": [
+          "T-314D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 40.28,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 10550.0,
+        "zoneLow": 10497.25,
+        "zoneHigh": 10602.75,
+        "kinds": [
+          "EVENT_CLOSE"
+        ],
+        "evidence": [
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 1,
+        "strength": 3.0,
+        "importance": "CORE",
+        "dates": [
+          "T-314D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 29.57,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 11210.0,
+        "zoneLow": 10220.0,
+        "zoneHigh": 12200.0,
+        "kinds": [
+          "EVENT_BODY",
+          "SWING_LOW"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE",
+          "LOCAL_REACTION_LOW"
+        ],
+        "evidenceCount": 2,
+        "strength": 3.0,
+        "importance": "CORE",
+        "dates": [
+          "T-90D",
+          "T-64D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 21.94,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 12220.0,
+        "zoneLow": 12119.1,
+        "zoneHigh": 12391.65,
+        "kinds": [
+          "EVENT_CLOSE",
+          "SWING_LOW"
+        ],
+        "evidence": [
+          "LOCAL_REACTION_LOW",
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 4,
+        "strength": 6.0,
+        "importance": "CORE",
+        "dates": [
+          "T-90D",
+          "T-84D",
+          "T-77D",
+          "T-50D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 11.87,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 12580.0,
+        "zoneLow": 12330.0,
+        "zoneHigh": 12880.0,
+        "kinds": [
+          "TREND_BRIDGE_UP"
+        ],
+        "evidence": [
+          "DIRECTION_UP",
+          "IMPULSE",
+          "PAUSE",
+          "SAME_DIRECTION_RESUME"
+        ],
+        "evidenceCount": 1,
+        "strength": 3.0,
+        "importance": "CORE",
+        "dates": [
+          "T-83D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 8.66,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 12782.06,
+        "zoneLow": 12523.33,
+        "zoneHigh": 13075.0,
+        "kinds": [
+          "TRADE_DENSITY"
+        ],
+        "evidence": [
+          "SESSIONS_18",
+          "TIME_ACCEPTANCE",
+          "TRADING_VALUE_CONCENTRATION"
+        ],
+        "evidenceCount": 1,
+        "strength": 2.5,
+        "importance": "CORE",
+        "dates": [
+          "T+0D"
+        ],
+        "role": {
+          "state": "ACCEPTED_SUPPORT",
+          "warnings": [],
+          "distancePct": 6.95,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 13180.0,
+        "zoneLow": 12070.0,
+        "zoneHigh": 14290.0,
+        "kinds": [
+          "EVENT_BODY"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE"
+        ],
+        "evidenceCount": 1,
+        "strength": 2.0,
+        "importance": "CORE",
+        "dates": [
+          "T-225D"
+        ],
+        "role": {
+          "state": "DECISION_ZONE",
+          "warnings": [],
+          "distancePct": 3.72,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 13930.0,
+        "zoneLow": 12100.0,
+        "zoneHigh": 15740.0,
+        "kinds": [
+          "EVENT_BODY",
+          "SWING_HIGH"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE",
+          "LOCAL_REACTION_HIGH"
+        ],
+        "evidenceCount": 2,
+        "strength": 3.0,
+        "importance": "CORE",
+        "dates": [
+          "T-294D",
+          "T-56D"
+        ],
+        "role": {
+          "state": "DECISION_ZONE",
+          "warnings": [],
+          "distancePct": -1.87,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 14355.0,
+        "zoneLow": 13950.0,
+        "zoneHigh": 14990.0,
+        "kinds": [
+          "EVENT_BODY",
+          "EVENT_CLOSE",
+          "SWING_HIGH"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE",
+          "LOCAL_REACTION_HIGH",
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 3,
+        "strength": 6.0,
+        "importance": "CORE",
+        "dates": [
+          "T-308D",
+          "T-225D",
+          "T-75D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -4.77,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 14992.5,
+        "zoneLow": 14915.05,
+        "zoneHigh": 15075.0,
+        "kinds": [
+          "EVENT_CLOSE",
+          "SWING_HIGH"
+        ],
+        "evidence": [
+          "LOCAL_REACTION_HIGH",
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 2,
+        "strength": 4.0,
+        "importance": "CORE",
+        "dates": [
+          "T-308D",
+          "T-85D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -8.82,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 15643.75,
+        "zoneLow": 15281.67,
+        "zoneHigh": 15833.33,
+        "kinds": [
+          "EVENT_CLOSE",
+          "SWING_LOW",
+          "TRADE_DENSITY"
+        ],
+        "evidence": [
+          "LOCAL_REACTION_LOW",
+          "MONEY_EXPANSION",
+          "SESSIONS_10",
+          "STRONG_CLOSE",
+          "TIME_ACCEPTANCE",
+          "TRADING_VALUE_CONCENTRATION",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 3,
+        "strength": 6.5,
+        "importance": "CORE",
+        "dates": [
+          "T-294D",
+          "T-32D",
+          "T+0D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -12.62,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 15875.0,
+        "zoneLow": 14450.0,
+        "zoneHigh": 17300.0,
+        "kinds": [
+          "EVENT_BODY"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE"
+        ],
+        "evidenceCount": 1,
+        "strength": 2.0,
+        "importance": "CORE",
+        "dates": [
+          "T-287D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -13.89,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 16425.0,
+        "zoneLow": 15280.0,
+        "zoneHigh": 17570.0,
+        "kinds": [
+          "EVENT_BODY"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE"
+        ],
+        "evidenceCount": 1,
+        "strength": 2.0,
+        "importance": "CORE",
+        "dates": [
+          "T-43D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -16.77,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 17298.33,
+        "zoneLow": 15600.0,
+        "zoneHigh": 18920.0,
+        "kinds": [
+          "EVENT_BODY",
+          "EVENT_CLOSE",
+          "SWING_LOW"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE",
+          "LOCAL_REACTION_LOW",
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 3,
+        "strength": 6.0,
+        "importance": "CORE",
+        "dates": [
+          "T-287D",
+          "T-29D",
+          "T-25D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -20.98,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 17570.0,
+        "zoneLow": 17482.15,
+        "zoneHigh": 17657.85,
+        "kinds": [
+          "EVENT_CLOSE"
+        ],
+        "evidence": [
+          "MONEY_EXPANSION",
+          "STRONG_CLOSE",
+          "VOLUME_EXPANSION"
+        ],
+        "evidenceCount": 1,
+        "strength": 3.0,
+        "importance": "CORE",
+        "dates": [
+          "T-43D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -22.2,
+          "decisionRelevant": true
+        }
+      },
+      {
+        "line": 18301.39,
+        "zoneLow": 17240.0,
+        "zoneHigh": 19460.0,
+        "kinds": [
+          "EVENT_BODY",
+          "TRADE_DENSITY"
+        ],
+        "evidence": [
+          "EVENT_OPEN_CLOSE_RANGE",
+          "SESSIONS_5",
+          "TIME_ACCEPTANCE",
+          "TRADING_VALUE_CONCENTRATION"
+        ],
+        "evidenceCount": 2,
+        "strength": 4.5,
+        "importance": "CORE",
+        "dates": [
+          "T-286D",
+          "T+0D"
+        ],
+        "role": {
+          "state": "ACCEPTED_RESISTANCE",
+          "warnings": [],
+          "distancePct": -25.31,
+          "decisionRelevant": true
+        }
+      }
+    ],
+    "reviewTier": "NOW",
+    "daily": [
+      [
+        "T-89D",
+        12630.0,
+        14500.0,
+        12520.0,
+        12710.0,
+        15.3,
+        18.56,
+        80.54
+      ],
+      [
+        "T-88D",
+        12700.0,
+        13340.0,
+        12340.0,
+        12710.0,
+        4.0,
+        4.33,
+        80.54
+      ],
+      [
+        "T-85D",
+        13570.0,
+        15000.0,
+        12710.0,
+        12720.0,
+        9.33,
+        10.51,
+        80.58
+      ],
+      [
+        "T-84D",
+        12650.0,
+        12650.0,
+        12330.0,
+        12420.0,
+        0.22,
+        0.22,
+        75.37
+      ],
+      [
+        "T-83D",
+        12590.0,
+        12880.0,
+        12580.0,
+        12580.0,
+        0.16,
+        0.16,
+        76.25
+      ],
+      [
+        "T-82D",
+        12920.0,
+        13350.0,
+        12830.0,
+        13350.0,
+        0.25,
+        0.27,
+        79.97
+      ],
+      [
+        "T-81D",
+        13060.0,
+        14740.0,
+        12980.0,
+        13000.0,
+        2.67,
+        2.87,
+        74.28
+      ],
+      [
+        "T-78D",
+        13180.0,
+        13230.0,
+        12500.0,
+        12520.0,
+        0.18,
+        0.19,
+        67.22
+      ],
+      [
+        "T-77D",
+        12640.0,
+        12780.0,
+        12180.0,
+        12260.0,
+        0.16,
+        0.16,
+        63.68
+      ],
+      [
+        "T-76D",
+        12320.0,
+        14190.0,
+        12180.0,
+        13220.0,
+        2.48,
+        2.55,
+        69.96
+      ],
+      [
+        "T-75D",
+        13320.0,
+        14320.0,
+        12970.0,
+        13500.0,
+        1.02,
+        1.09,
+        71.51
+      ],
+      [
+        "T-74D",
+        13300.0,
+        13780.0,
+        13000.0,
+        13470.0,
+        0.37,
+        0.39,
+        71.09
+      ],
+      [
+        "T-67D",
+        12890.0,
+        12890.0,
+        12050.0,
+        12150.0,
+        0.18,
+        0.18,
+        55.54
+      ],
+      [
+        "T-64D",
+        11850.0,
+        11900.0,
+        11210.0,
+        11260.0,
+        0.11,
+        0.1,
+        47.93
+      ],
+      [
+        "T-63D",
+        11420.0,
+        12250.0,
+        11420.0,
+        11580.0,
+        0.2,
+        0.19,
+        50.55
+      ],
+      [
+        "T-62D",
+        11610.0,
+        11880.0,
+        11550.0,
+        11760.0,
+        0.08,
+        0.07,
+        52.02
+      ],
+      [
+        "T-61D",
+        11880.0,
+        12500.0,
+        11780.0,
+        12030.0,
+        0.13,
+        0.12,
+        54.21
+      ],
+      [
+        "T-60D",
+        12270.0,
+        13860.0,
+        12010.0,
+        12820.0,
+        1.47,
+        1.47,
+        59.97
+      ],
+      [
+        "T-57D",
+        12730.0,
+        13420.0,
+        12480.0,
+        13010.0,
+        0.41,
+        0.41,
+        61.23
+      ],
+      [
+        "T-56D",
+        13530.0,
+        13950.0,
+        12870.0,
+        12870.0,
+        0.4,
+        0.42,
+        59.74
+      ],
+      [
+        "T-55D",
+        12830.0,
+        13020.0,
+        12500.0,
+        12500.0,
+        0.12,
+        0.12,
+        55.85
+      ],
+      [
+        "T-54D",
+        12480.0,
+        13200.0,
+        12390.0,
+        12400.0,
+        0.15,
+        0.14,
+        54.82
+      ],
+      [
+        "T-53D",
+        12640.0,
+        13120.0,
+        12380.0,
+        12600.0,
+        0.26,
+        0.25,
+        56.55
+      ],
+      [
+        "T-50D",
+        12550.0,
+        12590.0,
+        12210.0,
+        12470.0,
+        0.13,
+        0.12,
+        55.07
+      ],
+      [
+        "T-49D",
+        12470.0,
+        12530.0,
+        12260.0,
+        12450.0,
+        0.17,
+        0.16,
+        54.83
+      ],
+      [
+        "T-48D",
+        12670.0,
+        14490.0,
+        12580.0,
+        13280.0,
+        5.17,
+        5.26,
+        62.15
+      ],
+      [
+        "T-47D",
+        13130.0,
+        13790.0,
+        12830.0,
+        13750.0,
+        0.99,
+        1.02,
+        65.55
+      ],
+      [
+        "T-46D",
+        13270.0,
+        13620.0,
+        13050.0,
+        13520.0,
+        0.74,
+        0.76,
+        62.59
+      ],
+      [
+        "T-43D",
+        15280.0,
+        17570.0,
+        15160.0,
+        17570.0,
+        13.43,
+        16.9,
+        79.86
+      ],
+      [
+        "T-42D",
+        17280.0,
+        21350.0,
+        17250.0,
+        18200.0,
+        6.59,
+        8.47,
+        81.3
+      ],
+      [
+        "T-41D",
+        19440.0,
+        20450.0,
+        18100.0,
+        18280.0,
+        2.11,
+        2.57,
+        81.49
+      ],
+      [
+        "T-40D",
+        18590.0,
+        20850.0,
+        18340.0,
+        18510.0,
+        2.17,
+        2.58,
+        82.03
+      ],
+      [
+        "T-39D",
+        18170.0,
+        18900.0,
+        17310.0,
+        18200.0,
+        0.75,
+        0.83,
+        78.69
+      ],
+      [
+        "T-35D",
+        18960.0,
+        19280.0,
+        16610.0,
+        16820.0,
+        0.8,
+        0.87,
+        65.85
+      ],
+      [
+        "T-34D",
+        16520.0,
+        16970.0,
+        15880.0,
+        16730.0,
+        0.6,
+        0.6,
+        65.1
+      ],
+      [
+        "T-33D",
+        16500.0,
+        16610.0,
+        15710.0,
+        15730.0,
+        0.21,
+        0.2,
+        57.33
+      ],
+      [
+        "T-32D",
+        15610.0,
+        16170.0,
+        15440.0,
+        15580.0,
+        0.18,
+        0.17,
+        56.24
+      ],
+      [
+        "T-29D",
+        15600.0,
+        19590.0,
+        15600.0,
+        18920.0,
+        3.74,
+        3.91,
+        69.9
+      ],
+      [
+        "T-28D",
+        18010.0,
+        19730.0,
+        17690.0,
+        18800.0,
+        1.54,
+        1.69,
+        69.07
+      ],
+      [
+        "T-27D",
+        18670.0,
+        19230.0,
+        18250.0,
+        18880.0,
+        0.63,
+        0.69,
+        69.33
+      ],
+      [
+        "T-26D",
+        18650.0,
+        19180.0,
+        17370.0,
+        17370.0,
+        0.44,
+        0.46,
+        59.12
+      ],
+      [
+        "T-25D",
+        17370.0,
+        18280.0,
+        17370.0,
+        17950.0,
+        0.32,
+        0.33,
+        61.47
+      ],
+      [
+        "T-22D",
+        18200.0,
+        20100.0,
+        18040.0,
+        19070.0,
+        1.32,
+        1.44,
+        65.58
+      ],
+      [
+        "T-21D",
+        18730.0,
+        19500.0,
+        18500.0,
+        19050.0,
+        0.46,
+        0.5,
+        65.44
+      ],
+      [
+        "T-20D",
+        18520.0,
+        20100.0,
+        18040.0,
+        18970.0,
+        1.16,
+        1.25,
+        64.87
+      ],
+      [
+        "T-19D",
+        20050.0,
+        20550.0,
+        18100.0,
+        18150.0,
+        1.08,
+        1.18,
+        59.16
+      ],
+      [
+        "T-18D",
+        18010.0,
+        18010.0,
+        17010.0,
+        17170.0,
+        0.19,
+        0.19,
+        53.14
+      ],
+      [
+        "T-15D",
+        16820.0,
+        17520.0,
+        16560.0,
+        16610.0,
+        0.13,
+        0.12,
+        50.01
+      ],
+      [
+        "T-14D",
+        16580.0,
+        16930.0,
+        15940.0,
+        16030.0,
+        0.15,
+        0.14,
+        46.93
+      ],
+      [
+        "T-13D",
+        16650.0,
+        17980.0,
+        16400.0,
+        16850.0,
+        0.78,
+        0.72,
+        51.48
+      ],
+      [
+        "T-12D",
+        16500.0,
+        16720.0,
+        15910.0,
+        15910.0,
+        0.14,
+        0.12,
+        46.55
+      ],
+      [
+        "T-11D",
+        15840.0,
+        15860.0,
+        15040.0,
+        15080.0,
+        0.12,
+        0.1,
+        42.66
+      ],
+      [
+        "T-8D",
+        14780.0,
+        15790.0,
+        14620.0,
+        14850.0,
+        0.23,
+        0.19,
+        41.63
+      ],
+      [
+        "T-7D",
+        14910.0,
+        15540.0,
+        14910.0,
+        15490.0,
+        0.28,
+        0.24,
+        45.59
+      ],
+      [
+        "T-6D",
+        16620.0,
+        16790.0,
+        15460.0,
+        15460.0,
+        0.37,
+        0.34,
+        45.44
+      ],
+      [
+        "T-5D",
+        15040.0,
+        16350.0,
+        14910.0,
+        15680.0,
+        0.32,
+        0.28,
+        46.87
+      ],
+      [
+        "T-4D",
+        15360.0,
+        15640.0,
+        14840.0,
+        15130.0,
+        0.15,
+        0.12,
+        43.77
+      ],
+      [
+        "T-1D",
+        14510.0,
+        14700.0,
+        13680.0,
+        13780.0,
+        0.15,
+        0.11,
+        37.27
+      ],
+      [
+        "T+0D",
+        14100.0,
+        14290.0,
+        13310.0,
+        13480.0,
+        0.17,
+        0.13,
+        35.99
+      ],
+      [
+        "T+1D",
+        13270.0,
+        13820.0,
+        12810.0,
+        13670.0,
+        0.16,
+        0.12,
+        37.45
+      ]
+    ],
+    "weekly": [
+      [
+        "T-200D",
+        13130.0,
+        14100.0,
+        12660.0,
+        12950.0,
+        0.09,
+        0.08
+      ],
+      [
+        "T-193D",
+        13020.0,
+        13900.0,
+        12690.0,
+        12880.0,
+        0.16,
+        0.14
+      ],
+      [
+        "T-186D",
+        12770.0,
+        12830.0,
+        11820.0,
+        12090.0,
+        0.04,
+        0.03
+      ],
+      [
+        "T-179D",
+        12170.0,
+        12640.0,
+        11700.0,
+        11770.0,
+        0.04,
+        0.03
+      ],
+      [
+        "T-172D",
+        11770.0,
+        11910.0,
+        10800.0,
+        10840.0,
+        0.04,
+        0.03
+      ],
+      [
+        "T-165D",
+        10920.0,
+        11130.0,
+        10350.0,
+        10480.0,
+        0.03,
+        0.02
+      ],
+      [
+        "T-158D",
+        10400.0,
+        10790.0,
+        10100.0,
+        10100.0,
+        0.03,
+        0.02
+      ],
+      [
+        "T-151D",
+        10150.0,
+        10850.0,
+        10030.0,
+        10250.0,
+        0.03,
+        0.02
+      ],
+      [
+        "T-144D",
+        10250.0,
+        10390.0,
+        8960.0,
+        9310.0,
+        0.05,
+        0.03
+      ],
+      [
+        "T-137D",
+        9280.0,
+        9870.0,
+        9140.0,
+        9230.0,
+        0.04,
+        0.03
+      ],
+      [
+        "T-130D",
+        9200.0,
+        9560.0,
+        8840.0,
+        8880.0,
+        0.06,
+        0.04
+      ],
+      [
+        "T-123D",
+        8890.0,
+        10760.0,
+        8310.0,
+        8790.0,
+        1.32,
+        0.88
+      ],
+      [
+        "T-116D",
+        8460.0,
+        9150.0,
+        8110.0,
+        9090.0,
+        0.12,
+        0.08
+      ],
+      [
+        "T-109D",
+        9120.0,
+        9250.0,
+        8670.0,
+        8710.0,
+        0.08,
+        0.05
+      ],
+      [
+        "T-102D",
+        8710.0,
+        9520.0,
+        8550.0,
+        8650.0,
+        0.14,
+        0.09
+      ],
+      [
+        "T-95D",
+        8650.0,
+        9280.0,
+        8530.0,
+        9240.0,
+        0.05,
+        0.03
+      ],
+      [
+        "T-88D",
+        9240.0,
+        14500.0,
+        9230.0,
+        12710.0,
+        7.28,
+        6.35
+      ],
+      [
+        "T-81D",
+        13570.0,
+        15000.0,
+        12330.0,
+        13000.0,
+        4.04,
+        4.04
+      ],
+      [
+        "T-74D",
+        13180.0,
+        14320.0,
+        12180.0,
+        13470.0,
+        2.93,
+        3.04
+      ],
+      [
+        "T-67D",
+        12890.0,
+        12890.0,
+        12050.0,
+        12150.0,
+        0.14,
+        0.14
+      ],
+      [
+        "T-60D",
+        11850.0,
+        13860.0,
+        11210.0,
+        12820.0,
+        1.63,
+        1.65
+      ],
+      [
+        "T-53D",
+        12730.0,
+        13950.0,
+        12380.0,
+        12600.0,
+        0.99,
+        1.04
+      ],
+      [
+        "T-46D",
+        12550.0,
+        14490.0,
+        12210.0,
+        13520.0,
+        2.64,
+        2.82
+      ],
+      [
+        "T-39D",
+        15280.0,
+        21350.0,
+        15160.0,
+        18200.0,
+        12.21,
+        17.45
+      ],
+      [
+        "T-32D",
+        18960.0,
+        19280.0,
+        15440.0,
+        15580.0,
+        0.96,
+        1.12
+      ],
+      [
+        "T-25D",
+        15600.0,
+        19730.0,
+        15600.0,
+        17950.0,
+        3.84,
+        4.7
+      ],
+      [
+        "T-18D",
+        18200.0,
+        20550.0,
+        17010.0,
+        17170.0,
+        2.56,
+        3.19
+      ],
+      [
+        "T-11D",
+        16820.0,
+        17980.0,
+        15040.0,
+        15080.0,
+        0.62,
+        0.67
+      ],
+      [
+        "T-4D",
+        14780.0,
+        16790.0,
+        14620.0,
+        15130.0,
+        0.42,
+        0.42
+      ],
+      [
+        "T+3D",
+        14510.0,
+        14700.0,
+        12810.0,
+        13670.0,
+        0.11,
+        0.1
+      ]
+    ],
+    "monthly": [
+      [
+        "T-495D",
+        8590.0,
+        9300.0,
+        8550.0,
+        9040.0,
+        0.15,
+        0.12
+      ],
+      [
+        "T-464D",
+        8970.0,
+        9080.0,
+        8670.0,
+        8740.0,
+        0.21,
+        0.16
+      ],
+      [
+        "T-433D",
+        8740.0,
+        8780.0,
+        7820.0,
+        8600.0,
+        0.3,
+        0.22
+      ],
+      [
+        "T-404D",
+        8600.0,
+        10650.0,
+        8410.0,
+        8560.0,
+        1.44,
+        1.19
+      ],
+      [
+        "T-373D",
+        8790.0,
+        8840.0,
+        8190.0,
+        8790.0,
+        0.5,
+        0.4
+      ],
+      [
+        "T-343D",
+        8700.0,
+        9150.0,
+        8350.0,
+        9100.0,
+        0.75,
+        0.64
+      ],
+      [
+        "T-312D",
+        9090.0,
+        14100.0,
+        8610.0,
+        12270.0,
+        75.44,
+        86.34
+      ],
+      [
+        "T-282D",
+        12200.0,
+        20700.0,
+        11790.0,
+        17990.0,
+        32.53,
+        45.82
+      ],
+      [
+        "T-251D",
+        17710.0,
+        20600.0,
+        13000.0,
+        13940.0,
+        2.21,
+        2.58
+      ],
+      [
+        "T-220D",
+        14170.0,
+        17170.0,
+        10410.0,
+        15510.0,
+        2.89,
+        2.77
+      ],
+      [
+        "T-190D",
+        15350.0,
+        16730.0,
+        12210.0,
+        12300.0,
+        0.68,
+        0.66
+      ],
+      [
+        "T-159D",
+        12190.0,
+        12640.0,
+        10150.0,
+        10360.0,
+        0.08,
+        0.06
+      ],
+      [
+        "T-129D",
+        10220.0,
+        10850.0,
+        8840.0,
+        8880.0,
+        0.05,
+        0.03
+      ],
+      [
+        "T-98D",
+        8890.0,
+        10760.0,
+        8110.0,
+        8890.0,
+        0.28,
+        0.18
+      ],
+      [
+        "T-67D",
+        8760.0,
+        15000.0,
+        8750.0,
+        12150.0,
+        2.3,
+        2.0
+      ],
+      [
+        "T-39D",
+        11850.0,
+        21350.0,
+        11210.0,
+        18200.0,
+        2.45,
+        2.81
+      ],
+      [
+        "T-8D",
+        18960.0,
+        20550.0,
+        14620.0,
+        14850.0,
+        1.79,
+        2.18
+      ],
+      [
+        "T+22D",
+        14910.0,
+        16790.0,
+        12810.0,
+        13670.0,
+        0.11,
+        0.11
+      ]
+    ],
+    "heldDaily": []
+  }
+}
