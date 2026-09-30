@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":4,
+  "relativeDay":20,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The ETH stop was hit and the prior recovery structure has failed. BTC is below its major short/intermediate references and ETH is below the 20-day structure after a high-volume break. The current bounce is not sufficient evidence of a new base or reclaim. Stay fully in cash until stabilization and renewed acceptance appear."
+}
