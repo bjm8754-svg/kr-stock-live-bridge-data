@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":6,
+  "relativeDay":30,
+  "verdict":"WATCH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The market has stopped accelerating lower but has not reclaimed structure. BTC remains below the 20-, 50- and 100-day references; ETH remains below the 20- and 50-day lines despite holding above the 100-day. This is base-building at best, not a confirmed reversal. Stay fully in cash."
+}
