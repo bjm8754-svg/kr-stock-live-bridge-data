@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":14,
+  "relativeDay":70,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"The confirmed BTC probe still failed its declared invalidation. Price is again below the 20/50/100-day cluster and ETH has only a marginal 20-day reclaim while remaining below its 50/100-day structure. Do not reinterpret a failed setup as a reason to average down. Return fully to cash."
+}
