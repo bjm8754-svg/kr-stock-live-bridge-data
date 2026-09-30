@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":16,
+  "relativeDay":80,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"ETHUSDT","vehicle":"SPOT","capitalPct":15,"stop":77.5}
+  ],
+  "cashPct":85,
+  "rationale":"BTC has slipped back below the 20-day structure and is removed. ETH still holds the spring/reclaim thesis marginally: it remains above the 20-day line and well above the sweep low, though the 50-day structure is still overhead. Keep only the small ETH spot probe, tighten invalidation to 77.5, and hold the rest in cash."
+}
