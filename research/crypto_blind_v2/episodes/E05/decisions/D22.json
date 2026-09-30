@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":22,
+  "relativeDay":110,
+  "verdict":"REDUCE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":10,"stop":220.0}
+  ],
+  "cashPct":90,
+  "rationale":"BTC has reached another new high and the position remains profitable, but RSI is back above 80 and price is again substantially extended above the 20-day average. With the account already up nearly 29%, the marginal benefit of keeping the full 15% sleeve is smaller than the risk of a sharp mean-reversion. Trim BTC spot to 10%, raise the stop to 220.0 beneath the recent breakout shelf, and keep 90% cash while allowing a small runner to participate."
+}
