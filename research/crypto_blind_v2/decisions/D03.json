@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":3,
+  "relativeDay":15,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC invalidated the prior structure and is now below its 20-day and around/below its 50-day reference. ETH has broken much more severely and is deeply below both key averages. Oversold RSI is not sufficient evidence of a reversal. Preserve capital and require a new accepted base/reclaim before re-entry."
+}
