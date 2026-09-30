@@ -1,0 +1,11 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":17,
+  "relativeDay":85,
+  "verdict":"PROBE",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":123.0}
+  ],
+  "cashPct":80,
+  "rationale":"After the prior exit, BTC has now tested the rising 50-day area near 124, printed a low around 123.7, and rebounded to 128.6. The longer-term trend is still intact, but price remains below the 20-day structure near 131.4, so this is not yet an attack setup. Re-enter with a 20% spot probe and a clear 123.0 invalidation. Do not use 2x until the short-term structure is reclaimed and accepted again. ETH remains weaker relative to BTC and is excluded."
+}
