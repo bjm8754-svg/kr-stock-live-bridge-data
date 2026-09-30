@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":10,
+  "relativeDay":50,
+  "verdict":"CASH",
+  "portfolio":[],
+  "cashPct":100,
+  "rationale":"BTC remains below its 20/50-day references and the latest rebound to the 100 area was rejected back toward the lower range. ETH remains below all nearby medium-term structure. RSI in the high-20s is only an oversold condition, not a reversal. Stay in cash."
+}
