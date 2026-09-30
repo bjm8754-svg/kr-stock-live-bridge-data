@@ -1,0 +1,12 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":18,
+  "relativeDay":90,
+  "verdict":"ATTACK",
+  "portfolio":[
+    {"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":35,"stop":128.0},
+    {"symbol":"BTCUSDT","vehicle":"DAILY_2X","capitalPct":15,"stop":128.0}
+  ],
+  "cashPct":50,
+  "rationale":"The BTC probe has worked and price has now reclaimed the 20-day structure while the 50- and 100-day trends remain supportive. RSI is near neutral rather than extended, and the rebound from the 50-day test has produced a credible higher-low/reclaim sequence. Scale promptly from probe to attack: increase spot to 35% and add a 15% daily-2x sleeve. Use 128.0 as the common invalidation below the reclaimed short-term structure. ETH is strong but has just printed a new high and is not chased alongside an already increased BTC allocation."
+}
