@@ -1,0 +1,436 @@
+{
+  "schema": "CRYPTO_BLIND_V2_FINAL",
+  "episodeId": "E04",
+  "episodeCommitment": "f4ae220b586df5d2d23bf1f6042f9d10f854e66ff7672a83a9670a39a2686591",
+  "revealedStartDate": "2022-08-03",
+  "initialCapitalKrw": 10000000,
+  "finalCapitalKrw": 9693568.84,
+  "totalReturnPct": -3.064,
+  "maxDrawdownPct": -13.057,
+  "intervals": [
+    {
+      "step": 0,
+      "startEquity": 10000000.0,
+      "endEquity": 10310665.73,
+      "returnPct": 3.107,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 25,
+          "startValue": 2500000.0,
+          "endValue": 2745479.43,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1500000.0,
+          "endValue": 1565186.3,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "startEquity": 10310665.73,
+      "endEquity": 11011157.16,
+      "returnPct": 6.794,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 35,
+          "startValue": 3608733.0,
+          "endValue": 4028081.57,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 10,
+          "startValue": 1031066.57,
+          "endValue": 1271197.59,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1546599.86,
+          "endValue": 1587611.71,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "startEquity": 11011157.16,
+      "endEquity": 10362894.52,
+      "returnPct": -5.887,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 35,
+          "startValue": 3853905.01,
+          "endValue": 3587412.3,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 20,
+          "startValue": 2202231.43,
+          "endValue": 1904944.83,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1651673.57,
+          "endValue": 1567190.24,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "startEquity": 10362894.52,
+      "endEquity": 10107931.47,
+      "returnPct": -2.46,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 35,
+          "startValue": 3627013.08,
+          "endValue": 3464763.87,
+          "stopped": true,
+          "stopDay": 16
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 10,
+          "startValue": 1036289.45,
+          "endValue": 943575.62,
+          "stopped": true,
+          "stopDay": 16
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "startEquity": 10107931.47,
+      "endEquity": 10107931.47,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 5,
+      "startEquity": 10107931.47,
+      "endEquity": 10107931.47,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 6,
+      "startEquity": 10107931.47,
+      "endEquity": 10107931.47,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 7,
+      "startEquity": 10107931.47,
+      "endEquity": 10215050.74,
+      "returnPct": 1.06,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 20,
+          "startValue": 2021586.29,
+          "endValue": 2128705.56,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "startEquity": 10215050.74,
+      "endEquity": 9664089.46,
+      "returnPct": -5.394,
+      "sleeves": [
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 25,
+          "startValue": 2553762.68,
+          "endValue": 2393798.36,
+          "stopped": true,
+          "stopDay": 41
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 10,
+          "startValue": 1021505.07,
+          "endValue": 893533.61,
+          "stopped": true,
+          "stopDay": 41
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 25,
+          "startValue": 2553762.68,
+          "endValue": 2407637.41,
+          "stopped": true,
+          "stopDay": 41
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 10,
+          "startValue": 1021505.07,
+          "endValue": 904604.86,
+          "stopped": true,
+          "stopDay": 41
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "startEquity": 9664089.46,
+      "endEquity": 9664089.46,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 10,
+      "startEquity": 9664089.46,
+      "endEquity": 9664089.46,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 11,
+      "startEquity": 9664089.46,
+      "endEquity": 9664089.46,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 12,
+      "startEquity": 9664089.46,
+      "endEquity": 9664089.46,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 13,
+      "startEquity": 9664089.46,
+      "endEquity": 9609671.9,
+      "returnPct": -0.563,
+      "sleeves": [
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1449613.42,
+          "endValue": 1421811.85,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 10,
+          "startValue": 966408.95,
+          "endValue": 939792.95,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "startEquity": 9609671.9,
+      "endEquity": 9609671.9,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 15,
+      "startEquity": 9609671.9,
+      "endEquity": 9573427.98,
+      "returnPct": -0.377,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1441450.78,
+          "endValue": 1422190.3,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 10,
+          "startValue": 960967.19,
+          "endValue": 943983.75,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "startEquity": 9573427.98,
+      "endEquity": 9792545.28,
+      "returnPct": 2.289,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 15,
+          "startValue": 1436014.2,
+          "endValue": 1655131.5,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "startEquity": 9792545.28,
+      "endEquity": 10008830.43,
+      "returnPct": 2.209,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 30,
+          "startValue": 2937763.59,
+          "endValue": 3062779.34,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 10,
+          "startValue": 979254.53,
+          "endValue": 1061428.17,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "BTCUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 10,
+          "startValue": 979254.53,
+          "endValue": 988350.28,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "startEquity": 10008830.43,
+      "endEquity": 9955150.98,
+      "returnPct": -0.536,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 35,
+          "startValue": 3503090.65,
+          "endValue": 3480476.18,
+          "stopped": false,
+          "stopDay": null
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 15,
+          "startValue": 1501324.56,
+          "endValue": 1470259.59,
+          "stopped": false,
+          "stopDay": null
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "startEquity": 9955150.98,
+      "endEquity": 9693568.84,
+      "returnPct": -2.628,
+      "sleeves": [
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "SPOT",
+          "capitalPct": 35,
+          "startValue": 3484302.84,
+          "endValue": 3343443.07,
+          "stopped": true,
+          "stopDay": 97
+        },
+        {
+          "symbol": "ETHUSDT",
+          "vehicle": "DAILY_2X",
+          "capitalPct": 15,
+          "startValue": 1493272.65,
+          "endValue": 1372550.28,
+          "stopped": true,
+          "stopDay": 97
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "startEquity": 9693568.84,
+      "endEquity": 9693568.84,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 21,
+      "startEquity": 9693568.84,
+      "endEquity": 9693568.84,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 22,
+      "startEquity": 9693568.84,
+      "endEquity": 9693568.84,
+      "returnPct": 0.0,
+      "sleeves": []
+    },
+    {
+      "step": 23,
+      "startEquity": 9693568.84,
+      "endEquity": 9693568.84,
+      "returnPct": 0.0,
+      "sleeves": []
+    }
+  ],
+  "decisionCount": 24
+}
