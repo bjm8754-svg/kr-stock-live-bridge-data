@@ -6,7 +6,9 @@ on:
     branches: [main]
     paths:
       - "scripts/crypto_blind_v2_walkforward.py"
+      - "research/crypto_blind_v2/ACTIVE_EPISODE.json"
       - "research/crypto_blind_v2/decisions/**"
+      - "research/crypto_blind_v2/episodes/**/decisions/**"
       - ".github/workflows/crypto-blind-v2-walkforward.yml"
 
 permissions:
@@ -27,14 +29,21 @@ jobs:
         run: |
           python - <<'PY'
           import json, pathlib, re
-          p=pathlib.Path('research/crypto_blind_v2/current_card.json')
+          base=pathlib.Path('research/crypto_blind_v2')
+          cfgp=base/'ACTIVE_EPISODE.json'
+          if cfgp.exists():
+              cfg=json.load(open(cfgp,encoding='utf-8'))
+              root=base/'episodes'/cfg['episodeId']
+          else:
+              root=base
+          p=root/'current_card.json'
           if p.exists():
               s=p.read_text(encoding='utf-8')
               assert 'futureIncluded":false' in s
               assert not re.search(r'20\d\d-\d\d-\d\d', s)
-          st=json.load(open('research/crypto_blind_v2/state.json',encoding='utf-8'))
+          st=json.load(open(root/'state.json',encoding='utf-8'))
           assert st['futureIncluded'] is False
-          print('V2_BLIND_GUARD: PASS')
+          print('V2_BLIND_GUARD: PASS', root)
           PY
       - name: Commit staged state
         run: |
