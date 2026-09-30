@@ -1,0 +1,9 @@
+{
+  "schema":"CRYPTO_BLIND_V2_DECISION",
+  "step":2,
+  "relativeDay":10,
+  "verdict":"PROBE",
+  "portfolio":[{"symbol":"BTCUSDT","vehicle":"SPOT","capitalPct":20,"stop":99.0}],
+  "cashPct":80,
+  "rationale":"BTC has now built several days of recovery, reclaimed its 20-day and 100-day structures, and is showing materially better relative strength than ETH. The 50-day line is still overhead, so this is not an attack setup. Initiate a 20% BTC spot probe with invalidation below 99.0, beneath the recent reclaim/base area; keep 80% cash and require further acceptance before adding risk."
+}
