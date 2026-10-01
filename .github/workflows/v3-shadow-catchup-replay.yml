@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/v3-shadow-catchup-replay.yml"
+      - "scripts/v3_shadow_catchup_intraday.py"
   workflow_dispatch:
     inputs:
       trade_date:
