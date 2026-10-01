@@ -1,0 +1,56 @@
+name: V3 Shadow Catch-up Replay
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/v3-shadow-catchup-replay.yml"
+  workflow_dispatch:
+    inputs:
+      trade_date:
+        description: "Catch-up KRX date YYYYMMDD"
+        required: false
+        default: "20261001"
+      codes:
+        description: "Frozen shadow codes"
+        required: false
+        default: "010950,000250,039030"
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Recover frozen 09:00-09:40 path
+        shell: bash
+        run: |
+          set -euo pipefail
+          TD="${{ inputs.trade_date || '20261001' }}"
+          CODES="${{ inputs.codes || '010950,000250,039030' }}"
+          python scripts/v3_shadow_catchup_intraday.py \
+            --trade-date "$TD" \
+            --codes "$CODES" \
+            --output "v3-shadow-catchup-intraday-${TD}.json"
+      - name: Confirm production isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- watchlist.json live.json live-health.json
+      - name: Commit catch-up evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v3-shadow-catchup-intraday-20261001.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "record 20261001 V3 catch-up intraday evidence"
+          git pull --rebase origin main
+          git push
