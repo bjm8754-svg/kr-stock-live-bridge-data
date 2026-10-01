@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "V3_0935_SHADOW_EVAL_V1",
+  "mode": "SHADOW_ONLY",
+  "replayMode": "CATCHUP_REPLAY",
+  "realTimeE2E": false,
+  "productionWriteAllowed": false,
+  "tradeDate": "20261001",
+  "evaluationAtKst": "2026-10-01T09:35:00+09:00",
+  "sourcePlanCommit": "18a360f8a4a255911cd861d09cd18844f46f7d5e",
+  "sourceWatchlistCommit": "35ae976e4abeb347f945b73c7ba8fa841c73bec0",
+  "captureRunId": 36799631355,
+  "intradayEvidenceCommit": "75b7670f1c4eb713e72aedb2e98c288e6ee89609",
+  "intradaySource": "YAHOO_CHART_1M",
+  "historyCount": 36,
+  "historyRange": "20261001 0900~0935",
+  "lookaheadGuard": true,
+  "overallStatus": "PASS",
+  "perCandidateEvaluation": [
+    {
+      "code": "010950",
+      "name": "S-Oil",
+      "state": "INVALIDATED",
+      "frozenTrigger": "157,300원을 훼손하지 않은 상태에서 164,800원을 돌파·수용하거나, 164,800원 돌파 후 재시험을 지지로 확인",
+      "frozenInvalidation": "157,300원 재시험 기준선을 종가/지속 수용 기준으로 재이탈",
+      "observed": {
+        "open0900": 161800,
+        "firstCloseBelowInvalidation": {"time": "09:11", "close": 156900},
+        "lowThrough0935": 156000,
+        "close0935": 156500,
+        "trigger164800Touched": false
+      },
+      "reason": "09:11부터 157,300 아래 종가가 반복되고 09:35까지 재수용하지 못했다. 164,800 확인 트리거는 한 번도 충족되지 않았다."
+    },
+    {
+      "code": "000250",
+      "name": "삼천당제약",
+      "state": "CONFIRMED",
+      "frozenTrigger": "170,275원 위에서 지지 확인 후 174,800원 돌파·수용",
+      "frozenInvalidation": "166,300원 아래 재수용",
+      "observed": {
+        "open0900": 171800,
+        "lowThrough0935": 170400,
+        "firstBreakAboveTrigger": {"time": "09:32", "high": 175300, "close": 175100},
+        "subsequentCloses": [175400, 175300, 176000],
+        "close0935": 176000,
+        "highThrough0935": 176700
+      },
+      "reason": "170,275 지지 영역을 유지한 채 09:32에 174,800을 돌파했고 09:35까지 3개 연속 후속 분봉이 174,800 위에서 마감해 수용이 확인됐다. 시가가 174,800 위 갭이 아니어서 frozen no-chase 조건에도 걸리지 않았다."
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "state": "CONFIRMED",
+      "frozenTrigger": "505,500원 지지 유지 후 526,000원 돌파·수용",
+      "frozenInvalidation": "505,500원 아래 재수용 시 현재 breakout probe 취소",
+      "observed": {
+        "open0900": 515000,
+        "lowThrough0935": 510000,
+        "firstCloseAtTrigger": {"time": "09:10", "close": 526000},
+        "firstCloseAboveTrigger": {"time": "09:11", "close": 529000},
+        "close0935": 536000,
+        "highThrough0935": 536000
+      },
+      "reason": "505,500을 훼손하지 않은 상태에서 09:10~09:11에 526,000 돌파가 발생했고 이후 일시적 525,000 눌림 뒤 재차 526,000 이상을 반복 수용해 09:35에는 536,000으로 확인됐다. 시가가 526,000 위 갭이 아니어서 frozen no-chase 조건은 해당하지 않았다."
+    }
+  ],
+  "notes": [
+    "This is a catch-up replay, not a real-time E2E PASS.",
+    "Only the plan frozen before opening intraday data retrieval was evaluated; no trigger or invalidation was redesigned after observing 10/1 prices.",
+    "No missing minute was interpolated or forward-filled."
+  ]
+}
