@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Capture 09:00~09:40 KST minute evidence for V3 shadow candidates.
+"""Capture KST minute evidence for V3 shadow candidates.
 
 This script is intentionally production-isolated:
 - reads only the public Worker /live and /scan endpoints,
 - never writes Worker KV, production watchlist.json, live.json, or Library production files,
-- fails closed if it cannot capture a complete 41-minute sequence.
+- fails closed if it cannot capture the requested complete minute sequence.
 
 For a strict real-session validation the process must already be running before 09:00 KST.
 """
@@ -29,7 +29,7 @@ def get_json(url: str, timeout: int = 20):
         url,
         headers={
             "Accept": "application/json,text/plain,*/*",
-            "User-Agent": "v3-shadow-live-capture/1.0",
+            "User-Agent": "v3-shadow-live-capture/1.1",
         },
     )
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -76,9 +76,14 @@ def main():
     ap.add_argument("--codes", required=True, help="comma-separated six-digit codes")
     ap.add_argument("--base", default=DEFAULT_BASE)
     ap.add_argument("--output", default="/tmp/v3-shadow-live.json")
+    ap.add_argument("--end-minute", type=int, default=40,
+                    help="last minute after 09:00 to capture, inclusive (0..40; default 40)")
     ap.add_argument("--allow-late-start", action="store_true",
                     help="diagnostic only; strict E2E should not use this")
     args = ap.parse_args()
+
+    if not 0 <= args.end_minute <= 40:
+        raise SystemExit(f"INVALID_END_MINUTE:{args.end_minute}")
 
     codes = []
     for raw in args.codes.split(","):
@@ -95,7 +100,7 @@ def main():
         raise SystemExit(f"TRADE_DATE_MISMATCH:{now:%Y%m%d}!={args.trade_date}")
 
     start = now.replace(hour=9, minute=0, second=2, microsecond=0)
-    end = now.replace(hour=9, minute=40, second=2, microsecond=0)
+    end = start + dt.timedelta(minutes=args.end_minute)
     if now > start + dt.timedelta(seconds=20) and not args.allow_late_start:
         raise SystemExit(f"LATE_START:{now.isoformat()}")
     if now > end:
@@ -110,7 +115,7 @@ def main():
     if first_minute > 0 and not args.allow_late_start:
         raise SystemExit(f"MISSED_OPEN_MINUTES:{first_minute}")
 
-    for m in range(first_minute, 41):
+    for m in range(first_minute, args.end_minute + 1):
         target = start + dt.timedelta(minutes=m)
         sleep_until(target)
         actual = dt.datetime.now(KST)
@@ -132,7 +137,7 @@ def main():
             scan = get_json(f"{args.base.rstrip('/')}/scan")
             scans[f"09{m:02d}"] = scan
 
-    expected = [f"{args.trade_date} 09{m:02d}" for m in range(41)]
+    expected = [f"{args.trade_date} 09{m:02d}" for m in range(args.end_minute + 1)]
     actual_keys = [r.get("atKst") for r in rows]
     status = "PASS" if actual_keys == expected else "FAIL"
     out = {
@@ -144,6 +149,7 @@ def main():
         "codes": codes,
         "source": "PUBLIC_WORKER_READ_ONLY",
         "capturedAtKst": dt.datetime.now(KST).isoformat(),
+        "endMinute": args.end_minute,
         "history": {
             "count": len(rows),
             "from": rows[0]["atKst"] if rows else None,
@@ -157,6 +163,7 @@ def main():
         "status": status,
         "tradeDate": args.trade_date,
         "codes": codes,
+        "endMinute": args.end_minute,
         "historyCount": len(rows),
         "from": out["history"]["from"],
         "to": out["history"]["to"],
