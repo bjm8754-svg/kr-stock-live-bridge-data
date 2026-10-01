@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "V3_SHADOW_CATCHUP_PROBE_V1",
+  "checkedAtKst": "2026-10-01T09:46:42.894651+09:00",
+  "tradeDate": "20261001",
+  "workerBuild": "worker_v3_hardened_money_scan_v3",
+  "workerWatchlist": {
+    "status": "OK",
+    "tradeDate": "20260928",
+    "codes": [
+      "009150",
+      "353200",
+      "007810",
+      "000660",
+      "036540",
+      "222800",
+      "005930",
+      "003530",
+      "041190"
+    ]
+  },
+  "historyStatus": "OK",
+  "historyCount": 0,
+  "historyFrom": null,
+  "historyTo": null,
+  "canReplayFromWorker": false
+}
