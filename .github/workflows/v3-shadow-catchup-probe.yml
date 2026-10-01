@@ -1,0 +1,67 @@
+name: V3 Shadow Catch-up Probe
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/v3-shadow-catchup-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Probe today's Worker history
+        shell: bash
+        run: |
+          set -euo pipefail
+          TRADE_DATE=$(TZ=Asia/Seoul date +%Y%m%d)
+          python - <<'PY'
+          import json, os, urllib.request
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          date = datetime.now(ZoneInfo('Asia/Seoul')).strftime('%Y%m%d')
+          base = 'https://kr-stock-live-bridge.bjm8754.workers.dev'
+          def get(path):
+              req = urllib.request.Request(base + path, headers={'User-Agent':'v3-shadow-catchup-probe/1.0'})
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  return json.loads(r.read().decode('utf-8'))
+          history = get(f'/history?date={date}')
+          root = get('/')
+          watch = get('/watchlist')
+          rows = history.get('rows') or []
+          out = {
+              'schemaVersion':'V3_SHADOW_CATCHUP_PROBE_V1',
+              'checkedAtKst': datetime.now(ZoneInfo('Asia/Seoul')).isoformat(),
+              'tradeDate': date,
+              'workerBuild': root.get('build'),
+              'workerWatchlist': watch,
+              'historyStatus': history.get('status'),
+              'historyCount': history.get('count', len(rows)),
+              'historyFrom': rows[0].get('atKst') if rows else None,
+              'historyTo': rows[-1].get('atKst') if rows else None,
+              'canReplayFromWorker': len(rows) >= 41,
+          }
+          open('v3-shadow-catchup-probe.json','w',encoding='utf-8').write(json.dumps(out, ensure_ascii=False, indent=2)+'\n')
+          print(json.dumps(out, ensure_ascii=False))
+          PY
+
+      - name: Commit probe result
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v3-shadow-catchup-probe.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "record V3 shadow catch-up probe"
+          git pull --rebase origin main
+          git push
