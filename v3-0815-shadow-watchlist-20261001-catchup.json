@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "V3_0815_SHADOW_WATCHLIST_V1",
+  "mode": "SHADOW_ONLY",
+  "replayMode": "CATCHUP_REPLAY",
+  "realTimeE2E": false,
+  "productionWriteAllowed": false,
+  "tradeDate": "20261001",
+  "sourceTradeDate": "20260930",
+  "asOfKst": "2026-10-01T08:15:00+09:00",
+  "status": "READY",
+  "codes": ["010950", "000250", "039030"],
+  "sourcePlanCommit": "18a360f8a4a255911cd861d09cd18844f46f7d5e",
+  "lookaheadGuard": true,
+  "note": "Frozen before opening 10/1 intraday data retrieval; catch-up replay only."
+}
