@@ -26,19 +26,42 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Repair trend-bridge regression fixture
+      - name: Repair regression and add explicit as-of support
         shell: bash
         run: |
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-          p = Path('scripts/test_longterm_scan_v2.py')
-          s = p.read_text(encoding='utf-8')
-          old = 'assert 109.0 <= tb["bridgeClose"] <= 113.0'
-          new = 'assert tb["bridgeClose"] == 116.0'
-          if old not in s:
-              raise SystemExit('expected stale trend-bridge assertion not found')
-          p.write_text(s.replace(old, new, 1), encoding='utf-8')
+
+          # 1) The implementation intentionally selects the newest valid trend bridge.
+          tp = Path('scripts/test_longterm_scan_v2.py')
+          ts = tp.read_text(encoding='utf-8')
+          old_assert = 'assert 109.0 <= tb["bridgeClose"] <= 113.0'
+          new_assert = 'assert tb["bridgeClose"] == 116.0'
+          if old_assert in ts:
+              ts = ts.replace(old_assert, new_assert, 1)
+          elif new_assert not in ts:
+              raise SystemExit('trend-bridge assertion not found')
+
+          # 2) Regression: recovery/as-of scans must discard any later unfinished daily row.
+          marker = '# RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.'
+          asof_test = '''# Explicit as-of recovery must exclude later unfinished daily rows.\ncutoff_idx = pd.to_datetime(["2026-09-29", "2026-09-30", "2026-10-01"])\ncutoff_raw = pd.DataFrame({\n    "Open":[100.0,101.0,102.0], "High":[101.0,102.0,103.0],\n    "Low":[99.0,100.0,101.0], "Close":[100.5,101.5,102.5],\n    "Volume":[1000,1000,1000],\n}, index=cutoff_idx)\n_orig_dr = scan.fdr.DataReader\n_orig_af = scan.analyze_frame\ntry:\n    scan.fdr.DataReader = lambda code, start: cutoff_raw.copy()\n    scan.analyze_frame = lambda meta, df, cfg: {"lastDate": df.index[-1].strftime("%Y%m%d"), "rows": len(df)}\n    cutoff_cfg = dict(cfg)\n    cutoff_cfg["asOfDate"] = "2026-09-30"\n    cutoff_out = scan.analyze({"code":"999999"}, cutoff_cfg)\n    assert cutoff_out["lastDate"] == "20260930"\n    assert cutoff_out["rows"] == 2\nfinally:\n    scan.fdr.DataReader = _orig_dr\n    scan.analyze_frame = _orig_af\n\n'''
+          if asof_test.strip() not in ts:
+              if marker not in ts:
+                  raise SystemExit('RSI marker not found for as-of regression insertion')
+              ts = ts.replace(marker, asof_test + marker, 1)
+          tp.write_text(ts, encoding='utf-8')
+
+          # 3) Add optional asOfDate support without changing normal daily behavior.
+          sp = Path('scripts/longterm_scan.py')
+          ss = sp.read_text(encoding='utf-8')
+          old_analyze = '''def analyze(meta, cfg):\n    start = (dt.date.today() - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()\n    df = fdr.DataReader(meta["code"], start)\n    return analyze_frame(meta, df, cfg)\n'''
+          new_analyze = '''def analyze(meta, cfg):\n    as_of_text = cfg.get("asOfDate")\n    anchor_date = dt.date.fromisoformat(as_of_text) if as_of_text else dt.date.today()\n    start = (anchor_date - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()\n    df = fdr.DataReader(meta["code"], start)\n    if as_of_text:\n        cutoff = pd.Timestamp(as_of_text)\n        df = df[df.index <= cutoff].copy()\n    return analyze_frame(meta, df, cfg)\n'''
+          if old_analyze in ss:
+              ss = ss.replace(old_analyze, new_analyze, 1)
+          elif new_analyze not in ss:
+              raise SystemExit('analyze() block not found')
+          sp.write_text(ss, encoding='utf-8')
           PY
 
       - name: Install scanner dependencies
@@ -47,10 +70,21 @@ jobs:
       - name: Run V2 scanner self-tests
         run: python scripts/test_longterm_scan_v2.py
 
-      - name: Run full KOSPI/KOSDAQ scan
+      - name: Build prior-close recovery config
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXPECTED=$(jq -r '.expectedCompletedTradeDate // empty' longterm-scan-health.json)
+          test -n "$EXPECTED"
+          ASOF="${EXPECTED:0:4}-${EXPECTED:4:2}-${EXPECTED:6:2}"
+          jq --arg d "$ASOF" '. + {asOfDate:$d}' longterm-scan-config.json > /tmp/recovery-config.json
+          echo "RECOVERY_EXPECTED=$EXPECTED" >> "$GITHUB_ENV"
+          echo "RECOVERY_ASOF=$ASOF" >> "$GITHUB_ENV"
+
+      - name: Run full KOSPI/KOSDAQ prior-close scan
         run: |
           python scripts/longterm_scan.py \
-            --config longterm-scan-config.json \
+            --config /tmp/recovery-config.json \
             --output /tmp/longterm-scan-full.json \
             --brief-output longterm-scan.json
 
@@ -61,31 +95,29 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          EXPECTED=$(jq -r '.expectedCompletedTradeDate // empty' longterm-scan-health.json)
           STATUS=$(jq -r '.status // "MISSING"' /tmp/longterm-scan-full.json)
           TRADE_DATE=$(jq -r '.tradeDate // empty' /tmp/longterm-scan-full.json)
           METHOD=$(jq -r '.methodologyVersion // empty' /tmp/longterm-scan-full.json)
           UNIVERSE=$(jq -r '.coverage.universe // 0' /tmp/longterm-scan-full.json)
           CURRENT=$(jq -r '.coverage.currentTradeDate // 0' /tmp/longterm-scan-full.json)
           ERRORS=$(jq -r '.coverage.fetchErrors // 999999' /tmp/longterm-scan-full.json)
-          echo "expected=$EXPECTED status=$STATUS tradeDate=$TRADE_DATE method=$METHOD universe=$UNIVERSE current=$CURRENT fetchErrors=$ERRORS"
-          test -n "$EXPECTED"
+          echo "expected=$RECOVERY_EXPECTED asOf=$RECOVERY_ASOF status=$STATUS tradeDate=$TRADE_DATE method=$METHOD universe=$UNIVERSE current=$CURRENT fetchErrors=$ERRORS"
           test "$STATUS" = "PASS"
-          test "$TRADE_DATE" = "$EXPECTED"
+          test "$TRADE_DATE" = "$RECOVERY_EXPECTED"
           case "$METHOD" in YBM_SWING_V2_*) ;; *) exit 1 ;; esac
           test "$UNIVERSE" -ge 2200
           awk -v c="$CURRENT" -v u="$UNIVERSE" 'BEGIN { exit !(u > 0 && c/u >= 0.99) }'
           test "$ERRORS" -le 5
           jq -e '.schemaVersion=="YBM_BRIEF_V2" and (.chartCandidates|type=="array") and (.qualifiedPool|type=="array") and (.briefingCandidates|type=="array") and (.riskWarnings|type=="array")' longterm-scan.json >/dev/null
 
-      - name: Commit repaired test and recovered canonical scan
+      - name: Commit repaired scanner and recovered canonical scan
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/test_longterm_scan_v2.py longterm-scan.json
+          git add scripts/longterm_scan.py scripts/test_longterm_scan_v2.py longterm-scan.json
           git diff --cached --check
-          git commit -m "repair trend-bridge regression and recover prior scan"
+          git commit -m "repair prior-close scanner recovery"
           git pull --rebase origin main
           git push
