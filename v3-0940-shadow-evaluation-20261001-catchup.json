@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "V3_0940_SHADOW_EVAL_V1",
+  "mode": "SHADOW_ONLY",
+  "replayMode": "CATCHUP_REPLAY",
+  "realTimeE2E": false,
+  "productionWriteAllowed": false,
+  "tradeDate": "20261001",
+  "evaluationAtKst": "2026-10-01T09:40:00+09:00",
+  "sourcePlanCommit": "18a360f8a4a255911cd861d09cd18844f46f7d5e",
+  "sourceWatchlistCommit": "35ae976e4abeb347f945b73c7ba8fa841c73bec0",
+  "source0935EvaluationCommit": "0adeb277d9c4120016c855aee85079c9955b26c0",
+  "captureRunId": 36799631355,
+  "intradayEvidenceCommit": "75b7670f1c4eb713e72aedb2e98c288e6ee89609",
+  "intradaySource": "YAHOO_CHART_1M",
+  "historyCount": 41,
+  "historyRange": "20261001 0900~0940",
+  "lookaheadGuard": true,
+  "cycleStatus": "CATCHUP_REPLAY_PASS",
+  "realTimeCycleStatus": "NOT_TESTED",
+  "perCandidateEvaluation": [
+    {
+      "code": "010950",
+      "name": "S-Oil",
+      "state": "INVALIDATED",
+      "stateAt0935": "INVALIDATED",
+      "close0935": 156500,
+      "close0940": 155300,
+      "low0936To0940": 155000,
+      "deltaFrom0935": "09:36~09:40에도 157,300 아래에서 추가 약세가 이어져 무효화가 더 명확해졌다.",
+      "finalReason": "frozen invalidation 157,300의 지속 재이탈 상태가 유지됐고 164,800 trigger는 미충족."
+    },
+    {
+      "code": "000250",
+      "name": "삼천당제약",
+      "state": "CONFIRMED",
+      "stateAt0935": "CONFIRMED",
+      "close0935": 176000,
+      "close0940": 180700,
+      "high0940": 180800,
+      "deltaFrom0935": "09:36~09:40에 176,400→177,800→179,700→179,900→180,700으로 후속 상승이 이어졌다.",
+      "finalReason": "174,800 돌파·수용 후 follow-through가 지속됐으며 frozen invalidation과 no-chase 조건은 발생하지 않았다.",
+      "executionNote": "CONFIRMED는 08:15 사전계획의 조건 충족을 뜻하며, 09:40 가격을 뒤늦게 추격하라는 의미가 아니다."
+    },
+    {
+      "code": "039030",
+      "name": "이오테크닉스",
+      "state": "CONFIRMED",
+      "stateAt0935": "CONFIRMED",
+      "close0935": 536000,
+      "close0940": 540000,
+      "high0940": 540000,
+      "deltaFrom0935": "09:36~09:40 종가가 536,000→535,000→536,000→537,000→540,000으로 526,000 위 수용을 유지했다.",
+      "finalReason": "505,500 지지 유지 + 526,000 돌파·수용이 09:40까지 유지됐고 invalidation은 발생하지 않았다.",
+      "executionNote": "CONFIRMED는 사전 trigger의 검증 결과이며, 09:40 가격을 새 진입가로 재설계하지 않는다."
+    }
+  ],
+  "deltaFrom0935": {
+    "010950": "INVALIDATED 유지/악화",
+    "000250": "CONFIRMED 유지 + 강한 follow-through",
+    "039030": "CONFIRMED 유지 + 526,000 위 수용 지속"
+  },
+  "validation": {
+    "planFrozenBeforeIntradayRead": true,
+    "watchlistFrozenBeforeIntradayRead": true,
+    "exact41MinuteRows": true,
+    "missingMinutesInterpolated": false,
+    "productionWriteAllowed": false,
+    "realTimeE2EClaimed": false
+  },
+  "notes": [
+    "Today missed the real-time 08:15/09:35/09:40 windows, so this result is CATCHUP_REPLAY_PASS only.",
+    "Tomorrow's real-session cycle must independently prove automatic 08:15 plan creation, pre-open capture start, 09:35 evaluation, and 09:40 evaluation."
+  ]
+}
