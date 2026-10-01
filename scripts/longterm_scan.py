@@ -2094,8 +2094,13 @@ def analyze_frame(meta, raw_df, cfg):
 
 
 def analyze(meta, cfg):
-    start = (dt.date.today() - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()
+    as_of_text = cfg.get("asOfDate")
+    anchor_date = dt.date.fromisoformat(as_of_text) if as_of_text else dt.date.today()
+    start = (anchor_date - dt.timedelta(days=int(cfg["historyCalendarDays"]))).isoformat()
     df = fdr.DataReader(meta["code"], start)
+    if as_of_text:
+        cutoff = pd.Timestamp(as_of_text)
+        df = df[df.index <= cutoff].copy()
     return analyze_frame(meta, df, cfg)
 
 

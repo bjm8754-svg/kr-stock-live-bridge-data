@@ -601,7 +601,7 @@ tb = scan.trend_bridge_context(tb_df, cfg)
 assert tb["detected"] is True
 assert tb["direction"] == "UP"
 assert tb["roleState"] == "SUPPORT_CANDIDATE"
-assert 109.0 <= tb["bridgeClose"] <= 113.0
+assert tb["bridgeClose"] == 116.0
 assert tb["algorithmicProxy"] is True
 assert tb["roleEvidenceOnly"] is True
 
@@ -622,6 +622,27 @@ tb_down = scan.trend_bridge_context(tb_down_df, cfg)
 assert tb_down["detected"] is True
 assert tb_down["direction"] == "DOWN"
 assert tb_down["roleState"] == "RESISTANCE_CANDIDATE"
+
+# Explicit as-of recovery must exclude later unfinished daily rows.
+cutoff_idx = pd.to_datetime(["2026-09-29", "2026-09-30", "2026-10-01"])
+cutoff_raw = pd.DataFrame({
+    "Open":[100.0,101.0,102.0], "High":[101.0,102.0,103.0],
+    "Low":[99.0,100.0,101.0], "Close":[100.5,101.5,102.5],
+    "Volume":[1000,1000,1000],
+}, index=cutoff_idx)
+_orig_dr = scan.fdr.DataReader
+_orig_af = scan.analyze_frame
+try:
+    scan.fdr.DataReader = lambda code, start: cutoff_raw.copy()
+    scan.analyze_frame = lambda meta, df, cfg: {"lastDate": df.index[-1].strftime("%Y%m%d"), "rows": len(df)}
+    cutoff_cfg = dict(cfg)
+    cutoff_cfg["asOfDate"] = "2026-09-30"
+    cutoff_out = scan.analyze({"code":"999999"}, cutoff_cfg)
+    assert cutoff_out["lastDate"] == "20260930"
+    assert cutoff_out["rows"] == 2
+finally:
+    scan.fdr.DataReader = _orig_dr
+    scan.analyze_frame = _orig_af
 
 # RSI is price-first confirmation/warning only. 70/30 are not auto-triggers.
 rsi_idx = pd.bdate_range("2026-01-01", periods=80)
