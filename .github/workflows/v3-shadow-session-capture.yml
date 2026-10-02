@@ -3,24 +3,20 @@ name: V3 Shadow Session Capture
 on:
   workflow_dispatch:
   schedule:
-    # 08:47 KST Monday-Friday. Starts early and waits for 09:00 inside the capture script.
-    - cron: "47 23 * * 0-4"
+    # 08:42 KST Monday-Friday. Starts early to absorb GitHub scheduler delay.
+    - cron: "42 23 * * 0-4"
 
 permissions:
   contents: read
 
 concurrency:
   group: v3-shadow-session-capture
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   capture:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
-    strategy:
-      fail-fast: false
-      matrix:
-        end_minute: [35, 40]
+    timeout-minutes: 80
 
     steps:
       - uses: actions/checkout@v7
@@ -57,12 +53,14 @@ jobs:
 
           if [ "$COUNT" -eq 0 ]; then
             test "$STATUS" = "VALID_EMPTY" -o "$STATUS" = "MARKET_CLOSED"
-            jq -n \
-              --arg status "$STATUS" \
-              --arg td "$TRADE_DATE" \
-              --argjson end "${{ matrix.end_minute }}" \
-              '{status:$status,schemaVersion:"V3_SHADOW_LIVE_CAPTURE_V1",mode:"SHADOW_ONLY",productionWriteAllowed:false,tradeDate:$td,codes:[],source:"V3_0815_SHADOW_HANDOFF",endMinute:$end,history:{count:0,from:null,to:null,rows:[]},marketScans:{}}' \
-              > /tmp/v3-shadow-live.json
+            for END in 35 40; do
+              jq -n \
+                --arg status "$STATUS" \
+                --arg td "$TRADE_DATE" \
+                --argjson end "$END" \
+                '{status:$status,schemaVersion:"V3_SHADOW_LIVE_CAPTURE_V1",mode:"SHADOW_ONLY",productionWriteAllowed:false,tradeDate:$td,codes:[],source:"V3_0815_SHADOW_HANDOFF",endMinute:$end,history:{count:0,from:null,to:null,rows:[]},marketScans:{},scanDiagnostics:{},diagnostics:{startMinute:0,requestedEndMinute:$end,resumeFrom:null,attemptsByMinute:{},recentErrors:[],failReason:null}}' \
+                > "/tmp/v3-shadow-live-09${END}.json"
+            done
             echo "EMPTY=1" >> "$GITHUB_ENV"
           else
             test "$STATUS" = "READY"
@@ -75,46 +73,110 @@ jobs:
           echo "TRADE_DATE=$TRADE_DATE" >> "$GITHUB_ENV"
           echo "CODES=$CODES" >> "$GITHUB_ENV"
 
-      - name: Capture read-only V3 shadow minute path
+      - name: Capture 09:00-09:35 candidate path and one full-market scan
         if: env.EMPTY != '1'
+        shell: bash
         run: |
+          set +e
           python scripts/v3_shadow_live_capture.py \
             --trade-date "$TRADE_DATE" \
             --codes "$CODES" \
-            --end-minute "${{ matrix.end_minute }}" \
-            --output /tmp/v3-shadow-live.json
+            --start-minute 0 \
+            --end-minute 35 \
+            --scan-minutes "35" \
+            --output /tmp/v3-shadow-live-0935.json
+          RC=$?
+          echo "CAPTURE_0935_RC=$RC" >> "$GITHUB_ENV"
+          exit 0
 
-      - name: Validate V3 shadow evidence and production isolation
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "$(jq -r '.schemaVersion' /tmp/v3-shadow-live.json)" = "V3_SHADOW_LIVE_CAPTURE_V1"
-          test "$(jq -r '.mode' /tmp/v3-shadow-live.json)" = "SHADOW_ONLY"
-          test "$(jq -r '.productionWriteAllowed' /tmp/v3-shadow-live.json)" = "false"
-          test "$(jq -r '.tradeDate' /tmp/v3-shadow-live.json)" = "$TRADE_DATE"
-          test "$(jq -r '.endMinute' /tmp/v3-shadow-live.json)" = "${{ matrix.end_minute }}"
-
-          if [ "$EMPTY" = "1" ]; then
-            STATUS=$(jq -r '.status' /tmp/v3-shadow-live.json)
-            test "$STATUS" = "VALID_EMPTY" -o "$STATUS" = "MARKET_CLOSED"
-            test "$(jq -r '.history.count' /tmp/v3-shadow-live.json)" = "0"
-          else
-            test "$(jq -r '.status' /tmp/v3-shadow-live.json)" = "PASS"
-            EXPECTED_COUNT=$(( ${{ matrix.end_minute }} + 1 ))
-            END_MM=$(printf '%02d' "${{ matrix.end_minute }}")
-            test "$(jq -r '.history.count' /tmp/v3-shadow-live.json)" = "$EXPECTED_COUNT"
-            test "$(jq -r '.history.from' /tmp/v3-shadow-live.json)" = "$TRADE_DATE 0900"
-            test "$(jq -r '.history.to' /tmp/v3-shadow-live.json)" = "$TRADE_DATE 09$END_MM"
-          fi
-
-          # Shadow capture must never modify the production bridge state.
-          git diff --exit-code -- watchlist.json live.json live-health.json
-
-      - name: Upload V3 shadow session evidence
+      - name: Upload 09:35 shadow evidence
+        if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: v3-shadow-live-${{ env.TRADE_DATE }}-09${{ matrix.end_minute }}-${{ github.run_id }}
-          path: /tmp/v3-shadow-live.json
+          name: v3-shadow-live-${{ env.TRADE_DATE }}-0935-${{ github.run_id }}
+          path: /tmp/v3-shadow-live-0935.json
           retention-days: 7
           if-no-files-found: error
           compression-level: 9
+
+      - name: Gate 09:40 continuation
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$EMPTY" = "1" ]; then
+            echo "CONTINUE_0940=0" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          STATUS=$(jq -r '.status // "FAIL"' /tmp/v3-shadow-live-0935.json)
+          COUNT=$(jq -r '.history.count // 0' /tmp/v3-shadow-live-0935.json)
+          if { [ "$STATUS" = "PASS" ] || [ "$STATUS" = "PARTIAL" ]; } && [ "$COUNT" = "36" ]; then
+            echo "CONTINUE_0940=1" >> "$GITHUB_ENV"
+          else
+            echo "CONTINUE_0940=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Resume 09:36-09:40 candidate-only path
+        if: env.EMPTY != '1' && env.CONTINUE_0940 == '1'
+        shell: bash
+        run: |
+          set +e
+          python scripts/v3_shadow_live_capture.py \
+            --trade-date "$TRADE_DATE" \
+            --codes "$CODES" \
+            --start-minute 36 \
+            --end-minute 40 \
+            --scan-minutes "" \
+            --resume-from /tmp/v3-shadow-live-0935.json \
+            --output /tmp/v3-shadow-live-0940.json
+          RC=$?
+          echo "CAPTURE_0940_RC=$RC" >> "$GITHUB_ENV"
+          exit 0
+
+      - name: Upload 09:40 shadow evidence
+        if: always() && (env.EMPTY == '1' || env.CONTINUE_0940 == '1')
+        uses: actions/upload-artifact@v7
+        with:
+          name: v3-shadow-live-${{ env.TRADE_DATE }}-0940-${{ github.run_id }}
+          path: /tmp/v3-shadow-live-0940.json
+          retention-days: 7
+          if-no-files-found: error
+          compression-level: 9
+
+      - name: Validate V3 shadow evidence and production isolation
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          for FILE in /tmp/v3-shadow-live-0935.json /tmp/v3-shadow-live-0940.json; do
+            test -f "$FILE"
+            test "$(jq -r '.schemaVersion' "$FILE")" = "V3_SHADOW_LIVE_CAPTURE_V1"
+            test "$(jq -r '.mode' "$FILE")" = "SHADOW_ONLY"
+            test "$(jq -r '.productionWriteAllowed' "$FILE")" = "false"
+            test "$(jq -r '.tradeDate' "$FILE")" = "$TRADE_DATE"
+          done
+
+          if [ "$EMPTY" = "1" ]; then
+            for FILE in /tmp/v3-shadow-live-0935.json /tmp/v3-shadow-live-0940.json; do
+              STATUS=$(jq -r '.status' "$FILE")
+              test "$STATUS" = "VALID_EMPTY" -o "$STATUS" = "MARKET_CLOSED"
+              test "$(jq -r '.history.count' "$FILE")" = "0"
+            done
+          else
+            test "$(jq -r '.status' /tmp/v3-shadow-live-0935.json)" = "PASS"
+            test "$(jq -r '.history.count' /tmp/v3-shadow-live-0935.json)" = "36"
+            test "$(jq -r '.history.from' /tmp/v3-shadow-live-0935.json)" = "$TRADE_DATE 0900"
+            test "$(jq -r '.history.to' /tmp/v3-shadow-live-0935.json)" = "$TRADE_DATE 0935"
+            test "$(jq -r '.scanDiagnostics["0935"].status // "FAIL"' /tmp/v3-shadow-live-0935.json)" = "PASS"
+
+            test "$(jq -r '.status' /tmp/v3-shadow-live-0940.json)" = "PASS"
+            test "$(jq -r '.history.count' /tmp/v3-shadow-live-0940.json)" = "41"
+            test "$(jq -r '.history.from' /tmp/v3-shadow-live-0940.json)" = "$TRADE_DATE 0900"
+            test "$(jq -r '.history.to' /tmp/v3-shadow-live-0940.json)" = "$TRADE_DATE 0940"
+            test "$(jq -r '(.marketScans | keys) == ["0935"]' /tmp/v3-shadow-live-0940.json)" = "true"
+          fi
+
+          # This workflow has contents:read and uses only public GET endpoints.
+          # Local guard remains as an extra assertion that production bridge files were untouched.
+          git diff --exit-code -- watchlist.json live.json live-health.json
