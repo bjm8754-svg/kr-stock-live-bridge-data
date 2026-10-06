@@ -87,10 +87,11 @@ jobs:
           awk -v a="$CAND_RATIO" -v b="$MAX_CAND" 'BEGIN { exit !(a <= b) }'
 
           # Push-triggered runs before the completed-daily cutoff are functional tests only.
+          # Keep the generated files in the ephemeral workspace so the compact handoff
+          # build is exercised too; only the final commit step is skipped.
           if [ "$KST_HHMM" -lt 1540 ]; then
-            echo "pre-close shadow validation passed; skip canonical V3 commit"
+            echo "pre-close shadow validation passed; exercise handoff but skip canonical V3 commit"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
-            git checkout -- market-structure-v3.json 2>/dev/null || rm -f market-structure-v3.json
             exit 0
           fi
 
@@ -105,7 +106,6 @@ jobs:
           [ "$STATUS" = "PASS" ]
 
       - name: Build compact V3 08:15 handoff
-        if: env.SKIP_COMMIT != '1'
         shell: bash
         run: |
           set -euo pipefail
@@ -121,16 +121,21 @@ jobs:
           CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' market-structure-v3.json)
           REVIEW_COUNT=$(jq -r '.count // 0' market-structure-v3-review.json)
           REVIEW_TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3-review.json)
+          REVIEW_GENERATED=$(jq -r '.generatedAtKst // ""' market-structure-v3-review.json)
+          REVIEW_METHODOLOGY=$(jq -r '.methodologyVersion // ""' market-structure-v3-review.json)
           REVIEW_SCHEMA=$(jq -r '.schemaVersion // ""' market-structure-v3-review.json)
+          REVIEW_SOURCE_SCHEMA=$(jq -r '.sourceSchemaVersion // ""' market-structure-v3-review.json)
 
           [ "$STATUS" = "PASS" ]
           [ -n "$TRADE_DATE" ]
           [ -n "$GENERATED" ]
           [ -n "$METHODOLOGY" ]
           [ "$REVIEW_COUNT" -le 36 ]
-          if [ -n "$REVIEW_TRADE_DATE" ]; then
-            [ "$REVIEW_TRADE_DATE" = "$TRADE_DATE" ]
-          fi
+          [ "$REVIEW_TRADE_DATE" = "$TRADE_DATE" ]
+          [ "$REVIEW_GENERATED" = "$GENERATED" ]
+          [ "$REVIEW_METHODOLOGY" = "$METHODOLOGY" ]
+          [ "$REVIEW_SCHEMA" = "MARKET_STRUCTURE_V3_REVIEW_PACKET" ]
+          [ "$REVIEW_SOURCE_SCHEMA" = "MARKET_STRUCTURE_V3" ]
 
           jq -n \
             --arg status "$STATUS" \
@@ -175,6 +180,8 @@ jobs:
           [ "$(jq -r '.productionWriteAllowed' market-structure-v3-handoff.json)" = "false" ]
           [ "$(jq -r '.status' market-structure-v3-handoff.json)" = "PASS" ]
           [ "$(jq -r '.tradeDate' market-structure-v3-handoff.json)" = "$TRADE_DATE" ]
+          [ "$(jq -r '.generatedAtKst' market-structure-v3-handoff.json)" = "$REVIEW_GENERATED" ]
+          [ "$(jq -r '.methodologyVersion' market-structure-v3-handoff.json)" = "$REVIEW_METHODOLOGY" ]
           [ "$(jq -r '.coverage.reviewCount' market-structure-v3-handoff.json)" = "$REVIEW_COUNT" ]
 
           python scripts/validate_market_structure_v3_review_packet.py \
