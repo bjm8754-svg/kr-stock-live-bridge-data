@@ -29,9 +29,34 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          FILE="v3-0815-shadow-watchlist.json"
+          FILE="/tmp/v3-0815-shadow-watchlist.json"
           TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
-          test -f "$FILE"
+
+          # The 08:15 assistant deep-review may finish after this workflow has checked
+          # out the repository. Re-fetch origin/main until a current-date handoff exists
+          # instead of freezing the stale file from checkout time. Stop before 09:00 so
+          # strict real-session capture can still begin on time.
+          while true; do
+            git fetch --quiet origin main || true
+            if git show origin/main:v3-0815-shadow-watchlist.json > "${FILE}.tmp" 2>/dev/null; then
+              mv "${FILE}.tmp" "$FILE"
+              TRADE_DATE=$(jq -r '.tradeDate // ""' "$FILE")
+              if [ "$TRADE_DATE" = "$TODAY" ]; then
+                break
+              fi
+              echo "waiting for current V3 handoff: observed tradeDate=$TRADE_DATE expected=$TODAY"
+            else
+              rm -f "${FILE}.tmp"
+              echo "waiting for V3 shadow handoff file on origin/main"
+            fi
+
+            NOW=$(TZ=Asia/Seoul date +%H%M%S)
+            if [[ "$NOW" > "085730" || "$NOW" == "085730" ]]; then
+              echo "STALE_0815_HANDOFF: current-date watchlist not available by 08:57:30 KST"
+              exit 1
+            fi
+            sleep 15
+          done
 
           SCHEMA=$(jq -r '.schemaVersion // ""' "$FILE")
           MODE=$(jq -r '.mode // ""' "$FILE")
