@@ -9,6 +9,7 @@ from pathlib import Path
 INDEX_SCHEMA = "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1"
 SHARD_SCHEMA = "MARKET_STRUCTURE_V3_REVIEW_SHARD_V1"
 SOURCE_SCHEMA = "MARKET_STRUCTURE_V3_REVIEW_PACKET"
+CONNECTOR_SAFE_MAX_BYTES = 40000
 
 
 def encode(obj: dict) -> bytes:
@@ -60,11 +61,10 @@ def validate_source(data: dict) -> list[dict]:
 
 
 def build_chunks(source: dict, rows: list[dict], max_bytes: int) -> list[list[dict]]:
-    if max_bytes < 65536:
+    if max_bytes < 30000:
         raise SystemExit("max shard bytes is too small")
     chunks: list[list[dict]] = []
     current: list[dict] = []
-    # Use a conservative two-digit placeholder for shard counts while sizing.
     for row in rows:
         trial = current + [row]
         size = len(encode(wrapper(source, trial, 99, 99)))
@@ -91,16 +91,18 @@ def main() -> None:
     p.add_argument("--index-output", default="market-structure-v3-review-index.json")
     p.add_argument("--output-dir", default=".")
     p.add_argument("--prefix", default="market-structure-v3-review-shard")
-    p.add_argument("--max-shard-bytes", type=int, default=300000)
+    p.add_argument("--max-shard-bytes", type=int, default=CONNECTOR_SAFE_MAX_BYTES)
     args = p.parse_args()
+
+    requested_max_bytes = int(args.max_shard_bytes)
+    effective_max_bytes = min(requested_max_bytes, CONNECTOR_SAFE_MAX_BYTES)
 
     source = json.loads(Path(args.review).read_text(encoding="utf-8"))
     rows = validate_source(source)
-    chunks = build_chunks(source, rows, args.max_shard_bytes)
+    chunks = build_chunks(source, rows, effective_max_bytes)
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Remove stale shards before creating the new exact set.
     for old in out_dir.glob(f"{args.prefix}-*.json"):
         old.unlink()
 
@@ -110,8 +112,8 @@ def main() -> None:
     for i, chunk in enumerate(chunks, start=1):
         payload = wrapper(source, chunk, i, total)
         raw = encode(payload)
-        if len(raw) > args.max_shard_bytes:
-            raise SystemExit(f"final shard exceeds cap: shard={i} bytes={len(raw)} cap={args.max_shard_bytes}")
+        if len(raw) > effective_max_bytes:
+            raise SystemExit(f"final shard exceeds cap: shard={i} bytes={len(raw)} cap={effective_max_bytes}")
         path = out_dir / f"{args.prefix}-{i:02d}.json"
         path.write_bytes(raw + b"\n")
         codes = payload["codes"]
@@ -142,12 +144,12 @@ def main() -> None:
         "totalCount": len(rows),
         "shardCount": total,
         "codes": expected_codes,
-        "maxShardBytes": args.max_shard_bytes,
+        "requestedMaxShardBytes": requested_max_bytes,
+        "maxShardBytes": effective_max_bytes,
         "shards": shard_meta,
     }
     Path(args.index_output).write_bytes(encode(index) + b"\n")
 
-    # Read-back validation from disk, including hashes and exact linkage.
     loaded_index = json.loads(Path(args.index_output).read_text(encoding="utf-8"))
     if loaded_index["schemaVersion"] != INDEX_SCHEMA or loaded_index["totalCount"] != len(rows):
         raise SystemExit("review shard index read-back validation failed")
@@ -176,7 +178,8 @@ def main() -> None:
         "tradeDate": source["tradeDate"],
         "totalCount": len(rows),
         "shardCount": total,
-        "maxShardBytes": args.max_shard_bytes,
+        "requestedMaxShardBytes": requested_max_bytes,
+        "maxShardBytes": effective_max_bytes,
         "largestShardBytes": max((x["byteSize"] for x in shard_meta), default=0),
         "indexOutput": args.index_output,
     }, ensure_ascii=False))
