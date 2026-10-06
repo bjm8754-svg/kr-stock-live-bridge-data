@@ -232,7 +232,7 @@ jobs:
           rm -f market-structure-v3-review.json
 
           git add market-structure-v3.json market-structure-v3-handoff.json market-structure-v3-review-index.json
-          git add -A -- 'market-structure-v3-review-shard-*.json' market-structure-v3-review.json
+          git add -A -- 'market-structure-v3-review-shard-*.json'
           if git diff --cached --quiet; then
             echo "no V3 shadow changes"
             exit 0
