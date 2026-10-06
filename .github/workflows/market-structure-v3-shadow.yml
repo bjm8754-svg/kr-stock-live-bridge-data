@@ -104,6 +104,83 @@ jobs:
 
           [ "$STATUS" = "PASS" ]
 
+      - name: Build compact V3 08:15 handoff
+        if: env.SKIP_COMMIT != '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cp /tmp/market-structure-v3-review.json market-structure-v3-review.json
+
+          STATUS=$(jq -r '.status' market-structure-v3.json)
+          TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3.json)
+          GENERATED=$(jq -r '.generatedAtKst // ""' market-structure-v3.json)
+          METHODOLOGY=$(jq -r '.methodologyVersion // ""' market-structure-v3.json)
+          PROCESSED=$(jq -r '.coverage.universeProcessed // 0' market-structure-v3.json)
+          CUR=$(jq -r '.coverage.currentTradeDate // 0' market-structure-v3.json)
+          CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' market-structure-v3.json)
+          REVIEW_COUNT=$(jq -r '.count // 0' market-structure-v3-review.json)
+          REVIEW_TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3-review.json)
+          REVIEW_SCHEMA=$(jq -r '.schemaVersion // ""' market-structure-v3-review.json)
+
+          [ "$STATUS" = "PASS" ]
+          [ -n "$TRADE_DATE" ]
+          [ -n "$GENERATED" ]
+          [ -n "$METHODOLOGY" ]
+          [ "$REVIEW_COUNT" -le 36 ]
+          if [ -n "$REVIEW_TRADE_DATE" ]; then
+            [ "$REVIEW_TRADE_DATE" = "$TRADE_DATE" ]
+          fi
+
+          jq -n \
+            --arg status "$STATUS" \
+            --arg tradeDate "$TRADE_DATE" \
+            --arg generatedAtKst "$GENERATED" \
+            --arg methodologyVersion "$METHODOLOGY" \
+            --arg reviewSchemaVersion "$REVIEW_SCHEMA" \
+            --arg artifactName "market-structure-v3-artifacts-${{ github.run_id }}" \
+            --argjson workflowRunId "${{ github.run_id }}" \
+            --argjson universeProcessed "$PROCESSED" \
+            --argjson currentTradeDate "$CUR" \
+            --argjson candidateRatio "$CAND_RATIO" \
+            --argjson reviewCount "$REVIEW_COUNT" \
+            '{
+              schemaVersion:"MARKET_STRUCTURE_V3_HANDOFF_V1",
+              mode:"SHADOW_ONLY",
+              productionWriteAllowed:false,
+              status:$status,
+              tradeDate:$tradeDate,
+              generatedAtKst:$generatedAtKst,
+              methodologyVersion:$methodologyVersion,
+              freshnessStatus:"PASS",
+              canonicalValidated:true,
+              reviewPacketValidated:true,
+              coverage:{
+                universeProcessed:$universeProcessed,
+                currentTradeDate:$currentTradeDate,
+                candidateRatio:$candidateRatio,
+                reviewCount:$reviewCount
+              },
+              source:{
+                workflowRunId:$workflowRunId,
+                artifactName:$artifactName,
+                canonicalPath:"market-structure-v3.json",
+                reviewPath:"market-structure-v3-review.json",
+                reviewSchemaVersion:$reviewSchemaVersion
+              }
+            }' > market-structure-v3-handoff.json
+
+          [ "$(jq -r '.schemaVersion' market-structure-v3-handoff.json)" = "MARKET_STRUCTURE_V3_HANDOFF_V1" ]
+          [ "$(jq -r '.mode' market-structure-v3-handoff.json)" = "SHADOW_ONLY" ]
+          [ "$(jq -r '.productionWriteAllowed' market-structure-v3-handoff.json)" = "false" ]
+          [ "$(jq -r '.status' market-structure-v3-handoff.json)" = "PASS" ]
+          [ "$(jq -r '.tradeDate' market-structure-v3-handoff.json)" = "$TRADE_DATE" ]
+          [ "$(jq -r '.coverage.reviewCount' market-structure-v3-handoff.json)" = "$REVIEW_COUNT" ]
+
+          python scripts/validate_market_structure_v3_review_packet.py \
+            market-structure-v3-review.json \
+            --config market-structure-v3-config.json
+
       - name: Upload V3 diagnostics and review packet
         if: always()
         uses: actions/upload-artifact@v7
@@ -117,14 +194,14 @@ jobs:
           retention-days: 7
           compression-level: 9
 
-      - name: Commit lightweight V3 shadow result
+      - name: Commit lightweight V3 shadow result and handoff
         if: env.SKIP_COMMIT != '1'
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add market-structure-v3.json
+          git add market-structure-v3.json market-structure-v3-handoff.json market-structure-v3-review.json
           if git diff --cached --quiet; then
             echo "no V3 shadow changes"
             exit 0
