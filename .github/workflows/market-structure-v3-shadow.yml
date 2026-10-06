@@ -12,6 +12,7 @@ on:
       - "scripts/validate_market_structure_v3.py"
       - "scripts/validate_market_structure_v3_review_packet.py"
       - "scripts/validate_market_structure_v3_freshness.py"
+      - "scripts/build_market_structure_v3_review_shards.py"
       - "market-structure-v3-config.json"
       - ".github/workflows/market-structure-v3-shadow.yml"
   schedule:
@@ -87,17 +88,15 @@ jobs:
           awk -v a="$CAND_RATIO" -v b="$MAX_CAND" 'BEGIN { exit !(a <= b) }'
 
           # Push-triggered runs before the completed-daily cutoff are functional tests only.
-          # Keep the generated files in the ephemeral workspace so the compact handoff
-          # build is exercised too; only the final commit step is skipped.
+          # Keep generated files in the ephemeral workspace so handoff/sharding is exercised;
+          # only the final commit is skipped.
           if [ "$KST_HHMM" -lt 1540 ]; then
-            echo "pre-close shadow validation passed; exercise handoff but skip canonical V3 commit"
+            echo "pre-close shadow validation passed; exercise handoff/shards but skip canonical V3 commit"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
             exit 0
           fi
 
-          # Calendar today is not the freshness authority. A run after midnight may
-          # legitimately represent the prior KRX session. Resolve the latest completed
-          # KRX session from independent reference candles and fail closed on mismatch.
+          # Resolve latest completed KRX session independently and fail closed on mismatch.
           python scripts/validate_market_structure_v3_freshness.py \
             --scan market-structure-v3.json \
             --output /tmp/market-structure-v3-health.json \
@@ -105,12 +104,30 @@ jobs:
 
           [ "$STATUS" = "PASS" ]
 
+      - name: Build size-bounded V3 review shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f market-structure-v3-review-shard-*.json
+          python scripts/build_market_structure_v3_review_shards.py \
+            --review /tmp/market-structure-v3-review.json \
+            --index-output market-structure-v3-review-index.json \
+            --output-dir . \
+            --prefix market-structure-v3-review-shard \
+            --max-shard-bytes 300000
+
+          test "$(jq -r '.schemaVersion' market-structure-v3-review-index.json)" = "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1"
+          test "$(jq -r '.mode' market-structure-v3-review-index.json)" = "SHADOW_ONLY"
+          test "$(jq -r '.productionWriteAllowed' market-structure-v3-review-index.json)" = "false"
+          test "$(jq -r '.status' market-structure-v3-review-index.json)" = "PASS"
+          test "$(jq -r '.totalCount' market-structure-v3-review-index.json)" = "$(jq -r '.count' /tmp/market-structure-v3-review.json)"
+          test "$(jq -r '[.shards[].count] | add // 0' market-structure-v3-review-index.json)" = "$(jq -r '.totalCount' market-structure-v3-review-index.json)"
+          test "$(jq -r '[.shards[].byteSize] | max // 0' market-structure-v3-review-index.json)" -le 300000
+
       - name: Build compact V3 08:15 handoff
         shell: bash
         run: |
           set -euo pipefail
-
-          cp /tmp/market-structure-v3-review.json market-structure-v3-review.json
 
           STATUS=$(jq -r '.status' market-structure-v3.json)
           TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3.json)
@@ -119,12 +136,13 @@ jobs:
           PROCESSED=$(jq -r '.coverage.universeProcessed // 0' market-structure-v3.json)
           CUR=$(jq -r '.coverage.currentTradeDate // 0' market-structure-v3.json)
           CAND_RATIO=$(jq -r '.coverage.candidateRatio // 1' market-structure-v3.json)
-          REVIEW_COUNT=$(jq -r '.count // 0' market-structure-v3-review.json)
-          REVIEW_TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3-review.json)
-          REVIEW_GENERATED=$(jq -r '.generatedAtKst // ""' market-structure-v3-review.json)
-          REVIEW_METHODOLOGY=$(jq -r '.methodologyVersion // ""' market-structure-v3-review.json)
-          REVIEW_SCHEMA=$(jq -r '.schemaVersion // ""' market-structure-v3-review.json)
-          REVIEW_SOURCE_SCHEMA=$(jq -r '.sourceSchemaVersion // ""' market-structure-v3-review.json)
+          REVIEW_COUNT=$(jq -r '.totalCount // 0' market-structure-v3-review-index.json)
+          REVIEW_TRADE_DATE=$(jq -r '.tradeDate // ""' market-structure-v3-review-index.json)
+          REVIEW_GENERATED=$(jq -r '.generatedAtKst // ""' market-structure-v3-review-index.json)
+          REVIEW_METHODOLOGY=$(jq -r '.methodologyVersion // ""' market-structure-v3-review-index.json)
+          REVIEW_INDEX_SCHEMA=$(jq -r '.schemaVersion // ""' market-structure-v3-review-index.json)
+          REVIEW_SOURCE_SCHEMA=$(jq -r '.sourceSchemaVersion // ""' market-structure-v3-review-index.json)
+          SHARD_COUNT=$(jq -r '.shardCount // 0' market-structure-v3-review-index.json)
 
           [ "$STATUS" = "PASS" ]
           [ -n "$TRADE_DATE" ]
@@ -134,21 +152,23 @@ jobs:
           [ "$REVIEW_TRADE_DATE" = "$TRADE_DATE" ]
           [ "$REVIEW_GENERATED" = "$GENERATED" ]
           [ "$REVIEW_METHODOLOGY" = "$METHODOLOGY" ]
-          [ "$REVIEW_SCHEMA" = "MARKET_STRUCTURE_V3_REVIEW_PACKET" ]
+          [ "$REVIEW_INDEX_SCHEMA" = "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1" ]
           [ "$REVIEW_SOURCE_SCHEMA" = "MARKET_STRUCTURE_V3" ]
+          [ "$SHARD_COUNT" -ge 1 ]
 
           jq -n \
             --arg status "$STATUS" \
             --arg tradeDate "$TRADE_DATE" \
             --arg generatedAtKst "$GENERATED" \
             --arg methodologyVersion "$METHODOLOGY" \
-            --arg reviewSchemaVersion "$REVIEW_SCHEMA" \
+            --arg reviewIndexSchemaVersion "$REVIEW_INDEX_SCHEMA" \
             --arg artifactName "market-structure-v3-artifacts-${{ github.run_id }}" \
             --argjson workflowRunId "${{ github.run_id }}" \
             --argjson universeProcessed "$PROCESSED" \
             --argjson currentTradeDate "$CUR" \
             --argjson candidateRatio "$CAND_RATIO" \
             --argjson reviewCount "$REVIEW_COUNT" \
+            --argjson reviewShardCount "$SHARD_COUNT" \
             '{
               schemaVersion:"MARKET_STRUCTURE_V3_HANDOFF_V1",
               mode:"SHADOW_ONLY",
@@ -160,35 +180,35 @@ jobs:
               freshnessStatus:"PASS",
               canonicalValidated:true,
               reviewPacketValidated:true,
+              reviewShardsValidated:true,
               coverage:{
                 universeProcessed:$universeProcessed,
                 currentTradeDate:$currentTradeDate,
                 candidateRatio:$candidateRatio,
-                reviewCount:$reviewCount
+                reviewCount:$reviewCount,
+                reviewShardCount:$reviewShardCount
               },
               source:{
                 workflowRunId:$workflowRunId,
                 artifactName:$artifactName,
                 canonicalPath:"market-structure-v3.json",
-                reviewPath:"market-structure-v3-review.json",
-                reviewSchemaVersion:$reviewSchemaVersion
+                reviewArtifactPath:"/tmp/market-structure-v3-review.json",
+                reviewIndexPath:"market-structure-v3-review-index.json",
+                reviewIndexSchemaVersion:$reviewIndexSchemaVersion
               }
             }' > market-structure-v3-handoff.json
 
-          [ "$(jq -r '.schemaVersion' market-structure-v3-handoff.json)" = "MARKET_STRUCTURE_V3_HANDOFF_V1" ]
-          [ "$(jq -r '.mode' market-structure-v3-handoff.json)" = "SHADOW_ONLY" ]
-          [ "$(jq -r '.productionWriteAllowed' market-structure-v3-handoff.json)" = "false" ]
-          [ "$(jq -r '.status' market-structure-v3-handoff.json)" = "PASS" ]
-          [ "$(jq -r '.tradeDate' market-structure-v3-handoff.json)" = "$TRADE_DATE" ]
-          [ "$(jq -r '.generatedAtKst' market-structure-v3-handoff.json)" = "$REVIEW_GENERATED" ]
-          [ "$(jq -r '.methodologyVersion' market-structure-v3-handoff.json)" = "$REVIEW_METHODOLOGY" ]
-          [ "$(jq -r '.coverage.reviewCount' market-structure-v3-handoff.json)" = "$REVIEW_COUNT" ]
+          test "$(jq -r '.schemaVersion' market-structure-v3-handoff.json)" = "MARKET_STRUCTURE_V3_HANDOFF_V1"
+          test "$(jq -r '.mode' market-structure-v3-handoff.json)" = "SHADOW_ONLY"
+          test "$(jq -r '.productionWriteAllowed' market-structure-v3-handoff.json)" = "false"
+          test "$(jq -r '.status' market-structure-v3-handoff.json)" = "PASS"
+          test "$(jq -r '.tradeDate' market-structure-v3-handoff.json)" = "$TRADE_DATE"
+          test "$(jq -r '.generatedAtKst' market-structure-v3-handoff.json)" = "$REVIEW_GENERATED"
+          test "$(jq -r '.methodologyVersion' market-structure-v3-handoff.json)" = "$REVIEW_METHODOLOGY"
+          test "$(jq -r '.coverage.reviewCount' market-structure-v3-handoff.json)" = "$REVIEW_COUNT"
+          test "$(jq -r '.coverage.reviewShardCount' market-structure-v3-handoff.json)" = "$SHARD_COUNT"
 
-          python scripts/validate_market_structure_v3_review_packet.py \
-            market-structure-v3-review.json \
-            --config market-structure-v3-config.json
-
-      - name: Upload V3 diagnostics and review packet
+      - name: Upload V3 diagnostics and monolithic review artifact
         if: always()
         uses: actions/upload-artifact@v7
         with:
@@ -201,18 +221,24 @@ jobs:
           retention-days: 7
           compression-level: 9
 
-      - name: Commit lightweight V3 shadow result and handoff
+      - name: Commit lightweight V3 shadow result and shard handoff
         if: env.SKIP_COMMIT != '1'
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add market-structure-v3.json market-structure-v3-handoff.json market-structure-v3-review.json
+
+          # The monolithic review remains a short-retention Actions artifact only.
+          # Remove any formerly committed copy so 08:15 cannot accidentally depend on it.
+          rm -f market-structure-v3-review.json
+
+          git add market-structure-v3.json market-structure-v3-handoff.json market-structure-v3-review-index.json
+          git add -A -- 'market-structure-v3-review-shard-*.json' market-structure-v3-review.json
           if git diff --cached --quiet; then
             echo "no V3 shadow changes"
             exit 0
           fi
-          git commit -m "update market structure v3 shadow"
+          git commit -m "update market structure v3 shadow shard handoff"
           git pull --rebase origin main
           git push
