@@ -87,16 +87,12 @@ jobs:
           [ "$REVIEW_COUNT" -le "$MAX_REVIEW" ]
           awk -v a="$CAND_RATIO" -v b="$MAX_CAND" 'BEGIN { exit !(a <= b) }'
 
-          # Push-triggered runs before the completed-daily cutoff are functional tests only.
-          # Keep generated files in the ephemeral workspace so handoff/sharding is exercised;
-          # only the final commit is skipped.
           if [ "$KST_HHMM" -lt 1540 ]; then
             echo "pre-close shadow validation passed; exercise handoff/shards but skip canonical V3 commit"
             echo "SKIP_COMMIT=1" >> "$GITHUB_ENV"
             exit 0
           fi
 
-          # Resolve latest completed KRX session independently and fail closed on mismatch.
           python scripts/validate_market_structure_v3_freshness.py \
             --scan market-structure-v3.json \
             --output /tmp/market-structure-v3-health.json \
@@ -154,7 +150,11 @@ jobs:
           [ "$REVIEW_METHODOLOGY" = "$METHODOLOGY" ]
           [ "$REVIEW_INDEX_SCHEMA" = "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1" ]
           [ "$REVIEW_SOURCE_SCHEMA" = "MARKET_STRUCTURE_V3" ]
-          [ "$SHARD_COUNT" -ge 1 ]
+          if [ "$REVIEW_COUNT" -eq 0 ]; then
+            [ "$SHARD_COUNT" -eq 0 ]
+          else
+            [ "$SHARD_COUNT" -ge 1 ]
+          fi
 
           jq -n \
             --arg status "$STATUS" \
@@ -229,8 +229,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # The monolithic review remains a short-retention Actions artifact only.
-          # Remove any formerly committed copy so 08:15 cannot accidentally depend on it.
           rm -f market-structure-v3-review.json
 
           git add market-structure-v3.json market-structure-v3-handoff.json market-structure-v3-review-index.json
