@@ -71,8 +71,8 @@ jobs:
 
           # Never create a retroactive premarket plan after the opening window.
           HHMM=$(TZ=Asia/Seoul date +%H%M)
-          if [[ "$HHMM" > "0830" ]]; then
-            echo "post-cutoff diagnostic run; skip commit"
+          if [[ "$HHMM" > "0855" ]]; then
+            echo "post-08:55 diagnostic run; skip commit"
             exit 0
           fi
 
