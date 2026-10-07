@@ -25,101 +25,121 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Resolve V3 shadow 08:15 handoff
+      - name: Resolve and freeze V3 shadow 08:15 bundle
         shell: bash
         run: |
           set -euo pipefail
-          FILE="/tmp/v3-0815-shadow-watchlist.json"
+          FILE="/tmp/v3-0815-shadow-bundle-resolved.json"
           TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
 
-          # The 08:15 assistant deep-review may finish after this workflow has checked
-          # out the repository. Re-fetch origin/main until a current-date handoff exists
-          # instead of freezing the stale file from checkout time. Stop before 09:00 so
-          # strict real-session capture can still begin on time.
+          # Operational authority is the atomic bundle, not separate plan/watchlist files.
+          # The 07:55 GitHub fallback guarantees a current-day bundle even when the
+          # 08:15 assistant cannot write. The assistant may upgrade the bundle before
+          # this workflow resolves it.
           while true; do
             git fetch --quiet origin main || true
-            if git show origin/main:v3-0815-shadow-watchlist.json > "${FILE}.tmp" 2>/dev/null; then
-              mv "${FILE}.tmp" "$FILE"
-              TRADE_DATE=$(jq -r '.tradeDate // ""' "$FILE")
+            if git show origin/main:v3-0815-shadow-bundle.json > "${FILE}.tmp" 2>/dev/null; then
+              TRADE_DATE=$(jq -r '.tradeDate // ""' "${FILE}.tmp")
               if [ "$TRADE_DATE" = "$TODAY" ]; then
+                mv "${FILE}.tmp" "$FILE"
                 break
               fi
-              echo "waiting for current V3 handoff: observed tradeDate=$TRADE_DATE expected=$TODAY"
+              rm -f "${FILE}.tmp"
+              echo "waiting for current V3 bundle: observed tradeDate=$TRADE_DATE expected=$TODAY"
             else
               rm -f "${FILE}.tmp"
-              echo "waiting for V3 shadow handoff file on origin/main"
+              echo "waiting for current V3 shadow bundle on origin/main"
             fi
 
             NOW=$(TZ=Asia/Seoul date +%H%M%S)
             if [[ "$NOW" > "085730" || "$NOW" == "085730" ]]; then
-              echo "STALE_0815_HANDOFF: current-date watchlist not available by 08:57:30 KST"
+              echo "STALE_0815_BUNDLE: current-date atomic bundle not available by 08:57:30 KST"
               exit 1
             fi
             sleep 15
           done
 
+          BUNDLE_SHA=$(git rev-parse "origin/main:v3-0815-shadow-bundle.json")
           SCHEMA=$(jq -r '.schemaVersion // ""' "$FILE")
           MODE=$(jq -r '.mode // ""' "$FILE")
           PROD=$(jq -r '.productionWriteAllowed' "$FILE")
           TRADE_DATE=$(jq -r '.tradeDate // ""' "$FILE")
           STATUS=$(jq -r '.status // ""' "$FILE")
-          COUNT=$(jq -r '(.codes // []) | length' "$FILE")
-          CODES=$(jq -r '(.codes // []) | map(tostring) | join(",")' "$FILE")
+          PLAN_ORIGIN=$(jq -r '.planOrigin // ""' "$FILE")
+          DEGRADED=$(jq -r '.degradedMode' "$FILE")
+          COUNT=$(jq -r '(.watchlist.codes // []) | length' "$FILE")
+          CODES=$(jq -r '(.watchlist.codes // []) | map(tostring) | join(",")' "$FILE")
 
-          test "$SCHEMA" = "V3_0815_SHADOW_WATCHLIST_V1"
+          test "$SCHEMA" = "V3_0815_SHADOW_BUNDLE_V1"
           test "$MODE" = "SHADOW_ONLY"
           test "$PROD" = "false"
           test "$TRADE_DATE" = "$TODAY"
+          test "$(jq -r '.watchlist.status // ""' "$FILE")" = "$STATUS"
+          test "$(jq -c '(.livePlans // []) | map(.code|tostring)' "$FILE")" = "$(jq -c '(.watchlist.codes // []) | map(tostring)' "$FILE")"
+
+          case "$PLAN_ORIGIN" in
+            ASSISTANT_DEEP_REVIEW)
+              test "$DEGRADED" = "false"
+              test "$(jq -r '.assistantDeepReviewCompleted' "$FILE")" = "true"
+              ;;
+            MACHINE_CONTINUITY_FALLBACK)
+              test "$DEGRADED" = "true"
+              test "$(jq -r '.assistantDeepReviewCompleted' "$FILE")" = "false"
+              ;;
+            *) echo "invalid planOrigin=$PLAN_ORIGIN"; exit 1 ;;
+          esac
 
           case "$STATUS" in
             READY|VALID_EMPTY|MARKET_CLOSED) ;;
-            *) echo "invalid shadow handoff status=$STATUS"; exit 1 ;;
+            *) echo "invalid shadow bundle status=$STATUS"; exit 1 ;;
           esac
 
           if [ "$COUNT" -eq 0 ]; then
             test "$STATUS" = "VALID_EMPTY" -o "$STATUS" = "MARKET_CLOSED"
             for END in 35 40; do
-              jq -n \
-                --arg status "$STATUS" \
-                --arg td "$TRADE_DATE" \
-                --argjson end "$END" \
-                '{status:$status,schemaVersion:"V3_SHADOW_LIVE_CAPTURE_V1",mode:"SHADOW_ONLY",productionWriteAllowed:false,tradeDate:$td,codes:[],source:"V3_0815_SHADOW_HANDOFF",endMinute:$end,history:{count:0,from:null,to:null,rows:[]},marketScans:{},scanDiagnostics:{},diagnostics:{startMinute:0,requestedEndMinute:$end,resumeFrom:null,attemptsByMinute:{},recentErrors:[],failReason:null}}' \
-                > "/tmp/v3-shadow-live-09${END}.json"
+              jq -n                 --arg status "$STATUS"                 --arg td "$TRADE_DATE"                 --argjson end "$END"                 --arg sha "$BUNDLE_SHA"                 --slurpfile b "$FILE"                 '{status:$status,schemaVersion:"V3_SHADOW_LIVE_CAPTURE_V1",mode:"SHADOW_ONLY",productionWriteAllowed:false,tradeDate:$td,codes:[],source:"V3_0815_SHADOW_BUNDLE",endMinute:$end,history:{count:0,from:null,to:null,rows:[]},marketScans:{},scanDiagnostics:{},diagnostics:{startMinute:0,requestedEndMinute:$end,resumeFrom:null,attemptsByMinute:{},recentErrors:[],failReason:null},sourcePlan:{bundleSha:$sha,planOrigin:$b[0].planOrigin,degradedMode:$b[0].degradedMode,assistantDeepReviewCompleted:$b[0].assistantDeepReviewCompleted,sourcePlanGeneratedAt:($b[0].sourcePlanGeneratedAt // $b[0].generatedAtKst),sourceTradeDate:$b[0].sourceTradeDate,watchlist:$b[0].watchlist,livePlans:$b[0].livePlans}}'                 > "/tmp/v3-shadow-live-09${END}.json"
             done
             echo "EMPTY=1" >> "$GITHUB_ENV"
           else
             test "$STATUS" = "READY"
             while IFS= read -r code; do
               [[ "$code" =~ ^[0-9]{6}$ ]] || { echo "invalid code=$code"; exit 1; }
-            done < <(jq -r '.codes[] | tostring' "$FILE")
+            done < <(jq -r '.watchlist.codes[] | tostring' "$FILE")
             echo "EMPTY=0" >> "$GITHUB_ENV"
           fi
 
           echo "TRADE_DATE=$TRADE_DATE" >> "$GITHUB_ENV"
           echo "CODES=$CODES" >> "$GITHUB_ENV"
+          echo "BUNDLE_SHA=$BUNDLE_SHA" >> "$GITHUB_ENV"
+          echo "PLAN_ORIGIN=$PLAN_ORIGIN" >> "$GITHUB_ENV"
+          echo "DEGRADED_MODE=$DEGRADED" >> "$GITHUB_ENV"
 
       - name: Capture 09:00-09:35 candidate path and one full-market scan
         if: env.EMPTY != '1'
         shell: bash
         run: |
           set +e
-          python scripts/v3_shadow_live_capture.py \
-            --trade-date "$TRADE_DATE" \
-            --codes "$CODES" \
-            --start-minute 0 \
-            --end-minute 35 \
-            --scan-minutes "35" \
-            --output /tmp/v3-shadow-live-0935.json
+          python scripts/v3_shadow_live_capture.py             --trade-date "$TRADE_DATE"             --codes "$CODES"             --start-minute 0             --end-minute 35             --scan-minutes "35"             --output /tmp/v3-shadow-live-0935.json
           RC=$?
           echo "CAPTURE_0935_RC=$RC" >> "$GITHUB_ENV"
           exit 0
+
+      - name: Freeze 08:15 source into 09:35 evidence
+        if: env.EMPTY != '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq             --arg sha "$BUNDLE_SHA"             --slurpfile b /tmp/v3-0815-shadow-bundle-resolved.json             '. + {sourcePlan:{bundleSha:$sha,planOrigin:$b[0].planOrigin,degradedMode:$b[0].degradedMode,assistantDeepReviewCompleted:$b[0].assistantDeepReviewCompleted,sourcePlanGeneratedAt:($b[0].sourcePlanGeneratedAt // $b[0].generatedAtKst),sourceTradeDate:$b[0].sourceTradeDate,watchlist:$b[0].watchlist,livePlans:$b[0].livePlans}}'             /tmp/v3-shadow-live-0935.json > /tmp/v3-shadow-live-0935.annotated.json
+          mv /tmp/v3-shadow-live-0935.annotated.json /tmp/v3-shadow-live-0935.json
 
       - name: Upload 09:35 shadow evidence
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: v3-shadow-live-${{ env.TRADE_DATE }}-0935-${{ github.run_id }}
-          path: /tmp/v3-shadow-live-0935.json
+          path: |
+            /tmp/v3-shadow-live-0935.json
+            /tmp/v3-0815-shadow-bundle-resolved.json
           retention-days: 7
           if-no-files-found: error
           compression-level: 9
@@ -146,24 +166,27 @@ jobs:
         shell: bash
         run: |
           set +e
-          python scripts/v3_shadow_live_capture.py \
-            --trade-date "$TRADE_DATE" \
-            --codes "$CODES" \
-            --start-minute 36 \
-            --end-minute 40 \
-            --scan-minutes "" \
-            --resume-from /tmp/v3-shadow-live-0935.json \
-            --output /tmp/v3-shadow-live-0940.json
+          python scripts/v3_shadow_live_capture.py             --trade-date "$TRADE_DATE"             --codes "$CODES"             --start-minute 36             --end-minute 40             --scan-minutes ""             --resume-from /tmp/v3-shadow-live-0935.json             --output /tmp/v3-shadow-live-0940.json
           RC=$?
           echo "CAPTURE_0940_RC=$RC" >> "$GITHUB_ENV"
           exit 0
+
+      - name: Freeze 08:15 source into 09:40 evidence
+        if: env.EMPTY != '1' && env.CONTINUE_0940 == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq             --arg sha "$BUNDLE_SHA"             --slurpfile b /tmp/v3-0815-shadow-bundle-resolved.json             '. + {sourcePlan:{bundleSha:$sha,planOrigin:$b[0].planOrigin,degradedMode:$b[0].degradedMode,assistantDeepReviewCompleted:$b[0].assistantDeepReviewCompleted,sourcePlanGeneratedAt:($b[0].sourcePlanGeneratedAt // $b[0].generatedAtKst),sourceTradeDate:$b[0].sourceTradeDate,watchlist:$b[0].watchlist,livePlans:$b[0].livePlans}}'             /tmp/v3-shadow-live-0940.json > /tmp/v3-shadow-live-0940.annotated.json
+          mv /tmp/v3-shadow-live-0940.annotated.json /tmp/v3-shadow-live-0940.json
 
       - name: Upload 09:40 shadow evidence
         if: always() && (env.EMPTY == '1' || env.CONTINUE_0940 == '1')
         uses: actions/upload-artifact@v7
         with:
           name: v3-shadow-live-${{ env.TRADE_DATE }}-0940-${{ github.run_id }}
-          path: /tmp/v3-shadow-live-0940.json
+          path: |
+            /tmp/v3-shadow-live-0940.json
+            /tmp/v3-0815-shadow-bundle-resolved.json
           retention-days: 7
           if-no-files-found: error
           compression-level: 9
@@ -180,6 +203,11 @@ jobs:
             test "$(jq -r '.mode' "$FILE")" = "SHADOW_ONLY"
             test "$(jq -r '.productionWriteAllowed' "$FILE")" = "false"
             test "$(jq -r '.tradeDate' "$FILE")" = "$TRADE_DATE"
+            test "$(jq -r '.sourcePlan.bundleSha // ""' "$FILE")" = "$BUNDLE_SHA"
+            test "$(jq -r '.sourcePlan.planOrigin // ""' "$FILE")" = "$PLAN_ORIGIN"
+            test "$(jq -r '.sourcePlan.degradedMode' "$FILE")" = "$DEGRADED_MODE"
+            test "$(jq -c '.sourcePlan.watchlist.codes // []' "$FILE")" = "$(jq -c '.codes // []' "$FILE")"
+            test "$(jq -c '(.sourcePlan.livePlans // []) | map(.code|tostring)' "$FILE")" = "$(jq -c '.codes // []' "$FILE")"
           done
 
           if [ "$EMPTY" = "1" ]; then
@@ -202,6 +230,4 @@ jobs:
             test "$(jq -r '(.marketScans | keys) == ["0935"]' /tmp/v3-shadow-live-0940.json)" = "true"
           fi
 
-          # This workflow has contents:read and uses only public GET endpoints.
-          # Local guard remains as an extra assertion that production bridge files were untouched.
           git diff --exit-code -- watchlist.json live.json live-health.json
