@@ -6,9 +6,13 @@ on:
     paths:
       - "scripts/validate_v3_0815_shadow_plan.py"
       - "scripts/test_v3_0815_shadow_plan.py"
+      - "scripts/validate_v3_0815_shadow_bundle.py"
+      - "scripts/test_v3_0815_shadow_bundle.py"
+      - "scripts/build_v3_0815_continuity_fallback.py"
       - "scripts/v3_shadow_live_capture.py"
       - "scripts/test_v3_shadow_live_capture.py"
       - "V3_0815_SHADOW_INTEGRATION.md"
+      - ".github/workflows/v3-shadow-0815-continuity-fallback.yml"
       - ".github/workflows/v3-shadow-live-capture.yml"
       - ".github/workflows/v3-shadow-session-capture.yml"
       - ".github/workflows/v3-shadow-contract-tests.yml"
@@ -20,7 +24,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -28,5 +32,7 @@ jobs:
           python-version: "3.11"
       - name: Test V3 08:15 shadow plan contract
         run: python scripts/test_v3_0815_shadow_plan.py
+      - name: Test V3 08:15 atomic bundle contract
+        run: python scripts/test_v3_0815_shadow_bundle.py
       - name: Test production-isolated live capture guards
         run: python scripts/test_v3_shadow_live_capture.py
