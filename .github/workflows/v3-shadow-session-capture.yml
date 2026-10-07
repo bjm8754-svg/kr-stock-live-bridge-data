@@ -44,18 +44,33 @@ jobs:
               if [ "$TRADE_DATE" = "$TODAY" ]; then
                 HAVE_CURRENT=1
                 ORIGIN=$(jq -r '.planOrigin // ""' "${FILE}.tmp")
+                DEGRADED=$(jq -r '.degradedMode' "${FILE}.tmp")
+                STATUS=$(jq -r '.status // ""' "${FILE}.tmp")
                 NOW=$(TZ=Asia/Seoul date +%H%M%S)
 
-                # Prefer the assistant deep-review bundle when it finishes in time.
-                # If it is not available by 08:55, freeze the already-valid machine
-                # continuity fallback so 09:00 evidence collection still proceeds.
-                if [ "$ORIGIN" = "ASSISTANT_DEEP_REVIEW" ] || [[ "$NOW" > "085500" || "$NOW" == "085500" ]]; then
+                # Prefer only a fully valid assistant upgrade. MARKET_CLOSED is final.
+                if [ "$ORIGIN" = "ASSISTANT_DEEP_REVIEW" ] && [ "$DEGRADED" = "false" ]; then
+                  mv "${FILE}.tmp" "$FILE"
+                  break
+                fi
+                if [ "$STATUS" = "MARKET_CLOSED" ]; then
                   mv "${FILE}.tmp" "$FILE"
                   break
                 fi
 
-                rm -f "${FILE}.tmp"
-                echo "current fallback bundle exists; waiting for assistant upgrade until 08:55 KST"
+                # If the assistant upgrade is absent, keep the valid continuity fallback
+                # alive until 08:55, then freeze it so the 09:00 evidence window survives.
+                if [ "$ORIGIN" = "MACHINE_CONTINUITY_FALLBACK" ] && [ "$DEGRADED" = "true" ]; then
+                  if [[ "$NOW" > "085500" || "$NOW" == "085500" ]]; then
+                    mv "${FILE}.tmp" "$FILE"
+                    break
+                  fi
+                  rm -f "${FILE}.tmp"
+                  echo "current fallback bundle exists; waiting for assistant upgrade until 08:55 KST"
+                else
+                  rm -f "${FILE}.tmp"
+                  echo "invalid current bundle origin/degraded combination: origin=$ORIGIN degraded=$DEGRADED"
+                fi
               else
                 rm -f "${FILE}.tmp"
                 echo "waiting for current V3 bundle: observed tradeDate=$TRADE_DATE expected=$TODAY"
