@@ -10,10 +10,9 @@ on:
       - "scripts/test_v3_0815_shadow_bundle.py"
       - ".github/workflows/v3-shadow-0815-continuity-fallback.yml"
   schedule:
-    # 07:55 KST Monday-Friday. Creates a current-day shadow handoff before
-    # the 08:15 assistant plan so live evidence collection never depends on
-    # assistant connector writes.
-    - cron: "55 22 * * 0-4"
+    # 07:35 KST Monday-Friday. Creates a current-day shadow handoff early
+    # enough for the 07:45 preflight and well before the 08:15 assistant plan.
+    - cron: "35 22 * * 0-4"
 
 permissions:
   contents: write
@@ -85,7 +84,6 @@ jobs:
             git add v3-0815-shadow-plan.json
           fi
 
-          # Explicit production boundary.
           BAD=$(git diff --cached --name-only | grep -E '^(watchlist\.json|live\.json|live-health\.json|cloudflare/worker_v3_hardened\.mjs)$' || true)
           test -z "$BAD"
 
