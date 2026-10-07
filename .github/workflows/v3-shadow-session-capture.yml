@@ -33,19 +33,33 @@ jobs:
           TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
 
           # Operational authority is the atomic bundle, not separate plan/watchlist files.
-          # The 07:55 GitHub fallback guarantees a current-day bundle even when the
+          # The 07:35 GitHub fallback guarantees a current-day bundle even when the
           # 08:15 assistant cannot write. The assistant may upgrade the bundle before
           # this workflow resolves it.
           while true; do
             git fetch --quiet origin main || true
+            HAVE_CURRENT=0
             if git show origin/main:v3-0815-shadow-bundle.json > "${FILE}.tmp" 2>/dev/null; then
               TRADE_DATE=$(jq -r '.tradeDate // ""' "${FILE}.tmp")
               if [ "$TRADE_DATE" = "$TODAY" ]; then
-                mv "${FILE}.tmp" "$FILE"
-                break
+                HAVE_CURRENT=1
+                ORIGIN=$(jq -r '.planOrigin // ""' "${FILE}.tmp")
+                NOW=$(TZ=Asia/Seoul date +%H%M%S)
+
+                # Prefer the assistant deep-review bundle when it finishes in time.
+                # If it is not available by 08:55, freeze the already-valid machine
+                # continuity fallback so 09:00 evidence collection still proceeds.
+                if [ "$ORIGIN" = "ASSISTANT_DEEP_REVIEW" ] || [[ "$NOW" > "085500" || "$NOW" == "085500" ]]; then
+                  mv "${FILE}.tmp" "$FILE"
+                  break
+                fi
+
+                rm -f "${FILE}.tmp"
+                echo "current fallback bundle exists; waiting for assistant upgrade until 08:55 KST"
+              else
+                rm -f "${FILE}.tmp"
+                echo "waiting for current V3 bundle: observed tradeDate=$TRADE_DATE expected=$TODAY"
               fi
-              rm -f "${FILE}.tmp"
-              echo "waiting for current V3 bundle: observed tradeDate=$TRADE_DATE expected=$TODAY"
             else
               rm -f "${FILE}.tmp"
               echo "waiting for current V3 shadow bundle on origin/main"
@@ -53,7 +67,11 @@ jobs:
 
             NOW=$(TZ=Asia/Seoul date +%H%M%S)
             if [[ "$NOW" > "085730" || "$NOW" == "085730" ]]; then
-              echo "STALE_0815_BUNDLE: current-date atomic bundle not available by 08:57:30 KST"
+              if [ "$HAVE_CURRENT" = "1" ]; then
+                echo "current bundle existed but could not be frozen"
+              else
+                echo "STALE_0815_BUNDLE: current-date atomic bundle not available by 08:57:30 KST"
+              fi
               exit 1
             fi
             sleep 15
