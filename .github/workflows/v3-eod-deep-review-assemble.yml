@@ -1,0 +1,82 @@
+name: V3 EOD Deep Review Assemble
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "v3-eod-deep-review-batch-1.json"
+      - "v3-eod-deep-review-batch-2.json"
+      - "v3-eod-deep-review-batch-3.json"
+      - "scripts/assemble_v3_eod_deep_review.py"
+      - "scripts/validate_v3_eod_deep_review.py"
+      - ".github/workflows/v3-eod-deep-review-assemble.yml"
+  schedule:
+    # Safety re-assemble before the morning preflight.
+    - cron: "25 22 * * 0-4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v3-eod-deep-review-assemble
+  cancel-in-progress: true
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Assemble only when all current batches exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/assemble_v3_eod_deep_review.py             --root .             --output v3-eod-deep-review.json             --allow-incomplete
+
+          if [ ! -f v3-eod-deep-review.json ]; then
+            echo "ASSEMBLY_READY=0" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          SOURCE_TRADE_DATE=$(jq -r '.tradeDate' market-structure-v3-review-index.json)
+          python scripts/validate_v3_eod_deep_review.py             v3-eod-deep-review.json             --source-trade-date "$SOURCE_TRADE_DATE"
+
+          test "$(jq -r '.mode' v3-eod-deep-review.json)" = "SHADOW_ONLY"
+          test "$(jq -r '.productionWriteAllowed' v3-eod-deep-review.json)" = "false"
+          test "$(jq -r '.reviewCount' v3-eod-deep-review.json)" = "$(jq -r '.totalCount' market-structure-v3-review-index.json)"
+          test "$(jq -c '.codes' v3-eod-deep-review.json)" = "$(jq -c '.codes' market-structure-v3-review-index.json)"
+          git diff --exit-code -- watchlist.json live.json live-health.json
+          echo "ASSEMBLY_READY=1" >> "$GITHUB_ENV"
+
+      - name: Commit merged EOD deep review
+        if: env.ASSEMBLY_READY == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v3-eod-deep-review.json
+
+          BAD=$(git diff --cached --name-only | grep -E '^(watchlist\.json|live\.json|live-health\.json|cloudflare/worker_v3_hardened\.mjs)$' || true)
+          test -z "$BAD"
+
+          if git diff --cached --quiet; then
+            echo "no merged EOD deep-review changes"
+            exit 0
+          fi
+          git commit -m "assemble V3 EOD assistant deep review"
+          git pull --rebase origin main
+          git push
+
+      - name: Final read-back
+        if: env.ASSEMBLY_READY == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_TRADE_DATE=$(jq -r '.tradeDate' market-structure-v3-review-index.json)
+          python scripts/validate_v3_eod_deep_review.py             v3-eod-deep-review.json             --source-trade-date "$SOURCE_TRADE_DATE"
