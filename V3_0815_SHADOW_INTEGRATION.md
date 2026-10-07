@@ -7,7 +7,7 @@ Date: 2026-09-30
 
 Validate the full V3 investment path before any production cutover:
 
-`latest completed KRX session -> V3 full-market scan -> bounded review artifact -> assistant deep chart review -> external evidence lanes -> 08:15 shadow plan -> live confirmation/cancellation`
+`latest completed KRX session -> V3 full-market scan -> bounded review shards -> EOD assistant deep chart review staging -> 08:15 overnight-delta integration -> atomic shadow bundle -> live confirmation/cancellation`
 
 This overlay replaces only the V2/YBM discovery and chart-judgement portion during shadow evaluation. It does **not** change the production 08:15 Master, `watchlist.json`, Worker watchlist, 09:35/09:40 production path, or V2 rollback baseline.
 
@@ -38,9 +38,24 @@ Machine `EXECUTABLE`, setup family, or setup state is **not** the final chart de
 
 No aggregate quality/action score is allowed.
 
+## 2.5. EOD assistant deep-review staging
+
+The 36-candidate independent chart review is **not** a same-morning 08:15 workload.
+
+After the completed-session V3 scan is committed:
+- one scheduled assistant task processes the review queue in three fixed batches of at most 12 candidates,
+- each run reviews only the first stale/missing batch,
+- successful batches are stored as `v3-eod-deep-review-batch-1.json` through `-3.json`,
+- GitHub Actions deterministically validates and merges current batches into `v3-eod-deep-review.json`,
+- evening and early-morning retries are idempotent and never reuse an older source session by changing dates.
+
+The merged EOD review is valid only when its source trade date, V3 workflow run id, review-index timestamp, methodology, candidate codes and review order exactly match the current Market Structure V3 handoff/index.
+
+This stage contains chart judgement only. Overnight US price discovery, new disclosures/news, macro/event risk and other information that can change after the Korean close remain deferred to 08:15.
+
 ## 3. Deep-review input
 
-Use the latest `market-structure-v3-review.json` artifact.
+Use the latest validated `market-structure-v3-review-index.json` and its size-bounded shards as machine evidence. The assistant EOD staging result is `v3-eod-deep-review.json`.
 
 Hard bounds:
 - maximum review candidates: 36,
@@ -77,7 +92,9 @@ A machine `EXECUTABLE` may be downgraded or rejected. A machine `RADAR/WATCH_TRI
 
 ## 4. 08:15 candidate competition
 
-After deep review, compete these sources on equal footing:
+08:15 must first validate and consume the completed `v3-eod-deep-review.json`; it must **not** repeat the full 36-candidate chart review. The EOD chart judgement is frozen before overnight information is integrated.
+
+At 08:15, process only information that can have changed since the Korean close, then compete these sources on equal footing:
 - V3 `ATTACK_CANDIDATE` / `PROBE_CANDIDATE` survivors,
 - valid NEXT-SESSION seeds,
 - economically meaningful US Lead price-discovery challengers,
@@ -120,6 +137,20 @@ For ATTACK/PROBE, require:
 
 Keep current structural R/R and planned structural R/R separate. Current distance from the planned entry is a chase diagnostic, not a reason to move invalidation farther away.
 
+## 6.5. Atomic 08:15 authority and continuity boundary
+
+The operational authority for live Shadow capture is one file: `v3-0815-shadow-bundle.json`.
+
+A GitHub Actions continuity fallback may stage a current-day `MACHINE_CONTINUITY_FALLBACK` bundle before 08:15 so live evidence collection is not lost if the assistant connector write fails. This fallback is degraded diagnostic continuity only and **never** counts as a valid V3 strategy cycle or cutover evidence.
+
+A successful 08:15 assistant run atomically replaces the bundle once with:
+- `planOrigin=ASSISTANT_DEEP_REVIEW`,
+- `degradedMode=false`,
+- `assistantDeepReviewCompleted=true`,
+- final ATTACK/PROBE live plans after overnight delta integration.
+
+The live-capture workflow freezes the resolved bundle into the 09:35/09:40 artifacts. Later repository changes cannot redesign the pre-open trigger, invalidation, no-chase boundary, or candidate set.
+
 ## 7. Shadow write boundary
 
 During this phase, do **not** write or replace:
@@ -155,8 +186,10 @@ The shadow overlay replaces the V2/YBM discovery contract, actionScore ranking, 
 
 A shadow cycle passes only if:
 - V3 latest-completed-session freshness is PASS,
-- review artifact exists and validates,
+- review index/shards exist and validate,
+- merged EOD assistant deep review exists for the latest completed KRX session and exactly matches the current review index,
 - deep review materially exercises independent judgement rather than copying machine readiness,
+- the 08:15 live source bundle has `planOrigin=ASSISTANT_DEEP_REVIEW` and `degradedMode=false`,
 - no aggregate score is reintroduced,
 - ATTACK/PROBE plans have structural invalidation and no-chase logic,
 - external evidence is explicitly integrated,
@@ -169,7 +202,7 @@ V2 may be compared afterward as an audit/control only. V2 never votes on whether
 
 Do not cut over merely because one V3 scanner run is green.
 
-First complete a real-session shadow cycle through 08:15 -> 09:35 -> 09:40 and audit:
+First complete a real-session shadow cycle through EOD deep-review staging -> 08:15 overnight-delta integration -> 09:35 -> 09:40 and audit:
 - missed high-quality structures,
 - false positives,
 - bad support/resistance roles,
