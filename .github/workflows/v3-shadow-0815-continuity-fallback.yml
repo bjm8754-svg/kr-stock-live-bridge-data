@@ -1,0 +1,106 @@
+name: V3 Shadow 08:15 Continuity Fallback
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_v3_0815_continuity_fallback.py"
+      - "scripts/validate_v3_0815_shadow_bundle.py"
+      - "scripts/test_v3_0815_shadow_bundle.py"
+      - ".github/workflows/v3-shadow-0815-continuity-fallback.yml"
+  schedule:
+    # 07:55 KST Monday-Friday. Creates a current-day shadow handoff before
+    # the 08:15 assistant plan so live evidence collection never depends on
+    # assistant connector writes.
+    - cron: "55 22 * * 0-4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v3-shadow-0815-continuity-fallback
+  cancel-in-progress: true
+
+jobs:
+  fallback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Install calendar dependency
+        run: python -m pip install "exchange-calendars==4.13.1"
+
+      - name: Run bundle validator tests
+        run: python scripts/test_v3_0815_shadow_bundle.py
+
+      - name: Build current-day continuity bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
+          python scripts/build_v3_0815_continuity_fallback.py             --root .             --today "$TODAY"             --max-live-candidates 5
+
+          python scripts/validate_v3_0815_shadow_bundle.py             v3-0815-shadow-bundle.json             --trade-date "$TODAY"
+
+          STATUS=$(jq -r '.status' v3-0815-shadow-bundle.json)
+          ORIGIN=$(jq -r '.planOrigin' v3-0815-shadow-bundle.json)
+          DEGRADED=$(jq -r '.degradedMode' v3-0815-shadow-bundle.json)
+          test "$ORIGIN" = "MACHINE_CONTINUITY_FALLBACK"
+          test "$DEGRADED" = "true"
+
+          if [ "$STATUS" != "MARKET_CLOSED" ]; then
+            python scripts/validate_v3_0815_shadow_plan.py v3-0815-shadow-plan.json
+            test "$(jq -r '.tradeDate' v3-0815-shadow-plan.json)" = "$TODAY"
+            test "$(jq -r '.sourceTradeDate' v3-0815-shadow-watchlist.json)" = "$(jq -r '.sourceTradeDate' v3-0815-shadow-bundle.json)"
+            test "$(jq -c '.codes' v3-0815-shadow-watchlist.json)" = "$(jq -c '.watchlist.codes' v3-0815-shadow-bundle.json)"
+          fi
+
+          git diff --exit-code -- watchlist.json live.json live-health.json
+
+      - name: Commit atomic shadow fallback handoff
+        if: github.event_name != 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Never create a retroactive premarket plan after the opening window.
+          HHMM=$(TZ=Asia/Seoul date +%H%M)
+          if [[ "$HHMM" > "0830" ]]; then
+            echo "post-cutoff diagnostic run; skip commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add v3-0815-shadow-watchlist.json v3-0815-shadow-bundle.json
+          if [ "$(jq -r '.status' v3-0815-shadow-bundle.json)" != "MARKET_CLOSED" ]; then
+            git add v3-0815-shadow-plan.json
+          fi
+
+          # Explicit production boundary.
+          BAD=$(git diff --cached --name-only | grep -E '^(watchlist\.json|live\.json|live-health\.json|cloudflare/worker_v3_hardened\.mjs)$' || true)
+          test -z "$BAD"
+
+          if git diff --cached --quiet; then
+            echo "no continuity fallback changes"
+            exit 0
+          fi
+
+          git commit -m "stage V3 shadow continuity handoff"
+          git pull --rebase origin main
+          git push
+
+      - name: Final local read-back
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY=$(TZ=Asia/Seoul date +%Y%m%d)
+          python scripts/validate_v3_0815_shadow_bundle.py             v3-0815-shadow-bundle.json             --trade-date "$TODAY"
