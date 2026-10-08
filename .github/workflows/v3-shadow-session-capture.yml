@@ -92,6 +92,10 @@ jobs:
             sleep 15
           done
 
+          # Fail closed if an assistant-declared deep review lacks real external evidence.
+          # The validator permits unchanged MACHINE_CONTINUITY_FALLBACK and MARKET_CLOSED.
+          python scripts/validate_v3_0815_shadow_bundle.py "$FILE" --trade-date "$TODAY"
+
           BUNDLE_SHA=$(git rev-parse "origin/main:v3-0815-shadow-bundle.json")
           SCHEMA=$(jq -r '.schemaVersion // ""' "$FILE")
           MODE=$(jq -r '.mode // ""' "$FILE")
