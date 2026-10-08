@@ -88,6 +88,54 @@ def main() -> None:
                 if p.get(key) in (None, ""):
                     errors.append(f"livePlans[{i}] missing {key}")
 
+    # Assistant READY plans must contain verifiable external research, not a
+    # chart-only bundle incorrectly advertised as a completed deep review.
+    if origin == "ASSISTANT_DEEP_REVIEW" and status == "READY":
+        lanes = {
+            "companyQuality": {"SUPPORTIVE", "MIXED", "ADVERSE", "UNKNOWN"},
+            "earningsRevision": {"UP_REVISION", "STABLE", "DOWN_REVISION", "UNKNOWN"},
+            "catalyst": {"ACTIVE", "UPCOMING", "NONE_IDENTIFIED", "UNKNOWN"},
+            "industryMacro": {"TAILWIND", "NEUTRAL", "HEADWIND", "UNKNOWN"},
+            "globalUsLead": {"CONFIRMING", "NEUTRAL", "CONTRADICTING", "NOT_MATERIAL", "UNKNOWN"},
+            "eventRisk": {"LOW", "MODERATE", "HIGH", "UNKNOWN"},
+        }
+        delta = d.get("overnightDelta") or {}
+        evidence = delta.get("evidence")
+        verified_count = delta.get("verifiedEvidenceCount")
+        if not isinstance(evidence, list) or not evidence:
+            errors.append("assistant READY requires overnightDelta.evidence source ledger")
+            evidence = []
+        if type(verified_count) is not int or verified_count != len(evidence) or verified_count < 1:
+            errors.append("overnightDelta.verifiedEvidenceCount must match nonempty evidence ledger")
+        for j, item in enumerate(evidence):
+            if not isinstance(item, dict):
+                errors.append(f"overnightDelta.evidence[{j}] must be object")
+                continue
+            for field in ("sourceType", "sourceDate", "observationDate", "sourceUrl", "summary"):
+                if not isinstance(item.get(field), str) or not item[field].strip():
+                    errors.append(f"overnightDelta.evidence[{j}] missing {field}")
+            url = item.get("sourceUrl")
+            if isinstance(url, str) and not url.startswith(("https://", "http://")):
+                errors.append(f"overnightDelta.evidence[{j}] invalid sourceUrl")
+        for i, plan in enumerate(plans):
+            ext = plan.get("externalEvidence") if isinstance(plan, dict) else None
+            if not isinstance(ext, dict):
+                errors.append(f"livePlans[{i}] missing externalEvidence")
+                continue
+            known = 0
+            for lane, allowed in lanes.items():
+                datum = ext.get(lane)
+                state = datum.get("state") if isinstance(datum, dict) else None
+                if state not in allowed:
+                    errors.append(f"livePlans[{i}].externalEvidence.{lane} invalid/missing state")
+                elif state == "UNKNOWN":
+                    if not isinstance(datum.get("reason"), str) or not datum["reason"].strip():
+                        errors.append(f"livePlans[{i}].externalEvidence.{lane} UNKNOWN requires reason")
+                else:
+                    known += 1
+            if known == 0:
+                errors.append(f"livePlans[{i}] all external evidence UNKNOWN: incomplete deep review")
+
     out = {"status": "PASS" if not errors else "FAIL", "errorCount": len(errors), "errors": errors[:100]}
     print(json.dumps(out, ensure_ascii=False))
     if errors:
