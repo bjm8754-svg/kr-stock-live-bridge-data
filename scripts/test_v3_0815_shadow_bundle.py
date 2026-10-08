@@ -62,4 +62,49 @@ closed = {
     "livePlans": [],
 }
 run(closed, True)
+# Assistant deep-review quality gate: evidence-less READY bundles must fail closed.
+assistant = json.loads(json.dumps(base))
+assistant["planOrigin"] = "ASSISTANT_DEEP_REVIEW"
+assistant["degradedMode"] = False
+assistant["assistantDeepReviewCompleted"] = True
+assistant["livePlans"][0]["externalEvidence"] = {
+    "companyQuality": {"state": "MIXED"},
+    "earningsRevision": {"state": "UNKNOWN", "reason": "No reliable revision observation"},
+    "catalyst": {"state": "NONE_IDENTIFIED"},
+    "industryMacro": {"state": "NEUTRAL"},
+    "globalUsLead": {"state": "NOT_MATERIAL"},
+    "eventRisk": {"state": "MODERATE"},
+}
+assistant["overnightDelta"] = {
+    "verifiedEvidenceCount": 1,
+    "evidence": [{
+        "sourceType": "COMPANY_IR",
+        "sourceDate": "2026-10-06",
+        "observationDate": "2026-10-07",
+        "sourceUrl": "https://example.com/ir/sample",
+        "summary": "Verification fixture for external evidence schema",
+    }],
+}
+run(assistant, True)
+
+missing_evidence = json.loads(json.dumps(assistant))
+missing_evidence["overnightDelta"]["evidence"] = []
+missing_evidence["overnightDelta"]["verifiedEvidenceCount"] = 0
+run(missing_evidence, False)
+
+all_unknown = json.loads(json.dumps(assistant))
+all_unknown["livePlans"][0]["externalEvidence"] = {
+    key: {"state": "UNKNOWN", "reason": "Source unavailable"}
+    for key in assistant["livePlans"][0]["externalEvidence"]
+}
+run(all_unknown, False)
+
+unknown_without_reason = json.loads(json.dumps(assistant))
+unknown_without_reason["livePlans"][0]["externalEvidence"]["earningsRevision"] = {"state": "UNKNOWN"}
+run(unknown_without_reason, False)
+
+bad_count = json.loads(json.dumps(assistant))
+bad_count["overnightDelta"]["verifiedEvidenceCount"] = 2
+run(bad_count, False)
+
 print("V3 08:15 shadow bundle validator tests: PASS")
