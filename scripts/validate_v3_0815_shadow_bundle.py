@@ -92,7 +92,7 @@ def main() -> None:
     # Schema validation cannot prove a web page was actually opened; the assistant
     # must still retrieve and inspect each source before claiming it as evidence.
     if origin == "ASSISTANT_DEEP_REVIEW" and status == "READY":
-        from datetime import datetime
+        from datetime import datetime, timedelta
         from urllib.parse import urlsplit
 
         lanes = {
@@ -210,8 +210,10 @@ def main() -> None:
         generated = d.get("generatedAtKst")
         try:
             ts = datetime.fromisoformat(generated)
-            if ts.tzinfo is None or ts.strftime("%Y%m%d") != d.get("tradeDate"):
+            if ts.tzinfo is None or ts.utcoffset() != timedelta(hours=9) or ts.strftime("%Y%m%d") != d.get("tradeDate"):
                 raise ValueError("timestamp date/timezone mismatch")
+            if d.get("sourcePlanGeneratedAt") != generated:
+                errors.append("sourcePlanGeneratedAt must equal generatedAtKst")
             if ts.hour > 8 or (ts.hour == 8 and ts.minute > 30):
                 errors.append("assistant READY generated after 08:30 KST deadline")
         except (TypeError, ValueError):
