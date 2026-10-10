@@ -67,6 +67,7 @@ assistant = json.loads(json.dumps(base))
 assistant["planOrigin"] = "ASSISTANT_DEEP_REVIEW"
 assistant["degradedMode"] = False
 assistant["assistantDeepReviewCompleted"] = True
+assistant["sourcePlanGeneratedAt"] = assistant["generatedAtKst"]
 assistant["livePlans"][0]["externalEvidence"] = {
     "companyQuality": {"state": "MIXED", "evidenceIds": ["co1"]},
     "earningsRevision": {"state": "UNKNOWN", "reason": "Revision report could not be verified", "checkedSources": ["broker research", "DART"]},
