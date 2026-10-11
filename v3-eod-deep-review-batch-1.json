@@ -1,1 +1,161 @@
-{"schemaVersion":"V3_EOD_DEEP_REVIEW_BATCH_V1","mode":"SHADOW_ONLY","productionWriteAllowed":false,"status":"PASS","sourceTradeDate":"20261007","sourceWorkflowRunId":37590179207,"sourceIndexGeneratedAtKst":"2026-10-07T17:02:08.434714+09:00","methodologyVersion":"MARKET_STRUCTURE_V3_2026-09-29","reviewedAtKst":"2026-10-07T17:28:26+09:00","batchIndex":1,"batchCount":3,"candidateCodes":["450080","096770","457190","402340","192820","010950","044490","033160","131290","039030","373220","002380"],"reviews":[{"code":"450080","chartState":"PROBE_CANDIDATE","thesis":"38,000 structural level held on the first pullback after the October breakout; 10/7 closed near the session low, so acceptance still needs confirmation.","importantZone":"37,800-38,200 KRW","confirmation":"Close acceptance above 38,000 followed by recovery of 39,600-40,400","invalidation":36800,"nextResistance":40575,"chaseJudgement":"Extended movement above 40,400 without a retest is structurally late.","counterargument":"10/7 low-location close after 10/6 expansion leaves failed-breakout risk."},{"code":"096770","chartState":"WATCH","thesis":"Rising medium-term structure remains intact, but repeated rejection around 161,200-164,700 leaves price directly below established supply.","importantZone":"149,000-155,400 KRW","confirmation":"Close acceptance above 164,700 or a successful retest of 149,800-155,400","invalidation":142200,"nextResistance":164700,"chaseJudgement":"Current supply-zone extension has poor asymmetry.","counterargument":"The structural invalidation remains wide and the prior-high zone is unresolved."},{"code":"457190","chartState":"PROBE_CANDIDATE","thesis":"The late-September expansion is testing 78,100, a prior event-close/role-reversal level near the 120-day average; 10/7 showed upper rejection.","importantZone":"77,600-79,200 KRW","confirmation":"Hold 78,100 and recover 82,500; stronger confirmation above 84,800","invalidation":77610,"nextResistance":84800,"chaseJudgement":"A rebound away from 78,100 without retest has higher extension risk.","counterargument":"Recent RSI/volume expansion and the 10/7 rejection increase pullback risk."},{"code":"402340","chartState":"WATCH","thesis":"Price is oscillating between the 1,098,000 trend-bridge support and repeated 1.20m supply; 10/7 again rejected the upper area.","importantZone":"1,079,000-1,128,000 KRW","confirmation":"Close acceptance above 1,200,000 or a confirmed reversal near 1,098,000","invalidation":1047000,"nextResistance":1200000,"chaseJudgement":"The middle-to-upper part of the range is not a clean structural location.","counterargument":"MA120 remains overhead and repeated 1.20m failures show unresolved supply."},{"code":"192820","chartState":"WATCH","thesis":"The 256,000-293,000 September box has broken upward, but two-session expansion leaves the 10/7 close materially extended from 293,000.","importantZone":"291,800-297,000 KRW","confirmation":"Successful 293,000 retest followed by renewed acceptance above 306,500","invalidation":271000,"nextResistance":320000,"chaseJudgement":"The current extension above the former box is late relative to the structural level.","counterargument":"RSI returned above 70 and 320,000 intraday supply appeared on 10/7."},{"code":"010950","chartState":"PROBE_CANDIDATE","thesis":"The 164,700 prior-high area has been reclaimed within an aligned medium-term trend; 10/7 made a fresh 173,700 test but did not fully clear it.","importantZone":"163,900-165,600 KRW","confirmation":"Hold 164,700 then close-accept above 173,700","invalidation":153500,"nextResistance":173700,"chaseJudgement":"A one-session spike through 173,700 without close acceptance is insufficient.","counterargument":"The 170,000 area has produced prior rejection and current ATR is elevated."},{"code":"044490","chartState":"PROBE_CANDIDATE","thesis":"The 36,412 role-reversal level remains intact after a low-volume 10/7 pullback; the close at 36,800 is close enough for a clean structural test.","importantZone":"35,970-36,680 KRW","confirmation":"Defend 36,400 and recover 38,800, then retest 41,300-41,900","invalidation":35969.25,"nextResistance":41640.75,"chaseJudgement":"Movement far above 38,800 without support confirmation is extended.","counterargument":"MA20 has been lost and a break of 36,000 opens materially lower support."},{"code":"033160","chartState":"WATCH","thesis":"Price advanced from the mid-12,000s to about 20,000 in a short window with sustained volume expansion; it is now far from the original 18,100 structure.","importantZone":"18,100-19,450 KRW","confirmation":"Retest acceptance in 18,100-19,450 followed by recovery of 20,800","invalidation":17650,"nextResistance":21600,"chaseJudgement":"Current price remains extended from the decision level.","counterargument":"RSI is above 70 near the 120-day average, increasing mean-reversion risk."},{"code":"131290","chartState":"WATCH","thesis":"The September stair-step advance remains constructive, but 10/7 rejected 336,000 and closed at 310,000 while structural downside remains wide.","importantZone":"292,500-295,500 KRW","confirmation":"Hold 294,000 then re-accept 317,500-336,000","invalidation":259500,"nextResistance":336000,"chaseJudgement":"The current level is too far from the nearest clean role-reversal reference.","counterargument":"Wide ATR and the 10/7 upper wick weaken current asymmetry."},{"code":"039030","chartState":"PROBE_CANDIDATE","thesis":"The September advance reclaimed 505,500 and the 10/7 pullback closed just above that role-reversal area after the 10/1 expansion.","importantZone":"501,500-510,500 KRW","confirmation":"Defend 505,500 and recover 526,000; stronger acceptance above 549,000","invalidation":501480,"nextResistance":526000,"chaseJudgement":"A rebound materially above 549,000 without retest is extended.","counterargument":"Post-10/1 rebound highs have softened and failure of 505,500 would negate the role reversal."},{"code":"373220","chartState":"WATCH","thesis":"The 330,000-387,000 box has broken upward and 10/7 retained 391,000, but dense resistance begins near 402,625 and compresses structural reward.","importantZone":"385,000-389,000 KRW","confirmation":"Hold 387,000 then close-accept above 402,625","invalidation":369000,"nextResistance":402625,"chaseJudgement":"The narrow space to overhead density makes extension unattractive.","counterargument":"Resistance from roughly 402,625-420,000 remains dense despite the box breakout."},{"code":"002380","chartState":"WATCH","thesis":"The chart remains range-bound around the 473,734 density center; 10/7 closed at 469,500 on contracting activity without directional confirmation.","importantZone":"459,700-468,500 KRW","confirmation":"Hold the 460k area and recover 484,333-499,167","invalidation":434000,"nextResistance":484333.33,"chaseJudgement":"Movement into 484k-499k before acceptance would enter established resistance.","counterargument":"MA20 is overhead and the 484k-514k region contains several resistance references."}]}
+{
+  "schemaVersion": "V3_EOD_DEEP_REVIEW_BATCH_V1",
+  "mode": "SHADOW_ONLY",
+  "productionWriteAllowed": false,
+  "status": "PASS",
+  "sourceTradeDate": "20261008",
+  "sourceWorkflowRunId": 37901778822,
+  "sourceIndexGeneratedAtKst": "2026-10-09T17:01:46.341222+09:00",
+  "methodologyVersion": "MARKET_STRUCTURE_V3_2026-09-29",
+  "reviewedAtKst": "2026-10-12T06:21:06+09:00",
+  "batchIndex": 1,
+  "batchCount": 3,
+  "candidateCodes": [
+    "096770",
+    "192820",
+    "125490",
+    "010950",
+    "457190",
+    "095340",
+    "003350",
+    "039030",
+    "077360",
+    "144960",
+    "267270",
+    "033160"
+  ],
+  "reviews": [
+    {
+      "code": "096770",
+      "chartState": "WATCH",
+      "thesis": "9/14 133,900원 조정 뒤 10/1 141,100원 저점을 높이며 10/8 161,500원까지 회복했다. 10/7~8 종가 159,500→161,500 및 거래량 0.98→1.18배는 상단 재시험이지만 9/10 164,700원 공급대를 종가로 수용한 적이 없다. 주봉은 회복 추세, 월봉은 9월 고점 저항이 남아 현 위치 신규 추격보다 돌파 수용 확인이 우선.",
+      "importantZone": "156,900~161,200원 재시험 구간; 상단 163,400~164,700원 공급",
+      "confirmation": "164,700원 위 종가 수용 후 161,200~163,400원 지지 재확인 또는 155,400~156,900원 조정에서 저점 상승 확인",
+      "invalidation": 153900,
+      "nextResistance": "164,700원; 이후 새 저항은 관찰 후 확정",
+      "chaseJudgement": "161,500원은 직전 고점 164,700원까지 약 2%여서 상단 매수 추격 금지",
+      "counterargument": "10/8 고가 163,400원에도 164,700원을 돌파하지 못했고 9/10 대량 상단 매물 부담이 남아 있다."
+    },
+    {
+      "code": "192820",
+      "chartState": "WATCH",
+      "thesis": "9월~10/2 256,000~293,000원 20거래일 박스 뒤 10/6 300,000원, 10/7 310,500원 종가로 돌파했으나 10/8 317,500원 시도 후 303,500원 저가권 종가(위치 0.22), 거래량 1.42배로 매도 압력이 나타났다. 주봉 상승과 월봉 8월 급등은 유효하나 306,500원 재탈환과 293,000원 돌파선 유지가 미확인.",
+      "importantZone": "293,000~299,500원 돌파 지지 시험, 306,500원 재장악",
+      "confirmation": "293,000원 위 지지 확인과 306,500~310,500원 종가 재수용; 320,000원 고점 돌파는 후속 조건",
+      "invalidation": 291800,
+      "nextResistance": "310,500~320,000원",
+      "chaseJudgement": "303,500원은 293,000원 지지보다 320,000원 공급에 가까워 추격 불리",
+      "counterargument": "10/8 높은 거래량에 종가가 저가권이고 10/7 320,000원 고점도 유지하지 못했다."
+    },
+    {
+      "code": "125490",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9/18 7.54배 거래량 상승, 10/2 3.25배 재확장 후 10/6 14,110원 고점을 형성했다. 10/7~8 12,980→12,670원 하락은 거래량 0.52→0.43배로 둔화했고 10/8 저가 12,590원이 12,555원 과거 이벤트 종가 인근에서 멈췄다. 단기 12,450~12,650원 지지 시험은 가능하나 주봉 상단 매물 및 10/8 저가권 종가로 반등 확인이 필요.",
+      "importantZone": "12,450~12,650원 (12,555원 이벤트 종가/10월8일 12,590원 저가)",
+      "confirmation": "12,450~12,650원 재시험에서 종가 유지 후 12,980원 재장악, 다음 13,350원 수용",
+      "invalidation": 12410,
+      "nextResistance": "12,980~13,350원, 이후 13,970~14,110원",
+      "chaseJudgement": "12,980원 이상 반등 추격 금지; 12,555원 구조 지지와 가까운 위치에서만 조건부 탐색",
+      "counterargument": "10/8 종가 12,670원은 당일 저가 12,590원에 가깝고 10/6 14,110원 이후 이틀 연속 하락했다."
+    },
+    {
+      "code": "010950",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9월 156,900원 상단을 넘어 9/28 164,000원, 10/2 164,900원, 10/7 170,800원으로 종가를 높였다. 10/8 169,000원은 164,800원 과거 고점 위에 있고 거래량 0.75배 조정으로 공급 급증은 확인되지 않는다. 주봉·월봉 상승 추세이나 10/7 고점 173,700원은 아직 저항.",
+      "importantZone": "163,900~165,600원 (164,800원 역할전환 시험)",
+      "confirmation": "164,800원 지지 종가 수용 후 170,800원 재장악, 173,700원 종가 돌파",
+      "invalidation": 162900,
+      "nextResistance": "170,800~173,700원",
+      "chaseJudgement": "169,000원에서 173,700원까지 공간이 좁아 지지 재시험 없이 추격 금지",
+      "counterargument": "10/8 171,600원 고가에서 밀렸고 10/7 173,700원 상단 공급이 아직 해소되지 않았다."
+    },
+    {
+      "code": "457190",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9/29~30 거래량 3.41→8.29배 급증과 72,000→78,000원 종가 전환 후 10/2 81,900원, 10/6 84,000원까지 확대했다. 10/7 78,600원 저점에서 79,400원, 10/8 79,100원 저점에서 80,500원으로 78,100원 이벤트 종가 위를 두 번 지켰다. 월봉 상승 시도지만 120일선 78,975원 부근과 84,800원 상단 재시험이 남아 있다.",
+      "importantZone": "77,600~79,200원 (78,100원 이벤트 종가와 10/7~8 저점)",
+      "confirmation": "78,100원 지지 유지 후 81,900~82,500원 회복, 84,800원 상단 재시험",
+      "invalidation": 77610,
+      "nextResistance": "82,500~84,800원",
+      "chaseJudgement": "82,500원 이상에서 84,800원 고점 추격 금지; 78,100원 지지와의 거리 우선",
+      "counterargument": "9/30 과열성 대량 거래 후 10/7 고점 82,500원에서 밀렸고 10/8 거래량은 평균 수준에 그쳤다."
+    },
+    {
+      "code": "095340",
+      "chartState": "WATCH",
+      "thesis": "10/1 224,000원 돌파 시도 후 10/2 210,000원, 10/7 200,500원, 10/8 200,000원으로 종가 하락. 10/8 저가 197,500원은 199,900원 지지선 아래였으나 종가 200,000원으로 재진입해 반응은 관찰됐다. 다만 거래량 1.24배와 저가권 종가, 주봉 연속 약세 때문에 지지 수용을 단정할 수 없다.",
+      "importantZone": "197,500~200,900원 (199,900원 반복 저점/역할 시험)",
+      "confirmation": "199,900원 종가 재수용이 이어지고 208,000~213,000원 회복",
+      "invalidation": 193800,
+      "nextResistance": "208,000~213,000원, 이후 220,375~225,000원",
+      "chaseJudgement": "지지 확정 전 반등 추격 금지; 213,000원 공급 재장악 필요",
+      "counterargument": "10/1 225,000원에서 10/8 197,500원까지 빠르게 하락했고 지지선 하회가 이미 발생했다."
+    },
+    {
+      "code": "003350",
+      "chartState": "WATCH",
+      "thesis": "10/7 3.23배 거래량과 17,910원 장중 급등에도 16,570원 마감, 10/8 16,150원으로 재하락했다. 10/8 15,110원 저점과 0.60배 거래량은 14,890~15,120원 거래밀집 지지 재시험이나 16,700원 위 종가 수용이 없고 상단 매도 공급이 뚜렷하다.",
+      "importantZone": "14,890~15,120원 거래밀집 지지, 15,705원 역할전환 경계",
+      "confirmation": "15,120~15,705원 지지 유지 뒤 16,700원 종가 재장악",
+      "invalidation": 14650,
+      "nextResistance": "16,700원, 이후 17,910원",
+      "chaseJudgement": "16,150원에서 16,700원 저항이 가까워 추격 금지",
+      "counterargument": "10/7 대량거래의 상단 17,910원은 거절됐고 10/8 종가가 10/7보다 낮다."
+    },
+    {
+      "code": "039030",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9/29 502,000원 돌파 후 10/1 559,000원까지 급등했지만 10/7 517,000원, 10/8 519,000원으로 516,000원 부근을 반복 시험했다. 10/8 거래량 1.66배와 저가권 종가는 상단 매도 압력 경고다. 그럼에도 505,500원 과거 이벤트 종가와 10/1 510,000원 저점이 아래에 남아 있어 재시험 후 수용 시에만 제한적 탐색이 가능하다.",
+      "importantZone": "501,500~510,500원 (505,500원 역할전환 지지)",
+      "confirmation": "505,500원 종가 유지와 526,000원 재장악; 549,000원은 후속 확인",
+      "invalidation": 501480,
+      "nextResistance": "526,000원, 이후 549,000~559,000원",
+      "chaseJudgement": "519,000원 즉시 추격 금지; 526,000원 매물 바로 아래이고 10/8 저가권 마감",
+      "counterargument": "10/8 거래량 1.66배에도 538,000원 고가를 지키지 못해 하락 중 매수 흡수보다 매도 우위 가능성이 있다."
+    },
+    {
+      "code": "077360",
+      "chartState": "WATCH",
+      "thesis": "9/29 14,240원 거래 증가 뒤 10/6 14,500원까지 상승했지만 10/7 13,720원, 10/8 14,110원으로 14,500~14,940원 상단 수용이 불완전하다. 10/8 저가 13,300원에서 반등했지만 거래량 0.84배, 월봉 9월 고점 14,260원과 10월 고점 14,940원이 겹친다. 12,925원 거래밀집 지지는 현재 가격과 거리가 있다.",
+      "importantZone": "12,900~13,300원 하단 지지, 14,500~14,940원 상단",
+      "confirmation": "14,940원 종가 수용과 되돌림 지지 또는 12,925~13,300원 조정에서 종가 반전",
+      "invalidation": 12680,
+      "nextResistance": "14,940원, 이후 15,395~15,700원",
+      "chaseJudgement": "14,110원에서 14,940원 저항이 가까워 돌파 전 추격 금지",
+      "counterargument": "10/6 이후 14,940원 고점과 14,500원 종가가 이어지지 않아 상승 압력의 지속성이 약하다."
+    },
+    {
+      "code": "144960",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9/21 11,870원에서 9/23 12,780원, 10/2 13,230원, 10/6 13,800원으로 종가를 높였고 10/8 14,000원 종가는 9월 13,400원 고점을 웃돌았다. 10/8 1.41배 거래량, 저가 13,000원 회복은 긍정적이나 14,345원 당일 고점과 13,280원 역할전환선 사이 간격이 커 추격보다 지지 재시험이 필요하다. 주봉 상승·월봉 8월 고점 13,280원 재장악.",
+      "importantZone": "13,000~13,400원 (13,280~13,400원 전고점 역할전환)",
+      "confirmation": "13,280~13,400원 재시험 후 종가 수용과 14,345원 상단 종가 돌파",
+      "invalidation": 12830,
+      "nextResistance": "14,345원, 이후 상위 차트의 실제 매물 확인 필요",
+      "chaseJudgement": "14,000원은 14,345원 단기 고점과 가까워 추격 금지; 13,280원 지지 재확인 우선",
+      "counterargument": "10/7 12,830원 저점으로 흔들린 뒤 하루 반등이며 14,345원 돌파 지속성은 아직 관찰되지 않았다."
+    },
+    {
+      "code": "267270",
+      "chartState": "REJECT",
+      "thesis": "9/11 142,500원 이후 9/23 130,900원, 10/2 118,000원, 10/8 107,100원으로 연속 하락. 10/8 104,900원 저점과 거래량 2.07배는 하락 압력 확대이며 MA20/60/120 130,875/131,255/143,079원 모두 상단. 104,575원 과거 지지에 접근했지만 종가 반전·수용 근거가 없고 주봉·월봉 하락이 동행한다. 단순 RSI 28.23 과매도는 매수 근거가 아니다.",
+      "importantZone": null,
+      "confirmation": null,
+      "invalidation": null,
+      "nextResistance": null,
+      "chaseJudgement": "낙폭 과대만으로 저점 매수 금지",
+      "counterargument": "104,575원 과거 이벤트 지지가 단기 반발을 만들 수 있으나 아직 실제 종가 반전은 없다."
+    },
+    {
+      "code": "033160",
+      "chartState": "PROBE_CANDIDATE",
+      "thesis": "9/16 13,660원부터 10/1 18,670원(2.21배), 10/2 20,000원(2.49배)로 거래 확대를 동반한 상승. 그러나 10/2 20,950원, 10/7 20,800원, 10/8 20,900원 고점 반복 실패 뒤 10/8 19,710원 저가권 마감(거래량 1.53배). 10/8 19,200원 저점이 19,206원 과거 고점 부근을 시험한 만큼 지지 확인 시만 탐색 가능하며 월봉 과거 20,000~24,100원 공급이 크다.",
+      "importantZone": "19,000~19,450원 (19,206원 과거 고점/10월8일 19,200원 저점)",
+      "confirmation": "19,200원 종가 유지 후 20,000원 회복, 20,950원 종가 수용",
+      "invalidation": 18820,
+      "nextResistance": "20,000~20,950원, 이후 22,050원",
+      "chaseJudgement": "20,000원 위 추격 금지; 반복 20,800~20,950원 상단 매도 확인 필요",
+      "counterargument": "10/8 높은 거래량에도 고가 20,900원을 유지하지 못했고 상위시간축 20,000~24,100원 매물에 진입 중이다."
+    }
+  ]
+}
