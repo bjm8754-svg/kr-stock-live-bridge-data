@@ -12,6 +12,8 @@
   "turnoverKrw": 0.0,
   "transactionCostKrw": 0.0,
   "positions": [],
+  "pendingOrders": [],
+  "orderEvents": [],
   "previousInterval": null,
   "decisionsLocked": 0,
   "futureIncluded": false
