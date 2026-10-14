@@ -3,8 +3,8 @@
   "mode": "SHADOW_ONLY",
   "productionWriteAllowed": false,
   "status": "PASS",
-  "tradeDate": "20261013",
-  "generatedAtKst": "2026-10-13T17:05:16.555792+09:00",
+  "tradeDate": "20261014",
+  "generatedAtKst": "2026-10-14T17:16:32.277770+09:00",
   "methodologyVersion": "MARKET_STRUCTURE_V3_2026-09-29",
   "freshnessStatus": "PASS",
   "canonicalValidated": true,
@@ -13,13 +13,13 @@
   "coverage": {
     "universeProcessed": 2590,
     "currentTradeDate": 2581,
-    "candidateRatio": 0.0508,
-    "reviewCount": 33,
-    "reviewShardCount": 33
+    "candidateRatio": 0.0322,
+    "reviewCount": 36,
+    "reviewShardCount": 36
   },
   "source": {
-    "workflowRunId": 38366118353,
-    "artifactName": "market-structure-v3-artifacts-38366118353",
+    "workflowRunId": 38533347718,
+    "artifactName": "market-structure-v3-artifacts-38533347718",
     "canonicalPath": "market-structure-v3.json",
     "reviewArtifactPath": "/tmp/market-structure-v3-review.json",
     "reviewIndexPath": "market-structure-v3-review-index.json",
