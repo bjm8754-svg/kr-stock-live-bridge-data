@@ -68,6 +68,10 @@ assistant["planOrigin"] = "ASSISTANT_DEEP_REVIEW"
 assistant["degradedMode"] = False
 assistant["assistantDeepReviewCompleted"] = True
 assistant["sourcePlanGeneratedAt"] = assistant["generatedAtKst"]
+assistant["livePlans"][0]["executionRules"] = {
+    "triggerPrice": 100, "confirmationMode": "CLOSE_ABOVE_N_CONSECUTIVE_SNAPSHOTS",
+    "holdMinutes": 3, "maxChasePct": 5,
+}
 assistant["livePlans"][0]["externalEvidence"] = {
     "companyQuality": {"state": "MIXED", "evidenceIds": ["co1"]},
     "earningsRevision": {"state": "UNKNOWN", "reason": "Revision report could not be verified", "checkedSources": ["broker research", "DART"]},
@@ -140,5 +144,21 @@ run(late, False)
 placeholder_url = json.loads(json.dumps(assistant))
 placeholder_url["overnightDelta"]["evidence"][0]["sourceUrl"] = "https://example.com/article"
 run(placeholder_url, False)
+
+no_execution_rules = json.loads(json.dumps(assistant))
+no_execution_rules["livePlans"][0].pop("executionRules")
+run(no_execution_rules, False)
+
+unverifiable_trigger = json.loads(json.dumps(assistant))
+unverifiable_trigger["livePlans"][0]["executionRules"]["triggerPrice"] = "hold above 100"
+run(unverifiable_trigger, False)
+
+invalid_hold = json.loads(json.dumps(assistant))
+invalid_hold["livePlans"][0]["executionRules"]["holdMinutes"] = 0
+run(invalid_hold, False)
+
+invalid_chase = json.loads(json.dumps(assistant))
+invalid_chase["livePlans"][0]["executionRules"]["maxChasePct"] = "unknown"
+run(invalid_chase, False)
 
 print("V3 08:15 shadow bundle validator tests: PASS")
