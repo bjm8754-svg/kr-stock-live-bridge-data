@@ -111,7 +111,11 @@ for capture in preopen:
     capture["history"]["rows"][0]["stocks"][CODE]["marketStatus"] = "PREOPEN"
 out = run(preopen)
 assert out["cycleStatus"] == "PARTIAL"
-assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "CONFIRMED"
+assert out["perCandidateEvaluation"][0]["priceCoverage"] == {
+    "openingMinutesUnobserved": 1, "observedMinutes": 40,
+    "totalMinutes": 41, "complete": False,
+}
 assert out["delta0935to0940"][0]["price0935"] == 101.0
 assert out["delta0935to0940"][0]["price0940"] == 101.0
 assert out["delta0935to0940"][0]["priceDelta"] == 0.0
@@ -127,15 +131,18 @@ for capture in zero_volume:
     q["tradingValue"] = 0
 out = run(zero_volume)
 assert out["cycleStatus"] == "PARTIAL"
-assert out["evaluationAt0935"][0]["evaluation"] == "DATA_FAIL"
-assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+assert out["evaluationAt0935"][0]["evaluation"] == "INVALIDATED"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "INVALIDATED"
+assert out["perCandidateEvaluation"][0]["priceCoverage"]["openingMinutesUnobserved"] == 1
+assert out["productionCutoverReviewEligible"] is False
 
 # A positive volume with no cumulative turnover is also an invalid quote.
 zero_turnover = fixture()
 for capture in zero_turnover:
     capture["history"]["rows"][0]["stocks"][CODE]["tradingValue"] = 0
 out = run(zero_turnover)
-assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+assert out["cycleStatus"] == "PARTIAL"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "CONFIRMED"
 
 # Final 09:40 quote quality affects the 5-minute delta independently.
 stale_0940 = fixture()
@@ -145,6 +152,33 @@ assert out["delta0935to0940"][0]["price0935"] == 101.0
 assert out["delta0935to0940"][0]["price0940"] is None
 assert out["delta0935to0940"][0]["priceDelta"] is None
 assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+
+# A single untraded 09:01 quote is an internal continuity break even if
+# the first minute was also untraded. Never skip or interpolate this gap.
+internal_gap = fixture()
+for capture in internal_gap:
+    capture["history"]["rows"][0]["stocks"][CODE]["volume"] = 0
+    capture["history"]["rows"][0]["stocks"][CODE]["tradingValue"] = 0
+    capture["history"]["rows"][1]["stocks"][CODE]["volume"] = 0
+    capture["history"]["rows"][1]["stocks"][CODE]["tradingValue"] = 0
+out = run(internal_gap)
+assert out["cycleStatus"] == "PARTIAL"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+
+# A 09:00 auction placeholder cannot be counted as an invalidation. The
+# first observed regular-session trade is 09:01 and is usable thereafter.
+opening_placeholder = fixture()
+for capture in opening_placeholder:
+    first = capture["history"]["rows"][0]["stocks"][CODE]
+    first["marketStatus"] = "PREOPEN"
+    first["currentPrice"] = 80.0
+    first["volume"] = 0
+    first["tradingValue"] = 0
+out = run(opening_placeholder)
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "CONFIRMED"
+assert out["cycleStatus"] == "PARTIAL"
+assert out["productionCutoverReviewEligible"] is False
+assert out["evaluationAt0935"][0]["priceCoverage"]["observedMinutes"] == 35
 
 missing = fixture()
 for capture in missing:
