@@ -9,8 +9,7 @@ import math
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-import exchange_calendars as xcals
-import pandas as pd
+from validate_v3_0815_shadow_bundle import valid_krx_share_quote_price
 
 KST = ZoneInfo("Asia/Seoul")
 PLAN_SCHEMA = "V3_0815_SHADOW_PLAN_V1"
@@ -35,10 +34,39 @@ def finite(v) -> bool:
 
 
 def krw(v: float) -> str:
-    return f"{int(round(float(v))):,} KRW"
+    # Descriptive structural values may be fractional. Never disguise a raw
+    # analytical value as a valid order quote by rounding it in the display.
+    return f"{float(v):,.2f}".rstrip("0").rstrip(".") + " KRW"
+
+
+def aligned_krx_share_quote(value: float, direction: str) -> int | None:
+    """Next legal ordinary-share quote UP or DOWN, with no arbitrary % offset.
+
+    The common quote-validity function also governs assistant plan validation.
+    This output is only a SHADOW diagnostic quote reference: it does not
+    manufacture a confirmed retest, an executable order, or chase tolerance.
+    """
+    if direction not in {"UP", "DOWN"}:
+        raise ValueError(f"INVALID_QUOTE_ALIGNMENT_DIRECTION:{direction}")
+    if not finite(value) or float(value) <= 0:
+        return None
+    candidate = math.ceil(float(value)) if direction == "UP" else math.floor(float(value))
+    step = 1 if direction == "UP" else -1
+    # KRX share tick widths are at most 1,000 KRW, including price boundaries.
+    for _ in range(1001):
+        if candidate <= 0:
+            return None
+        if valid_krx_share_quote_price(candidate):
+            return candidate
+        candidate += step
+    raise ValueError(f"QUOTE_ALIGNMENT_EXCEEDED_BOUND:{value}:{direction}")
 
 
 def current_session_state(today: str) -> tuple[bool, str | None]:
+    # Keep calendar dependencies limited to scheduled production of SHADOW files;
+    # quote alignment and candidate-generation tests remain dependency-free.
+    import exchange_calendars as xcals
+    import pandas as pd
     cal = xcals.get_calendar("XKRX")
     ts = pd.Timestamp(dt.datetime.strptime(today, "%Y%m%d").date())
     if not cal.is_session(ts):
@@ -145,11 +173,21 @@ def observed_levels(row: dict) -> tuple[float | None, float | None, float | None
 
 def eligible(row: dict) -> bool:
     execution = row.get("execution") or {}
-    trigger, invalidation, _, _ = observed_levels(row)
+    trigger, invalidation, _, resistance = observed_levels(row)
     if execution.get("readiness") != "EXECUTABLE":
         return False
-    if trigger is None or invalidation is None or invalidation >= trigger:
+    if trigger is None or invalidation is None or not (0 < invalidation < trigger):
         return False
+    aligned_trigger = aligned_krx_share_quote(trigger, "UP")
+    aligned_stop = aligned_krx_share_quote(invalidation, "DOWN")
+    if aligned_trigger is None or aligned_stop is None or aligned_stop >= aligned_trigger:
+        return False
+    # Once quote-aligned, a known next resistance at/below the trigger leaves
+    # no positive reward; do not push it into the diagnostic watchlist.
+    if resistance is not None:
+        aligned_resistance = aligned_krx_share_quote(resistance, "DOWN")
+        if aligned_resistance is None or aligned_resistance <= aligned_trigger:
+            return False
     return len(str(row.get("code") or "")) == 6
 
 
@@ -167,45 +205,91 @@ def candidate_sort_key(row: dict):
 
 
 def make_candidate(row: dict) -> tuple[dict, dict]:
+    """Keep source chart geometry distinct from actionable quote references."""
+    if not eligible(row):
+        raise ValueError(f"NOT_QUOTE_ALIGNED_CANDIDATE:{row.get('code')}")
     code = str(row.get("code"))
     name = row.get("name") or code
     trigger, invalidation, support, resistance = observed_levels(row)
     assert trigger is not None and invalidation is not None
+    quote_trigger = aligned_krx_share_quote(trigger, "UP")
+    quote_stop = aligned_krx_share_quote(invalidation, "DOWN")
+    quote_resistance = aligned_krx_share_quote(resistance, "DOWN") if resistance is not None else None
+    assert quote_trigger is not None and quote_stop is not None
 
+    source_levels = {
+        "triggerLevel": trigger,
+        "invalidationLevel": invalidation,
+        "nearestAcceptedSupport": support,
+        "nextResistance": resistance,
+    }
+    aligned_references = {
+        "triggerPrice": quote_trigger,
+        "invalidationPrice": quote_stop,
+        "nextResistancePrice": quote_resistance,
+        "triggerAlignment": "CEILING_TO_KRX_SHARE_TICK",
+        "invalidationAlignment": "FLOOR_TO_KRX_SHARE_TICK",
+        "nextResistanceAlignment": "FLOOR_TO_KRX_SHARE_TICK",
+        "status": "DIAGNOSTIC_REFERENCE_ONLY",
+    }
     if support is not None and invalidation < support <= trigger:
-        important_zone = f"{krw(support)} - {krw(trigger)} observed support/trigger zone"
+        important_zone = (
+            f"Raw structural support {krw(support)} to trigger {krw(trigger)}; "
+            f"quote-aligned confirmation reference {krw(quote_trigger)}"
+        )
     else:
-        important_zone = f"{krw(trigger)} observed structural trigger"
+        important_zone = (
+            f"Raw structural trigger {krw(trigger)}; "
+            f"quote-aligned confirmation reference {krw(quote_trigger)}"
+        )
 
     primary = (row.get("setups") or {}).get("primary") or {}
     family = primary.get("family") or "UNCLASSIFIED"
     state = primary.get("state") or "UNCLASSIFIED"
     machine_warnings = (row.get("execution") or {}).get("warnings") or []
     warning_text = ",".join(map(str, machine_warnings)) if machine_warnings else "none"
+    confirmation = (
+        f"Diagnostic level {krw(quote_trigger)} (source {krw(trigger)}); "
+        "retest/acceptance and hold are NOT independently verified"
+    )
+    no_chase = (
+        f"NO_CHASE until actual acceptance and risk are independently reviewed; "
+        f"no frozen chase allowance or hold duration exists for {krw(quote_trigger)}"
+    )
+    counterargument = (
+        "Degraded machine continuity plan, not independent assistant chart review; "
+        f"machine warnings={warning_text}; quote alignment does not validate the chart thesis."
+    )
 
     chart = {
         "code": code,
         "name": name,
         "chartState": "PROBE_CANDIDATE",
-        "thesis": f"Continuity fallback only: machine-observed {family}/{state} near a traceable decision level; assistant deep review is still required for cutover.",
+        "thesis": (
+            f"Continuity fallback only: machine-observed {family}/{state} near "
+            "a traceable decision level; assistant deep review is still required for cutover."
+        ),
         "importantZone": important_zone,
-        "confirmation": f"Accept/hold above observed trigger {krw(trigger)} after retest/participation; a touch alone is insufficient.",
-        "invalidation": invalidation,
-        "nextResistance": resistance,
-        "chaseJudgement": f"NO_CHASE if price is extended away from observed trigger {krw(trigger)} without a retest/acceptance.",
-        "counterargument": f"Degraded machine continuity plan, not independent assistant chart review; machine warnings={warning_text}.",
+        "confirmation": confirmation,
+        "invalidation": quote_stop,
+        "nextResistance": quote_resistance,
+        "chaseJudgement": no_chase,
+        "counterargument": counterargument,
+        "rawStructuralLevels": source_levels,
+        "quoteAlignedReferences": aligned_references,
     }
-
     plan = {
         "code": code,
         "name": name,
         "planState": "PROBE_PLAN",
         "actionableZone": important_zone,
-        "trigger": chart["confirmation"],
-        "invalidation": invalidation,
-        "noChase": chart["chaseJudgement"],
-        "nextResistance": resistance,
-        "counterargument": chart["counterargument"],
+        "trigger": confirmation,  # Prose, NOT an executionRules object.
+        "invalidation": quote_stop,
+        "noChase": no_chase,
+        "nextResistance": quote_resistance,
+        "counterargument": counterargument,
+        "rawStructuralLevels": source_levels,
+        "quoteAlignedReferences": aligned_references,
         "externalEvidence": {
             "companyQuality": {"state": "UNKNOWN"},
             "earningsRevision": {"state": "UNKNOWN"},
@@ -215,10 +299,13 @@ def make_candidate(row: dict) -> tuple[dict, dict]:
             "eventRisk": {"state": "UNKNOWN"},
         },
     }
-    if resistance is not None and resistance > trigger > invalidation:
-        rr = (resistance - trigger) / (trigger - invalidation)
-        if math.isfinite(rr) and rr > 0:
-            plan["structuralRR"] = round(rr, 3)
+    if quote_resistance is not None:
+        # Recompute R/R from aligned quote references, never reuse raw scanner
+        # ratio with a rounded trigger/stop. No price target is invented.
+        risk = quote_trigger - quote_stop
+        reward = quote_resistance - quote_trigger
+        if reward > 0 and risk > 0:
+            plan["structuralRR"] = round(reward / risk, 3)
     return chart, plan
 
 
@@ -309,7 +396,8 @@ def main() -> None:
         "notes": [
             "MACHINE_CONTINUITY_FALLBACK: created by GitHub Actions so live evidence collection does not depend on assistant connector writes.",
             "This degraded plan is diagnostic only and can never authorize production cutover.",
-            "Observed structural levels are preserved; no post-open redesign or wider invalidation is allowed.",
+            "Raw structural levels are preserved; quote-aligned reference prices are distinct from confirmation rules.",
+            "Tick alignment alone is NOT a trade signal, hold-duration rule, or production cutover authorization.",
         ],
     }
     watchlist = {
