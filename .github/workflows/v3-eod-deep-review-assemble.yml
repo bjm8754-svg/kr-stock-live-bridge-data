@@ -39,8 +39,8 @@ jobs:
           python scripts/assemble_v3_eod_deep_review.py             --root .             --output v3-eod-deep-review.json             --allow-incomplete
 
           if [ ! -f v3-eod-deep-review.json ]; then
-            echo "ASSEMBLY_READY=0" >> "$GITHUB_ENV"
-            exit 0
+            echo "::error title=V3 EOD INCOMPLETE::Current EOD deep-review batches missing/stale; no new merged file generated. This is a blocked pipeline, not a successful review."
+            exit 1
           fi
 
           SOURCE_TRADE_DATE=$(jq -r '.tradeDate' market-structure-v3-review-index.json)
