@@ -10,8 +10,7 @@ on:
       - "scripts/stock_blind_privacy.py"
       - "scripts/test_stock_blind_privacy.py"
       - "research/stock_blind/ACTIVE_EPISODE.json"
-      - "research/stock_blind/episodes/**/decisions/**"
-      - ".github/workflows/stock-blind-walkforward.yml"
+      - "research/stock_blind/episodes/S01/decisions/**"
 
 permissions:
   contents: write
