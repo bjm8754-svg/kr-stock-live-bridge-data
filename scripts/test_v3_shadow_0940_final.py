@@ -98,6 +98,13 @@ not_confirmed = [97.0] * 41
 out = run(fixture(not_confirmed))
 assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "NOT_CONFIRMED"
 
+preopen = fixture()
+for capture in preopen:
+    capture["history"]["rows"][0]["stocks"][CODE]["marketStatus"] = "PREOPEN"
+out = run(preopen)
+assert out["cycleStatus"] == "PARTIAL"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+
 missing = fixture()
 for capture in missing:
     capture["history"]["rows"][5]["stocks"][CODE]["currentPrice"] = None
