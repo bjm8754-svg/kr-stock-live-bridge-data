@@ -1,0 +1,34 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S02",
+  "step": 2,
+  "portfolio": [
+    {
+      "assetId": "ADDC44271E",
+      "action": "KEEP_PENDING",
+      "reason": "At masked relative session 6 the previously precommitted 232,000 FIRST buy limit, 215,500 stop, KRW 1m frozen budget, and expiry session 15 remain unfilled and unchanged. Price 239,000, recent daily lows 237,500/237,000/237,000 remain above the old 237,000 box upper and 235,815–240,458 price-acceptance band. Pullback following the 248,500 high traded with lower participation (~0.60,1.03,0.70x value), unlike a confirmed high-volume breakdown, and 20/60/120D MAs rise at 233,400/225,183/217,650. A bid near 232k is still a patient retest of prior 230,343–233,663 pivot and the rising MA20, not a price chase. Main objection: high 248,500 has turned into accepted upper resistance, trend momentum has declined from RSI~70 to 61, and a trade down from 237 to 232 could signify failed breakout; if the evidence changes on next review, cancel rather than follow a stale idea. Do not create ADD or force 3-day expiry."
+    },
+    {
+      "assetId": "A2452E7F51",
+      "action": "ENTER",
+      "capitalPct": 11,
+      "stop": 505000,
+      "target": null,
+      "buyOrders": [
+        {
+          "orderId": "S02-D02-A245-F1",
+          "kind": "FIRST",
+          "limitPrice": 533000,
+          "capitalPct": 11,
+          "expireAtSession": 18
+        }
+      ],
+      "reason": "Select NEW patient conditional swing reservation after independent daily/weekly/monthly evaluation of all 18 screened names. This symbol moved from a 492–535k basing/reaccumulation area into a volume-backed upside price transition. Former 40-session range 483,000–545,000 had repeated upper failures (5 touches); strong recent daily candles at 531,000 (2.27x estimated trading value), 552,000 (4.19x), 564,000 (2.12x) show actual upside price progress, not merely high aggressive volume without progress. Last close 564,000 exceeds prior 545k box upper and previous 555/556k monthly/weekly rejection zone, while the 20/60/120D MAs are 516,750/515,858/479,617 and price has risen markedly versus both depressed indices. Do NOT chase 564k (+9.1% above MA20); reserve a FIRST limit at 533,000 within the observed 526,355–538,680 prior box-consensus/trading reference after a pullback, and a structurally broader stop at 505,000 just below observed 507–512k support and both ~516k 20/60-day MAs. Nominal first-buy risk 28,000/533,000=5.25% (~1.6 current daily ATRs by close), not an artificially tiny machine invalidation. Latest 573k high is known overhead and would offer only ~7.5% gross from bid, so trend extension beyond that resistance must first be confirmed to earn multiweek asymmetric reward. No invented exact target; target=null and evaluate post-fill structural trail only on evidence. Counterargument: reserving at 533k below 545k breakout threshold may catch a failed breakout rather than healthy retest, and an unfilled reservation risks missing a leader's continuation. Budget 11% of 10m allows only two whole shares at 533k before assumed fees (~1.066m invested, risk ~56k or 0.56% account if stop fills); residual reservation budget stays cash; no ADD. Expire unfilled order after S02 relative session 18, cancel sooner if acceptance/resistance/invalidation refutes thesis. No real broker orders."
+    }
+  ],
+  "cashPct": 100,
+  "reservedBudgetPct": 21,
+  "portfolioThesis": "At S02 relativeSession 6 the full reconstructed snapshot contains 2,764 names, 170 mechanically found candidates, 18 deep reviewed; KOSPI 2,959.46→2,944.41 (-0.51%) and KOSDAQ 953.43→953.47 (flat) over last 3 masked sessions, still roughly -6.91%/-8.07% on the last twenty daily observations. Both initial D00 orders were unfilled through D01; D01 CANCEL of A860 was executed at session 3; ADDC still pending. Equity remains KRW 10m entirely cash, PnL 0% and no stop or fees. Market breadth weakness counsels small selective resting limit orders; consider actual relative strength with price PROGRESS, not just scanner label. Preserve ADDC 10% budget and place one new 11% limited A245 reservation, total max budgets 21%; positions stay zero until fills.",
+  "rotationRule": "Next review independently examine whether 237–239k still supports ADDC and whether 545k breakout/532k acceptance develops for A245. If A245's historical 573k supply rejects again, demand versus participation and support structure determine HOLD or exit after any fill; 3-session review does not force an exit. Evaluate each unfilled bid as pending and missed trend as opportunity cost. Never buy at next open simply because of ENTER. Never change precommitted 533k or stop to fit an observed future bar. D01 canceled A860 no longer appears in scanner candidates, so its missed-rebound opportunity cost is currently unobservable from the card and must NOT be scored as a successful avoidance without a bounded follow-up feed.",
+  "notes": "RESEARCH ONLY / NO ACTUAL ORDERS. D02 independently fixed from current_card.json blob b7062bc93f9c77551ded00355338d1ffbf765901 and state.json blob 15fbf14c23ead1d0a54f259e0b47697bbc55e633 at source Git HEAD b72faae80603797a389ea1de94bc423fa6129ab8 before any unseen future bars. Existing once-canceled A860 order is not resurrected. Full 18 candidate audit and strongest counterarguments in D02_PRECOMMIT.md atomically committed with decision. Daily trace only through T+0D; weekly/monthly nominal future bucket labels can be partial periods with cutoff-clipped daily input. Old corporate-action-adjusted fractional prices, true PIT listing/sector/news data, partial fills/order-book queue, KRX tick execution and independent broker slippage remain limitations. Scanner labels are not judgments; 5-expert-plan qualitative minimum and economic skill NOT YET DEMONSTRATED."
+}
