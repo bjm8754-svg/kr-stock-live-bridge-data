@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Persistent chart-learning document integrity gate. Stdlib only; no network."""
+from __future__ import annotations
+import argparse
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "research" / "chart_learning"
+
+def fail(msg: str) -> None:
+    raise RuntimeError("CHART_LEARNING_INTEGRITY_FAIL: " + msg)
+
+def load_manifest() -> dict:
+    return json.loads((BASE / "MANIFEST.json").read_text(encoding="utf-8"))
+
+def validate() -> tuple[dict, list[dict]]:
+    m = load_manifest()
+    if m.get("schema") != "V3_CHART_LEARNING_MANIFEST_V1":
+        fail("wrong manifest schema")
+    if type(m.get("revision")) is not int or m["revision"] < 1:
+        fail("invalid learning revision")
+    if m.get("productionWriteAllowed") is not False or m.get("manualGateRequired") is not True:
+        fail("production isolation or mandatory session gate missing")
+    if m.get("performanceVerified") is not False and m.get("latestEvidenceStatus") == "DIAGNOSTIC_NOT_CLEAN_BLIND":
+        fail("diagnostic is not validated predictive performance")
+    paths = m.get("requiredPaths")
+    if not isinstance(paths, list) or len(paths) < 12 or len(paths) != len(set(paths)):
+        fail("requiredPaths missing/duplicate")
+    for p in paths:
+        path = ROOT / p
+        if not path.is_file() or path.stat().st_size == 0:
+            fail("missing/empty mandatory artifact: " + p)
+        if path.resolve() != path and not path.resolve().is_relative_to(ROOT.resolve()):
+            fail("path traversal: " + p)
+    master = (BASE / "MASTER.md").read_text(encoding="utf-8")
+    changelog = (BASE / "CHANGELOG.md").read_text(encoding="utf-8")
+    startup = (BASE / "START_HERE.md").read_text(encoding="utf-8")
+    agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    protocol = (ROOT / "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md").read_text(encoding="utf-8")
+    for path_label, body in (("AGENTS.md", agents), ("README.md", readme), ("deep-review protocol", protocol)):
+        if "research/chart_learning/START_HERE.md" not in body:
+            fail("startup gate not linked in " + path_label)
+    if f"Learning revision:** {m['revision']}" not in startup:
+        fail("startup revision differs from manifest")
+    if f"Revision {m['revision']}" not in changelog:
+        fail("changelog missing declared revision")
+    rule_ids = []
+    for rule in m.get("rules", []):
+        rid = rule.get("id", "")
+        if not re.fullmatch(r"(R|H)-\d{3}", rid):
+            fail("bad rule id: " + rid)
+        if rule.get("status") not in ("CANONICAL", "HYPOTHESIS", "SUPERSEDED"):
+            fail("unknown rule status: " + rid)
+        if "### " + rid not in master:
+            fail("manifest rule absent from MASTER: " + rid)
+        rule_ids.append(rid)
+    if len(rule_ids) != len(set(rule_ids)):
+        fail("duplicate rule IDs")
+    lesson_path = BASE / "LESSONS.jsonl"
+    lesson_lines = lesson_path.read_text(encoding="utf-8").splitlines()
+    if not lesson_lines or any(not line.strip() for line in lesson_lines):
+        fail("empty lesson or blank line")
+    lessons = [json.loads(line) for line in lesson_lines]
+    ids = []
+    for entry in lessons:
+        lid = entry.get("id", "")
+        if not re.fullmatch(r"L-\d{3}", lid):
+            fail("invalid lesson id: " + lid)
+        if not all(entry.get(k) for k in ("date", "status", "title", "evidence", "change", "nextTest")):
+            fail("incomplete lesson: " + lid)
+        if not set(entry.get("rules", [])).issubset(set(rule_ids)):
+            fail("lesson references nonexistent rule: " + lid)
+        ids.append(lid)
+    if len(ids) != len(set(ids)) or len(ids) != m.get("lessonCount"):
+        fail("lesson ID uniqueness/count mismatch")
+    cases = (BASE / "CASES.md").read_text(encoding="utf-8")
+    for lid in ids:
+        if lid not in cases and lid not in master and lid not in (BASE / "EXPERIMENTS.md").read_text(encoding="utf-8"):
+            fail("lesson never referenced outside ledger: " + lid)
+    if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
+        fail("incorrect startup entrypoint")
+    return m, lessons
+
+def git_show(path: str) -> str | None:
+    try:
+        p = subprocess.run(["git", "show", "HEAD^:" + path], cwd=ROOT, capture_output=True, text=True, check=False)
+    except OSError:
+        return None
+    return p.stdout if p.returncode == 0 else None
+
+def check_prior_revision(new_m: dict, lessons: list[dict]) -> None:
+    old_raw = git_show("research/chart_learning/MANIFEST.json")
+    if old_raw is None:
+        return
+    old_m = json.loads(old_raw)
+    prior_rules = {r["id"] for r in old_m.get("rules", [])}
+    current_rules = {r["id"] for r in new_m.get("rules", [])}
+    if not prior_rules.issubset(current_rules):
+        fail("previous rule ID deleted; preserve and SUPERSEDE instead")
+    older_ledger = git_show("research/chart_learning/LESSONS.jsonl")
+    current_ledger = (BASE / "LESSONS.jsonl").read_text(encoding="utf-8")
+    if older_ledger is not None and not current_ledger.startswith(older_ledger):
+        fail("lesson ledger was deleted/rewritten; append only")
+    if old_raw != (BASE / "MANIFEST.json").read_text(encoding="utf-8"):
+        if new_m["revision"] <= int(old_m["revision"]):
+            fail("manifest changed without revision increment")
+    else:
+        changed = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD^", "HEAD", "--", "research/chart_learning", "AGENTS.md", "README.md", "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md"],
+            cwd=ROOT, capture_output=True, text=True, check=False
+        )
+        if changed.returncode == 0 and changed.stdout.strip():
+            fail("research artifacts changed without manifest revision increment")
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--check-append-only", action="store_true", help="compare with preceding commit if available")
+    args = ap.parse_args()
+    try:
+        m, lessons = validate()
+        if args.check_append_only:
+            check_prior_revision(m, lessons)
+        print(f"CHART_LEARNING_INTEGRITY: PASS revision={m['revision']} lessons={len(lessons)} rules={len(m['rules'])} productionWriteAllowed=false")
+    except Exception as exc:
+        print(str(exc), file=sys.stderr)
+        raise SystemExit(1)
+
+if __name__ == "__main__":
+    main()

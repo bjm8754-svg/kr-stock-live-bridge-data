@@ -1,0 +1,31 @@
+name: V3 Chart Learning Integrity
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "research/chart_learning/**"
+      - "AGENTS.md"
+      - "README.md"
+      - "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md"
+      - ".github/workflows/chart-learning-integrity.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  research-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate research memory and append-only history
+        run: python research/chart_learning/validate.py --check-append-only
+      - name: Run offline integrity tests
+        run: python research/chart_learning/test_integrity.py

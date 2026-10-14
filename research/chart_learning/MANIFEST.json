@@ -1,0 +1,76 @@
+{
+  "schema": "V3_CHART_LEARNING_MANIFEST_V1",
+  "revision": 1,
+  "updatedKst": "2026-10-14",
+  "status": "ACTIVE_RESEARCH",
+  "productionWriteAllowed": false,
+  "entrypoint": "research/chart_learning/START_HERE.md",
+  "baseline": "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md",
+  "requiredPaths": [
+    "AGENTS.md",
+    "README.md",
+    "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md",
+    "research/chart_learning/START_HERE.md",
+    "research/chart_learning/MANIFEST.json",
+    "research/chart_learning/MASTER.md",
+    "research/chart_learning/LESSONS.jsonl",
+    "research/chart_learning/CASES.md",
+    "research/chart_learning/EXPERIMENTS.md",
+    "research/chart_learning/CHANGELOG.md",
+    "research/chart_learning/RESEARCH_PROTOCOL.md",
+    "research/chart_learning/validate.py",
+    "research/chart_learning/test_integrity.py",
+    ".github/workflows/chart-learning-integrity.yml"
+  ],
+  "rules": [
+    {
+      "id": "R-001",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-002",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-003",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-004",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-005",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-006",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-007",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-008",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "R-009",
+      "status": "CANONICAL"
+    },
+    {
+      "id": "H-001",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "id": "H-002",
+      "status": "HYPOTHESIS"
+    }
+  ],
+  "lessonCount": 8,
+  "latestEvidenceStatus": "DIAGNOSTIC_NOT_CLEAN_BLIND",
+  "performanceVerified": false,
+  "manualGateRequired": true,
+  "validationWorkflow": ".github/workflows/chart-learning-integrity.yml"
+}

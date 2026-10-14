@@ -83,3 +83,7 @@ Every non-REJECT conclusion must include:
 ## Sustainability rule
 
 When new chart-study material is learned, first improve this review protocol. Add machine code only when the concept is objective enough to reduce review workload without destroying the contextual meaning.
+
+## Mandatory research memory preflight (2026-10-14)
+
+Before any new chat/session claims V3 research continuity, fetch **current GitHub HEAD** and read `research/chart_learning/START_HERE.md`, `research/chart_learning/MANIFEST.json`, `research/chart_learning/MASTER.md` and `research/chart_learning/LESSONS.jsonl`. Report the actually fetched revision/SHA, or disclose `NOT VERIFIED`. Do not silently reset lessons, mistake logs, evidence categories or treat retrospective fits as out-of-sample accuracy. New discoveries follow `research/chart_learning/RESEARCH_PROTOCOL.md`; integrity checks must pass before any persistent-improvement claim.
