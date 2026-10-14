@@ -295,7 +295,7 @@ def simple_trace(df, n=100):
     return out
 
 
-def scan_market(cutoff, held_ids, catalog):
+def scan_market(cutoff, held_ids, catalog, pending_ids=()):
     v3 = json.loads(V3CFG.read_text(encoding='utf-8'))
     v3['maxDeepReviewCandidates'] = int(CFG.get('maxDeepReviewCandidates', 18))
     hist_start = cutoff - dt.timedelta(days=int(v3.get('historyCalendarDays',3300)))
@@ -359,6 +359,33 @@ def scan_market(cutoff, held_ids, catalog):
         }
         held.append(y)
 
+    # Resting BUY_LIMIT orders remain part of the portfolio even when they
+    # drop out of the machine's top-18 discovery queue. Review their actual
+    # cutoff-bounded chart independently before any keep/cancel decision.
+    pending=[]
+    for aid in sorted(set(pending_ids) - set(held_ids)):
+        meta=catalog.get(aid)
+        if not meta:
+            raise RuntimeError('PIT_PENDING_ASSET_NOT_IN_CATALOG '+aid)
+        row=row_by_code.get(meta['code'])
+        if row:
+            repl={meta['code']:aid,meta['name']:aid}
+            y=scrub(copy.deepcopy(row),cutoff,repl)
+        else:
+            y={'status':'NO_CURRENT_ANALYSIS'}
+        df=raw_by_aid.get(aid)
+        if df is None or df.empty:
+            df=fetch_price(meta,hist_start,cutoff)
+        if df is None or df.empty:
+            raise RuntimeError('PIT_PENDING_PRICE_DATA_UNAVAILABLE '+aid)
+        y['assetId']=aid
+        y['chartTrace']={
+            'schema':['t','open','high','low','close','volumeRatio20'],
+            'daily':simple_trace(df,100),
+        }
+        y['priceAsOfOffsetCalendarDays']=(df.index[-1].date()-cutoff).days
+        pending.append(y)
+
     return {
         'coverage': {
             'universeReconstructed': len(universe),
@@ -369,6 +396,7 @@ def scan_market(cutoff, held_ids, catalog):
         },
         'candidates': candidates,
         'heldAnalysis': held,
+        'pendingAnalysis': pending,
     }
 
 
@@ -394,6 +422,23 @@ def verify_pit_card(card, cutoff):
         px = (held.get("price") or {}).get("close")
         if px is not None and abs(float(px) - float(held_now[aid]["currentPrice"])) > 0.011:
             raise RuntimeError("PIT_HELD_PRICE_MISMATCH " + str(aid))
+    expected_pending = {x["assetId"] for x in (card.get("portfolioState") or {}).get("pendingOrders", [])}
+    pending_analysis = card.get("pendingOrderAnalysis", [])
+    observed_pending = [x.get("assetId") for x in pending_analysis]
+    if len(observed_pending) != len(set(observed_pending)) or set(observed_pending) != expected_pending:
+        raise RuntimeError("PIT_PENDING_ANALYSIS_MISSING")
+    for pending in pending_analysis:
+        aid = pending.get("assetId")
+        daily = ((pending.get("chartTrace") or {}).get("daily") or [])
+        if not daily:
+            raise RuntimeError("PIT_PENDING_TRACE_MISSING " + str(aid))
+        if any(isinstance(bar[0], (int,float)) and bar[0] > 0 for bar in daily if bar):
+            raise RuntimeError("PIT_PENDING_FUTURE_TRACE " + str(aid))
+        px = (pending.get("price") or {}).get("close")
+        if px is not None and abs(float(px) - float(daily[-1][4])) > 0.011:
+            raise RuntimeError("PIT_PENDING_PRICE_MISMATCH " + str(aid))
+        if int(pending.get("priceAsOfOffsetCalendarDays", 0)) > 0:
+            raise RuntimeError("PIT_PENDING_FUTURE_PRICE " + str(aid))
     return True
 
 
@@ -453,7 +498,8 @@ def main():
     if step<max_decisions:
         cutoff=review_dates[step*CFG['stepSessions']]
         held_ids=[x['assetId'] for x in rep['positions']]
-        scan=scan_market(cutoff,held_ids,cat)
+        pending_ids=[x['assetId'] for x in rep['pendingOrders']]
+        scan=scan_market(cutoff,held_ids,cat,pending_ids)
         card={
             'schema':'KOREA_STOCK_BLIND_CARD',
             'episodeId':CFG['episodeId'],
@@ -473,6 +519,7 @@ def main():
             'coverage':scan['coverage'],
             'deepReviewCandidates':scan['candidates'],
             'heldPositionAnalysis':scan['heldAnalysis'],
+            'pendingOrderAnalysis':scan['pendingAnalysis'],
             'decisionContract':{
                 'portfolioActions':['ENTER','HOLD','ADD','REDUCE','ROTATE_IN'],
                 'exitActions':['EXIT','ROTATE_OUT'],
