@@ -1,0 +1,46 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S02",
+  "step": 0,
+  "portfolio": [
+    {
+      "assetId": "ADDC44271E",
+      "action": "ENTER",
+      "capitalPct": 10,
+      "stop": 215500,
+      "target": null,
+      "buyOrders": [
+        {
+          "orderId": "S02-D00-ADDC-F1",
+          "kind": "FIRST",
+          "limitPrice": 232000,
+          "capitalPct": 10,
+          "expireAtSession": 15
+        }
+      ],
+      "reason": "Multi-timeframe relative strength: rising 20/60/120D averages, monthly advance and repeated support organization around 230–233k. Last close 237,500 above ~236,231 decision zone and near observed highs; paying the close is chasing a fresh upper test. Rest FIRST limit 232,000 at the recent ~230,343–233,663 pivot; stop 215,500 beneath the broader accepted 216,292–223,613 support shelf, not an arbitrary one-day wick. Nominal limit-to-stop risk ~7.11% or ~2.7 latest daily ATRs. No historical overhead resistance established past 237,500, so target=null: use future chart reviews/structural trail, do not invent a numerical objective. Expire unfilled bid after session 15 if unexecuted or cancel earlier if the structural premise visibly breaks at reviews. No averaging-down tranche."
+    },
+    {
+      "assetId": "A8608C9A61",
+      "action": "ENTER",
+      "capitalPct": 10,
+      "stop": 23300,
+      "target": 28000,
+      "buyOrders": [
+        {
+          "orderId": "S02-D00-A860-F1",
+          "kind": "FIRST",
+          "limitPrice": 24800,
+          "capitalPct": 10,
+          "expireAtSession": 12
+        }
+      ],
+      "reason": "Longer-horizon upward trend and ~+22.8% 40-session advance, but today's high 28,300 to close 26,650 on estimated 1.35x trading value is a bearish upper-rejection/possible supply absorption warning, not permission to chase. Rest 24,800 below the 24,875–25,376 accepted upper support and adjacent 24,650 retest zone, above deeper 23,600 shelf. Structural stop 23,300 below the 23,383 lower bound of former support; limit-to-stop risk 1,500/24,800=6.05% (~1.5 daily ATR), objective 28,000 just before witnessed 28,300 prior rejection, gross R/R 3,200/1,500=2.13 before costs. No forced second buy; cancel stale unfilled bid by session 12 or earlier on invalidating breakdown review. This is a conditional pullback idea only; if no 24,800 trade, count non-fill and any missed upside."
+    }
+  ],
+  "cashPct": 100,
+  "reservedBudgetPct": 20,
+  "portfolioThesis": "At initial S02 masked cutoff KOSPI is down about 5.63% over 20 observed sessions and KOSDAQ about 5.31%; market risk is elevated. Select only two patient first-leg LIMIT reservations from 18 reviewed deep candidates; other 16 are not buys. No investment is executed or invested until a later session crosses a precommitted price on the simulator's conservative fill rules. Keep uncommitted 80% of starting capital; all 100% remains in cash until fills. A 3-session review is neither order expiry nor holding-term limit.",
+  "rotationRule": "At next frozen 3-session review, inspect fills/nonfills, continued role of 232k and 24.65–25.08k support, market breadth and volume-price progress. If unfilled and still valid, KEEP_PENDING (or omission of pending symbol) preserves order; CANCEL explicitly on premise failure or explicit expiry. If filled, HOLD (no weight rebalance), protective stops active daily, adjust plan only with evidence. No auto market buying at next open. This initial step contains no optional ADD because independently justified second prices were not established.",
+  "notes": "RESEARCH-ONLY initial independently locked S02 decision on masked entire reconstructed 2,768-stock market / 177 machine candidates / 18 deep chart reviews; futureIncluded=false, card close ends T+0D. Source Git HEAD 141b052d054bd23cb69f35e754bcfec718947c32 and current_card blob 70e7300871532cd820e4abcfc5f50c043aec2b6a. The prototype validates daily OHLC cutoff and order behavior but point-in-time sector/fundamental/news feeds and broker-level limit queue are not verified. Numerical historical adjusted prices in other candidates may violate KRX ticks. No real orders, no guaranteed fills/performance, no production change. Detailed all-18 reasons in reviews/D00_PRECOMMIT.md."
+}
