@@ -69,7 +69,7 @@ def validate_live_payload(payload, codes):
 
     if valid_count != len(codes):
         raise RuntimeError(f"INVALID_STOCK_PAYLOAD:{valid_count}_OF_{len(codes)}")
-    if open_count < max(1, (len(codes) + 1) // 2):
+    if open_count != len(codes):
         raise RuntimeError(f"MARKET_NOT_OPEN:{open_count}_OF_{len(codes)}")
     return stocks
 
