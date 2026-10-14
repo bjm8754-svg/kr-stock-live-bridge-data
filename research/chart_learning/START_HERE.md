@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 2
+**Learning revision:** 3
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

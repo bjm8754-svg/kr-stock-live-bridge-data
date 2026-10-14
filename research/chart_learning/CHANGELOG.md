@@ -1,5 +1,9 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 3 — Source-status consistency fix
+- Retained all source references, lesson IDs and rules; explicitly labelled Yangbongman photo completeness as `UNVERIFIED` to match the source validator and manifest.
+- Revision 2 integrity check failed on a status-token mismatch; did not claim PASS. Revision 3 repairs it without changing research conclusions or production.
+
 ## 2026-10-14 — Revision 2 — Original photo studies and Yangbongman source inheritance
 
 - Verified 91/91 numbered PNG files in ChatGPT Library `/차트공부_원자료_20260928/images/` with no missing or duplicated 001–091 labels.

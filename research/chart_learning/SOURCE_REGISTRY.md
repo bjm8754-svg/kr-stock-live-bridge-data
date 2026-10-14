@@ -22,7 +22,7 @@ This is a **source locator**, not a verified copy of externally hosted Library b
   - [`YBM_V2_METHOD.md`](../../YBM_V2_METHOD.md) — old V2 scanner specification, **historical only**, not new V3 governing logic.
 - Source ideas: ABC long decline → base → MA600/C recovery; MA600 hot-pink line; strong reference candle open/close, real volume **and trading value**, supply zone `Neomoneomo`, Jindol vs Gadol, Ichimoku/cloud, Yang-Eum-Yang, retest supply contraction, multi-factor stock selection.
 - **Important source discrepancy:** `YBM_V2_METHOD.md` once equated a 'white line' nickname with MA1000; `YBM_METHOD_AUDIT.md` explicitly labels that nickname **UNRESOLVED_FROM_TEXT**. Preserve the audit's uncertainty; do not automatically teach 'white line=MA1000'.
-- The `KakaoTalkChats.txt` export includes textual **'사진' placeholders**. Those prove an image was mentioned in chat, **not** that the referenced media file is archived. **Completeness of Yangbongman original chart screenshots is NOT VERIFIED**, despite preserved text/method audit.
+- The `KakaoTalkChats.txt` export includes textual **'사진' placeholders**. Those prove an image was mentioned in chat, **not** that the referenced media file is archived. **Completeness of Yangbongman original chart screenshots is UNVERIFIED (NOT VERIFIED)**, despite preserved text/method audit.
 - Historical YBM V2 is **not** a mandatory top-level architecture: the 2026-09-29 V3 design replaces the YBM-governed engine with generic market-structure reasoning. Preserve YBM observations and lessons as historical knowledge **without restoring YBM's scoring doctrine**.
 
 ## C. Later studies, separate evidence streams
