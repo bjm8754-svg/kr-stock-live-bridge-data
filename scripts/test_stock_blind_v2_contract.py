@@ -40,6 +40,35 @@ class PointInTimeV2Tests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "PIT_FUTURE_TRACE_LABEL"):
             mod.verify_pit_card(x, dt.date(2024, 5, 15))
 
+    def test_resting_order_requires_independent_current_chart(self):
+        card = {"futureIncluded": False, "step": 1,
+                "portfolioState": {"positions": [], "pendingOrders": [{"assetId": "A_PENDING"}]},
+                "heldPositionAnalysis": [], "deepReviewCandidates": [],
+                "pendingOrderAnalysis": []}
+        with self.assertRaisesRegex(RuntimeError, "PIT_PENDING_ANALYSIS_MISSING"):
+            mod.verify_pit_card(card, dt.date(2024, 5, 15))
+
+    def test_resting_order_current_price_must_match_cutoff_trace(self):
+        card = {"futureIncluded": False, "step": 1,
+                "portfolioState": {"positions": [], "pendingOrders": [{"assetId": "A_PENDING"}]},
+                "heldPositionAnalysis": [], "deepReviewCandidates": [],
+                "pendingOrderAnalysis": [{"assetId": "A_PENDING",
+                    "price": {"close": 105},
+                    "priceAsOfOffsetCalendarDays": 0,
+                    "chartTrace": {"daily": [[0, 100, 110, 90, 110, 1.0]]}}]}
+        with self.assertRaisesRegex(RuntimeError, "PIT_PENDING_PRICE_MISMATCH"):
+            mod.verify_pit_card(card, dt.date(2024, 5, 15))
+
+    def test_resting_order_independent_chart_passes(self):
+        card = {"futureIncluded": False, "step": 1,
+                "portfolioState": {"positions": [], "pendingOrders": [{"assetId": "A_PENDING"}]},
+                "heldPositionAnalysis": [], "deepReviewCandidates": [],
+                "pendingOrderAnalysis": [{"assetId": "A_PENDING",
+                    "price": {"close": 105},
+                    "priceAsOfOffsetCalendarDays": 0,
+                    "chartTrace": {"daily": [[0, 100, 110, 90, 105, 1.0]]}}]}
+        self.assertTrue(mod.verify_pit_card(card, dt.date(2024, 5, 15)))
+
     def test_clean_card_held_and_candidate_pass(self):
         x = {"futureIncluded": False, "step": 5,
              "portfolioState": {"positions": [{"assetId": "A1", "currentPrice": 18810}]},
