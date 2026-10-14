@@ -269,6 +269,7 @@ def replay(decs, review_dates, catalog):
         if int(dec.get('step', -1)) != j:
             raise RuntimeError(f'decision step mismatch at {j}')
         d0 = review_dates[j * CFG['stepSessions']]
+        d_exec = review_dates[j * CFG['stepSessions'] + 1]  # next tradable session, never decision-day close
         d1 = review_dates[(j+1) * CFG['stepSessions']]
         before_names = set(positions)
         equity0 = equity_at(d0)
@@ -294,14 +295,22 @@ def replay(decs, review_dates, catalog):
             {aid: float(p["shares"]) for aid,p in positions.items()},
             mark_prices, list(target.values()), equity0,
         )
+        # All order quantities / cash budgets above use only the known decision close.
+        # Following-day OPEN is used exclusively as the ex-post settlement price.
+        fill_prices = {}
+        for aid in assets:
+            bar = row_on(series(aid), d_exec)
+            if bar is None or float(bar["Open"]) <= 0:
+                raise RuntimeError("S02_NEXT_OPEN_MISSING " + aid)
+            fill_prices[aid] = float(bar["Open"])
 
         # Explicit REDUCE / EXIT first; any missing target is a full EXIT.
         for order in planned:
             if order["side"] != "SELL":
                 continue
             aid = str(order["assetId"])
-            px = mark_prices[aid]
-            shares = min(float(positions[aid]["shares"]), float(order["shares"]))
+            px = fill_prices[aid]
+            shares = min(float(positions[aid]["shares"]), float(math.floor(float(order["shares"]) + 1e-9)))
             if shares <= 0:
                 continue
             notional = shares * px
@@ -315,14 +324,20 @@ def replay(decs, review_dates, catalog):
 
         # Explicit ENTER / ROTATE_IN / ADD only; HOLD never buys or sells.
         needs = [(str(order["assetId"]), target[str(order["assetId"])],
-                  mark_prices[str(order["assetId"])], float(order["notional"]))
+                  fill_prices[str(order["assetId"])], float(order["notional"]))
                  for order in planned if order["side"] == "BUY"]
         required = sum(n * (1 + buy_bps / 10000.0) for _,_,_,n in needs)
         scale = 1.0 if required <= cash or required <= 0 else cash / required
         for aid, x, px, need in needs:
-            notional = need * scale
+            # A frozen cash budget buys whole shares at the next session open.
+            # Do not open/add below the now-invalid structural stop.
+            if x.get("stop") is not None and px <= float(x["stop"]):
+                continue
+            shares = math.floor((need * scale) / px + 1e-9)
+            if shares <= 0:
+                continue
+            notional = shares * px
             fee = notional * buy_bps / 10000.0
-            shares = notional / px
             old = positions.get(aid)
             if old:
                 old_cost = old["avgCost"] * old["shares"]
@@ -351,7 +366,16 @@ def replay(decs, review_dates, catalog):
         if before_names != after_names:
             composition_changes += 1
 
-        start_eq_after = equity_at(d0)
+        start_eq_after = cash
+        for aid, pos in positions.items():
+            # Immediately after next-open fills; not yesterday's close.
+            open_px = fill_prices.get(aid)
+            if open_px is None:
+                row = row_on(series(aid), d_exec)
+                open_px = float(row["Open"]) if row is not None else close_on_or_before(series(aid), d0)
+            if open_px is None:
+                raise RuntimeError("S02_OPEN_MARK_MISSING " + aid)
+            start_eq_after += pos["shares"] * open_px
         stopped = []
         session_slice = review_dates[j*CFG['stepSessions']+1:(j+1)*CFG['stepSessions']+1]
         for day in session_slice:
