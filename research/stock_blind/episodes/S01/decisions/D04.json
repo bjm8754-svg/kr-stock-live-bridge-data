@@ -1,0 +1,29 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S01",
+  "step": 4,
+  "portfolio": [
+    {
+      "assetId": "A91ECD3412",
+      "action": "HOLD",
+      "capitalPct": 21.56,
+      "entryReference": 19050,
+      "stop": 16100,
+      "target": null,
+      "reason": "Continue the original multi-week rising-trend thesis, not a three-session trade. Current 19,050 remains above the 16,318–16,733 accepted event-close/support zone; the last 10 visible sessions advanced ~40% while participation expanded. The 19,490 recent high is a near-term acceptance checkpoint, NOT a forced take-profit target. Prior 15,450 stop can be raised to 16,100 below the confirmed 16.3k support-zone floor (about 3.1 current ATRs away), without treating an ordinary 1–2 day pullback as invalidation. No ADD after a ~40% 10-session advance and a weak broad tape; note late-stage vertical-extension risk and reserve the right to REDUCE if price repeatedly fails to progress after retests. No reliable overhead supply from visible weekly/monthly history => target null, not fabricated."
+    },
+    {
+      "assetId": "A0E433D981",
+      "action": "HOLD",
+      "capitalPct": 15.29,
+      "entryReference": 86400,
+      "stop": 74500,
+      "target": null,
+      "reason": "Hold only the pre-existing swing core; do NOT recreate the failed tactical ADD thesis removed at D03. The 20/60/120D averages remain rising, 80,800 near-term support is being probed/reclaimed, and the more important accepted 75,075 structural area remains intact. The 87,900–88,350 prior high/supply is a decision checkpoint; price 86,400 has not durably accepted above it. Retain 74,500 structural stop just beneath the ~75k support and do not tighten it to a one-day wick solely because the next review is in three sessions. If 88,350 is accepted over successive closes with strong participation, reassess at next review; no immediate ADD or artificial overhead target."
+    }
+  ],
+  "cashPct": 63.15,
+  "portfolioThesis": "The masked current market shows a sharp index drawdown and a high-amplitude rebound that has not yet repaired all broken higher-timeframe levels. Do not interpret a 2-session rebound as an all-clear. Preserve the two existing relative-strength multi-week swing theses, keep around 63% cash, improve structural protection on the faster winner, and decline new current-close buys with poor nearby reward/realistic-stop asymmetry. No new positions from the 18 reviewed names today. Three sessions is a portfolio REVIEW cadence, NOT trade expiry.",
+  "rotationRule": "Reassess both open theses and re-scan all eligible names at the next blind review, with intervening structural stops active daily. A91ECD3412: a fall below 16.1k invalidates the newly accepted breakout support thesis; a failure to hold 18.7k/19.5k after repeated tests is a diagnostic warning, not automatic liquidation. A0E433D981: the 87.9k–88.35k overhead requires close acceptance and participation before another tactical add; the old 75k core is still held. Fresh ACAFDFEF25 / AD66E4A5AF / AE151E637C candidates remain WATCH only pending confirmation or a better location; the engine cannot represent resting conditional limit entries, so none are falsely counted as fills.",
+  "notes": "Research-only blind decision. Evaluated 2 existing holdings plus 18 machine-selected chart traces out of reconstructed 2,592 at relative session 12. Frozen input: repo commit ddb99030a86717dde633b5931c3a06a46d17a202; S01 current_card blob 30fa94d999b316861fdc6c367cd24ccdd9a9b530. No hidden code, actual calendar date, future bar, or outcome inspected. Longer swing horizon deliberately uncoupled from 3-session review. machine EXECUTABLE != approved trade. No real trading; productionWriteAllowed=false. See reviews/D04_PRECOMMIT.md."
+}
