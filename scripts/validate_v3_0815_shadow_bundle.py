@@ -203,6 +203,27 @@ def main() -> None:
                         errors.append(f"livePlans[{i}].externalEvidence.{lane} wrong candidate evidenceId={source_id}")
                     if item.get("scope") == "GLOBAL" and lane not in {"industryMacro", "globalUsLead", "eventRisk"}:
                         errors.append(f"livePlans[{i}].externalEvidence.{lane} global evidence cannot support company claims")
+            # Machine evaluation must never infer a numeric threshold or time
+            # rule from assistant prose after the session has opened.
+            rules = plan.get("executionRules") if isinstance(plan, dict) else None
+            if not isinstance(rules, dict):
+                errors.append(f"livePlans[{i}] missing executionRules")
+            else:
+                trig = rules.get("triggerPrice")
+                inv = plan.get("invalidation")
+                hold = rules.get("holdMinutes")
+                chase = rules.get("maxChasePct")
+                def valid_number(v):
+                    import math
+                    return isinstance(v, (float, int)) and not isinstance(v, bool) and math.isfinite(v)
+                if not (valid_number(trig) and valid_number(inv) and 0 < inv < trig):
+                    errors.append(f"livePlans[{i}] executionRules trigger/invalidation invalid")
+                if type(hold) is not int or not 1 <= hold <= 36:
+                    errors.append(f"livePlans[{i}] executionRules holdMinutes invalid")
+                if not valid_number(chase) or not 0 <= chase <= 100:
+                    errors.append(f"livePlans[{i}] executionRules maxChasePct invalid")
+                if rules.get("confirmationMode") != "CLOSE_ABOVE_N_CONSECUTIVE_SNAPSHOTS":
+                    errors.append(f"livePlans[{i}] unsupported confirmationMode")
             if known == 0:
                 errors.append(f"livePlans[{i}] all external evidence UNKNOWN: incomplete deep review")
 
