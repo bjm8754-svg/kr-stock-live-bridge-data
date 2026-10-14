@@ -94,7 +94,14 @@ jobs:
 
           # Fail closed if an assistant-declared deep review lacks real external evidence.
           # The validator permits unchanged MACHINE_CONTINUITY_FALLBACK and MARKET_CLOSED.
-          python scripts/validate_v3_0815_shadow_bundle.py "$FILE" --trade-date "$TODAY"
+          # Verify upgraded assistant proposals against the *remote* merged EOD
+          # at freeze time, rather than trusting a stale checkout or machine fallback.
+          # Fallback plans remain degraded and are permitted without an AI EOD gate.
+          mkdir -p /tmp/v3-shadow-frozen-eod
+          for SOURCE_NAME in market-structure-v3-handoff.json market-structure-v3-review-index.json v3-eod-deep-review.json; do
+            git show "origin/main:$SOURCE_NAME" > "/tmp/v3-shadow-frozen-eod/$SOURCE_NAME"
+          done
+          python scripts/validate_v3_0815_shadow_bundle.py "$FILE" --trade-date "$TODAY" --source-root /tmp/v3-shadow-frozen-eod
 
           BUNDLE_SHA=$(git rev-parse "origin/main:v3-0815-shadow-bundle.json")
           SCHEMA=$(jq -r '.schemaVersion // ""' "$FILE")
