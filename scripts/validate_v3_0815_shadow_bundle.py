@@ -10,10 +10,122 @@ ORIGINS = {"MACHINE_CONTINUITY_FALLBACK", "ASSISTANT_DEEP_REVIEW"}
 LIVE_STATES = {"ATTACK_PLAN", "PROBE_PLAN"}
 
 
+def validate_eod_provenance(d: dict, source_root: Path, errors: list[str]) -> None:
+    """Fail closed unless a FULL assistant bundle uses the current independent EOD.
+
+    This does NOT assert that external news was actually inspected. It only
+    proves that today's proposed codes originate in a completed, linked EOD
+    review and that the review predates the alleged assistant premarket plan.
+    """
+    from datetime import datetime, timedelta
+
+    names = (
+        "market-structure-v3-handoff.json",
+        "market-structure-v3-review-index.json",
+        "v3-eod-deep-review.json",
+    )
+    try:
+        handoff, index, eod = [
+            json.loads((source_root / name).read_text(encoding="utf-8"))
+            for name in names
+        ]
+    except (OSError, ValueError, TypeError) as exc:
+        errors.append(f"assistant source EOD unavailable/invalid:{type(exc).__name__}:{exc}")
+        return
+
+    if handoff.get("schemaVersion") != "MARKET_STRUCTURE_V3_HANDOFF_V1":
+        errors.append("assistant EOD handoff schema invalid")
+    if index.get("schemaVersion") != "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1":
+        errors.append("assistant EOD review index schema invalid")
+    if eod.get("schemaVersion") != "V3_EOD_DEEP_REVIEW_V1":
+        errors.append("assistant merged EOD schema invalid")
+
+    for label, obj in (("handoff", handoff), ("index", index), ("merged EOD", eod)):
+        if obj.get("mode") != "SHADOW_ONLY" or obj.get("productionWriteAllowed") is not False:
+            errors.append(f"assistant {label} isolation invalid")
+        if obj.get("status") != "PASS":
+            errors.append(f"assistant {label} not PASS")
+
+    source_date = index.get("tradeDate")
+    generated_index = index.get("generatedAtKst")
+    method = index.get("methodologyVersion")
+    run_id = (handoff.get("source") or {}).get("workflowRunId")
+    src = d.get("source") or {}
+    links = (
+        (handoff.get("tradeDate"), source_date, "handoff.tradeDate"),
+        (handoff.get("generatedAtKst"), generated_index, "handoff.generatedAtKst"),
+        (handoff.get("methodologyVersion"), method, "handoff.methodologyVersion"),
+        (eod.get("sourceTradeDate"), source_date, "eod.sourceTradeDate"),
+        (eod.get("sourceIndexGeneratedAtKst"), generated_index, "eod.indexGeneratedAtKst"),
+        (eod.get("sourceWorkflowRunId"), run_id, "eod.workflowRunId"),
+        (eod.get("methodologyVersion"), method, "eod.methodologyVersion"),
+        (d.get("sourceTradeDate"), source_date, "bundle.sourceTradeDate"),
+        (src.get("marketStructureTradeDate"), source_date, "bundle.source.marketStructureTradeDate"),
+        (src.get("reviewIndexGeneratedAtKst"), generated_index, "bundle.source.reviewIndexGeneratedAtKst"),
+        (src.get("marketStructureWorkflowRunId"), run_id, "bundle.source.marketStructureWorkflowRunId"),
+        (src.get("methodologyVersion"), method, "bundle.source.methodologyVersion"),
+    )
+    for actual, expected, label in links:
+        if actual is None or expected is None or actual != expected:
+            errors.append(f"assistant EOD source mismatch:{label}")
+
+    if eod.get("assistantDeepReviewCompleted") is not True:
+        errors.append("assistant merged EOD deep review incomplete")
+    codes = index.get("codes")
+    reviewed_codes = eod.get("codes")
+    reviews = eod.get("reviews")
+    if not isinstance(codes, list) or not isinstance(reviewed_codes, list) or codes != reviewed_codes:
+        errors.append("assistant EOD/index code order mismatch")
+        return
+    if not isinstance(reviews, list) or len(reviews) != len(codes) or eod.get("reviewCount") != len(codes):
+        errors.append("assistant EOD review count invalid")
+        return
+    if not (len(codes) <= 36 and len(codes) == len(set(codes))):
+        errors.append("assistant EOD index codes invalid")
+    if index.get("totalCount") != len(codes):
+        errors.append("assistant EOD index count mismatch")
+    eligible = set()
+    for i, (code, row) in enumerate(zip(codes, reviews)):
+        if not isinstance(row, dict) or row.get("code") != code:
+            errors.append(f"assistant EOD review[{i}] code mismatch")
+            continue
+        state = row.get("chartState")
+        if state in {"ATTACK_CANDIDATE", "PROBE_CANDIDATE"}:
+            eligible.add(code)
+        elif state not in {"WATCH", "REJECT"}:
+            errors.append(f"assistant EOD review[{i}] invalid chartState")
+
+    selected = (d.get("watchlist") or {}).get("codes") or []
+    for code in selected:
+        if code not in eligible:
+            errors.append(f"assistant plan code not approved by independent EOD review:{code}")
+
+    try:
+        bundle_time = datetime.fromisoformat(d.get("generatedAtKst"))
+        if bundle_time.tzinfo is None or bundle_time.utcoffset() != timedelta(hours=9):
+            raise ValueError("bundle time must be KST")
+        if not isinstance(source_date, str) or source_date >= d.get("tradeDate", ""):
+            raise ValueError("source EOD must precede tradeDate")
+        batches = eod.get("batches")
+        if not isinstance(batches, list) or len(batches) != 3:
+            raise ValueError("merged EOD batches must equal 3")
+        if sum(b.get("count", -1) for b in batches) != len(codes):
+            raise ValueError("merged EOD batch coverage mismatch")
+        for i, batch in enumerate(batches, start=1):
+            if batch.get("batchIndex") != i:
+                raise ValueError("batch index mismatch")
+            t = datetime.fromisoformat(batch.get("reviewedAtKst"))
+            if t.tzinfo is None or t.utcoffset() != timedelta(hours=9) or t > bundle_time:
+                raise ValueError(f"batch-{i} reviewed later than premarket bundle")
+    except (TypeError, ValueError) as exc:
+        errors.append(f"assistant EOD temporal linkage invalid:{exc}")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("path")
     ap.add_argument("--trade-date", default=None)
+    ap.add_argument("--source-root", default=None, help="verify full assistant plan against independently merged EOD files")
     args = ap.parse_args()
 
     d = json.loads(Path(args.path).read_text(encoding="utf-8"))
@@ -239,6 +351,9 @@ def main() -> None:
                 errors.append("assistant READY generated after 08:30 KST deadline")
         except (TypeError, ValueError):
             errors.append("assistant READY generatedAtKst must be valid KST timestamp")
+
+    if origin == "ASSISTANT_DEEP_REVIEW" and status in {"READY", "VALID_EMPTY"} and args.source_root:
+        validate_eod_provenance(d, Path(args.source_root), errors)
 
     out = {"status": "PASS" if not errors else "FAIL", "errorCount": len(errors), "errors": errors[:100]}
     print(json.dumps(out, ensure_ascii=False))
