@@ -14,6 +14,8 @@ on:
       - "scripts/test_v3_eod_deep_review.py"
       - "scripts/v3_shadow_live_capture.py"
       - "scripts/test_v3_shadow_live_capture.py"
+      - "scripts/v3_shadow_0940_final.py"
+      - "scripts/test_v3_shadow_0940_final.py"
       - "V3_0815_SHADOW_INTEGRATION.md"
       - ".github/workflows/v3-shadow-0815-continuity-fallback.yml"
       - ".github/workflows/v3-eod-deep-review-assemble.yml"
@@ -42,3 +44,5 @@ jobs:
         run: python scripts/test_v3_eod_deep_review.py
       - name: Test production-isolated live capture guards
         run: python scripts/test_v3_shadow_live_capture.py
+      - name: Test frozen 09:40 SHADOW evaluation and failure isolation
+        run: python scripts/test_v3_shadow_0940_final.py
