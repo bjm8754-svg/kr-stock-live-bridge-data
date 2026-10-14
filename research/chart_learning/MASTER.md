@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v8 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v9 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -49,6 +49,9 @@ Label findings as VERIFIED / DIAGNOSTIC / HYPOTHESIS / NOT_TESTED; distinguish s
 
 ### R-012 — A HOLD decision must preserve share count
 An assistant's `HOLD` signal means **no buy and no discretionary sell**, while structural stop orders remain active; naturally changing portfolio weight is not an instruction to rebalance. `ADD` and `REDUCE` require explicit intention and correct order direction. The legacy S01 runner `scripts/stock_blind_walkforward.py` currently uses target weights to buy/sell **even for `HOLD`**, which may distort turnover, capital allocation and winners held through multiweek trends. It is a known, **UNFIXED** simulator limitation, not evidence of model trading judgement. Existing D00–D04 locked decisions and their baseline replay must NOT be silently rewritten. Strict-HOLD semantics have an isolated, tested **prototype only**, not wired into running S01 or production. See `research/stock_blind/ORDER_SEMANTICS_V2.md`, L-011 and C-006. A separate versioned episode with a frozen engine must evaluate genuine buy/hold/scale/exit behaviours; don't compare PnL across different execution contracts without clear labels.
+
+### R-013 — Data cutoff invariants outrank a boolean futureIncluded flag
+Every price/index dataset MUST be clipped by its true timestamp <= locked decision cutoff **before** indicators, scanning, replay-facing chart traces, or assistant inspection. Provider-inclusive end dates can yield the next trading day's OHLCV even when a wrapper claims `futureIncluded: false`. On new card creation compare the two existing holdings' full-resolution closing prices with portfolio mark-to-market state for the same cutoff. Reject daily chart labels after the cutoff (such as `T+1D`). If the cross-check fails, **quarantine that episode's blind performance** rather than refining old decisions with newly observed future information. S01 is known contaminated as of D05; its prior D00–D04 decisions may also have seen next-day bars and cannot be rehabilitated retroactively. The S02 engine is a new isolated research-only fork; its tested synthetics guard essential look-ahead vectors, but only its actual forward run can demonstrate data integrity. See L-012 / C-007 and `research/stock_blind/PROTOCOL_V2.md`.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 

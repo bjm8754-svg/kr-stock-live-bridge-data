@@ -130,6 +130,15 @@ def validate() -> tuple[dict, list[dict]]:
         fail("legacy S01 HOLD semantics must remain flagged UNFIXED until full integration verified")
     if "C-006 — Legacy S01 HOLD label" not in cases:
         fail("legacy HOLD-rebalance regression case missing")
+    if "### R-013 — Data cutoff invariants" not in master:
+        fail("point-in-time guard required to avoid S01 future leak")
+    temporal = m.get("knownTemporalLeak", {})
+    if temporal.get("episode") != "S01" or temporal.get("status") != "QUARANTINED":
+        fail("S01 contaminated blind status must remain explicit")
+    if temporal.get("cleanPerformanceVerified") is not False:
+        fail("new S02 must not be treated as verified without real results")
+    if "C-007 — S01 look-ahead" not in cases:
+        fail("future OHLCV mismatch evidence missing")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

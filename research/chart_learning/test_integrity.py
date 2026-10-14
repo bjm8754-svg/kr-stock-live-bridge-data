@@ -61,6 +61,15 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("L-011", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
         self.assertIn("ORDER_SEMANTICS_V2.md", master)
 
+    def test_future_data_leak_quarantines_s01(self):
+        m = gate.load_manifest()
+        self.assertEqual(m["knownTemporalLeak"]["status"], "QUARANTINED")
+        self.assertFalse(m["knownTemporalLeak"]["cleanPerformanceVerified"])
+        self.assertIn({"id": "R-013", "status": "CANONICAL"}, m["rules"])
+        cases = (gate.BASE / "CASES.md").read_text(encoding="utf-8")
+        self.assertIn("18,810", cases)
+        self.assertIn("19,000", cases)
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

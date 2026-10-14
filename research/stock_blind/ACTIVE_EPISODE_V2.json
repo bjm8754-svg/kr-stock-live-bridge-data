@@ -1,0 +1,14 @@
+{
+  "episodeId": "S02",
+  "seed": 827351,
+  "initialCapitalKrw": 10000000,
+  "episodeSessions": 60,
+  "stepSessions": 3,
+  "historyStart": "2021-01-04",
+  "historyEnd": "2025-12-30",
+  "maxDeepReviewCandidates": 18,
+  "buyCostBps": 5,
+  "sellCostBps": 20,
+  "engineVersion": "STRICT_HOLD_PIT_V2",
+  "researchOnly": true
+}

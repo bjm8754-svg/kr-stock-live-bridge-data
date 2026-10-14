@@ -1,0 +1,83 @@
+name: Korean Stock Blind V2 PIT Swing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/stock_blind_walkforward_v2.py"
+      - "scripts/stock_blind_runner_v2.py"
+      - "scripts/test_stock_blind_v2_contract.py"
+      - "research/stock_blind/order_semantics_v2.py"
+      - "research/stock_blind/ACTIVE_EPISODE_V2.json"
+      - "research/stock_blind/episodes/S02/decisions/**"
+      - ".github/workflows/stock-blind-v2-walkforward.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stock-blind-v2-walkforward
+  cancel-in-progress: false
+
+jobs:
+  build-blinded-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install research scanner dependencies
+        run: python -m pip install -r requirements-scanner.txt
+      - name: Test temporal boundary and strict HOLD semantics (offline)
+        run: |
+          python scripts/test_stock_blind_privacy.py
+          python research/stock_blind/test_order_semantics_v2.py
+          python scripts/test_stock_blind_v2_contract.py
+      - name: Use separate research-only V3 label
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('market-structure-v3-config.json')
+          cfg=json.loads(p.read_text(encoding='utf-8'))
+          cfg['methodologyVersion']='MARKET_STRUCTURE_V3_BLIND_PIT_V2'
+          p.write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Generate S02 PIT guard-protected card or settle frozen decision
+        run: python scripts/stock_blind_runner_v2.py
+      - name: Verify S02 state and card time integrity
+        run: |
+          python - <<'PY'
+          import json,pathlib,sys
+          sys.path.insert(0,'scripts')
+          from stock_blind_privacy import calendar_date_leak_paths
+          root=pathlib.Path('research/stock_blind/episodes/S02')
+          st=json.loads((root/'state.json').read_text(encoding='utf-8'))
+          assert st['futureIncluded'] is False
+          assert st['episodeId']=='S02'
+          card=root/'current_card.json'
+          if card.exists():
+              v=json.loads(card.read_text(encoding='utf-8'))
+              assert v['futureIncluded'] is False
+              assert not calendar_date_leak_paths(v)
+              held={p['assetId']:p['currentPrice'] for p in v['portfolioState']['positions']}
+              for x in v['heldPositionAnalysis']:
+                  if x.get('price',{}).get('close') is not None:
+                      assert abs(x['price']['close']-held[x['assetId']])<=0.011
+          print('S02_PIT_CARD: PASS')
+          PY
+      - name: Persist S02 study only
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -- market-structure-v3-config.json
+          git add research/stock_blind/episodes/S02
+          if git diff --cached --quiet; then
+            echo "no S02 research changes"
+            exit 0
+          fi
+          git commit -m "advance S02 strict-HOLD PIT blind study"
+          git pull --rebase origin main
+          git push

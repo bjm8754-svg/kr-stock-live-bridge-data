@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 8
+**Learning revision:** 9
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
@@ -43,6 +43,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 ## Immediate research state (2026-10-14)
 
+- **Critical look-ahead discovery (L-012 / C-007)**: S01 state at D05 held closes A91=18,810 and A0E=86,100 while the newly published D05 `current_card.json` included A91=19,000 and A0E=86,800, plus one extra index day. The provider may return end+1 bars; scanner did not trim at cutoff. **S01 is contaminated, not clean blind.** Do not use its D05 card for another supposedly blind decision. S02 clean engine is separate and must pass point-in-time guards.
 - Critical S01 execution-semantic issue (L-011): the legacy 3-session simulator **automatically rebalances every selected position to a target weight even when action=HOLD**. Its results therefore do NOT cleanly establish unchanged-share multi-week swing holding. Keep existing S01 immutable and study the isolated strict-HOLD v2 spec/prototype before any new episode.
 - Machine V3 can compress a market universe, but execution references can be unrealistic (e.g., non-tick prices and structurally tiny stops).
 - The expert's five plans are a **quality benchmark**; their levels are not algorithms to clone, and suggested buys are not historical executions.

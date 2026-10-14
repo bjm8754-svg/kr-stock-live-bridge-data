@@ -64,6 +64,20 @@ Source: `research/stock_blind/ACTIVE_EPISODE.json` and `scripts/stock_blind_walk
 - D04 review was locked at commit `a33da5e9...` while run `38508572523` was still in progress at this issue's discovery. Results after the commit were not inspected for this case.
 - **Remedy:** document baseline simulator as LEGACY_REBALANCE; use `research/stock_blind/ORDER_SEMANTICS_V2.md` and its standalone `order_semantics_v2.py` prototype for a newly versioned experiment. Freeze new action semantics and test before opening future prices. Stop protection and gap logic remain separate concerns; prototype does not replace a full backtester. See L-011 / R-012.
 
+## C-007 — S01 look-ahead from end-date-inclusive price source (CODE + CARD VERIFIED)
+
+Source code: `scripts/stock_blind_walkforward.py`: `fetch_price` and `index_frame` send `end + 1 calendar day` to FDR and return the resulting frame **without filtering to end**. `scan_market(cutoff)` and `market_context(cutoff)` therefore may expose next-session bars; `CARD.futureIncluded=False` is a hard-coded assertion without evidence.
+
+Reproducible actual S01 D05 mismatch, source `research/stock_blind/episodes/S01/state.json` vs freshly generated `current_card.json` after commit `8dfed3b3509ae16ad29566b503f706a71289e6df`:
+- Locked state: A91ECD3412 currentPrice **18,810**; card held analysis price.close **19,000**.
+- Locked state: A0E433D981 currentPrice **86,100**; card held analysis price.close **86,800**.
+- Market context includes additional KOSPI close **2,470.41** after the legitimate relativeSession=15 close **2,447.43**; candidate daily traces show future-relative labels `T+1D`.
+- State return +0.268% after D04 -0.325% and no stops; **these are *legacy* diagnostic replay figures, not valid clean blind evidence**. D04 was chosen before this discrepancy was discovered, but its own source card may likewise have included future prices.
+
+Consequence: previous purported full-market blind S01 tests **cannot be declared blind**, even if decision commits were frozen, because their information set was potentially contaminated. The original dataset/results are preserved exactly as evidence, not silently repaired.
+
+Remedy: fork separate S02, filter both stock and index frames to cutoff before analysis, add explicit held portfolio price parity and future candidate trace label checks. Test fake +1D leakage and intentionally failing held mismatch. Do not assert these fixes prove price-data vendor correctness or clean fundamentals; independent evaluation still required. See L-012 / R-013 / PROTOCOL_V2.md.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

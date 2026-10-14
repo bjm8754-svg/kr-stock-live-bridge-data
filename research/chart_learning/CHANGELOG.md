@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 9 — Quarantine S01 look-ahead and fork clean PIT swing research
+
+- Detected next-session **OHLCV look-ahead** in S01 D05: state A91 close 18,810 vs card 19,000; state A0E close 86,100 vs card 86,800, plus extra index close 2,470.41 versus the state cutoff's index 2,447.43. The S01 card's `futureIncluded:false` was hard-coded and privacy tests only checked calendar text.
+- Source `scripts/stock_blind_walkforward.py` queried `end+1 calendar day` for FinanceDataReader and did not clip returned bars to cutoff before `analyze_frame` / market_context. S01 D00–D05 is now **CONTAMINATED** as a clean blind performance record. Preserve all old commits and results for diagnosis; no post-hoc correction claimed.
+- Registered canonical R-013, observed failure L-012, case C-007 and downgraded E-004/E-005 evidence.
+- Forked **isolated S02 research engine**, 60-session multiweek swing episode with 3-session *reviews*, strict HOLD order intent, explicit `index.date<=cutoff` source filtering, held-position close alignment and candidate daily-label guards. New workflow triggers solely on S02-specific paths and is separate from production and original S01. Offline test and live-workflow success must be observed before any clean claim.
+- Existing S01 code, decisions, card and Production unchanged. No claim of investment skill improvement merely from bug fixing.
+
 ## 2026-10-14 — Revision 8 — Preserve HOLD semantics, isolate corrected order planner
 
 - Found from `scripts/stock_blind_walkforward.py` that S01 rebalances any selected holding to `capitalPct` at each review independent of the nominal `HOLD`, `ADD` or `REDUCE` action label; legacy S01 therefore cannot unambiguously demonstrate genuine uninterrupted swing holding.

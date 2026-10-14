@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 8,
+  "revision": 9,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -25,7 +25,13 @@
     ".github/workflows/chart-learning-integrity.yml",
     "research/stock_blind/ORDER_SEMANTICS_V2.md",
     "research/stock_blind/order_semantics_v2.py",
-    "research/stock_blind/test_order_semantics_v2.py"
+    "research/stock_blind/test_order_semantics_v2.py",
+    "research/stock_blind/PROTOCOL_V2.md",
+    "research/stock_blind/ACTIVE_EPISODE_V2.json",
+    "scripts/stock_blind_walkforward_v2.py",
+    "scripts/stock_blind_runner_v2.py",
+    "scripts/test_stock_blind_v2_contract.py",
+    ".github/workflows/stock-blind-v2-walkforward.yml"
   ],
   "rules": [
     {
@@ -77,6 +83,10 @@
       "status": "CANONICAL"
     },
     {
+      "id": "R-013",
+      "status": "CANONICAL"
+    },
+    {
       "id": "H-001",
       "status": "HYPOTHESIS"
     },
@@ -85,8 +95,8 @@
       "status": "HYPOTHESIS"
     }
   ],
-  "lessonCount": 11,
-  "latestEvidenceStatus": "DIAGNOSTIC_NOT_CLEAN_BLIND",
+  "lessonCount": 12,
+  "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
   "validationWorkflow": ".github/workflows/chart-learning-integrity.yml",
@@ -135,5 +145,14 @@
     "source": "scripts/stock_blind_walkforward.py",
     "futurePrototype": "research/stock_blind/order_semantics_v2.py",
     "liveProductionIntegrated": false
+  },
+  "knownTemporalLeak": {
+    "episode": "S01",
+    "status": "QUARANTINED",
+    "evidence": "research/chart_learning/CASES.md#c-007",
+    "codeRootCause": "scripts/stock_blind_walkforward.py",
+    "cleanExperiment": "S02",
+    "cleanEngine": "scripts/stock_blind_walkforward_v2.py",
+    "cleanPerformanceVerified": false
   }
 }
