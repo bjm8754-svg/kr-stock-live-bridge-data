@@ -30,11 +30,14 @@ base = {
     }],
 }
 
-def run(obj, ok):
+def run(obj, ok, source_root=None):
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False)
         p = f.name
-    r = subprocess.run(["python", str(VALIDATOR), p, "--trade-date", "20261007"], capture_output=True, text=True)
+    cmd = ["python", str(VALIDATOR), p, "--trade-date", "20261007"]
+    if source_root is not None:
+        cmd += ["--source-root", str(source_root)]
+    r = subprocess.run(cmd, capture_output=True, text=True)
     assert (r.returncode == 0) == ok, (r.returncode, r.stdout, r.stderr)
 
 run(base, True)
@@ -160,5 +163,91 @@ run(invalid_hold, False)
 invalid_chase = json.loads(json.dumps(assistant))
 invalid_chase["livePlans"][0]["executionRules"]["maxChasePct"] = "unknown"
 run(invalid_chase, False)
+
+# Cross-file independent EOD provenance gating, absent from schema-only fixtures.
+with tempfile.TemporaryDirectory() as tmp:
+    root = pathlib.Path(tmp)
+    eod_date = "20261006"
+    index_created = "2026-10-06T17:10:00+09:00"
+    method = "MARKET_STRUCTURE_V3_SYNTHETIC_TEST"
+    run_id = 99900011
+    index = {
+        "schemaVersion": "MARKET_STRUCTURE_V3_REVIEW_INDEX_V1",
+        "mode": "SHADOW_ONLY", "productionWriteAllowed": False,
+        "status": "PASS", "tradeDate": eod_date,
+        "generatedAtKst": index_created, "methodologyVersion": method,
+        "totalCount": 2, "codes": ["000001", "000002"],
+    }
+    handoff = {
+        "schemaVersion": "MARKET_STRUCTURE_V3_HANDOFF_V1",
+        "mode": "SHADOW_ONLY", "productionWriteAllowed": False,
+        "status": "PASS", "tradeDate": eod_date,
+        "generatedAtKst": index_created, "methodologyVersion": method,
+        "source": {"workflowRunId": run_id},
+    }
+    eod = {
+        "schemaVersion": "V3_EOD_DEEP_REVIEW_V1",
+        "mode": "SHADOW_ONLY", "productionWriteAllowed": False,
+        "status": "PASS", "assistantDeepReviewCompleted": True,
+        "sourceTradeDate": eod_date, "sourceWorkflowRunId": run_id,
+        "sourceIndexGeneratedAtKst": index_created, "methodologyVersion": method,
+        "reviewCount": 2, "codes": index["codes"],
+        "reviews": [
+            {"code": "000001", "chartState": "PROBE_CANDIDATE", "thesis": "candidate"},
+            {"code": "000002", "chartState": "REJECT", "thesis": "rejected"},
+        ],
+        "batches": [
+            {"batchIndex": 1, "count": 1, "reviewedAtKst": "2026-10-06T19:00:00+09:00"},
+            {"batchIndex": 2, "count": 1, "reviewedAtKst": "2026-10-06T19:01:00+09:00"},
+            {"batchIndex": 3, "count": 0, "reviewedAtKst": "2026-10-06T19:02:00+09:00"},
+        ],
+    }
+
+    def write_eod():
+        for name, obj in (
+            ("market-structure-v3-review-index.json", index),
+            ("market-structure-v3-handoff.json", handoff),
+            ("v3-eod-deep-review.json", eod),
+        ):
+            (root / name).write_text(json.dumps(obj), encoding="utf-8")
+
+    source_linked = json.loads(json.dumps(assistant))
+    source_linked["source"] = {
+        "marketStructureTradeDate": eod_date,
+        "marketStructureWorkflowRunId": run_id,
+        "reviewIndexGeneratedAtKst": index_created,
+        "methodologyVersion": method,
+    }
+    write_eod()
+    run(source_linked, True, root)
+
+    # An EOD chart REJECT can never become a valid 08:15 assistant plan.
+    reject_revival = json.loads(json.dumps(source_linked))
+    reject_revival["watchlist"]["codes"] = ["000002"]
+    reject_revival["livePlans"][0]["code"] = "000002"
+    reject_revival["overnightDelta"]["evidence"][0]["code"] = "000002"
+    run(reject_revival, False, root)
+
+    # If the EOD merged source is from a different day, block.
+    eod["sourceTradeDate"] = "20261003"
+    write_eod()
+    run(source_linked, False, root)
+    eod["sourceTradeDate"] = eod_date
+
+    # EOD analysis completed after 08:15 cannot support a retroactive plan.
+    eod["batches"][2]["reviewedAtKst"] = "2026-10-07T09:53:00+09:00"
+    write_eod()
+    run(source_linked, False, root)
+    eod["batches"][2]["reviewedAtKst"] = "2026-10-06T19:02:00+09:00"
+
+    # False source workflow identifier must be detected.
+    wrong_source = json.loads(json.dumps(source_linked))
+    wrong_source["source"]["marketStructureWorkflowRunId"] = run_id + 1
+    write_eod()
+    run(wrong_source, False, root)
+
+    # No independent merged EOD, no claim of full assistant review.
+    (root / "v3-eod-deep-review.json").unlink()
+    run(source_linked, False, root)
 
 print("V3 08:15 shadow bundle validator tests: PASS")
