@@ -157,6 +157,49 @@ class SwingReservationTests(unittest.TestCase):
             run([{"step": 0, "portfolio": [a]},
                  {"step": 1, "portfolio": [b]}], df)
 
+    def test_take_profit_triggers_only_after_order_filled(self):
+        df = frame([110, 108, 110, 112], [105, 99, 105, 108],
+                   highs=[114, 115, 123, 116], closes=[110, 108, 121, 112])
+        order = entry()
+        order["target"] = 120
+        r = run([{"step": 0, "portfolio": [order]}], df)
+        events = [e for e in r["orderEvents"] if e["event"] in ("BUY_LIMIT_FILLED", "TARGET_EXIT")]
+        self.assertEqual([e["event"] for e in events], ["BUY_LIMIT_FILLED", "TARGET_EXIT"])
+        self.assertEqual(events[1]["fillPrice"], 120)
+        self.assertEqual(r["positions"], [])
+        self.assertGreater(r["equity"], 100000)
+
+    def test_cannot_claim_same_bar_target_that_preceded_bid(self):
+        df = frame([110, 108, 112, 112], [105, 99, 108, 108],
+                   highs=[114, 140, 117, 116], closes=[110, 108, 114, 113])
+        order = entry()
+        order["target"] = 120
+        r = run([{"step": 0, "portfolio": [order]}], df)
+        self.assertNotIn("TARGET_EXIT", [e["event"] for e in r["orderEvents"]])
+        self.assertEqual(len(r["positions"]), 1)
+
+    def test_stop_before_target_on_ambiguous_held_day(self):
+        df = frame([110, 108, 110, 112, 111, 112, 112],
+                   [105, 99, 105, 108, 88, 108, 108],
+                   highs=[114, 115, 117, 116, 125, 117, 116],
+                   closes=[110, 108, 112, 112, 110, 112, 112])
+        order = entry()
+        order["target"] = 120
+        first = {"step": 0, "portfolio": [order]}
+        hold = {"step": 1, "portfolio": [{"assetId": "A", "action": "HOLD",
+               "capitalPct": 30, "stop": 90, "target": 120}]}
+        r = run([first, hold], df)
+        self.assertIn("STOP_EXIT", [e["event"] for e in r["orderEvents"]])
+        self.assertNotIn("TARGET_EXIT", [e["event"] for e in r["orderEvents"]])
+        self.assertEqual(r["positions"], [])
+
+    def test_target_must_be_above_limit(self):
+        df = frame([110, 105, 102, 101], [105, 100, 100, 99])
+        order = entry()
+        order["target"] = 99
+        with self.assertRaisesRegex(ValueError, "target sell price must exceed buy limit"):
+            run([{"step": 0, "portfolio": [order]}], df)
+
 
 if __name__ == "__main__":
     unittest.main()
