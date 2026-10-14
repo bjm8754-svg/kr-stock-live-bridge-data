@@ -64,6 +64,8 @@ def price_rows(rows, code):
     values = []
     for row in rows:
         stock = (row.get("stocks") or {}).get(code) or {}
+        if stock.get("marketStatus") != "OPEN":
+            return None  # PREOPEN, CLOSE and halt snapshots are not intraday evidence.
         p = stock.get("currentPrice")
         # Do not infer a price from previous minutes, indexes, or a different code.
         if not numeric(p):
