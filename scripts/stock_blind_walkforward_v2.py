@@ -572,7 +572,7 @@ def verify_pit_card(card, cutoff):
         daily = (((candidate.get("review") or {}).get("chartTrace") or {}).get("daily") or [])
         for bar in daily:
             label = str(bar[0]) if bar else ""
-            if re.fullmatch(r"T\\+[1-9]\\d*D", label):
+            if re.fullmatch(r"T\+[1-9]\d*D", label):
                 raise RuntimeError("PIT_FUTURE_TRACE_LABEL " + str(candidate.get("assetId")))
         if daily and abs(float(daily[-1][4]) - float(candidate["price"]["close"])) > 0.011:
             raise RuntimeError("PIT_CANDIDATE_LAST_PRICE_MISMATCH " + str(candidate.get("assetId")))
