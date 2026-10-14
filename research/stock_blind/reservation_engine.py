@@ -96,6 +96,9 @@ def simulate(decs, dates, catalog, fetch_price, cfg):
             limit = float(tranche["limitPrice"])
             allocation = float(tranche["capitalPct"])
             stop = float(row["stop"])
+            objective = row.get("target")
+            if objective is not None and float(objective) <= limit:
+                raise ValueError("target sell price must exceed buy limit")
             if not all(math.isfinite(v) for v in (limit, allocation, stop)):
                 raise ValueError("non-finite limit/stop/budget")
             if limit <= stop or stop <= 0 or allocation <= 0 or allocation > 100:
@@ -157,6 +160,8 @@ def simulate(decs, dates, catalog, fetch_price, cfg):
                     raise ValueError("HOLD requires a filled position " + aid)
                 if raw.get("stop") is not None:
                     positions[aid]["stop"] = float(raw["stop"])
+                if "target" in raw:
+                    positions[aid]["target"] = raw["target"]
                 positions[aid]["lastAction"] = "HOLD"
             elif action in ("REDUCE", "EXIT", "ROTATE_OUT"):
                 if aid not in positions:
@@ -230,6 +235,22 @@ def simulate(decs, dates, catalog, fetch_price, cfg):
                     sell_all(aid, fill_px, j, n, "STOP_EXIT")
                     stopped_today.add(aid)
                     stop_events.append({"assetId": aid, "exitPrice": round(fill_px, 2)})
+            # Resting take-profit SELL_LIMIT for positions held at the day open.
+            # STOP is resolved first when both sides are traded on the same OHLC bar:
+            # the intraday chronology is unknown, so never assume a free win.
+            # Do not apply this to new buys filled later in the day.
+            for aid in list(positions):
+                target = positions[aid].get("target")
+                if target is None:
+                    continue
+                bar = row_at(aid, day)
+                if bar is None:
+                    continue
+                target = float(target)
+                op, hi = float(bar["Open"]), float(bar["High"])
+                if op >= target or hi > target:
+                    sale = op if op >= target else target
+                    sell_all(aid, sale, j, n, "TARGET_EXIT")
             # Pending bids are processed in FIRST -> ADD order, for all days of
             # every review interval until canceled, invalidated, or expired.
             for oid, o in sorted(list(pending.items()), key=lambda x: (x[1]["kind"] != "FIRST", x[1]["startSession"], x[0])):
