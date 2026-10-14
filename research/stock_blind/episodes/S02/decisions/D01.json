@@ -1,0 +1,22 @@
+{
+  "schema": "KOREA_STOCK_BLIND_DECISION",
+  "episodeId": "S02",
+  "step": 1,
+  "portfolio": [
+    {
+      "assetId": "ADDC44271E",
+      "action": "KEEP_PENDING",
+      "reason": "KEEP the original rested FIRST buy limit 232,000, 10% budget, stop 215,500, unfilled until S02 session 15; no modification, no ADD. At masked T+3 cutoff last close 242,000, OHLC 247,000/247,500/239,500/242,000, 20/60/120D MA 231,425/223,867/216,417, recent daily high 248,500, prior 230,500–233,500 recurrent low/support and recent 234,060–238,185 acceptance. Above the old 237,000 box upper on recent 1.74x/1.97x value expansion; last value only ~0.86–0.90x and RSI bear-div warns an upper test could fail. Exact 232k is NOT a new support confirmation: it is a patient historical retest reservation near rising MA20 and earlier accepted pivot. Limit-to-stop 7.11% (~2.5 latest daily ATR at 2.83% close), 10% portfolio budget; no fabricated overhead numerical target. Strongest objection: retreat through newly accepted 234–238k during weak indices may be a breakdown rather than healthy retest. Review thesis and cancel if structural acceptance fails; review itself is not expiry."
+    },
+    {
+      "assetId": "A8608C9A61",
+      "action": "CANCEL",
+      "reason": "CANCEL the existing unfilled FIRST limit 24,800, stop 23,300, original 10% budget; do not replace with a forced market buy. It was proposed despite an initial 28,300 failed high as a conditional support retest, but T+3 adds a 28,600 high rejection, successive closes 27,550→26,800→25,900, last daily 27,000/27,250/25,100/25,900 at ~1.17–1.18x value, and volume in the pullback is NOT contracting. The 25,080 accepted reference/24,875–25,376 support zone still has a closing hold, but the bid 24,800 sits beneath its lower edge; crossing it while selling pressure persists is more likely to be a breakdown fill than the originally assumed constructive test. Volatility has expanded to ~5.16% ATR of close; the 24,800→23,300 stop margin 6.05% is only ~1.1 current daily ATR and can be consumed by one adverse bar. Repeated overhead 27,550–28,600 supply lowers the value of the 28,000 target. This is a prospective risk/reward judgement, NOT outcome knowledge or proof the original plan was wrong. Reconsider only on newly observed support acceptance or a stronger recover/retest, not a retrospective rewritten entry."
+    }
+  ],
+  "cashPct": 100,
+  "reservedBudgetPct": 10,
+  "portfolioThesis": "Research-only at masked S02 relativeSession 3. KOSPI 3,019.18→2,959.46 (-1.98%) and KOSDAQ 983.20→953.43 (-3.03%) over the first three exposed sessions; last day rebounds from prior lows, so do not claim unbroken crash. Both initial resting bids are UNFILLED, and equity 10m KRW, return 0%, cash 100%, fees 0. Conserve selectivity, retain the more durable structural relative-strength bid with 10% resting budget, cancel the weaker high-rejection pullback bid as expanded volatility/repeated rejection changes expected downside. No new entries from 18 fresh screened names after independent review; A5F breakout-retest interesting but its full structural stop near original box lower gives inadequate demonstrated reward against nearby 22,150 high. No exact future bar opened and no real order placed.",
+  "rotationRule": "At next 3-session review re-read whole market, any fill or gap cancellation, 232,000 retest versus 215,500 stop, observed 234–238k acceptance, new leaders' price/volume/time and opportunity cost. HOLD after any actual fill must not rebalance. Never turn a non-fill into profit. Separate review cadence from weekly swing horizon. Do not reuse the canceled 24,800 limit without a newly reasoned post-cutoff decision.",
+  "notes": "DECISION D01 is independently PRECOMMITTED on masked relative session 3 using chart blob ef4cbbcd796d2e04bbc6ba2edbbbb563275ee9e3 and state blob d11550dfad274c0b169703ba9c0d2b13c621ff21 at source HEAD b27143af4389bfa4c22d6771f54845478122ecaf. All 18 candidates screened; additional reasons are in reviews/D01_PRECOMMIT.md committed in the SAME Git tree. Latest chart's weekly T+1D and monthly T+24D are partial bar period-end labels backed by daily observations through T+0D, not genuine future daily bars. Vendor-adjusted fractional prices, order-book queues, sector/news point-in-time and actual brokerage slippage remain unverified. This is no skill/return claim, research only; production remains untouched."
+}
