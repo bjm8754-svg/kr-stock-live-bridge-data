@@ -79,16 +79,27 @@ def tradable_snapshot_price(stock):
 
 
 def price_rows(rows, code):
+    """Return observed prices and explicit opening coverage.
+
+    A pre-trade 09:00 placeholder is common when the opening auction has not
+    published a regular-session fill at 09:00:05. Admit ONLY that first
+    missing snapshot as an unobserved opening minute. A gap at 09:01 or later
+    always invalidates the path; never backfill or interpolate.
+    """
     values = []
-    for row in rows:
+    opening_gap = 0
+    for minute_index, row in enumerate(rows):
         stock = (row.get("stocks") or {}).get(code)
         price = tradable_snapshot_price(stock)
-        # Do not backfill, skip untraded minutes, or substitute a previous close.
-        # A frozen path with untrusted minute evidence is DATA_FAIL.
         if price is None:
-            return None
+            if minute_index == 0:
+                opening_gap = 1
+                continue
+            return None, opening_gap
         values.append(price)
-    return values
+    if not values:
+        return None, opening_gap
+    return values, opening_gap
 
 
 def final_open_price(capture, code):
@@ -162,11 +173,20 @@ def calculate(c35, c40, day, run_id, source_hash):
     all_quality = True
     for plan in s40["livePlans"]:
         code = plan["code"]
-        p35 = price_rows(c35["history"]["rows"], code)
-        p40 = price_rows(c40["history"]["rows"], code)
+        p35, opening_gap35 = price_rows(c35["history"]["rows"], code)
+        p40, opening_gap40 = price_rows(c40["history"]["rows"], code)
         e35, why35, detail35 = eval_path(p35, plan)
         e40, why40, detail40 = eval_path(p40, plan)
-        at35.append({"code": code, "evaluation": e35, "reason": why35, "detail": detail35})
+        coverage35 = {"openingMinutesUnobserved": opening_gap35,
+                      "observedMinutes": len(p35 or []),
+                      "totalMinutes": len(c35["history"]["rows"]),
+                      "complete": bool(p35) and opening_gap35 == 0}
+        coverage40 = {"openingMinutesUnobserved": opening_gap40,
+                      "observedMinutes": len(p40 or []),
+                      "totalMinutes": len(c40["history"]["rows"]),
+                      "complete": bool(p40) and opening_gap40 == 0}
+        at35.append({"code": code, "evaluation": e35, "reason": why35,
+                     "detail": detail35, "priceCoverage": coverage35})
         last35 = final_open_price(c35, code)
         last40 = final_open_price(c40, code)
         deltas.append({
@@ -175,7 +195,9 @@ def calculate(c35, c40, day, run_id, source_hash):
             "priceDelta": round(last40 - last35, 4) if last35 is not None and last40 is not None else None,
             "evaluation0935": e35, "evaluation0940": e40
         })
-        evaluated.append({"code": code, "name": plan.get("name"), "finalEvaluation": e40, "reason": why40, "detail": detail40})
+        evaluated.append({"code": code, "name": plan.get("name"),
+                          "finalEvaluation": e40, "reason": why40,
+                          "detail": detail40, "priceCoverage": coverage40})
         evidence = plan.get("externalEvidence") or {}
         lanes = ("companyQuality", "earningsRevision", "catalyst", "industryMacro", "globalUsLead", "eventRisk")
         # The user contract disallows a candidate with ALL six axes UNKNOWN;
@@ -196,7 +218,10 @@ def calculate(c35, c40, day, run_id, source_hash):
         cycle = "PARTIAL"
     elif origin != "ASSISTANT_DEEP_REVIEW" or degraded or not all_quality:
         cycle = "PARTIAL"
-    elif any(x["finalEvaluation"] == "DATA_FAIL" for x in evaluated):
+    elif any(x["finalEvaluation"] == "DATA_FAIL" or
+             not x["priceCoverage"]["complete"] for x in evaluated):
+        # Observed confirmation with the opening minute unobserved can be
+        # reported, but cannot certify complete session/cutover readiness.
         cycle = "PARTIAL"
     elif not s40.get("assistantDeepReviewCompleted"):
         cycle = "PARTIAL"
@@ -223,6 +248,9 @@ def calculate(c35, c40, day, run_id, source_hash):
         "evaluationMethod": "FROZEN_STRUCTURED_RULES_SNAPSHOT_ONLY_V1",
         "limitations": [
             "Minute price snapshots do not establish intraminute high/low events.",
+            "An untraded 09:00 snapshot may be excluded from observed path, "
+            "but opening price coverage is incomplete and cycle cannot be PASS.",
+            "A missing/untraded snapshot from 09:01 onward remains DATA_FAIL.",
             "Prose-only triggers and chase conditions are DATA_FAIL, never guessed.",
             "No intraday news can be independently inferred from price snapshots.",
         ],
