@@ -6,6 +6,8 @@ on:
     paths:
       - "research/stock_blind/ACTIVE_EPISODE_V2.json"
       - "research/stock_blind/episodes/S02/decisions/**"
+      - "scripts/stock_blind_walkforward_v2.py"
+      - "scripts/test_stock_blind_v2_contract.py"
       - ".github/workflows/stock-blind-v2-walkforward.yml"
 
 permissions:
