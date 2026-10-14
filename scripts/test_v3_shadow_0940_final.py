@@ -111,6 +111,9 @@ for capture in preopen:
 out = run(preopen)
 assert out["cycleStatus"] == "PARTIAL"
 assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+assert out["delta0935to0940"][0]["price0935"] == 101.0
+assert out["delta0935to0940"][0]["price0940"] == 101.0
+assert out["delta0935to0940"][0]["priceDelta"] == 0.0
 
 missing = fixture()
 for capture in missing:
