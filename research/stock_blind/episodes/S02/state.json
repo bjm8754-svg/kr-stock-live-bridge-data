@@ -1,8 +1,8 @@
 {
   "schema": "KOREA_STOCK_BLIND_STATE",
   "episodeId": "S02",
-  "step": 0,
-  "relativeSession": 0,
+  "step": 1,
+  "relativeSession": 3,
   "episodeCommitment": "4fa5779300c8a1d7bce10d308e8c3a0a6384f8f9cafc9f60c6c748bf0dde874d",
   "equityKrw": 10000000.0,
   "returnPct": 0.0,
@@ -12,9 +12,62 @@
   "turnoverKrw": 0.0,
   "transactionCostKrw": 0.0,
   "positions": [],
-  "pendingOrders": [],
-  "orderEvents": [],
-  "previousInterval": null,
-  "decisionsLocked": 0,
+  "pendingOrders": [
+    {
+      "orderId": "S02-D00-ADDC-F1",
+      "assetId": "ADDC44271E",
+      "kind": "FIRST",
+      "limitPrice": 232000.0,
+      "stop": 215500.0,
+      "budgetKrw": 1000000.0,
+      "capitalPctAtLock": 10.0,
+      "startSession": 0,
+      "expireAtSession": 15
+    },
+    {
+      "orderId": "S02-D00-A860-F1",
+      "assetId": "A8608C9A61",
+      "kind": "FIRST",
+      "limitPrice": 24800.0,
+      "stop": 23300.0,
+      "budgetKrw": 1000000.0,
+      "capitalPctAtLock": 10.0,
+      "startSession": 0,
+      "expireAtSession": 12
+    }
+  ],
+  "orderEvents": [
+    {
+      "step": 0,
+      "session": 0,
+      "assetId": "ADDC44271E",
+      "event": "ORDER_PLACED",
+      "orderId": "S02-D00-ADDC-F1",
+      "kind": "FIRST",
+      "limitPrice": 232000.0,
+      "budgetKrw": 1000000.0,
+      "expireAtSession": 15
+    },
+    {
+      "step": 0,
+      "session": 0,
+      "assetId": "A8608C9A61",
+      "event": "ORDER_PLACED",
+      "orderId": "S02-D00-A860-F1",
+      "kind": "FIRST",
+      "limitPrice": 24800.0,
+      "budgetKrw": 1000000.0,
+      "expireAtSession": 12
+    }
+  ],
+  "previousInterval": {
+    "step": 0,
+    "startEquityKrw": 10000000.0,
+    "postTradeEquityKrw": 10000000.0,
+    "endEquityKrw": 10000000.0,
+    "returnPct": 0.0,
+    "stopped": []
+  },
+  "decisionsLocked": 1,
   "futureIncluded": false
 }
