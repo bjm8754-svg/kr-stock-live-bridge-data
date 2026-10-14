@@ -118,6 +118,15 @@ def validate() -> tuple[dict, list[dict]]:
         fail("user-defined minimum expert standard missing")
     if "MINIMUM_COMPETENCE_BENCHMARK.md" not in startup or "MINIMUM_COMPETENCE_BENCHMARK.md" not in master or "MINIMUM_COMPETENCE_BENCHMARK.md" not in agents:
         fail("minimum benchmark not linked into new-session preflight")
+    obj = m.get("finalObjective", {})
+    if obj.get("goalType") != "DEVELOP_INDEPENDENT_PROFIT_SEEKING_AI_TRADER_THEN_AUTOMATE" or obj.get("validationRole") != "INTERMEDIATE_TRAINING_AND_EVALUATION_NOT_END_GOAL" or obj.get("productionRequiresSeparateUserAuthorization") is not True or obj.get("competenceAchieved") is not False:
+        fail("V3 economic AI-trader final goal replaced by scanner/validation or unproven success")
+    if "### R-015 — Preserve the end goal" not in master or "L-014" not in cases:
+        fail("cross-chat mission regression guard not reflected in research records")
+    if "Non-negotiable mission (R-015 / L-014)" not in startup or "Mission before implementation" not in agents:
+        fail("new-chat mission recovery invariant absent from startup and AGENTS")
+    if "Revision 11 — Log chat-rollover mission regression" not in changelog and m.get("revision") == 11:
+        fail("revision 11 objective change missing from CHANGELOG")
     if "### R-011 — Review interval is NOT swing holding horizon" not in master:
         fail("swing holding horizon confused with review interval")
     if "3-trading-day decision/review cadence" not in master or "right-censored" not in master:

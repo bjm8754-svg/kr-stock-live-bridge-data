@@ -86,6 +86,12 @@ Before S02 D00 was locked, `scripts/stock_blind_walkforward_v2.py` was switched 
 
 The crucial analytical lesson: **the algorithm must conform to independent trade ideas, not force the ideas to match the easy-to-code execution engine**. Synthetic unit success is NOT evidence the prices were good, that limits would fill on the KRX order book, or that the strategy makes money. Record nonfills and missed winners rather than imaginary executed gains. See L-013 / R-014.
 
+## C-009 — Mission regression after V3 chat rollover (2026-10-14, CHAT-LEVEL VERIFIED)
+
+A new chat resumed the full 'V3 08:15 심층리서치' discussion after the previous conversation filled. The assistant then foregrounded a *trade-judgement validation system*, although the user's explicit final mission and the assistant's prior authored target were to develop an independent AI trader to expert-or-better competence, prove economic edge, and eventually automate that profitable judgement. The user quoted the full previously authored seven-capability and five-expert-plan benchmark to correct the regression.
+
+Source of prior expectation: v10 `START_HERE.md`, `AGENTS.md`, `MASTER.md`, and `MINIMUM_COMPETENCE_BENCHMARK.md`; these **already** mandated first-reading current GitHub research. The assistant had failed to perform that preflight before reframing the project. Thus this is **process noncompliance despite preserved files**, not lack of repository knowledge. Adding R-015 and a test makes the failure visible but **does not ensure future fresh chats obey it or improve trading performance**. Next independent chat must demonstrate preflight and correct mission without user correction. See L-014.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

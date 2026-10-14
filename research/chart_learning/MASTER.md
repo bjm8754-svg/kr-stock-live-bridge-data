@@ -1,8 +1,10 @@
 # V3 Chart Research MASTER
 
-Version: **v10 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v11 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
+
+**Binding outcome hierarchy: Independent AI trader → verified economic judgement → user-approved profit-oriented automation.** The assistant's independent expert-grade decision-making must improve first; validation is necessary evidence, not the final objective. S02, GitHub records, chart-study retrieval and any automated scanner are subordinate research means. Only after credible out-of-sample and forward SHADOW economic evidence, implementation viability and explicit operator approval should that judgement be automated for real profit-seeking operation. The assistant must not describe V3 primarily as a trade-plan verification system. See R-015 / L-014 / C-009.
 
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
@@ -55,6 +57,9 @@ Every price/index dataset MUST be clipped by its true timestamp <= locked decisi
 
 ### R-014 — Expert-grade swing entries are price reservations, not forced market buys
 The model examines time-connected daily, weekly, and monthly charts, decides independently on a rational **first-buy limit**, optional **second-buy limit** only when justified, structural stop, resistance-based objectives or explicit trend-management premise, budget, and invalidation. After the cutoff, it **reserves those price(s) and waits**. A subsequent session's open is NOT authority to buy there merely because the signal exists. A scheduled three-session review is NOT a holding or reservation expiry. An order unfilled after several sessions can remain active into later weeks, expire under an explicit case-specific condition, or be canceled after thesis invalidation. Record fills, nonfills, missed winners, gap-through-stop cancellations, fees and open pending state separately. If a first order never fills, neither its proposed second tranche nor its hypothetical targets can generate profit. Confirmations for breakout-buy order types require a separately frozen stop-trigger model; ordinary BUY_LIMIT must never be used to simulate chasing. Source: direct user correction on 2026-10-14, L-013/C-008; S02 offline contract tests.
+
+### R-015 — Preserve the end goal across chats and treat proof as a means
+The user's ultimate project goal is **an independently thinking, improving, profit-seeking AI trader followed by automation of demonstrated economic judgement**; it is NOT a chart-plan grader, a finished backtester, a GitHub logging machine, or a test-passing scanner. Development order: original whole-market discovery → expert-level price/volume/time/market reasoning → conditional entry/add/stop/target plus multi-week portfolio judgement → honest locked economic evidence with fills, nonfills, costs and drawdowns → repeatable SHADOW execution → separate explicitly user-approved real operation. This progression does not assert that profit or skill has been achieved. At every new chat, actually fetch HEAD, START_HERE, MANIFEST, MASTER, BENCHMARK, LESSONS and required source and experiment records BEFORE giving a V3 status/mission summary. If not read, state NOT VERIFIED; do not quietly invent continuity from summaries. This failure actually recurred despite revision-10 instructions, see L-014/C-009.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 

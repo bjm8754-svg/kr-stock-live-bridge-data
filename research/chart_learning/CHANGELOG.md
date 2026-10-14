@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 11 — Log chat-rollover mission regression and install explicit objective invariant
+
+- Recorded L-014 / C-009: the assistant failed the existing v10 GitHub preflight in a new V3 chat, then described a test/verification system as if it were the objective. This contradicted the user's prior seven-capability AI-trader target and the archived minimum five-expert-plan benchmark.
+- Registered R-015 and a machine-readable finalObjective invariant: independent expert-or-better judgement is developed first, tested economically and applied to profit-oriented automation only after adequate proof and explicit user approval.
+- Tightened AGENTS, START_HERE, MASTER and integrity tests to prevent the documentation itself from accidentally changing the mission. These checks cannot force ChatGPT to open GitHub in every future chat; future compliance must be independently observed.
+- No predictive skill, verified economic returns, model-weight training, production or trading-engine updates claimed. All 14 prior CANONICAL rules retained; no older lesson removed.
+
 ## 2026-10-14 — Revision 10 — Restore expert-style patient swing limit orders
 
 - User corrected a fundamental trading-intent failure: the assistant itself must pick entry/add prices from chart structure and **wait with reservations**; next trading day's opening price is not a default buy.

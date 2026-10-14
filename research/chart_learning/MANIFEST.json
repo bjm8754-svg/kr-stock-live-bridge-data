@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 10,
+  "revision": 11,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -94,6 +94,10 @@
       "status": "CANONICAL"
     },
     {
+      "id": "R-015",
+      "status": "CANONICAL"
+    },
+    {
       "id": "H-001",
       "status": "HYPOTHESIS"
     },
@@ -102,7 +106,7 @@
       "status": "HYPOTHESIS"
     }
   ],
-  "lessonCount": 13,
+  "lessonCount": 14,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -170,5 +174,12 @@
     "reviewSessions": 3,
     "reviewCancelsOrder": false,
     "proofStatus": "OFFLINE_TEST_ONLY"
+  },
+  "finalObjective": {
+    "statement": "Independent AI trader → verified economic judgement → user-approved profit-oriented automation",
+    "goalType": "DEVELOP_INDEPENDENT_PROFIT_SEEKING_AI_TRADER_THEN_AUTOMATE",
+    "validationRole": "INTERMEDIATE_TRAINING_AND_EVALUATION_NOT_END_GOAL",
+    "productionRequiresSeparateUserAuthorization": true,
+    "competenceAchieved": false
   }
 }

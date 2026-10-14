@@ -1,13 +1,17 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 10
+**Learning revision:** 11
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
 ## Why this exists
 
 The user has repeatedly taught the assistant advanced chart judgement, yet a changed or truncated chat can cause a return to weak, previously corrected behaviour. Creating a document is not learning; **loading it, applying it, testing it on unseen evidence, and recording improvement** are required.
+
+## Non-negotiable mission (R-015 / L-014)
+
+**Independent AI trader → verified economic judgement → user-approved profit-oriented automation.** V3 exists to develop the assistant's independent whole-market discovery, chart reasoning, executable swing trade construction and position management to expert-or-better quality, and ultimately use proven, sustainable risk-adjusted economic judgement in user-approved automation. Research tools, code, GitHub commits, S02 walk-forward testing and SHADOW measurements are **instruments**, never the final product. Explicitly recover this mission BEFORE characterizing V3 or proposing system changes. A new-chat answer which recasts V3's goal as simply validating chart plans is a regression, even if the latest GitHub files happen to be correct. Verify this preflight is actually performed; documents do not self-execute.
 
 ## Mandatory new-session opening — ordered
 

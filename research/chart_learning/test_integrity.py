@@ -77,6 +77,16 @@ class IntegrityTest(unittest.TestCase):
         self.assertFalse(m["swingBuyExecution"]["defaultNextOpenMarketBuy"])
         self.assertIn("L-013", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
 
+    def test_goal_cannot_be_redefined_as_a_validation_tool(self):
+        m = gate.load_manifest()
+        self.assertIn({"id": "R-015", "status": "CANONICAL"}, m["rules"])
+        self.assertEqual(m["finalObjective"]["goalType"], "DEVELOP_INDEPENDENT_PROFIT_SEEKING_AI_TRADER_THEN_AUTOMATE")
+        self.assertEqual(m["finalObjective"]["validationRole"], "INTERMEDIATE_TRAINING_AND_EVALUATION_NOT_END_GOAL")
+        self.assertFalse(m["finalObjective"]["competenceAchieved"])
+        self.assertIn("L-014", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
+        self.assertIn("C-009", (gate.BASE / "CASES.md").read_text(encoding="utf-8"))
+        self.assertIn("R-015", (gate.BASE / "START_HERE.md").read_text(encoding="utf-8"))
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

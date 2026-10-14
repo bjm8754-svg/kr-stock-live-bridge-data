@@ -2,6 +2,8 @@
 
 For **every new assistant session** working on Korean stocks, V3, chart studies, historical replay, 08:15/09:35/09:40, or trading-plan decisions:
 
+**Mission before implementation:** V3's final objective is an independently thinking, consistently improving AI trader whose sufficiently verified judgement may later be automated to pursue real risk-adjusted profit with separate user authorization. A scanner, test harness, paper portfolio, or validation system is a training/evaluation instrument, NOT the final goal. Consult R-015 / L-014 in the current research MASTER/LESSONS; do not let a chat rollover shrink this objective.
+
 1. **FIRST fetch and read** `research/chart_learning/START_HERE.md` and `research/chart_learning/MANIFEST.json` from the CURRENT default-branch HEAD.
 2. Then read `research/chart_learning/MASTER.md`, `research/chart_learning/MINIMUM_COMPETENCE_BENCHMARK.md`, `research/chart_learning/LESSONS.jsonl`, `research/chart_learning/SOURCE_REGISTRY.md`, `research/chart_learning/EXPERIMENTS.md`, and `ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md` as the task requires. Do not trust memory or old chat summaries instead of current repository state.
 3. In the response, state the **observed learning revision and exact commit SHA**, or explicitly declare the gate **NOT VERIFIED**. Do not call a review completed/passed while the gate is unverified.
