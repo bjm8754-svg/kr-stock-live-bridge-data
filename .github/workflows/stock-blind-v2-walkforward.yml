@@ -4,10 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/stock_blind_walkforward_v2.py"
-      - "scripts/stock_blind_runner_v2.py"
-      - "scripts/test_stock_blind_v2_contract.py"
-      - "research/stock_blind/order_semantics_v2.py"
       - "research/stock_blind/ACTIVE_EPISODE_V2.json"
       - "research/stock_blind/episodes/S02/decisions/**"
       - ".github/workflows/stock-blind-v2-walkforward.yml"
@@ -35,6 +31,7 @@ jobs:
           python scripts/test_stock_blind_privacy.py
           python research/stock_blind/test_order_semantics_v2.py
           python scripts/test_stock_blind_v2_contract.py
+          python research/stock_blind/test_reservation_engine.py
       - name: Use separate research-only V3 label
         run: |
           python - <<'PY'

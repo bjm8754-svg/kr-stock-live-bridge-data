@@ -1,0 +1,33 @@
+name: S02 Swing Reservation Unit Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "research/stock_blind/reservation_engine.py"
+      - "research/stock_blind/test_reservation_engine.py"
+      - "scripts/stock_blind_walkforward_v2.py"
+      - "scripts/test_stock_blind_v2_contract.py"
+      - "research/stock_blind/order_semantics_v2.py"
+      - ".github/workflows/stock-blind-v2-unit-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install offline research dependencies
+        run: python -m pip install -r requirements-scanner.txt
+      - name: Point-in-time and strict HOLD checks
+        run: |
+          python scripts/test_stock_blind_privacy.py
+          python research/stock_blind/test_order_semantics_v2.py
+          python scripts/test_stock_blind_v2_contract.py
+          python research/stock_blind/test_reservation_engine.py
