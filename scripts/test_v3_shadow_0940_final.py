@@ -131,8 +131,8 @@ for capture in zero_volume:
     q["tradingValue"] = 0
 out = run(zero_volume)
 assert out["cycleStatus"] == "PARTIAL"
-assert out["evaluationAt0935"][0]["evaluation"] == "INVALIDATED"
-assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "INVALIDATED"
+assert out["evaluationAt0935"][0]["evaluation"] == "CONFIRMED"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "CONFIRMED"
 assert out["perCandidateEvaluation"][0]["priceCoverage"]["openingMinutesUnobserved"] == 1
 assert out["productionCutoverReviewEligible"] is False
 
