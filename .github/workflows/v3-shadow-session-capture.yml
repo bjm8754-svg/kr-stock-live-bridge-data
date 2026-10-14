@@ -7,7 +7,7 @@ on:
     - cron: "42 23 * * 0-4"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: v3-shadow-session-capture
@@ -267,4 +267,54 @@ jobs:
             test "$(jq -r '(.marketScans | keys) == ["0935"]' /tmp/v3-shadow-live-0940.json)" = "true"
           fi
 
+          git diff --exit-code -- watchlist.json live.json live-health.json
+
+      - name: Build frozen 09:40 SHADOW evaluation (no live replanning)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/v3_shadow_0940_final.py \
+            --capture-0935 /tmp/v3-shadow-live-0935.json \
+            --capture-0940 /tmp/v3-shadow-live-0940.json \
+            --trade-date "$TRADE_DATE" \
+            --capture-run-id "${{ github.run_id }}" \
+            --source-bundle-sha "$BUNDLE_SHA" \
+            --output v3-0940-shadow-evaluation.json
+
+          test "$(jq -r '.schemaVersion' v3-0940-shadow-evaluation.json)" = "V3_0940_SHADOW_EVAL_V1"
+          test "$(jq -r '.mode' v3-0940-shadow-evaluation.json)" = "SHADOW_ONLY"
+          test "$(jq -r '.productionWriteAllowed' v3-0940-shadow-evaluation.json)" = "false"
+          test "$(jq -r '.tradeDate' v3-0940-shadow-evaluation.json)" = "$TRADE_DATE"
+          test "$(jq -r '.sourceBundleSha' v3-0940-shadow-evaluation.json)" = "$BUNDLE_SHA"
+          test "$(jq -r '.captureRunId' v3-0940-shadow-evaluation.json)" = "${{ github.run_id }}"
+          test "$(jq -r '.productionCutoverReviewEligible' v3-0940-shadow-evaluation.json)" = "false" || \
+            test "$(jq -r '.cycleStatus' v3-0940-shadow-evaluation.json)" = "PASS"
+          git diff --exit-code -- watchlist.json live.json live-health.json
+
+      - name: Commit only SHADOW final JSON and verify GitHub read-back
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=v3-0940-shadow-evaluation.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$FILE"
+          STAGED=$(git diff --cached --name-only)
+          if [ -n "$STAGED" ]; then
+            test "$STAGED" = "$FILE"
+            git commit -m "record frozen V3 09:40 shadow evaluation $TRADE_DATE"
+            git pull --rebase origin main
+            CHANGED=$(git diff-tree --no-commit-id --name-only -r HEAD)
+            test "$CHANGED" = "$FILE"
+            git push origin HEAD:main
+          fi
+
+          git fetch --quiet origin main
+          git show "origin/main:$FILE" > /tmp/v3-0940-remote-readback.json
+          cmp --silent "$FILE" /tmp/v3-0940-remote-readback.json
+          test "$(jq -r '.tradeDate' /tmp/v3-0940-remote-readback.json)" = "$TRADE_DATE"
+          test "$(jq -r '.schemaVersion' /tmp/v3-0940-remote-readback.json)" = "V3_0940_SHADOW_EVAL_V1"
+          test "$(jq -r '.cycleStatus' /tmp/v3-0940-remote-readback.json)" = \
+            "$(jq -r '.cycleStatus' "$FILE")"
+          echo "V3 FINAL REMOTE READ-BACK PASS; commit=$(git rev-parse HEAD); tradeDate=$TRADE_DATE"
           git diff --exit-code -- watchlist.json live.json live-health.json
