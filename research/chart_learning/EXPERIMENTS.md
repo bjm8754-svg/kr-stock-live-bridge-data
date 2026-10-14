@@ -1,6 +1,6 @@
 # Experiments and non-regression scorecard
 
-The research account has **no verified forecasting performance** as of revision 9. It has useful diagnostics; do not equate them with economic skill.
+The research account has **no verified forecasting performance** as of revision 10. It has useful diagnostics; do not equate them with economic skill.
 
 | ID | Cutoff / window | Method | Observed result | Validity | Next step |
 | --- | --- | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ The research account has **no verified forecasting performance** as of revision 
 | E-003 | 2026-09-18 cutoff, 2026-09-21–10-13 follow-up | Time-truncated data within future-selected 33 stocks | 6 screened; 3 proposed; 1 plan's targets touched after 1st buy, 2 unfilled; no cost-adjusted portfolio return | SELECTION-BIASED RETROSPECTIVE DIAGNOSTIC / NOT BLIND | Full KRX point-in-time lock and conservative execution |
 | E-004 | historical stock_blind S01 (legacy execution) | Reconstructed full market; D00–D04 frozen decisions; D04 3-session interval return -0.325%, cumulative +0.268% after 15 sessions | **FUTURE-DATA CONTAMINATED:** D05 card includes one more day than D05 settled equity; plus legacy HOLD rebalancing. The original D00–D04 decisions may have been similarly exposed | INVALID FOR CLEAN BLIND EDGE / DIAGNOSTIC ONLY | Quarantine old episode, preserve all commits; do not continue as clean study |
 | E-005 | S01 D04 decision locked at commit `a33da5e9...` | Held A91/A0E; 18 candidates reviewed; no new buys | Subsequent 3-session result -0.325%, no stop; **D04 analysis was made from a card produced by the same unfiltered source mechanism** and cannot establish forward-time predictive skill | CONTAMINATED PROCESS / RESEARCH CASE ONLY | Use S02 from clean time cutoff and preserve this adverse example |
-| E-006 | S02 newly versioned 60-session blind | Separate strict-HOLD and timestamp-clipped V2 engine with explicit tests; 3-session checks, potentially multiweek holding | New study configured; no trading decision or outcome as of research revision 9 | NOT TESTED / WORKFLOW STATUS MUST BE VERIFIED | Generate initial masked card only after pure contract tests pass; lock all decisions before outcome |
+| E-006 | S02 60-session masked full market (2,768 at relative session 0) | Strict-HOLD, point-in-time clipped historical card and swing **BUY_LIMIT reservations** with 13 offline execution tests; 3-session reviews but orders may persist | Initial 18-candidate card generated; **no trade decisions or returns locked at revision 10** | DATA GATE PASSED / PREDICTIVE EDGE NOT TESTED | Lock assistant-selected first reservation before any future bar review; verify actual fill/nonfill outcomes with cash/stop accounting |
 
 ## Swing horizon correction (L-010 / R-011)
 

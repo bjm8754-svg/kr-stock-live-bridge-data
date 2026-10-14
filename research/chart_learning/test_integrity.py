@@ -70,6 +70,13 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("18,810", cases)
         self.assertIn("19,000", cases)
 
+    def test_patient_limit_swings_replace_forced_open_buys(self):
+        m = gate.load_manifest()
+        self.assertIn({"id": "R-014", "status": "CANONICAL"}, m["rules"])
+        self.assertEqual(m["swingBuyExecution"]["buyType"], "RESTING_BUY_LIMIT")
+        self.assertFalse(m["swingBuyExecution"]["defaultNextOpenMarketBuy"])
+        self.assertIn("L-013", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

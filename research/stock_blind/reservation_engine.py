@@ -173,6 +173,11 @@ def simulate(decs, dates, catalog, fetch_price, cfg):
                 raise ValueError("unknown action " + action)
         if total_pct > 100.000001:
             raise ValueError("new reservations exceed 100% of initial portfolio")
+        # Never promise more resting buy orders than unencumbered cash could cover.
+        # Cash is not debited before a fill; this is a reservation risk gate only.
+        if sum(o["budgetKrw"] for o in pending.values()) * (1 + buy_fee) > cash + 0.01:
+            raise ValueError("UNFUNDED_PENDING_RESERVATIONS")
+
         # A held position omitted from the complete portfolio is an EXIT decision,
         # but omission never silently converts an outstanding reservation into a fill.
         for aid in positions:

@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 10 — Restore expert-style patient swing limit orders
+
+- User corrected a fundamental trading-intent failure: the assistant itself must pick entry/add prices from chart structure and **wait with reservations**; next trading day's opening price is not a default buy.
+- S02 had no locked trade decision when corrected, so replaced proposed forced next-open BUY execution with a separate historical reservation module `research/stock_blind/reservation_engine.py` and 13 offline synthetic tests.
+- Supports first buy, optional staged ADD only after FIRST actually fills, waiting across review intervals, explicit expiry/cancellation, gap-below-stop cancellation, stop exits, same-bar fill+stop conservative loss, integer quantities and cost accounting. Strict penetration before intraday fill avoids unjustified touch fills, but order-book queue assumptions remain incomplete.
+- S02 simulation runner now exposes `pendingOrders` and `orderEvents`; market workflow and fast offline workflow were separated to reduce unnecessary 2,000+ stock rescans when only tests change.
+- Registered CANONICAL R-014, error L-013 and C-008. Prior S01 quarantine unchanged; S02 predictive/economic skill **NOT YET VERIFIED**; Production untouched.
+
 ## 2026-10-14 — Revision 9 — Quarantine S01 look-ahead and fork clean PIT swing research
 
 - Detected next-session **OHLCV look-ahead** in S01 D05: state A91 close 18,810 vs card 19,000; state A0E close 86,100 vs card 86,800, plus extra index close 2,470.41 versus the state cutoff's index 2,447.43. The S01 card's `futureIncluded:false` was hard-coded and privacy tests only checked calendar text.

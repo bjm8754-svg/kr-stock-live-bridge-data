@@ -139,6 +139,13 @@ def validate() -> tuple[dict, list[dict]]:
         fail("new S02 must not be treated as verified without real results")
     if "C-007 — S01 look-ahead" not in cases:
         fail("future OHLCV mismatch evidence missing")
+    if "### R-014 — Expert-grade swing entries are price reservations" not in master:
+        fail("swing limit reservation rule missing")
+    sem = m.get("swingBuyExecution", {})
+    if sem.get("buyType") != "RESTING_BUY_LIMIT" or sem.get("defaultNextOpenMarketBuy") is not False:
+        fail("forced market buys must not return")
+    if "C-008 — User rejected market-buy" not in cases:
+        fail("swing intent corrective case missing")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

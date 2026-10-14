@@ -147,6 +147,15 @@ class SwingReservationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "invalid structural limit"):
             run([{"step": 0, "portfolio": [entry(limit=100, stop=105)]}], df)
 
+    def test_rejects_unfunded_overlapping_reservations(self):
+        df = frame([110, 110, 110, 110], [105, 105, 104, 103])
+        a = entry(pct=60, order="O1")
+        b = {"assetId": "B", "action": "ENTER", "stop": 90,
+             "buyOrders": [{"orderId": "O3", "kind": "FIRST",
+                            "limitPrice": 100, "capitalPct": 60}]}
+        with self.assertRaisesRegex(ValueError, "UNFUNDED_PENDING_RESERVATIONS"):
+            run([{"step": 0, "portfolio": [a, b]}], df)
+
 
 if __name__ == "__main__":
     unittest.main()

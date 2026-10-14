@@ -78,6 +78,14 @@ Consequence: previous purported full-market blind S01 tests **cannot be declared
 
 Remedy: fork separate S02, filter both stock and index frames to cutoff before analysis, add explicit held portfolio price parity and future candidate trace label checks. Test fake +1D leakage and intentionally failing held mismatch. Do not assert these fixes prove price-data vendor correctness or clean fundamentals; independent evaluation still required. See L-012 / R-013 / PROTOCOL_V2.md.
 
+## C-008 — User rejected market-buy approximation for swing entries (IMPLEMENTATION TESTED, ECONOMIC EDGE UNKNOWN)
+
+User explicitly corrected the assistant's 2026-10-14 suggestion that swing buys occur at the next session open. The expert's five plans were rational proposed **first buy, optional second buy, stop and objective prices**, meant to be rested as **conditional buy reservations** for potentially many sessions/weeks, not a next-session market order.
+
+Before S02 D00 was locked, `scripts/stock_blind_walkforward_v2.py` was switched to `research/stock_blind/reservation_engine.py`, with `test_reservation_engine.py` verifying real nonfills, strict limit penetration/gap-at-open, staged buy, survival beyond a 3-session review, expiry/cancel, same-bar stopped loss, no automatic HOLD rebalance and reject missing prices. `ORDER_SEMANTICS_V2.md` documents the now-superseded conceptual planner and `PROTOCOL_V2.md` contains the binding replay rules.
+
+The crucial analytical lesson: **the algorithm must conform to independent trade ideas, not force the ideas to match the easy-to-code execution engine**. Synthetic unit success is NOT evidence the prices were good, that limits would fill on the KRX order book, or that the strategy makes money. Record nonfills and missed winners rather than imaginary executed gains. See L-013 / R-014.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

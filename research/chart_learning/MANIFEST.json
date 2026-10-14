@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 9,
+  "revision": 10,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -31,7 +31,10 @@
     "scripts/stock_blind_walkforward_v2.py",
     "scripts/stock_blind_runner_v2.py",
     "scripts/test_stock_blind_v2_contract.py",
-    ".github/workflows/stock-blind-v2-walkforward.yml"
+    ".github/workflows/stock-blind-v2-walkforward.yml",
+    "research/stock_blind/reservation_engine.py",
+    "research/stock_blind/test_reservation_engine.py",
+    ".github/workflows/stock-blind-v2-unit-tests.yml"
   ],
   "rules": [
     {
@@ -87,6 +90,10 @@
       "status": "CANONICAL"
     },
     {
+      "id": "R-014",
+      "status": "CANONICAL"
+    },
+    {
       "id": "H-001",
       "status": "HYPOTHESIS"
     },
@@ -95,7 +102,7 @@
       "status": "HYPOTHESIS"
     }
   ],
-  "lessonCount": 12,
+  "lessonCount": 13,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -154,5 +161,14 @@
     "cleanExperiment": "S02",
     "cleanEngine": "scripts/stock_blind_walkforward_v2.py",
     "cleanPerformanceVerified": false
+  },
+  "swingBuyExecution": {
+    "episode": "S02",
+    "buyType": "RESTING_BUY_LIMIT",
+    "defaultNextOpenMarketBuy": false,
+    "unfilledCountsAsPosition": false,
+    "reviewSessions": 3,
+    "reviewCancelsOrder": false,
+    "proofStatus": "OFFLINE_TEST_ONLY"
   }
 }

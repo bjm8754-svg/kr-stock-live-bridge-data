@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 9
+**Learning revision:** 10
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
@@ -42,6 +42,8 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 **Never assume the short GitHub MASTER includes all earlier picture-based study.** Read SOURCE_REGISTRY.md first. The 91/91 image archive and original DOCX were separately verified in ChatGPT Library on 2026-10-14; the Yangbongman chat text and GitHub method audits exist, but every referenced original YBM screenshot is **not verified as archived**. Source access in the next chat must be verified anew. Do not claim an all-source continuous education if the original sources were not inspected where needed.
 
 ## Immediate research state (2026-10-14)
+
+- **User-required swing entry semantics (L-013 / R-014)**: assistant must independently decide entry/optional second-buy prices, then REST a limit buy and wait; no automatic next-open buying, no interpreting non-fills as positions. Original S02 had no locked trade when corrected. The executable reservation contract is in `research/stock_blind/PROTOCOL_V2.md`, validated offline by `test_reservation_engine.py`. A 3-day review must not cancel reserved bids by default. **No completed market-performance evidence yet.**
 
 - **Critical look-ahead discovery (L-012 / C-007)**: S01 state at D05 held closes A91=18,810 and A0E=86,100 while the newly published D05 `current_card.json` included A91=19,000 and A0E=86,800, plus one extra index day. The provider may return end+1 bars; scanner did not trim at cutoff. **S01 is contaminated, not clean blind.** Do not use its D05 card for another supposedly blind decision. S02 clean engine is separate and must pass point-in-time guards.
 - Critical S01 execution-semantic issue (L-011): the legacy 3-session simulator **automatically rebalances every selected position to a target weight even when action=HOLD**. Its results therefore do NOT cleanly establish unchanged-share multi-week swing holding. Keep existing S01 immutable and study the isolated strict-HOLD v2 spec/prototype before any new episode.

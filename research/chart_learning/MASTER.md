@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v9 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v10 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -52,6 +52,9 @@ An assistant's `HOLD` signal means **no buy and no discretionary sell**, while s
 
 ### R-013 — Data cutoff invariants outrank a boolean futureIncluded flag
 Every price/index dataset MUST be clipped by its true timestamp <= locked decision cutoff **before** indicators, scanning, replay-facing chart traces, or assistant inspection. Provider-inclusive end dates can yield the next trading day's OHLCV even when a wrapper claims `futureIncluded: false`. On new card creation compare the two existing holdings' full-resolution closing prices with portfolio mark-to-market state for the same cutoff. Reject daily chart labels after the cutoff (such as `T+1D`). If the cross-check fails, **quarantine that episode's blind performance** rather than refining old decisions with newly observed future information. S01 is known contaminated as of D05; its prior D00–D04 decisions may also have seen next-day bars and cannot be rehabilitated retroactively. The S02 engine is a new isolated research-only fork; its tested synthetics guard essential look-ahead vectors, but only its actual forward run can demonstrate data integrity. See L-012 / C-007 and `research/stock_blind/PROTOCOL_V2.md`.
+
+### R-014 — Expert-grade swing entries are price reservations, not forced market buys
+The model examines time-connected daily, weekly, and monthly charts, decides independently on a rational **first-buy limit**, optional **second-buy limit** only when justified, structural stop, resistance-based objectives or explicit trend-management premise, budget, and invalidation. After the cutoff, it **reserves those price(s) and waits**. A subsequent session's open is NOT authority to buy there merely because the signal exists. A scheduled three-session review is NOT a holding or reservation expiry. An order unfilled after several sessions can remain active into later weeks, expire under an explicit case-specific condition, or be canceled after thesis invalidation. Record fills, nonfills, missed winners, gap-through-stop cancellations, fees and open pending state separately. If a first order never fills, neither its proposed second tranche nor its hypothetical targets can generate profit. Confirmations for breakout-buy order types require a separately frozen stop-trigger model; ordinary BUY_LIMIT must never be used to simulate chasing. Source: direct user correction on 2026-10-14, L-013/C-008; S02 offline contract tests.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 
