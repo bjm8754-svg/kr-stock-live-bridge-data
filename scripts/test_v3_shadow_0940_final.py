@@ -21,7 +21,7 @@ RULES = {
 PLAN = {
     "code": CODE, "name": "Synthetic", "planState": "PROBE_PLAN",
     "invalidation": 90, "executionRules": RULES,
-    "externalEvidence": {lane: {"state": "NEUTRAL"} for lane in LANES},
+    "externalEvidence": {lane: {"state": "NEUTRAL", "evidenceIds": ["s1"]} for lane in LANES},
 }
 SOURCE = {
     "bundleSha": SHA,
@@ -76,6 +76,13 @@ for c in fb:
         lane: {"state": "UNKNOWN"} for lane in LANES
     }
 assert run(fb)["cycleStatus"] == "PARTIAL"
+
+one_unknown = fixture()
+for capture in one_unknown:
+    capture["sourcePlan"]["livePlans"][0]["externalEvidence"]["earningsRevision"] = {
+        "state": "UNKNOWN", "reason": "No recent revision disclosed", "checkedSources": ["DART"]
+    }
+assert run(one_unknown)["cycleStatus"] == "PASS"
 
 prose = fixture()
 for c in prose:
