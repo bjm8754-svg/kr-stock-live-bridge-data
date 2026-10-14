@@ -9,6 +9,34 @@ SCHEMA = "V3_0815_SHADOW_BUNDLE_V1"
 ORIGINS = {"MACHINE_CONTINUITY_FALLBACK", "ASSISTANT_DEEP_REVIEW"}
 LIVE_STATES = {"ATTACK_PLAN", "PROBE_PLAN"}
 
+# Korea Exchange standard share-price increments for KOSPI/KOSDAQ.
+# Source: https://regulation.krx.co.kr/contents/RGL/03/03020100/RGL03020100.jsp
+# This is for ordinary listed shares, not a general ETF/ETN or bond tick table.
+def valid_krx_share_quote_price(value) -> bool:
+    import math
+
+    if type(value) not in (int, float) or not math.isfinite(value):
+        return False
+    if value <= 0 or not float(value).is_integer():
+        return False
+    price = int(value)
+    if price < 2000:
+        tick = 1
+    elif price < 5000:
+        tick = 5
+    elif price < 20000:
+        tick = 10
+    elif price < 50000:
+        tick = 50
+    elif price < 200000:
+        tick = 100
+    elif price < 500000:
+        tick = 500
+    else:
+        tick = 1000
+    return price % tick == 0
+
+
 
 def validate_eod_provenance(d: dict, source_root: Path, errors: list[str]) -> None:
     """Fail closed unless a FULL assistant bundle uses the current independent EOD.
@@ -330,6 +358,11 @@ def main() -> None:
                     return isinstance(v, (float, int)) and not isinstance(v, bool) and math.isfinite(v)
                 if not (valid_number(trig) and valid_number(inv) and 0 < inv < trig):
                     errors.append(f"livePlans[{i}] executionRules trigger/invalidation invalid")
+                else:
+                    if not valid_krx_share_quote_price(trig):
+                        errors.append(f"livePlans[{i}] executionRules triggerPrice is not a KRX share tick price")
+                    if not valid_krx_share_quote_price(inv):
+                        errors.append(f"livePlans[{i}] invalidation is not a KRX share tick price")
                 if type(hold) is not int or not 1 <= hold <= 36:
                     errors.append(f"livePlans[{i}] executionRules holdMinutes invalid")
                 if not valid_number(chase) or not 0 <= chase <= 100:
