@@ -118,6 +118,12 @@ def validate() -> tuple[dict, list[dict]]:
         fail("user-defined minimum expert standard missing")
     if "MINIMUM_COMPETENCE_BENCHMARK.md" not in startup or "MINIMUM_COMPETENCE_BENCHMARK.md" not in master or "MINIMUM_COMPETENCE_BENCHMARK.md" not in agents:
         fail("minimum benchmark not linked into new-session preflight")
+    if "### R-011 — Review interval is NOT swing holding horizon" not in master:
+        fail("swing holding horizon confused with review interval")
+    if "3-trading-day decision/review cadence" not in master or "right-censored" not in master:
+        fail("3-session review and open trade disposition must be distinguished")
+    if "C-005 — Three-session review cadence" not in cases:
+        fail("S01 horizon regression case missing")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

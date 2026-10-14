@@ -1,6 +1,6 @@
 # Experiments and non-regression scorecard
 
-The research account has **no verified forecasting performance** as of revision 6. It has useful diagnostics; do not equate them with economic skill.
+The research account has **no verified forecasting performance** as of revision 7. It has useful diagnostics; do not equate them with economic skill.
 
 | ID | Cutoff / window | Method | Observed result | Validity | Next step |
 | --- | --- | --- | --- | --- | --- |
@@ -8,6 +8,10 @@ The research account has **no verified forecasting performance** as of revision 
 | E-002 | 2026-10-13 EOD V3 top 10 from 33 | Crash-regime machine-vs-human assessment | 0 approved trades; unrealistic invalidations found | DIAGNOSTIC, not stock-picking skill | Compare multiple regimes and valid stops |
 | E-003 | 2026-09-18 cutoff, 2026-09-21–10-13 follow-up | Time-truncated data within future-selected 33 stocks | 6 screened; 3 proposed; 1 plan's targets touched after 1st buy, 2 unfilled; no cost-adjusted portfolio return | SELECTION-BIASED RETROSPECTIVE DIAGNOSTIC / NOT BLIND | Full KRX point-in-time lock and conservative execution |
 | E-004 | pre-existing historical stock_blind S01 | Repo has independent universe reconstruction and locked decisions for a different hidden period | Existing state shows 4 locked steps, not a concluded proof of 2026 September selection | SEPARATE ONGOING RESEARCH | Use existing protocols without claiming it was this study |
+
+## Swing horizon correction (L-010 / R-011)
+
+The existing `research/stock_blind/ACTIVE_EPISODE.json` sets `stepSessions: 3` (a **decision review interval**) and `episodeSessions: 30` (experimental duration), **not a three-session holding cap**. The replay engine retains positions across interval boundaries unless acted on/stopped; stops check intervening session bars. A 30-session window is a limited **shorter-horizon diagnostic**, not proof of skill at several-week or multi-month swing holds. Episode completion reports portfolio mark-to-market, and open positions must be flagged as ongoing / censored for trade-outcome analysis. Compare longer independently locked episodes spanning multiple regime changes, with separate outcome windows for entry quality, thesis development and final realized disposition. Do not enforce 3/5/10/20 sessions as a universal exit clock.
 
 ## Minimum competence evaluation
 
@@ -20,9 +24,9 @@ All future experiments must be evaluated against [MINIMUM_COMPETENCE_BENCHMARK.m
 - Candidate-selection policy frozen at:
 - Recommendation decision commit hash and timestamp, cutoff, order semantics and position limits:
 - Proposed candidates + rejected candidates + selection rationale:
-- First buy, optional second buy, structural invalidation, first/final target, expiry/cancel rules:
+- First buy, optional second buy, structural invalidation, first/final target, thesis-dependent holding horizon, planned reviews, expiry/cancel rules:
 - Reproducible fill accounting (gaps, same-bar low/high ambiguity, fees, transaction tax where applicable):
-- Entry coverage, non-fill rate, hit/stop/time-out rates, per-trade expectancy:
+- Entry coverage, non-fill rate, hit/stop/time-out rates, right-censored open positions versus realized trades, per-trade expectancy:
 - Turnover, max drawdown, volatility, invested ratio, capital-weighted benchmark/alternative cash yield:
 - Case-level postmortem including wrong stock selection and missed moves:
 - Verdict: IMPROVED / REGRESSED / INCONCLUSIVE / NOT TESTED (never infer from a handful of winning charts):

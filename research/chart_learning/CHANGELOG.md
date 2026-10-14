@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 7 — Separate three-day review from weeks-long swing horizon
+
+- Confirmed existing S01 `stepSessions=3` is a periodic decision/review window, **NOT a required holding duration**; `episodeSessions=30` is the finite experiment window, not a sufficient assessment of multi-month swings.
+- Examined actual replay code: positions persist across review cycles and structural stops check intervening daily bars. Final portfolio mark-to-market is not proof that open trades closed profitably.
+- Added canonical R-011, mistake L-010 and case C-005 to prevent this analytical regression; updated research protocol, experiment scorecard, session start contract and validator.
+- **Did not** modify S01, its locked decisions, shadow scan / auto-trade code or Production. Longer independent episodes need separate test design before implementation.
+- No claim of improved predictive or realized returns.
+
 ## 2026-10-14 — Revision 6 — Explicit minimum competency goal
 
 - Recorded user's binding requirement: **at least the independent chart selection and conditional plan-design quality of the analyst who authored the five example plans**; surpassing this is the longer-term goal.

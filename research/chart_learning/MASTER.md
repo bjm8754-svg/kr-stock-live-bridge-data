@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v6 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v7 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -44,6 +44,9 @@ Label findings as VERIFIED / DIAGNOSTIC / HYPOTHESIS / NOT_TESTED; distinguish s
 ### R-010 — Analytical pluralism: no single analyst's view governs V3
 **Yangbongman (YBM) is ONE VIEW among many, not the centre or master framework.** The same is true of the 91-photo Canonical, Fibonacci, indicator schools, volume/market-profile interpretations, CVD/order-flow, trend-following, fundamentals/catalysts, and any future expert. These sources contain useful **testable ideas**, not mandatory prescriptions. Start from observable market behaviour and the investment problem, then select applicable lenses according to market regime, timeframe, evidence quality and trade horizon. Different lenses may conflict: record the contradiction, prioritize price/volume/time evidence, independently assess the hypotheses, and leave a trade unresolved when evidence is insufficient. Do **not** award points for the number of lenses agreeing, give any source automatic authority, or rebuild the engine around one teacher. Retain each source's original claims and limitations for audit. This is a **user-defined scope rule**, not an empirically verified predictive advantage. See L-009.
 
+### R-011 — Review interval is NOT swing holding horizon
+**Never confuse a 3-trading-day decision/review cadence with a three-day swing holding limit or outcome horizon.** A swing thesis can validly survive several weeks or months, depending on structure, market regime, catalyst and risk. Update HOLD / ADD / REDUCE / EXIT decisions at reviews; do not force exit, target achievement or verdict because a scheduled review arrived. Check structural stop breaches continuously at available daily bars; a scheduled deep review must not delay risk exits. Before locking a plan, specify intended thesis **time horizon**, time-based invalidation if justified, structural invalidation, target/catalyst checkpoints and the circumstances that require early exit. Backtests must separate **(a) monitoring/review frequency, (b) per-position lifetime, (c) episode duration and (d) final scoring**. Where a portfolio experiment ends with positions still open, report mark-to-market unrealized P&L and mark unfinished trade outcomes as **right-censored**, not realized winners/losses; preserve capital, fees and benchmark accounting. A 30-session episode may diagnose tactical/short swing judgement but **cannot conclusively evaluate multi-month swings**; add longer independent episodes rather than inventing a universal holding period. See L-010 and C-005.
+
 ## HYPOTHESES — research only, not hard-coded into V3
 
 ### H-001 — Expert sample may use comparable average-basis risk
@@ -58,7 +61,7 @@ The restricted Sep-18 diagnostic produced two unfilled pullback orders for later
 - Begin with market evidence, then use relevant analytic perspectives without assuming any named analyst is the controlling view; reconcile disagreements or abstain.
 - State market/sector regime and scan-universe selection without future leakage.
 - Independently identify major daily / weekly / monthly acceptance and supply zones.
-- Choose trade family and correct order semantics; record buy price, **optional add**, stop, target(s), and cancellation.
+- Choose trade family and correct order semantics; record buy price, **optional add**, stop, target(s), cancellation, and thesis-dependent holding horizon **separate from review frequency**.
 - Compute single-entry risk AND post-add risk if applicable, realistic ATR/gap risk, R/R and trade size.
 - Separate **PLAN / FILLED / TESTED / LIVE**. Log opportunity costs, misses and all rejected setups.
 

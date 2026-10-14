@@ -13,9 +13,9 @@ Do not promote levels in steps 1–2 as a measured edge.
 ## Research loop
 
 - Register question, candidate hypothesis, what would falsify it, baseline comparator and market regimes to test.
-- Freeze data, universe, cutoff, selection criteria, price conditions, stop/cancellation, position sizing, handling of not-filled orders and time horizon before outcome exposure.
+- Freeze data, universe, cutoff, selection criteria, price conditions, stop/cancellation, position sizing, handling of not-filled orders, **per-setup holding horizon, review cadence, episode duration and endpoint accounting** before outcome exposure.
 - Keep complete cohort and all rejections; make results reproducible with input provenance and code/data commit.
-- Examine fills, ambiguous intrabar order, costs, turnover, drawdown, cash drag and missed winners. Use market-adjusted benchmark and stress regime.
+- Examine fills, ambiguous intrabar order, costs, turnover, drawdown, cash drag and missed winners. Never score 3-session review windows as forced swing exits; at episode end distinguish unrealized portfolio mark-to-market from fully realized and right-censored trade outcomes. Use market-adjusted benchmark and stress regime.
 - Log new mistake as a unique **L-###** append-only LESSONS.jsonl record; connect to a case and experiment.
 - Only promote to a CANONICAL rule if independent evidence improves performance/decision validity; otherwise keep HYPOTHESIS. Carry old rule IDs forward with SUPERSEDED annotation rather than deleting.
 - Update MASTER + CHANGELOG + MANIFEST revision in **one atomic Git commit**. No model-memory claim is implied.

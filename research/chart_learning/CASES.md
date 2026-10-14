@@ -46,6 +46,15 @@ Outcome using 2026-09-21 through 2026-10-13 repository OHLCV (13 sampled session
 
 2026-10-13 10-stock review, zero approved buys in index stress. The result is valid as no-trade caution only. Test bullish/normal regimes separately and measure both false entries and missing strong winners. See L-008.
 
+## C-005 — Three-session review cadence is NOT a three-session swing holding limit (CONFIG VERIFIED)
+
+Source: `research/stock_blind/ACTIVE_EPISODE.json` and `scripts/stock_blind_walkforward.py` at 2026-10-14.
+- Existing S01: `stepSessions: 3`; `episodeSessions: 30`.
+- At every review, the assistant specifies portfolio actions (HOLD, ADD, REDUCE, EXIT/ROTATE); positions **persist across reviews** if retained. Stop logic runs across the intervening daily bars, including gap-below-stop handling.
+- The episode produces a final **mark-to-market portfolio snapshot** after 30 sessions; it does not establish disposition of every open swing thesis and must not be called proof of multi-month skill.
+- Assistant previously described each 3-session follow-up as if it were the swing result horizon. User corrected that swings can span weeks. **Never repeat this conflation**.
+- Next controlled tests should include longer, independent evaluation episodes; record review cadence, thesis horizon and final status separately. Do not rewrite the existing S01 locked decisions to retroactively extend a winning holding period. See L-010, R-011.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

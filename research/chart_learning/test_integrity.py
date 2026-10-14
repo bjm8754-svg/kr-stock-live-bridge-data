@@ -43,6 +43,15 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("independent", benchmark.lower())
         self.assertIn("Yangbongman is **one view among many**", benchmark)
 
+    def test_swing_horizon_not_equal_review_cadence(self):
+        m = gate.load_manifest()
+        master = (gate.BASE / "MASTER.md").read_text(encoding="utf-8")
+        self.assertIn({"id": "R-011", "status": "CANONICAL"}, m["rules"])
+        self.assertIn("3-trading-day decision/review cadence", master)
+        self.assertIn("right-censored", master)
+        self.assertIn("L-010", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
+        self.assertIn("30-session episode", master)
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])
