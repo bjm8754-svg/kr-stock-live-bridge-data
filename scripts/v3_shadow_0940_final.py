@@ -60,17 +60,34 @@ def validate_capture(d, day, end, source_hash):
     return src
 
 
+def tradable_snapshot_price(stock):
+    """Return a price only when the underlying regular-session trade evidence exists.
+
+    Worker can expose a previous-close placeholder with marketStatus=OPEN
+    before a candidate's first regular-session trade. Both cumulative volume
+    and traded value must be positive; NXT premarket quote metadata is not
+    evidence of an actual KRX regular-session trade.
+    """
+    if not isinstance(stock, dict) or stock.get("marketStatus") != "OPEN":
+        return None
+    price = stock.get("currentPrice")
+    volume = stock.get("volume")
+    trading_value = stock.get("tradingValue")
+    if not (numeric(price) and numeric(volume) and numeric(trading_value)):
+        return None
+    return float(price)
+
+
 def price_rows(rows, code):
     values = []
     for row in rows:
-        stock = (row.get("stocks") or {}).get(code) or {}
-        if stock.get("marketStatus") != "OPEN":
-            return None  # PREOPEN, CLOSE and halt snapshots are not intraday evidence.
-        p = stock.get("currentPrice")
-        # Do not infer a price from previous minutes, indexes, or a different code.
-        if not numeric(p):
+        stock = (row.get("stocks") or {}).get(code)
+        price = tradable_snapshot_price(stock)
+        # Do not backfill, skip untraded minutes, or substitute a previous close.
+        # A frozen path with untrusted minute evidence is DATA_FAIL.
+        if price is None:
             return None
-        values.append(float(p))
+        values.append(price)
     return values
 
 
@@ -78,9 +95,8 @@ def final_open_price(capture, code):
     rows = (capture.get("history") or {}).get("rows") or []
     if not rows:
         return None
-    stock = (rows[-1].get("stocks") or {}).get(code) or {}
-    price = stock.get("currentPrice")
-    return float(price) if stock.get("marketStatus") == "OPEN" and numeric(price) else None
+    stock = (rows[-1].get("stocks") or {}).get(code)
+    return tradable_snapshot_price(stock)
 
 
 def eval_path(prices, plan):
