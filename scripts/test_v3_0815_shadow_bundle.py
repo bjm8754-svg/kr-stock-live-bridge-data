@@ -164,6 +164,45 @@ invalid_chase = json.loads(json.dumps(assistant))
 invalid_chase["livePlans"][0]["executionRules"]["maxChasePct"] = "unknown"
 run(invalid_chase, False)
 
+# KRX KOSPI/KOSDAQ ordinary-share quote ticks (2023 harmonised schedule).
+# Reject numeric-but-untradeable levels: never silently round or change
+# the assistant's frozen trigger/invalidation.
+def with_execution_prices(trigger, invalidation):
+    plan = json.loads(json.dumps(assistant))
+    plan["livePlans"][0]["executionRules"]["triggerPrice"] = trigger
+    plan["livePlans"][0]["invalidation"] = invalidation
+    return plan
+
+
+# Valid quote prices across every band, including band transitions.
+for trigger, invalidation in (
+    (100, 99), (1999, 1998), (2000, 1999),
+    (4995, 4990), (5000, 4995), (19990, 19980),
+    (20000, 19990), (49950, 49900), (50000, 49950),
+    (199900, 199800), (200000, 199900),
+    (499500, 499000), (500000, 499500),
+    (1000000, 999000),
+):
+    run(with_execution_prices(trigger, invalidation), True)
+
+# Each of the rejected trigger prices is a numeric input but cannot be
+# submitted as an actual KRX ordinary-share limit order.
+for trigger, invalidation in (
+    (2001, 1999), (5001, 4995), (20001, 19990),
+    (50050, 49950), (200100, 199900), (500500, 499500),
+    (98133, 97200), (97211.5, 97000),
+):
+    run(with_execution_prices(trigger, invalidation), False)
+
+# Invalidations must be tradable quote levels too; cannot be negative,
+# fractional, a boolean, or silently represented by an unusable price.
+for stop in (97211.5, 97211, 97050, -100, 0, True, "97000"):
+    run(with_execution_prices(98100, stop), False)
+
+# A valid tick does not make a structurally inverted stop legitimate.
+run(with_execution_prices(98100, 98100), False)
+run(with_execution_prices(98100, 98200), False)
+
 # Cross-file independent EOD provenance gating, absent from schema-only fixtures.
 with tempfile.TemporaryDirectory() as tmp:
     root = pathlib.Path(tmp)
