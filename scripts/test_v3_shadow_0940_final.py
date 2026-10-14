@@ -99,7 +99,8 @@ out = run(fixture(not_confirmed))
 assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "NOT_CONFIRMED"
 
 missing = fixture()
-missing[1]["history"]["rows"][5]["stocks"][CODE]["currentPrice"] = None
+for capture in missing:
+    capture["history"]["rows"][5]["stocks"][CODE]["currentPrice"] = None
 out = run(missing)
 assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
 assert out["cycleStatus"] == "PARTIAL"
