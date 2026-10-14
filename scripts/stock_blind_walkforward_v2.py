@@ -23,7 +23,7 @@ ACTIVE = BASE / 'ACTIVE_EPISODE_V2.json'
 # Isolated S02+ research engine; never imported by the original S01 runner.
 import sys
 sys.path.insert(0, str(BASE))
-from order_semantics_v2 import plan_orders
+from reservation_engine import simulate as simulate_reservations
 V3CFG = REPO / 'market-structure-v3-config.json'
 DATE8 = re.compile(r'^20\d{6}$')
 DATE10 = re.compile(r'^20\d{2}-\d{2}-\d{2}$')
@@ -237,221 +237,7 @@ def row_on(df, d):
 
 
 def replay(decs, review_dates, catalog):
-    cash = float(CFG.get('initialCapitalKrw', 10_000_000))
-    positions = {}
-    cache = {}
-    buy_bps = float(CFG.get('buyCostBps', 5))
-    sell_bps = float(CFG.get('sellCostBps', 20))
-    total_cost = 0.0
-    turnover = 0.0
-    intervals = []
-    daily_equity = [cash]
-    composition_changes = 0
-
-    def series(aid):
-        if aid not in cache:
-            meta = catalog.get(aid)
-            if not meta:
-                raise RuntimeError(f'unknown assetId {aid}')
-            hist_start = review_dates[0] - dt.timedelta(days=120)
-            cache[aid] = fetch_price(meta, hist_start, review_dates[-1])
-        return cache[aid]
-
-    def equity_at(d):
-        v = cash
-        for aid,p in positions.items():
-            px = close_on_or_before(series(aid), d)
-            if px is not None:
-                v += p['shares'] * px
-        return v
-
-    for j, dec in enumerate(decs):
-        if int(dec.get('step', -1)) != j:
-            raise RuntimeError(f'decision step mismatch at {j}')
-        d0 = review_dates[j * CFG['stepSessions']]
-        d_exec = review_dates[j * CFG['stepSessions'] + 1]  # next tradable session, never decision-day close
-        d1 = review_dates[(j+1) * CFG['stepSessions']]
-        before_names = set(positions)
-        equity0 = equity_at(d0)
-        target = {}
-        alloc = 0.0
-        for x in dec.get('portfolio') or []:
-            aid = str(x['assetId'])
-            pct = float(x['capitalPct'])
-            if pct < 0:
-                raise RuntimeError('negative allocation')
-            alloc += pct
-            target[aid] = x
-        if alloc > 100.000001:
-            raise RuntimeError(f'allocation exceeds 100 at step {j}: {alloc}')
-
-        # STRICT-HOLD S02 intent: derive orders from *action* rather than forced target weights.
-        # REVIEW cadence is not an authorization to change shares under HOLD.
-        assets = set(positions) | set(target)
-        mark_prices = {aid: close_on_or_before(series(aid), d0) for aid in assets}
-        if any(px is None or px <= 0 for px in mark_prices.values()):
-            raise RuntimeError("S02_ORDER_PRICE_MISSING")
-        planned = plan_orders(
-            {aid: float(p["shares"]) for aid,p in positions.items()},
-            mark_prices, list(target.values()), equity0,
-        )
-        # All order quantities / cash budgets above use only the known decision close.
-        # Following-day OPEN is used exclusively as the ex-post settlement price.
-        fill_prices = {}
-        for aid in assets:
-            bar = row_on(series(aid), d_exec)
-            if bar is None or float(bar["Open"]) <= 0:
-                raise RuntimeError("S02_NEXT_OPEN_MISSING " + aid)
-            fill_prices[aid] = float(bar["Open"])
-
-        # Explicit REDUCE / EXIT first; any missing target is a full EXIT.
-        for order in planned:
-            if order["side"] != "SELL":
-                continue
-            aid = str(order["assetId"])
-            px = fill_prices[aid]
-            shares = min(float(positions[aid]["shares"]), float(math.floor(float(order["shares"]) + 1e-9)))
-            if shares <= 0:
-                continue
-            notional = shares * px
-            fee = notional * sell_bps / 10000.0
-            positions[aid]["shares"] -= shares
-            cash += notional - fee
-            total_cost += fee
-            turnover += notional
-            if positions[aid]["shares"] <= 1e-12:
-                del positions[aid]
-
-        # Explicit ENTER / ROTATE_IN / ADD only; HOLD never buys or sells.
-        needs = [(str(order["assetId"]), target[str(order["assetId"])],
-                  fill_prices[str(order["assetId"])], float(order["notional"]))
-                 for order in planned if order["side"] == "BUY"]
-        required = sum(n * (1 + buy_bps / 10000.0) for _,_,_,n in needs)
-        scale = 1.0 if required <= cash or required <= 0 else cash / required
-        for aid, x, px, need in needs:
-            # A frozen cash budget buys whole shares at the next session open.
-            # Do not open/add below the now-invalid structural stop.
-            if x.get("stop") is not None and px <= float(x["stop"]):
-                continue
-            shares = math.floor((need * scale) / px + 1e-9)
-            if shares <= 0:
-                continue
-            notional = shares * px
-            fee = notional * buy_bps / 10000.0
-            old = positions.get(aid)
-            if old:
-                old_cost = old["avgCost"] * old["shares"]
-                new_cost = old_cost + notional + fee
-                old["shares"] += shares
-                old["avgCost"] = new_cost / old["shares"]
-            else:
-                positions[aid] = {
-                    "shares": shares,
-                    "avgCost": (notional + fee) / shares,
-                    "stop": None,
-                    "target": None,
-                    "lastAction": x.get("action"),
-                }
-            cash -= notional + fee
-            total_cost += fee
-            turnover += notional
-
-        for aid,p in positions.items():
-            x = target.get(aid, {})
-            p['stop'] = x.get('stop')
-            p['target'] = x.get('target')
-            p['lastAction'] = x.get('action')
-
-        after_names = set(positions)
-        if before_names != after_names:
-            composition_changes += 1
-
-        start_eq_after = cash
-        for aid, pos in positions.items():
-            # Immediately after next-open fills; not yesterday's close.
-            open_px = fill_prices.get(aid)
-            if open_px is None:
-                row = row_on(series(aid), d_exec)
-                open_px = float(row["Open"]) if row is not None else close_on_or_before(series(aid), d0)
-            if open_px is None:
-                raise RuntimeError("S02_OPEN_MARK_MISSING " + aid)
-            start_eq_after += pos["shares"] * open_px
-        stopped = []
-        session_slice = review_dates[j*CFG['stepSessions']+1:(j+1)*CFG['stepSessions']+1]
-        for day in session_slice:
-            for aid in list(positions):
-                stop = positions[aid].get('stop')
-                if stop is None:
-                    continue
-                r = row_on(series(aid), day)
-                if r is None:
-                    continue
-                stop = float(stop)
-                exit_px = None
-                if float(r['Open']) <= stop:
-                    exit_px = float(r['Open'])
-                elif float(r['Low']) <= stop:
-                    exit_px = stop
-                if exit_px is not None:
-                    sh = positions[aid]['shares']
-                    notional = sh * exit_px
-                    fee = notional * sell_bps / 10000.0
-                    cash += notional - fee
-                    total_cost += fee
-                    turnover += notional
-                    stopped.append({'assetId': aid, 'exitPrice': round(exit_px,2)})
-                    del positions[aid]
-            daily_equity.append(equity_at(day))
-
-        end_eq = equity_at(d1)
-        intervals.append({
-            'step': j,
-            'startEquityKrw': round(equity0,2),
-            'postTradeEquityKrw': round(start_eq_after,2),
-            'endEquityKrw': round(end_eq,2),
-            'returnPct': round((end_eq/equity0-1)*100,3) if equity0 else 0,
-            'stopped': stopped,
-        })
-
-    cur_index = min(len(decs) * CFG['stepSessions'], CFG['episodeSessions'])
-    cur_date = review_dates[cur_index]
-    eq = equity_at(cur_date)
-    peak = daily_equity[0] if daily_equity else float(CFG['initialCapitalKrw'])
-    mdd = 0.0
-    for v in daily_equity:
-        peak = max(peak, v)
-        if peak > 0:
-            mdd = min(mdd, v/peak - 1)
-
-    snapshot = []
-    for aid,p in positions.items():
-        px = close_on_or_before(series(aid), cur_date)
-        if px is None:
-            continue
-        val = p['shares'] * px
-        snapshot.append({
-            'assetId': aid,
-            'marketValueKrw': round(val,2),
-            'capitalPct': round(val/eq*100,2) if eq else 0,
-            'avgEntry': round(p['avgCost'],2),
-            'currentPrice': round(px,2),
-            'unrealizedPct': round((px/p['avgCost']-1)*100,2) if p['avgCost'] else 0,
-            'stop': p.get('stop'),
-            'target': p.get('target'),
-            'lastAction': p.get('lastAction'),
-        })
-    snapshot.sort(key=lambda x:x['capitalPct'], reverse=True)
-    return {
-        'equity': eq,
-        'cash': cash,
-        'positions': snapshot,
-        'intervals': intervals,
-        'mddPct': mdd*100,
-        'turnoverKrw': turnover,
-        'costKrw': total_cost,
-        'compositionChanges': composition_changes,
-        'dailyEquity': daily_equity,
-    }
+    return simulate_reservations(decs, review_dates, catalog, fetch_price, CFG)
 
 
 def relative_date_string(s, cutoff):
@@ -656,6 +442,8 @@ def main():
         'turnoverKrw':round(rep['turnoverKrw'],2),
         'transactionCostKrw':round(rep['costKrw'],2),
         'positions':rep['positions'],
+        'pendingOrders':rep['pendingOrders'],
+        'orderEvents':rep['orderEvents'],
         'previousInterval':rep['intervals'][-1] if rep['intervals'] else None,
         'decisionsLocked':step,
         'futureIncluded':False,
@@ -678,6 +466,7 @@ def main():
                 'returnPct':state['returnPct'],
                 'cashPct':state['cashPct'],
                 'positions':state['positions'],
+                'pendingOrders':state['pendingOrders'],
                 'previousInterval':state['previousInterval'],
             },
             'marketContext':market_context(cutoff),
@@ -690,6 +479,9 @@ def main():
                 'maxCapitalPct':100,
                 'requireStructuralStopOrExplicitNull':True,
                 'freshDiscoveryContinuesWhileHolding':True,
+                'entryOrderType':'BUY_LIMIT_RESERVATION',
+                'noDefaultNextOpenPurchase':True,
+                'pendingOrdersSurviveReview':True,
             },
         }
         verify_pit_card(card, cutoff)
