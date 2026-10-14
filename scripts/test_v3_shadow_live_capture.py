@@ -57,6 +57,18 @@ try:
 except RuntimeError as e:
     assert "INVALID_STOCK_PAYLOAD" in str(e)
 
+one_preopen = {
+    "stocks": {
+        "011200": {"currentPrice": 21000, "marketStatus": "PREOPEN"},
+        "005930": {"currentPrice": 280000, "marketStatus": "OPEN"},
+    }
+}
+try:
+    validate_live_payload(one_preopen, codes)
+    raise AssertionError("per-candidate PREOPEN must fail, not just majority-open")
+except RuntimeError as e:
+    assert "MARKET_NOT_OPEN" in str(e)
+
 assert parse_scan_minutes("35") == {35}
 assert parse_scan_minutes("") == set()
 assert parse_scan_minutes("30,35") == {30, 35}
