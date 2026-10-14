@@ -151,11 +151,18 @@ def calculate(c35, c40, day, run_id, source_hash):
         evaluated.append({"code": code, "name": plan.get("name"), "finalEvaluation": e40, "reason": why40, "detail": detail40})
         evidence = plan.get("externalEvidence") or {}
         lanes = ("companyQuality", "earningsRevision", "catalyst", "industryMacro", "globalUsLead", "eventRisk")
-        if not isinstance(evidence, dict) or any(
-            not isinstance(evidence.get(k), dict) or
-            evidence[k].get("state") in (None, "UNKNOWN") for k in lanes
-        ):
+        # The user contract disallows a candidate with ALL six axes UNKNOWN;
+        # one genuinely unverified axis is not by itself a full-cycle failure.
+        if not isinstance(evidence, dict):
             all_quality = False
+        else:
+            states = [evidence.get(k) for k in lanes]
+            if any(not isinstance(v, dict) or not v.get("state") for v in states):
+                all_quality = False
+            elif all(v["state"] == "UNKNOWN" for v in states):
+                all_quality = False
+            elif any(v["state"] != "UNKNOWN" and not v.get("evidenceIds") for v in states):
+                all_quality = False
     if status == "MARKET_CLOSED":
         cycle = "MARKET_CLOSED"
     elif status == "VALID_EMPTY":
