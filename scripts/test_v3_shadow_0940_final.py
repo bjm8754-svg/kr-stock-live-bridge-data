@@ -42,7 +42,8 @@ def fixture(prices=None):
     def one(end):
         rows = [{
             "atKst": f"{DAY} 09{i:02d}",
-            "stocks": {CODE: {"currentPrice": prices[i], "marketStatus": "OPEN"}},
+            "stocks": {CODE: {"currentPrice": prices[i], "marketStatus": "OPEN",
+                              "volume": 1200 + i, "tradingValue": 120000000 + i * 100000}},
         } for i in range(end + 1)]
         return {
             "schemaVersion": "V3_SHADOW_LIVE_CAPTURE_V1",
@@ -114,6 +115,36 @@ assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
 assert out["delta0935to0940"][0]["price0935"] == 101.0
 assert out["delta0935to0940"][0]["price0940"] == 101.0
 assert out["delta0935to0940"][0]["priceDelta"] == 0.0
+
+# Some Workers return the prior close and status=OPEN before the first
+# regular-session trade. A zero-volume placeholder is NOT an invalidation
+# and must never confirm a trigger even when price crosses that level.
+zero_volume = fixture()
+for capture in zero_volume:
+    q = capture["history"]["rows"][0]["stocks"][CODE]
+    q["currentPrice"] = 80.0  # below the frozen invalidation
+    q["volume"] = 0
+    q["tradingValue"] = 0
+out = run(zero_volume)
+assert out["cycleStatus"] == "PARTIAL"
+assert out["evaluationAt0935"][0]["evaluation"] == "DATA_FAIL"
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+
+# A positive volume with no cumulative turnover is also an invalid quote.
+zero_turnover = fixture()
+for capture in zero_turnover:
+    capture["history"]["rows"][0]["stocks"][CODE]["tradingValue"] = 0
+out = run(zero_turnover)
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
+
+# Final 09:40 quote quality affects the 5-minute delta independently.
+stale_0940 = fixture()
+stale_0940[1]["history"]["rows"][-1]["stocks"][CODE]["volume"] = 0
+out = run(stale_0940)
+assert out["delta0935to0940"][0]["price0935"] == 101.0
+assert out["delta0935to0940"][0]["price0940"] is None
+assert out["delta0935to0940"][0]["priceDelta"] is None
+assert out["perCandidateEvaluation"][0]["finalEvaluation"] == "DATA_FAIL"
 
 missing = fixture()
 for capture in missing:
