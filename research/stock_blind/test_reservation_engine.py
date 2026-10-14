@@ -148,13 +148,14 @@ class SwingReservationTests(unittest.TestCase):
             run([{"step": 0, "portfolio": [entry(limit=100, stop=105)]}], df)
 
     def test_rejects_unfunded_overlapping_reservations(self):
-        df = frame([110, 110, 110, 110], [105, 105, 104, 103])
+        df = frame([110] * 7, [105, 105, 104, 103, 103, 102, 102])
         a = entry(pct=60, order="O1")
         b = {"assetId": "B", "action": "ENTER", "stop": 90,
              "buyOrders": [{"orderId": "O3", "kind": "FIRST",
                             "limitPrice": 100, "capitalPct": 60}]}
         with self.assertRaisesRegex(ValueError, "UNFUNDED_PENDING_RESERVATIONS"):
-            run([{"step": 0, "portfolio": [a, b]}], df)
+            run([{"step": 0, "portfolio": [a]},
+                 {"step": 1, "portfolio": [b]}], df)
 
 
 if __name__ == "__main__":
