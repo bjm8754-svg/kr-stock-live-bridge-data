@@ -55,6 +55,15 @@ Source: `research/stock_blind/ACTIVE_EPISODE.json` and `scripts/stock_blind_walk
 - Assistant previously described each 3-session follow-up as if it were the swing result horizon. User corrected that swings can span weeks. **Never repeat this conflation**.
 - Next controlled tests should include longer, independent evaluation episodes; record review cadence, thesis horizon and final status separately. Do not rewrite the existing S01 locked decisions to retroactively extend a winning holding period. See L-010, R-011.
 
+## C-006 — Legacy S01 HOLD label silently rebalances portfolio weights (CODE VERIFIED / UNFIXED)
+
+**Source:** `scripts/stock_blind_walkforward.py`, `replay()`, around lines 251–332 at git commit `a33da5e9e0e14f1c08627d18929a2ed4824d8053`.
+- Each review builds a `target` keyed by `assetId`. For every existing asset, it computes `tgt_val = equity0 * capitalPct / 100` and sells `cur_val - tgt_val` when positive. For each desired target, it buys `tgt_val - cur_val` when positive.
+- The quoted `action` is **only written as `lastAction`** and is not used to decide whether the buy/sell should occur. Hence even `action: HOLD` implicitly sells a winner after weight drift or adds to a loser until the target weight is restored.
+- This can generate costs/turnover and adulterate the study's intended assessment of keeping strong multiweek swings. **Do not call it risk-adjusted HOLD skill evidence.** Conversely, S01's `capitalPct` *has* historically meant target weight; never silently reinterpret locked decisions or claim historical counterfactual equivalence.
+- D04 review was locked at commit `a33da5e9...` while run `38508572523` was still in progress at this issue's discovery. Results after the commit were not inspected for this case.
+- **Remedy:** document baseline simulator as LEGACY_REBALANCE; use `research/stock_blind/ORDER_SEMANTICS_V2.md` and its standalone `order_semantics_v2.py` prototype for a newly versioned experiment. Freeze new action semantics and test before opening future prices. Stop protection and gap logic remain separate concerns; prototype does not replace a full backtester. See L-011 / R-012.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v7 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v8 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -46,6 +46,9 @@ Label findings as VERIFIED / DIAGNOSTIC / HYPOTHESIS / NOT_TESTED; distinguish s
 
 ### R-011 — Review interval is NOT swing holding horizon
 **Never confuse a 3-trading-day decision/review cadence with a three-day swing holding limit or outcome horizon.** A swing thesis can validly survive several weeks or months, depending on structure, market regime, catalyst and risk. Update HOLD / ADD / REDUCE / EXIT decisions at reviews; do not force exit, target achievement or verdict because a scheduled review arrived. Check structural stop breaches continuously at available daily bars; a scheduled deep review must not delay risk exits. Before locking a plan, specify intended thesis **time horizon**, time-based invalidation if justified, structural invalidation, target/catalyst checkpoints and the circumstances that require early exit. Backtests must separate **(a) monitoring/review frequency, (b) per-position lifetime, (c) episode duration and (d) final scoring**. Where a portfolio experiment ends with positions still open, report mark-to-market unrealized P&L and mark unfinished trade outcomes as **right-censored**, not realized winners/losses; preserve capital, fees and benchmark accounting. A 30-session episode may diagnose tactical/short swing judgement but **cannot conclusively evaluate multi-month swings**; add longer independent episodes rather than inventing a universal holding period. See L-010 and C-005.
+
+### R-012 — A HOLD decision must preserve share count
+An assistant's `HOLD` signal means **no buy and no discretionary sell**, while structural stop orders remain active; naturally changing portfolio weight is not an instruction to rebalance. `ADD` and `REDUCE` require explicit intention and correct order direction. The legacy S01 runner `scripts/stock_blind_walkforward.py` currently uses target weights to buy/sell **even for `HOLD`**, which may distort turnover, capital allocation and winners held through multiweek trends. It is a known, **UNFIXED** simulator limitation, not evidence of model trading judgement. Existing D00–D04 locked decisions and their baseline replay must NOT be silently rewritten. Strict-HOLD semantics have an isolated, tested **prototype only**, not wired into running S01 or production. See `research/stock_blind/ORDER_SEMANTICS_V2.md`, L-011 and C-006. A separate versioned episode with a frozen engine must evaluate genuine buy/hold/scale/exit behaviours; don't compare PnL across different execution contracts without clear labels.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 

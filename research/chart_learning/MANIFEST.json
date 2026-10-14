@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 7,
+  "revision": 8,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -22,7 +22,10 @@
     "research/chart_learning/RESEARCH_PROTOCOL.md",
     "research/chart_learning/validate.py",
     "research/chart_learning/test_integrity.py",
-    ".github/workflows/chart-learning-integrity.yml"
+    ".github/workflows/chart-learning-integrity.yml",
+    "research/stock_blind/ORDER_SEMANTICS_V2.md",
+    "research/stock_blind/order_semantics_v2.py",
+    "research/stock_blind/test_order_semantics_v2.py"
   ],
   "rules": [
     {
@@ -70,6 +73,10 @@
       "status": "CANONICAL"
     },
     {
+      "id": "R-012",
+      "status": "CANONICAL"
+    },
+    {
       "id": "H-001",
       "status": "HYPOTHESIS"
     },
@@ -78,7 +85,7 @@
       "status": "HYPOTHESIS"
     }
   ],
-  "lessonCount": 10,
+  "lessonCount": 11,
   "latestEvidenceStatus": "DIAGNOSTIC_NOT_CLEAN_BLIND",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -121,5 +128,12 @@
       "M-06",
       "M-07"
     ]
+  },
+  "knownExecutionLimitation": {
+    "code": "LEGACY_S01_HOLD_TARGET_WEIGHT_REBALANCE",
+    "status": "UNFIXED_IN_EXISTING_S01",
+    "source": "scripts/stock_blind_walkforward.py",
+    "futurePrototype": "research/stock_blind/order_semantics_v2.py",
+    "liveProductionIntegrated": false
   }
 }

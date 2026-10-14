@@ -124,6 +124,12 @@ def validate() -> tuple[dict, list[dict]]:
         fail("3-session review and open trade disposition must be distinguished")
     if "C-005 — Three-session review cadence" not in cases:
         fail("S01 horizon regression case missing")
+    if "### R-012 — A HOLD decision must preserve share count" not in master:
+        fail("true HOLD shares-invariance guard missing")
+    if m.get("knownExecutionLimitation", {}).get("status") != "UNFIXED_IN_EXISTING_S01":
+        fail("legacy S01 HOLD semantics must remain flagged UNFIXED until full integration verified")
+    if "C-006 — Legacy S01 HOLD label" not in cases:
+        fail("legacy HOLD-rebalance regression case missing")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

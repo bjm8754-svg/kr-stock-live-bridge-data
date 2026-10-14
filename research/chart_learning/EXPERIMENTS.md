@@ -1,13 +1,14 @@
 # Experiments and non-regression scorecard
 
-The research account has **no verified forecasting performance** as of revision 7. It has useful diagnostics; do not equate them with economic skill.
+The research account has **no verified forecasting performance** as of revision 8. It has useful diagnostics; do not equate them with economic skill.
 
 | ID | Cutoff / window | Method | Observed result | Validity | Next step |
 | --- | --- | --- | --- | --- | --- |
 | E-001 | 5 user-supplied expert plans, Sep–Oct 2026 | Known-price chart reverse engineering | Some apparent Fibonacci/structure matches; not independently derived | DIAGNOSTIC / outcome contamination | Re-run with hidden levels and unseen picks |
 | E-002 | 2026-10-13 EOD V3 top 10 from 33 | Crash-regime machine-vs-human assessment | 0 approved trades; unrealistic invalidations found | DIAGNOSTIC, not stock-picking skill | Compare multiple regimes and valid stops |
 | E-003 | 2026-09-18 cutoff, 2026-09-21–10-13 follow-up | Time-truncated data within future-selected 33 stocks | 6 screened; 3 proposed; 1 plan's targets touched after 1st buy, 2 unfilled; no cost-adjusted portfolio return | SELECTION-BIASED RETROSPECTIVE DIAGNOSTIC / NOT BLIND | Full KRX point-in-time lock and conservative execution |
-| E-004 | pre-existing historical stock_blind S01 | Repo has independent universe reconstruction and locked decisions for a different hidden period | Existing state shows 4 locked steps, not a concluded proof of 2026 September selection | SEPARATE ONGOING RESEARCH | Use existing protocols without claiming it was this study |
+| E-004 | historical stock_blind S01 (legacy execution) | Reconstructed full market, D00–D04 decisions locked | S01 order replay rebalances all positions to `capitalPct` each review even under HOLD. D04 decision frozen; forward settlement still pending at revision 8 | LEGACY_REBALANCE_METHODOLOGY / economic HOLD inference impaired | Finish S01 unchanged, report legacy results, run separate strict-HOLD v2 episode later |
+| E-005 | 2026-10-14 precommit; hidden S01 D04 relative session 12 | Reviewed 2 holdings and all 18 deep candidates, recorded immutable D04 decision in commit `a33da5e9e0e14f1c08627d18929a2ed4824d8053` | HOLD existing A91ECD3412 and A0E433D981, no new buys; following 3-session settlement not yet available as of this entry | PRECOMMITTED / OUTCOME PENDING | Inspect D05 card only after workflow reaches success; distinguish 3-session review from trade duration |
 
 ## Swing horizon correction (L-010 / R-011)
 

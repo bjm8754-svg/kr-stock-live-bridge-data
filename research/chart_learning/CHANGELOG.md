@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 8 — Preserve HOLD semantics, isolate corrected order planner
+
+- Found from `scripts/stock_blind_walkforward.py` that S01 rebalances any selected holding to `capitalPct` at each review independent of the nominal `HOLD`, `ADD` or `REDUCE` action label; legacy S01 therefore cannot unambiguously demonstrate genuine uninterrupted swing holding.
+- Registered canonical R-012, lesson L-011 and case C-006. E-004/S01 is flagged LEGACY_REBALANCE_METHODOLOGY, and D04 outcome remains PENDING while replay runs.
+- Added a **standalone, unit-tested but NOT integrated** order-intent v2 prototype and specification under `research/stock_blind/`: HOLD preserves quantities, ADD buys, REDUCE sells, ENTER opens and omitted existing position exits.
+- Research CI tests the new pure planner without historical data downloads, orders, repo writes or production interaction.
+- Historical S01 decisions, legacy simulation engine, live scanners and Production were NOT changed. A new versioned episode will be needed for fair strict-HOLD performance tests; v2 PnL is NOT VERIFIED.
+
 ## 2026-10-14 — Revision 7 — Separate three-day review from weeks-long swing horizon
 
 - Confirmed existing S01 `stepSessions=3` is a periodic decision/review window, **NOT a required holding duration**; `episodeSessions=30` is the finite experiment window, not a sufficient assessment of multi-month swings.

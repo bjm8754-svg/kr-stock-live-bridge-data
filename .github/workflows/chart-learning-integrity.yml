@@ -10,6 +10,9 @@ on:
       - "README.md"
       - "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md"
       - ".github/workflows/chart-learning-integrity.yml"
+      - "research/stock_blind/ORDER_SEMANTICS_V2.md"
+      - "research/stock_blind/order_semantics_v2.py"
+      - "research/stock_blind/test_order_semantics_v2.py"
 
 permissions:
   contents: read
@@ -29,3 +32,5 @@ jobs:
         run: python research/chart_learning/validate.py --check-append-only
       - name: Run offline integrity tests
         run: python research/chart_learning/test_integrity.py
+      - name: Check isolated strict-HOLD order intent (no market data)
+        run: python research/stock_blind/test_order_semantics_v2.py

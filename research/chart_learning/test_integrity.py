@@ -52,6 +52,15 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("L-010", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
         self.assertIn("30-session episode", master)
 
+    def test_legacy_hold_drift_known_and_not_claimed_fixed(self):
+        m = gate.load_manifest()
+        master = (gate.BASE / "MASTER.md").read_text(encoding="utf-8")
+        self.assertEqual(m["knownExecutionLimitation"]["status"], "UNFIXED_IN_EXISTING_S01")
+        self.assertIn({"id": "R-012", "status": "CANONICAL"}, m["rules"])
+        self.assertIn("HOLD", master)
+        self.assertIn("L-011", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
+        self.assertIn("ORDER_SEMANTICS_V2.md", master)
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])
