@@ -74,6 +74,15 @@ def price_rows(rows, code):
     return values
 
 
+def final_open_price(capture, code):
+    rows = (capture.get("history") or {}).get("rows") or []
+    if not rows:
+        return None
+    stock = (rows[-1].get("stocks") or {}).get(code) or {}
+    price = stock.get("currentPrice")
+    return float(price) if stock.get("marketStatus") == "OPEN" and numeric(price) else None
+
+
 def eval_path(prices, plan):
     if not prices:
         return "DATA_FAIL", "MISSING_OR_INVALID_MINUTE_PRICE", {}
@@ -142,10 +151,12 @@ def calculate(c35, c40, day, run_id, source_hash):
         e35, why35, detail35 = eval_path(p35, plan)
         e40, why40, detail40 = eval_path(p40, plan)
         at35.append({"code": code, "evaluation": e35, "reason": why35, "detail": detail35})
+        last35 = final_open_price(c35, code)
+        last40 = final_open_price(c40, code)
         deltas.append({
-            "code": code, "price0935": p35[-1] if p35 else None,
-            "price0940": p40[-1] if p40 else None,
-            "priceDelta": round(p40[-1] - p35[-1], 4) if p35 and p40 else None,
+            "code": code, "price0935": last35,
+            "price0940": last40,
+            "priceDelta": round(last40 - last35, 4) if last35 is not None and last40 is not None else None,
             "evaluation0935": e35, "evaluation0940": e40
         })
         evaluated.append({"code": code, "name": plan.get("name"), "finalEvaluation": e40, "reason": why40, "detail": detail40})
