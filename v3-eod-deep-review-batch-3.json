@@ -1,1 +1,125 @@
-{"schemaVersion":"V3_EOD_DEEP_REVIEW_BATCH_V1","mode":"SHADOW_ONLY","productionWriteAllowed":false,"status":"PASS","sourceTradeDate":"20261007","sourceWorkflowRunId":37590179207,"sourceIndexGeneratedAtKst":"2026-10-07T17:02:08.434714+09:00","methodologyVersion":"MARKET_STRUCTURE_V3_2026-09-29","reviewedAtKst":"2026-10-07T19:10:17+09:00","batchIndex":3,"batchCount":3,"candidateCodes":["011790","001450","018880","000250","175330","028670","251270","027360","000100","332570","323410","032820"],"reviews":[{"code":"011790","chartState":"WATCH","thesis":"The late-September breakout accelerated from 93,300 to 112,400 in five sessions, but 10/7 rejected 113,700 and closed near the low while RSI remains above 70 with bearish divergence; the original breakout level is now too distant for clean asymmetry.","importantZone":"98,900-104,200 KRW","confirmation":"A controlled pullback that holds the 99k-104.2k post-breakout shelf and then reclaims 112,400-113,700","invalidation":93300,"nextResistance":121390,"chaseJudgement":"Current price is materially extended from the accepted breakout structure; do not chase.","counterargument":"The breakout was backed by several sessions of strong trading-value expansion and can remain in momentum regime despite the first rejection."},{"code":"001450","chartState":"PROBE_CANDIDATE","thesis":"The 46,300-46,400 spring/retest area survived the 10/6 undershoot and 10/7 recovered to 47,850, creating a nearby defined-risk support test after the September decline.","importantZone":"46,300-47,000 KRW","confirmation":"Hold 46,300-46,400 and close-accept above 48,000-48,750","invalidation":46168,"nextResistance":50000,"chaseJudgement":"Probe is attractive only near the reclaimed 46.4k floor; chasing above 48.75k enters prior supply.","counterargument":"The sequence since early September is still lower-high/lower-low and 48k-50k has repeatedly acted as supply."},{"code":"018880","chartState":"WATCH","thesis":"The 3,590 box breakout remains accepted, but the four-session expansion to 4,025 was followed by a 10/7 pullback; current price is still above the breakout yet structural invalidation at 3,225 is too wide for a fresh entry.","importantZone":"3,540-3,650 KRW","confirmation":"Retest and hold 3,590-3,650 followed by renewed acceptance above 3,945-4,025","invalidation":3225,"nextResistance":4100,"chaseJudgement":"Wait for a breakout-level retest rather than buying the middle of the expanded range.","counterargument":"Momentum and volume expansion since 9/30 are strong enough that a shallow consolidation could resume without a deep retest."},{"code":"000250","chartState":"WATCH","thesis":"The 10/1-10/6 breakout leg expanded roughly 40% from the 170,800 structure and 10/7 printed a high-volume upper rejection from 257,000; despite the strong trend, current location is far beyond any nearby structural invalidation.","importantZone":"203,000-219,500 KRW","confirmation":"Orderly pullback that holds the 203k-210k breakout shelf and later reclaims 246,500-257,000","invalidation":194300,"nextResistance":257000,"chaseJudgement":"Do not chase after the vertical four-session expansion and 10/7 rejection.","counterargument":"Trading-value expansion remains exceptional and the breakout can transition into a higher momentum regime after consolidation."},{"code":"175330","chartState":"PROBE_CANDIDATE","thesis":"The 28,100-28,150 area is being tested after a month-long decline from 33,100; 10/7 touched 28,100 and closed back at 28,250, giving a very tight support-location probe despite weak momentum.","importantZone":"28,100-28,550 KRW","confirmation":"Defend 28,100 on closing basis and recover 29,050-30,000","invalidation":28050,"nextResistance":30350,"chaseJudgement":"Only a support-location probe is justified; a rebound chased above 30k loses the asymmetry.","counterargument":"The September-October structure remains a clear lower-high/lower-low sequence and repeated tests can exhaust 28.1k support."},{"code":"028670","chartState":"WATCH","thesis":"Price has recovered toward the 6,268-6,530 resistance band with expanding activity, but the 6,230 close leaves little immediate room before established supply and the broader base has not yet broken out.","importantZone":"5,900-6,050 KRW","confirmation":"Hold 5,900-6,050 and close-accept above 6,300-6,530","invalidation":5560,"nextResistance":6530,"chaseJudgement":"Current price is directly beneath resistance; wait for either a retest or confirmed breakout acceptance.","counterargument":"The 10/7 close was strong and expanding trading value may be an early sign of a genuine base reversal."},{"code":"251270","chartState":"PROBE_CANDIDATE","thesis":"The 33,800-34,250 area has repeatedly contained downside since mid-September and price is again close to that floor; upside toward the 38.7k-39k density offers defined asymmetry if the floor holds.","importantZone":"33,800-34,300 KRW","confirmation":"Hold 33,800 and recover 35,250-35,650; stronger confirmation above 36,650","invalidation":33750,"nextResistance":38750,"chaseJudgement":"Probe only near the established floor; do not chase a rebound into 38.7k-39k resistance.","counterargument":"The broader weekly trend has been declining since August and the box floor has been tested repeatedly without strong demand."},{"code":"027360","chartState":"WATCH","thesis":"The September impulse remains visible, but 10/7 fell from 4,030 to a near-low 3,645 close after the 10/6 spike, breaking the short-term recovery rhythm; nearest clean trend-bridge support around 3,185 is still far below.","importantZone":"3,550-3,700 KRW","confirmation":"Stabilize above 3,550-3,650 and reclaim 3,950-4,050","invalidation":3140,"nextResistance":4487,"chaseJudgement":"Do not treat the 10/7 selloff as an automatic dip-buy; wait for close acceptance and recovery.","counterargument":"The pullback occurred on contracting activity and the larger September trend bridge remains above its structural invalidation."},{"code":"000100","chartState":"PROBE_CANDIDATE","thesis":"Price is near the lower portion of the 72,000-82,500 building box after a multi-week decline; 10/6 showed a rebound from 74,400 and 10/7 retained the 74,800 area, allowing a defined lower-box probe.","importantZone":"72,000-74,800 KRW","confirmation":"Hold the 72k-74.8k lower box and recover 76,900-79,500","invalidation":71900,"nextResistance":81500,"chaseJudgement":"Probe only in the lower box; chasing toward 81.5k-82.5k compresses reward.","counterargument":"The September trend remains downward and 10/7 closed near the session low, so no durable reversal is confirmed yet."},{"code":"332570","chartState":"WATCH","thesis":"The September recovery remains above the old 8,350 trend-bridge level, but 10/7 rejected 9,380 and closed near the low at 8,790; the chart is between support and 10,380 resistance without a clean trigger.","importantZone":"8,100-8,500 KRW","confirmation":"Hold 8,100-8,350 and recover 9,330-9,480","invalidation":7800,"nextResistance":10380,"chaseJudgement":"Wait for a support retest or reclaim; the current middle location after an upper rejection is not clean.","counterargument":"The 8.35k trend bridge has held through multiple pullbacks and could support another recovery leg."},{"code":"323410","chartState":"PROBE_CANDIDATE","thesis":"The 19,610-19,820 lower box area remains intact after repeated late-September/October tests, and current price at 19,870 is close enough for a tightly defined support probe despite the prevailing downtrend.","importantZone":"19,610-19,900 KRW","confirmation":"Hold 19,610 and recover 20,400-20,550; stronger confirmation above 21,000","invalidation":19550,"nextResistance":20398,"chaseJudgement":"Only attractive at the box floor; a rebound chased above 20.5k immediately meets prior supply.","counterargument":"The weekly trend has been deteriorating since August and repeated floor tests can precede a breakdown."},{"code":"032820","chartState":"WATCH","thesis":"The August trend bridge at 11,500 remains the nearest accepted support, but 10/7 rejected 13,420 and closed near the low at 12,370; the current level is between support and the 14,248-14,320 resistance cluster.","importantZone":"11,500-12,000 KRW","confirmation":"Retest and hold 11,500-12,000, then recover 12,950-13,420","invalidation":11150,"nextResistance":14320,"chaseJudgement":"Do not chase inside the middle of the range after 10/7 upper rejection; wait for support or renewed acceptance.","counterargument":"Trading activity contracted on the pullback and the August trend bridge remains structurally valid."}]}
+{
+  "schemaVersion": "V3_EOD_DEEP_REVIEW_BATCH_V1",
+  "mode": "SHADOW_ONLY",
+  "productionWriteAllowed": false,
+  "status": "PASS",
+  "sourceTradeDate": "20261013",
+  "sourceWorkflowRunId": 38366118353,
+  "sourceIndexGeneratedAtKst": "2026-10-13T17:05:16.555792+09:00",
+  "methodologyVersion": "MARKET_STRUCTURE_V3_2026-09-29",
+  "reviewedAtKst": "2026-10-14T09:53:11.599+09:00",
+  "batchIndex": 3,
+  "batchCount": 3,
+  "candidateCodes": [
+    "001040",
+    "090430",
+    "323410",
+    "105560",
+    "001450",
+    "138930",
+    "138040",
+    "316140",
+    "005830"
+  ],
+  "reviews": [
+    {
+      "code": "001040",
+      "chartState": "WATCH",
+      "thesis": "CJ는 9/29 종가 136,500원·9/30 장중 138,600원 이후 10/1 131,200원, 10/8 129,700원, 10/12 127,800원으로 하락했다. 10/13 저가 122,400원으로 9월 저점 125,600원 아래 이탈 후 127,900원으로 마감해 박스 하단 재진입 흔적은 확인되지만, 거래량 20일 대비 0.83배·거래대금 0.81배로 강한 수급 반전이라고 보기 어렵다. 주봉은 고점이 낮아지고 10월 월봉도 9월 종가 134,400원 아래다. 반등 성공과 추세 전환을 구분해 관찰한다.",
+      "importantZone": "122,400원 장중 이탈 저점, 125,600~127,300원 회복·방어대; 상단 129,800~133,500원 공급",
+      "confirmation": "125,600~127,300원 재시험 방어 후 129,800~131,000원 종가 재장악과 거래대금 회복이 함께 확인될 때 재평가",
+      "invalidation": 122400,
+      "nextResistance": "129,800~131,000원, 이후 133,500~138,600원",
+      "chaseJudgement": "반등 종가가 129,800원 단기 저항에 가까운 데다 거래량 0.83배라 10/13 반등만 보고 추격 금지",
+      "counterargument": "10/13 긴 하방 꼬리는 저가 매수 유입을 시사하지만 10/12 대비 종가 100원 회복에 불과해 하락 추세 종료 증거가 약하다"
+    },
+    {
+      "code": "090430",
+      "chartState": "REJECT",
+      "thesis": "아모레퍼시픽은 9/14 144,400원과 9/16 144,900원 이후 9/30 138,600원, 10/2 132,500원, 10/12 130,700원, 10/13 129,700원으로 종가가 낮아졌다. 10/7 138,300원 반등도 10/8 133,900원으로 즉시 되밀렸다. 10/13 장중 128,100원으로 최근 저점 129,000원을 갱신했으나 고가 131,100원 대비 종가가 낮고 거래대금은 20일 대비 0.76배다. 주봉·월봉 모두 상승 추세 반전 없이 약화가 지속돼 스프링 회복 가설을 아직 채택할 수 없다.",
+      "importantZone": "128,100~129,300원 불안정한 하단, 130,700~133,900원 회복 저항",
+      "confirmation": "최소 133,900원 종가 재장악과 이후 138,300원 공급 소화 및 저점 상승 전까지 신규 후보에서 제외",
+      "invalidation": 128100,
+      "nextResistance": "131,100~133,900원, 이후 138,300~142,000원",
+      "chaseJudgement": "9월 고점 이후 연속 약세에서 RSI 36대만 보고 과매도 반등을 매수 근거로 삼지 않음",
+      "counterargument": "10/13 종가가 당일 저점보다 높은 것은 사실이나 10/12 종가보다 낮고 거래대금 증가가 없어 지속적 저가 수요 확인 불충분"
+    },
+    {
+      "code": "323410",
+      "chartState": "WATCH",
+      "thesis": "카카오뱅크는 9/14 21,600원에서 10/8 19,520원까지 밀렸고, 10/12 19,780원에 이어 10/13 19,980원으로 이틀 반등했다. 10/12 저가 19,470원과 10/13 저가 19,520원은 하단 재매수 가능성을 보여주며 RSI도 10/8 30.34에서 40.19로 개선됐다. 그러나 두 날 모두 고가 20,150원을 넘지 못했고 10/13 종가도 그 아래다. 거래량 1.13배 대비 거래대금 추정 1.09배는 상단 매물 소화를 확정할 정도로 강하지 않으며 주봉은 9월부터 하향이다.",
+      "importantZone": "19,470~19,610원 최근 박스 하단, 19,980~20,150원 첫 공급",
+      "confirmation": "19,470원 재이탈 없이 20,150원 이상 종가 수용 후 20,400~20,500원 공급 재장악 및 거래대금 후속 확인",
+      "invalidation": 19470,
+      "nextResistance": "20,150원 반복 고가, 이후 20,400~20,500원",
+      "chaseJudgement": "19,980원에서 바로 20,150원 저항이라 이틀 반등만 보고 따라 사기 불리함",
+      "counterargument": "이틀 연속 저가 방어는 긍정적이나 동일 20,150원 고점에 막히고 9월 하락 흐름을 뒤집는 고점 상승이 없다"
+    },
+    {
+      "code": "105560",
+      "chartState": "WATCH",
+      "thesis": "KB금융은 9/14 181,200원 이후 9/30 169,800원, 10/8 163,400원, 10/12 162,200원, 10/13 161,900원으로 연속 저하된 종가 흐름을 보였다. 10/13 저가 156,400원으로 전일 160,800원 저가를 크게 하회한 뒤 161,900원까지 회복했고 종가 위치 0.859는 저가 수요의 흔적이다. 하지만 거래량 1.01배·거래대금 0.94배에 불과하고 상단 고가 162,800원도 10/12 164,700원보다 낮아 상단 지지 재전환은 확인되지 않았다. 월봉은 9월 종가 169,800원 아래다.",
+      "importantZone": "156,400~159,500원 스프링 저점·하단 방어, 162,800~164,700원 단기 공급",
+      "confirmation": "159,500원 위 재시험 지지와 164,700원 이상 종가 수용, 167,400~169,800원 저항 소화·거래량 확인",
+      "invalidation": 156400,
+      "nextResistance": "162,800~164,700원, 이후 167,400~169,800원",
+      "chaseJudgement": "161,900원은 162,800~164,700원 저항 근처이고 전반 추세 하락이라 저가 반등 추격 금지",
+      "counterargument": "긴 아래꼬리와 0.859 종가 위치는 매수 복귀 가능성을 시사하나 이틀 연속 낮아지는 종가·고점 구조를 바꾸지 못했다"
+    },
+    {
+      "code": "001450",
+      "chartState": "WATCH",
+      "thesis": "현대해상은 9월 초 51,100원대에서 9/23 47,350원까지 하락했고, 9/29 반등 49,850원 이후 10/6 46,800원, 10/8 46,900원, 10/12 47,200원, 10/13 47,150원으로 46,000~48,750원 범위에 갇혀 있다. 10/13 장중 46,000원 저점 이탈 뒤 47,150원에 마감해 46,400원 하단을 회복했지만 거래량 0.57배·거래대금 0.56배로 수요 재확인 강도가 낮고 종가 위치 0.434에 그친다. 주봉·월봉 고점은 여전히 낮아지고 있다.",
+      "importantZone": "46,000~46,400원 하단 재이탈 위험, 47,700~48,750원 상단 공급",
+      "confirmation": "46,400원 재시험 방어와 48,400~48,750원 종가 재장악, 이후 거래량 후속 확인",
+      "invalidation": 46000,
+      "nextResistance": "48,400~48,750원, 이후 49,850~50,700원",
+      "chaseJudgement": "46,000원 일중 저가 반등만으로 스프링 확정 금지; 48,000원 공급 가까운 박스 중간 추격 금지",
+      "counterargument": "9/28 50,200원 반등 고점 이후 10/13 48,650원에 그쳐 하락 고점 구조가 유지됨"
+    },
+    {
+      "code": "138930",
+      "chartState": "WATCH",
+      "thesis": "BNK금융지주는 9/29 16,490원 종가 이후 9/30 15,870원, 10/7 15,400원, 10/12 15,160원, 10/13 15,200원으로 약세 추세다. 10/13 저가 14,760원에서 종가 15,200원까지 되돌린 0.898 종가 위치는 하단 수요를 시사하지만 거래량 1.00배·거래대금 0.96배로 추세 전환의 수급이 강하지 않다. 바로 위 15,250~15,500원 공급이 남아 있고 주봉·10월 월봉도 9월 종가 15,870원보다 아래라 구조적 우위가 부족하다.",
+      "importantZone": "14,760~14,950원 최근 최저가 방어, 15,230~15,500원 저항",
+      "confirmation": "14,760원 재이탈 없이 15,500원 종가 회복·15,870원 재장악과 거래량 확대 확인",
+      "invalidation": 14760,
+      "nextResistance": "15,250~15,500원, 이후 15,870~16,190원",
+      "chaseJudgement": "15,200원은 15,250원 고가 바로 아래이고 확인된 가격 진전이 미미해 추격 금지",
+      "counterargument": "10/13 장중 아래꼬리에도 9/29 이후 낮아지는 종가 흐름과 15,500원 공급 미해결"
+    },
+    {
+      "code": "138040",
+      "chartState": "WATCH",
+      "thesis": "메리츠금융지주는 9/30 126,900원, 10/8 126,700원 이후 10/12 128,800원, 10/13 131,700원으로 반등했고 거래량도 10/12 1.46배에서 10/13 1.61배로 증가했다. 10/13 종가 위치 0.803과 126,800원 저점 방어는 긍정적이지만 당일 132,900원 고가가 9/28 133,600원, 9/30 133,800원 아래여서 아직 공급대 재장악 전이다. 주봉·월봉도 9월 139,100원 상단을 넘지 못했다. 매수 유입 대비 가격 진전은 있지만 지지 전환 확인이 필요하다.",
+      "importantZone": "126,700~128,800원 최근 지지 확인, 132,900~133,800원 첫 반복 저항",
+      "confirmation": "132,900~133,800원 이상 종가 수용 뒤 해당 가격대의 눌림 지지와 139,100원 방향 추가 진전·거래량 유지 확인",
+      "invalidation": 126700,
+      "nextResistance": "132,900~133,800원, 이후 139,100원 9월 상단",
+      "chaseJudgement": "131,700원은 첫 공급대 132,900원에 근접; 거래량만으로 상단 흡수 성공 단정하지 않고 눌림·돌파 확인 전 추격 금지",
+      "counterargument": "10/12~13의 증가한 거래량에도 133,600~133,800원 직전 고점을 돌파하지 못해 상단 지정가 매도 흡수 가능성이 남아 있다"
+    },
+    {
+      "code": "316140",
+      "chartState": "REJECT",
+      "thesis": "우리금융지주는 9/14 36,800원 종가 이후 9/30 34,850원, 10/1 33,600원으로 약화됐는데 10/1 거래량 20일 대비 7.59배 급증에도 9/30 이전 가격대 회복에 실패했다. 10/8 32,400원, 10/12 32,150원, 10/13 31,900원으로 종가가 계속 하락하고 10/13 저가는 30,850원까지 낮아졌다. 10/13 거래량은 평균 0.75배로 실질 수요 재유입도 확인되지 않는다. 주봉·월봉 모두 하방 가격 진전이 지속돼 박스 상단 매매가설은 현재 무효에 가깝다.",
+      "importantZone": "30,850~29,900원 하방 방어 여부, 32,400~33,800원 되돌림 공급",
+      "confirmation": "33,800원 종가 재장악과 하락 고점 구조 회복·거래량 후속 전에는 신규 후보 제외",
+      "invalidation": 30850,
+      "nextResistance": "32,400~33,800원, 이후 34,850~37,050원",
+      "chaseJudgement": "10/1 대량 거래 후 추세 하락이 지속된 종목이므로 RSI 저하·하락폭만 보고 저점 매수 금지",
+      "counterargument": "10/13 저가 30,850원에서 당일 종가 31,900원으로 반등했어도 전일 종가 32,150원 미회복·저점 하락이 계속됨"
+    },
+    {
+      "code": "005830",
+      "chartState": "WATCH",
+      "thesis": "DB손해보험은 10/2 저가 179,600원에서 10/8 186,100원, 10/12 192,900원, 10/13 193,900원으로 회복하며 거래량은 10/13 평균 대비 1.36배로 증가했다. 10/13 197,000원 고가와 193,900원 종가는 매수 유입을 보여주지만 9/17 고가 196,800원, 9월 초 197,600원대 공급을 장중 넘겼다가 종가에서는 다시 그 아래로 내려왔다. 따라서 196,800~197,000원대 돌파 수용은 불완전하고 9월 고점 208,000원 이전 공급 소화를 관찰해야 한다.",
+      "importantZone": "188,700~192,900원 눌림 지지 후보, 196,800~197,000원 단기 공급",
+      "confirmation": "196,800~197,000원 이상 종가 안착과 해당 구간 재시험 방어·거래량 지속 이후 추가 검토",
+      "invalidation": 188700,
+      "nextResistance": "196,800~197,600원, 이후 208,000원 9월 상단",
+      "chaseJudgement": "193,900원에서 196,800~197,000원까지 여유가 작아 거래량 증가만 보고 추격 금지",
+      "counterargument": "10/13 고가 197,000원을 기록했으나 종가가 193,900원으로 후퇴해 상단 매도와 돌파 거절이 남아 있다"
+    }
+  ]
+}
