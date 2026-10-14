@@ -97,6 +97,12 @@ def validate() -> tuple[dict, list[dict]]:
         fail("Yangbongman photo completeness cannot be claimed from text")
     if any(v.get("ciCanVerify") is not False for v in inv.values()):
         fail("CI cannot verify ChatGPT Library contents")
+    if "### R-010 — Analytical pluralism" not in master:
+        fail("missing no-privileged-view canonical rule")
+    if "ONE VIEW" not in master or "YBM is a view among many" not in registry:
+        fail("source methodology incorrectly elevated above independent market analysis")
+    if "one perspective" not in startup or "ONE historical view among many" not in agents:
+        fail("new-session pluralism boundary disconnected")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

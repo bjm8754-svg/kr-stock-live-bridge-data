@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v3 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v4 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -37,6 +37,9 @@ Track executed trades **and non-fills**, signal timing, maximum adverse excursio
 ### R-009 — Visible uncertainty; no fake PASS
 Label findings as VERIFIED / DIAGNOSTIC / HYPOTHESIS / NOT_TESTED; distinguish simulated outcomes from actual live performance. Never claim GitHub commits, scheduled jobs, downstream health, current market quotes, or repeatability without successful checks. See L-006, L-008.
 
+### R-010 — Analytical pluralism: no single analyst's view governs V3
+**Yangbongman (YBM) is ONE VIEW among many, not the centre or master framework.** The same is true of the 91-photo Canonical, Fibonacci, indicator schools, volume/market-profile interpretations, CVD/order-flow, trend-following, fundamentals/catalysts, and any future expert. These sources contain useful **testable ideas**, not mandatory prescriptions. Start from observable market behaviour and the investment problem, then select applicable lenses according to market regime, timeframe, evidence quality and trade horizon. Different lenses may conflict: record the contradiction, prioritize price/volume/time evidence, independently assess the hypotheses, and leave a trade unresolved when evidence is insufficient. Do **not** award points for the number of lenses agreeing, give any source automatic authority, or rebuild the engine around one teacher. Retain each source's original claims and limitations for audit. This is a **user-defined scope rule**, not an empirically verified predictive advantage. See L-009.
+
 ## HYPOTHESES — research only, not hard-coded into V3
 
 ### H-001 — Expert sample may use comparable average-basis risk
@@ -48,6 +51,7 @@ The restricted Sep-18 diagnostic produced two unfilled pullback orders for later
 ## Checklist before any recommendation
 
 - Identify historical/current **cutoff**, data provider, session and price adjustment; verify freshness and valid tick.
+- Begin with market evidence, then use relevant analytic perspectives without assuming any named analyst is the controlling view; reconcile disagreements or abstain.
 - State market/sector regime and scan-universe selection without future leakage.
 - Independently identify major daily / weekly / monthly acceptance and supply zones.
 - Choose trade family and correct order semantics; record buy price, **optional add**, stop, target(s), and cancellation.
@@ -58,7 +62,7 @@ The restricted Sep-18 diagnostic produced two unfilled pullback orders for later
 
 The earlier learning is **NOT limited to** this concise MASTER. **First read `SOURCE_REGISTRY.md`**. It points to the ChatGPT Library archive of all **91** original 2026-09-28 source PNGs and the `차트공부_CANONICAL_MASTER_FINAL_20260929.docx` (including 91-image index), plus the Yangbongman `KakaoTalkChats.txt` export and original GitHub methodology audit. The original Yangbongman picture files behind text-only `사진` placeholders have **not** been proven fully archived. Never treat image-index summaries as full image inspection, and preserve unresolved source ambiguities.
 
-YBM is a **historical method reference**, not a return to governing V3 rules. Its strongest observable learnings — reference candle, trading-value/volume, base, cloud, price role and real breakout acceptance — remain available for comparative study without reintroducing numeric scoring dogma.
+YBM is **one optional historical analytical lens among multiple perspectives**, not the foundation, controlling school, preferred lens or return to governing V3 rules. Its strongest observable learnings — reference candle, trading-value/volume, base, cloud, price role and real breakout acceptance — remain available for comparative study without reintroducing numeric scoring dogma.
 
 ## Direct references
 

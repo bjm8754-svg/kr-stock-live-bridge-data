@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 3
+**Learning revision:** 4
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
@@ -13,7 +13,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
 2. Report: **learning revision**, **repository HEAD SHA actually fetched**, **latest validated experiment**, **outstanding known failure**, and whether the gate PASSED or is NOT VERIFIED.
-3. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
+3. **Do not privilege Yangbongman or any other named methodology:** each is one perspective, selected only when evidence supports its usefulness for this setup. Begin with independent price, participation, structure and regime analysis; document conflicts. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
 4. Any new analysis has a cutoff, source provenance, candidate-selection procedure, precommitted entry/add/stop/target and invalidation, outcome stage, and limitations. Never blend ex-ante and hindsight data.
 5. On new insight: log an evidence-backed lesson (append only), update experiment record, then propose or amend a MASTER rule and CHANGELOG with an incremented MANIFEST revision. Do not silently replace old knowledge.
 6. Verify the changed records using the lightweight research validator; if a verification is unrun/fails, say so. No production write by implication.

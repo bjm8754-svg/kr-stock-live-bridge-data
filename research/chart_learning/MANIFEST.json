@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 3,
+  "revision": 4,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -61,6 +61,10 @@
       "status": "CANONICAL"
     },
     {
+      "id": "R-010",
+      "status": "CANONICAL"
+    },
+    {
       "id": "H-001",
       "status": "HYPOTHESIS"
     },
@@ -69,7 +73,7 @@
       "status": "HYPOTHESIS"
     }
   ],
-  "lessonCount": 8,
+  "lessonCount": 9,
   "latestEvidenceStatus": "DIAGNOSTIC_NOT_CLEAN_BLIND",
   "performanceVerified": false,
   "manualGateRequired": true,

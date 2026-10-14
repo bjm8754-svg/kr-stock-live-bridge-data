@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 4 — Analytical pluralism and no privileged teacher
+- User corrected the framing: **Yangbongman is one analytical view among many**, never V3's default or controlling lens. The existence of archived YBM material does not establish analytical priority.
+- Added R-010 and L-009; explicitly require independent price/volume/time and market-regime judgement before choosing applicable study lenses, with disagreements recorded rather than forcibly averaged.
+- Updated startup, source registry, MASTER and repository-aware agent directions to prevent regression into one-teacher imitation. This is a framing/scope correction, **not measured improvement in returns**.
+- No change to V3 scanner/production/market-data workflows.
+
 ## 2026-10-14 — Revision 3 — Source-status consistency fix
 - Retained all source references, lesson IDs and rules; explicitly labelled Yangbongman photo completeness as `UNVERIFIED` to match the source validator and manifest.
 - Revision 2 integrity check failed on a status-token mismatch; did not claim PASS. Revision 3 repairs it without changing research conclusions or production.

@@ -1,6 +1,8 @@
 # Source registry — original study materials and traceability
 
-**Revision 2 / verified by repository + ChatGPT Library inspection on 2026-10-14 KST.**
+**Source inventory verified by repository + ChatGPT Library inspection on 2026-10-14 KST.**
+**Interpretation scope:** All sources catalogued here are reference perspectives. The existence or archival completeness of a teacher's material confers NO analytical precedence over other evidence or studies. YBM is a view among many. This registry is NOT a ranking of methods.
+
 This is a **source locator**, not a verified copy of externally hosted Library bytes in GitHub. The CI validator checks the registry's presence and references, but **cannot verify the Library images are still accessible**. A future research session must fetch them afresh when needed.
 
 ## A. 2026-09-28 image-based chart study — 91/91 preserved in Library (verified 2026-10-14)
@@ -23,7 +25,7 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - Source ideas: ABC long decline → base → MA600/C recovery; MA600 hot-pink line; strong reference candle open/close, real volume **and trading value**, supply zone `Neomoneomo`, Jindol vs Gadol, Ichimoku/cloud, Yang-Eum-Yang, retest supply contraction, multi-factor stock selection.
 - **Important source discrepancy:** `YBM_V2_METHOD.md` once equated a 'white line' nickname with MA1000; `YBM_METHOD_AUDIT.md` explicitly labels that nickname **UNRESOLVED_FROM_TEXT**. Preserve the audit's uncertainty; do not automatically teach 'white line=MA1000'.
 - The `KakaoTalkChats.txt` export includes textual **'사진' placeholders**. Those prove an image was mentioned in chat, **not** that the referenced media file is archived. **Completeness of Yangbongman original chart screenshots is UNVERIFIED (NOT VERIFIED)**, despite preserved text/method audit.
-- Historical YBM V2 is **not** a mandatory top-level architecture: the 2026-09-29 V3 design replaces the YBM-governed engine with generic market-structure reasoning. Preserve YBM observations and lessons as historical knowledge **without restoring YBM's scoring doctrine**.
+- **YBM is only one view among multiple research perspectives, with no default priority or special weight.** Historical YBM V2 is **not** a mandatory top-level architecture: the 2026-09-29 V3 design replaces the YBM-governed engine with generic market-structure reasoning. Preserve YBM observations and lessons as historical knowledge **without restoring YBM's scoring doctrine**.
 
 ## C. Later studies, separate evidence streams
 
