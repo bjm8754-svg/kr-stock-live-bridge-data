@@ -20,6 +20,12 @@ class IntegrityTest(unittest.TestCase):
             content = (gate.ROOT / filename).read_text(encoding="utf-8")
             self.assertIn("research/chart_learning/START_HERE.md", content)
 
+    def test_original_sources_are_registered_not_falsely_verified(self):
+        m = gate.load_manifest()
+        self.assertEqual(m["externalSourceInventory"]["chartStudyOriginalImages"]["expectedCount"], 91)
+        self.assertEqual(m["externalSourceInventory"]["yangbongmanText"]["originalPictureCompleteness"], "UNVERIFIED")
+        self.assertIn("YBM_METHOD_AUDIT.md", (gate.BASE / "SOURCE_REGISTRY.md").read_text(encoding="utf-8"))
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

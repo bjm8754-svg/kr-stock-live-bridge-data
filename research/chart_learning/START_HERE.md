@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 1
+**Learning revision:** 2
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
@@ -11,7 +11,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 ## Mandatory new-session opening — ordered
 
-1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, LESSONS.jsonl, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
+1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
 2. Report: **learning revision**, **repository HEAD SHA actually fetched**, **latest validated experiment**, **outstanding known failure**, and whether the gate PASSED or is NOT VERIFIED.
 3. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
 4. Any new analysis has a cutoff, source provenance, candidate-selection procedure, precommitted entry/add/stop/target and invalidation, outcome stage, and limitations. Never blend ex-ante and hindsight data.
@@ -25,6 +25,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 | Artifact | Purpose |
 | --- | --- |
 | MANIFEST.json | Current learning revision, required paths and rule registry |
+| SOURCE_REGISTRY.md | **Original image study (91 PNG), canonical DOCX, Yangbongman KakaoTalk text and YBM audit source locator** |
 | MASTER.md | Canonical judgements vs tentative hypotheses; what carries forward |
 | LESSONS.jsonl | Append-only, structured error/correction evidence |
 | CASES.md | Detailed counterexamples with source links |
@@ -34,6 +35,10 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 | validate.py | Static correctness and append-only checks |
 | AGENTS.md (root) | Discovered by repo-aware tools/agents; instructs the first read |
 | ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md (root) | Pre-existing chart judgement protocol |
+
+## Source-of-truth recovery is mandatory
+
+**Never assume the short GitHub MASTER includes all earlier picture-based study.** Read SOURCE_REGISTRY.md first. The 91/91 image archive and original DOCX were separately verified in ChatGPT Library on 2026-10-14; the Yangbongman chat text and GitHub method audits exist, but every referenced original YBM screenshot is **not verified as archived**. Source access in the next chat must be verified anew. Do not claim an all-source continuous education if the original sources were not inspected where needed.
 
 ## Immediate research state (2026-10-14)
 

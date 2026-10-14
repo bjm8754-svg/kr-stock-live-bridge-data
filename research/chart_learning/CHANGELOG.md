@@ -1,5 +1,14 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 2 — Original photo studies and Yangbongman source inheritance
+
+- Verified 91/91 numbered PNG files in ChatGPT Library `/차트공부_원자료_20260928/images/` with no missing or duplicated 001–091 labels.
+- Located `차트공부_CANONICAL_MASTER_FINAL_20260929.docx` and its 91-image source index, plus the earlier system-validation audit.
+- Located Yangbongman text export `KakaoTalkChats.txt` in Library and source-vs-proxy audits `YBM_METHOD_AUDIT.md`, `YBM_V2_METHOD.md` in GitHub.
+- Did **not** claim completeness of Yangbongman photo media: text export's '사진' placeholders are not images.
+- Added SOURCE_REGISTRY.md and mandatory original-source lookup to START_HERE, AGENTS and MASTER; validator requires registry and reference links. CI cannot verify external Library assets.
+- No changes to V3 production, chart algorithms or verified trading performance.
+
 ## 2026-10-14 — Revision 1 — Initial continuity gate
 
 - Established research/chart_learning as the durable V3 learning authority, connected from README, AGENTS and the existing deep-review protocol.

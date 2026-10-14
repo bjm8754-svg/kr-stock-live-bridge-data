@@ -6,6 +6,7 @@
 
 The [research/chart_learning/MANIFEST.json](research/chart_learning/MANIFEST.json) records the learning revision; [AGENTS.md](AGENTS.md) is the repository-aware assistant preflight contract. A **separate, path-filtered, lightweight** [integrity check](.github/workflows/chart-learning-integrity.yml) protects the research records.
 
+- Original photo-based Canonical (91/91 archived in Library) and Yangbongman source registry: [SOURCE_REGISTRY.md](research/chart_learning/SOURCE_REGISTRY.md)
 - Chart analysis baseline: [ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md](ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md)
 - V3 architecture: [MARKET_STRUCTURE_V3.md](MARKET_STRUCTURE_V3.md)
 - Historical blind laboratory: [research/stock_blind/PROTOCOL.md](research/stock_blind/PROTOCOL.md)

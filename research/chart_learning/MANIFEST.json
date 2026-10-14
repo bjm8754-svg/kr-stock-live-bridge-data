@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 1,
+  "revision": 2,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -13,6 +13,7 @@
     "research/chart_learning/START_HERE.md",
     "research/chart_learning/MANIFEST.json",
     "research/chart_learning/MASTER.md",
+    "research/chart_learning/SOURCE_REGISTRY.md",
     "research/chart_learning/LESSONS.jsonl",
     "research/chart_learning/CASES.md",
     "research/chart_learning/EXPERIMENTS.md",
@@ -72,5 +73,29 @@
   "latestEvidenceStatus": "DIAGNOSTIC_NOT_CLEAN_BLIND",
   "performanceVerified": false,
   "manualGateRequired": true,
-  "validationWorkflow": ".github/workflows/chart-learning-integrity.yml"
+  "validationWorkflow": ".github/workflows/chart-learning-integrity.yml",
+  "sourceRegistry": "research/chart_learning/SOURCE_REGISTRY.md",
+  "externalSourceInventory": {
+    "chartStudyOriginalImages": {
+      "store": "ChatGPT Library",
+      "folder": "/차트공부_원자료_20260928/images",
+      "expectedCount": 91,
+      "numberRange": "001-091",
+      "lastManuallyVerifiedKst": "2026-10-14",
+      "ciCanVerify": false
+    },
+    "chartStudyCanonical": {
+      "store": "ChatGPT Library",
+      "name": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+      "lastManuallyVerifiedKst": "2026-10-14",
+      "ciCanVerify": false
+    },
+    "yangbongmanText": {
+      "store": "ChatGPT Library",
+      "name": "KakaoTalkChats.txt",
+      "lastManuallyVerifiedKst": "2026-10-14",
+      "originalPictureCompleteness": "UNVERIFIED",
+      "ciCanVerify": false
+    }
+  }
 }

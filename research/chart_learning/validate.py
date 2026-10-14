@@ -82,6 +82,21 @@ def validate() -> tuple[dict, list[dict]]:
     for lid in ids:
         if lid not in cases and lid not in master and lid not in (BASE / "EXPERIMENTS.md").read_text(encoding="utf-8"):
             fail("lesson never referenced outside ledger: " + lid)
+    registry = (BASE / "SOURCE_REGISTRY.md").read_text(encoding="utf-8")
+    if m.get("sourceRegistry") != "research/chart_learning/SOURCE_REGISTRY.md":
+        fail("original source registry must be manifest-authoritative")
+    for token in ("91", "001–091", "/차트공부_원자료_20260928/images/", "차트공부_CANONICAL_MASTER_FINAL_20260929.docx", "KakaoTalkChats.txt", "YBM_METHOD_AUDIT.md", "UNVERIFIED"):
+        if token not in registry:
+            fail("missing original source inventory: " + token)
+    if "SOURCE_REGISTRY.md" not in startup or "SOURCE_REGISTRY.md" not in agents or "SOURCE_REGISTRY.md" not in master:
+        fail("original source recovery not linked in startup/agent/master")
+    inv = m.get("externalSourceInventory", {})
+    if inv.get("chartStudyOriginalImages", {}).get("expectedCount") != 91:
+        fail("image archive expected count drift")
+    if inv.get("yangbongmanText", {}).get("originalPictureCompleteness") != "UNVERIFIED":
+        fail("Yangbongman photo completeness cannot be claimed from text")
+    if any(v.get("ciCanVerify") is not False for v in inv.values()):
+        fail("CI cannot verify ChatGPT Library contents")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

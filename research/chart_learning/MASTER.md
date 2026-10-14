@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v1 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v2 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -53,6 +53,12 @@ The restricted Sep-18 diagnostic produced two unfilled pullback orders for later
 - Choose trade family and correct order semantics; record buy price, **optional add**, stop, target(s), and cancellation.
 - Compute single-entry risk AND post-add risk if applicable, realistic ATR/gap risk, R/R and trade size.
 - Separate **PLAN / FILLED / TESTED / LIVE**. Log opportunity costs, misses and all rejected setups.
+
+## Original source inheritance (required)
+
+The earlier learning is **NOT limited to** this concise MASTER. **First read `SOURCE_REGISTRY.md`**. It points to the ChatGPT Library archive of all **91** original 2026-09-28 source PNGs and the `차트공부_CANONICAL_MASTER_FINAL_20260929.docx` (including 91-image index), plus the Yangbongman `KakaoTalkChats.txt` export and original GitHub methodology audit. The original Yangbongman picture files behind text-only `사진` placeholders have **not** been proven fully archived. Never treat image-index summaries as full image inspection, and preserve unresolved source ambiguities.
+
+YBM is a **historical method reference**, not a return to governing V3 rules. Its strongest observable learnings — reference candle, trading-value/volume, base, cloud, price role and real breakout acceptance — remain available for comparative study without reintroducing numeric scoring dogma.
 
 ## Direct references
 
