@@ -31,7 +31,7 @@ class IntegrityTest(unittest.TestCase):
         manifest = gate.load_manifest()
         self.assertIn("### R-010 — Analytical pluralism", master)
         self.assertIn({"id": "R-010", "status": "CANONICAL"}, manifest["rules"])
-        self.assertIn("Yangbongman is ONE VIEW among many", master)
+        self.assertIn("Yangbongman (YBM) is ONE VIEW among many", master)
 
     def test_no_research_production_write(self):
         m = gate.load_manifest()

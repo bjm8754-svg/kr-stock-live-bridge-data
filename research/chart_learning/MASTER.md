@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v4 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v5 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 

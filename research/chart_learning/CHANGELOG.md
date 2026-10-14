@@ -1,5 +1,9 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 5 — Non-regression assertion correction
+- Revision 4 core documentation integrity passed but the additional test asserted a non-existent spelling of the correctly documented rule. Corrected the exact test phrase to check the actual `Yangbongman (YBM) is ONE VIEW among many` contract, retaining R-010 and L-009 unchanged.
+- No trading engine, scanning, production or data files changed.
+
 ## 2026-10-14 — Revision 4 — Analytical pluralism and no privileged teacher
 - User corrected the framing: **Yangbongman is one analytical view among many**, never V3's default or controlling lens. The existence of archived YBM material does not establish analytical priority.
 - Added R-010 and L-009; explicitly require independent price/volume/time and market-regime judgement before choosing applicable study lenses, with disagreements recorded rather than forcibly averaged.
