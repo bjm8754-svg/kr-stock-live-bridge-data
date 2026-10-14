@@ -103,6 +103,21 @@ def validate() -> tuple[dict, list[dict]]:
         fail("source methodology incorrectly elevated above independent market analysis")
     if "one perspective" not in startup or "ONE historical view among many" not in agents:
         fail("new-session pluralism boundary disconnected")
+    bmk = (BASE / "MINIMUM_COMPETENCE_BENCHMARK.md").read_text(encoding="utf-8")
+    mc = m.get("minimumCompetence", {})
+    if mc.get("path") != "research/chart_learning/MINIMUM_COMPETENCE_BENCHMARK.md" or mc.get("acceptanceStatus") != "NOT_DEMONSTRATED":
+        fail("minimum competence benchmark not registered or falsely marked achieved")
+    if mc.get("expertRealizedPerformance") != "UNKNOWN":
+        fail("expert's realized record cannot be invented")
+    if mc.get("criteria") != [f"M-{i:02d}" for i in range(1, 8)]:
+        fail("minimum competence criteria drift")
+    for criterion in mc["criteria"]:
+        if criterion not in bmk:
+            fail("minimum benchmark lacks " + criterion)
+    if "five expert" not in bmk.lower() or "MINIMUM" not in bmk:
+        fail("user-defined minimum expert standard missing")
+    if "MINIMUM_COMPETENCE_BENCHMARK.md" not in startup or "MINIMUM_COMPETENCE_BENCHMARK.md" not in master or "MINIMUM_COMPETENCE_BENCHMARK.md" not in agents:
+        fail("minimum benchmark not linked into new-session preflight")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

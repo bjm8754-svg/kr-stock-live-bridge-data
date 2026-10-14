@@ -1,12 +1,16 @@
 # V3 Chart Research MASTER
 
-Version: **v5 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v6 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Minimum measurable ambition (binding user requirement)
+
+**Independent, cumulatively improving trade-judgement AI** is the actual goal. The **minimum bar** is comparable independent candidate discovery and conditional plan quality to the author of the five expert plans in C-001. It is not sufficient to imitate the same stock/levels/style; the quality must be demonstrated on unknown, point-in-time markets and linked to realistically executable economic outcomes. Current status: **NOT YET DEMONSTRATED**. See [MINIMUM_COMPETENCE_BENCHMARK.md](MINIMUM_COMPETENCE_BENCHMARK.md) for M-01 through M-07, the explicit acceptance gate and limitations. No source method or named educator gains priority from being well documented.
 
 ## CANONICAL — must be applied in all future analysis
 

@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 5,
+  "revision": 6,
   "updatedKst": "2026-10-14",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -13,6 +13,7 @@
     "research/chart_learning/START_HERE.md",
     "research/chart_learning/MANIFEST.json",
     "research/chart_learning/MASTER.md",
+    "research/chart_learning/MINIMUM_COMPETENCE_BENCHMARK.md",
     "research/chart_learning/SOURCE_REGISTRY.md",
     "research/chart_learning/LESSONS.jsonl",
     "research/chart_learning/CASES.md",
@@ -101,5 +102,20 @@
       "originalPictureCompleteness": "UNVERIFIED",
       "ciCanVerify": false
     }
+  },
+  "minimumCompetence": {
+    "path": "research/chart_learning/MINIMUM_COMPETENCE_BENCHMARK.md",
+    "reference": "Five user-provided expert plans, CASES.md C-001",
+    "acceptanceStatus": "NOT_DEMONSTRATED",
+    "expertRealizedPerformance": "UNKNOWN",
+    "criteria": [
+      "M-01",
+      "M-02",
+      "M-03",
+      "M-04",
+      "M-05",
+      "M-06",
+      "M-07"
+    ]
   }
 }

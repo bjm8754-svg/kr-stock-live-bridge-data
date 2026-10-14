@@ -33,6 +33,16 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn({"id": "R-010", "status": "CANONICAL"}, manifest["rules"])
         self.assertIn("Yangbongman (YBM) is ONE VIEW among many", master)
 
+    def test_minimum_expert_competence_requires_independent_proof(self):
+        m = gate.load_manifest()
+        self.assertEqual(m["minimumCompetence"]["acceptanceStatus"], "NOT_DEMONSTRATED")
+        self.assertEqual(m["minimumCompetence"]["expertRealizedPerformance"], "UNKNOWN")
+        benchmark = (gate.BASE / "MINIMUM_COMPETENCE_BENCHMARK.md").read_text(encoding="utf-8")
+        for i in range(1, 8):
+            self.assertIn(f"M-{i:02d}", benchmark)
+        self.assertIn("independent", benchmark.lower())
+        self.assertIn("Yangbongman is **one view among many**", benchmark)
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

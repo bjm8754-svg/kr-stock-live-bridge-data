@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-14 — Revision 6 — Explicit minimum competency goal
+
+- Recorded user's binding requirement: **at least the independent chart selection and conditional plan-design quality of the analyst who authored the five example plans**; surpassing this is the longer-term goal.
+- Created MINIMUM_COMPETENCE_BENCHMARK.md (M-01–M-07) for original stock discovery, coherent level plans, risk and execution, regime awareness, fair tests, and cumulative, non-regressing improvement.
+- Restated that no named teacher is privileged, that matching the five prices is not a benchmark pass, and that the benchmark expert's **realized investment performance is unknown**.
+- Added reference to MASTER / START_HERE / EXPERIMENTS / AGENTS, with read-and-test requirement. No model weight training, V3 algorithm change, production cutover, or profit claim.
+
 ## 2026-10-14 — Revision 5 — Non-regression assertion correction
 - Revision 4 core documentation integrity passed but the additional test asserted a non-existent spelling of the correctly documented rule. Corrected the exact test phrase to check the actual `Yangbongman (YBM) is ONE VIEW among many` contract, retaining R-010 and L-009 unchanged.
 - No trading engine, scanning, production or data files changed.

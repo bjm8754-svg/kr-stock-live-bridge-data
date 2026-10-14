@@ -1,7 +1,7 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 5
+**Learning revision:** 6
 **Established:** 2026-10-14 (KST)
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
@@ -11,7 +11,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 ## Mandatory new-session opening — ordered
 
-1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
+1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, MINIMUM_COMPETENCE_BENCHMARK.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
 2. Report: **learning revision**, **repository HEAD SHA actually fetched**, **latest validated experiment**, **outstanding known failure**, and whether the gate PASSED or is NOT VERIFIED.
 3. **Do not privilege Yangbongman or any other named methodology:** each is one perspective, selected only when evidence supports its usefulness for this setup. Begin with independent price, participation, structure and regime analysis; document conflicts. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
 4. Any new analysis has a cutoff, source provenance, candidate-selection procedure, precommitted entry/add/stop/target and invalidation, outcome stage, and limitations. Never blend ex-ante and hindsight data.
@@ -27,6 +27,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 | MANIFEST.json | Current learning revision, required paths and rule registry |
 | SOURCE_REGISTRY.md | **Original image study (91 PNG), canonical DOCX, Yangbongman KakaoTalk text and YBM audit source locator** |
 | MASTER.md | Canonical judgements vs tentative hypotheses; what carries forward |
+| MINIMUM_COMPETENCE_BENCHMARK.md | User's **minimum standard**: the five-plan expert's judgement quality, independently proven; not an algorithm to copy |
 | LESSONS.jsonl | Append-only, structured error/correction evidence |
 | CASES.md | Detailed counterexamples with source links |
 | EXPERIMENTS.md | Honest study outcomes, selection bias, what remains untested |
