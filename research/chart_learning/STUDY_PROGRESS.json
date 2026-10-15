@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 23,
+    "methodologyVersion": 24,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -156,6 +156,12 @@
       "status": "4_ROOT_SCREENSHOT_ENTRIES_INSPECTED_TEACHER_TEXT_CORROBORATED_NO_TRANSFER",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md B-003",
       "claim": "Actual Library screenshots 1000059367/9372/9374/9376 classified as 2026-08-28 YBM chat / expired educational preview; one near-duplicate; compared with KakaoTalkChats transcript. No OHLCV frame recovery or economic proof."
+    },
+    {
+      "type": "GROUPED_ROOT_IMAGE_SOURCE_REVIEW",
+      "status": "15_ACTUAL_PNG_JPG_OPENED_METADATA_1616_LISTED_ONLY",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-META-001",
+      "claim": "Grouped 15 actual screenshots into four derivative education source clusters, found conflicting hotpink/white moving-average labels, recorded screening-vs-entry and exit examples. Metadata enumeration of all 1,616 root entries is not content classification."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -288,7 +294,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue B-004 with 3–5 uninspected 2026-09-23 root sources; avoid 1,616-image full listing, prioritize source-relevant non-expired originals and contradictions; no scanner or S02.",
+    "action": "Continue source-group bulk triage across entire indexed root image corpus, using small visual-tool windows within large continuous sessions, save at meaningful milestones; no 3–5-item stop or report gate.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -369,6 +375,78 @@
         "originalImageRecoveryComplete": false,
         "duplicateHashVerified": false
       }
-    ]
+    ],
+    "inspectPolicy": {
+      "version": "BULK_SOURCE_GROUP_FIRST_V1",
+      "old3to5BatchStopGate": "SUPERSEDED",
+      "technicalImageReadPerCallLimit": 5,
+      "continuousSessionCandidateTargetRange": [
+        30,
+        80
+      ],
+      "persistAt": "meaningful_milestone_or_session_boundary",
+      "userReportAt": "substantial_milestone_or_true_blocker",
+      "sourceInterpretation": "whole_teacher_episode_or_chart_case",
+      "neverAutoTrade": true
+    },
+    "metadataInventory": {
+      "status": "LISTED_NOT_CONTENT_CLASSIFIED",
+      "rootEntries": 1616,
+      "pages": 9,
+      "errors": 0,
+      "listingDateKst": "2026-10-15",
+      "listingScope": "ChatGPT Library root only, all image types",
+      "roughDateCohorts": [
+        [
+          "2026-09-17",
+          111
+        ],
+        [
+          "2026-09-18",
+          38
+        ],
+        [
+          "2026-09-23",
+          65
+        ],
+        [
+          "2026-09-28",
+          98
+        ],
+        [
+          "2026-09-29",
+          39
+        ],
+        [
+          "2026-10-07",
+          4
+        ],
+        [
+          "2026-10-14",
+          52
+        ]
+      ],
+      "rootContentClassifiedComplete": false,
+      "nameBasedDuplicatesNotVerified": true
+    },
+    "bulkStudies": [
+      {
+        "id": "BULK-001",
+        "dateKst": "2026-10-15",
+        "actualRootImagesOpened": 15,
+        "sourceGroups": 4,
+        "groups": [
+          "DECK-A",
+          "DECK-B",
+          "DECK-C",
+          "POSTERS-D"
+        ],
+        "classification": "SECONDARY_EDUCATION_SOURCE_ONLY",
+        "methodologyEvidence": "SOURCE_NAMING_CONTRADICTIONS_IDENTIFIED_NOT_TRANSFER_TESTED",
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "finished": true
+      }
+    ],
+    "totalRootImagesActuallyOpenedAllLoggedWork": 57
   }
 }
