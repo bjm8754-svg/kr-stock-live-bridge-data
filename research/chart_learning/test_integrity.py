@@ -260,12 +260,12 @@ class IntegrityTest(unittest.TestCase):
         m = gate.load_manifest()
         p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
         r = p["sourceRecovery"]
-        self.assertEqual(m["revision"], 29)
+        self.assertGreaterEqual(m["revision"], 29)
         self.assertEqual(p["learningStatus"]["methodologyVersion"], 29)
         self.assertEqual(r["metadataInventory"]["rootEntries"], 1623)
         self.assertEqual(r["metadataInventory"]["previousRootEntries"], 1616)
         self.assertEqual(r["completedCohortDateCount"], 11)
-        self.assertEqual(r["rootEntriesWithinFullyClassifiedCohorts"], 508)
+        self.assertGreaterEqual(r["rootEntriesWithinFullyClassifiedCohorts"], 508)
         self.assertEqual(r["additionalRootVisualSamplesOutsideClosedCohorts"], 180)
         self.assertEqual(r["totalRootImagesActuallyOpenedAllLoggedWork"], 688)
         self.assertEqual(r["rootEntriesAssignedVisualOrAccessOutcome"], 696)
@@ -281,6 +281,20 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
         self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
         self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
+        self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
+        self.assertFalse(m["productionWriteAllowed"])
+
+    def test_bulk008_october14_closed_while_inaccessible_sources_preserved(self):
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        m = gate.load_manifest()
+        sr = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertEqual(m["revision"], 30)
+        self.assertEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 560)
+        self.assertEqual(sr["dateCohortCoverage"][-1]["uploadDate"], "2026-10-14")
+        self.assertEqual(sr["dateCohortCoverage"][-1]["newVisualRead"], 47)
+        self.assertEqual(sr["dateCohortCoverage"][-1]["actualTradingChartFiles"], 0)
+        self.assertEqual(len(sr["partialDateCohortSamples"]), 2)
         self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
         self.assertFalse(m["productionWriteAllowed"])
 
