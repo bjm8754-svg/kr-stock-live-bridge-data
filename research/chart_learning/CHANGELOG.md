@@ -1,5 +1,15 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 29 — BULK-007 four upload cohorts: 304 native reads, 8 verified access failures
+
+- Refreshed full Library-root metadata via nine paginated results: 1,623 image entries compared with 1,616 in previous snapshot (+7). Curated original 91 images remain separately indexed and not overclaimed.
+- Enumerated and attempted every file in four date cohorts (March04=79, March05=104, March06=46, June07=83 =312). Direct visual access succeeded for 72 +103 +46 +83 = **304**. Seven March04 and one March05 file have neither readable pixels nor downloadable backing; quarantined as **CONTENT NOT VERIFIED**, with exact names preserved. Don't claim 312 studied images.
+- Added two completely readable date cohorts (March06 46, June07 83) to earlier nine (379) => 508 complete-cohort files, and March04/March05 opened 72/103 plus previously Oct14 5 => 180 partial-cohort images, total **688 distinct native root images visually inspected**. 8 access failures make 696 classified/access-triaged; 927 listed roots remain unprocessed.
+- Market research treats March S-Oil oil/futures/orderbook time series as one observational episode; no passive limit spoofing/actor proof or executable fill claimed. June07 16-panel Nasdaq/semiconductor correction post and long semicap support/risk forum exposition analyzed as source hypotheses, not real orders or universal numerical rules.
+- No scanner, S02 D04, mock/new routine scans, orders or operational changes. Transfer/economic efficacy remains NOT VERIFIED; 91 original curated PNGs 21 opened, zero independently mastered.
+
+
+
 ## 2026-10-15 — Revision 28 — source-triage completion
 
 - Completed full direct image inspection for upload-date groups 2026-09-17 (111/111) and 09-18 (38/38), 116 newly inspected plus 33 earlier visual checks.
