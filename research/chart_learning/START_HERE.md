@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 14
+**Learning revision:** 15
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## Newly uploaded lecture research (methodology-first)
+
+Two user-supplied lecture documents have source/limitation reviews in [USER_SOURCE_STUDIES.md](USER_SOURCE_STUDIES.md) U-001 (AI summary only) and U-002 (14-page corrected PDF transcript, NO original chart frames). Read this ledger before representing those files as fully watched or mastered; the key unresolved distinctions are box midline versus one candle's CLOSE, timeframe-specific structural failure versus maximum tolerable drawdown, and non-guaranteed retests. None yet proves an independent edge. No autonomous video collection was set up by this ingestion.
 
 ## Video-source study ledger
 

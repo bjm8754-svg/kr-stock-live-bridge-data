@@ -36,7 +36,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 14,
+    "methodologyVersion": 15,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -69,7 +69,16 @@
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
     "deliverable": "Source-grounded competing hypotheses, applicability boundaries, counterexamples, and a cutoff-respecting first transfer case. Record what is still untested before any method rule promotion.",
-    "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this."
+    "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
+    "supportingReading": "research/chart_learning/USER_SOURCE_STUDIES.md",
+    "requiredAnchorDisambiguation": [
+      "C_reference",
+      "C_adjust",
+      "H_adjust",
+      "L_adjust",
+      "M_box"
+    ],
+    "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap"
   },
   "completedEvidence": [
     {
@@ -95,6 +104,12 @@
       "status": "SOURCE_REVIEWED_NOT_TRANSFER_VALIDATED",
       "source": "https://www.youtube.com/watch?v=JSYuRdYKo2M",
       "claim": "Full vidIQ Korean transcript and full-length video visual walkthrough reviewed; compared to actual Library originals 064,066,079; hypotheses recorded in VIDEO_STUDIES.md; no new verified trading edge."
+    },
+    {
+      "type": "USER_SOURCE_LECTURES",
+      "status": "TEXT_SOURCES_REVIEWED_NOT_TRANSFER_VALIDATED",
+      "source": "research/chart_learning/USER_SOURCE_STUDIES.md",
+      "claim": "User uploaded 1 AI summary TXT and 1 edited 14-page lecture PDF. Read supplied textual contents and compared relevant actual Library originals #068 and #076; primary raw video charts and independent quoted outcomes remain unverified. No new canonical entry rule or proved competence."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -118,6 +133,26 @@
       "sourceRecord": "research/chart_learning/VIDEO_STUDIES.md",
       "status": "SOURCE_STUDIED_HYPOTHESES_NOT_VALIDATED",
       "newCanonicalRulesPromoted": 0
+    }
+  ],
+  "userUploadedStudies": [
+    {
+      "id": "U-001",
+      "kind": "AI_TIME_SEGMENT_SUMMARY",
+      "sourceName": "차트강의 2편",
+      "sha256": "ddb5794fc4e8e381bbe3a0b8d2739a5103f73e9df6f78d2c275872ff82f3b103",
+      "readStatus": "ALL_PROVIDED_SUMMARY_READ_NO_FULL_SOURCE_VIDEO",
+      "fullVisualVerification": false
+    },
+    {
+      "id": "U-002",
+      "kind": "EDITED_TRANSCRIPT_PDF",
+      "sourceName": "차트 강의(조정봉)",
+      "sha256": "b285082060a6016cd222dee897fc4a3e1e4ba84857b136a27c7d7a85ea42ae0c",
+      "readStatus": "ALL_14_PAGES_READ_NO_ORIGINAL_CANDLE_FRAMES",
+      "fullVisualVerification": false,
+      "sourceClaimedLectureDate": "2026-10-05",
+      "sourceClaimedDurationSeconds": 5475
     }
   ]
 }

@@ -127,6 +127,21 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(progress["supplementaryVideoStudies"][0]["newCanonicalRulesPromoted"], 0)
         self.assertEqual(progress["s02"]["progression"], "PAUSED_AFTER_D03")
 
+    def test_user_uploaded_lectures_are_not_mistaken_for_watched_videos(self):
+        manifest = gate.load_manifest()
+        self.assertEqual(manifest["userLectureResearchLedger"], "research/chart_learning/USER_SOURCE_STUDIES.md")
+        source = (gate.BASE / "USER_SOURCE_STUDIES.md").read_text(encoding="utf-8")
+        self.assertIn("U-001", source)
+        self.assertIn("U-002", source)
+        self.assertIn("M_box", source)
+        self.assertIn("C_adjust", source)
+        progress = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        self.assertEqual(progress["learningStatus"]["methodologyVersion"], manifest["revision"])
+        self.assertFalse(progress["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertFalse(progress["learningStatus"]["economicEdgeVerified"])
+        for item in progress["userUploadedStudies"]:
+            self.assertFalse(item["fullVisualVerification"])
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

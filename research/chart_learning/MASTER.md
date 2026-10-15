@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v14 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v15 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v14 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## User-uploaded source lectures (source studies only; no promoted method)
+
+Read [USER_SOURCE_STUDIES.md](USER_SOURCE_STUDIES.md) U-001 and U-002: `차트강의 2편` AI highlight summary and a `차트 강의(조정봉)` edited 91m15s transcript PDF, both provided 2026-10-15. These are **TEXT sources**, not directly witnessed chart frames. Discuss price anchors (`C_reference`, `H/C/L_adjust`, `M_box`), structural timeframe/clock versus emergency max-loss constraints, role reversal after accepted closes, and pullback versus continuation as competing execution hypotheses. Original archive images #068/#076 were reopened and the **difference between box central consensus and a single adjustment candle's close must stay explicit**. 'Price must retest' is not a proven deterministic rule. No canonical rule or independent performance upgrade was made from the uploads.
 
 ## Supplemental video studies (non-canonical until independently tested)
 

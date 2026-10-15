@@ -40,6 +40,13 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - The edited recap quotes trader 김씨 and adds the channel host's commentary. **Do not attribute the host's interpretations to 김씨 without checking speaker clips.** No authenticated broker executions, portfolio audit or independently proven outcomes. Do not promote principles into canonical rules without transfer tests.
 - The channel is a supplementary stream, NOT replacing the 91 original study images. The scheduled research workflow should check `VIDEO_STUDIES.md` for already processed YouTube IDs before selecting unseen material.
 
+## E. User-uploaded 차트술사 lecture materials (current chat, 2026-10-15)
+
+- `차트강의 2편 [4tdsCJxpBds_20261015_101751.txt`: AI-generated time-segment summary, approximately 58min; no complete original transcript or chart screenshot. Provides a claimed method of traded-volume reference close and resistance→support on an accepted timeframe-specific close. See `USER_SOURCE_STUDIES.md` U-001.
+- `5_620385370813707921_20261015_101720.pdf`: 14-page corrected/readability-edited transcript of `차트 강의(조정봉)`, labelled 2026-10-05, 91m15s; 14 pages reviewed; **no original candle video frames in the PDF**. See U-002. This adds candidate `조정봉` high/close/low conditional scenario choice and clear failure/retest cases, not verified historical trades.
+- **Do not confuse** a `조정봉 종가` (one candle's closing price) with a historical **박스 중가** (box mid/consensus from multiple bars), even where both work as retrospective support. Re-open the relevant original #068/#076 images when interpreting either claim.
+- The original uploads are chat attachments, not copied into GitHub; new-session access requires actual retrieval. Full details, file hashes, caveats and hypothesis boundaries are preserved in `USER_SOURCE_STUDIES.md`.
+
 ## Mandatory usage in every new V3 study
 
 1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.

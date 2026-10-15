@@ -202,6 +202,21 @@ def validate() -> tuple[dict, list[dict]]:
         fail("video source study record missing or overstated")
     if "VIDEO_STUDIES.md" not in startup or "VIDEO_STUDIES.md" not in master:
         fail("video ledger not linked from startup and master")
+    upload_ledger = m.get("userLectureResearchLedger")
+    if upload_ledger != "research/chart_learning/USER_SOURCE_STUDIES.md":
+        fail("user-uploaded lecture study ledger missing")
+    upload_text = (BASE / "USER_SOURCE_STUDIES.md").read_text(encoding="utf-8")
+    for phrase in ("U-001", "U-002", "C_adjust", "M_box", "NOT VERIFIED", "NO original chart frames"):
+        if phrase not in upload_text:
+            fail("lecture provenance or uncertainty missing: " + phrase)
+    pr = json.loads((BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+    uploads = pr.get("userUploadedStudies", [])
+    if len(uploads) < 2 or any(x.get("fullVisualVerification") is not False for x in uploads[:2]):
+        fail("user-uploaded text sources falsely promoted to visual validation")
+    if pr.get("learningStatus",{}).get("economicEdgeVerified") is not False:
+        fail("user lecture study must not claim economic edge")
+    if "USER_SOURCE_STUDIES.md" not in startup or "USER_SOURCE_STUDIES.md" not in master:
+        fail("uploaded source study missing startup/MASTER link")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 15 — Review uploaded chart-sage lecture summary and adjustment-candle PDF
+
+- Examined user-uploaded 3,823-byte AI summary TXT (10 time-segment summaries) and 14-page, 91m15s edited `차트 강의(조정봉)` PDF. Documented hashes and strict original-chart-video **NOT VERIFIED** status in new `USER_SOURCE_STUDIES.md`.
+- Reopened original Library #068 and #076 for direct comparison. Preserved **different meanings** of multi-bar box midpoint/consensus, one-candle adjustment CLOSE, and high-volume reference-candle CLOSE.
+- Recorded research-only objections to deterministic `must retest`, waiting for month-end under intramonth -20% risk, breakeven-rebound assumptions, and unlimited averaging after a broken support. Identified candidate timeframe and emergency-risk decision layers and open comparative tests; did NOT promote any universal strategy rule or claim an independent trading edge.
+- Linked ledger through startup/MASTER/source-registry/progress and static retention tests. No production scanner, original S02 or automation run modified.
+
 ## 2026-10-15 — Revision 14 — Video V-001 source study and original-image comparison
 
 - At user-supplied direct URL `JSYuRdYKo2M`, acquired full Korean transcript and separately completed full video visual/audio walkthrough. Inspected related original Library images #064, #066 and #079 for comparison.
