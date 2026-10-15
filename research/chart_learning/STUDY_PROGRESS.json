@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 26,
+    "methodologyVersion": 27,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -174,6 +174,12 @@
       "status": "202_ROOT_FILES_RECONCILED_73_NEW_DIRECTLY_OPENED_IN_LAST_SESSION",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
       "claim": "23rd 65 + 28th 98 + 29th 39 fully classified by root filename and image source. 9/28 new 73 includes 69 linked derivative teaching infographics. Actual independent OOS market skill and performance not demonstrated."
+    },
+    {
+      "type": "MIXED_ROOT_IMAGE_SOURCE_TRIAGE",
+      "status": "28_CLOSED_DATE_FILES_AND_38_PARTIAL_SAMPLE_VISUALS_NO_TRANSFER",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-005",
+      "claim": "Four complete new date cohorts total 28 images + 38 actually opened sample images from three incomplete cohorts; duplicated 4h BTC source variants, screenshot charts across sessions not precommitted trades, unrelated setup/media excluded."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -306,7 +312,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Next inspect never-reviewed non-closed date cohorts (e.g. Sep17/Sep18), skipping 9/23,9/28,9/29 and prior filename sets; continue teaching-source-group analysis and independent contradiction checks; no scanner/S02/order.",
+    "action": "Continue remaining 2026-09-17 (95 still uninspected), 09-18 (21 uninspected), 10-14 (47 uninspected) only when value justified; source-prioritize yet-unread standalone market charts & original contemporaneous expert explanations. Do not report contents of uninspected images as known or count them mastered. No scanner S02 or orders.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -556,9 +562,31 @@
         "finished": true,
         "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "noCanonicalRulesPromoted": true
+      },
+      {
+        "id": "BULK-005",
+        "dateKst": "2026-10-15",
+        "closedDateCohorts": {
+          "2026-09-16": 16,
+          "2026-09-24": 3,
+          "2026-10-07": 4,
+          "2026-10-08": 5
+        },
+        "visuallyOpenedInClosedCohorts": 28,
+        "visuallyOpenedInPartialCohortSamples": 38,
+        "totalImagesActuallyReadThisSession": 66,
+        "marketRelevantFindings": [
+          "2026-09-16 app multitimeframe HVM and US cyber snapshot",
+          "2026-09-17/18 HVM daily/15-min/time-of-day continuity sampled",
+          "2026-10-07 two variants of 4h aggressive-buy-vs-price-progress resistance/CVD chart"
+        ],
+        "status": "RESEARCH_ONLY_NO_PROMOTION",
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 202,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 230,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -586,12 +614,70 @@
         "directReadsInPriorSession": 39,
         "alreadyReferencedInB001": 20,
         "previouslyUnnamed": 19
+      },
+      {
+        "uploadDate": "2026-09-16",
+        "allRootEntries": 16,
+        "classifiedFileEntries": 16,
+        "status": "ALL_NATIVE_FILE_BYTES_VISUALLY_INSPECTED",
+        "actualRootImagesOpened": 16,
+        "teachingCases": 0,
+        "notes": "12 stand-alone market-app chart screenshots across several tickers, one unverified cyber-security social-media chart collage, unrelated personal/office/tire items excluded; no independent expert call"
+      },
+      {
+        "uploadDate": "2026-09-24",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_NATIVE_FILE_BYTES_VISUALLY_INSPECTED",
+        "actualRootImagesOpened": 3,
+        "teachingCases": 0,
+        "notes": "travel screenshot and old assistant scanner/automation design commentary; no historical market execution evidence"
+      },
+      {
+        "uploadDate": "2026-10-07",
+        "allRootEntries": 4,
+        "classifiedFileEntries": 4,
+        "status": "ALL_NATIVE_FILE_BYTES_VISUALLY_INSPECTED",
+        "actualRootImagesOpened": 4,
+        "notes": "two business documents; same annotated crypto 4h/CVD chart in gallery screenshot and image export, underlying chart appears duplicated; not two independent actual trades"
+      },
+      {
+        "uploadDate": "2026-10-08",
+        "allRootEntries": 5,
+        "classifiedFileEntries": 5,
+        "status": "ALL_NATIVE_FILE_BYTES_VISUALLY_INSPECTED",
+        "actualRootImagesOpened": 5,
+        "notes": "safety/incident and personal-message screenshots; not chart sources; no raw content or identifying details copied"
       }
     ],
-    "completedCohortDateCount": 3,
-    "rootEntriesWithinFullyClassifiedCohorts": 202,
+    "completedCohortDateCount": 7,
+    "rootEntriesWithinFullyClassifiedCohorts": 230,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
-    "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207
+    "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
+    "additionalRootVisualSamplesOutsideClosedCohorts": 38,
+    "partialDateCohortSamples": [
+      {
+        "uploadDate": "2026-09-17",
+        "totalListed": 111,
+        "visuallyOpened": 16,
+        "status": "PARTIAL_ONLY",
+        "verifiedTheme": "two market-app HVM chart screens, a later HVM intraday screen and many operational/industrial EHS slide/coding/system images; remainder NOT VISUALLY VERIFIED"
+      },
+      {
+        "uploadDate": "2026-09-18",
+        "totalListed": 38,
+        "visuallyOpened": 17,
+        "status": "PARTIAL_ONLY",
+        "verifiedTheme": "three stock-app screens, sampled cloud/Google and GitHub configuration screens; other 21 remain NOT VISUALLY VERIFIED"
+      },
+      {
+        "uploadDate": "2026-10-14",
+        "totalListed": 52,
+        "visuallyOpened": 5,
+        "status": "PARTIAL_ONLY",
+        "verifiedTheme": "sampled career/recruiting plus safety and office document screenshots, other 47 NOT VISUALLY VERIFIED"
+      }
+    ]
   }
 }

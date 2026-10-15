@@ -206,8 +206,8 @@ class IntegrityTest(unittest.TestCase):
         p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
         sr = p["sourceRecovery"]
         self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
-        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"]], [65, 98, 39])
-        self.assertEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 202)
+        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"][:3]], [65, 98, 39])
+        self.assertGreaterEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 202)
         self.assertTrue(sr["totalRootCountIsConservativeLowerBound"])
         self.assertFalse(sr["deduplicatedAcrossAllHistoricalBatchesVerified"])
         self.assertEqual(sr["bulkStudies"][2]["id"], "BULK-003")
@@ -220,6 +220,24 @@ class IntegrityTest(unittest.TestCase):
         self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
         self.assertFalse(m["productionWriteAllowed"])
         self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
+
+    def test_bulk005_preserves_partial_vs_complete_source_evidence(self):
+        m = gate.load_manifest()
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        sr = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 230)
+        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"]], [65,98,39,16,3,4,5])
+        self.assertEqual([(x["totalListed"], x["visuallyOpened"]) for x in sr["partialDateCohortSamples"]], [(111,16),(38,17),(52,5)])
+        self.assertEqual(sr["bulkStudies"][-1]["totalImagesActuallyReadThisSession"], 66)
+        self.assertEqual(sr["additionalRootVisualSamplesOutsideClosedCohorts"], 38)
+        self.assertFalse(sr["deduplicatedAcrossAllHistoricalBatchesVerified"])
+        self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
+        self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
+        self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
+        self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
+        self.assertFalse(m["productionWriteAllowed"])
 
     def test_no_research_production_write(self):
         m = gate.load_manifest()

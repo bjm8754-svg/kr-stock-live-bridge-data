@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v26 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v27 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,12 @@ Version: **v26 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-005 — Recovered app-chart time anchors and resistance absorption source
+
+Directly opened all 16 Sep16 root images and separately all 3 Sep24, 4 Oct7, 5 Oct8 root images; **28 new completed-cohort root files**. Partially inspected mixed material: Sep17 16/111, Sep18 17/38, Oct14 5/52. Many samples are EHS slide production or historical Cloudflare/GitHub/Apps Script system screenshots: these are not source studies in trading and their sensitive content has not been copied. Actual relevant screens include Sep16 Korean US-macro stock app snapshots (HVM, LG CNS, Hyundai Mobis/Motor, FTNT/PANW and others), and Sep17–18 HVM multitimeframe price snapshots (9/16 price displayed 53,100, 9/17 display 57,200 with 15m earlier high 61,100, 9/18 premarket display 60,600 and marked 62,400 high). **Never infer all images represent the same session or all prices were actionable order quotes**: check app session filter `오전8시~`, chart timeframe, latest-completed bar, potential adjustment, spread and true as-of timestamps. Images are unpaired or sequential user-chosen chart states, NOT a previously forecast trade, and cannot prove return.
+
+Oct7 image `1000059945.jpg` and `chart-1(20261007-140508).png` show the **same underlying annotated TradingView 4h crypto chart** with an overhead supply/resistance zone and a CVD/Delta panel. Strong aggressive-buy participation while price fails to extend near repeatedly tested resistance is *consistent with* absorption by resting sellers, but other alternatives include passive liquidity replenishment, netting/cancellation effects, indicator reset and volatile intrabar reversals. Check CVD anchor/reset interval BEFORE comparing its highs; do not infer a verified institutional short from screenshot colored zones or claim exact values absent clean synchronized OHLCV and exchange order data. Market-price progress / time and support/resistance are primary; source image is not an OOS success. No new CANONICAL rules. All findings/source limits registered `RECOVERED_SCREENSHOT_CATALOG.md`, no S02/scanner/operation change.
 
 ## BULK-003/004 — Root source census, distinction between conceptual box compression and actual market price
 
