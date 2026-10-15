@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 16 — Correct study evidence notice and preserve append-only revision contract
+
+- Clarified the 14-page `차트 강의(조정봉)` PDF has **NO original chart frames**. No user source was fabricated or upgraded to full visual verification.
+- An evidence-wording correction to `USER_SOURCE_STUDIES.md` was committed without a manifest increment and correctly rejected by CI. Bumped MANIFEST/START_HERE/MASTER/STUDY_PROGRESS together to v16 to restore the append-only continuity validation. This is **clerical quality control only**, not a new methodological insight or improved trading competence.
+- Preserved the uploaded-material research and existing phase lock. No scanner, S02 or automation changes.
+
 ## 2026-10-15 — Revision 15 — Review uploaded chart-sage lecture summary and adjustment-candle PDF
 
 - Examined user-uploaded 3,823-byte AI summary TXT (10 time-segment summaries) and 14-page, 91m15s edited `차트 강의(조정봉)` PDF. Documented hashes and strict original-chart-video **NOT VERIFIED** status in new `USER_SOURCE_STUDIES.md`.
