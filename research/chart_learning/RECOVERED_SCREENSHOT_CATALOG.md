@@ -2,6 +2,26 @@
 
 **Batch B-001 — 2026-10-15 KST.** This is a **source recovery and classification record**, not 35 new trading lessons, not proof that every old chat attachment survives, and not a model-weight or system-skill update.
 
+
+## Batch B-003 — 4 firsthand Library screenshots; source-relevance and false-label caution (2026-10-15)
+
+**Direct visual access / bounded batch:** opened exactly four previously uninspected root originals `1000059367.jpg`, `1000059372.jpg`, `1000059374.jpg`, and `1000059376.jpg` from the Library's 2026-09-23 upload group (65 entries listed *only within the date filter*). Did NOT re-list all 1,616, open more images, scan securities, or replay S02. The files are screenshots of older **2026-08-28** teaching discussion, NOT primary broker-verified transactions. Preserve distinctions between the image's chat timestamp, the Library upload date, the chart's historical cutoff, and the investigator's inspection date.
+
+| Root image | Direct observation and classification | Integrity / uncertainty |
+| --- | --- | --- |
+| `/1000059367.jpg` | KakaoTalk discussion screenshot around 2026-08-28 00:19–00:21, instructor cites a previously asserted LG CNS June 1 change-to-sell view and recaps `A급`, `진돌이`, `핫핑크`, `네모네모`, `가돌이`. A small embedded chart is overlaid as unavailable. **Teacher's hindsight instructional narrative** | Timestamp and content independently cross-matched to Library `KakaoTalkChats.txt` lines 3399–3410; no screenshot-original chart pixels, exact entry/exit, independently verified contemporaneous public post or realized trade |
+| `/1000059372.jpg` | Screenshot of a teaching-page/chart image under a large “원본 파일이 만료되어 미리보기 파일로 대체됩니다” overlay; title/context associates Samsung SDS and a potential misleading-pattern / short-term behavior explanation. **Degraded YBM pedagogical preview** | Underlying OHLCV date, candles, indicator parameters, price/volume and any text obscured by overlay **NOT RECOVERED**. Do not infer exact numeric levels |
+| `/1000059374.jpg` | Another expired-preview screenshot of apparently the same Samsung SDS chart with a more legible distinct lower note: the source warns against carelessly naming this as `네모네모 진돌이` and says to revisit the earlier lessons. **Explicit example of a contested setup label** | Overlay obscures decisive bars. May reflect a different lesson stage/timeframe than early 00:11 instructor `진돌이` remarks; **apparent tension, NOT proven factual contradiction**, nor proof which classification is correct |
+| `/1000059376.jpg` | Another Kakao gallery screenshot of the same underlying teaching-page preview/text seen in 9372, with a device notification overlay. **Near-duplicate presentation variant** | Visual near-duplicate of 9372, but not identical entire screenshot and **no binary hash comparison**; notification/private content deliberately excluded from analysis and repo |
+
+**Corroborating actual user-supplied transcript:** `KakaoTalkChats.txt` 2026-08-28 around 00:07–00:11 describes Samsung SDS `ABC`, `핫핑크`, `화이트라인`, `네모네모`, and `진돌이`. At 00:19–00:20 the same preserved transcript claims LG CNS calls and repeats education categories; at 00:24–00:25 photo-only textbook placeholders occur. This matches the discussion's *pedagogical context* but textual `사진` markers **cannot independently prove which pixel file belonged to each message**. Without readable original graph frames and exact as-of chronology, don't resolve the setup-label dispute by loyalty to the teacher, hindsight, or a screenshot heading.
+
+**Evidence-grounded reasoning, NOT promoted rule:** A named pattern may describe a *proposed* base-and-breakout structure, whereas a later chart may show exhaustion, failed continuation, or a distinct time horizon. To test, first map actual OHLCV trend, price/participation/time, setup label declared as-of, pre-existing supply level, price acceptance, and invalidation; only then compare with any expert naming. Compare accepted-breakout and failed-breakout diagrams #066/#078/#079 *as competing conceptual lenses*, not evidence that this particular expired Samsung SDS chart matched either. The author’s claim of precisely calling a profitable high or outperformance remains unaudited.
+
+**Classification accounting:** 4 physical Library entries, approximately **3 distinct screenshot views** (9372 and 9376 visual near-duplicates); likely overlapping underlying chart among 9372/9374, exact unique original screenshot count and binary duplicate status **UNKNOWN**. None proves an expert's realized trading edge. No formerly missing high-resolution chart was restored, though instructional text and source variants were recovered. This batch's improvement is *source provenance and contradiction isolation only*: independent unfamiliar-chart transfer and performance remain **NOT DEMONSTRATED**.
+
+**Next batch B-004:** choose only 3–5 remaining *unopened* 2026-09-23 group root originals (do not repeat B-001, B-002, B-003); prioritize preserved teacher-readable captions and non-expired actual charts, cross-check transcript by chart date / educator comment timestamp, and document conflicts separately. No full-root scan and no S02/new scanner.
+
 ## Batch B-002 — 3-file duplicate triage, 2026-10-15
 
 **Review scope (strictly three actual Library originals; no large-paging/rescanning):**

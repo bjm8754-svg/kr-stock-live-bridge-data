@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 22,
+    "methodologyVersion": 23,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -150,6 +150,12 @@
       "status": "3_NEW_NATIVE_PNG_INSPECTED_NO_TRANSFER",
       "source": "/차트공부_원자료_20260928/images/ 052,056,058",
       "claim": "P-002 directly re-opened original spring diagrams, distinguishes preemptive, reclaim, retest information times; no independent predictive or economic evidence."
+    },
+    {
+      "type": "RECOVERED_SOURCE_BATCH",
+      "status": "4_ROOT_SCREENSHOT_ENTRIES_INSPECTED_TEACHER_TEXT_CORROBORATED_NO_TRANSFER",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md B-003",
+      "claim": "Actual Library screenshots 1000059367/9372/9374/9376 classified as 2026-08-28 YBM chat / expired educational preview; one near-duplicate; compared with KakaoTalkChats transcript. No OHLCV frame recovery or economic proof."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -282,28 +288,30 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue a new 3–5 image microbatch from uninspected originals; catalog classification and duplicate verdict; commit then stop; avoid repeated full Library scans.",
+    "action": "Continue B-004 with 3–5 uninspected 2026-09-23 root sources; avoid 1,616-image full listing, prioritize source-relevant non-expired originals and contradictions; no scanner or S02.",
     "latestManuallyInspectedBatch": {
-      "id": "B-002",
+      "id": "B-003",
       "reviewedOnKst": "2026-10-15",
-      "rootImageEntriesDirectlyOpened": 3,
+      "rootImageEntriesDirectlyOpened": 4,
       "filenames": [
-        "1000059240.jpg",
-        "1000059240(1).jpg",
-        "1000059240(2).jpg"
+        "1000059367.jpg",
+        "1000059372.jpg",
+        "1000059374.jpg",
+        "1000059376.jpg"
       ],
-      "distinctVisualSources": 1,
-      "visualDuplicates": 2,
+      "distinctVisualSources": 3,
+      "visualNearDuplicates": 1,
       "binaryHashVerified": false,
-      "classification": "Past ChatGPT scanner shortlist (four-condition TOP 10) only, not independent educator charts; no outcome validation",
+      "teacherTextCorroborated": true,
+      "classification": "2026-08-28 YBM instructor conversation + degraded Samsung SDS teaching-page screenshots; one near-duplicate; exact candle/price structure unavailable",
       "catalog": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
       "finished": true,
       "unseenTransferDemonstrated": false,
       "originalImageRecoveryComplete": false,
       "duplicateHashVerified": false
     },
-    "batchCountVerified": 2,
-    "reviewedRootImageEntriesAcrossLoggedBatches": 38,
+    "batchCountVerified": 3,
+    "reviewedRootImageEntriesAcrossLoggedBatches": 42,
     "recoveryBatchLimit": 5,
     "completedBatches": [
       {
@@ -334,6 +342,27 @@
         "visualDuplicates": 2,
         "binaryHashVerified": false,
         "classification": "Past ChatGPT scanner shortlist (four-condition TOP 10) only, not independent educator charts; no outcome validation",
+        "catalog": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "finished": true,
+        "unseenTransferDemonstrated": false,
+        "originalImageRecoveryComplete": false,
+        "duplicateHashVerified": false
+      },
+      {
+        "id": "B-003",
+        "reviewedOnKst": "2026-10-15",
+        "rootImageEntriesDirectlyOpened": 4,
+        "filenames": [
+          "1000059367.jpg",
+          "1000059372.jpg",
+          "1000059374.jpg",
+          "1000059376.jpg"
+        ],
+        "distinctVisualSources": 3,
+        "visualNearDuplicates": 1,
+        "binaryHashVerified": false,
+        "teacherTextCorroborated": true,
+        "classification": "2026-08-28 YBM instructor conversation + degraded Samsung SDS teaching-page screenshots; one near-duplicate; exact candle/price structure unavailable",
         "catalog": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "finished": true,
         "unseenTransferDemonstrated": false,

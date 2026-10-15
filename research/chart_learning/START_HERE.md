@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 22
+**Learning revision:** 23
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## B-003 uncatalogued-source recovery — 4 actually reopened root images
+
+`RECOVERED_SCREENSHOT_CATALOG.md` B-003 documents four 2026-09-23-uploaded screenshots of an Aug-28 Yangbongman discussion, including degraded Samsung SDS teaching pages and one visual near-duplicate. Original KakaoTalk text was corroborated; no reliable original OHLCV pixels were restored and the apparent `진돌이` setup-name tension is **unresolved** (timeframe/source stage not authenticated). Total manually opened root images **42** across B-001 35, B-002 3, B-003 4. B-004 is next (3–5 unseen root originals). Do not equate classification with verified method competence.
 
 ## P-002 source cross-check: three spring originals (not mastery)
 
