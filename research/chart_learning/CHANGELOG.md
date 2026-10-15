@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 23 — B-003 four root screenshot source triage + contradiction provenance
+
+- Actually reopened 4 previously uninspected Sep-23-uploaded root image files (9367/9372/9374/9376), matched Aug-28 contextual teaching against original KakaoTalk transcript, and registered observed claims, image-expiry blockers, a visually near-duplicate file and unresolved `진돌이` classification tension.
+- Batches now B-001=35, B-002=3, B-003=4, total 42 direct root-image entries. Three screenshot views approximately distinguishable within B-003, **not three unique authentic original chart frames**. No new original OHLCV pixels recovered, no independently validated method edge or transfer.
+- Versioned repository source/progress and regression assertions only; existing scanner, S02 D00–D03, account orders and operational paths remain unchanged. Continue in B-004 with 3–5 originals only.
+
+
 ## 2026-10-15 — Revision 22 — Read original spring images #052/#056/#058 and separate signal information times
 
 - Directly opened three previously undocumented numbered Library originals #052/#056/#058 in a fresh research conversation; re-opened existing breakout originals for critical comparison. Recorded source image observations, teacher-versus-model inferences and cutoff-dependent preemptive/reclaim/retest trade mode distinctions in PRIMARY_IMAGE_STUDIES P-002.
