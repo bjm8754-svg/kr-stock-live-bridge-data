@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v29 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v30 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v29 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-008 — Nonresearch screening without contaminating chart learning
+
+All Oct14 52 images were directly visually read (prior 5 + 47 new); sources are career applications, EHS business file tree/email and resume drafts, **not market charts**. No trading conclusions drawn from these. Root date cohorts fully verified now total 560, not all 1,616. Eight older March original file bytes are access-blocked and stay NOT VERIFIED. Do not archive private names/workplace details into chart methodology. S02 and scanner unmodified.
 
 ## BULK-007 — Source triage shifts from counts to independent evidence
 
