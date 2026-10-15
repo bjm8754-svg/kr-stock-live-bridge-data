@@ -1,5 +1,9 @@
 # Source registry — original study materials and traceability
 
+**BULK-007 evidence / accessibility ledger:** see `RECOVERED_SCREENSHOT_CATALOG.md` BULK-007. Fresh Library root metadata 1,623 (+7); explicitly tried all 312 March04/March05/March06/June07 root images, 304 visibly rendered, 8 unavailable/no downloadable original (NOT VERIFIED). Time-sequenced S-Oil/WTI March4–6 market data and June7 social market correction/risk commentary grouped by source, not counted as independent successful trades. All-time conservative native root visible count=688. The 8 inaccessible images are not included in visually studied total. Production/S02 unchanged.
+
+
+
 **Revision 28 evidence locator:** Sep17 (111) and Sep18 (38) root images directly viewed across two research runs; exact filenames and source-type category in `RECOVERED_SCREENSHOT_CATALOG.md` BULK-006. Distinguish market-app chart snapshots from EHS and developer screens. No precommitted trade or independent performance proof. Existing S02 paused.
 
 
