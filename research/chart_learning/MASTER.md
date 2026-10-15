@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v27 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v28 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v27 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-006 — Distinguish genuine source evidence from workflow and session artifacts
+
+Complete Library root upload-date inspection of Sep17 **111/111** and Sep18 **38/38** by exact images, 116 source files opened anew vs prior v27 sample 33. All nine complete dates now **379 verified date-distinct file entries**, not charts understood or trades validated; separately Oct14 remains only 5/52 inspected. **An old assistant `TARGET_NEXT_SESSION` recommendation screenshot is derivative, not a preserved trade ticket.** HVM displayed daily/15m prices within Sep16–18 together with Sep17 suggested watch/limit snapshots cannot establish fills, profits or future prediction without predecision clock, venue, 08:00+ session status, completed OHLC bars, trigger and invalidation and tick-by-tick execution assumptions. Other Sep17/18 screenshots are mostly risk-assessment training iterations and historic Cloudflare/GitHub/Google integration panels; these are excluded from market method evidence and sensitive details deliberately omitted. All 149 exact filenames and classification in `RECOVERED_SCREENSHOT_CATALOG.md` BULK-006. **Source scarcity:** metadata quantity is not primary teacher mastery; 91 originals only 21 opened, zero independently mastered. Next work returns to actual core-91 visual analysis. No canonical promotion, no OOS transfer, no verified economic edge, no scan/S02/order/operations change.
 
 ## BULK-005 — Recovered app-chart time anchors and resistance absorption source
 
