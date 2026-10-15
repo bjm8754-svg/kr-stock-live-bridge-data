@@ -1,5 +1,9 @@
 # Source registry — original study materials and traceability
 
+**BULK-002 additional source group (v25):** [ROOT_IMAGE_STUDIES_BULK002.md](ROOT_IMAGE_STUDIES_BULK002.md) records 45 actually opened Library-root images with exact names and case-by-case limitations. Native source reading is 102 root files including unrelated/degraded/overlaps; independent teaching lessons and trade outcomes fewer and unverified. Teacher SFA (~2026-08-27), Mirae Asset Venture (~08-07) cross-checked against Library `KakaoTalkChats.txt`; 10 standalone RSI diagrams and 5 chronological-before/after case pairs documented. Those chart pairs are NOT an OOS episode and are topic-overlaps of canonical #082–091, which remain independently unopened as native archive images.
+
+
+
 **Source inventory verified by repository + ChatGPT Library inspection on 2026-10-14 KST.**
 **Interpretation scope:** All sources catalogued here are reference perspectives. The existence or archival completeness of a teacher's material confers NO analytical precedence over other evidence or studies. YBM is a view among many. This registry is NOT a ranking of methods.
 
