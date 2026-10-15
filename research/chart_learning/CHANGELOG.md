@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 17 — Direct original-image #064–#081 reading and price-anchor reconciliation
+
+- Directly opened all eighteen original `차트술사` native images `064–081` from the verified Library archive (previously only five of these had been directly opened). Documented per-image source claims, alternative explanations, contradictions and pending falsifiable tests in `PRIMARY_IMAGE_STUDIES.md` P-001.
+- Compared the actual images with the **already supplied** two user lecture texts. Crucially separated old box top/middle, a newly formed breakout **event candle close (#077)** and a real adjustment candle's close from the edited lecture PDF. Evaluated volume clues, failed breakout with increased volume, non-guaranteed retracements, and period-close versus intraperiod risk.
+- Recorded illustrative numerical case 11,300/12,000/12,600/13,500 from the teaching images **as cartoon only**; no invented fills, empirical probability, stops, opportunity-cost estimates or portfolio return.
+- Updated STUDY_PROGRESS to show 18 inspected images, zero verified mastered images and **unseen-chart transfer NOT PROVEN**. Expanded next original-corpus reading queue. No new canonical trade rules, full corpus mastery claim, scanner work, S02 progression or automation.
+
 ## 2026-10-15 — Revision 16 — Correct study evidence notice and preserve append-only revision contract
 
 - Clarified the 14-page `차트 강의(조정봉)` PDF has **NO original chart frames**. No user source was fabricated or upgraded to full visual verification.

@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v16 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v17 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v16 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Primary box-breakout original-image review (P-001 / NOT validated trading rule)
+
+The user's original chart-sage **#064–#081, all eighteen native images, were visually opened and critically compared one by one** on 2026-10-15. [PRIMARY_IMAGE_STUDIES.md](PRIMARY_IMAGE_STUDIES.md) records exact image-number claims, model-constructed hypotheses, ambiguities, economic risk and untested criteria. Main distinction: `U_box` functional role flip, historical `M_box` negotiated center, dynamically created `C_event` high-volume breakout candle close (#077), and `H/C/L_adjust` from a later actual adjustment candle (edited PDF U-002) are not interchangeable. #067 explicitly allows no pullback, #078 includes failed high-volume breakout, #076 requires support *function*, not mere price touch. Never claim study-by-opening alone proves independent economic judgment or universal retest propensity.
 
 ## User-uploaded source lectures (source studies only; no promoted method)
 

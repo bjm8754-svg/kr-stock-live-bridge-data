@@ -47,6 +47,13 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - **Do not confuse** a `조정봉 종가` (one candle's closing price) with a historical **박스 중가** (box mid/consensus from multiple bars), even where both work as retrospective support. Re-open the relevant original #068/#076 images when interpreting either claim.
 - The original uploads are chat attachments, not copied into GitHub; new-session access requires actual retrieval. Full details, file hashes, caveats and hypothesis boundaries are preserved in `USER_SOURCE_STUDIES.md`.
 
+## F. In-depth source review (2026-10-15) — native originals 064–081
+
+- `PRIMARY_IMAGE_STUDIES.md` P-001 documents direct visual inspection of **all 18 native original numbered PNGs 064–081**, with their distinct lessons and falsifiable chart questions. Library file inventory was rechecked; **source-reading coverage is not mastery**.
+- Documented distinction: multi-bar old `U_box/M_box/L_box`; new traded-volume event/reference candle closing price `C_event` (#077); separately actual adjustment candle `H/C/L_adjust` from user edited PDF. Do not turn equal-looking prices into identical source roles.
+- Original #067 permits no-return breakout, and #078 illustrates volume-increased failed breakouts, forbidding deterministic retest or simplistic volume-is-proof assertions. #076 requires sustained **support function**, not mere retest level touched.
+- Continue studying ORIGINAL sources before doing any new scanner or daily market task; next topical groups #046–063 and #082–091, then remaining original images.
+
 ## Mandatory usage in every new V3 study
 
 1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.

@@ -27,16 +27,29 @@
     "inventoryVerifiedKst": "2026-10-15",
     "directlyOpenedOriginalNumbers": [
       "064",
+      "065",
       "066",
+      "067",
       "068",
+      "069",
+      "070",
+      "071",
+      "072",
+      "073",
+      "074",
+      "075",
       "076",
-      "079"
+      "077",
+      "078",
+      "079",
+      "080",
+      "081"
     ],
-    "directImageInspectionCompleteness": "PARTIAL_ONLY",
+    "directImageInspectionCompleteness": "PARTIAL_ONLY_18_OF_91_OPENED",
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 16,
+    "methodologyVersion": 17,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -45,7 +58,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "QUEUED",
+    "status": "SOURCE_18_IMAGES_INSPECTED_TRANSFER_STILL_UNTESTED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -78,7 +91,8 @@
       "L_adjust",
       "M_box"
     ],
-    "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap"
+    "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap",
+    "studyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md"
   },
   "completedEvidence": [
     {
@@ -110,6 +124,12 @@
       "status": "TEXT_SOURCES_REVIEWED_NOT_TRANSFER_VALIDATED",
       "source": "research/chart_learning/USER_SOURCE_STUDIES.md",
       "claim": "User uploaded 1 AI summary TXT and 1 edited 14-page lecture PDF. Read supplied textual contents and compared relevant actual Library originals #068 and #076; primary raw video charts and independent quoted outcomes remain unverified. No new canonical entry rule or proved competence."
+    },
+    {
+      "type": "DIRECT_ORIGINAL_IMAGE_STUDY",
+      "status": "18_SOURCE_IMAGES_INSPECTED_NOT_MASTERED",
+      "source": "/차트공부_원자료_20260928/images/ 064–081",
+      "claim": "All original 18 PNGs directly read and organized into P-001 matrix, cross-referenced to user's AI summary and edited PDF. Hypotheses, economic caveats and unanswered chart-transfer tests recorded. No observed real-price out-of-sample improvement."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -153,6 +173,59 @@
       "fullVisualVerification": false,
       "sourceClaimedLectureDate": "2026-10-05",
       "sourceClaimedDurationSeconds": 5475
+    }
+  ],
+  "originalImageResearch": [
+    {
+      "studyId": "P-001",
+      "numbers": [
+        "064",
+        "065",
+        "066",
+        "067",
+        "068",
+        "069",
+        "070",
+        "071",
+        "072",
+        "073",
+        "074",
+        "075",
+        "076",
+        "077",
+        "078",
+        "079",
+        "080",
+        "081"
+      ],
+      "dateKst": "2026-10-15",
+      "status": "ALL_18_NATIVE_PNG_INSPECTED_SOURCE_SYNTHESIS_ONLY",
+      "ledger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+      "realMarketTransferProven": false,
+      "canonicalRulesPromoted": 0,
+      "openRisks": [
+        "U_box versus M_box versus C_event versus C_adjust",
+        "Volume confirmation vs high-volume fake breakouts",
+        "Retest opportunity cost versus nonfills",
+        "Weekly-monthly structural close versus intraperiod economic stop"
+      ]
+    }
+  ],
+  "upcomingOriginalCorpus": [
+    {
+      "id": "SRC-STUDY-002",
+      "nums": "046–063",
+      "topic": "range, failed reclaim and spring; distinguish real structural reclaim vs a hindsight rescue"
+    },
+    {
+      "id": "SRC-STUDY-003",
+      "nums": "082–091",
+      "topic": "trend reference before/after pairs; identify anchor validity before outcome"
+    },
+    {
+      "id": "SRC-STUDY-004",
+      "nums": "001–045",
+      "topic": "RSI as adjunct and price-volume-time origin of reference prices"
     }
   ]
 }

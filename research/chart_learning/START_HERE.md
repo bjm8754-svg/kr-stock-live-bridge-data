@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 16
+**Learning revision:** 17
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## Primary 91-image source research — actual observation checkpoint
+
+[PRIMARY_IMAGE_STUDIES.md](PRIMARY_IMAGE_STUDIES.md) P-001 documents direct opening and critical comparison of **all 18 original #064–#081 images**, with a per-image study matrix and explicit source-versus-model hypotheses. It distinguishes the old box upper/middle from a **new event candle close** and the actual adjustment candle's high/close/low, and notes that large volume does not guarantee breakout. This is source study, NOT proven edge or 91-image mastery. Read next alongside STUDY_PROGRESS, prioritizing **source interpretation over new scans or tools**.
 
 ## Newly uploaded lecture research (methodology-first)
 
