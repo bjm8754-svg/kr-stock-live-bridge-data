@@ -1,5 +1,8 @@
 # Source registry — original study materials and traceability
 
+**Revision 28 evidence locator:** Sep17 (111) and Sep18 (38) root images directly viewed across two research runs; exact filenames and source-type category in `RECOVERED_SCREENSHOT_CATALOG.md` BULK-006. Distinguish market-app chart snapshots from EHS and developer screens. No precommitted trade or independent performance proof. Existing S02 paused.
+
+
 **BULK-005 mixed cohort audit:** New complete Library root date cohorts 2026-09-16=16, 09-24=3, 10-07=4, 10-08=5; alongside earlier three, complete date-cohort source records = **230 files** total. Additional small actual visual samples Sep17=16/111, Sep18=17/38, Oct14=5/52 are **incomplete**. Oct7 two capture variants present one already-annotated 4h crypto resistance/CVD chart, not distinct expert outcomes. Sep16–18 price snapshot cases are app screens, not chronological verified live fills. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-005; do not archive private industrial/account pages into the chart method.
 
 
