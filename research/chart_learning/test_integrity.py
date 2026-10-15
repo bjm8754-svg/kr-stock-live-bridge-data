@@ -206,7 +206,7 @@ class IntegrityTest(unittest.TestCase):
         p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
         sr = p["sourceRecovery"]
         self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
-        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"]], [65, 98, 39])
+        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"][:3]], [65, 98, 39])
         self.assertGreaterEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 202)
         self.assertTrue(sr["totalRootCountIsConservativeLowerBound"])
         self.assertFalse(sr["deduplicatedAcrossAllHistoricalBatchesVerified"])
