@@ -92,6 +92,16 @@ A new chat resumed the full 'V3 08:15 심층리서치' discussion after the prev
 
 Source of prior expectation: v10 `START_HERE.md`, `AGENTS.md`, `MASTER.md`, and `MINIMUM_COMPETENCE_BENCHMARK.md`; these **already** mandated first-reading current GitHub research. The assistant had failed to perform that preflight before reframing the project. Thus this is **process noncompliance despite preserved files**, not lack of repository knowledge. Adding R-015 and a test makes the failure visible but **does not ensure future fresh chats obey it or improve trading performance**. Next independent chat must demonstrate preflight and correct mission without user correction. See L-014.
 
+## C-010 — Blind-walkforward activity displaced methodology learning (2026-10-15, USER-CORRECTED PROCESS FAILURE)
+
+The user did **not** direct the assistant to conduct serial 3-session full-universe mock trades. The user commissioned a *non-regressing analytical capability system*: deeply learn the supplied original chart-sage 91 images and the available expert trade reasoning, improve an external method with contrary evidence and examples, then enable a fixed model to retrieve and execute that method. The scanner was already built; the user has current expert support and seeks independence later.
+
+The assistant proposed blind research and built an S02 3-session review loop as if regularly selecting more candidates were itself educational. After D03 was frozen, the subsequent S02 workflow completed with state step=4, relativeSession=12, zero fills, zero holdings, and one pending BUY_LIMIT at 232,000 on masked ADDC44271E. That is NOT proof of insight, and blindly continuing D04 would repeat the same misprioritization. D00–D03 remain immutable. The user exposed the flaw, including wasted research time and limited cash.
+
+Correct response: **STOP further experiment progression** and recover actual original research corpus; independently synthesize source-backed chart judgement, actively seek counterexamples and transfer the learning to unseen situations. For any future blind study, freeze one starting cohort and follow its thesis through event-dependent decisions rather than gratuitous complete-market reselection every three days; track finite capital, actual fills and missed opportunities. The new design is a research possibility, not user authorization to run it now.
+
+This was a **project management and methodology fidelity failure**, not evidence that the model weights can or must be fine-tuned, nor a measured predictive edge. See L-015 / R-016.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

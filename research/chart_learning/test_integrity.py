@@ -87,6 +87,19 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("C-009", (gate.BASE / "CASES.md").read_text(encoding="utf-8"))
         self.assertIn("R-015", (gate.BASE / "START_HERE.md").read_text(encoding="utf-8"))
 
+    def test_methodology_first_priorities_survive_new_chat(self):
+        m = gate.load_manifest()
+        phase = m["currentResearchPhase"]
+        self.assertEqual(phase["name"], "METHODOLOGY_FIRST_SOURCE_STUDY")
+        self.assertTrue(phase["existingScannerCompleted"])
+        self.assertFalse(phase["routineBlindTradingAuthorized"])
+        self.assertEqual(phase["s02Progression"], "PAUSED_AFTER_D03")
+        self.assertEqual(phase["primaryCorpus"], "91_CHAT_SAGE_ORIGINAL_PNG")
+        self.assertFalse(phase["methodologyCompetenceVerified"])
+        self.assertIn({"id": "R-016", "status": "CANONICAL"}, m["rules"])
+        self.assertIn("L-015", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
+        self.assertIn("91-photo PRIMARY STUDY CORPUS", (gate.BASE / "START_HERE.md").read_text(encoding="utf-8"))
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

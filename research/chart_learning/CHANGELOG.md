@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 12 — Freeze methodology-first intent and stop scan/replay substitution
+
+- Corrected workflow per direct user request. The assistant's externally reproducible expert-level chart-analysis **methodology** is the immediate research object, not a new scanner (already completed), routine full-universe selections or an S02 auto-advance program. Current expert guidance exists; independence later is the user's purpose.
+- Prioritized original 91 numbered 차트술사 images and final Library canonical for actual source study, then expert example comparison, and external analysis research to fill/test gaps. Preserved source pluralism: 91-image source-priority is NOT an assertion of infallible predictive truth.
+- Added R-016 / L-015 / C-010 and a machine-readable CURRENT PHASE gate in START_HERE, MASTER, MANIFEST and AGENTS. S02 D00–D03 remain locked; state at step 4 / session 12, zero fills, one pending masked order, PAUSED. No new D04 or automation in this change.
+- Explicitly separated external-method advancement from model-weight training and required new-chart transfer before claiming improvement.
+- Research documentation and integrity checks only. No scanner, historical order engine, production trade code or existing locked research decision modified. Predictive ability and non-regression **remain unproven**.
+
 ## 2026-10-14 — Revision 11 — Log chat-rollover mission regression and install explicit objective invariant
 
 - Recorded L-014 / C-009: the assistant failed the existing v10 GitHub preflight in a new V3 chat, then described a test/verification system as if it were the objective. This contradicted the user's prior seven-capability AI-trader target and the archived minimum five-expert-plan benchmark.

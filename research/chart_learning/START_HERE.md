@@ -1,8 +1,8 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 11
-**Established:** 2026-10-14 (KST)
+**Learning revision:** 12
+**Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
 ## Why this exists
@@ -13,11 +13,23 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 **Independent AI trader → verified economic judgement → user-approved profit-oriented automation.** V3 exists to develop the assistant's independent whole-market discovery, chart reasoning, executable swing trade construction and position management to expert-or-better quality, and ultimately use proven, sustainable risk-adjusted economic judgement in user-approved automation. Research tools, code, GitHub commits, S02 walk-forward testing and SHADOW measurements are **instruments**, never the final product. Explicitly recover this mission BEFORE characterizing V3 or proposing system changes. A new-chat answer which recasts V3's goal as simply validating chart plans is a regression, even if the latest GitHub files happen to be correct. Verify this preflight is actually performed; documents do not self-execute.
 
+## CURRENT PHASE — methodology research FIRST (R-016 / L-015 / C-010)
+
+**91-photo PRIMARY STUDY CORPUS:** The original 91 numbered "차트술사" chart-study PNGs in ChatGPT Library `/차트공부_원자료_20260928/images/`, and `차트공부_CANONICAL_MASTER_FINAL_20260929.docx`, are the first, substantial research corpus. They have been inventoried, NOT yet proven fully mastered image by image. Independently inspect the relevant original images, reconcile price/volume/time, box structures, role reversals, retests, failed breakouts, springs, trend-connecting levels, structural invalidation and execution choices. Consult independent external methods ONLY to test, contradict, clarify or extend gaps; collecting more doctrine is not an end in itself. The five expert trade plans are examples of practical judgement and a minimum qualitative comparator, not prices to reverse-fit. Yangbongman is one optional perspective, not the governing analysis.
+
+**The complete whole-market scanner ALREADY EXISTS. Do NOT build another scanner, solicit a daily shortlist or run routine new-stock simulations as a substitute for learning.** The user currently has human expert guidance and seeks eventual freedom from that dependence through a durable, independently reasoned chart-analysis methodology.
+
+**Model weights do not need retraining.** Progress means better EXTERNAL methodology, tested and versioned with error/contradiction records, then faithfully retrieved and applied by the unchanged model. GitHub commits, tests, scanner throughput and simulation activity are not learning or trading competence. The live challenge is execution fidelity across chats, not archiving claims.
+
+**S02 is PAUSED at D03 locked / state step 4, relative session 12, no fills, one simulated pending limit, as verified 2026-10-15 KST.** Do not create D04, advance outcomes, silently continue 3-session full-universe rescans or change production/trading systems without a separate user decision after meaningful methodology research. Previously locked decisions remain immutable. Review their flaws as historical case material only. If the user explicitly changes research priorities later, record that change; do not let `ㄱㄱ` alone override this phase boundary.
+
+**Next-chat first-action checkpoint:** recover the current GitHub HEAD and this phase statement before any V3 implementation; answer whether the requested next action primarily deepens/retests methodology or merely operates a scanner/backtester. If the latter without separate authorization, stop and redirect to the methodology corpus. Apply a demonstrated methodology change to an unseen chart before claiming progress. An integrity validator checks preservation of the statement, not your cognitive adherence to it.
+
 ## Mandatory new-session opening — ordered
 
 1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, MINIMUM_COMPETENCE_BENCHMARK.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
 2. Report: **learning revision**, **repository HEAD SHA actually fetched**, **latest validated experiment**, **outstanding known failure**, and whether the gate PASSED or is NOT VERIFIED.
-3. **Do not privilege Yangbongman or any other named methodology:** each is one perspective, selected only when evidence supports its usefulness for this setup. Begin with independent price, participation, structure and regime analysis; document conflicts. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
+3. **Honor CURRENT PHASE above before proposing any scan, automation or replay.** Do not privilege Yangbongman or any other named methodology:** each is one perspective, selected only when evidence supports its usefulness for this setup. Begin with independent price, participation, structure and regime analysis; document conflicts. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
 4. Any new analysis has a cutoff, source provenance, candidate-selection procedure, precommitted entry/add/stop/target and invalidation, **thesis-dependent holding horizon distinct from review cadence**, outcome stage, and limitations. Do not treat a 3-session S01 review as a 3-session trade expiration. Never blend ex-ante and hindsight data. Never blend ex-ante and hindsight data.
 5. On new insight: log an evidence-backed lesson (append only), update experiment record, then propose or amend a MASTER rule and CHANGELOG with an incremented MANIFEST revision. Do not silently replace old knowledge.
 6. Verify the changed records using the lightweight research validator; if a verification is unrun/fails, say so. No production write by implication.

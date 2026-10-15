@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 11,
-  "updatedKst": "2026-10-14",
+  "revision": 12,
+  "updatedKst": "2026-10-15",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -104,9 +104,13 @@
     {
       "id": "H-002",
       "status": "HYPOTHESIS"
+    },
+    {
+      "id": "R-016",
+      "status": "CANONICAL"
     }
   ],
-  "lessonCount": 14,
+  "lessonCount": 15,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -181,5 +185,27 @@
     "validationRole": "INTERMEDIATE_TRAINING_AND_EVALUATION_NOT_END_GOAL",
     "productionRequiresSeparateUserAuthorization": true,
     "competenceAchieved": false
+  },
+  "currentResearchPhase": {
+    "name": "METHODOLOGY_FIRST_SOURCE_STUDY",
+    "primaryCorpus": "91_CHAT_SAGE_ORIGINAL_PNG",
+    "primaryLibraryFolder": "/차트공부_원자료_20260928/images/",
+    "canonicalLibraryDocument": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+    "existingScannerCompleted": true,
+    "newScannerDevelopmentAuthorized": false,
+    "routineBlindTradingAuthorized": false,
+    "s02Progression": "PAUSED_AFTER_D03",
+    "s02RelativeSessionsObserved": 12,
+    "methodologyCompetenceVerified": false,
+    "modelWeightRetrainingRequired": false,
+    "researchSequence": [
+      "ORIGINAL_91_IMAGE_COMPREHENSION",
+      "INDEPENDENT_METHOD_SYNTHESIS",
+      "EXPERT_PLAN_COMPARISON",
+      "TARGETED_EXTERNAL_CONTRADICTION_OR_EXTENSION",
+      "UNSEEN_CHART_TRANSFER_AND_ERROR_CORRECTION",
+      "LATER_ECONOMIC_VALIDATION",
+      "USER_APPROVED_AUTOMATION"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v11 / 2026-10-14 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v12 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,18 @@ Version: **v11 / 2026-10-14 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Current research order — confirmed by user (2026-10-15)
+
+The user's existing KRX scanner is **already completed**. The present project is **NOT** to create another scanner, receive daily picks, make more trades immediately, or repeatedly run a 3-session blind study. The user has a human expert and is using this period to develop an **independent, durable chart-analysis methodology** so future investment decisions need not depend on that expert.
+
+The unchanged ChatGPT model is the **research/reasoning/execution engine**. The external versioned methodology, examples, contradictions, counterexamples and tests are the capability asset that can improve and persist. The aim is to make the method reproducible in a fresh chat: load the CURRENT version, apply it to unseen charts, identify structural reasons for prices, risks, adds and exits, and record mistakes without hindsight. A model-weight update is neither implied nor necessary. An external document alone is not a competence gain.
+
+**Study sources and priority (not rankings of truth):** start by *deeply examining the original 91 numbered chart-sage/차트술사 images* in `/차트공부_원자료_20260928/images/` and matching `차트공부_CANONICAL_MASTER_FINAL_20260929.docx`; reconstruct the actual examples rather than relying on an image-title index or this summary. Then use the five expert swing plans as applied decision comparisons, and test other independently sourced chart techniques only when the primary materials leave a gap, contradiction or testable question. Yangbongman remains one school among many; research-priority for a rich provided corpus does **not** confer predictive authority or require copying its ideas.
+
+**Methodology development loop:** source-level comprehension → derive falsifiable chart interpretations → independently apply them to a case *without future outcomes* → check expert plans/alternate interpretations and later developments → isolate errors in discovery, entry/ADD/stop, holding, regime, capital allocation and missed fills → revise the external methodology only on supported evidence → challenge it on a new case. Do not equate storing notes, passing CI, or repeating a paper-trading step with method improvement.
+
+**Hold on S02:** D00–D03 locked; after the last completed GitHub run the state was step 4 / 12 sessions, no fills, pending FIRST at 232,000 KRW for masked ADDC44271E. Do not write D04 or automatically rescan. The 3-session schedule was an arbitrary monitoring choice for one testing design, **not** user-requested ongoing learning activity and not an instruction to find fresh stocks every 3 days. If later useful, a properly scoped test can freeze one full-market date, lock stock/entry/optional ADD/stop/target/capital allocations, follow the SAME cohort through its whole thesis life with contemporaneous causes, and then compare independent decisions and opportunity cost. Research justification must precede any such test, and no experiment has been newly approved here.
 
 ## Minimum measurable ambition (binding user requirement)
 
@@ -60,6 +72,9 @@ The model examines time-connected daily, weekly, and monthly charts, decides ind
 
 ### R-015 — Preserve the end goal across chats and treat proof as a means
 The user's ultimate project goal is **an independently thinking, improving, profit-seeking AI trader followed by automation of demonstrated economic judgement**; it is NOT a chart-plan grader, a finished backtester, a GitHub logging machine, or a test-passing scanner. Development order: original whole-market discovery → expert-level price/volume/time/market reasoning → conditional entry/add/stop/target plus multi-week portfolio judgement → honest locked economic evidence with fills, nonfills, costs and drawdowns → repeatable SHADOW execution → separate explicitly user-approved real operation. This progression does not assert that profit or skill has been achieved. At every new chat, actually fetch HEAD, START_HERE, MANIFEST, MASTER, BENCHMARK, LESSONS and required source and experiment records BEFORE giving a V3 status/mission summary. If not read, state NOT VERIFIED; do not quietly invent continuity from summaries. This failure actually recurred despite revision-10 instructions, see L-014/C-009.
+
+### R-016 — Methodology-first research phase; no scanner or blind-loop substitution
+**CURRENT PRIORITY: deeply study and independently synthesize the original 91 chart-sage source images and expert plan reasoning into a durable, executable external methodology.** The KRX scanner exists already. Repeated daily candidate discovery, push-triggered S02 3-session scans, new monitoring automations and portfolio-simulation activity are **NOT** evidence of this learning and are presently out of scope. No D04 new locked trade or further S02 outcome reveal without separate user instruction and a methodology-based research reason. Expert examples and other public methods are comparative inputs, not imitated signals. Study precedence of the provided 91 images is an efficient source-comprehension order, not a declaration that they are infallible; falsify/extend their claims when evidence warrants. Persist applicability conditions, failed interpretations, alternatives, source links and counterexamples; require demonstrated transfer to unseen charts before saying the methodology improved. Always perform live HEAD retrieval and CURRENT PHASE gate across chats. The user does not need GPT model weights to change. See L-015 / C-010; this is a user-defined workflow constraint, **not** evidence of investment edge.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 

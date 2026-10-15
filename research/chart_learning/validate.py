@@ -155,6 +155,21 @@ def validate() -> tuple[dict, list[dict]]:
         fail("forced market buys must not return")
     if "C-008 — User rejected market-buy" not in cases:
         fail("swing intent corrective case missing")
+    phase = m.get("currentResearchPhase", {})
+    if phase.get("name") != "METHODOLOGY_FIRST_SOURCE_STUDY" or phase.get("primaryCorpus") != "91_CHAT_SAGE_ORIGINAL_PNG":
+        fail("primary source-led methodology phase lost")
+    for k in ("existingScannerCompleted",):
+        if phase.get(k) is not True:
+            fail("pre-existing scanner status forgotten")
+    for k in ("routineBlindTradingAuthorized", "newScannerDevelopmentAuthorized", "methodologyCompetenceVerified", "modelWeightRetrainingRequired"):
+        if phase.get(k) is not False:
+            fail("unsupported experiment/training authorization or capability claim: "+k)
+    if phase.get("s02Progression") != "PAUSED_AFTER_D03":
+        fail("S02 should not automatically progress")
+    if "### R-016 — Methodology-first research phase" not in master or "L-015" not in cases or "C-010 — Blind-walkforward" not in cases:
+        fail("research-priority regression guard missing")
+    if "91-photo PRIMARY STUDY CORPUS" not in startup or "91-photo PRIMARY STUDY CORPUS" not in agents:
+        fail("original-source study not prominent at restart")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons
