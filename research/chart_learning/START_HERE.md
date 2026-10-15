@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 28
+**Learning revision:** 29
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## BULK-007 — source groups, 304 native images visibly inspected, 8 unavailable originals
+
+Fresh Library root metadata census: **1,623** entries (previous snapshot 1,616; +7). Four disjoint date cohorts physically attempted: March04 79 (72 images rendered, 7 have no downloadable original), March05 104 (103 rendered, 1 unavailable), March06 46/46 rendered, June07 83/83 rendered. This is **304 newly inspected** images, NOT 312. All-time completed fully visualized date-cohort file count **508**; visibly opened partial date sources **180** (Oct14 5, March04 72, March05 103); conservative actual visually read root total **688**. Eight additionally identified files have content **NOT VERIFIED**, total accessibility outcome 696, other **927** root entries still unprocessed. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-007 exact names and source criticism. March 4–6 S-Oil orderbook/WTI futures screenshots form ONE evolving asset/event observational sequence, not independent trades; displayed orderbook size is NOT a fill. June7 includes one 16-panel social educator's US-market downside/staged exit post and a longer unverified forum support/semicap commentary. The claimed drawdown percentages and future catalyst narratives have no validated edge. Existing methodological hypotheses sharpened but **no CANONICAL promotion, no tested OOS performance**. Native primary 91 21 opened, zero independently mastered. **Continue missing Library root sources first.** S02 PAUSED_AFTER_D03; scanner/order/production untouched.
 
 ## BULK-006 — Sep17/Sep18 cohorts fully triaged, operational captures excluded
 
