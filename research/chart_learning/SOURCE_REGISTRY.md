@@ -54,6 +54,14 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - Original #067 permits no-return breakout, and #078 illustrates volume-increased failed breakouts, forbidding deterministic retest or simplistic volume-is-proof assertions. #076 requires sustained **support function**, not mere retest level touched.
 - Continue studying ORIGINAL sources before doing any new scanner or daily market task; next topical groups #046–063 and #082–091, then remaining original images.
 
+## G. WARNING — Original screenshot corpus extends beyond the curated 91 (2026-10-15)
+
+- Verified via **nine paginated ChatGPT Library image-file listing pages**: **1,707 image entries** in scope, **91** in `/차트공부_원자료_20260928/images/`, and **1,616** images at `/`. This excludes any recursively unavailable connector mounts such as Google Drive. These are file entries, NOT unique content hashes, and NOT all stock-education images.
+- Actual independent spot checks outside curated 91 found `/1000059945.jpg` (2026-10-07, a chart screenshot with marked selling/buying zones and volume; **expert reasoning source to classify and review**) and `/1000058321.jpg` (2026-09-17, HVM price/volume chart). Also `/1000059604.jpg` (2026-09-28) was a RSI teaching image; likely related/duplicate to numbered material, **not verified as a unique image**. Other root samples include unrelated real-estate/EHS/privacy and general market screenshots; do not treat whole 1,616 as original chart teaching or publish them en masse.
+- **Failure diagnosed:** prior MASTER and START_HERE tracked the curated 91 originals and some text/case notes but never inventoried the bulk of root images. The old error was **incomplete source registration**, not proven global file deletion. Some older chat images may genuinely have expired or never been persistently archived; an all-time-original count is currently **UNKNOWN**.
+- Next source work (manual, without any automation): identify meaningful independent expert-supplied chart captures by date/name and original context, de-duplicate against the 91, separate historical OHLCV images versus tutorial rules versus expert execution plans, verify chart time axes, and register only reviewed ones in the methodology archive. Reopen actual originals before drawing inferences. Never claim that 91 exhausts the user's past supplied images.
+- **The 91-chart-sage collection remains the FIRST primary pedagogical study corpus**, not the only material; keep former cross-chat learning objective unchanged.
+
 ## Mandatory usage in every new V3 study
 
 1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.

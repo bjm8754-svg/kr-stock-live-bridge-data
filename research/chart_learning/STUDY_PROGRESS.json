@@ -49,7 +49,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 17,
+    "methodologyVersion": 18,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -227,5 +227,23 @@
       "nums": "001–045",
       "topic": "RSI as adjunct and price-volume-time origin of reference prices"
     }
-  ]
+  ],
+  "sourceRecovery": {
+    "verifiedAtKst": "2026-10-15",
+    "store": "ChatGPT Library",
+    "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
+    "totalImageEntries": 1707,
+    "curated91ImageEntries": 91,
+    "uncataloguedRootImageEntries": 1616,
+    "rootImagesAreAllResearch": false,
+    "possibleContentDuplicates": true,
+    "externalMountCompleteness": "NOT_VERIFIED",
+    "allHistoricalChatUploadCompleteness": "UNKNOWN",
+    "visuallyVerifiedNon91ChartExamples": [
+      "/1000059945.jpg",
+      "/1000058321.jpg"
+    ],
+    "curated91NotTotalCorpus": true,
+    "action": "Manually inventory root image sources by date/category; prioritize expert annotated educational charts; verify original source and handle unrelated images/privacy carefully; do not assert they are all studied."
+  }
 }

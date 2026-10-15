@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 17
+**Learning revision:** 18
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## IMPORTANT: other previously uploaded pictures still exist outside the 91-image folder
+
+On 2026-10-15 an actual paginated ChatGPT Library **image-file metadata** inventory found **1,707 image entries** (91 images in `/차트공부_원자료_20260928/images/`, **1,616 other images at Library root**; Google Drive/external sources not included). This does **not** mean 1,616 separate educational chart images: they mix stock quotes, past chart examples, EHS/personal/non-stock material and possible duplicates. Directly reopened the non-91 original `/1000059945.jpg` (dated 2026-10-07, an annotated chart showing seller/buyer pressure and volume) and `/1000058321.jpg` (dated 2026-09-17, stock chart), proving some other relevant screenshots were previously **unregistered** in the methodology corpus. A root image `/1000059604.jpg` from 2026-09-28 shows the RSI illustrated course and may overlap the numbered archive; do not double-count without hash matching. The full set of images EVER sent over all chats remains UNKNOWN because some uploads may be inaccessible/expired. **Do not say "only 91 screenshots survive" or imply 91 is the complete user-provided image corpus.** Open `SOURCE_REGISTRY.md` section G before claiming completeness; sort/filter and actually inspect source by theme and date. This is inventory recovery, not 1,707 images studied.
 
 ## Primary 91-image source research — actual observation checkpoint
 

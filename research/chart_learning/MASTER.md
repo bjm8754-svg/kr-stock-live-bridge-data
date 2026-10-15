@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v17 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v18 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v17 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Source-coverage correction: 91 images are NOT the whole user screenshot corpus
+
+A 2026-10-15 paginated ChatGPT Library check found **1,707 image-file entries**: 91 curated numbered originals and **1,616 uncatalogued root images**, many unrelated or duplicates but **at least some stock charts outside the 91** (e.g. `1000059945.jpg`, 2026-10-07 annotated chart; `1000058321.jpg`, 2026-09-17 price chart). Neither GitHub's START_HERE nor the 91-image Canonical describes this entire corpus. Do not equate "91 images organized" with "only 91 survive" or make undocumented exclusions. Other chats' old screenshots may be expired/inaccessible; all-time upload completeness is unknown. Detailed limitations and next manual discovery checkpoint in `SOURCE_REGISTRY.md` §G; keep classification separate from analytic mastery. No scanner/automation or new external sources required.
 
 ## Primary box-breakout original-image review (P-001 / NOT validated trading rule)
 

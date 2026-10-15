@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 18 — Correct false impression that only 91 user pictures survive
+
+- Paginated the user's accessible ChatGPT Library image metadata on 2026-10-15 (9 pages) and found **1,707 image entries**: 91 numbered images in curated `차트공부_원자료_20260928/images`, plus **1,616 separate file entries in Library root**. Not all are stock charts, some may overlap the 91, and old uploads outside Library/connected Drive may be missing: all-time original completeness is UNKNOWN.
+- Directly reopened non-91 screenshots `1000059945.jpg` (annotated 2026-10-07 market-structure chart) and `1000058321.jpg` (2026-09-17 stock chart) to prove other research-relevant prior captures exist and were uncatalogued. Also identified root `1000059604.jpg` RSI educational screenshot as likely overlapping the 91 primary packet (unique status unverified).
+- Corrected START_HERE / MASTER / SOURCE_REGISTRY / STUDY_PROGRESS to **never present 91 as total lifetime supplied image inventory**, and to distinguish source presence versus integration versus actual analysis. No automatic image classification, scanner change, new experiment or trade. This is a **source accountability correction**, not new investment skill.
+
 ## 2026-10-15 — Revision 17 — Direct original-image #064–#081 reading and price-anchor reconciliation
 
 - Directly opened all eighteen original `차트술사` native images `064–081` from the verified Library archive (previously only five of these had been directly opened). Documented per-image source claims, alternative explanations, contradictions and pending falsifiable tests in `PRIMARY_IMAGE_STUDIES.md` P-001.
