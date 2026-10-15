@@ -116,6 +116,17 @@ class IntegrityTest(unittest.TestCase):
         self.assertFalse(pr["learningStatus"]["unseenChartTransferDemonstrated"])
         self.assertFalse(pr["learningStatus"]["economicEdgeVerified"])
 
+    def test_video_source_study_preserves_attribution_and_limitations(self):
+        m = gate.load_manifest()
+        self.assertEqual(m["supplementalVideoSourceRegistry"], "research/chart_learning/VIDEO_STUDIES.md")
+        v = (gate.BASE / "VIDEO_STUDIES.md").read_text(encoding="utf-8")
+        self.assertIn("JSYuRdYKo2M", v)
+        self.assertIn("RETURN UNVERIFIED", v)
+        progress = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        self.assertFalse(progress["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertEqual(progress["supplementaryVideoStudies"][0]["newCanonicalRulesPromoted"], 0)
+        self.assertEqual(progress["s02"]["progression"], "PAUSED_AFTER_D03")
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

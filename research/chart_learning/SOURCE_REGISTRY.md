@@ -33,6 +33,13 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - Expert five recommended price plans from Sep–Oct 2026: `CASES.md` C-001. These are benchmark examples and **not original YBM source**. Original recommendation screenshot integrity not separately checked.
 - The restricted 2026-09-18 market replay: `CASES.md` C-003, `EXPERIMENTS.md` E-003. It is **not** a clean blind full-market result.
 
+## D. Supplementary investment-video source — attribution and freshness
+
+- `상상주식TV`, YouTube channel `UCjNKuCKVBIQsrRdqJBWpkqA`: https://youtube.com/channel/UCjNKuCKVBIQsrRdqJBWpkqA
+- Video `JSYuRdYKo2M` studied with complete Korean transcript and full video walkthrough on 2026-10-15; per-scene observations and limitations in `VIDEO_STUDIES.md` V-001.
+- The edited recap quotes trader 김씨 and adds the channel host's commentary. **Do not attribute the host's interpretations to 김씨 without checking speaker clips.** No authenticated broker executions, portfolio audit or independently proven outcomes. Do not promote principles into canonical rules without transfer tests.
+- The channel is a supplementary stream, NOT replacing the 91 original study images. The scheduled research workflow should check `VIDEO_STUDIES.md` for already processed YouTube IDs before selecting unseen material.
+
 ## Mandatory usage in every new V3 study
 
 1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.

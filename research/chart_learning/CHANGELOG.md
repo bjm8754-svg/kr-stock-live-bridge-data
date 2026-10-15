@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 14 — Video V-001 source study and original-image comparison
+
+- At user-supplied direct URL `JSYuRdYKo2M`, acquired full Korean transcript and separately completed full video visual/audio walkthrough. Inspected related original Library images #064, #066 and #079 for comparison.
+- Added `VIDEO_STUDIES.md` and source registry for study provenance, host versus quoted expert attribution, timestamped observations, unsupported wealth/returns anecdote warnings, counterarguments and falsifiable next questions.
+- Updated STUDY_PROGRESS with an **already studied video ID** so the ongoing channel workflow avoids duplicate claims, preserving primary 91-image research priority and S02 freeze.
+- No new canonical rule promoted. No new verified predictive skill, trade, account statement, or actual return demonstrated; CI asserts source-study registration only.
+
 ## 2026-10-15 — Revision 13 — Add explicit new-chat boot command and structured progress checkpoint
 
 - User-requested **self-contained boot instruction** saved in `research/chart_learning/BOOT_PROTOCOL.md`; the stable `main` GitHub link can be pasted into a new chat along with its Korean instruction. Mere one-word invocation has no hard guarantee.

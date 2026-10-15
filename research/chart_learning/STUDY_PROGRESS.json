@@ -36,7 +36,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 12,
+    "methodologyVersion": 14,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -89,8 +89,35 @@
       "status": "NOT_VERIFIED",
       "source": "BOOT_PROTOCOL.md",
       "claim": "Boot command persisted; whether a newly opened ChatGPT session faithfully uses it has not been tested."
+    },
+    {
+      "type": "EXTERNAL_VIDEO_STUDY",
+      "status": "SOURCE_REVIEWED_NOT_TRANSFER_VALIDATED",
+      "source": "https://www.youtube.com/watch?v=JSYuRdYKo2M",
+      "claim": "Full vidIQ Korean transcript and full-length video visual walkthrough reviewed; compared to actual Library originals 064,066,079; hypotheses recorded in VIDEO_STUDIES.md; no new verified trading edge."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
-  "nextTaskOverrideRequires": "User explicit change of study phase or a documented evidence-based research reprioritization without prohibited scan/trading actions."
+  "nextTaskOverrideRequires": "User explicit change of study phase or a documented evidence-based research reprioritization without prohibited scan/trading actions.",
+  "supplementaryVideoStudies": [
+    {
+      "id": "V-001",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "videoId": "JSYuRdYKo2M",
+      "title": "100억 트레이더 트레이더김씨님 라이브 요약! 말 한마디 한마디가 명강의 입니다.",
+      "sourcePublishedAt": "2025-01-25T14:12:09Z",
+      "studyDateKst": "2026-10-15",
+      "videoDurationSeconds": 1592,
+      "fullTranscriptReviewed": true,
+      "fullVisualWalkthroughReviewed": true,
+      "originalImageComparison": [
+        "064",
+        "066",
+        "079"
+      ],
+      "sourceRecord": "research/chart_learning/VIDEO_STUDIES.md",
+      "status": "SOURCE_STUDIED_HYPOTHESES_NOT_VALIDATED",
+      "newCanonicalRulesPromoted": 0
+    }
+  ]
 }

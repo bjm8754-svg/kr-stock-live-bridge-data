@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 13
+**Learning revision:** 14
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## Video-source study ledger
+
+External channel source studies are stored in [VIDEO_STUDIES.md](VIDEO_STUDIES.md). Check this video-ID ledger and STUDY_PROGRESS before automatically selecting a new `상상주식TV` video. Do not re-study an existing video as a new source; reopen only to test a specific hypothesis or correct an error. A visual walkthrough plus transcript is source study, not evidence of investment edge.
 
 ## User-invoked fresh-chat boot — required gate
 

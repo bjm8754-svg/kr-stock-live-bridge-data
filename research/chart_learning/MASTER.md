@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v13 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v14 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v13 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Supplemental video studies (non-canonical until independently tested)
+
+See [VIDEO_STUDIES.md](VIDEO_STUDIES.md) and `STUDY_PROGRESS.json`. 2026-10-15 V-001 studied `상상주식TV` video `JSYuRdYKo2M` using the complete Korean transcript and a separate full video visual walkthrough; originals #064/#066/#079 were opened again. Useful hypotheses: liquidity/capacity-sensitive sizing, regime/flow/catalyst filters, genuine no-trade decisions and risk-first use of concentrated positions. Keep **intraday "stop after profit" discipline separate from multiweek swing exits**. The recounted trader's account and profits were not independently verified. No new canonical trading rule or transferable economic edge is claimed from this video.
 
 ## Cross-chat research bootstrap (R-017 / L-016)
 

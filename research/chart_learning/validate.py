@@ -190,6 +190,18 @@ def validate() -> tuple[dict, list[dict]]:
         fail("boot retention rule/evidence missing")
     if "BOOT_PROTOCOL.md" not in startup or "BOOT_PROTOCOL.md" not in agents:
         fail("boot command not discoverable from entrypoints")
+    video_reg = m.get("supplementalVideoSourceRegistry")
+    if video_reg != "research/chart_learning/VIDEO_STUDIES.md":
+        fail("video source registry missing")
+    vid = (BASE / "VIDEO_STUDIES.md").read_text(encoding="utf-8")
+    if "JSYuRdYKo2M" not in vid or "RETURN UNVERIFIED" not in vid:
+        fail("video first study must preserve original id and evidence caveat")
+    pr = json.loads((BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+    videos = pr.get("supplementaryVideoStudies", [])
+    if not any(x.get("videoId")=="JSYuRdYKo2M" and x.get("status")=="SOURCE_STUDIED_HYPOTHESES_NOT_VALIDATED" for x in videos):
+        fail("video source study record missing or overstated")
+    if "VIDEO_STUDIES.md" not in startup or "VIDEO_STUDIES.md" not in master:
+        fail("video ledger not linked from startup and master")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons
