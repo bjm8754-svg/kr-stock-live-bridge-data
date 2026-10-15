@@ -62,6 +62,10 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - Next source work (manual, without any automation): identify meaningful independent expert-supplied chart captures by date/name and original context, de-duplicate against the 91, separate historical OHLCV images versus tutorial rules versus expert execution plans, verify chart time axes, and register only reviewed ones in the methodology archive. Reopen actual originals before drawing inferences. Never claim that 91 exhausts the user's past supplied images.
 - **The 91-chart-sage collection remains the FIRST primary pedagogical study corpus**, not the only material; keep former cross-chat learning objective unchanged.
 
+## H. Recovered screenshot study index B-001 (2026-10-15)
+
+**Read `RECOVERED_SCREENSHOT_CATALOG.md`** before claiming the original pedagogical corpus ends at 91 screenshots. B-001 directly inspected 35 root images and found at least some Yangbongman chat/teaching visuals from Aug 27–28 plus a substantive Sep-29 multi-timeframe RSI discussion, alongside extraneous EHS/job/security/personal files. Match exact filename locators to dated `KakaoTalkChats.txt` lines 3345–3374 for Samsung SDS. **Some image previews are expired/overlaid; don't assert exact prices there.** No systematic recovery of entire root corpus, no full YBM original photo set and no quantitative trading test. Source summaries are NOT a replacement for the original images.
+
 ## Mandatory usage in every new V3 study
 
 1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.

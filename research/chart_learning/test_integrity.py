@@ -142,6 +142,19 @@ class IntegrityTest(unittest.TestCase):
         for item in progress["userUploadedStudies"]:
             self.assertFalse(item["fullVisualVerification"])
 
+    def test_recovered_root_screenshots_are_cataloged_without_overclaiming(self):
+        m = gate.load_manifest()
+        self.assertEqual(m["recoveredScreenshotLedger"], "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md")
+        catalog = (gate.BASE / "RECOVERED_SCREENSHOT_CATALOG.md").read_text(encoding="utf-8")
+        for x in ("B-001", "1000059344.jpg", "1000059380.png", "KakaoTalkChats.txt", "144058", "35", "EXPIRED ORIGINAL PREVIEW"):
+            self.assertIn(x, catalog)
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        b = p["sourceRecovery"]["latestManuallyInspectedBatch"]
+        self.assertEqual(b["rootImageEntriesDirectlyOpened"], 35)
+        self.assertFalse(b["originalImageRecoveryComplete"])
+        self.assertFalse(b["duplicateHashVerified"])
+        self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

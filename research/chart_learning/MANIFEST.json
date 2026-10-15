@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 18,
+  "revision": 19,
   "updatedKst": "2026-10-15",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -39,7 +39,8 @@
     "research/chart_learning/STUDY_PROGRESS.json",
     "research/chart_learning/VIDEO_STUDIES.md",
     "research/chart_learning/USER_SOURCE_STUDIES.md",
-    "research/chart_learning/PRIMARY_IMAGE_STUDIES.md"
+    "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+    "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md"
   ],
   "rules": [
     {
@@ -230,5 +231,6 @@
   },
   "supplementalVideoSourceRegistry": "research/chart_learning/VIDEO_STUDIES.md",
   "userLectureResearchLedger": "research/chart_learning/USER_SOURCE_STUDIES.md",
-  "primaryOriginalImageStudyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md"
+  "primaryOriginalImageStudyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+  "recoveredScreenshotLedger": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md"
 }

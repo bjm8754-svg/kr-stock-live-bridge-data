@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 19 — Recover 35 uncatalogued visual sources and cross-check actual Yangbongman text
+
+- Visually opened and categorized **35** Library-root images across 2026-09-23/29 and 10-07/14; documented them in `RECOVERED_SCREENSHOT_CATALOG.md` B-001. This is actual manual sample coverage, not classification of all 1,616 or a model-performance gain.
+- Recovered teaching screenshots for YBM: `1000059344.jpg` contains screenshot of Samsung SDS `A급` → consolidation above `핫핑크`/`화이트라인` → `네모네모` → breakout. Independently corroborated corresponding teacher prose with known original `KakaoTalkChats.txt` at lines 3345–3374. Several other YBM chart screenshots only persist as **expired-preview-overlaid** images; the full original-image archive remains UNVERIFIED.
+- Registered Sept-29 original group screenshots explaining daily/weekly trend versus shorter-timeframe RSI divergence, momentum and resistance; instructor observations kept **HYPOTHESIS**, not canonical RSI thresholds. Captured limitations regarding unverifiable institutions/"손바뀜" from OHLCV.
+- Identified duplicate-looking annotated chart `chart-1(20261007-140508).png` versus `1000059945.jpg` as **visual overlap** only, no byte-hash claim. Isolated unrelated work/personal/QR sources rather than leaking their contents.
+- Updated START_HERE/MASTER/SOURCE_REGISTRY/MANIFEST/STUDY_PROGRESS and retention test, with future manual source-work queue. **No automation, scanner/S02 changes, stock orders or monetized model-training claims.**
+
 ## 2026-10-15 — Revision 18 — Correct false impression that only 91 user pictures survive
 
 - Paginated the user's accessible ChatGPT Library image metadata on 2026-10-15 (9 pages) and found **1,707 image entries**: 91 numbered images in curated `차트공부_원자료_20260928/images`, plus **1,616 separate file entries in Library root**. Not all are stock charts, some may overlap the 91, and old uploads outside Library/connected Drive may be missing: all-time original completeness is UNKNOWN.

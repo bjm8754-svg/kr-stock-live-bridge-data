@@ -49,7 +49,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 18,
+    "methodologyVersion": 19,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -130,6 +130,12 @@
       "status": "18_SOURCE_IMAGES_INSPECTED_NOT_MASTERED",
       "source": "/차트공부_원자료_20260928/images/ 064–081",
       "claim": "All original 18 PNGs directly read and organized into P-001 matrix, cross-referenced to user's AI summary and edited PDF. Hypotheses, economic caveats and unanswered chart-transfer tests recorded. No observed real-price out-of-sample improvement."
+    },
+    {
+      "type": "RECOVERED_SOURCE_BATCH",
+      "status": "35_ROOT_IMAGES_VISUALLY_CLASSIFIED_NO_METHOD_TRANSFER",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+      "claim": "Opened 35 Library root images across 4 upload date groups, recovered Yangbongman screenshots and Sep29 multi-timeframe RSI chat sources; corroborated one Samsung SDS lesson with original KakaoTalk text. Some pictures are obsolete previews or unrelated/private. This expands sources but proves no trading skill or economic return."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -244,6 +250,24 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Manually inventory root image sources by date/category; prioritize expert annotated educational charts; verify original source and handle unrelated images/privacy carefully; do not assert they are all studied."
+    "action": "Manually continue remaining 2026-09-23 and 2026-09-29 image groups, separate valid teaching from expired previews, cross-correlate with dated KakaoTalkChats.txt, de-duplicate, then return to direct methodology study; never scan all images blindly or request new sources.",
+    "latestManuallyInspectedBatch": {
+      "id": "B-001",
+      "reviewedOnKst": "2026-10-15",
+      "rootImageEntriesDirectlyOpened": 35,
+      "dateGroups": [
+        "2026-09-23",
+        "2026-09-29",
+        "2026-10-07",
+        "2026-10-14"
+      ],
+      "catalog": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+      "interpretation": "Some original expert screenshots confirmed; many expired previews and unrelated materials; not 35 distinct verified teaching lessons",
+      "teacherTextCorroborated": true,
+      "teacherTextLocator": "KakaoTalkChats.txt lines 3345–3374",
+      "originalImageRecoveryComplete": false,
+      "duplicateHashVerified": false,
+      "unseenTransferDemonstrated": false
+    }
   }
 }
