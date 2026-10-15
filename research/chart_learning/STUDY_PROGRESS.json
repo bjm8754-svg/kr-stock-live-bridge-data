@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 24,
+    "methodologyVersion": 25,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -162,6 +162,12 @@
       "status": "15_ACTUAL_PNG_JPG_OPENED_METADATA_1616_LISTED_ONLY",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-META-001",
       "claim": "Grouped 15 actual screenshots into four derivative education source clusters, found conflicting hotpink/white moving-average labels, recorded screening-vs-entry and exit examples. Metadata enumeration of all 1,616 root entries is not content classification."
+    },
+    {
+      "type": "GROUPED_ROOT_IMAGE_SOURCE_REVIEW",
+      "status": "45_LIB_ROOT_IMAGES_OPENED_SOURCE_ONLY",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK002.md",
+      "claim": "20 2026-09-23 +25 2026-09-28 originals examined directly. Recovered native teacher-chat context, 10 RSI educational posters, five market BEFORE/AFTER pairs, assistant duplicates, and off-topic/unreadable screens; not independent trading evidence."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -294,7 +300,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue source-group bulk triage across entire indexed root image corpus, using small visual-tool windows within large continuous sessions, save at meaningful milestones; no 3–5-item stop or report gate.",
+    "action": "Continue grouped 30-80 source-candidate processing per substantial research session using Library date-cohort lists, prioritize unused actual educator diagrams and market chart captures; do not mistake 1,616 metadata entries for actual visual classification.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -445,8 +451,74 @@
         "methodologyEvidence": "SOURCE_NAMING_CONTRADICTIONS_IDENTIFIED_NOT_TRANSFER_TESTED",
         "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "finished": true
+      },
+      {
+        "id": "BULK-002",
+        "dateKst": "2026-10-15",
+        "actualRootImagesOpened": 45,
+        "uploadDateGroups": {
+          "2026-09-23": 20,
+          "2026-09-28": 25
+        },
+        "sourceGroups": 8,
+        "marketBeforeAfterPairs": 5,
+        "actualExpertTradeOutcomesVerified": 0,
+        "rootFilnameInventory": {
+          "september23": [
+            "1000059241.jpg",
+            "1000059245.jpg",
+            "1000059241(1).jpg",
+            "1000059245(1).jpg",
+            "1000059241(2).jpg",
+            "1000059309.jpg",
+            "1000059307.jpg",
+            "1000059313.jpg",
+            "1000059316.jpg",
+            "1000059317.jpg",
+            "1000059315.jpg",
+            "1000059314.jpg",
+            "1000059318.jpg",
+            "1000059337.jpg",
+            "1000059329.jpg",
+            "1000059332.jpg",
+            "1000059322.jpg",
+            "1000059330.jpg",
+            "1000059326.jpg",
+            "1000059342.jpg"
+          ],
+          "september28": [
+            "1000059589.jpg",
+            "1000059599.jpg",
+            "1000059608.jpg",
+            "1000059611.jpg",
+            "1000059601.jpg",
+            "1000059604.jpg",
+            "1000059619.jpg",
+            "1000059617.jpg",
+            "1000059613.jpg",
+            "1000059605.jpg",
+            "1000059609.jpg",
+            "1000059615.jpg",
+            "1000059637.jpg",
+            "image(20260928-142926).png",
+            "image(20260928-142930).png",
+            "image(20260928-143346).png",
+            "image(20260928-143351).png",
+            "image(20260928-143356).png",
+            "image(20260928-143401).png",
+            "image(20260928-143407).png",
+            "image(20260928-143414).png",
+            "image(20260928-143417).png",
+            "image(20260928-143423).png",
+            "image(20260928-143428).png",
+            "image(20260928-143436).png"
+          ]
+        },
+        "status": "SOURCE_CLASSIFIED_AND_SYNTHESIZED_NO_OOS_TRANSFER",
+        "registry": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK002.md",
+        "finished": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 57
+    "totalRootImagesActuallyOpenedAllLoggedWork": 102
   }
 }

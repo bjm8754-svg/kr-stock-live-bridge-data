@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 24
+**Learning revision:** 25
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## BULK-002 — 45 original Library files, five market before/after case pairs
+
+New file `ROOT_IMAGE_STUDIES_BULK002.md` records **45 directly opened** 2026-09-23/28 root screenshots, organized into eight groups. Substantive links: original Aug-27/07 Yangbongman teacher chat/SFA and Mirae Asset Venture context, source-specific `진돌이/가돌이` volume AND traded-value threshold caveat, 10 didactic RSI source figures (not ten live trades), and 5 BEFORE/AFTER market cases PL/SNDK/PENDLE/Alteogen/Jeonjin with previously marked support/role changes. The ten chart screenshots overlap the **topics** of native curated #082–091; those native files still were not separately opened. All five case results are retrospectively visible; **cutoff-locked entry performance NOT VERIFIED**. Root image entries directly opened total **102**, primary original native count **21/91**, independently mastered **0**, S02 still PAUSED. Never substitute the five cases for five successful ex-ante orders.
 
 ## CURRENT source recovery cadence: BULK-META-001 replaces three-image stop rule
 

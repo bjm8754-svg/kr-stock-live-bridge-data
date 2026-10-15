@@ -1,5 +1,11 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-002 — 45 additional native screenshots directly reviewed
+
+**Detailed classification and 5 BEFORE/AFTER market case notes:** [ROOT_IMAGE_STUDIES_BULK002.md](ROOT_IMAGE_STUDIES_BULK002.md). 2026-09-23: 20; 2026-09-28: 25. Total individually opened root images = **102** across legacy batches 42 + BULK-001 15 + BULK-002 45. Only a subset are genuine first-party market charts; many are duplicates, teacher-after-the-fact previews, derivative RSI posters and an unrelated screenshot. Recovery did **not** resolve the archived original 91's previously unopened native files #082–#091 (despite content overlap). Root corpus content classification 1,616/1,616 is **NOT** claimed. Relevant original chat teaching confirmed on SFA trading value and the Mirae Asset Venture `B+` explanation; no S02 or scanner activity.
+
+
+
 ## BULK-META-001 — Entire Library-root image metadata inventory and source-group recovery (2026-10-15)
 
 **User-corrected workflow:** `3–5 images` was a **maximum per visual read/API call**, not a research-session quota, persistence frequency or instruction to write a user report after every call. Treat the previous B-001/B-002/B-003 3–5 image stopping rule as SUPERSEDED for future work. Aggregate many small tool reads **inside one session**; process whole original lecture/source groups, commit after meaningful milestones or session boundaries, and give the user only milestone reports rather than updates after each image. Never promise unattended work outside the session or suppress a critical source-access blocker.

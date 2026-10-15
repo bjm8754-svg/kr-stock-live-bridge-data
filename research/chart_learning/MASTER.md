@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v24 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v25 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v24 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-002 — Extend native original reading: five price-anchor pairs plus teacher contradictions
+
+Directly opened 45 new Library-root images in one continuous work cycle (20 from Sep-23, 25 from Sep-28), restoring source-specific YBM SFA volume AND turnover analysis and Mirae Asset Venture long-base (narrative not participant-identifiable accumulation), 10 RSI didactic posters (70/30 are not automatic triggers; divergence depends on prior price and indicator anchor), and five user supplied historical BEFORE/AFTER chart pairs PL/SNDK/PENDLE/Alteogen/Jeonjin (root charts conceptually align with canonical index #082–091; native archive files not yet separately opened). **Major transferable study distinction:** prospective limit at preexisting marked anchor vs later closed/confirmed acceptance vs outright failure; an annotated later chart cannot award hypothetical fills to the original period. RSI cannot override price structure, and trading-value absolute cutoffs are source-specific hypotheses. Exact files, images and caveats in `ROOT_IMAGE_STUDIES_BULK002.md`. 102 root entries visually read to date, not 102 unique expert lessons; native original 21/91 and skill/economic transfer unproven. Continue source groups with continuous cadence. S02 paused.
 
 ## BULK-META-001 — Corrected source triage cadence; two complete slide decks plus educator material
 

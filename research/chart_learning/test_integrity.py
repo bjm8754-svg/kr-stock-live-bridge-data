@@ -180,6 +180,27 @@ class IntegrityTest(unittest.TestCase):
         self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
         self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
 
+    def test_bulk002_actual_source_trace_and_no_trade_promotion(self):
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        m = gate.load_manifest()
+        root = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertEqual(root["totalRootImagesActuallyOpenedAllLoggedWork"], 102)
+        self.assertEqual(root["bulkStudies"][0]["actualRootImagesOpened"], 15)
+        self.assertEqual(root["bulkStudies"][1]["actualRootImagesOpened"], 45)
+        self.assertEqual(root["bulkStudies"][1]["marketBeforeAfterPairs"], 5)
+        self.assertEqual(root["bulkStudies"][1]["actualExpertTradeOutcomesVerified"], 0)
+        self.assertEqual(len(root["bulkStudies"][1]["rootFilnameInventory"]["september23"]), 20)
+        self.assertEqual(len(root["bulkStudies"][1]["rootFilnameInventory"]["september28"]), 25)
+        self.assertFalse(root["metadataInventory"]["rootContentClassifiedComplete"])
+        self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
+        self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
+        self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
+        ledger = (gate.BASE / "ROOT_IMAGE_STUDIES_BULK002.md").read_text(encoding="utf-8")
+        for word in ("1000059241.jpg", "1000059615.jpg", "20260928-143436", "KakaoTalkChats.txt", "NOT VERIFIED"):
+            self.assertIn(word, ledger)
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])
