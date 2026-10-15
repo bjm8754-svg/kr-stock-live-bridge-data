@@ -2,6 +2,22 @@
 
 **Batch B-001 — 2026-10-15 KST.** This is a **source recovery and classification record**, not 35 new trading lessons, not proof that every old chat attachment survives, and not a model-weight or system-skill update.
 
+## Batch B-002 — 3-file duplicate triage, 2026-10-15
+
+**Review scope (strictly three actual Library originals; no large-paging/rescanning):**
+
+| Image locator (Library root) | Visual evidence | File size | Classification |
+| --- | --- | --- | --- |
+| `/1000059240.jpg` | A prior ChatGPT output headed "4조건 통과 후보 TOP 10", displaying a ranked ten-stock shortlist with columns `사진조건`, `ABC`, `네모네모` | 120,998 bytes | Past assistant/scan artifact; **NOT** an expert-authored chart-method source |
+| `/1000059240(1).jpg` | The **same visible screen and list** as previous image | 120,998 bytes | Visual duplicate candidate |
+| `/1000059240(2).jpg` | The **same visible screen and list** as previous image | 120,998 bytes | Visual duplicate candidate |
+
+**Result:** 3 physical Library entries, **1 visually distinct source**, 2 visual duplicates (exact binary hash identity NOT tested). The table contains a past filtered candidate shortlist and claimed screen fields, not ten independently reviewed chart images, fill records, expert trade recommendations, or proof of predictive edge. Source correctness, cutoff, screen criteria implementation and outcomes remain UNVERIFIED. There is no reason to spend three full chart-study passes on these screenshots.
+
+**Next bounded source-recovery batch:** pick only 3–5 previously uninspected market-related images from the 2026-09-23 dated root group; classify each as genuine teacher primary source / annotated expert chart / historic assistant output / market data context / off-topic / degraded preview. Reopen actual images when a source claim matters. Keep every batch separately committed, avoid repaging 1,616 files or loading dozens of images in one UI call, and do NOT resume scanning or trading.
+
+---
+
 ## Actual retrieval / scope
 
 - **Library inventory:** 1,707 image FILE ENTRIES enumerated from nine paginated pages, of which 91 are the dedicated `/차트공부_원자료_20260928/images/` packet and **1,616 reside at Library root**. Root images include market charts, excerpts of experts' discussions, duplicate/cropped pedagogical images and lots of unrelated private/personal/work material. An image FILE ENTRY is not a unique educational image. Google Drive and lost/expired attachments outside Library are not counted; **all-time completeness UNKNOWN**.

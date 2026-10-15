@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 20 — Small batch B-002: 3 screen variants → 1 visual source
+
+- Opened precisely three previously unreviewed 2026-09-23 Library root images: `1000059240.jpg`, `1000059240(1).jpg`, `1000059240(2).jpg`.
+- Classified all as the same visually observable prior **ChatGPT** "4조건 통과 후보 TOP 10" screen; file lengths all 120,998 bytes. Marked 2 as **visual duplicate candidates only** (no binary equality hash verified).
+- Preserved source boundary: candidate screening output is neither expert chart teaching nor independent fulfilled trade evidence, and its ten rows are not ten independently analyzed stocks.
+- Added a 3–5 original-image cap and completed-batch checkpoint to protect client stability and prevent giant repeated image listings. B-001 35 previously reviewed entries remain intact. No external videos, scanner modifications, S02 or automation run.
+
 ## 2026-10-15 — Revision 19 — Recover 35 uncatalogued visual sources and cross-check actual Yangbongman text
 
 - Visually opened and categorized **35** Library-root images across 2026-09-23/29 and 10-07/14; documented them in `RECOVERED_SCREENSHOT_CATALOG.md` B-001. This is actual manual sample coverage, not classification of all 1,616 or a model-performance gain.

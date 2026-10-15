@@ -1,13 +1,17 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 19
+**Learning revision:** 20
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
 ## Recovered prior screenshots B-001 — actual 35-file manual review
 
 [RECOVERED_SCREENSHOT_CATALOG.md](RECOVERED_SCREENSHOT_CATALOG.md) records manually inspected **35** root images across 2026-09-23/29 and 2026-10-07/14, including YBM/Samsung SDS chat screenshots correlated with `KakaoTalkChats.txt`, additional multi-timeframe RSI examples, and examples of expired-preview and unrelated/private pictures. **These were always outside the curated 91; a 91-image inventory does not equal all prior user training sources.** Do not promote instructor assertions to proven trading facts. 35 **opened files**, NOT 35 independent lessons or all 1,616 classified. YBM remains one perspective, not controlling.
+
+## Small-batch image recovery
+
+`RECOVERED_SCREENSHOT_CATALOG.md` now has **B-001: 35 previously inspected uncatalogued root entries** and **B-002: 3 individual same-looking `1000059240` variants (1 visual candidate list, 2 visual duplicates)**. In this phase inspect **3–5 originals per batch**, classify source authority and source relevance, commit a finished batch, then stop. Do not launch the 1,616-image recursive listing for each batch. This classification does NOT count as model or investment performance improvement.
 
 ## IMPORTANT: other previously uploaded pictures still exist outside the 91-image folder
 

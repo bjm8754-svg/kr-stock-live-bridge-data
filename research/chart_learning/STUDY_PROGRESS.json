@@ -49,7 +49,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 19,
+    "methodologyVersion": 20,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -250,24 +250,26 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Manually continue remaining 2026-09-23 and 2026-09-29 image groups, separate valid teaching from expired previews, cross-correlate with dated KakaoTalkChats.txt, de-duplicate, then return to direct methodology study; never scan all images blindly or request new sources.",
+    "action": "Continue a new 3–5 image microbatch from uninspected originals; catalog classification and duplicate verdict; commit then stop; avoid repeated full Library scans.",
     "latestManuallyInspectedBatch": {
-      "id": "B-001",
+      "id": "B-002",
       "reviewedOnKst": "2026-10-15",
-      "rootImageEntriesDirectlyOpened": 35,
-      "dateGroups": [
-        "2026-09-23",
-        "2026-09-29",
-        "2026-10-07",
-        "2026-10-14"
+      "rootImageEntriesDirectlyOpened": 3,
+      "filenames": [
+        "1000059240.jpg",
+        "1000059240(1).jpg",
+        "1000059240(2).jpg"
       ],
+      "distinctVisualSources": 1,
+      "visualDuplicates": 2,
+      "binaryHashVerified": false,
+      "classification": "Past ChatGPT scanner shortlist (four-condition TOP 10) only, not independent educator charts; no outcome validation",
       "catalog": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
-      "interpretation": "Some original expert screenshots confirmed; many expired previews and unrelated materials; not 35 distinct verified teaching lessons",
-      "teacherTextCorroborated": true,
-      "teacherTextLocator": "KakaoTalkChats.txt lines 3345–3374",
-      "originalImageRecoveryComplete": false,
-      "duplicateHashVerified": false,
+      "finished": true,
       "unseenTransferDemonstrated": false
-    }
+    },
+    "batchCountVerified": 2,
+    "reviewedRootImageEntriesAcrossLoggedBatches": 38,
+    "recoveryBatchLimit": 5
   }
 }

@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v19 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v20 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -13,6 +13,10 @@ Keep the V3 scanner / deep-review / evidence integration / live confirmation arc
 ## Recovered previously missing explanation sources: batch B-001
 
 The new [RECOVERED_SCREENSHOT_CATALOG.md](RECOVERED_SCREENSHOT_CATALOG.md) records **35 actual root image-file visual inspections** (dates 2026-09-23/29, 10-07/14), their relevance/limitations, privacy/expiry screening and source matching. Confirmed a screenshot of an **Aug-28 Yangbongman Samsung SDS** A-grade / `ABC + 핫핑크 + 화이트라인 → above-lines box → breakout` explanation against existing `KakaoTalkChats.txt` around lines 3345–3374. Other YBM visual files were recovered only as *degraded expired-image previews*; no reconstruction of missing price detail. Found numerous Sep-29 multi-timeframe RSI educator/chat images (daily 60/80, intraday 70/50, 1h/4h structure)—all **conditional testimony**, not validated universal filters. Source-credibility boundary: traded-volume bursts alone do NOT identify buyer identity or prove asserted `손바뀜`. Source inspection expands the corpus beyond 91, but skill, false-positive rates and profit remain unproven.
+
+## Source-recovery batch size gate (B-002)
+
+To avoid repeatedly freezing the client's page, cap subsequent manually opened uncatalogued source **batches at 3–5 images**, maintain a completed batch record in `RECOVERED_SCREENSHOT_CATALOG.md`, and only then fetch the next group. In B-002 three visually identical `1000059240` variants were found: they preserve one past assistant-generated “4조건 통과 후보 TOP 10” shortlist, **not three separate educator charts or ten actual trade results**. Duplicate verdict is VISUAL only (binary hash NOT tested). Treat uncatalogued screenshot recovery as source triage; it is not new scanner research or investment competence.
 
 ## Source-coverage correction: 91 images are NOT the whole user screenshot corpus
 
