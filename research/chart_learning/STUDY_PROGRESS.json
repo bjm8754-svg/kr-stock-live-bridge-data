@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 28,
+    "methodologyVersion": 29,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -186,6 +186,12 @@
       "status": "149_ROOT_FILES_VISUALLY_OPENED_ACROSS_SESSIONS",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-006",
       "claim": "Sep17 111/111 and Sep18 38/38 truly visually inspected; 116 images newly opened today; almost all non-chart technical/EHS. HVM daily and 15m cross-session snapshots and derivative former AI message require provenance before scoring any limit fill."
+    },
+    {
+      "type": "ROOT_IMAGE_BULK007_SOURCE_AUDIT",
+      "status": "304_NATIVE_RENDERED_8_INACCESSIBLE_312_INVENTORIED",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-007",
+      "claim": "June 7 83 educational/community visuals; March 4 72, March 5 103, March 6 46 market price/orderbook captures genuinely visible. Eight source files not readable/downloadable and expressly NOT VERIFIED. No economic or out-of-sample edge proof."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -306,9 +312,9 @@
     "verifiedAtKst": "2026-10-15",
     "store": "ChatGPT Library",
     "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
-    "totalImageEntries": 1707,
+    "totalImageEntries": 1714,
     "curated91ImageEntries": 91,
-    "uncataloguedRootImageEntries": 1616,
+    "uncataloguedRootImageEntries": 1623,
     "rootImagesAreAllResearch": false,
     "possibleContentDuplicates": true,
     "externalMountCompleteness": "NOT_VERIFIED",
@@ -318,7 +324,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Return focus to curated original 91 chart teacher images (21 opened, zero independently mastered), advanced source cross-check and lock cutoffs, rather than high-volume nonresearch screenshots. Oct14 47 root images not opened and NOT VERIFIED; do not count them. S02 remains paused; do not scan/order.",
+    "action": "Continue remaining root Library images with source-group focus. 1623 metadata entries currently listed, 688 distinct rooted files rendered, 8 March 4/5 have inaccessible content, 927 root files not yet opened/otherwise triaged. Do not substitute 91 originals as a premature priority. S02 remains paused, no scanner/trade.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -414,8 +420,8 @@
       "neverAutoTrade": true
     },
     "metadataInventory": {
-      "status": "LISTED_NOT_CONTENT_CLASSIFIED",
-      "rootEntries": 1616,
+      "status": "CURRENT_ROOT_METADATA_LISTED_1623_CONTENT_PARTIAL",
+      "rootEntries": 1623,
       "pages": 9,
       "errors": 0,
       "listingDateKst": "2026-10-15",
@@ -451,7 +457,9 @@
         ]
       ],
       "rootContentClassifiedComplete": false,
-      "nameBasedDuplicatesNotVerified": true
+      "nameBasedDuplicatesNotVerified": true,
+      "previousRootEntries": 1616,
+      "entriesAddedSincePreviousSnapshot": 7
     },
     "bulkStudies": [
       {
@@ -608,9 +616,39 @@
         "remark": "3 HVM app images on Sep17, four other stock app images Sep18, and one prior AI trade-comment screenshot; no independent fills or primary original 91 mastery.",
         "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "sourceEvaluation": "NO_CANONICAL_PROMOTION"
+      },
+      {
+        "id": "BULK-007",
+        "dateKst": "2026-10-15",
+        "finished": true,
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "rootEntriesSourceMetadataAudited": 312,
+        "actualNativeImagesRendered": 304,
+        "rootContentInaccessible": 8,
+        "cohortAttempted": {
+          "2026-03-04": 79,
+          "2026-03-05": 104,
+          "2026-03-06": 46,
+          "2026-06-07": 83
+        },
+        "cohortRendered": {
+          "2026-03-04": 72,
+          "2026-03-05": 103,
+          "2026-03-06": 46,
+          "2026-06-07": 83
+        },
+        "parentSourceSets": [
+          "S-Oil/WTI time-sequenced market quotes March4-6",
+          "June7 multi-panel 16 part market corrections education",
+          "June7 semicap support/position-sizing discussion"
+        ],
+        "status": "SOURCE_GROUPED_304_RENDERED_8_CONTENT_NOT_VERIFIED",
+        "unseenChartTransferDemonstrated": false,
+        "canonicalRulesPromoted": 0,
+        "expertTradeOutcomesVerified": 0
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 384,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 688,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -695,14 +733,31 @@
         "newVisualRead": 21,
         "marketAppCharts": 4,
         "softwareConfigAndAccountScreens": 34
+      },
+      {
+        "uploadDate": "2026-06-07",
+        "allRootEntries": 83,
+        "classifiedFileEntries": 83,
+        "status": "ALL_83_NATIVE_IMAGES_RENDERED_SOURCE_GROUPED",
+        "actualRootImagesOpened": 83,
+        "imagesInSame16SlidePost": 16,
+        "sourceReliability": "COMMUNITY_EDUCATION_RETROSPECTIVE_UNVALIDATED"
+      },
+      {
+        "uploadDate": "2026-03-06",
+        "allRootEntries": 46,
+        "classifiedFileEntries": 46,
+        "status": "ALL_46_NATIVE_IMAGES_RENDERED_MARKET_SNAPSHOTS_NOT_TRADES",
+        "actualRootImagesOpened": 46,
+        "sourceReliability": "MARKET_APP_HISTORICAL_CONTEXT_NO_INDEPENDENT_TRADES"
       }
     ],
-    "completedCohortDateCount": 9,
-    "rootEntriesWithinFullyClassifiedCohorts": 379,
+    "completedCohortDateCount": 11,
+    "rootEntriesWithinFullyClassifiedCohorts": 508,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
-    "additionalRootVisualSamplesOutsideClosedCohorts": 5,
+    "additionalRootVisualSamplesOutsideClosedCohorts": 180,
     "partialDateCohortSamples": [
       {
         "uploadDate": "2026-10-14",
@@ -710,8 +765,38 @@
         "visuallyOpened": 5,
         "status": "PARTIAL_ONLY",
         "verifiedTheme": "sampled career/recruiting plus safety and office document screenshots, other 47 NOT VISUALLY VERIFIED"
+      },
+      {
+        "uploadDate": "2026-03-04",
+        "totalListed": 79,
+        "visuallyOpened": 72,
+        "status": "ACCESS_BLOCKED_REMAINING_7_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000047648.jpg",
+          "1772626688112.jpeg",
+          "1000047732.jpg",
+          "1000047734.jpg",
+          "1000047736.jpg",
+          "1000047738.jpg",
+          "1000047740.jpg"
+        ],
+        "reason": "No readable content and no downloadable Library backing"
+      },
+      {
+        "uploadDate": "2026-03-05",
+        "totalListed": 104,
+        "visuallyOpened": 103,
+        "status": "ACCESS_BLOCKED_REMAINING_1_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1772678017686.jpeg"
+        ],
+        "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "Conservative filename-distinct visually opened subset: 379 files from nine fully closed disjoint upload date cohorts plus five actual Oct14 partial-cohort opens; excludes unenumerated additional unique root reads from older pre-v26 batches. Not independent market charts and not exact all-time unique count."
+    "totalRootImageCountExplanation": "Conservative filename-distinct visually opened subset: 379 files from nine fully closed disjoint upload date cohorts plus five actual Oct14 partial-cohort opens; excludes unenumerated additional unique root reads from older pre-v26 batches. Not independent market charts and not exact all-time unique count.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 696,
+    "rootEntryAccessFailedCount": 8,
+    "rootImageCountUnaccountedForInCurrentInventory": 927,
+    "accessFailureDoesNotCountAsVisualStudy": true
   }
 }
