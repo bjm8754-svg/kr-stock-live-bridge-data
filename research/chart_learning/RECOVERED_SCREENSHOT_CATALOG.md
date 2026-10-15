@@ -1,5 +1,187 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-006 — Exhaustive Library-root 2026-09-17 and 2026-09-18 screenshot audit (2026-10-15)
+
+**Open verification:** A fresh full root Library metadata list, without warnings or pagination, returned exactly **111 Sep17 + 38 Sep18 = 149 date-scoped file entries**. Prior v27 direct visual reads covered 16 Sep17 and 17 Sep18. This turn opened ALL previously uninspected remainder (Sep17 **95** + Sep18 **21** = **116**), in requests of <=5 images, verified each batch returned the requested number, and categorized them. Therefore these two dated root cohorts are now **111/111** and **38/38** visually checked. The prior seven closed upload-date cohorts held 230 files, making **379 closed-cohort root entries** across nine date groups. Plus separately opened 5/52 Oct14 samples = **384 date-distinct actually visually opened Library-root files as a conservative floor**; do NOT confuse this with verified chart samples or independent expert outcomes. Exact all-history figure outside closed dates remains NOT VERIFIED because pre-v25 legacy batches have partial name ledgers.
+
+### Sep17 — source categories (111 distinct root files)
+
+- **Stock app = 3:** indices 0/1: `1000058321.jpg` (HVM daily) and `1000058323.jpg` (HVM 15m); index 110 `1000058357.jpg` (HVM 15m, distinct screenshot/time). These are user-collected chart screens without evidence of an actionable ex-ante decision, actual fill or final P&L.
+- **Software setup = 4:** indices 2–5 (Apps Script code and OAuth screen captures). **Blank corporate slide = 1:** index 6.
+- **Corporate EHS training and form design = 38:** indices 7–44 (three risk assessment form previews, repeated edited decks and montages; some slides are near-identical revisions). This material belongs to an unrelated workplace task and has no evidentiary role in stock/crypto learning. No further transcript, identifiers or training slide contents exported.
+- **Historical Cloudflare, GitHub, developer screens = 64:** indices 45–108 (some old assistant setup replies and image extracts mixed in). They document an earlier read-only finance bridge and software troubleshooting, *not successful analytical judgment* and not actionable present-day authorization to change production.
+- **Derivative old AI trade-plan message = 1:** index 109 `ccffd6d8-b7aa-4822-ac6e-d7de33195068.png` with a `TARGET_NEXT_SESSION` label mentioning HVM and LG CNS. Treat as a **snapshot of previous assistant discussion, not a verified frozen ex-ante order or an actual trade**. Before benchmarking, independent timestamp, session/opening data, intended time-in-force, fill probability and error/loss case coverage must be available.
+
+### Sep18 — source categories (38 distinct root files)
+
+- **Old software/account configuration screenshots = 34:** indices 0–33: Apps Script, Cloudflare and GitHub onboarding, permissions and previous integration attempts. Some may display tokens/configuration *contexts*: **no secrets or account identifiers retained in this research catalog** and none of these screens is counted as market evidence.
+- **Market-app chart screenshots = 4:** indices 34–37: `1000058375.jpg` Vinatech weekly, `1000058373.jpg` Vinatech daily, `1000058390.jpg` Amotech weekly, `1000058387.jpg` Amotech daily. The last two share one displayed price, but are not independent orders or independent predictive outcomes. Frame/visible bars can be compared conditionally, not as backtest.
+
+### Exact root entries, original Library upload-date order
+
+**2026-09-17 (111 files)**
+
+- 000 `1000058321.jpg`
+- 001 `1000058323.jpg`
+- 002 `5856dc83-8d43-4458-af79-585efb4528c4.png`
+- 003 `9f52f268-4840-437f-896f-5526962ff284.png`
+- 004 `3f54dc30-3acb-47d0-a188-f720d9557335.png`
+- 005 `7149a3ed-0077-4a18-b39f-9c252857ada3.png`
+- 006 `8300a126-8382-424e-9336-e489b09109ef.png`
+- 007 `preview_1_사전조사서.png`
+- 008 `preview_2_서면조사서.png`
+- 009 `preview_3공정분석표.png`
+- 010 `slide-1(20260917-014633).png`
+- 011 `slide-2(9).png`
+- 012 `slide-3(8).png`
+- 013 `slide-4(6).png`
+- 014 `slide-5(5).png`
+- 015 `slide-6(4).png`
+- 016 `slide-7(1).png`
+- 017 `slide-8(1).png`
+- 018 `risk_montage(1).png`
+- 019 `risk_montage_final.png`
+- 020 `slide-1(20260917-014716).png`
+- 021 `slide-2(10).png`
+- 022 `slide-3(9).png`
+- 023 `slide-4(7).png`
+- 024 `slide-5(6).png`
+- 025 `slide-6(5).png`
+- 026 `slide-7(2).png`
+- 027 `slide-1(20260917-022341).png`
+- 028 `slide-2(20260917-022344).png`
+- 029 `slide-3(10).png`
+- 030 `slide-4(8).png`
+- 031 `risk_intro_montage.png`
+- 032 `1095b135-ff33-4194-909a-d806aea7e547.png`
+- 033 `slide-1(20260917-024211).png`
+- 034 `slide-2(20260917-024214).png`
+- 035 `slide-3(20260917-024217).png`
+- 036 `slide-4(9).png`
+- 037 `compact_green_montage.png`
+- 038 `compact_green_montage(1).png`
+- 039 `slide-1(20260917-024236).png`
+- 040 `slide-2(20260917-024239).png`
+- 041 `slide-3(20260917-024244).png`
+- 042 `slide-4(10).png`
+- 043 `image-gen-1.png`
+- 044 `image-gen-2.png`
+- 045 `645cc871-3cc9-491b-8d2d-87e88f2d8b04.png`
+- 046 `2fa39e2c-2dad-408a-b902-21a88154b6b0.png`
+- 047 `eb977d8d-0878-483e-93d3-47ec26bf5fb4.png`
+- 048 `b8a9da6a-3b29-43d9-9aaa-461118bc15f1.png`
+- 049 `a0d0ca8f-cf17-4e39-b127-7646a5a11115.png`
+- 050 `5a819109-a1b9-4307-a46d-2a64ddb8a3f0.png`
+- 051 `2a7b557c-601f-480f-ba82-4453404a3119.png`
+- 052 `b729bca3-e8b5-46f6-8bfd-93dbb04cc8ab.png`
+- 053 `eda5d03f-425d-4633-b0dd-ffc5974131d6.png`
+- 054 `bf8bacbe-73bf-4f14-a084-a2a420c31c00.png`
+- 055 `d5e287a9-a2ae-4fec-bedb-3ea461e75515.png`
+- 056 `9000f732-f981-4721-900e-74109cf36dae.png`
+- 057 `138da987-e948-406b-a6e6-533f4c5aa162.png`
+- 058 `8eb5eb4d-f7e3-4812-95b5-9504b1e6ae92.png`
+- 059 `0c0a8a6e-1981-40e0-884a-a226829afec9.png`
+- 060 `8db3161d-622c-429c-92d3-8a5ca55e7925.png`
+- 061 `cb08e8a1-ea40-45db-91a3-2c2f2f214606.png`
+- 062 `f7aebe5e-7d7a-4687-b1c2-73bb73c0c667.png`
+- 063 `97ef4802-0284-45c1-adb2-4a0e887d270c.png`
+- 064 `5bcc81fd-3844-4d35-89ee-604c31c0e469.png`
+- 065 `ad6d955f-2ea0-47d4-a6d4-333f06e14fff.png`
+- 066 `7cca9ade-9063-4c28-90ca-d4f37c94fca2.png`
+- 067 `fe543fe8-fb83-44e9-92a4-1f279879ff9c.png`
+- 068 `b0e8fa99-5fe2-43fd-833d-24f830ae347e.png`
+- 069 `cebf652f-55e4-4012-bf2b-f8acc4736077.png`
+- 070 `191637a9-da1a-4f3c-96c8-87b1c1bd3bbb.png`
+- 071 `2d2c1d8f-a7f2-418d-94ce-84b8fb66cc8d.png`
+- 072 `6f3f4504-f4fd-46f1-a6c5-d06b933d9d23.png`
+- 073 `e79a2b72-3d0f-4c30-b18f-d64cb4215465.png`
+- 074 `f72fbb12-e5af-4010-99fa-8d0a58070b4c.png`
+- 075 `cc7c4371-1bbb-4c1f-8381-001dc861c32e.png`
+- 076 `5bbcb737-b749-45ce-840f-72086e292bf4.png`
+- 077 `6356d983-7858-4dc6-89f9-55f4b1b1792b.png`
+- 078 `fb250723-fb19-41c8-ab6e-db64652b21dd.png`
+- 079 `adc5a6ff-b62e-47ca-8f16-98c47e39be5d.png`
+- 080 `07c63f57-6f5c-465e-a86d-06368a85b972.png`
+- 081 `13713f4b-4870-4b9c-96b1-504e83bd2597.png`
+- 082 `b5a7fb6e-5c07-4bfb-b231-70543866b725.png`
+- 083 `8029cf9e-4167-4cb2-8d20-ad069b33b33a.png`
+- 084 `9c2d780b-eab5-4994-b59b-bd63942cebc3.png`
+- 085 `42de8f75-c751-458d-b241-5949cac1a5c4.png`
+- 086 `22fa230f-60bc-419c-9929-b55045852d29.png`
+- 087 `ac6c7837-1ab4-45ec-9017-cfae693ed261.png`
+- 088 `cbf2c521-ad6e-48c2-ae07-906b3f50292f.png`
+- 089 `b51ae590-fa85-4555-93ba-579aed6e81a8.png`
+- 090 `9ed50b07-d137-429c-a691-ff220b8b0f0c.png`
+- 091 `dbea560e-7ea9-4b8e-841e-f41354137710.png`
+- 092 `33b18f8c-c2fa-44d2-aef7-3aa2fd3f066c.png`
+- 093 `faf6edde-a8df-4ef8-b5dd-22c139a764c6.png`
+- 094 `233ff956-1627-4fc0-b8eb-35bf8ba2da18.png`
+- 095 `a6560a81-9308-42f2-8667-4c8f4728d98f.png`
+- 096 `514c0fd9-3f27-4572-a7e3-2504123f7c70.png`
+- 097 `a5e1021d-bc2d-44a4-84c1-2eabe328f776.png`
+- 098 `ccc9efd9-3346-4ef6-a12f-491f5a9d86ac.png`
+- 099 `6e00580c-19b2-4a98-8029-ad7342e26d7b.png`
+- 100 `8029466b-f9c6-4713-991f-ae18b91b3e67.png`
+- 101 `0316eaae-e173-4966-ad37-00130a819449.png`
+- 102 `cd294551-842f-497c-a191-ce545858e1c8.png`
+- 103 `81bd805a-4ec8-4e39-9f16-747171a9eefc.png`
+- 104 `73807f96-fccb-4824-b776-7a9052ed8a8c.png`
+- 105 `2d707b8b-4bee-4ed7-96af-107cb96a1a13.png`
+- 106 `4c574d44-229f-4bd5-a82a-a7743bb0887c.png`
+- 107 `667efe02-3567-4d9f-9e58-55bbbacbbf0e.png`
+- 108 `e03a759f-31b0-41a8-926a-2128ddfd8fbe.png`
+- 109 `ccffd6d8-b7aa-4822-ac6e-d7de33195068.png`
+- 110 `1000058357.jpg`
+
+**2026-09-18 (38 files)**
+
+- 000 `5978abe2-a0c6-47d7-aa8c-fd15d87b2295.png`
+- 001 `1b5f599b-7b19-446e-bf0f-05b373f625af.png`
+- 002 `42b432cd-8b80-4c82-b5a8-31f95b09d246.png`
+- 003 `07b78268-6ba9-4c23-99d5-804194038586.png`
+- 004 `179e38a5-cea2-4df6-a1ff-82104e8a084b.png`
+- 005 `5c864496-d987-4c13-a834-bb6e8d844f26.png`
+- 006 `77ee92de-0b92-4a1d-ac45-28ee61066e6c.png`
+- 007 `6878f536-3d04-457c-80a8-f2dded3ecc5e.png`
+- 008 `155ac443-e242-438d-beb9-15402b35e3fa.png`
+- 009 `6aeb41dc-fadb-4abb-a887-ef0fecf49edd.png`
+- 010 `838bb14b-db57-44c7-a8a8-a46ba33e5eb1.png`
+- 011 `1bfa6432-adeb-450e-9e6d-a2e84252817d.png`
+- 012 `e9510502-22e7-470b-8bc5-84a1464f5725.png`
+- 013 `e69dd19c-7c10-400b-92f9-5cd5fda51628.png`
+- 014 `587d9033-78de-47c3-9802-fa789a53f004.png`
+- 015 `7e3d5925-959c-438d-afa4-c47ae67f5316.png`
+- 016 `46963dd8-9c8d-4fd7-95a9-a69a95b5a012.png`
+- 017 `c2a1f616-fb46-46bc-8b69-c5c224722b03.png`
+- 018 `ca99162a-4193-42f8-a8dd-e743f0ae5acb.png`
+- 019 `231ec695-198c-47f2-ba3b-e28435a1f62c.png`
+- 020 `f69a7235-0b6a-406f-a1ae-b615f12c9878.png`
+- 021 `011ade81-2b06-473d-8f00-8b60ef140ca9.png`
+- 022 `23fbf63f-baf9-430b-9191-fb02d2d61849.png`
+- 023 `8e9e0eec-a82e-485d-b4b5-a229d7b940c1.png`
+- 024 `f5eff51e-6dbe-411e-a60f-994bfd8b1905.png`
+- 025 `daf2b715-6f26-41c3-8c5c-382423dddd34.png`
+- 026 `3b722c9f-a8c0-4710-8d4a-fe2e809b5178.png`
+- 027 `1353965b-8c12-45db-a478-c5f7992d365d.png`
+- 028 `c7db99aa-8df0-4d29-a2e8-164fe5b97d15.png`
+- 029 `a851bb5f-50a8-4b97-90f5-23e6c90d61fb.png`
+- 030 `15483a74-6e8c-40f7-ac15-62711e5c3110.png`
+- 031 `990faf76-7f8d-4688-b2e0-7708ed2b1e99.png`
+- 032 `b5bce1b7-7fdf-4c6f-b44f-fd3a9d08d263.png`
+- 033 `974ebb20-ee73-4874-bfae-ad150e1e0c42.png`
+- 034 `1000058375.jpg`
+- 035 `1000058373.jpg`
+- 036 `1000058390.jpg`
+- 037 `1000058387.jpg`
+
+### Single substantive research lesson: *chart time ≠ order time ≠ upload time*
+
+The HVM snapshots around Sep16–18 illustrate why ticker-matching across a daily and 15m phone app, displayed pre-open `08:00+` availability, and different high/last values cannot prove a 'successful buy' from another screen showing a suggested order. Capture **(a)** observation timestamp and the last *closed* candle for each timeframe, **(b)** venue regular vs alternative trading segment and eligible order hours, **(c)** source algorithm whether adjusted or unadjusted OHLC, **(d)** when the hypothesis and limit order were genuinely recorded (before or after the move), **(e)** queue, fill, slippage, abort/invalidating price and missed trades. Without these, a ticker appearing with 53,100 / 57,200 / 60,600 displays is **not** an independent tested setup. Candle body/upper wick after strong prior highs should be explained by available bar data, not display badges saying big investors bought/sold.
+
+**Negative finding is valuable:** Sep17/18 image count is high largely because they contain slides and deployment tutorials; almost all of the 149 images are not expertise in chart reading. Do not let inventory progress masquerade as original-91 comprehension (still 21 directly opened, 0 independently mastered) or earnings evidence (NOT VERIFIED). No rules promoted, no routine scan/S02 D04/production writes/live orders.
+
+**Next:** Prioritize **actual curated primary 91 PNG originals** or high-quality unseen source chart evidence, not another large operations-screenshot date cohort. Oct14 still only 5/52 (unseen 47 NOT VERIFIED), mostly unrelated in observed samples; retain as partial and don't claim entire date classified.
+
 ## BULK-005 — Cross-cohort chart screen triage and private material exclusion (2026-10-15)
 
 **Dates fully opened from ChatGPT Library root:** 2026-09-16 (16 files, every source opened), 09-24 (3, every source opened), 10-07 (4, every source opened), 10-08 (5, every source opened), adding **28 distinct root image files** to the earlier 202 fully covered across Sep23/28/29 = **230 complete-cohort files**. Do not equate with 230 independent charts, 230 correct trades or 230 educational rules.
