@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 26
+**Learning revision:** 27
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## BULK-005 — price snapshots and duplicated CVD teaching chart, no methodological promotion
+
+Four fully visually inspected **new** root Library cohorts add 28 distinct file entries: Sep16=16, Sep24=3, Oct7=4, Oct8=5. Now **230 completed-cohort file entries** (prior 202 + new 28). Sampled but NOT COMPLETED: Sep17=16 of 111, Sep18=17 of 38, Oct14=5 of 52; do not count remaining 163 as read or uniformly irrelevant. Sep16 cross-instrument market-app screenshots and Sep17/18 HVM daily/15m images show the need to keep ticker, market session (pre-/after-market), bar clock, frame boundary and same source parameters separate. On Oct7, two pictures of the SAME annotated 4h crypto order-flow/CVD/resistance chart were inspected; aggression without proportional price progress near resistance motivates absorption as a **hypothesis**, not a verified seller identity, edge, or two independent trades. Details in `RECOVERED_SCREENSHOT_CATALOG.md` BULK-005. Native teacher 91 opens 21, independently mastered 0, SRC-STUDY-001 open, S02 paused.
 
 ## BULK-003 and BULK-004 — three closed Library upload-date cohorts
 
