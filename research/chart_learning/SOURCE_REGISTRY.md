@@ -1,5 +1,9 @@
 # Source registry — original study materials and traceability
 
+**BULK-005 mixed cohort audit:** New complete Library root date cohorts 2026-09-16=16, 09-24=3, 10-07=4, 10-08=5; alongside earlier three, complete date-cohort source records = **230 files** total. Additional small actual visual samples Sep17=16/111, Sep18=17/38, Oct14=5/52 are **incomplete**. Oct7 two capture variants present one already-annotated 4h crypto resistance/CVD chart, not distinct expert outcomes. Sep16–18 price snapshot cases are app screens, not chronological verified live fills. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-005; do not archive private industrial/account pages into the chart method.
+
+
+
 **Bulk source recovery v26:** 2026-09-23 (65), 09-28 (98) and 09-29 (39) all directly triaged within those three full Library-root date cohorts; exact filenames and discussion of overlapping source provenance in `RECOVERED_SCREENSHOT_CATALOG.md`. 9/28 includes 69 related didactic infographic files whose box midpoint and support-acceptance terminology must be treated as source hypotheses, not measured executed outcomes or independently mastered primary 91 originals. Historical B-001 file-name trace is partial, so all-time unique image totals outside the three closed dates remain NOT VERIFIED.
 
 
