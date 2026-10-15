@@ -1,5 +1,14 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 25 — BULK-002 classify and critically analyze 45 root screenshots
+
+- Opened 45 fresh 2026-09-23 (20) and Sep-28 (25) Library-root images, recorded exact inventory in `ROOT_IMAGE_STUDIES_BULK002.md` as eight logically linked groups. Preserved two old ChatGPT screenshot triplicates/doubles, expired older expert charts and several unrelated/unreadable captures, rather than inflating the lesson count.
+- Read original `KakaoTalkChats.txt` lines around Aug-27 SFA `진돌이/가돌이` and turnover, Aug-07 Mirae Asset Venture `b+` & hindsight narrative, Sep-21 later SFA entry-vs-exit discussion. Kept source-specific thresholds (e.g. 1,000억원) and future-looking participant intention as unvalidated claims.
+- Studied ten RSI tutorial cards as one coherent topic set and ten real chart screenshots as five paired cases (PL/SNDK/PENDLE/Alteogen/Jeonjin), source-overlapping canonical #082–091 without marking those unopened native images as mastered. Added explicit anchor formation/time-of-information and failed support hypotheses; no predictive promotion.
+- Previously opened root 57 + new 45 = **102 root originals directly inspected**, 1,616 Library-root file metadata known, content classification still partial, native chart-sage 21/91, zero independent mastery/edge. S02 remains frozen, production/scanner unaffected.
+
+
+
 ## 2026-10-15 — Revision 24 — Entire root metadata census and practical grouped research cadence
 
 - User correctly rejected continuing the 1,616-entry root-photo corpus in serial 3–5-image jobs with per-job chat reports. Clarified 3–5 is an image-tool window only. New workflow: one metadata enumeration; continuous multi-image, source-grouped study sessions; consolidated updates and milestone persistence; retain source/duplicate/privacy/evidence controls.
