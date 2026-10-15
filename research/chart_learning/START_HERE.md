@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 21
+**Learning revision:** 22
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## P-002 source cross-check: three spring originals (not mastery)
+
+New direct Library inspection of #052/#056/#058 distinguishes spring failure-and-reclaim evidence and three distinct preemptive/reclaim/retest entries. Compare them to #067/#078/#079; do not confuse an early resting limit fill with later observed confirmation, or use an adjustment candle close before that candle exists. `PRIMARY_IMAGE_STUDIES.md` P-002 records sources and falsifiers. Numbered source inspection is now **21/91**, zero mastered; SRC-STUDY-001 cutoff-locked unfamiliar transfer is STILL OPEN. No S02 progression or production action.
 
 ## Recovered prior screenshots B-001 — actual 35-file manual review
 

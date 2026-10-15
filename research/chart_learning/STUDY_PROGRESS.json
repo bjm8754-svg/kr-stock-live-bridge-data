@@ -26,6 +26,9 @@
     "indexDocument": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
     "inventoryVerifiedKst": "2026-10-15",
     "directlyOpenedOriginalNumbers": [
+      "052",
+      "056",
+      "058",
       "064",
       "065",
       "066",
@@ -45,11 +48,11 @@
       "080",
       "081"
     ],
-    "directImageInspectionCompleteness": "PARTIAL_ONLY_18_OF_91_OPENED",
+    "directImageInspectionCompleteness": "PARTIAL_ONLY_21_OF_91_OPENED",
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 21,
+    "methodologyVersion": 22,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -92,7 +95,12 @@
       "M_box"
     ],
     "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap",
-    "studyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md"
+    "studyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+    "secondaryOriginalCrossCheck": [
+      "052",
+      "056",
+      "058"
+    ]
   },
   "completedEvidence": [
     {
@@ -136,6 +144,12 @@
       "status": "35_ROOT_IMAGES_VISUALLY_CLASSIFIED_NO_METHOD_TRANSFER",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
       "claim": "Opened 35 Library root images across 4 upload date groups, recovered Yangbongman screenshots and Sep29 multi-timeframe RSI chat sources; corroborated one Samsung SDS lesson with original KakaoTalk text. Some pictures are obsolete previews or unrelated/private. This expands sources but proves no trading skill or economic return."
+    },
+    {
+      "type": "DIRECT_ORIGINAL_IMAGE_STUDY",
+      "status": "3_NEW_NATIVE_PNG_INSPECTED_NO_TRANSFER",
+      "source": "/차트공부_원자료_20260928/images/ 052,056,058",
+      "claim": "P-002 directly re-opened original spring diagrams, distinguishes preemptive, reclaim, retest information times; no independent predictive or economic evidence."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -214,6 +228,24 @@
         "Volume confirmation vs high-volume fake breakouts",
         "Retest opportunity cost versus nonfills",
         "Weekly-monthly structural close versus intraperiod economic stop"
+      ]
+    },
+    {
+      "studyId": "P-002",
+      "numbers": [
+        "052",
+        "056",
+        "058"
+      ],
+      "dateKst": "2026-10-15",
+      "status": "3_NATIVE_PNG_VISUALLY_INSPECTED_SOURCE_SYNTHESIS_ONLY",
+      "ledger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+      "realMarketTransferProven": false,
+      "canonicalRulesPromoted": 0,
+      "openRisks": [
+        "reclaim confirmation timing versus limit fill timing",
+        "no-fill opportunity cost",
+        "as-of C_adjust creation time"
       ]
     }
   ],
