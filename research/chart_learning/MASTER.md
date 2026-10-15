@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v22 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v23 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v22 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## B-003 source recovery: same chart can attract incompatible named explanations
+
+Direct Library opening of root images `1000059367.jpg`, `1000059372.jpg`, `1000059374.jpg`, `1000059376.jpg` plus original `KakaoTalkChats.txt` 2026-08-28 context recovered one instructor recap and three degraded teaching-gallery screenshots (one near duplicate). The images contain an *apparent setup-name tension*: earlier conversation says Samsung SDS `네모네모` / `진돌이`, while a later page warns against reflexively naming the depicted Samsung SDS chart that way. Because the original graph is expired/overlaid, chart as-of/timeframe and speaker-to-page pairing remain unresolved. **Do not force a contradiction verdict or adopt either school by authority.** Derive price-path/volume/time conditions and cutoff-specific pattern invalidation from readable, independently reconstructed data first. This is source provenance work, not an independent predictive or economic upgrade. B-003 now brings 42 Library-root screenshot entries directly classified; B-004 next at 3–5 images. See `RECOVERED_SCREENSHOT_CATALOG.md`.
 
 ## P-002 spring-source cross-check (observational only)
 
