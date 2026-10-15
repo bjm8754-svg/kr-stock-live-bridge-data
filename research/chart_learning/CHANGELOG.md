@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 22 — Read original spring images #052/#056/#058 and separate signal information times
+
+- Directly opened three previously undocumented numbered Library originals #052/#056/#058 in a fresh research conversation; re-opened existing breakout originals for critical comparison. Recorded source image observations, teacher-versus-model inferences and cutoff-dependent preemptive/reclaim/retest trade mode distinctions in PRIMARY_IMAGE_STUDIES P-002.
+- Updated direct-inspection inventory from 18/91 to 21/91, explicitly retained **zero mastered originals, no unseen chart transfer or economic edge**, and kept SRC-STUDY-001 unresolved.
+- Research documentation only. Existing scanner/production code, S02 D00–D03 frozen decisions and paused phase all unchanged. No new canonical trade rule, no source return or fill claim.
+
+
 ## 2026-10-15 — Revision 21 — Preserve B-001/B-002 history and repair fixed-batch CI assertion
 
 - Previous integrity test asserted `latestManuallyInspectedBatch.rootImageEntriesDirectlyOpened == 35` forever. That failed correctly when B-002 (3 screenshots) became the latest checkpoint.
