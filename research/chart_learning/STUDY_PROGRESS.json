@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 27,
+    "methodologyVersion": 28,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -180,6 +180,12 @@
       "status": "28_CLOSED_DATE_FILES_AND_38_PARTIAL_SAMPLE_VISUALS_NO_TRANSFER",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-005",
       "claim": "Four complete new date cohorts total 28 images + 38 actually opened sample images from three incomplete cohorts; duplicated 4h BTC source variants, screenshot charts across sessions not precommitted trades, unrelated setup/media excluded."
+    },
+    {
+      "type": "TWO_MIXED_LIBRARY_DATE_COHORTS_CLOSED",
+      "status": "149_ROOT_FILES_VISUALLY_OPENED_ACROSS_SESSIONS",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-006",
+      "claim": "Sep17 111/111 and Sep18 38/38 truly visually inspected; 116 images newly opened today; almost all non-chart technical/EHS. HVM daily and 15m cross-session snapshots and derivative former AI message require provenance before scoring any limit fill."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -312,7 +318,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue remaining 2026-09-17 (95 still uninspected), 09-18 (21 uninspected), 10-14 (47 uninspected) only when value justified; source-prioritize yet-unread standalone market charts & original contemporaneous expert explanations. Do not report contents of uninspected images as known or count them mastered. No scanner S02 or orders.",
+    "action": "Return focus to curated original 91 chart teacher images (21 opened, zero independently mastered), advanced source cross-check and lock cutoffs, rather than high-volume nonresearch screenshots. Oct14 47 root images not opened and NOT VERIFIED; do not count them. S02 remains paused; do not scan/order.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -584,9 +590,27 @@
         "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "canonicalRulesPromoted": 0,
         "unseenChartTransferDemonstrated": false
+      },
+      {
+        "id": "BULK-006",
+        "dateKst": "2026-10-15",
+        "finished": true,
+        "status": "BOTH_DATE_COHORTS_VISUALLY_COMPLETE_CHART_EVIDENCE_UNTESTED",
+        "dateCohortsClosed": {
+          "2026-09-17": 111,
+          "2026-09-18": 38
+        },
+        "priorSourceReadsAcrossBothDates": 33,
+        "additionalActualReadsThisTurn": 116,
+        "additionalSep17Reads": 95,
+        "additionalSep18Reads": 21,
+        "verifiedResearchRootScreens": 8,
+        "remark": "3 HVM app images on Sep17, four other stock app images Sep18, and one prior AI trade-comment screenshot; no independent fills or primary original 91 mastery.",
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "sourceEvaluation": "NO_CANONICAL_PROMOTION"
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 230,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 384,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -648,29 +672,38 @@
         "status": "ALL_NATIVE_FILE_BYTES_VISUALLY_INSPECTED",
         "actualRootImagesOpened": 5,
         "notes": "safety/incident and personal-message screenshots; not chart sources; no raw content or identifying details copied"
-      }
-    ],
-    "completedCohortDateCount": 7,
-    "rootEntriesWithinFullyClassifiedCohorts": 230,
-    "totalRootCountIsConservativeLowerBound": true,
-    "deduplicatedAcrossAllHistoricalBatchesVerified": false,
-    "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
-    "additionalRootVisualSamplesOutsideClosedCohorts": 38,
-    "partialDateCohortSamples": [
+      },
       {
         "uploadDate": "2026-09-17",
-        "totalListed": 111,
-        "visuallyOpened": 16,
-        "status": "PARTIAL_ONLY",
-        "verifiedTheme": "two market-app HVM chart screens, a later HVM intraday screen and many operational/industrial EHS slide/coding/system images; remainder NOT VISUALLY VERIFIED"
+        "allRootEntries": 111,
+        "classifiedFileEntries": 111,
+        "status": "ALL_NATIVE_SOURCE_IMAGES_VISUALLY_OPENED",
+        "previousSessionVisual": 16,
+        "newVisualRead": 95,
+        "marketAppCharts": 3,
+        "oldAiTradePlanScreenshot": 1,
+        "softwareScreensOrTutorials": 68,
+        "corporateEhsAndForms": 38,
+        "blankCorporateSlide": 1
       },
       {
         "uploadDate": "2026-09-18",
-        "totalListed": 38,
-        "visuallyOpened": 17,
-        "status": "PARTIAL_ONLY",
-        "verifiedTheme": "three stock-app screens, sampled cloud/Google and GitHub configuration screens; other 21 remain NOT VISUALLY VERIFIED"
-      },
+        "allRootEntries": 38,
+        "classifiedFileEntries": 38,
+        "status": "ALL_NATIVE_SOURCE_IMAGES_VISUALLY_OPENED",
+        "previousSessionVisual": 17,
+        "newVisualRead": 21,
+        "marketAppCharts": 4,
+        "softwareConfigAndAccountScreens": 34
+      }
+    ],
+    "completedCohortDateCount": 9,
+    "rootEntriesWithinFullyClassifiedCohorts": 379,
+    "totalRootCountIsConservativeLowerBound": true,
+    "deduplicatedAcrossAllHistoricalBatchesVerified": false,
+    "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
+    "additionalRootVisualSamplesOutsideClosedCohorts": 5,
+    "partialDateCohortSamples": [
       {
         "uploadDate": "2026-10-14",
         "totalListed": 52,
@@ -678,6 +711,7 @@
         "status": "PARTIAL_ONLY",
         "verifiedTheme": "sampled career/recruiting plus safety and office document screenshots, other 47 NOT VISUALLY VERIFIED"
       }
-    ]
+    ],
+    "totalRootImageCountExplanation": "Conservative filename-distinct visually opened subset: 379 files from nine fully closed disjoint upload date cohorts plus five actual Oct14 partial-cohort opens; excludes unenumerated additional unique root reads from older pre-v26 batches. Not independent market charts and not exact all-time unique count."
   }
 }

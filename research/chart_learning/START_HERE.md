@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 27
+**Learning revision:** 28
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## BULK-006 — Sep17/Sep18 cohorts fully triaged, operational captures excluded
+
+Both root Library upload-date cohorts now actually opened file by file: **Sep17 111/111** and **Sep18 38/38**. Earlier v27 had opened 16+17; this turn opened the rest **95+21=116**. Across nine now-closed date cohorts there are **379** disjoint exact filename entries. The remaining Oct14 group stays **5/52 PARTIAL** (47 images unread), yielding **384 actually opened date-distinct entries as a conservative minimum**; older B-001 global unique attribution still incomplete. Valuable images were Sep17 three HVM app snapshots, Sep18 four Vinatech/Amotech app snapshots, and Sep17 an old assistant `TARGET_NEXT_SESSION` note (derivative and unscored). All other materials are EHS or software/system images, **not chart evidence**. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-006 exact filename ledger. Do not call a displayed historical 54,400 plan and later 57,200 app quote a verified fill; order time, market phase, state and alternative failures absent. The next priority is **native primary 91 original study** (only 21 opened and 0 independently mastered) and serious source-locked methodology tests, not more operations screenshots. S02 paused, no production scanner or trade.
 
 ## BULK-005 — price snapshots and duplicated CVD teaching chart, no methodological promotion
 
