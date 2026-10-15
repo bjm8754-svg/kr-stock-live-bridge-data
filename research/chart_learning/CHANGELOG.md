@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 28 — source-triage completion
+
+- Completed full direct image inspection for upload-date groups 2026-09-17 (111/111) and 09-18 (38/38), 116 newly inspected plus 33 earlier visual checks.
+- Nine completed date groups total 379 file entries. Oct14 remains 5/52; 47 NOT VERIFIED. Original expert 91 images: 21 seen, zero independently mastered.
+- Stock screenshots and older assistant trade notes cannot establish completed orders without time, trading session, fill and invalidation evidence. No rule was promoted. Trading and operational state unchanged.
+
+
 ## 2026-10-15 — Revision 27 — BULK-005 mixed-image source selection, false-evidence protection
 
 - Closed new root date-cohort file sets by actual visual reads: Sep16 16/16, Sep24 3/3, Oct7 4/4, Oct8 5/5 = 28; total fully accounted root images across seven completed cohorts now 230, NOT 230 market predictions.
