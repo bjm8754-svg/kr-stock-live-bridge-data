@@ -71,3 +71,25 @@ Original #073's drawing supplies `U_box = 12,000`, `M_box = 11,300`, and earlier
 
 **Current result:** Eighteen originally indexed images visually opened and source interpretations reconstructed; 91 total corpus remains incomplete, no real-price as-of/untouched transfer test completed, and **no new canonical trade rule or proven return**. Further primary material to examine includes originals #046–#063 (box/springs/failed reclaim) and #082–#091 (trend reference before/after pairs), as well as originally #001–#045 before claiming 91-image comprehension. Keep SRC-STUDY-001 transfer work open.
 
+
+## P-002 — Three previously unopened spring originals #052/#056/#058; breakout-failure comparison (2026-10-15)
+
+**Actually inspected:** Library originals `052_image(20260928-070438).png`, `056_image(20260928-070512).png`, `058_image(20260928-070527).png`; manually read image pixels in this new-chat research session. Their presence was previously inventoried, but direct visual inspection of these three had not been registered in STUDY_PROGRESS. Original teacher infographics are schematic, not real point-in-time OHLCV/fills. In the same session re-opened originals #067/#068/#075/#076/#077/#078/#079 to cross-check breakout/volume/failure. Total **distinct numbered native originals directly opened across recorded research = 21/91**, independently mastered 0, transfer demonstrated false.
+
+### Direct source observations
+
+- **#052 (definition):** spring means trading briefly below old `L_box` and then returning **inside** the former box. The cartoon shows old lower 10,000; break 9,800; later inside 10,100. These numeric labels are instructional, not an executable fill sequence or universal threshold.
+- **#056 (time sequence):** shows initial bar testing/break below the lower support followed by a distinct bar failing to maintain that breakdown and recovering above the boundary. If price **continues falling** after crossing below, this is not the same spring. The source's two-bar pedagogical compression does not establish that all genuine springs require precisely two bars or that both bars' close/low can be known at first entry.
+- **#058 (three distinct entries):** distinguishes (1) *preemptive lower-box buy* before a spring is known, (2) *reclaim entry* after an observable inside-box return, and (3) *subsequent retest entry* after the reclaim. Source explicitly gives different advantages/disadvantages: preemptive price advantage vs failure risk; reclaim confirmation vs higher price; waited retest vs possible nonfill and renewed downside risk.
+
+### Reconciliation with already-studied box breakout #067/#068/#078/#079
+
+A **failed downside break → reclaimed lower-box boundary** (#052/#056) and a **failed upside break → return into the original box** (#078/#079) are directionally analogous evidence of failed continuation, but they are NOT the same actionable trade or a guarantee of reversal. Lower-boundary reclaim after a long decline may face `M_box/U_box` supply; upside false break can weaken a prior long setup even if a later separate spring occurs. The old bullish breakout thesis should not silently rebrand a loss as a new successful spring.
+
+**NEW RESEARCH DISTINCTION, HYPOTHESIS ONLY:** distinguish **(a) level known before contact, (b) intrabar contact/pierce, (c) timeframe close/reclaim, (d) later support/retest confirmation** as separate information sets. A preplaced buy limit at `L_box` or `U_box` may fill **before** evidence of successful reclaim/support exists; a confirmation-led entry cannot retrospectively claim that same early limit fill. Similarly `C_adjust` is not available until its adjustment bar closes; using it as a placed limit earlier in that same bar is look-ahead. Trade entry time, anchor creation time, claimed signal time and later confirmation time require separate timestamps. Source images motivate this distinction; predictive efficacy is **NOT TESTED**.
+
+### Falsifiable follow-up, no scan/trade authorization
+
+For a genuinely unseen, *cutoff-locked* existing case, record old box boundaries and any pre-existing event/adjustment closes **only when they formed**, then precommit four mutually separate modes: preemptive resting limit, reclaim-close confirmation, post-reclaim retest limit, and abstain. Evaluate market/timeframe context, gap/stop budget, unfilled orders, price paid for confirmation, failure inside/outside prior box, and alternative modes over a thesis-dependent horizon. Compare against P-001's upper-vs-middle breakouts and source #058's three modes. Until independent unfamiliar-chart transfer is done, leave SRC-STUDY-001 open and do not promote to CANONICAL or increment mastered images.
+
+**Current evidence state:** source inspection completed for 3 new native originals; no blind transfer, no economic result, no method-proficiency claim, no scanner or S02 action.
