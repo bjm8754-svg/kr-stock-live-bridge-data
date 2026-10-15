@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 30 — BULK-008 close October 14 mixed personal/work imagery
+
+- Directly opened all remaining 47 of the Oct14 52-file root date cohort (5 previously sampled). All career/EHS nonchart, so excluded from chart research.
+- Closed source cohort count +52, now 560; March 4/5 eight unreadable images remain access-blocked, NOT VERIFIED. No incremental edge or canonical chart rule claim.
+- Research documentation only; S02/production/operations unchanged.
+
+
 ## 2026-10-15 — Revision 29 — BULK-007 four upload cohorts: 304 native reads, 8 verified access failures
 
 - Refreshed full Library-root metadata via nine paginated results: 1,623 image entries compared with 1,616 in previous snapshot (+7). Curated original 91 images remain separately indexed and not overclaimed.
