@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 29,
+    "methodologyVersion": 30,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -324,7 +324,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue remaining root Library images with source-group focus. 1623 metadata entries currently listed, 688 distinct rooted files rendered, 8 March 4/5 have inaccessible content, 927 root files not yet opened/otherwise triaged. Do not substitute 91 originals as a premature priority. S02 remains paused, no scanner/trade.",
+    "action": "Continue other unknown Library image cohorts while preserving inaccessible 8 from March 4/5 as NOT VERIFIED; Oct14 is complete. Source-group classification and deep chart reasoning only; no scanner/S02/operations.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -646,6 +646,20 @@
         "unseenChartTransferDemonstrated": false,
         "canonicalRulesPromoted": 0,
         "expertTradeOutcomesVerified": 0
+      },
+      {
+        "id": "BULK-008",
+        "dateKst": "2026-10-15",
+        "finished": true,
+        "dateCohortsClosed": {
+          "2026-10-14": 52
+        },
+        "previousReads": 5,
+        "additionalActualReadsThisTurn": 47,
+        "actualChartSources": 0,
+        "classification": "CAREER_AND_EHS_ONLY_EXCLUDED_FROM_CHART_METHOD",
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "canonicalRulesPromoted": 0
       }
     ],
     "totalRootImagesActuallyOpenedAllLoggedWork": 688,
@@ -750,22 +764,25 @@
         "status": "ALL_46_NATIVE_IMAGES_RENDERED_MARKET_SNAPSHOTS_NOT_TRADES",
         "actualRootImagesOpened": 46,
         "sourceReliability": "MARKET_APP_HISTORICAL_CONTEXT_NO_INDEPENDENT_TRADES"
+      },
+      {
+        "uploadDate": "2026-10-14",
+        "allRootEntries": 52,
+        "classifiedFileEntries": 52,
+        "status": "ALL_NATIVE_ROOT_IMAGE_FILES_VISUALLY_OPENED",
+        "priorSourceReads": 5,
+        "newVisualRead": 47,
+        "classification": "OFF_TOPIC_JOB_APPLICATION_EHS_DOCUMENTS_AND_RECRUITING_SCREENS",
+        "actualTradingChartFiles": 0
       }
     ],
-    "completedCohortDateCount": 11,
-    "rootEntriesWithinFullyClassifiedCohorts": 508,
+    "completedCohortDateCount": 12,
+    "rootEntriesWithinFullyClassifiedCohorts": 560,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
-    "additionalRootVisualSamplesOutsideClosedCohorts": 180,
+    "additionalRootVisualSamplesOutsideClosedCohorts": 0,
     "partialDateCohortSamples": [
-      {
-        "uploadDate": "2026-10-14",
-        "totalListed": 52,
-        "visuallyOpened": 5,
-        "status": "PARTIAL_ONLY",
-        "verifiedTheme": "sampled career/recruiting plus safety and office document screenshots, other 47 NOT VISUALLY VERIFIED"
-      },
       {
         "uploadDate": "2026-03-04",
         "totalListed": 79,
