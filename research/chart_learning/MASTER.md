@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v21 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v22 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v21 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## P-002 spring-source cross-check (observational only)
+
+On 2026-10-15, Library original #052, #056 and #058 were directly inspected for the first time in the preserved study record; 21/91 numbered originals now read, zero independently mastered. #052 defines brief lower-box break and return; #056 distinguishes sustained falling from failed continuation and return on a subsequent bar; #058 separates preemptive lower-box limit, observed reclaim entry and post-reclaim retest entry. Contrast with upside false break/re-entry #078/#079 and no-guaranteed-retest #067: level pre-existence, contact, close acceptance and retest confirmation occur at DIFFERENT information times. A limit filled upon first contact cannot claim the benefit of later support confirmation, and `C_adjust` is unknowable until its candle closes. **Research hypothesis only**; no independently locked unfamiliar market case, no promoted CANONICAL rule, no scanner/production/S02 action. Next active task remains SRC-STUDY-001. See `PRIMARY_IMAGE_STUDIES.md` P-002.
 
 ## Recovered previously missing explanation sources: batch B-001
 
