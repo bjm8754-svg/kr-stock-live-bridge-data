@@ -1,5 +1,27 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-005 — Cross-cohort chart screen triage and private material exclusion (2026-10-15)
+
+**Dates fully opened from ChatGPT Library root:** 2026-09-16 (16 files, every source opened), 09-24 (3, every source opened), 10-07 (4, every source opened), 10-08 (5, every source opened), adding **28 distinct root image files** to the earlier 202 fully covered across Sep23/28/29 = **230 complete-cohort files**. Do not equate with 230 independent charts, 230 correct trades or 230 educational rules.
+
+**Date cohorts sampled but NOT fully classified:** Sep17 111 entries listed, **16 native images actually opened**; Sep18 38 listed, **17 actually opened**; Oct14 52 listed, **5 opened**. Photos not opened remain `NOT VERIFIED`; numerous observed previews were software/system snapshots, workplace EHS forms, and job-search captures. Omit any third-party names, personal identifiers, access configuration or workplace details from chart research. Other 95 +21 +47 images in these cohorts still need direct opening or defensible group-level exclusion decisions.
+
+**Market image evidence:**
+- **Sep16 market-app sequence:** screenshot `1000058243.jpg` day view HVM at 53,100 KRW and `1000058246.jpg` week view same display; LG CNS `1000058239.jpg` daily, `1000058241.jpg` weekly; Hyundai Mobis/Motor separate daily and weekly displays; `1000058311.jpg` FTNT, `1000058313.jpg` PANW, one third-party PANW/CRWD/OKTA chart collage. None is a precommitted forecast, original teacher research, verified fill or identified long/short owner. Market-app overlays showing sentiment labels or buy/sell counts are display features, not independently validated order flow.
+- **Sep17/18 HVM chronology candidates:** Sep17 `1000058321.jpg` day HVM display 57,200 and `1000058323.jpg` 15-minute display 57,200 with a historic indicated 61,100 high; another `1000058357.jpg` 15-minute image shows 60,600 and a 62,400 historic high. Screenshot content includes visible mobile 08:00+ trading-session filter. Uploaded date isn't necessarily market bar date; do not presume all views had simultaneous regular-hours liquidity or comparable session close.
+- **Sep18 other app snapshots:** `1000058373.jpg` Vinatech day, `1000058390.jpg` Amotech week, `1000058387.jpg` Amotech day. Indicator lines differ by time/zoom and source display. No true future outcome or executed trade attached.
+- **Oct07 annotated 4h crypto chart:** `1000059945.jpg` and `chart-1(20261007-140508).png` are capture and crop of the **same** annotated TradingView crypto resistance/large-order/CVD screen. Near a repeated horizontal overhead-supply region, positive aggressive market buy prints with weak price extension suggest **possible passive-sell absorption**, *not proof*. Verify bar cutoff, indicator delta/CVD calculation and anchor/reset cycle, price acceptance, alternate exhaustion/distribution hypotheses, and later independent result before promoting.
+- **Sep24/Oct08:** All observed files were accommodation/system-development commentary or private occupational/personal documentation, so excluded from chart-method evidence. Oct7 first two images likewise workplace documents, not chart sources.
+
+**Research guardrails:**
+1. Timezone, ticker, asset class, real exchange market session and last finished candle must align before combining multiple screenshots. Pre-open or after-market displayed price can disagree with regular-session daily closing price; cannot compute a simulated fill from a tooltip alone.
+2. An order-flow delta/CVD green spike without continued price progress near repeat resistance is a *candidate supply absorption event*, not by itself short entry. Anchor-reset validation and price progression are mandatory, and future outcomes are absent here.
+3. Repeated or cropped copies of one screenshot are not independent cases. Retail sentiment widgets and aggregate trade-amount label are not reliable attribution to institutions.
+4. No unseen cutoff-locked independent transfer, economic edge, promoted CANONICAL rule, S02 D04, market scanner or order.
+
+**Resume:** 230 files fully reconciled in seven complete root upload-date cohorts + **38 source images visually read in three incomplete cohorts** (not added to 230 closed-cohort count). The primary 91 curated originals remain 21 directly opened, 0 independently mastered. Next priority: chart-bearing sources from remaining 9/17/18/14 images if any; do not blindly re-read archived operation screenshots.
+
+
 ## Research recovery checkpoint — September 2026 cohorts (unpromoted)
 
 - 2026-09-23: 65/65 files reconciled against previous batches plus 13 directly opened source screenshots. Prior named-file overlap preserved.
