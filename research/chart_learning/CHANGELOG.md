@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 21 — Preserve B-001/B-002 history and repair fixed-batch CI assertion
+
+- Previous integrity test asserted `latestManuallyInspectedBatch.rootImageEntriesDirectlyOpened == 35` forever. That failed correctly when B-002 (3 screenshots) became the latest checkpoint.
+- Introduced explicit completed-batch history in `STUDY_PROGRESS.json`: B-001 = 35, B-002 = 3, total catalogued entries = 38; the latest batch remains B-002. Revised integrity test to check BOTH immutable batch IDs and distinct totals instead of treating the latest checkpoint as permanent B-001.
+- No further Library files scanned, no new analytical method/edge claimed, and no scanner/automation modified. This commit only repairs versioned progress-accounting gates.
+
 ## 2026-10-15 — Revision 20 — Small batch B-002: 3 screen variants → 1 visual source
 
 - Opened precisely three previously unreviewed 2026-09-23 Library root images: `1000059240.jpg`, `1000059240(1).jpg`, `1000059240(2).jpg`.

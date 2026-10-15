@@ -149,10 +149,16 @@ class IntegrityTest(unittest.TestCase):
         for x in ("B-001", "1000059344.jpg", "1000059380.png", "KakaoTalkChats.txt", "144058", "35", "EXPIRED ORIGINAL PREVIEW"):
             self.assertIn(x, catalog)
         p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
-        b = p["sourceRecovery"]["latestManuallyInspectedBatch"]
-        self.assertEqual(b["rootImageEntriesDirectlyOpened"], 35)
-        self.assertFalse(b["originalImageRecoveryComplete"])
-        self.assertFalse(b["duplicateHashVerified"])
+        batches = p["sourceRecovery"]["completedBatches"]
+        self.assertEqual([(b["id"], b["rootImageEntriesDirectlyOpened"]) for b in batches], [("B-001", 35), ("B-002", 3)])
+        self.assertIn("B-002", catalog)
+        latest = p["sourceRecovery"]["latestManuallyInspectedBatch"]
+        self.assertEqual(latest["id"], "B-002")
+        self.assertEqual(latest["rootImageEntriesDirectlyOpened"], 3)
+        self.assertEqual(latest["distinctVisualSources"], 1)
+        self.assertFalse(latest["originalImageRecoveryComplete"])
+        self.assertFalse(latest["duplicateHashVerified"])
+        self.assertEqual(p["sourceRecovery"]["reviewedRootImageEntriesAcrossLoggedBatches"], 38)
         self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
 
     def test_no_research_production_write(self):
