@@ -54,6 +54,10 @@ This is a **source locator**, not a verified copy of externally hosted Library b
 - Original #067 permits no-return breakout, and #078 illustrates volume-increased failed breakouts, forbidding deterministic retest or simplistic volume-is-proof assertions. #076 requires sustained **support function**, not mere retest level touched.
 - Continue studying ORIGINAL sources before doing any new scanner or daily market task; next topical groups #046–063 and #082–091, then remaining original images.
 
+### P-002 supplemental primary-source inspection (2026-10-15)
+
+Three more Library original teaching images **#052/#056/#058** were directly opened and compared with #067/#078/#079. See PRIMARY_IMAGE_STUDIES P-002 for observed lower-box failure-and-reclaim mechanics, three timing-distinct spring entries and explicit non-validated information-time hypothesis. Source-reading coverage: 21/91, mastery: 0, cutoff-respecting unfamiliar transfer: not done. The larger #046–#063 group is only partly read; no blanket claim of full inspection.
+
 ## G. WARNING — Original screenshot corpus extends beyond the curated 91 (2026-10-15)
 
 - Verified via **nine paginated ChatGPT Library image-file listing pages**: **1,707 image entries** in scope, **91** in `/차트공부_원자료_20260928/images/`, and **1,616** images at `/`. This excludes any recursively unavailable connector mounts such as Google Drive. These are file entries, NOT unique content hashes, and NOT all stock-education images.
