@@ -3,6 +3,8 @@
 **Source inventory verified by repository + ChatGPT Library inspection on 2026-10-14 KST.**
 **Interpretation scope:** All sources catalogued here are reference perspectives. The existence or archival completeness of a teacher's material confers NO analytical precedence over other evidence or studies. YBM is a view among many. This registry is NOT a ranking of methods.
 
+**Current root-source inventory checkpoint (2026-10-15):** 1,616 accessible root-image file entries enumerated through nine metadata pages (not 1,616 visually reviewed); 15 further native educational originals grouped into 5/5 + 4/4 + 4/4 decks and two poster composites. Total actually visually opened root files across older B batches and current BULK-001 = 57. `RECOVERED_SCREENSHOT_CATALOG.md` BULK-META-001 records the filenames, conflicting labels and provenance limitations. Source recovery is now continuous group-based triage, not an arbitrary 3–5 image stop-and-report loop. Date cohorts are only retrieval hints, not proof of market relevance.
+
 This is a **source locator**, not a verified copy of externally hosted Library bytes in GitHub. The CI validator checks the registry's presence and references, but **cannot verify the Library images are still accessible**. A future research session must fetch them afresh when needed.
 
 ## A. 2026-09-28 image-based chart study — 91/91 preserved in Library (verified 2026-10-14)

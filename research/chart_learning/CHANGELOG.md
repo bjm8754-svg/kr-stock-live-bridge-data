@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 24 — Entire root metadata census and practical grouped research cadence
+
+- User correctly rejected continuing the 1,616-entry root-photo corpus in serial 3–5-image jobs with per-job chat reports. Clarified 3–5 is an image-tool window only. New workflow: one metadata enumeration; continuous multi-image, source-grouped study sessions; consolidated updates and milestone persistence; retain source/duplicate/privacy/evidence controls.
+- Re-listed exactly 1,616 Library-root image file *metadata entries* in nine pages, zero warnings. No claim of all-image content classification. Metadata grouping by date helps prioritize but does NOT validate photo relevance or duplicate identity.
+- Opened 15 new 2026-09-23 original screenshots, grouped as two complete five/four-card study decks, a distinct four-card YBM summary and two summary posters (four teaching-source groups). Root files actually visually reviewed now 57 total (42 prior + 15). Identified conflicts about `핫핑크` referencing 600 vs 1,000-day moving averages across derivative packets, alongside source-specific screening thresholds and risk management examples. Source summary is not authenticated market OHLCV/trader performance, no rule promotion.
+- Updated research-only records and guard test; S02 paused, scanner/production unchanged, no background work or orders.
+
+
 ## 2026-10-15 — Revision 23 — B-003 four root screenshot source triage + contradiction provenance
 
 - Actually reopened 4 previously uninspected Sep-23-uploaded root image files (9367/9372/9374/9376), matched Aug-28 contextual teaching against original KakaoTalk transcript, and registered observed claims, image-expiry blockers, a visually near-duplicate file and unresolved `진돌이` classification tension.

@@ -1,5 +1,36 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-META-001 — Entire Library-root image metadata inventory and source-group recovery (2026-10-15)
+
+**User-corrected workflow:** `3–5 images` was a **maximum per visual read/API call**, not a research-session quota, persistence frequency or instruction to write a user report after every call. Treat the previous B-001/B-002/B-003 3–5 image stopping rule as SUPERSEDED for future work. Aggregate many small tool reads **inside one session**; process whole original lecture/source groups, commit after meaningful milestones or session boundaries, and give the user only milestone reports rather than updates after each image. Never promise unattended work outside the session or suppress a critical source-access blocker.
+
+**Fresh full metadata enumeration actually performed:** Listing only ChatGPT Library root images, paginated `files.list` in 9 pages of up to 200 entries, yielded **1,616 image-file entries** with zero listing warnings. The curated 91 originals are in their separate directory and are *not* these root entries. Date cohorts useful for *locating* future finance images: 2026-09-17=111, 09-18=38, 09-23=65, 09-28=98, 09-29=39, 10-07=4, 10-14=52. These are mixed-topic upload groups, **NOT** confirmed chart-image counts or duplicate-adjusted unique sources. Filenames like `image(###).png` are distinct assets and must NOT be normalized into one duplicate family merely because they share a prefix. Filename, day and file size alone do NOT establish content identity, market relevance, or binary duplicate status. Avoid publishing unrelated private/work originals in research archives.
+
+**This session's grouped native-image work (BULK-001):** independently opened **15** previously uninspected 2026-09-23 Library-root screenshots, rather than closing/reported after each 3–5. Identified two complete connected slide decks plus a four-page slide set and two additional overview posters:
+
+| Source group | Actual Library-root file names opened | Classification |
+| --- | --- | --- |
+| DECK-A, five consecutive 1/5–5/5 cards | `1000058549.png`, `1000058550.png`, `1000058552.png`, `1000058553.png`, `1000058551.png` | Secondary '주식 공부 정리' chart/MA/turnover/company-screening/exit teaching slides |
+| DECK-B, four consecutive 1/4–4/4 cards | `1000058557.png`, `1000058555.png`, `1000058554.png`, `1000058556.png` | Secondary daily/intraday candlestick, Ichimoku, stop-condition and integrated investing checklist slides |
+| DECK-C, four consecutive 1/4–4/4 cards | `1000058530.jpg`, `1000058529.jpg`, `1000058531.jpg`, `1000058528.jpg` | '더양봉맨 3기 공부 핵심 정리': screened candidates vs entries, ABC/long lines, 진돌이/가돌이 distinction, staged management |
+| POSTERS-D, two compact overview cards | `1000058508.png`, `1000058509.png` | Derivative pattern/process chart and mixed investing-philosophy summary, not original unedited market bar series |
+
+**Source reliability:** These are legible edited **educational infographics/summaries**, not independently authenticated original lecturer charts, time-stamped pre-outcome stock recommendations, broker execution records or out-of-sample trading evidence. Opening all 15 enables comparing the educational claims as connected lectures; it does not establish source authorship or that all formulas work.
+
+### Methodological contradictions / falsifiable gaps discovered from the fifteen actual images
+
+1. **`핫핑크` naming conflict inside derivative material.** DECK-A (2/5) labels `핫핑크` the 1,000-day moving average, while DECK-B (2/4), DECK-C (2/4) and DECK-B (4/4) label `핫핑크` 600-day MA and `화이트라인` 1,000-day MA. **Do not create a universal YBM-style `hotpink=600` or `hotpink=1000` rule from these cards.** Preserve `source_group`, chart settings and as-of indicator parameters; the author's original configured indicator meaning still requires independent verification.
+2. **Pattern vocabulary is not a trading edge.** DECK-C 3/4 distinguishes `진돌이` from `가돌이` using resistance location plus volume/traded-value confirmation; it also explicitly notes exceptions such as rising after a `가돌이` or falling after `진돌이`. This reinforces independent price/participation/time checks rather than counting names. The `1,000억원` phrase is an **instructor-stated minimum for a particular lecture context**, not a rigorously validated universal Korean-market minimum.
+3. **Source-specific screening thresholds are not execution rules.** DECK-C 1/4 mentions 7% / 10% daily gain, 300억원 candidate screening, 1,000억원 breakout examples; a card explains 300억 vs 1,000억 serve distinct stages. These are derivative teaching notes: no tested regime/capitalization universality or live fill proved, and the source explicitly distinguishes screening from buy signals.
+4. **Daily vs intraday and entry timing:** DECK-B 1/4 shows that a bullish daily bar can contain intraday alternating red/blue candles; next-day close above the prior reference is claimed as meaningful confirmation. Actual next-day outcome cannot be used to justify a day-zero limit fill. Require an independently locked cutoff.
+5. **Capital and risk examples:** DECK-B 3/4 and DECK-C 4/4 discuss tiered 30% position reductions following separate criteria, leaving the remaining shares for final failure, and differentiating support breaks and volatility. The **30% is an example percentage of position reduced, NOT price-decline threshold or mandated V3 weight**, and no historical advantage was proven.
+6. **Investment context is broader than named setups:** DECK-A 4/5 / 5/5 and posters connect quality of firm, sectors/macro, market regime and human risk management with chart entry. Do not infer financial metrics' forecast efficacy solely from these generic didactic cards.
+
+**Research consequence:** these images clarify competing source definitions and exact future tests, but **no canonical strategy promoted, no validated unseen-chart transfer, no scanner/S02/production activity**. Updated total distinct physical Library-root entries actually visually opened in current logged research: **42** legacy B-001/002/003 + **15** BULK-001 = **57**. Fifteen entries are **four related document groups**, not fifteen independent empirical lessons or 15 market trades.
+
+**Next work:** use the already enumerated date cohorts as an index, triage 30–80 *candidate entries per uninterrupted work cycle* as tool bandwidth allows; read images in technical micro-windows, but group explanations/charts into source sets, skip known near duplicates/private data, and keep intermediate results in session work and GitHub milestone checkpoints. User-facing reporting only at a meaningful completed milestone or true blocker, **not every 3–5 opened files**.
+
+---
 **Batch B-001 — 2026-10-15 KST.** This is a **source recovery and classification record**, not 35 new trading lessons, not proof that every old chat attachment survives, and not a model-weight or system-skill update.
 
 

@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v23 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v24 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v23 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-META-001 — Corrected source triage cadence; two complete slide decks plus educator material
+
+The user rejected an impractical 3–5 files → commit → user report → stop loop across ~1,616 Library-root images. **That was a tool-call size, not a research/communication unit.** A fresh paginated metadata census fetched all 1,616 in 9 calls (not visually classified). Fifteen more actual 2026-09-23 uploaded visuals were reviewed as complete connected source groups: 5/5 general study, 4/4 daily/Ichimoku/risk, 4/4 YBM-class summary and two one-page composites. Current visually opened ROOT file count = **57** (42 legacy + 15 new). Their explanatory labels for `핫핑크` are internally conflicting: one derivative packet says MA1000, two others say MA600 and `화이트라인` MA1000. Original indicator configuration and teacher provenance are not resolved, so none can become a universal hard-coded rule. Additional observations on threshold-dependent screening, 30%-of-position staged liquidation and candlestick clock are source claims, not demonstrated economic edge. **Future workflow:** preserve image-read request micro-windows, but process coherent source groups in larger continuous session cycles and only report/persist substantive milestones; privacy filtering, expiry and source conflicts stay explicit. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-META-001.
 
 ## B-003 source recovery: same chart can attract incompatible named explanations
 

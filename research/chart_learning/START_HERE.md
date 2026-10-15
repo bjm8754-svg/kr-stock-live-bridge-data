@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 23
+**Learning revision:** 24
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## CURRENT source recovery cadence: BULK-META-001 replaces three-image stop rule
+
+**User correction:** do NOT end work or write the user a report every 3–5 files. That number limits a technical image-read call, NOT the research work cycle. Complete an uninterrupted source-group/major-cohort review with many small image calls and persist at meaningful milestones or session boundaries; user sees occasional consolidated findings. All **1,616** Library-root image metadata entries were retrieved in **9 pages** (not visually classified). Fifteen additional originals organized into four derivative education-document clusters, now **57** root images visually opened across old batches and BULK-001; `핫핑크` MA settings conflict across summary decks and are not universal. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-META-001. No production, S02 or extra scanning.
 
 ## B-003 uncatalogued-source recovery — 4 actually reopened root images
 
