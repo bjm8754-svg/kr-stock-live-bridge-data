@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v25 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v26 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v25 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-003/004 — Root source census, distinction between conceptual box compression and actual market price
+
+Date cohorts 2026-09-23=65, 09-28=98 and 09-29=39 are now **202 fully inspected/triaged root files**, with exact name lists in `RECOVERED_SCREENSHOT_CATALOG.md`. This DOES NOT assert all 1,616 content is classified or that 202 independent expert charts were learned. BULK-003 added Sep23 original LG CNS educational context (long MA unavailable on a newly listed stock; `INSUFFICIENT_HISTORY` is not `FAILED_SIGNAL`) and re-read Sep29 39 image screenshots about RSI disagreements across 15m/1h/4h horizons. BULK-004 actually opened 73 further Sep28 images: 69 interrelated teaching graphics (support/resistance, high-volume bar vs long box, conceptual one-candle box compression, spring/reclaim, close-confirmed breakout, box upper/mid/lower pullback and failures), three old non-research system screens and an old small gallery. **New critical research caution:** Compressing an entire box to one schematic OHLC candle does not imply its midpoint is a market VWAP or that unknown buy/sell participants have a single 'consensus' fill. Any box must exist under a time-locked definition before an order; a later spring/reclaim signal cannot be claimed by an earlier resting limit. Test failures, unfilled orders, transaction costs and price/volume divergences. These sources sharpen falsifiable hypotheses only: no new CANONICAL rules, no independent unfamiliar-chart transfer, no economic edge, native 91 mastery zero. Old B-001 file-ID ledger is incomplete, so total *unique lifetime* image count across all historical work is unverified; 202 is only a conservative count from the three closed cohorts. S02 remains paused.
 
 ## BULK-002 — Extend native original reading: five price-anchor pairs plus teacher contradictions
 
