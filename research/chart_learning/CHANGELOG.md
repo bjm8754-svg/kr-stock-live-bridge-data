@@ -1,5 +1,14 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 27 — BULK-005 mixed-image source selection, false-evidence protection
+
+- Closed new root date-cohort file sets by actual visual reads: Sep16 16/16, Sep24 3/3, Oct7 4/4, Oct8 5/5 = 28; total fully accounted root images across seven completed cohorts now 230, NOT 230 market predictions.
+- Partially inspected non-closed cohorts: Sep17 16/111, Sep18 17/38, Oct14 5/52. Do not mark unseen remainder as classified. Most observed partial images are nonresearch historical code/cloud/industrial documents; some are Korean stock-app snapshots.
+- Studied market screenshot sequences: HVM 9/16–18 in distinct daily/15-minute and clock/session frames; several 9/16 US and Korean stock snapshots; same Oct7 annotated crypto 4h CVD/resistance chart seen in two visual variants. Reassert CVD reset and price-progress divergence risks; no participant identity, unseen market skill or economic edge verified.
+- Changed research documentation and regression check only. No operational scanner or S02 progression, no live orders and no new research rule promotion.
+
+
+
 ## 2026-10-15 — Revision 26 — Reconcile BULK-003 and BULK-004 source cohorts, prevent duplicate/skill overclaim
 
 - Library-root completed source-group cohorts: Sep23=65/65, Sep28=98/98, Sep29=39/39. Exact filename ledger appended to `RECOVERED_SCREENSHOT_CATALOG.md`; no missing cohort files or new scans. Completed cohort count=202/1,616 root metadata entries. Past B-001's 35 reviews were not all enumerated, so do not assert unique lifetime count by summing new named file candidates.
