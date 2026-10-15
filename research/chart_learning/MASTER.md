@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v12 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v13 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,10 @@ Version: **v12 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## Cross-chat research bootstrap (R-017 / L-016)
+
+A fully self-contained user-pasteable startup command is preserved in [BOOT_PROTOCOL.md](BOOT_PROTOCOL.md). This is the first action at a new session: actually read the current GitHub HEAD, source-of-truth method/rules, full error history and [STUDY_PROGRESS.json](STUDY_PROGRESS.json); verify the methodology-first phase and PAUSED S02 status **before** producing a stock plan, experiment, scan or claim of learned skill. The progress file records verified original source inspection separately from independent transfer/profit evidence. On access failure or contradictions, report NOT VERIFIED/INCONSISTENT and stop rather than reconstruct unobserved research. The short magic words alone do not guarantee connection or execution; only a genuinely performed bootstrap is evidence of continuity. A GitHub static CI PASS cannot validate fresh-chat behavior. User-triggered startup is a workflow control, not new model training, predictive skill, or automated trading permission.
 
 ## Current research order — confirmed by user (2026-10-15)
 
@@ -75,6 +79,9 @@ The user's ultimate project goal is **an independently thinking, improving, prof
 
 ### R-016 — Methodology-first research phase; no scanner or blind-loop substitution
 **CURRENT PRIORITY: deeply study and independently synthesize the original 91 chart-sage source images and expert plan reasoning into a durable, executable external methodology.** The KRX scanner exists already. Repeated daily candidate discovery, push-triggered S02 3-session scans, new monitoring automations and portfolio-simulation activity are **NOT** evidence of this learning and are presently out of scope. No D04 new locked trade or further S02 outcome reveal without separate user instruction and a methodology-based research reason. Expert examples and other public methods are comparative inputs, not imitated signals. Study precedence of the provided 91 images is an efficient source-comprehension order, not a declaration that they are infallible; falsify/extend their claims when evidence warrants. Persist applicability conditions, failed interpretations, alternatives, source links and counterexamples; require demonstrated transfer to unseen charts before saying the methodology improved. Always perform live HEAD retrieval and CURRENT PHASE gate across chats. The user does not need GPT model weights to change. See L-015 / C-010; this is a user-defined workflow constraint, **not** evidence of investment edge.
+
+### R-017 — Explicit user-triggered cross-chat boot and fail-closed progress gate
+The **reproducible** new-chat activation is the self-contained prompt in `research/chart_learning/BOOT_PROTOCOL.md` linking the actual current `main` HEAD, source rules, append-only mistakes and `STUDY_PROGRESS.json`. Do not claim continuity from a remembered phrase or summarized old discussion. Require verified current-source reads and phase-consistency checks; report BOOT PASS/NOT VERIFIED/INCONSISTENT with HEAD, revision, progress and next research question. If source/progress are absent or contradictory, stop. On PASS, independently advance the original 91-image-grounded *methodology research*, not scans or trading. Progress records distinguish mere inventory, visual inspection, conceptual hypothesis, unseen-chart transfer, and demonstrated outcome. Static CI is not evidence that a fresh session obeys. See L-016 / C-011.
 
 ## HYPOTHESES — research only, not hard-coded into V3
 

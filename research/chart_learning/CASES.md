@@ -102,6 +102,14 @@ Correct response: **STOP further experiment progression** and recover actual ori
 
 This was a **project management and methodology fidelity failure**, not evidence that the model weights can or must be fine-tuned, nor a measured predictive edge. See L-015 / R-016.
 
+## C-011 — New-chat boot must be executable, not merely archived (2026-10-15, DESIGN GATE ONLY)
+
+The user's V3 research MASTER and START_HERE existed but the assistant repeatedly failed to apply them across context boundaries. The user therefore requested a concrete *startup command* that prevents drift when opening a new conversation. The repository cannot force ChatGPT to automatically load external files; saying only "차트연구 부팅" is not reliable in a fresh chat.
+
+Implemented a **self-contained, user-pasted command** in `BOOT_PROTOCOL.md`, a read-and-verify transaction against current HEAD, and a structured `STUDY_PROGRESS.json` that preserves the primary 91-image corpus priority and the next unresolved study task. The command must report BOOT PASS/NOT VERIFIED/INCONSISTENT and refuses continuation if source continuity fails; it keeps S02 D04 and trading/scanner actions out of scope.
+
+**Proof limit:** GitHub integrity checks verify persisted files and string contracts, **not actual future-chat behavior**. A new-chat trial has not been observed; this is NOT evidence of independent chart-analysis improvement or drift-proof implementation. Source status and research progress must be honestly updated. See L-016 / R-017.
+
 ## Evidence provenance
 
 - Existing EOD scanner artifacts: `market-structure-v3-review-index.json`, `market-structure-v3-review-shard-01.json` … `-33.json`, `v3-eod-deep-review.json`.

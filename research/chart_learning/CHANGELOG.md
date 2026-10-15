@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 13 — Add explicit new-chat boot command and structured progress checkpoint
+
+- User-requested **self-contained boot instruction** saved in `research/chart_learning/BOOT_PROTOCOL.md`; the stable `main` GitHub link can be pasted into a new chat along with its Korean instruction. Mere one-word invocation has no hard guarantee.
+- Added `STUDY_PROGRESS.json` with original 91-image corpus, direct inspection versus validated mastery distinction, S02 PAUSED, no profit/skill proof, and next unresolved breakout/retest/failure study.
+- Wired boot and progress to START_HERE, MASTER, AGENTS, MANIFEST and static validator/test; new R-017 / L-016 / C-011 explain both the prevention goal and limits. Preserved all existing rules and lessons; independent scanner/trading permissions unchanged.
+- No claims of automatic model-weight learning, automatic retrieval on new chat, or proven cross-chat compliance. Actual new-chat trial remains NOT VERIFIED.
+
 ## 2026-10-15 — Revision 12 — Freeze methodology-first intent and stop scan/replay substitution
 
 - Corrected workflow per direct user request. The assistant's externally reproducible expert-level chart-analysis **methodology** is the immediate research object, not a new scanner (already completed), routine full-universe selections or an S02 auto-advance program. Current expert guidance exists; independence later is the user's purpose.

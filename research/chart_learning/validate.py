@@ -170,6 +170,26 @@ def validate() -> tuple[dict, list[dict]]:
         fail("research-priority regression guard missing")
     if "91-photo PRIMARY STUDY CORPUS" not in startup or "91-photo PRIMARY STUDY CORPUS" not in agents:
         fail("original-source study not prominent at restart")
+    boot = m.get("bootProtocol", {})
+    if boot.get("path") != "research/chart_learning/BOOT_PROTOCOL.md" or boot.get("progressPath") != "research/chart_learning/STUDY_PROGRESS.json":
+        fail("missing explicit boot or progress entrypoint")
+    if boot.get("activation") != "USER_PASTED_SELF_CONTAINED_MESSAGE" or boot.get("realFreshChatTrialVerified") is not False:
+        fail("unsupported automatic boot / fresh-chat success claim")
+    boot_text = (BASE / "BOOT_PROTOCOL.md").read_text(encoding="utf-8")
+    for key in ("차트연구 부팅", "STUDY_PROGRESS.json", "BOOT PASS", "NOT VERIFIED", "INCONSISTENT", "91", "S02"):
+        if key not in boot_text:
+            fail("incomplete boot protocol: " + key)
+    pr = json.loads((BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+    if pr.get("schema") != "V3_METHODOLOGY_STUDY_PROGRESS_V1" or pr.get("researchPhase") != m.get("currentResearchPhase", {}).get("name"):
+        fail("study phase and progress drift")
+    if pr.get("s02",{}).get("progression") != "PAUSED_AFTER_D03" or pr.get("learningStatus",{}).get("unseenChartTransferDemonstrated") is not False:
+        fail("false active S02 / unproven transfer claim")
+    if pr.get("primarySource",{}).get("expectedNumberedImages") != 91:
+        fail("primary study original image count missing")
+    if "### R-017 — Explicit user-triggered cross-chat boot" not in master or "L-016" not in (BASE / "CASES.md").read_text(encoding="utf-8"):
+        fail("boot retention rule/evidence missing")
+    if "BOOT_PROTOCOL.md" not in startup or "BOOT_PROTOCOL.md" not in agents:
+        fail("boot command not discoverable from entrypoints")
     if m.get("entrypoint") != "research/chart_learning/START_HERE.md":
         fail("incorrect startup entrypoint")
     return m, lessons

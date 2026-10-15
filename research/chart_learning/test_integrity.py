@@ -100,6 +100,22 @@ class IntegrityTest(unittest.TestCase):
         self.assertIn("L-015", (gate.BASE / "LESSONS.jsonl").read_text(encoding="utf-8"))
         self.assertIn("91-photo PRIMARY STUDY CORPUS", (gate.BASE / "START_HERE.md").read_text(encoding="utf-8"))
 
+    def test_fresh_chat_boot_is_persisted_but_not_falsely_claimed(self):
+        m = gate.load_manifest()
+        boot = m["bootProtocol"]
+        self.assertEqual(boot["activation"], "USER_PASTED_SELF_CONTAINED_MESSAGE")
+        self.assertFalse(boot["realFreshChatTrialVerified"])
+        self.assertIn({"id": "R-017", "status": "CANONICAL"}, m["rules"])
+        boot_message = (gate.BASE / "BOOT_PROTOCOL.md").read_text(encoding="utf-8")
+        self.assertIn("차트연구 부팅", boot_message)
+        self.assertIn("NOT VERIFIED", boot_message)
+        self.assertIn("STUDY_PROGRESS.json", boot_message)
+        pr = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        self.assertEqual(pr["researchPhase"], m["currentResearchPhase"]["name"])
+        self.assertEqual(pr["s02"]["progression"], "PAUSED_AFTER_D03")
+        self.assertFalse(pr["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertFalse(pr["learningStatus"]["economicEdgeVerified"])
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

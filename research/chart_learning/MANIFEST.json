@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 12,
+  "revision": 13,
   "updatedKst": "2026-10-15",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -34,7 +34,9 @@
     ".github/workflows/stock-blind-v2-walkforward.yml",
     "research/stock_blind/reservation_engine.py",
     "research/stock_blind/test_reservation_engine.py",
-    ".github/workflows/stock-blind-v2-unit-tests.yml"
+    ".github/workflows/stock-blind-v2-unit-tests.yml",
+    "research/chart_learning/BOOT_PROTOCOL.md",
+    "research/chart_learning/STUDY_PROGRESS.json"
   ],
   "rules": [
     {
@@ -108,9 +110,13 @@
     {
       "id": "R-016",
       "status": "CANONICAL"
+    },
+    {
+      "id": "R-017",
+      "status": "CANONICAL"
     }
   ],
-  "lessonCount": 15,
+  "lessonCount": 16,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -207,5 +213,16 @@
       "LATER_ECONOMIC_VALIDATION",
       "USER_APPROVED_AUTOMATION"
     ]
+  },
+  "bootProtocol": {
+    "path": "research/chart_learning/BOOT_PROTOCOL.md",
+    "progressPath": "research/chart_learning/STUDY_PROGRESS.json",
+    "activation": "USER_PASTED_SELF_CONTAINED_MESSAGE",
+    "failClosedStatuses": [
+      "NOT VERIFIED",
+      "INCONSISTENT"
+    ],
+    "integrityCIOnly": true,
+    "realFreshChatTrialVerified": false
   }
 }

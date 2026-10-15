@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 12
+**Learning revision:** 13
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## User-invoked fresh-chat boot — required gate
+
+**Paste the self-contained command in [BOOT_PROTOCOL.md](BOOT_PROTOCOL.md) when opening a new chat.** Boot first reads current GitHub HEAD, authoritative knowledge, errors and [STUDY_PROGRESS.json](STUDY_PROGRESS.json), checks the current methodology-first phase and produces a PASS/NOT VERIFIED/INCONSISTENT status. If disconnected, fail closed; no fake continuity. The short phrase "차트연구 부팅" by itself is not guaranteed to locate the files in a fresh chat; the link-and-instruction prompt is the reliable trigger. GitHub integrity CI verifies file contracts only, not actual conversation compliance. See R-017 / L-016 / C-011.
 
 ## Why this exists
 
@@ -27,7 +31,7 @@ The user has repeatedly taught the assistant advanced chart judgement, yet a cha
 
 ## Mandatory new-session opening — ordered
 
-1. Read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, MINIMUM_COMPETENCE_BENCHMARK.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
+1. Read the CURRENT default-branch `BOOT_PROTOCOL.md` and `STUDY_PROGRESS.json` and follow the user-triggered boot checks before any research or scan. Then read the current default-branch GitHub files: this file, MANIFEST.json, MASTER.md, MINIMUM_COMPETENCE_BENCHMARK.md, LESSONS.jsonl, SOURCE_REGISTRY.md, EXPERIMENTS.md, CASES.md, and ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md. For important historical claims, open the linked original file/data.
 2. Report: **learning revision**, **repository HEAD SHA actually fetched**, **latest validated experiment**, **outstanding known failure**, and whether the gate PASSED or is NOT VERIFIED.
 3. **Honor CURRENT PHASE above before proposing any scan, automation or replay.** Do not privilege Yangbongman or any other named methodology:** each is one perspective, selected only when evidence supports its usefulness for this setup. Begin with independent price, participation, structure and regime analysis; document conflicts. Before accepting a machine EXECUTABLE label, consult all relevant CANONICAL rules and known failures. Distinguish candidate, conditionally executable plan, actually filled trade, simulation, and verified financial result.
 4. Any new analysis has a cutoff, source provenance, candidate-selection procedure, precommitted entry/add/stop/target and invalidation, **thesis-dependent holding horizon distinct from review cadence**, outcome stage, and limitations. Do not treat a 3-session S01 review as a 3-session trade expiration. Never blend ex-ante and hindsight data. Never blend ex-ante and hindsight data.
