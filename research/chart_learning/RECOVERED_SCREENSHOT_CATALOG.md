@@ -1,5 +1,14 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## Research recovery checkpoint — September 2026 cohorts (unpromoted)
+
+- 2026-09-23: 65/65 files reconciled against previous batches plus 13 directly opened source screenshots. Prior named-file overlap preserved.
+- 2026-09-29: 39/39 directly reopened, 20 already recorded in earlier source catalog. The 19 unlisted file names do not mean 19 new predictive successes.
+- 2026-09-28: 98/98 content classified; 25 prior + 73 direct reads, mainly a coherent series of support/resistance, box, spring, breakout and retest educational posters, plus nonresearch captures. Do not count teaching drawings as unknown-market trading cases.
+- Hypotheses only: an uncomputable moving average on a newly listed company differs from a bearish signal; box midpoint is not demonstrably a volume-weighted execution price; spring reentry evidence arrives later than a preplaced lower-box limit; close-confirmed breakouts may still fail.
+- **No independent OOS transfer, edge evidence, scanner, S02 progression, live orders or operations changed**. Source-local full notes remain pending reconciliation; preserve existing v25 canonical methods until versioned checks pass.
+
+
 ## BULK-002 — 45 additional native screenshots directly reviewed
 
 **Detailed classification and 5 BEFORE/AFTER market case notes:** [ROOT_IMAGE_STUDIES_BULK002.md](ROOT_IMAGE_STUDIES_BULK002.md). 2026-09-23: 20; 2026-09-28: 25. Total individually opened root images = **102** across legacy batches 42 + BULK-001 15 + BULK-002 45. Only a subset are genuine first-party market charts; many are duplicates, teacher-after-the-fact previews, derivative RSI posters and an unrelated screenshot. Recovery did **not** resolve the archived original 91's previously unopened native files #082–#091 (despite content overlap). Root corpus content classification 1,616/1,616 is **NOT** claimed. Relevant original chat teaching confirmed on SFA trading value and the Mirae Asset Venture `B+` explanation; no S02 or scanner activity.
