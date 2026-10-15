@@ -1,5 +1,10 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-008 — 2026-10-14 Library-root cohort 52/52 (2026-10-15)
+
+The October 14 date cohort was re-listed in full (52 files). Five had been read in an older v27 partial sample; the remaining **47 actual native screenshots** were visually opened this turn using nine bounded read calls plus a final two-image read. All 52 were **career application/recruiting pages, EHS document directory listings and related mail/document drafting screenshots**. None was a genuine stock chart, expert trading demonstration or validated strategy result. Their job/private contents and identifiers are excluded from the trading-method archive. No chart-competence or market edge credit. This cohort is **complete 52/52**, NOT merely classified by filenames. Previously closed cohort count 508 becomes **560** across twelve date groups, while March 4/5 original bytes of eight files remain inaccessible/NOT VERIFIED; do not treat them as completed. No scan, S02 progression, order or operational change.
+
+
 ## BULK-007 — Four source-date cohorts, real-source accessibility audit (2026-10-15)
 
 **Enumerated first, direct visual reading second:** Using ChatGPT Library root-image filenames and `files.read mode=image_file`, actually requested ALL **312** images across four mutually disjoint upload-date cohorts: 2026-03-04 **79**, 03-05 **104**, 03-06 **46**, and 06-07 **83**. **304 native images were rendered and inspected.** Exactly **8 files returned "No readable content"**, and attempted raw-file materialization also returned **no downloadable backing**. The 8 are only `METADATA_ONLY_CONTENT_NOT_VERIFIED`. No hidden content or native price claims should be inferred for these.
