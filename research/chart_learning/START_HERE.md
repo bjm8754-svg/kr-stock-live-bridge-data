@@ -1,9 +1,13 @@
 # START HERE — V3 chart learning continuity gate
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 25
+**Learning revision:** 26
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
+
+## BULK-003 and BULK-004 — three closed Library upload-date cohorts
+
+**202 root entries across three full date cohorts fully classified:** 2026-09-23 (65), 09-28 (98), 09-29 (39), with exact root names now recorded in `RECOVERED_SCREENSHOT_CATALOG.md`. BULK-003 visually re-read Sep29's 39 and opened 13 further Sep23 images (some 29 already B-001); BULK-004 actually read the 73 9/28 images not covered by BULK-002's prior 25. The 69 connected early-morning educational infographics on 9/28 are conceptually grouped into four lessons, NOT 69 empirically independent market setups. Their `box=single compressed candle` framing does not prove the proposed midpoint is a real volume-weighted traded price. Disallow post-hoc box selection, retroactive confirmation attributed to preplaced limits, generic accumulation-identity claims and 'RSI 70 sell' simplifications. The **202** are a conservative completed-cohort file count, not the exact global deduplicated research-file total. Legacy B-001 names were partly unenumerated. Native curated 91 actual opens still 21, mastery 0; S02 PAUSED_AFTER_D03; no operation changes.
 
 ## BULK-002 — 45 original Library files, five market before/after case pairs
 

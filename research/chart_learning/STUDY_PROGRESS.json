@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 25,
+    "methodologyVersion": 26,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -168,6 +168,12 @@
       "status": "45_LIB_ROOT_IMAGES_OPENED_SOURCE_ONLY",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK002.md",
       "claim": "20 2026-09-23 +25 2026-09-28 originals examined directly. Recovered native teacher-chat context, 10 RSI educational posters, five market BEFORE/AFTER pairs, assistant duplicates, and off-topic/unreadable screens; not independent trading evidence."
+    },
+    {
+      "type": "THREE_ROOT_DATE_COHORTS_CLOSED",
+      "status": "202_ROOT_FILES_RECONCILED_73_NEW_DIRECTLY_OPENED_IN_LAST_SESSION",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+      "claim": "23rd 65 + 28th 98 + 29th 39 fully classified by root filename and image source. 9/28 new 73 includes 69 linked derivative teaching infographics. Actual independent OOS market skill and performance not demonstrated."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -300,7 +306,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue grouped 30-80 source-candidate processing per substantial research session using Library date-cohort lists, prioritize unused actual educator diagrams and market chart captures; do not mistake 1,616 metadata entries for actual visual classification.",
+    "action": "Next inspect never-reviewed non-closed date cohorts (e.g. Sep17/Sep18), skipping 9/23,9/28,9/29 and prior filename sets; continue teaching-source-group analysis and independent contradiction checks; no scanner/S02/order.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -517,8 +523,75 @@
         "status": "SOURCE_CLASSIFIED_AND_SYNTHESIZED_NO_OOS_TRANSFER",
         "registry": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK002.md",
         "finished": true
+      },
+      {
+        "id": "BULK-003",
+        "dateKst": "2026-10-15",
+        "dateCohorts": {
+          "2026-09-23": 13,
+          "2026-09-29": 39
+        },
+        "imageReadEvents": 52,
+        "previouslyNamedSep29ReReads": 20,
+        "newlyRegisteredFilenameCandidates": 32,
+        "teacherLessonGroups": 2,
+        "status": "SOURCE_REVIEW_COMPLETE_NO_UNSEEN_TEST",
+        "finished": true,
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "oldB001UniqueOverlapUnverified": true
+      },
+      {
+        "id": "BULK-004",
+        "dateKst": "2026-10-15",
+        "dateCohorts": {
+          "2026-09-28": 73
+        },
+        "actualRootImagesOpened": 73,
+        "existingEntriesAlreadyReviewedSameDate": 25,
+        "linkedTeachingGraphics": 69,
+        "oldSystemScreensExcluded": 3,
+        "oldGalleryShotExcluded": 1,
+        "sourceGroups": 4,
+        "status": "COHORT_COMPLETE_RELATED_DIDACTIC_FIGURES_NOT_MARKET_TEST",
+        "finished": true,
+        "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "noCanonicalRulesPromoted": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 102
+    "totalRootImagesActuallyOpenedAllLoggedWork": 202,
+    "dateCohortCoverage": [
+      {
+        "uploadDate": "2026-09-23",
+        "allRootEntries": 65,
+        "classifiedFileEntries": 65,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "note": "Combined B-001/B-002/B-003/BULK-001/BULK-002 and BULK-003 new 13, previous B-001 historic filename ambiguity retained"
+      },
+      {
+        "uploadDate": "2026-09-28",
+        "allRootEntries": 98,
+        "classifiedFileEntries": 98,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "priorBULK002": 25,
+        "newDirectlyOpened": 73,
+        "educationalGraphics": 69,
+        "nonResearchSystemScreens": 3,
+        "oldGallerySnapshot": 1
+      },
+      {
+        "uploadDate": "2026-09-29",
+        "allRootEntries": 39,
+        "classifiedFileEntries": 39,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "directReadsInPriorSession": 39,
+        "alreadyReferencedInB001": 20,
+        "previouslyUnnamed": 19
+      }
+    ],
+    "completedCohortDateCount": 3,
+    "rootEntriesWithinFullyClassifiedCohorts": 202,
+    "totalRootCountIsConservativeLowerBound": true,
+    "deduplicatedAcrossAllHistoricalBatchesVerified": false,
+    "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207
   }
 }

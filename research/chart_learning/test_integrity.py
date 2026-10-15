@@ -172,7 +172,7 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(sr["metadataInventory"]["rootEntries"], 1616)
         self.assertFalse(sr["metadataInventory"]["rootContentClassifiedComplete"])
         self.assertEqual(sr["metadataInventory"]["pages"], 9)
-        self.assertEqual(sr["totalRootImagesActuallyOpenedAllLoggedWork"], 57)
+        self.assertGreaterEqual(sr["totalRootImagesActuallyOpenedAllLoggedWork"], 57)
         self.assertEqual(sr["bulkStudies"][0]["actualRootImagesOpened"], 15)
         self.assertEqual(sr["bulkStudies"][0]["sourceGroups"], 4)
         self.assertEqual(sr["inspectPolicy"]["old3to5BatchStopGate"], "SUPERSEDED")
@@ -185,7 +185,7 @@ class IntegrityTest(unittest.TestCase):
         m = gate.load_manifest()
         root = p["sourceRecovery"]
         self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
-        self.assertEqual(root["totalRootImagesActuallyOpenedAllLoggedWork"], 102)
+        self.assertGreaterEqual(root["totalRootImagesActuallyOpenedAllLoggedWork"], 102)
         self.assertEqual(root["bulkStudies"][0]["actualRootImagesOpened"], 15)
         self.assertEqual(root["bulkStudies"][1]["actualRootImagesOpened"], 45)
         self.assertEqual(root["bulkStudies"][1]["marketBeforeAfterPairs"], 5)
@@ -200,6 +200,26 @@ class IntegrityTest(unittest.TestCase):
         ledger = (gate.BASE / "ROOT_IMAGE_STUDIES_BULK002.md").read_text(encoding="utf-8")
         for word in ("1000059241.jpg", "1000059615.jpg", "20260928-143436", "KakaoTalkChats.txt", "NOT VERIFIED"):
             self.assertIn(word, ledger)
+
+    def test_three_closed_root_date_cohorts_and_evidence_limits(self):
+        m = gate.load_manifest()
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        sr = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"]], [65, 98, 39])
+        self.assertEqual(sr["rootEntriesWithinFullyClassifiedCohorts"], 202)
+        self.assertTrue(sr["totalRootCountIsConservativeLowerBound"])
+        self.assertFalse(sr["deduplicatedAcrossAllHistoricalBatchesVerified"])
+        self.assertEqual(sr["bulkStudies"][2]["id"], "BULK-003")
+        self.assertEqual(sr["bulkStudies"][3]["id"], "BULK-004")
+        self.assertEqual(sr["bulkStudies"][3]["actualRootImagesOpened"], 73)
+        self.assertEqual(sr["bulkStudies"][3]["linkedTeachingGraphics"], 69)
+        self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
+        self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
+        self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
+        self.assertFalse(m["productionWriteAllowed"])
+        self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
 
     def test_no_research_production_write(self):
         m = gate.load_manifest()

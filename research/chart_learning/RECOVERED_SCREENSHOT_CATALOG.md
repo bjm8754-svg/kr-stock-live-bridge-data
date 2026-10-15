@@ -1,5 +1,14 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## Research recovery checkpoint — September 2026 cohorts (unpromoted)
+
+- 2026-09-23: 65/65 files reconciled against previous batches plus 13 directly opened source screenshots. Prior named-file overlap preserved.
+- 2026-09-29: 39/39 directly reopened, 20 already recorded in earlier source catalog. The 19 unlisted file names do not mean 19 new predictive successes.
+- 2026-09-28: 98/98 content classified; 25 prior + 73 direct reads, mainly a coherent series of support/resistance, box, spring, breakout and retest educational posters, plus nonresearch captures. Do not count teaching drawings as unknown-market trading cases.
+- Hypotheses only: an uncomputable moving average on a newly listed company differs from a bearish signal; box midpoint is not demonstrably a volume-weighted execution price; spring reentry evidence arrives later than a preplaced lower-box limit; close-confirmed breakouts may still fail.
+- **No independent OOS transfer, edge evidence, scanner, S02 progression, live orders or operations changed**. Source-local full notes remain pending reconciliation; preserve existing v25 canonical methods until versioned checks pass.
+
+
 ## BULK-002 — 45 additional native screenshots directly reviewed
 
 **Detailed classification and 5 BEFORE/AFTER market case notes:** [ROOT_IMAGE_STUDIES_BULK002.md](ROOT_IMAGE_STUDIES_BULK002.md). 2026-09-23: 20; 2026-09-28: 25. Total individually opened root images = **102** across legacy batches 42 + BULK-001 15 + BULK-002 45. Only a subset are genuine first-party market charts; many are duplicates, teacher-after-the-fact previews, derivative RSI posters and an unrelated screenshot. Recovery did **not** resolve the archived original 91's previously unopened native files #082–#091 (despite content overlap). Root corpus content classification 1,616/1,616 is **NOT** claimed. Relevant original chat teaching confirmed on SFA trading value and the Mirae Asset Venture `B+` explanation; no S02 or scanner activity.
@@ -130,3 +139,303 @@ These observations are different from the 91-image pack's general RSI introducti
 6. **Not done:** classification of all 1,616; authenticated original message sender for every screenshot; quantitative OOS analysis; reconstruction of all YBM images; evidence of any new profitable edge. Those remain OPEN.
 
 **No scanner modifications, simulations, new source downloads, automation jobs or user account actions were made.**
+
+
+### Exhaustive filename ledger for three **completed date cohorts** (source classification, not 202 distinct market trades)
+
+**Scope check:** `files.list` ChatGPT Library root date filters returned 65, 98 and 39 images (202 total) without warnings/pagination. Cohort coverage based on named complete source groups, not claim that all 1,616 Library-root files are classified. User-specific personal, workplace and account content is excluded from trading analysis. All 98 Sep28 files = 25 BULK-002 + 73 directly opened this turn (69 related education infographics, 3 old developer screens, 1 old image-gallery snapshot). The 39 Sep29 screenshots were re-read in previous local BULK-003 and partly overlap B-001. The 65 Sep23 are mapped to B-001/2/3, BULK-001/2 and BULK-003. **Exact legacy B-001 35-file names remain partly ambiguous**; thus do not promote any cumulative unique-count by simply summing session totals.
+
+**Upload date 2026-09-23 (65 files):**
+
+- `1000058553.png`
+- `1000058551.png`
+- `1000058552.png`
+- `1000058550.png`
+- `1000058549.png`
+- `1000058554.png`
+- `1000058556.png`
+- `1000058557.png`
+- `1000058555.png`
+- `1000058530.jpg`
+- `1000058509.png`
+- `1000058531.jpg`
+- `1000058508.png`
+- `1000058529.jpg`
+- `1000058528.jpg`
+- `1000059240.jpg`
+- `1000059241.jpg`
+- `1000059245.jpg`
+- `1000059241(1).jpg`
+- `1000059240(1).jpg`
+- `1000059245(1).jpg`
+- `1000059241(2).jpg`
+- `1000059240(2).jpg`
+- `0c89ecaa-5118-4f99-a86d-fa92b493f87e.png`
+- `be5a9d2a-004e-4d78-8ef9-d8ab06056811.png`
+- `1000059309.jpg`
+- `1000059307.jpg`
+- `1000059313.jpg`
+- `1000059316.jpg`
+- `1000059317.jpg`
+- `1000059311.jpg`
+- `1000059315.jpg`
+- `1000059314.jpg`
+- `1000059305.jpg`
+- `1000059318.jpg`
+- `1000059337.jpg`
+- `1000059334.jpg`
+- `1000059329.jpg`
+- `1000059332.jpg`
+- `1000059322.jpg`
+- `1000059324.jpg`
+- `1000059320.jpg`
+- `1000059330.jpg`
+- `1000059326.jpg`
+- `1000059342.jpg`
+- `1000059356.jpg`
+- `1000059348.jpg`
+- `1000059340.jpg`
+- `1000059354.jpg`
+- `1000059353.jpg`
+- `1000059350.jpg`
+- `1000059346.jpg`
+- `1000059344.jpg`
+- `1000059338.jpg`
+- `1000059367.jpg`
+- `1000059372.jpg`
+- `1000059358.jpg`
+- `1000059360.jpg`
+- `1000059374.jpg`
+- `1000059362.jpg`
+- `1000059376.jpg`
+- `1000059370.jpg`
+- `1000059365.jpg`
+- `1000059368.jpg`
+- `1000059380.png`
+
+**Upload date 2026-09-28 (98 files):**
+
+- `image(20260928-012238).png`
+- `image(20260928-012245).png`
+- `image(20260928-012354).png`
+- `1000059589.jpg`
+- `1000059599.jpg`
+- `1000059608.jpg`
+- `1000059611.jpg`
+- `1000059601.jpg`
+- `1000059604.jpg`
+- `1000059619.jpg`
+- `1000059617.jpg`
+- `1000059613.jpg`
+- `1000059605.jpg`
+- `1000059609.jpg`
+- `1000059615.jpg`
+- `image(20260928-065646).png`
+- `image(20260928-065701).png`
+- `image(20260928-065714).png`
+- `image(20260928-065727).png`
+- `image(20260928-065734).png`
+- `image(20260928-065818).png`
+- `image(20260928-065838).png`
+- `image(20260928-065855).png`
+- `image(20260928-065902).png`
+- `image(20260928-065914).png`
+- `image(20260928-065922).png`
+- `image(20260928-065936).png`
+- `image(20260928-065955).png`
+- `image(20260928-070003).png`
+- `image(20260928-070013).png`
+- `image(20260928-070022).png`
+- `image(20260928-070031).png`
+- `image(20260928-070050).png`
+- `image(20260928-070059).png`
+- `image(20260928-070107).png`
+- `image(20260928-070113).png`
+- `image(20260928-070121).png`
+- `image(20260928-070127).png`
+- `image(20260928-070134).png`
+- `image(20260928-070141).png`
+- `image(20260928-070148).png`
+- `image(20260928-070159).png`
+- `image(20260928-070214).png`
+- `image(20260928-070223).png`
+- `image(20260928-070230).png`
+- `image(20260928-070238).png`
+- `image(20260928-070249).png`
+- `image(20260928-070257).png`
+- `image(20260928-070305).png`
+- `image(20260928-070314).png`
+- `image(20260928-070355).png`
+- `image(20260928-070403).png`
+- `image(20260928-070410).png`
+- `image(20260928-070415).png`
+- `image(20260928-070424).png`
+- `image(20260928-070431).png`
+- `image(20260928-070438).png`
+- `image(20260928-070447).png`
+- `image(20260928-070454).png`
+- `image(20260928-070500).png`
+- `image(20260928-070512).png`
+- `image(20260928-070519).png`
+- `image(20260928-070527).png`
+- `image(20260928-070627).png`
+- `image(20260928-070634).png`
+- `image(20260928-070643).png`
+- `image(20260928-070650).png`
+- `image(20260928-070657).png`
+- `image(20260928-071012).png`
+- `image(20260928-071026).png`
+- `image(20260928-071030).png`
+- `image(20260928-071036).png`
+- `image(20260928-071045).png`
+- `image(20260928-071051).png`
+- `image(20260928-071058).png`
+- `image(20260928-071105).png`
+- `image(20260928-071112).png`
+- `image(20260928-071117).png`
+- `image(20260928-071131).png`
+- `image(20260928-071136).png`
+- `image(20260928-071143).png`
+- `image(20260928-071149).png`
+- `image(20260928-071159).png`
+- `image(20260928-071209).png`
+- `1000059637.jpg`
+- `image(20260928-142926).png`
+- `image(20260928-142930).png`
+- `image(20260928-143346).png`
+- `image(20260928-143351).png`
+- `image(20260928-143356).png`
+- `image(20260928-143401).png`
+- `image(20260928-143407).png`
+- `image(20260928-143414).png`
+- `image(20260928-143417).png`
+- `image(20260928-143423).png`
+- `image(20260928-143428).png`
+- `image(20260928-143436).png`
+- `image(20260928-145024).png`
+
+**Upload date 2026-09-29 (39 files):**
+
+- `image(20260929-021704).png`
+- `image(20260929-021721).png`
+- `image(20260929-050908).png`
+- `image(20260929-060451).png`
+- `image(20260929-060807).png`
+- `image(20260929-084501).png`
+- `image(20260929-084557).png`
+- `image(20260929-084750).png`
+- `image(20260929-085837).png`
+- `1000059670.jpg`
+- `image(20260929-143244).png`
+- `image(20260929-143434).png`
+- `image(20260929-143447).png`
+- `image(20260929-143456).png`
+- `image(20260929-143707).png`
+- `image(20260929-143744).png`
+- `image(20260929-143748).png`
+- `image(20260929-143940).png`
+- `image(20260929-144058).png`
+- `image(20260929-144347).png`
+- `image(20260929-144353).png`
+- `image(20260929-144359).png`
+- `image(20260929-144405).png`
+- `image(20260929-144521).png`
+- `image(20260929-144527).png`
+- `image(20260929-144535).png`
+- `image(20260929-144544).png`
+- `image(20260929-144550).png`
+- `image(20260929-144556).png`
+- `image(20260929-144604).png`
+- `image(20260929-145007).png`
+- `image(20260929-145017).png`
+- `image(20260929-145027).png`
+- `image(20260929-145038).png`
+- `image(20260929-145154).png`
+- `image(20260929-145216).png`
+- `image(20260929-145309).png`
+- `image(20260929-145440).png`
+- `image(20260929-145453).png`
+
+### BULK-004: actual native images opened in this session
+
+**73 filenames:**
+
+- `image(20260928-012238).png`
+- `image(20260928-012245).png`
+- `image(20260928-012354).png`
+- `image(20260928-065646).png`
+- `image(20260928-065701).png`
+- `image(20260928-065714).png`
+- `image(20260928-065727).png`
+- `image(20260928-065734).png`
+- `image(20260928-065818).png`
+- `image(20260928-065838).png`
+- `image(20260928-065855).png`
+- `image(20260928-065902).png`
+- `image(20260928-065914).png`
+- `image(20260928-065922).png`
+- `image(20260928-065936).png`
+- `image(20260928-065955).png`
+- `image(20260928-070003).png`
+- `image(20260928-070013).png`
+- `image(20260928-070022).png`
+- `image(20260928-070031).png`
+- `image(20260928-070050).png`
+- `image(20260928-070059).png`
+- `image(20260928-070107).png`
+- `image(20260928-070113).png`
+- `image(20260928-070121).png`
+- `image(20260928-070127).png`
+- `image(20260928-070134).png`
+- `image(20260928-070141).png`
+- `image(20260928-070148).png`
+- `image(20260928-070159).png`
+- `image(20260928-070214).png`
+- `image(20260928-070223).png`
+- `image(20260928-070230).png`
+- `image(20260928-070238).png`
+- `image(20260928-070249).png`
+- `image(20260928-070257).png`
+- `image(20260928-070305).png`
+- `image(20260928-070314).png`
+- `image(20260928-070355).png`
+- `image(20260928-070403).png`
+- `image(20260928-070410).png`
+- `image(20260928-070415).png`
+- `image(20260928-070424).png`
+- `image(20260928-070431).png`
+- `image(20260928-070438).png`
+- `image(20260928-070447).png`
+- `image(20260928-070454).png`
+- `image(20260928-070500).png`
+- `image(20260928-070512).png`
+- `image(20260928-070519).png`
+- `image(20260928-070527).png`
+- `image(20260928-070627).png`
+- `image(20260928-070634).png`
+- `image(20260928-070643).png`
+- `image(20260928-070650).png`
+- `image(20260928-070657).png`
+- `image(20260928-071012).png`
+- `image(20260928-071026).png`
+- `image(20260928-071030).png`
+- `image(20260928-071036).png`
+- `image(20260928-071045).png`
+- `image(20260928-071051).png`
+- `image(20260928-071058).png`
+- `image(20260928-071105).png`
+- `image(20260928-071112).png`
+- `image(20260928-071117).png`
+- `image(20260928-071131).png`
+- `image(20260928-071136).png`
+- `image(20260928-071143).png`
+- `image(20260928-071149).png`
+- `image(20260928-071159).png`
+- `image(20260928-071209).png`
+- `image(20260928-145024).png`
+
+**Four related, derivative educational subseries—not four proven expert strategies:** `065646–065936` (12 files, RSI / support-resistance definitions), `065955–070314` (23 files, price/volume/time and boundaries), `070355–070657` (18 files, conceptual box-as-one-candle, upper/mid/lower, spring and failure), `071012–071209` (16 files, close-confirmed breakout, pullback, midpoint, false breakout). Individual illustrations are stylized educational diagrams; do not count them as out-of-sample return events or native curated primary originals.
+
+**Research critique retained:** (i) a box represented as a huge candle is a *didactic compression*, not actual volume-weighted execution history, (ii) box midpoint/middle 'consensus price' is a hypothesis requiring observed distribution and strict as-of box cutoff, not a proven VWAP, (iii) a resting support-zone limit can fill before any later spring/reclaim confirmation, so those decisions require separate as-of timestamps, (iv) long sideways box or high volume is not proof of who accumulated, (v) successful stop/re-entry scenarios must be compared with nonfills and breakdown cases, and (vi) close acceptance above upper box can still fail later. Historical screenshots cannot validate orders or independent edge.
+
+**Verification scope:** Teaching source inspected and organized only; independent unfamiliar chart transfer **NOT VERIFIED**; economic edge **NOT VERIFIED**; S02 remains PAUSED_AFTER_D03; no production scan, live order or operations changes.

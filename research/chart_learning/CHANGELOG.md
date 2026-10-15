@@ -1,5 +1,14 @@
 # Immutable learning change history
 
+## 2026-10-15 — Revision 26 — Reconcile BULK-003 and BULK-004 source cohorts, prevent duplicate/skill overclaim
+
+- Library-root completed source-group cohorts: Sep23=65/65, Sep28=98/98, Sep29=39/39. Exact filename ledger appended to `RECOVERED_SCREENSHOT_CATALOG.md`; no missing cohort files or new scans. Completed cohort count=202/1,616 root metadata entries. Past B-001's 35 reviews were not all enumerated, so do not assert unique lifetime count by summing new named file candidates.
+- BULK-003 52 image reads (Sep23 13+Sep29 39, of which 20 Sep29 already described B-001); LG CNS newly listed stock lacks sufficient 600/1000-day history, and crypto RSI timeframes yield conflicting evidence. No source profits verified.
+- BULK-004 73 actually newly opened Sep28 files (25 other Sep28 files reviewed in BULK-002): 69 interconnected illustrative education figures (four source groups), three old dev/system screenshots and one tiny gallery image. Insights challenge literal VWAP interpretation of box midpoints, require as-of box formation and signal timing, separate contact/reclaim/retest, allow false-breakout and no-fill controls. No canonical promotion.
+- Source research and tests only; scanner/production code, S02 D00-D03 freeze, future trading and settings left intact. No independent market-transfer competence or economic edge demonstrated.
+
+
+
 ## 2026-10-15 — Revision 25 — BULK-002 classify and critically analyze 45 root screenshots
 
 - Opened 45 fresh 2026-09-23 (20) and Sep-28 (25) Library-root images, recorded exact inventory in `ROOT_IMAGE_STUDIES_BULK002.md` as eight logically linked groups. Preserved two old ChatGPT screenshot triplicates/doubles, expired older expert charts and several unrelated/unreadable captures, rather than inflating the lesson count.

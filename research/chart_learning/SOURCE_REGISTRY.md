@@ -1,5 +1,9 @@
 # Source registry — original study materials and traceability
 
+**Bulk source recovery v26:** 2026-09-23 (65), 09-28 (98) and 09-29 (39) all directly triaged within those three full Library-root date cohorts; exact filenames and discussion of overlapping source provenance in `RECOVERED_SCREENSHOT_CATALOG.md`. 9/28 includes 69 related didactic infographic files whose box midpoint and support-acceptance terminology must be treated as source hypotheses, not measured executed outcomes or independently mastered primary 91 originals. Historical B-001 file-name trace is partial, so all-time unique image totals outside the three closed dates remain NOT VERIFIED.
+
+
+
 **BULK-002 additional source group (v25):** [ROOT_IMAGE_STUDIES_BULK002.md](ROOT_IMAGE_STUDIES_BULK002.md) records 45 actually opened Library-root images with exact names and case-by-case limitations. Native source reading is 102 root files including unrelated/degraded/overlaps; independent teaching lessons and trade outcomes fewer and unverified. Teacher SFA (~2026-08-27), Mirae Asset Venture (~08-07) cross-checked against Library `KakaoTalkChats.txt`; 10 standalone RSI diagrams and 5 chronological-before/after case pairs documented. Those chart pairs are NOT an OOS episode and are topic-overlaps of canonical #082–091, which remain independently unopened as native archive images.
 
 
