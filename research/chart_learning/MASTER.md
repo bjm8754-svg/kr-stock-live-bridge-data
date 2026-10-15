@@ -1,6 +1,6 @@
 # V3 Chart Research MASTER
 
-Version: **v28 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v29 / 2026-10-15 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
@@ -9,6 +9,12 @@ Version: **v28 / 2026-10-15 KST**. Source of truth for chart judgement continuit
 Build a system that independently **discovers appropriate stocks**, understands market regime and chart context, designs an evidence-backed entry (and optional second buy), structural invalidation and resistance-derived targets, and generates real **risk-adjusted tradable results**. The expert's five recommended plans benchmark competence; they are **not** numerical recipes or demonstrated fills. Accurate-looking levels alone do not demonstrate edge.
 
 Keep the V3 scanner / deep-review / evidence integration / live confirmation architecture. **PRODUCTION remains unchanged until independent validation and explicit user instruction.**
+
+## BULK-007 — Source triage shifts from counts to independent evidence
+
+Directly opened **304** new Library-root images and recorded 8 exact files inaccessible due to absent downloadable content out of four dates: 2026-03-04=72/79, 03-05=103/104, 03-06=46/46, 06-07=83/83. Current root library census = **1,623** (prior 1,616). Across eleven fully visible root date cohorts 508 files and three partially visible cohorts (Oct14 5, March04 72, March05 103), the conservative visually opened count is **688 distinct root files**. Total 696 have an explicit file access outcome, **8 content NOT VERIFIED**, remaining 927 unprocessed. This is neither 688 price patterns nor success cases.
+
+March04–06 S-Oil snapshots track a volatile multi-day intraday/pre-open event against WTI oil and a shifting orderbook. A displayed bid wall is not matched execution, order-flow identity, or fillable limit. WTI/stock clocks, sessions and risk-on/off alternative causes prevent literal causal and profitable claims. June07 captures a **16-screen single social-media market-adjustment carousel** and a long forum trader discussion showing chart levels, staged disposals and hypothetical retracements. Distinguish source-authored future-risk plans from screenshots of actual trades and hindsight. Forecast `5–15%` downturn and `20–30% position trim` are teacher/community hypotheses, not universal validated thresholds. Cross-check as-of support, time, volume, alternatives, nonfill and stop constraints; no rule promotion. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-007.
 
 ## BULK-006 — Distinguish genuine source evidence from workflow and session artifacts
 
