@@ -164,6 +164,22 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(p["sourceRecovery"]["reviewedRootImageEntriesAcrossLoggedBatches"], 42)
         self.assertFalse(p["learningStatus"]["economicEdgeVerified"])
 
+    def test_bulk_source_triage_overrides_microbatch_stopping(self):
+        m = gate.load_manifest()
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        sr = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertEqual(sr["metadataInventory"]["rootEntries"], 1616)
+        self.assertFalse(sr["metadataInventory"]["rootContentClassifiedComplete"])
+        self.assertEqual(sr["metadataInventory"]["pages"], 9)
+        self.assertEqual(sr["totalRootImagesActuallyOpenedAllLoggedWork"], 57)
+        self.assertEqual(sr["bulkStudies"][0]["actualRootImagesOpened"], 15)
+        self.assertEqual(sr["bulkStudies"][0]["sourceGroups"], 4)
+        self.assertEqual(sr["inspectPolicy"]["old3to5BatchStopGate"], "SUPERSEDED")
+        self.assertIn("BULK-META-001", (gate.BASE / "RECOVERED_SCREENSHOT_CATALOG.md").read_text(encoding="utf-8"))
+        self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])
