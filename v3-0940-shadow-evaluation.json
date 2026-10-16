@@ -1,56 +1,101 @@
 {
-  "captureRunId": 38657236805,
+  "captureRunId": 38826558654,
   "cycleStatus": "PARTIAL",
   "degradedMode": true,
   "delta0935to0940": [
     {
-      "code": "175330",
+      "code": "052690",
       "evaluation0935": "DATA_FAIL",
       "evaluation0940": "DATA_FAIL",
-      "price0935": 26350.0,
-      "price0940": 26350.0,
+      "price0935": 103100.0,
+      "price0940": 102850.0,
+      "priceDelta": -250.0
+    },
+    {
+      "code": "488280",
+      "evaluation0935": "DATA_FAIL",
+      "evaluation0940": "DATA_FAIL",
+      "price0935": 12410.0,
+      "price0940": 12490.0,
+      "priceDelta": 80.0
+    },
+    {
+      "code": "112610",
+      "evaluation0935": "DATA_FAIL",
+      "evaluation0940": "DATA_FAIL",
+      "price0935": 51400.0,
+      "price0940": 51400.0,
       "priceDelta": 0.0
     },
     {
-      "code": "000880",
-      "evaluation0935": "INVALIDATED",
-      "evaluation0940": "INVALIDATED",
-      "price0935": 101200.0,
-      "price0940": 100300.0,
-      "priceDelta": -900.0
+      "code": "204320",
+      "evaluation0935": "DATA_FAIL",
+      "evaluation0940": "DATA_FAIL",
+      "price0935": 40450.0,
+      "price0940": 40650.0,
+      "priceDelta": 200.0
     },
     {
-      "code": "024840",
-      "evaluation0935": "INVALIDATED",
-      "evaluation0940": "INVALIDATED",
-      "price0935": 4805.0,
-      "price0940": 4785.0,
-      "priceDelta": -20.0
-    },
-    {
-      "code": "001440",
-      "evaluation0935": "INVALIDATED",
-      "evaluation0940": "INVALIDATED",
-      "price0935": 23400.0,
-      "price0940": 23450.0,
-      "priceDelta": 50.0
-    },
-    {
-      "code": "356860",
-      "evaluation0935": "INVALIDATED",
-      "evaluation0940": "INVALIDATED",
-      "price0935": 40350.0,
-      "price0940": 40150.0,
-      "priceDelta": -200.0
+      "code": "443670",
+      "evaluation0935": "DATA_FAIL",
+      "evaluation0940": "DATA_FAIL",
+      "price0935": 4045.0,
+      "price0940": 4075.0,
+      "priceDelta": 30.0
     }
   ],
-  "evaluatedThroughKst": "20261015 0940",
+  "evaluatedThroughKst": "20261016 0940",
   "evaluationAt0935": [
     {
-      "code": "175330",
+      "code": "052690",
       "detail": {
-        "invalidation": 25550.0,
-        "observedMin": 25800.0
+        "invalidation": 95600.0,
+        "observedMin": 101100.0
+      },
+      "evaluation": "DATA_FAIL",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 35,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 36
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "488280",
+      "detail": {
+        "invalidation": 11640.0,
+        "observedMin": 11990.0
+      },
+      "evaluation": "DATA_FAIL",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 35,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 36
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "112610",
+      "detail": {
+        "invalidation": 48500.0,
+        "observedMin": 50200.0
+      },
+      "evaluation": "DATA_FAIL",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 35,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 36
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "204320",
+      "detail": {
+        "invalidation": 36300.0,
+        "observedMin": 40050.0
       },
       "evaluation": "DATA_FAIL",
       "priceCoverage": {
@@ -62,64 +107,19 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "000880",
+      "code": "443670",
       "detail": {
-        "invalidation": 100000.0,
-        "observedMin": 99600.0
+        "invalidation": 3710.0,
+        "observedMin": 3935.0
       },
-      "evaluation": "INVALIDATED",
-      "priceCoverage": {
-        "complete": true,
-        "observedMinutes": 36,
-        "openingMinutesUnobserved": 0,
-        "totalMinutes": 36
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "024840",
-      "detail": {
-        "invalidation": 5030.0,
-        "observedMin": 4765.0
-      },
-      "evaluation": "INVALIDATED",
+      "evaluation": "DATA_FAIL",
       "priceCoverage": {
         "complete": false,
         "observedMinutes": 35,
         "openingMinutesUnobserved": 1,
         "totalMinutes": 36
       },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "001440",
-      "detail": {
-        "invalidation": 24050.0,
-        "observedMin": 23150.0
-      },
-      "evaluation": "INVALIDATED",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 35,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 36
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "356860",
-      "detail": {
-        "invalidation": 44350.0,
-        "observedMin": 40000.0
-      },
-      "evaluation": "INVALIDATED",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 35,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 36
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     }
   ],
   "evaluationMethod": "FROZEN_STRUCTURED_RULES_SNAPSHOT_ONLY_V1",
@@ -135,13 +135,61 @@
   "mode": "SHADOW_ONLY",
   "perCandidateEvaluation": [
     {
-      "code": "175330",
+      "code": "052690",
       "detail": {
-        "invalidation": 25550.0,
-        "observedMin": 25800.0
+        "invalidation": 95600.0,
+        "observedMin": 101100.0
       },
       "finalEvaluation": "DATA_FAIL",
-      "name": "JB금융지주",
+      "name": "한전기술",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 40,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 41
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "488280",
+      "detail": {
+        "invalidation": 11640.0,
+        "observedMin": 11990.0
+      },
+      "finalEvaluation": "DATA_FAIL",
+      "name": "에스투더블유",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 40,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 41
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "112610",
+      "detail": {
+        "invalidation": 48500.0,
+        "observedMin": 50200.0
+      },
+      "finalEvaluation": "DATA_FAIL",
+      "name": "씨에스윈드",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 40,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 41
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "204320",
+      "detail": {
+        "invalidation": 36300.0,
+        "observedMin": 40050.0
+      },
+      "finalEvaluation": "DATA_FAIL",
+      "name": "HL만도",
       "priceCoverage": {
         "complete": true,
         "observedMinutes": 41,
@@ -151,75 +199,27 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "000880",
+      "code": "443670",
       "detail": {
-        "invalidation": 100000.0,
-        "observedMin": 99600.0
+        "invalidation": 3710.0,
+        "observedMin": 3935.0
       },
-      "finalEvaluation": "INVALIDATED",
-      "name": "한화",
-      "priceCoverage": {
-        "complete": true,
-        "observedMinutes": 41,
-        "openingMinutesUnobserved": 0,
-        "totalMinutes": 41
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "024840",
-      "detail": {
-        "invalidation": 5030.0,
-        "observedMin": 4765.0
-      },
-      "finalEvaluation": "INVALIDATED",
-      "name": "KBI메탈",
+      "finalEvaluation": "DATA_FAIL",
+      "name": "에스피소프트",
       "priceCoverage": {
         "complete": false,
         "observedMinutes": 40,
         "openingMinutesUnobserved": 1,
         "totalMinutes": 41
       },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "001440",
-      "detail": {
-        "invalidation": 24050.0,
-        "observedMin": 23150.0
-      },
-      "finalEvaluation": "INVALIDATED",
-      "name": "대한전선",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 40,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 41
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
-    },
-    {
-      "code": "356860",
-      "detail": {
-        "invalidation": 44350.0,
-        "observedMin": 40000.0
-      },
-      "finalEvaluation": "INVALIDATED",
-      "name": "티엘비",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 40,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 41
-      },
-      "reason": "OBSERVED_SNAPSHOT_AT_OR_BELOW_FROZEN_INVALIDATION"
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     }
   ],
   "planOrigin": "MACHINE_CONTINUITY_FALLBACK",
   "productionCutoverReviewEligible": false,
   "productionWriteAllowed": false,
   "schemaVersion": "V3_0940_SHADOW_EVAL_V1",
-  "sourceBundleSha": "bbb736cb3bbd58d7152d470d81189c70e1bec011",
-  "sourcePlanGeneratedAt": "2026-10-15T07:59:02.764165+09:00",
-  "tradeDate": "20261015"
+  "sourceBundleSha": "4fd6474ef0159e2f0140c3000f7c74d3cce26f24",
+  "sourcePlanGeneratedAt": "2026-10-16T07:57:29.830623+09:00",
+  "tradeDate": "20261016"
 }
