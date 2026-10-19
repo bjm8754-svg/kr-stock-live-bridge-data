@@ -1,3 +1,9 @@
+## BULK-012 — 70 Sep07–10 Library-root image files visually classified (2026-10-19)
+
+Revisited the 70 `ROOT_IMAGE_TRIAGE_BULK010_PRELIMINARY.md` OCR/pointer-only entries by downloading source image bytes and viewing all in five contact sheets, then magnifying the actual manual annotation case. Exactly **40 market-app charts with auto indicator overlays/no proven discretionary anchors, 2 files of ONE manually annotated blue ascending parallel-channel chart, 6 quote/ranking/context screens, 6 unvalidated stockcrew_1 study-text screenshots, 16 unrelated items excluded**. The pair `1788851445435.jpeg` and `chart-1(8).png` illustrates possible repeated swing-touch channel drawing; the rails may have been retroactively adjusted, so neither exact click anchors nor ex-ante edge is verified. The other 68 files' fine price labels were not individually full-res checked. Native source triage is not mastered chart analysis. Full source-and-file ledger: `ROOT_IMAGE_STUDIES_BULK012.md`.
+
+**Ledger reconciliation:** 1,639 Library-root image entries, **982 actual pixel visually triaged** (previous 912 + disjoint 70), eight earlier March inaccessible/NOT VERIFIED, **649 still awaiting visual triage**; **31 full upload-date cohorts / 807 entries** closed (previous 27/737). The curated 91 numbered primary images remain 21 actually inspected / 0 independently mastered. Research question SRC-STUDY-001 persists, plus ex-ante channel-anchor falsification. No rule promotion, unfamiliar-chart transfer, economic edge, new scans, S02 D04, orders or operational writes; S02 PAUSED_AFTER_D03.
+
 ## BULK-011 — 61 more Library root originals actually opened (2026-10-19)
 
 Six disjoint upload-date cohorts (Sep01 9, Sep02 16, Sep03 14, Sep04 5, Sep06 7, Sep15 10) were opened at native pixel level. 27 market-app chart screenshots, 7 technical chart-setting tutorial images, 8 market context/account/orderbook sources, 19 unrelated materials. The long-MA tutorial demonstrates 240/480/600/1000 settings; red arrows identify software UI, not discretionary trade anchors. Sep15 stock charts show dense platform MA/Ichimoku/band overlays, **not verified manually drawn horizontal price anchors**. See `ROOT_IMAGE_STUDIES_BULK011.md`. Previous 851 genuinely visually read → **912**; 8 historic source failures; 719 remain without pixel visual review from 1,639 root entries. BULK010 70 files remain preliminary OCR-only, included in 719. No source mastery, unseen transfer, CANONICAL promotion, scan, S02 or production change.
@@ -14,7 +20,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 32
+**Learning revision:** 33
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
