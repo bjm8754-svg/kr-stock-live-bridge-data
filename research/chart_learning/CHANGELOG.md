@@ -1,5 +1,10 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 32 — BULK-011 native pixel classification
+
+- Recovered and viewed 61 Library-root originals across 6 uncompleted upload dates, catalogued chart vs settings vs context vs unrelated; distinguished app indicator overlays and tutorial UI arrows from analyst hand-drawn support lines. 912 true pixel visual reads, 8 legacy inaccessible, 719 pending pixel QA; previous BULK010 70 OCR-only provisional. No transfer validation or operational changes.
+
+
 ## 2026-10-19 — Revision 31 — BULK-009 nine new date cohorts / 116 actual image visual reads
 
 - Completed native visual review of Sep14 (30), Sep20 (12), Sep21 (6), Sep22 (2), Sep25 (13), Sep30 (2), Oct1 (8), Oct2 (10), and Oct6 (33) disjoint root Library date-cohort files, 116 total. Sep14's 16 TIFFs were initially not readable in direct image mode but materialized/conversion succeeded; all were unrelated equipment-service form scans.
