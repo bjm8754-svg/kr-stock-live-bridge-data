@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 34,
+    "methodologyVersion": 35,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -216,6 +216,12 @@
       "status": "54_ROOT_IMAGES_PIXEL_TRIAGED_NO_MANUAL_ANCHOR_OR_TRANSFER",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
       "claim": "June15-17 54 original photos source-classified. App charts show auto MA/Ichimoku indicators; BTC moving averages are not discretionary drawn diagonal anchors. Multiple U.S. stock quote frames need normalized cutoff/timeframe. 17 unrelated/private and 3 account/holding images excluded from research. No independent outcome."
+    },
+    {
+      "type": "ROOT_SOURCE_VISUAL_REVIEW",
+      "status": "65_AUGUST_PIXELS_CLASSIFIED_NO_MANUAL_ANCHOR_OR_TRANSFER",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+      "claim": "Aug 65 original photo entries downloaded and source-class visually reviewed. Nine financial charts including BTC daily/weekly/crop duplicate; 9 market context, 47 unrelated/private; no verified hand-drawn price geometry. BTC thick curves explicitly labelled 60/120/200 moving averages. No rule or economic edge proved."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -348,7 +354,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue remaining 598 Library-root image entries by date/episode; prioritize genuine hand-annotated charts with visible anchor choices. BULK013 June15-17 54 image files visually triaged, but no manual drawn price anchors verified; dense moving-average overlays not discretionary drawing.",
+    "action": "Continue the 533 root photo entries lacking pixel review; screen true manually placed price line/box annotations before high-res anchor reconstruction. BULK014 65 August images reviewed, but prominent BTC slopes are platform MA(60/120/200), not discretionary trendline.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -717,7 +723,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 1036,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1101,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -1028,10 +1034,150 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-03",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-07",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-08",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-09",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-10",
+        "allRootEntries": 13,
+        "classifiedFileEntries": 13,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-11",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-13",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-15",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-19",
+        "allRootEntries": 5,
+        "classifiedFileEntries": 5,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-24",
+        "allRootEntries": 14,
+        "classifiedFileEntries": 14,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-25",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-27",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-28",
+        "allRootEntries": 5,
+        "classifiedFileEntries": 5,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-08-30",
+        "allRootEntries": 4,
+        "classifiedFileEntries": 4,
+        "status": "ALL_ORIGINAL_IMAGE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK014",
+        "summary": "August mixed photos; 9 app financial charts including one duplicate BTC crop, 9 market context posts, 47 unrelated/private/work documents. No verified discretionary price anchors.",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
       }
     ],
-    "completedCohortDateCount": 34,
-    "rootEntriesWithinFullyClassifiedCohorts": 861,
+    "completedCohortDateCount": 48,
+    "rootEntriesWithinFullyClassifiedCohorts": 926,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -1064,13 +1210,45 @@
         "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "V33 982 root entries pixel-visually triaged. BULK013 June15 (20), June16 (22), June17 (12) 54 new disjoint files downloaded and visually triaged in four contact sheets with 3 individually enlarged charts -> 1036. Refreshed root Library metadata 1642 (+3 newly added Oct19 not visually reviewed), 8 March inaccessible, 598 pending. Caution: all 54 source-level categories verified, not each small label at native resolution. Curated chart-sage 91 remains 21 opened/0 mastered.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 1044,
+    "totalRootImageCountExplanation": "V34 1036 root original source-pixel classifications + BULK014 65 disjoint August root file entries (Aug03,07,08,09,10,11,13,15,19,24,25,27,28,30) = 1101. On V34's refreshed stable 1642 root metadata entries, eight March originals remain unavailable, 533 without pixel classification. BULK014 65 rendered in contact sheets (multi-page TIFF pages not double-counted), three individually enlarged BTC chart/crop files. Curated 91 numbered originals 21 direct reads/0 mastered.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1109,
     "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 598,
+    "rootImageCountUnaccountedForInCurrentInventory": 533,
     "accessFailureDoesNotCountAsVisualStudy": true,
     "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven.",
     "batchHistory": [
+      {
+        "id": "BULK-014",
+        "dateKst": "2026-10-19",
+        "status": "65_AUGUST_ROOT_ORIGINAL_IMAGES_VISUALLY_CLASSIFIED",
+        "files": 65,
+        "sourceCohorts": {
+          "2026-08-03": 1,
+          "2026-08-07": 1,
+          "2026-08-08": 6,
+          "2026-08-09": 1,
+          "2026-08-10": 13,
+          "2026-08-11": 3,
+          "2026-08-13": 2,
+          "2026-08-15": 1,
+          "2026-08-19": 5,
+          "2026-08-24": 14,
+          "2026-08-25": 6,
+          "2026-08-27": 3,
+          "2026-08-28": 5,
+          "2026-08-30": 4
+        },
+        "financeCharts": 9,
+        "marketContextEducation": 9,
+        "excludedPrivateWork": 47,
+        "manualPriceAnchorsVerified": 0,
+        "btcChartCropNearDuplicate": 1,
+        "method": "All 65 original file bytes visually triaged using 6 montage pages due to TIFF multipage, 3 individually enlarged originals",
+        "fineLabelsFullyVerifiedAllItems": false,
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-013",
         "dateKst": "2026-10-19",
