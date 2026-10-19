@@ -1,5 +1,10 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 33 — BULK-012 70 original-image visual triage and parallel-channel anchor study
+
+- Downloaded, visually classified and source-logged 70 previously OCR-only Sep07–10 Library-root original images. Forty app/indicator charts, 2 copies of one annotated parallel-channel chart, 6 market context, 6 study-thread text, 16 off-topic. Investigated hand-drawn sloping boundaries and rival ex-ante versus retrospective anchor hypotheses without rule promotion.
+- Root pixel triage count 982 of 1,639; 8 older March unreadable, 649 awaiting visual review; 31 closed date cohorts /807 entries. Curated 91 remains 21 directly read, 0 mastered. No trade/scan/S02/production action.
+
 ## 2026-10-19 — Revision 32 — BULK-011 native pixel classification
 
 - Recovered and viewed 61 Library-root originals across 6 uncompleted upload dates, catalogued chart vs settings vs context vs unrelated; distinguished app indicator overlays and tutorial UI arrows from analyst hand-drawn support lines. 912 true pixel visual reads, 8 legacy inaccessible, 719 pending pixel QA; previous BULK010 70 OCR-only provisional. No transfer validation or operational changes.
