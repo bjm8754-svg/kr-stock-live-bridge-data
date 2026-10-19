@@ -1,5 +1,10 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 34 — BULK013 54 original-image visual triage
+
+- Downloaded and visually reviewed 54 Library-root source photos across June15–17 (20/22/12): 18 financial chart screens, 16 market contextual/educational, three private account screens excluded, 17 off-topic. Repeated app shots across 1-minute/15-minute selections represent one evolving source episode, not independent wins. BTC thick diagonals are labelled automatic moving averages, not verified hand-drawn anchors. Three representative charts individually enlarged.
+- Dynamic Library root image inventory 1,642 (+3). Visual sources 1,036, eight historic March inaccessible, 598 pending; 34 complete cohorts /861 entries. Curated91 remains 21 opened/0 mastered. No OOS transfer, rule promotion, economic edge, scan, S02 D04, live order or production modification.
+
 ## 2026-10-19 — Revision 33 — BULK-012 70 original-image visual triage and parallel-channel anchor study
 
 - Downloaded, visually classified and source-logged 70 previously OCR-only Sep07–10 Library-root original images. Forty app/indicator charts, 2 copies of one annotated parallel-channel chart, 6 market context, 6 study-thread text, 16 off-topic. Investigated hand-drawn sloping boundaries and rival ex-ante versus retrospective anchor hypotheses without rule promotion.
