@@ -1,5 +1,10 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 35 — BULK-014 August 65 image source classification
+
+- All 65 disjoint August-root original file entries visually triaged across 14 uploaded date cohorts; 9 financial app charts, 9 market/macro context, 47 unrelated personal or workplace images excluded. BTC daily/weekly pair + crop visually compared: thick sloping red/gray/green lines labelled as MA60/120/200 and **not proven manually drawn price trendlines**; misleading `chart-1(5).png` was an illustration, not a chart.
+- Current Library-root snapshot 1,642; cumulative true source-pixel classification 1,101; 8 March content failures, 533 remaining, 48 completed cohort dates / 926 images. Curated91 21 direct reads/0 mastery, no method promotion, unfamiliar-chart transfer, economic edge, scanner, S02 D04, live order or production change.
+
 ## 2026-10-19 — Revision 34 — BULK013 54 original-image visual triage
 
 - Downloaded and visually reviewed 54 Library-root source photos across June15–17 (20/22/12): 18 financial chart screens, 16 market contextual/educational, three private account screens excluded, 17 off-topic. Repeated app shots across 1-minute/15-minute selections represent one evolving source episode, not independent wins. BTC thick diagonals are labelled automatic moving averages, not verified hand-drawn anchors. Three representative charts individually enlarged.
