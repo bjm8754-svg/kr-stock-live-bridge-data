@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 33,
+    "methodologyVersion": 34,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -210,6 +210,12 @@
       "status": "70_IMAGE_VISUAL_CATEGORIES_CHANNEL_ANCHOR_HYPOTHESES_NOT_VALIDATED",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
       "claim": "All 70 Sep07-10 files visually classified after image-pointer/OCR preliminary; 2 screenshots of same upward parallel annotated channel; only marked pair and selected text enlarged. No ex-ante line timestamp, transfer, fill or economic gain. Eight March root images remain inaccessible."
+    },
+    {
+      "type": "ROOT_SOURCE_VISUAL_REVIEW",
+      "status": "54_ROOT_IMAGES_PIXEL_TRIAGED_NO_MANUAL_ANCHOR_OR_TRANSFER",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
+      "claim": "June15-17 54 original photos source-classified. App charts show auto MA/Ichimoku indicators; BTC moving averages are not discretionary drawn diagonal anchors. Multiple U.S. stock quote frames need normalized cutoff/timeframe. 17 unrelated/private and 3 account/holding images excluded from research. No independent outcome."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -330,9 +336,9 @@
     "verifiedAtKst": "2026-10-19",
     "store": "ChatGPT Library",
     "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
-    "totalImageEntries": 1730,
+    "totalImageEntries": 1733,
     "curated91ImageEntries": 91,
-    "uncataloguedRootImageEntries": 1639,
+    "uncataloguedRootImageEntries": 1642,
     "rootImagesAreAllResearch": false,
     "possibleContentDuplicates": true,
     "externalMountCompleteness": "NOT_VERIFIED",
@@ -342,7 +348,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Next verify the 649 root images still lacking source-pixel review, favor authentic hand-annotated charts and then isolate cutoff-respecting line-anchor tests; 982 visual categories, 8 March unavailable. BULK012 revised previous OCR-only 70 to visually classified with full-size examination of marked parallel-channel case; do not treat mobile app automatic overlays as analyst marks.",
+    "action": "Continue remaining 598 Library-root image entries by date/episode; prioritize genuine hand-annotated charts with visible anchor choices. BULK013 June15-17 54 image files visually triaged, but no manual drawn price anchors verified; dense moving-average overlays not discretionary drawing.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -438,8 +444,8 @@
       "neverAutoTrade": true
     },
     "metadataInventory": {
-      "status": "CURRENT_ROOT_METADATA_LISTED_1639_CONTENT_PARTIAL",
-      "rootEntries": 1639,
+      "status": "CURRENT_ROOT_METADATA_LISTED_1642_CONTENT_PARTIAL",
+      "rootEntries": 1642,
       "pages": 9,
       "errors": 0,
       "listingDateKst": "2026-10-19",
@@ -476,8 +482,8 @@
       ],
       "rootContentClassifiedComplete": false,
       "nameBasedDuplicatesNotVerified": true,
-      "previousRootEntries": 1623,
-      "entriesAddedSincePreviousSnapshot": 16
+      "previousRootEntries": 1639,
+      "entriesAddedSincePreviousSnapshot": 3
     },
     "bulkStudies": [
       {
@@ -711,7 +717,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 982,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1036,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -992,10 +998,40 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-06-15",
+        "allRootEntries": 20,
+        "classifiedFileEntries": 20,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK013",
+        "summary": "Mixed market-app quote charts/rankings and unrelated workplace/personal photos; no verified manual drawing",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-06-16",
+        "allRootEntries": 22,
+        "classifiedFileEntries": 22,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK013",
+        "summary": "Mixed market-app quote charts/rankings and unrelated workplace/personal photos; no verified manual drawing",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-06-17",
+        "allRootEntries": 12,
+        "classifiedFileEntries": 12,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK013",
+        "summary": "Mixed market-app quote charts/rankings and unrelated workplace/personal photos; no verified manual drawing",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
       }
     ],
-    "completedCohortDateCount": 31,
-    "rootEntriesWithinFullyClassifiedCohorts": 807,
+    "completedCohortDateCount": 34,
+    "rootEntriesWithinFullyClassifiedCohorts": 861,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -1028,13 +1064,34 @@
         "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "V32 912 previously image-pixel visually classified + BULK012 70 nonoverlapping Sep07–10 original images downloaded and visually classified by contact sheet, with individually enlarged marked pair = 982. Eight earlier March image originals remain inaccessible; 649 of 1,639 Library-root metadata entries still lack pixel visual classification. BULK012 line source represents 2 files but one underlying annotated chart; 21/91 primary originals opened, zero mastered.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 990,
+    "totalRootImageCountExplanation": "V33 982 root entries pixel-visually triaged. BULK013 June15 (20), June16 (22), June17 (12) 54 new disjoint files downloaded and visually triaged in four contact sheets with 3 individually enlarged charts -> 1036. Refreshed root Library metadata 1642 (+3 newly added Oct19 not visually reviewed), 8 March inaccessible, 598 pending. Caution: all 54 source-level categories verified, not each small label at native resolution. Curated chart-sage 91 remains 21 opened/0 mastered.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1044,
     "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 649,
+    "rootImageCountUnaccountedForInCurrentInventory": 598,
     "accessFailureDoesNotCountAsVisualStudy": true,
-    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified.",
+    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven.",
     "batchHistory": [
+      {
+        "id": "BULK-013",
+        "dateKst": "2026-10-19",
+        "status": "54_ACTUAL_IMAGES_VISUALLY_CLASSIFIED_THREE_DATE_COHORTS",
+        "files": 54,
+        "sourceCohorts": {
+          "2026-06-15": 20,
+          "2026-06-16": 22,
+          "2026-06-17": 12
+        },
+        "stockAndCryptoCharts": 18,
+        "manualPriceAnchorsVerified": 0,
+        "marketContextEducation": 16,
+        "privateAccountExcluded": 3,
+        "nonchartExcluded": 17,
+        "method": "Downloaded original bytes, 4 contact sheets, 3 individually enlarged",
+        "fineLabelsFullyVerifiedAllItems": false,
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK013.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-012",
         "dateKst": "2026-10-19",
