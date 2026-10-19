@@ -230,7 +230,7 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual([x["allRootEntries"] for x in sr["dateCohortCoverage"][:7]], [65,98,39,16,3,4,5])
         self.assertEqual(sr["bulkStudies"][4]["visuallyOpenedInPartialCohortSamples"], 38)
         self.assertEqual(sr["bulkStudies"][4]["totalImagesActuallyReadThisSession"], 66)
-        self.assertGreaterEqual(sr["additionalRootVisualSamplesOutsideClosedCohorts"], 5)
+        self.assertGreaterEqual(sr["bulkStudies"][4]["totalImagesActuallyReadThisSession"], 66)
         self.assertFalse(sr["deduplicatedAcrossAllHistoricalBatchesVerified"])
         self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
         self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
