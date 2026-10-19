@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 32,
+    "methodologyVersion": 33,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -204,6 +204,12 @@
       "status": "61_ROOT_FILES_VISUALLY_CLASSIFIED_NO_TRANSFER",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md",
       "claim": "Sep01/02/03/04/06/15 six disjoint Library-root cohorts, 61 original images actually opened at pixel level: 27 market chart images, 7 chart settings tutorial, 8 market-context images, 19 unrelated excluded. Indicator overlays distinguished from analyst-manual lines; no verified hand-drawn price anchor, no unseen transfer or new trading rule. Prior BULK010 70 OCR-only files remain pending actual pixel QA."
+    },
+    {
+      "type": "ROOT_SOURCE_VISUAL_REVIEW",
+      "status": "70_IMAGE_VISUAL_CATEGORIES_CHANNEL_ANCHOR_HYPOTHESES_NOT_VALIDATED",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+      "claim": "All 70 Sep07-10 files visually classified after image-pointer/OCR preliminary; 2 screenshots of same upward parallel annotated channel; only marked pair and selected text enlarged. No ex-ante line timestamp, transfer, fill or economic gain. Eight March root images remain inaccessible."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -336,7 +342,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue uninspected Library-root images by date/source episode, prioritize truly hand-annotated chart structures and pixel QA of the 70 BULK010 OCR-only files; now 912 visually opened, 8 inaccessible, 719 without pixel visual review. Do not infer manually drawn lines from indicator overlays.",
+    "action": "Next verify the 649 root images still lacking source-pixel review, favor authentic hand-annotated charts and then isolate cutoff-respecting line-anchor tests; 982 visual categories, 8 March unavailable. BULK012 revised previous OCR-only 70 to visually classified with full-size examination of marked parallel-channel case; do not treat mobile app automatic overlays as analyst marks.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -705,7 +711,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 912,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 982,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -946,10 +952,50 @@
         "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
         "summary": "10 repeated market chart screenshots",
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-07",
+        "allRootEntries": 19,
+        "classifiedFileEntries": 19,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK012",
+        "summary": "App market charts, social/market context, unvalidated educational text and unrelated docs",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-09-08",
+        "allRootEntries": 19,
+        "classifiedFileEntries": 19,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK012",
+        "summary": "Ten app charts including 2 files of one annotated parallel-channel case, plus market context, unrelated docs",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-09-09",
+        "allRootEntries": 19,
+        "classifiedFileEntries": 19,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK012",
+        "summary": "App market charts, social/market context, unvalidated educational text and unrelated docs",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-09-10",
+        "allRootEntries": 13,
+        "classifiedFileEntries": 13,
+        "status": "ALL_ORIGINAL_FILE_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEET_BULK012",
+        "summary": "App market charts, social/market context, unvalidated educational text and unrelated docs",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
       }
     ],
-    "completedCohortDateCount": 27,
-    "rootEntriesWithinFullyClassifiedCohorts": 737,
+    "completedCohortDateCount": 31,
+    "rootEntriesWithinFullyClassifiedCohorts": 807,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -982,13 +1028,36 @@
         "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "V31 851 native pixel visually inspected + BULK011 six disjoint date cohorts 61 newly pixel-read = 912. Eight historic March originals remain byte-inaccessible; 719 of stable 1,639 root image inventory lack native pixel verification. BULK010 70 files were only OCR/image-pointer preliminarily triaged and are still among 719.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 920,
+    "totalRootImageCountExplanation": "V32 912 previously image-pixel visually classified + BULK012 70 nonoverlapping Sep07–10 original images downloaded and visually classified by contact sheet, with individually enlarged marked pair = 982. Eight earlier March image originals remain inaccessible; 649 of 1,639 Library-root metadata entries still lack pixel visual classification. BULK012 line source represents 2 files but one underlying annotated chart; 21/91 primary originals opened, zero mastered.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 990,
     "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 719,
+    "rootImageCountUnaccountedForInCurrentInventory": 649,
     "accessFailureDoesNotCountAsVisualStudy": true,
-    "imageReadPolicyCorrection": "The 70 BULK010 entries are OCR/image-pointer preliminary, not pixels visually judged and not counted in 912.",
+    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified.",
     "batchHistory": [
+      {
+        "id": "BULK-012",
+        "dateKst": "2026-10-19",
+        "status": "70_ACTUAL_IMAGES_VISUALLY_CLASSIFIED_AFTER_OCR_ONLY_PRELIMINARY",
+        "files": 70,
+        "sourceCohorts": {
+          "2026-09-07": 19,
+          "2026-09-08": 19,
+          "2026-09-09": 19,
+          "2026-09-10": 13
+        },
+        "appChartsWithoutVerifiedManualAnchors": 40,
+        "annotatedChartFiles": 2,
+        "distinctManualChannelCases": 1,
+        "marketContext": 6,
+        "unvalidatedEducatorText": 6,
+        "excluded": 16,
+        "method": "Downloaded original bytes, 5 visual contact sheets, selective individual native enlargement",
+        "fineLabelsFullyVerifiedAllItems": false,
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-011",
         "dateKst": "2026-10-19",
