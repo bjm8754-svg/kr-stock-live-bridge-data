@@ -1,6 +1,6 @@
 {
   "schema": "V3_METHODOLOGY_STUDY_PROGRESS_V1",
-  "updatedKst": "2026-10-15",
+  "updatedKst": "2026-10-19",
   "status": "IN_PROGRESS_NOT_COMPETENCE_PROVEN",
   "researchPhase": "METHODOLOGY_FIRST_SOURCE_STUDY",
   "currentObjective": "Independently derive, challenge and version chart-analysis reasoning using the 91 original 차트술사 PNGs as the primary study corpus, supplemented by expert plans and gap-specific external research.",
@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 31,
+    "methodologyVersion": 32,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -198,6 +198,12 @@
       "status": "116_REAL_NATIVE_IMAGES_INSPECTED_IN_NINE_CLOSED_DATE_COHORTS",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-009",
       "claim": "Sept14,20,21,22,25,30 and Oct1,2,6: 116 direct visual reads, including 16 Library TIFF images recovered from raw bytes and visually checked as unrelated service requests. V30 cumulative count correction +47 October14 reads. Market price screenshots do not verify trades."
+    },
+    {
+      "type": "LIBRARY_ROOT_PIXEL_COHORT_STUDY",
+      "status": "61_ROOT_FILES_VISUALLY_CLASSIFIED_NO_TRANSFER",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md",
+      "claim": "Sep01/02/03/04/06/15 six disjoint Library-root cohorts, 61 original images actually opened at pixel level: 27 market chart images, 7 chart settings tutorial, 8 market-context images, 19 unrelated excluded. Indicator overlays distinguished from analyst-manual lines; no verified hand-drawn price anchor, no unseen transfer or new trading rule. Prior BULK010 70 OCR-only files remain pending actual pixel QA."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -330,7 +336,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Keep classifying uninspected Library-root images at whole upload-date/source-episode scale. Current inventory 1639: 851 actual native visual opens including 16 converted TIFFs, 8 legacy source bytes unavailable, 780 not yet visually attempted. Prioritize actual expert/student chart episodes in earlier March–September and October date cohorts, and never promote routine scanner/operations.",
+    "action": "Continue uninspected Library-root images by date/source episode, prioritize truly hand-annotated chart structures and pixel QA of the 70 BULK010 OCR-only files; now 912 visually opened, 8 inaccessible, 719 without pixel visual review. Do not infer manually drawn lines from indicator overlays.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -699,7 +705,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 851,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 912,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -892,10 +898,58 @@
         "directVisualReads": 33,
         "summary": "CAREER_EHS_AND_WORKPLACE_UNRELATED",
         "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-01",
+        "allRootEntries": 9,
+        "classifiedFileEntries": 9,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "7 chart setup tutorial pages, 2 unrelated",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-02",
+        "allRootEntries": 16,
+        "classifiedFileEntries": 16,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "16 non-market EHS presentation variants",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-03",
+        "allRootEntries": 14,
+        "classifiedFileEntries": 14,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "8 charts, 5 market-context, 1 unrelated",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-04",
+        "allRootEntries": 5,
+        "classifiedFileEntries": 5,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "5 stock chart screenshots",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-06",
+        "allRootEntries": 7,
+        "classifiedFileEntries": 7,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "4 market charts, 3 market-context",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
+      },
+      {
+        "uploadDate": "2026-09-15",
+        "allRootEntries": 10,
+        "classifiedFileEntries": 10,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK011",
+        "summary": "10 repeated market chart screenshots",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md"
       }
     ],
-    "completedCohortDateCount": 21,
-    "rootEntriesWithinFullyClassifiedCohorts": 676,
+    "completedCohortDateCount": 27,
+    "rootEntriesWithinFullyClassifiedCohorts": 737,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -928,10 +982,27 @@
         "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "CORRECTED v30 omitted the final Oct14 47 native-image reads: at v30, 560 completed-cohort images + 175 previously actually opened March4/5 partial = 735 (not stale 688). On 2026-10-19, 116 disjoint additional completed-cohort images opened => 676 full + 175 March partial = 851 directly visually inspected Library-root files. This is a conservative directly observed root-file count, including unrelated material, NOT 851 distinct market charts.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 859,
+    "totalRootImageCountExplanation": "V31 851 native pixel visually inspected + BULK011 six disjoint date cohorts 61 newly pixel-read = 912. Eight historic March originals remain byte-inaccessible; 719 of stable 1,639 root image inventory lack native pixel verification. BULK010 70 files were only OCR/image-pointer preliminarily triaged and are still among 719.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 920,
     "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 780,
-    "accessFailureDoesNotCountAsVisualStudy": true
+    "rootImageCountUnaccountedForInCurrentInventory": 719,
+    "accessFailureDoesNotCountAsVisualStudy": true,
+    "imageReadPolicyCorrection": "The 70 BULK010 entries are OCR/image-pointer preliminary, not pixels visually judged and not counted in 912.",
+    "batchHistory": [
+      {
+        "id": "BULK-011",
+        "dateKst": "2026-10-19",
+        "status": "61_NATIVE_PIXELS_OPENED_SIX_DATE_COHORTS",
+        "files": 61,
+        "marketChartScreenshots": 27,
+        "chartSettingsTutorial": 7,
+        "marketContext": 8,
+        "excluded": 19,
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK011.md",
+        "manualPriceAnchorVerified": 0,
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      }
+    ]
   }
 }
