@@ -1,71 +1,56 @@
 {
-  "captureRunId": 38826558654,
+  "captureRunId": 39178534471,
   "cycleStatus": "PARTIAL",
   "degradedMode": true,
   "delta0935to0940": [
     {
-      "code": "052690",
+      "code": "005830",
       "evaluation0935": "DATA_FAIL",
       "evaluation0940": "DATA_FAIL",
-      "price0935": 103100.0,
-      "price0940": 102850.0,
-      "priceDelta": -250.0
-    },
-    {
-      "code": "488280",
-      "evaluation0935": "DATA_FAIL",
-      "evaluation0940": "DATA_FAIL",
-      "price0935": 12410.0,
-      "price0940": 12490.0,
-      "priceDelta": 80.0
+      "price0935": 183700.0,
+      "price0940": 184900.0,
+      "priceDelta": 1200.0
     },
     {
       "code": "112610",
       "evaluation0935": "DATA_FAIL",
       "evaluation0940": "DATA_FAIL",
-      "price0935": 51400.0,
-      "price0940": 51400.0,
-      "priceDelta": 0.0
+      "price0935": 51800.0,
+      "price0940": 51200.0,
+      "priceDelta": -600.0
     },
     {
-      "code": "204320",
+      "code": "263860",
       "evaluation0935": "DATA_FAIL",
       "evaluation0940": "DATA_FAIL",
-      "price0935": 40450.0,
-      "price0940": 40650.0,
-      "priceDelta": 200.0
+      "price0935": 21400.0,
+      "price0940": 21125.0,
+      "priceDelta": -275.0
     },
     {
-      "code": "443670",
+      "code": "021240",
       "evaluation0935": "DATA_FAIL",
       "evaluation0940": "DATA_FAIL",
-      "price0935": 4045.0,
-      "price0940": 4075.0,
-      "priceDelta": 30.0
+      "price0935": 109200.0,
+      "price0940": 108700.0,
+      "priceDelta": -500.0
+    },
+    {
+      "code": "064290",
+      "evaluation0935": "DATA_FAIL",
+      "evaluation0940": "DATA_FAIL",
+      "price0935": 58200.0,
+      "price0940": 57200.0,
+      "priceDelta": -1000.0
     }
   ],
-  "evaluatedThroughKst": "20261016 0940",
+  "evaluatedThroughKst": "20261019 0940",
   "evaluationAt0935": [
     {
-      "code": "052690",
+      "code": "005830",
       "detail": {
-        "invalidation": 95600.0,
-        "observedMin": 101100.0
-      },
-      "evaluation": "DATA_FAIL",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 35,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 36
-      },
-      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
-    },
-    {
-      "code": "488280",
-      "detail": {
-        "invalidation": 11640.0,
-        "observedMin": 11990.0
+        "invalidation": 176600.0,
+        "observedMin": 181000.0
       },
       "evaluation": "DATA_FAIL",
       "priceCoverage": {
@@ -80,7 +65,7 @@
       "code": "112610",
       "detail": {
         "invalidation": 48500.0,
-        "observedMin": 50200.0
+        "observedMin": 50800.0
       },
       "evaluation": "DATA_FAIL",
       "priceCoverage": {
@@ -92,10 +77,25 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "204320",
+      "code": "263860",
       "detail": {
-        "invalidation": 36300.0,
-        "observedMin": 40050.0
+        "invalidation": 16700.0,
+        "observedMin": 21200.0
+      },
+      "evaluation": "DATA_FAIL",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 35,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 36
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "021240",
+      "detail": {
+        "invalidation": 97700.0,
+        "observedMin": 105200.0
       },
       "evaluation": "DATA_FAIL",
       "priceCoverage": {
@@ -107,16 +107,16 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "443670",
+      "code": "064290",
       "detail": {
-        "invalidation": 3710.0,
-        "observedMin": 3935.0
+        "invalidation": 43600.0,
+        "observedMin": 54000.0
       },
       "evaluation": "DATA_FAIL",
       "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 35,
-        "openingMinutesUnobserved": 1,
+        "complete": true,
+        "observedMinutes": 36,
+        "openingMinutesUnobserved": 0,
         "totalMinutes": 36
       },
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
@@ -135,29 +135,13 @@
   "mode": "SHADOW_ONLY",
   "perCandidateEvaluation": [
     {
-      "code": "052690",
+      "code": "005830",
       "detail": {
-        "invalidation": 95600.0,
-        "observedMin": 101100.0
+        "invalidation": 176600.0,
+        "observedMin": 181000.0
       },
       "finalEvaluation": "DATA_FAIL",
-      "name": "한전기술",
-      "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 40,
-        "openingMinutesUnobserved": 1,
-        "totalMinutes": 41
-      },
-      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
-    },
-    {
-      "code": "488280",
-      "detail": {
-        "invalidation": 11640.0,
-        "observedMin": 11990.0
-      },
-      "finalEvaluation": "DATA_FAIL",
-      "name": "에스투더블유",
+      "name": "DB손해보험",
       "priceCoverage": {
         "complete": false,
         "observedMinutes": 40,
@@ -170,7 +154,7 @@
       "code": "112610",
       "detail": {
         "invalidation": 48500.0,
-        "observedMin": 50200.0
+        "observedMin": 50800.0
       },
       "finalEvaluation": "DATA_FAIL",
       "name": "씨에스윈드",
@@ -183,13 +167,29 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "204320",
+      "code": "263860",
       "detail": {
-        "invalidation": 36300.0,
-        "observedMin": 40050.0
+        "invalidation": 16700.0,
+        "observedMin": 21100.0
       },
       "finalEvaluation": "DATA_FAIL",
-      "name": "HL만도",
+      "name": "지니언스",
+      "priceCoverage": {
+        "complete": false,
+        "observedMinutes": 40,
+        "openingMinutesUnobserved": 1,
+        "totalMinutes": 41
+      },
+      "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
+    },
+    {
+      "code": "021240",
+      "detail": {
+        "invalidation": 97700.0,
+        "observedMin": 105200.0
+      },
+      "finalEvaluation": "DATA_FAIL",
+      "name": "코웨이",
       "priceCoverage": {
         "complete": true,
         "observedMinutes": 41,
@@ -199,17 +199,17 @@
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
     },
     {
-      "code": "443670",
+      "code": "064290",
       "detail": {
-        "invalidation": 3710.0,
-        "observedMin": 3935.0
+        "invalidation": 43600.0,
+        "observedMin": 54000.0
       },
       "finalEvaluation": "DATA_FAIL",
-      "name": "에스피소프트",
+      "name": "인텍플러스",
       "priceCoverage": {
-        "complete": false,
-        "observedMinutes": 40,
-        "openingMinutesUnobserved": 1,
+        "complete": true,
+        "observedMinutes": 41,
+        "openingMinutesUnobserved": 0,
         "totalMinutes": 41
       },
       "reason": "UNSTRUCTURED_TRIGGER_OR_NO_CHASE"
@@ -219,7 +219,7 @@
   "productionCutoverReviewEligible": false,
   "productionWriteAllowed": false,
   "schemaVersion": "V3_0940_SHADOW_EVAL_V1",
-  "sourceBundleSha": "4fd6474ef0159e2f0140c3000f7c74d3cce26f24",
-  "sourcePlanGeneratedAt": "2026-10-16T07:57:29.830623+09:00",
-  "tradeDate": "20261016"
+  "sourceBundleSha": "c84af86bca41d1b21d2e35afeb3e148019976d8c",
+  "sourcePlanGeneratedAt": "2026-10-19T07:56:42.081085+09:00",
+  "tradeDate": "20261019"
 }
