@@ -1,5 +1,172 @@
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
+## BULK-009 — Nine fully visually triaged Library-root date cohorts (2026-10-19)
+
+**Scope and method:** Re-fetched latest Library-root metadata, verified exactly 1,639 image entries in nine paginated list requests (previous October 15 snapshot: 1,623). Independently enumerated all **116 distinct files** in nine *previously uncompleted* date cohorts and opened all of them. The **16 TIFFs** under Sep14 returned no readable image from `files.read mode=image_file`, but their original bytes were successfully materialized from the Library, and a local pixel contact sheet was inspected: all 16 are **equipment quick-service application forms, unrelated to chart study**. TIFFs count as actually visually inspected, NOT inaccessible. No personal/contact/company identifiers from these forms are copied into this GitHub research archive.
+
+| Upload cohort (not market trading date) | Files visually confirmed | Source classification |
+| --- | ---: | --- |
+| 2026-09-14 | 30/30 | 12 Korean ticker chart snapshots across minute/week frame settings; two single crypto/social/market-ranking screenshots; 16 equipment-service TIFF pages excluded |
+| 2026-09-20 | 12/12 | Five ETH/KRW market-app chart screenshots at different displayed clocks and intervals, two Korean most-viewed ticker ranking screens, five unrelated handwritten sheets |
+| 2026-09-21 | 6/6 | One annotated Nasdaq100 trendline/overhead resistance chart, five unrelated EHS, work, and personal photos |
+| 2026-09-22 | 2/2 | Two workplace machinery photographs, excluded |
+| 2026-09-25 | 13/13 | Historic GitHub/Cloudflare/Worker and old ChatGPT automation-status screenshots, **not** authenticated analytical trade performance |
+| 2026-09-30 | 2/2 | One Mico (미코) and one Samhwa (삼화콘덴서) domestic stock-app price screen; no precommitted order |
+| 2026-10-01 | 8/8 | Four stock app screens (including two time-adjacent Amotech/아모텍 snapshot pair), one unlabeled multi-panel schematic plot, three unrelated EHS notes |
+| 2026-10-02 | 10/10 | Education certificate/resume form/shopping screenshot variants, all excluded from stock evidence |
+| 2026-10-06 | 33/33 | Career/GA–EHS job application pages, workplace email and equipment/roof photos; **no real market chart** and no workplace identifiers retained |
+| **Total** | **116/116** | Root filenames visually accounted for; far fewer actual trading-study examples |
+
+**Finance source observations (no economic proof):**
+
+- **Sept 14:** Four stock tickers (including Alteogen, DB HiTek, ENF Technology (이엔에프테크놀로지) and OI Solution) appear across several 09:35–09:43 screenshots. **Ticker / timeframe / in-app user price / clock snapshots cannot be treated as multiple independent predictions or as a historical trade series**. Changes in display width and timeframe can alter the apparent role of long moving averages, volume and nearby horizontal resistance. Price reference must be locked to already-ended market bars and venue.
+- **Sept 20:** ETH/KRW images present different clock readings (e.g. 06:51 versus 07:22–07:40), intervals (15m vs 4h) and multi-exchange quoted volumes. Even when the *displayed last quote* is ~3.5 million KRW, do not splice screenshots out of timestamp order or infer that multi-exchange overlays all refer to one executable limit order / one CVD reset cycle. Need venue-qualified trade data for actual fills.
+- **Sept 21:** Nasdaq100 daily technical-drawing screenshot contains multiple crossing diagonal boundaries and horizontal resistance markers; the mere existence of several overlapping lines does not make a breakout, support reclaim or post-break retest confirmed. Re-anchor on original bar closes, price progression and alternative false-break narrative, then test on unknown future observations.
+- **Sept 30 / Oct 1:** Two stand-alone Korean equity chart screens and four additional Oct1 stock screens, including **아모텍 (052710)** quoted at 20,650 (10:41 screenshot) and 20,850 (10:59 screenshot). The latter is a *subsequent price display*, not proof of pre-placed limit, fill at first price, stopping rule or profit. `chart-1(20261001-011405).png` is an unlabeled panel of miniature series with unverified tickers and axes; **do not invent stock identities or predicted outcomes**.
+- **Sept 25:** Prior AI text claims completion of a Worker/staging validation and archive; these screenshots are operational statements, not independently verified market-data or trading-skill evaluations. System development remains outside current task.
+
+**Inference constraints:** Date of *Library upload*, original chart's bar clock, viewer device clock, indicator time frame, trade-decision time, and hypothetical actual limit order time are six different data fields. A later screenshot cannot retroactively make an early resting limit a close-confirmed entry. Exchange/venue, completed bar data, spreads, queue, no-fills and negative cases must be tracked before economic scoring. Root source classification does not constitute CANONICAL trade rules, economic advantage or independent unfamiliar-chart transfer.
+
+**Accounting reconciliation:** v30 documentation had **560 completed-cohort native images + 72 Mar04 + 103 Mar05 partial native image reads = 735 visibly opened**. Yet legacy `totalRootImagesActuallyOpenedAllLoggedWork` still read 688 because the last v30 +47 Oct14 completed-source images had not been incorporated into that cumulative field. The correct v30 native count is **735**, not 688. Add this session's 116 unique date-disjoint direct reads → **851 visually opened native Library-root images**, with **8 remaining access-failed files** in Mar04/Mar05 and **780 not yet visually inspected/attempted** among current 1,639 metadata entries. Unlike those eight, 16 TIFFs in this cohort were successfully converted and inspected. These 851 include off-topic source pictures and repeated screen themes, **not** 851 distinct investment cases. The separate curated original 91 count remains 21 opened/zero independently mastered. S02 remains paused; no scanner, trading, or production change.
+
+### Exact source filename ledger for BULK-009 (116, checked against date-filtered Library listings)
+
+**2026-09-14 — 30 exact filenames:**
+- `1000058106.jpg`
+- `1000058104.jpg`
+- `1000058102.jpg`
+- `1000058111.jpg`
+- `1000058115.jpg`
+- `1000058112.jpg`
+- `1000058119.jpg`
+- `1000058116.jpg`
+- `1000058108.jpg`
+- `1000058124.jpg`
+- `1000058120.jpg`
+- `1000058122.jpg`
+- `page-0013.tif`
+- `page-0016.tif`
+- `page-0012.tif`
+- `page-0001.tif`
+- `page-0004.tif`
+- `page-0005.tif`
+- `page-0009.tif`
+- `page-0014.tif`
+- `page-0007.tif`
+- `page-0011.tif`
+- `page-0015.tif`
+- `page-0006.tif`
+- `page-0010.tif`
+- `page-0003.tif`
+- `page-0002.tif`
+- `page-0008.tif`
+- `1000058140.jpg`
+- `1789371955892.jpeg`
+
+**2026-09-20 — 12 exact filenames:**
+- `1000058475.jpg`
+- `1000058473.jpg`
+- `1000058471.jpg`
+- `1000000894.jpg`
+- `1000000895.jpg`
+- `1000000898.jpg`
+- `1000000897.jpg`
+- `1000000896.jpg`
+- `1000058478.jpg`
+- `1000058480.jpg`
+- `1000058485.jpg`
+- `1000058483.jpg`
+
+**2026-09-21 — 6 exact filenames:**
+- `1f86b00a-1990-4c1a-9972-fa20bde22cec.png`
+- `b1280a7a-a80f-456f-b33a-1d2a86120986.png`
+- `74afd516-5b24-4929-a7f0-4de97ce15bd1.png`
+- `d61a33c7-5d18-41f4-bca4-f21f21dae171.png`
+- `1789982866469.jpeg`
+- `1000058506.jpg`
+
+**2026-09-22 — 2 exact filenames:**
+- `e1690aa3-a956-4011-b584-6d0c558f796b.png`
+- `a23463f7-84b8-4c57-9825-4109e9d14333.png`
+
+**2026-09-25 — 13 exact filenames:**
+- `image(20260925-102715).png`
+- `image(20260925-102749).png`
+- `image(20260925-102916).png`
+- `image(20260925-103050).png`
+- `image(20260925-103248).png`
+- `image(20260925-103342).png`
+- `image(20260925-103735).png`
+- `image(20260925-104014).png`
+- `image(20260925-104054).png`
+- `image(20260925-104303).png`
+- `image(20260925-104348).png`
+- `image(20260925-113015).png`
+- `image(20260925-113549).png`
+
+**2026-09-30 — 2 exact filenames:**
+- `1000059730.jpg`
+- `1790752451449.jpeg`
+
+**2026-10-01 — 8 exact filenames:**
+- `image(20261001-004625).png`
+- `image(20261001-004651).png`
+- `chart-1(20261001-011405).png`
+- `1000059745.jpg`
+- `1000059747.jpg`
+- `1000059749.jpg`
+- `1790820000363.jpeg`
+- `image(20261001-052016).png`
+
+**2026-10-02 — 10 exact filenames:**
+- `image(20261002-110120).png`
+- `image(20261002-110124).png`
+- `chart-1(20261002-110334).png`
+- `chart-1(20261002-110337).png`
+- `chart-1(20261002-110340).png`
+- `chart-1(20261002-110343).png`
+- `image(20261002-110419).png`
+- `image(20261002-124150).png`
+- `image(20261002-125140).png`
+- `1790981572895.jpeg`
+
+**2026-10-06 — 33 exact filenames:**
+- `1000059857.jpg`
+- `image-1791266333255.jpg`
+- `image(20261006-110223).png`
+- `image(20261006-110325).png`
+- `image(20261006-110329).png`
+- `image(20261006-110619).png`
+- `image(20261006-110635).png`
+- `image(20261006-111046).png`
+- `image(20261006-113812).png`
+- `image(20261006-113907).png`
+- `image(20261006-114740).png`
+- `image(20261006-121422).png`
+- `image(20261006-123855).png`
+- `image(20261006-130446).png`
+- `image(20261006-130519).png`
+- `image(20261006-130643).png`
+- `image(20261006-131126).png`
+- `image(20261006-132112).png`
+- `image(20261006-134052).png`
+- `1791294582154.jpeg`
+- `1000059867.jpg`
+- `1000059865.jpg`
+- `image(20261006-144830).png`
+- `KakaoTalk_20261006_235812018_04.jpg`
+- `KakaoTalk_20261006_235812018_01.jpg`
+- `KakaoTalk_20261006_235812018_03.jpg`
+- `KakaoTalk_20261006_235812018.jpg`
+- `KakaoTalk_20261006_235812018_02.jpg`
+- `KakaoTalk_20261006_235812018_05.jpg`
+- `KakaoTalk_20261006_235812018_07.jpg`
+- `KakaoTalk_20261006_235812018_06.jpg`
+- `image(20261006-154253).png`
+- `image(20261006-161122).png`
+
+---
+
 ## BULK-008 — 2026-10-14 Library-root cohort 52/52 (2026-10-15)
 
 The October 14 date cohort was re-listed in full (52 files). Five had been read in an older v27 partial sample; the remaining **47 actual native screenshots** were visually opened this turn using nine bounded read calls plus a final two-image read. All 52 were **career application/recruiting pages, EHS document directory listings and related mail/document drafting screenshots**. None was a genuine stock chart, expert trading demonstration or validated strategy result. Their job/private contents and identifiers are excluded from the trading-method archive. No chart-competence or market edge credit. This cohort is **complete 52/52**, NOT merely classified by filenames. Previously closed cohort count 508 becomes **560** across twelve date groups, while March 4/5 original bytes of eight files remain inaccessible/NOT VERIFIED; do not treat them as completed. No scan, S02 progression, order or operational change.

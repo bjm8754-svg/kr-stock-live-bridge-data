@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 30,
+    "methodologyVersion": 31,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -192,6 +192,12 @@
       "status": "304_NATIVE_RENDERED_8_INACCESSIBLE_312_INVENTORIED",
       "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-007",
       "claim": "June 7 83 educational/community visuals; March 4 72, March 5 103, March 6 46 market price/orderbook captures genuinely visible. Eight source files not readable/downloadable and expressly NOT VERIFIED. No economic or out-of-sample edge proof."
+    },
+    {
+      "type": "BULK_ROOT_COHORT_AUDIT",
+      "status": "116_REAL_NATIVE_IMAGES_INSPECTED_IN_NINE_CLOSED_DATE_COHORTS",
+      "source": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md BULK-009",
+      "claim": "Sept14,20,21,22,25,30 and Oct1,2,6: 116 direct visual reads, including 16 Library TIFF images recovered from raw bytes and visually checked as unrelated service requests. V30 cumulative count correction +47 October14 reads. Market price screenshots do not verify trades."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -309,12 +315,12 @@
     }
   ],
   "sourceRecovery": {
-    "verifiedAtKst": "2026-10-15",
+    "verifiedAtKst": "2026-10-19",
     "store": "ChatGPT Library",
     "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
-    "totalImageEntries": 1714,
+    "totalImageEntries": 1730,
     "curated91ImageEntries": 91,
-    "uncataloguedRootImageEntries": 1623,
+    "uncataloguedRootImageEntries": 1639,
     "rootImagesAreAllResearch": false,
     "possibleContentDuplicates": true,
     "externalMountCompleteness": "NOT_VERIFIED",
@@ -324,7 +330,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue other unknown Library image cohorts while preserving inaccessible 8 from March 4/5 as NOT VERIFIED; Oct14 is complete. Source-group classification and deep chart reasoning only; no scanner/S02/operations.",
+    "action": "Keep classifying uninspected Library-root images at whole upload-date/source-episode scale. Current inventory 1639: 851 actual native visual opens including 16 converted TIFFs, 8 legacy source bytes unavailable, 780 not yet visually attempted. Prioritize actual expert/student chart episodes in earlier March–September and October date cohorts, and never promote routine scanner/operations.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -420,11 +426,11 @@
       "neverAutoTrade": true
     },
     "metadataInventory": {
-      "status": "CURRENT_ROOT_METADATA_LISTED_1623_CONTENT_PARTIAL",
-      "rootEntries": 1623,
+      "status": "CURRENT_ROOT_METADATA_LISTED_1639_CONTENT_PARTIAL",
+      "rootEntries": 1639,
       "pages": 9,
       "errors": 0,
-      "listingDateKst": "2026-10-15",
+      "listingDateKst": "2026-10-19",
       "listingScope": "ChatGPT Library root only, all image types",
       "roughDateCohorts": [
         [
@@ -458,8 +464,8 @@
       ],
       "rootContentClassifiedComplete": false,
       "nameBasedDuplicatesNotVerified": true,
-      "previousRootEntries": 1616,
-      "entriesAddedSincePreviousSnapshot": 7
+      "previousRootEntries": 1623,
+      "entriesAddedSincePreviousSnapshot": 16
     },
     "bulkStudies": [
       {
@@ -660,9 +666,40 @@
         "classification": "CAREER_AND_EHS_ONLY_EXCLUDED_FROM_CHART_METHOD",
         "registry": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
         "canonicalRulesPromoted": 0
+      },
+      {
+        "id": "BULK-009",
+        "dateKst": "2026-10-19",
+        "finished": true,
+        "status": "NINE_NEW_ROOT_COHORTS_FULLY_CLASSIFIED",
+        "newDirectlyOpenedImages": 116,
+        "sourceCohorts": {
+          "2026-09-14": 30,
+          "2026-09-20": 12,
+          "2026-09-21": 6,
+          "2026-09-22": 2,
+          "2026-09-25": 13,
+          "2026-09-30": 2,
+          "2026-10-01": 8,
+          "2026-10-02": 10,
+          "2026-10-06": 33
+        },
+        "rootFilesTiffConvertedFromRawBytes": 16,
+        "rootFilesNewlyInaccessible": 0,
+        "sourceLedger": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+        "primaryNewEvidenceClasses": [
+          "ETH/KRW market-app screenshots with multiple displayed clocks/exchanges/timeframes",
+          "Korean stock snapshots in distinct frames and short-interval Amotech pair",
+          "NAS100 annotated resistance and trendline",
+          "historical ops and off-topic quarantined"
+        ],
+        "verifiedTradeOutcomes": 0,
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false,
+        "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 688,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 851,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -774,10 +811,91 @@
         "newVisualRead": 47,
         "classification": "OFF_TOPIC_JOB_APPLICATION_EHS_DOCUMENTS_AND_RECRUITING_SCREENS",
         "actualTradingChartFiles": 0
+      },
+      {
+        "uploadDate": "2026-09-14",
+        "allRootEntries": 30,
+        "classifiedFileEntries": 30,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 30,
+        "summary": "MARKET_CHARTS_AND_16_TIFF_SERVICE_FORMS_CONVERTED",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-20",
+        "allRootEntries": 12,
+        "classifiedFileEntries": 12,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 12,
+        "summary": "ETH_EXCHANGE_TIMEFRAME_CHARTS_RANKING_AND_UNRELATED_NOTES",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-21",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 6,
+        "summary": "ONE_ANNOTATED_NASDAQ_CHART_FIVE_OFFTOPIC",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-22",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 2,
+        "summary": "OFFTOPIC_WORKPLACE_ONLY",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-25",
+        "allRootEntries": 13,
+        "classifiedFileEntries": 13,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 13,
+        "summary": "HISTORICAL_SOFTWARE_AND_ASSISTANT_STATUS_NOT_CHART_EVIDENCE",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-09-30",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 2,
+        "summary": "TWO_KOREAN_EQUITY_PRICE_SNAPSHOTS",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-10-01",
+        "allRootEntries": 8,
+        "classifiedFileEntries": 8,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 8,
+        "summary": "FOUR_EQUITY_SNAPSHOTS_ONE_UNLABELED_CHART_GRID_THREE_EHS",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-10-02",
+        "allRootEntries": 10,
+        "classifiedFileEntries": 10,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 10,
+        "summary": "CAREER_EDUCATION_SHOPPING_UNRELATED",
+        "primaryMethodProof": false
+      },
+      {
+        "uploadDate": "2026-10-06",
+        "allRootEntries": 33,
+        "classifiedFileEntries": 33,
+        "status": "ALL_ROOT_SOURCE_PIXELS_VISUALLY_VERIFIED",
+        "directVisualReads": 33,
+        "summary": "CAREER_EHS_AND_WORKPLACE_UNRELATED",
+        "primaryMethodProof": false
       }
     ],
-    "completedCohortDateCount": 12,
-    "rootEntriesWithinFullyClassifiedCohorts": 560,
+    "completedCohortDateCount": 21,
+    "rootEntriesWithinFullyClassifiedCohorts": 676,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -810,10 +928,10 @@
         "reason": "No readable content and no downloadable Library backing"
       }
     ],
-    "totalRootImageCountExplanation": "Conservative filename-distinct visually opened subset: 379 files from nine fully closed disjoint upload date cohorts plus five actual Oct14 partial-cohort opens; excludes unenumerated additional unique root reads from older pre-v26 batches. Not independent market charts and not exact all-time unique count.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 696,
+    "totalRootImageCountExplanation": "CORRECTED v30 omitted the final Oct14 47 native-image reads: at v30, 560 completed-cohort images + 175 previously actually opened March4/5 partial = 735 (not stale 688). On 2026-10-19, 116 disjoint additional completed-cohort images opened => 676 full + 175 March partial = 851 directly visually inspected Library-root files. This is a conservative directly observed root-file count, including unrelated material, NOT 851 distinct market charts.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 859,
     "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 927,
+    "rootImageCountUnaccountedForInCurrentInventory": 780,
     "accessFailureDoesNotCountAsVisualStudy": true
   }
 }
