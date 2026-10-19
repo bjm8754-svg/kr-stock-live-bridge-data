@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 35,
+    "methodologyVersion": 36,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -222,6 +222,12 @@
       "status": "65_AUGUST_PIXELS_CLASSIFIED_NO_MANUAL_ANCHOR_OR_TRANSFER",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
       "claim": "Aug 65 original photo entries downloaded and source-class visually reviewed. Nine financial charts including BTC daily/weekly/crop duplicate; 9 market context, 47 unrelated/private; no verified hand-drawn price geometry. BTC thick curves explicitly labelled 60/120/200 moving averages. No rule or economic edge proved."
+    },
+    {
+      "type": "LIBRARY_ROOT_MARCH_PARTIAL_SOURCE_TRIAGE",
+      "status": "41_SOURCE_PIXELS_INSPECTED_45_NOT_VERIFIED_NO_TRANSFER",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md",
+      "claim": "41 disjoint March08–31 root original images visibly source-classified (10 price chart, 15 market context, 12 non-chart/private, 4 uninterpretable); 45 files returned content_missing and were not classified. ETH bold annotations remain creation-time/anchor hypothesis; S-Oil multi-frame sequence is not an independent OOS test. No new methodology competence."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -354,7 +360,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue the 533 root photo entries lacking pixel review; screen true manually placed price line/box annotations before high-res anchor reconstruction. BULK014 65 August images reviewed, but prominent BTC slopes are platform MA(60/120/200), not discretionary trendline.",
+    "action": "Continue 447 never-attempted Library-root photos while quarantining 53 content_missing originals (8 older March04/05 plus 45 new March08-31). BULK015 verified 41 source-pixel images; prioritize ex-ante line anchors over screenshot-count targets. Root content missing is NOT VERIFIED.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -723,7 +729,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 1101,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1142,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -1174,14 +1180,63 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-03-31",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-08",
+        "allRootEntries": 11,
+        "classifiedFileEntries": 11,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-09",
+        "allRootEntries": 8,
+        "classifiedFileEntries": 8,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-19",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-21",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-24",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
+      },
+      {
+        "uploadDate": "2026-03-30",
+        "allRootEntries": 4,
+        "classifiedFileEntries": 4,
+        "status": "COMPLETE_FILENAME_AND_CONTENT_TRIAGE",
+        "sourceLedger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md"
       }
     ],
-    "completedCohortDateCount": 48,
-    "rootEntriesWithinFullyClassifiedCohorts": 926,
+    "completedCohortDateCount": 55,
+    "rootEntriesWithinFullyClassifiedCohorts": 955,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
-    "additionalRootVisualSamplesOutsideClosedCohorts": 0,
+    "additionalRootVisualSamplesOutsideClosedCohorts": 12,
     "partialDateCohortSamples": [
       {
         "uploadDate": "2026-03-04",
@@ -1208,15 +1263,157 @@
           "1772678017686.jpeg"
         ],
         "reason": "No readable content and no downloadable Library backing"
+      },
+      {
+        "uploadDate": "2026-03-23",
+        "totalListed": 15,
+        "visuallyOpened": 5,
+        "status": "ACCESS_BLOCKED_REMAINING_10_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049675.jpg",
+          "1000049677.jpg",
+          "1000049679.jpg",
+          "1000049681.jpg",
+          "1000049683.jpg",
+          "1000049685.jpg",
+          "1000049687.jpg",
+          "1000049689.jpg",
+          "1000049691.jpg",
+          "1774307653565.jpeg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-11",
+        "totalListed": 7,
+        "visuallyOpened": 0,
+        "status": "ACCESS_BLOCKED_REMAINING_7_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000048430.jpg",
+          "1000048432.jpg",
+          "1000048434.jpg",
+          "1790d161-05fa-4f18-bab8-750de8846087.png",
+          "2f4c3b1f-bc1a-4711-94b6-b1067d400177.png",
+          "959c3e51-9afc-4db8-84b5-7930488a0380.png",
+          "ChatGPT Image 2026년 3월 11일 오전 09_59_37.png"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-15",
+        "totalListed": 5,
+        "visuallyOpened": 0,
+        "status": "ACCESS_BLOCKED_REMAINING_5_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049103.jpg",
+          "1000049105.jpg",
+          "1000049107.jpg",
+          "1000049109.jpg",
+          "1773613282769.jpeg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-16",
+        "totalListed": 19,
+        "visuallyOpened": 2,
+        "status": "ACCESS_BLOCKED_REMAINING_17_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049125.jpg",
+          "1000049138.jpg",
+          "1000049140.jpg",
+          "1000049142.jpg",
+          "1000049144.jpg",
+          "1000049150.jpg",
+          "1000049152.jpg",
+          "1000049166.jpg",
+          "1000049168.jpg",
+          "1000049170.jpg",
+          "1000049174.jpg",
+          "1000049183.jpg",
+          "1773643746377.jpeg",
+          "1773644320950.jpeg",
+          "1773651534828.jpeg",
+          "1773652517850.jpeg",
+          "1773652679342.jpeg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-17",
+        "totalListed": 3,
+        "visuallyOpened": 1,
+        "status": "ACCESS_BLOCKED_REMAINING_2_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049328.jpg",
+          "1773726847567.jpeg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-26",
+        "totalListed": 5,
+        "visuallyOpened": 3,
+        "status": "ACCESS_BLOCKED_REMAINING_2_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049763.jpg",
+          "1000049765.jpg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-27",
+        "totalListed": 1,
+        "visuallyOpened": 0,
+        "status": "ACCESS_BLOCKED_REMAINING_1_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000049838.jpg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-03-25",
+        "totalListed": 2,
+        "visuallyOpened": 1,
+        "status": "ACCESS_BLOCKED_REMAINING_1_NATIVE_CONTENT_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1774443033777.jpeg"
+        ],
+        "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
       }
     ],
-    "totalRootImageCountExplanation": "V34 1036 root original source-pixel classifications + BULK014 65 disjoint August root file entries (Aug03,07,08,09,10,11,13,15,19,24,25,27,28,30) = 1101. On V34's refreshed stable 1642 root metadata entries, eight March originals remain unavailable, 533 without pixel classification. BULK014 65 rendered in contact sheets (multi-page TIFF pages not double-counted), three individually enlarged BTC chart/crop files. Curated 91 numbered originals 21 direct reads/0 mastered.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 1109,
-    "rootEntryAccessFailedCount": 8,
-    "rootImageCountUnaccountedForInCurrentInventory": 533,
+    "totalRootImageCountExplanation": "v35 1101 actual visually source-classified root images + BULK015 41 March08-31 actual original-pixel reviews = 1142; previous March04/05 8 native bytes missing + 45 March08-31 content_missing/retryable=false = 53 inaccessible/NOT VERIFIED; root metadata 1642 - 1142 - 53 = 447 not yet attempted. Seven newly closed March dates contain 29 items, while 12 new visual inspections reside in partially inaccessible date groups. None of these is mastery, independent method transfer or economic edge.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1195,
+    "rootEntryAccessFailedCount": 53,
+    "rootImageCountUnaccountedForInCurrentInventory": 447,
     "accessFailureDoesNotCountAsVisualStudy": true,
-    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven.",
+    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven. BULK015 March source-pixel contact sheets 41 originals (selected 13 enlarged at native size) + direct API proved 45 others content_missing; never count metadata-only as visual.",
     "batchHistory": [
+      {
+        "id": "BULK-015",
+        "dateKst": "2026-10-19",
+        "status": "41_MARCH_NATIVE_PIXELS_TRIAGED_45_CONTENT_MISSING_NOT_VERIFIED",
+        "cohortMetadataEntries": 86,
+        "newVisuallyReviewed": 41,
+        "newAccessFailed": 45,
+        "fullDateCohortsClosed": 7,
+        "closedCohortEntries": 29,
+        "partialDateVisualSamples": 12,
+        "marketPriceCharts": 10,
+        "marketContextEducation": 15,
+        "offtopicExcluded": 12,
+        "lowInformation": 4,
+        "manualPriceAnchorCasesVerified": 0,
+        "sourceEpisodes": [
+          "S-Oil 15m March8-9 breakup and reversal",
+          "ETH/KRW 1h-daily March16/24/25 annotated candidate",
+          "SPX option exposure editorial markings"
+        ],
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false,
+        "finished": "PARTIAL_DUE_TO_MISSING_LIBRARY_CONTENT"
+      },
       {
         "id": "BULK-014",
         "dateKst": "2026-10-19",
