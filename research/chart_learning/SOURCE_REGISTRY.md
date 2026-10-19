@@ -1,5 +1,8 @@
 # Source registry — original study materials and traceability
 
+**BULK-009:** Nine fully visually opened Library-root source-date cohorts added 116 image files. Sep14 16 TIFF originals, previously unreadable in image_file mode, were actually materialized and visualized as equipment-service forms (non-market). Root now 1,639 entries, 851 visually inspected (includes unrelated documents), eight legacy March photos without backing and 780 not yet attempted. Finance examples: Sep14 Korean stocks, Sep20 ETH/KRW interval/exchange variation, Sep21 NAS100 annotated resistance, Sep30 domestic equity snapshots, Oct1 Amotech intra-session pair. Details and filenames in `RECOVERED_SCREENSHOT_CATALOG.md` BULK-009. No expert trade outcome established.
+
+
 **BULK-007 evidence / accessibility ledger:** see `RECOVERED_SCREENSHOT_CATALOG.md` BULK-007. Fresh Library root metadata 1,623 (+7); explicitly tried all 312 March04/March05/March06/June07 root images, 304 visibly rendered, 8 unavailable/no downloadable original (NOT VERIFIED). Time-sequenced S-Oil/WTI March4–6 market data and June7 social market correction/risk commentary grouped by source, not counted as independent successful trades. All-time conservative native root visible count=688. The 8 inaccessible images are not included in visually studied total. Production/S02 unchanged.
 
 
