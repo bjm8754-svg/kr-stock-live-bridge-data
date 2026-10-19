@@ -1,3 +1,7 @@
+## BULK-011 — 61 more Library root originals actually opened (2026-10-19)
+
+Six disjoint upload-date cohorts (Sep01 9, Sep02 16, Sep03 14, Sep04 5, Sep06 7, Sep15 10) were opened at native pixel level. 27 market-app chart screenshots, 7 technical chart-setting tutorial images, 8 market context/account/orderbook sources, 19 unrelated materials. The long-MA tutorial demonstrates 240/480/600/1000 settings; red arrows identify software UI, not discretionary trade anchors. Sep15 stock charts show dense platform MA/Ichimoku/band overlays, **not verified manually drawn horizontal price anchors**. See `ROOT_IMAGE_STUDIES_BULK011.md`. Previous 851 genuinely visually read → **912**; 8 historic source failures; 719 remain without pixel visual review from 1,639 root entries. BULK010 70 files remain preliminary OCR-only, included in 719. No source mastery, unseen transfer, CANONICAL promotion, scan, S02 or production change.
+
 # START HERE — V3 chart learning continuity gate
 
 ## BULK-009 — 116 root images actually opened, 16 legacy TIFFs recovered (2026-10-19)
@@ -10,7 +14,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 31
+**Learning revision:** 32
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
