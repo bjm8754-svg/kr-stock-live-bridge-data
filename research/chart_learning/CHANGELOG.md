@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 31 — BULK-009 nine new date cohorts / 116 actual image visual reads
+
+- Completed native visual review of Sep14 (30), Sep20 (12), Sep21 (6), Sep22 (2), Sep25 (13), Sep30 (2), Oct1 (8), Oct2 (10), and Oct6 (33) disjoint root Library date-cohort files, 116 total. Sep14's 16 TIFFs were initially not readable in direct image mode but materialized/conversion succeeded; all were unrelated equipment-service form scans.
+- Corrected legacy v30 count stale by 47 October14 file reads: at v30 735 = 560 completed-date +175 March partial, not 688. With this new 116, **851** root files actually visually opened; eight historic March files lack backing and **780** remain unattempted from newly enumerated **1,639** root metadata entries.
+- Source groups: finance screenshots from Sep14 stocks and Sep20 ETH/KRW, one Sep21 annotated NAS100, Sep30 two stocks and Oct1 multi-ticker + Amotech quote-pair 20,650 /20,850. Distinguish venue/bar/quote/as-of order times; no verified ex-ante fills. Other material excluded from chart method without reproducing confidential content.
+- Updated research archive and continuity guard only. Native curated 91 still 21 opened, 0 independently mastered; no validated unfamiliar-chart transfer or edge; S02 paused, scanner/production/trading unchanged.
+
+
 ## 2026-10-15 — Revision 30 — BULK-008 close October 14 mixed personal/work imagery
 
 - Directly opened all remaining 47 of the Oct14 52-file root date cohort (5 previously sampled). All career/EHS nonchart, so excluded from chart research.
