@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-19 — Revision 36 — BULK-015 partial March 41/86 verified pixels
+
+- From March08–31 Library-root 86 metadata image entries, 41 original source files visualized and classified (10 price charts, 15 macro/context, 12 off-topic/private, 4 low-information); 45 returned immutable-looking `content_missing` / `retryable=false` and are explicitly NOT VERIFIED. The seven fully reviewed days add 29 entries; 12 visuals belong to partial cohorts. Includes ETH blue/yellow/green bold line annotation candidate, app MA discriminator, S-Oil rising-then-falling 15m episode, SPX editorial option exposures. No proven creator/time/endpoints or transfer.
+- Cumulative root 1,642 entries: 1,142 pixel source classifications; 53 inaccessible originals; 447 still not attempted; 55 full cohort dates/955 images. Primary curated91 21 direct reads/0 mastery, no canonical method promotion, scanner, S02 D04, trading or production changes.
+
+
 ## 2026-10-19 — Revision 35 — BULK-014 August 65 image source classification
 
 - All 65 disjoint August-root original file entries visually triaged across 14 uploaded date cohorts; 9 financial app charts, 9 market/macro context, 47 unrelated personal or workplace images excluded. BTC daily/weekly pair + crop visually compared: thick sloping red/gray/green lines labelled as MA60/120/200 and **not proven manually drawn price trendlines**; misleading `chart-1(5).png` was an illustration, not a chart.
