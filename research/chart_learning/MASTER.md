@@ -1,3 +1,9 @@
+## BULK-015 — March08–31 partial Library image source study (2026-10-19)
+
+Library metadata listed 86 March08–31 root images; **41 original image bytes visually examined, 45 exact file entries `content_missing` / NOT VERIFIED** (no guess or cohort closure for inaccessible originals). Among 41: **10 market price charts, 15 macro/market context, 12 unrelated/personal/work sources excluded, 4 visually low-information frames**. S-Oil Mar08→09 consecutive 15-minute screenshots and ETH/KRW Mar16→24→25 one-hour/daily screens provide **candidate** breakout/failure/retest counterexamples. ETH Mar24/25 has heavy blue/yellow curved strokes and green horizontal near 3.25m that look editorial/manual compared with app-labelled thin MA5/10/20/60/120/200, but **author, anchor bars and creation-before-outcome time NOT VERIFIED**. SPX exposure screenshot circles/arrows annotate derivatives levels, not confirmed candle-box anchors. Full per-file evidence and failures: [ROOT_IMAGE_STUDIES_BULK015.md](ROOT_IMAGE_STUDIES_BULK015.md).
+
+**Cumulative source accounting (unchanged 1,642 root metadata): 1,142 actual pixel source classifications, 53 distinct content-missing originals, 447 entries still unattempted; 55 completely classified upload dates /955 entries, plus 12 visuals in partial March cohorts.** Primary curated91 remains 21 direct reads/0 mastered. No new unseen-chart transfer, rule promotion, profitability evidence, scan, S02 D04 or production action. Next task remains `SRC-STUDY-001` with before-cutoff `C_reference/C_adjust/H_adjust/L_adjust/M_box` line/box anchor disambiguation.
+
 ## BULK-014 — 65 August Library-root originals visually classified (2026-10-19)
 
 All August 65 root file entries across **14 disjoint upload dates** were downloaded and pixel-source-triaged using chronological contact galleries; the BTC daily/weekly pair and related crop were individually enlarged. **9 finance chart images, 9 macro/finance commentary, 47 off-topic/private/work pictures excluded**. `1787696307713.jpeg`, `1000056913.jpg` and `chart-1(4).png` are a BTC/KRW multi-frame episode with an almost contemporaneous weekly crop; **thick red 60, gray 120 and green 200 simple moving averages** visibly labelled in the app are not verified manually drawn support rays. `chart-1(5).png` is not a chart despite its filename. See `ROOT_IMAGE_STUDIES_BULK014.md`. This is source classification, not technical mastery or OOS trade evidence.
@@ -31,7 +37,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v35 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v36 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
