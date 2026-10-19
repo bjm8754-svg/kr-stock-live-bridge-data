@@ -1,7 +1,16 @@
 # START HERE — V3 chart learning continuity gate
 
+## BULK-009 — 116 root images actually opened, 16 legacy TIFFs recovered (2026-10-19)
+
+Nine additional root Library upload-date cohorts were fully visually inspected: 9/14=30, 9/20=12, 9/21=6, 9/22=2, 9/25=13, 9/30=2, 10/01=8, 10/02=10, 10/06=33 (**116 direct reads**). The 16 `page-XXXX.tif` items dated Sep14 initially returned `No readable content`, but were recovered by Library raw-file materialization, successfully converted and examined; all were unrelated equipment service forms, not 16 financial cases. See `RECOVERED_SCREENSHOT_CATALOG.md` BULK-009 for per-file exact names and classification.
+
+**Corrected cumulative evidence count:** v30's `totalRootImagesActuallyOpenedAllLoggedWork=688` was stale after 47 newly visually inspected October14 files. v30 should have been `560 closed +72+103 March partial =735`. After BULK-009, **676 completed-date files +175 March4/5 partial files =851 actual native images viewed**, not 804; eight older March root files remain byte-inaccessible, and 780 of the **current 1,639 Library-root image entries** still lack visual review. Root images are not synonymous with chart sources. Curated chart-sage 91 remains only 21 natively read / 0 independently mastered, and S02 `PAUSED_AFTER_D03`.
+
+**Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
+
+
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 30
+**Learning revision:** 31
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
