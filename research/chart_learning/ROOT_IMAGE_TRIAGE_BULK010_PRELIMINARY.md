@@ -1,3 +1,5 @@
+> **2026-10-19 STATUS UPDATE:** This file is a historical OCR/image-pointer-only preliminary snapshot. Its outstanding pixel-QA request was fulfilled in `research/chart_learning/ROOT_IMAGE_STUDIES_BULK012.md`: all 70 originals visually triaged, selected annotated images enlarged; the exact source classifications and updated totals are in BULK-012/v33. Do not count these 70 as still unread or confuse a resized contact-sheet source classification with full high-resolution verification of every small label.
+
 # Library root image triage — BULK-010 (2026-10-19)
 
 Scope: 70 Library-root files uploaded on 2026-09-07 through 2026-09-10. This is an **image-file access + embedded OCR/metadata preliminary classification**, not a native pixel-by-pixel visual comprehension verdict. All 70 `image_file` read responses exposed image asset pointers and text extraction; ambiguous sources are NOT VERIFIED for full chart structure.
