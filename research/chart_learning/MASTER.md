@@ -1,3 +1,7 @@
+## BULK-011 — 61 more Library root originals actually opened (2026-10-19)
+
+Six disjoint upload-date cohorts (Sep01 9, Sep02 16, Sep03 14, Sep04 5, Sep06 7, Sep15 10) were opened at native pixel level. 27 market-app chart screenshots, 7 technical chart-setting tutorial images, 8 market context/account/orderbook sources, 19 unrelated materials. The long-MA tutorial demonstrates 240/480/600/1000 settings; red arrows identify software UI, not discretionary trade anchors. Sep15 stock charts show dense platform MA/Ichimoku/band overlays, **not verified manually drawn horizontal price anchors**. See `ROOT_IMAGE_STUDIES_BULK011.md`. Previous 851 genuinely visually read → **912**; 8 historic source failures; 719 remain without pixel visual review from 1,639 root entries. BULK010 70 files remain preliminary OCR-only, included in 719. No source mastery, unseen transfer, CANONICAL promotion, scan, S02 or production change.
+
 # V3 Chart Research MASTER
 
 ## BULK-009 — 116 root images actually opened, 16 legacy TIFFs recovered (2026-10-19)
@@ -9,7 +13,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v31 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v32 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
