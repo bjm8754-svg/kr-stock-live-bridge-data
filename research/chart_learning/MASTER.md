@@ -1,3 +1,9 @@
+## BULK-013 — 54 root originals visually classified June15–17 (2026-10-19)
+
+All 54 original bytes were downloaded and visually triaged across four chronological contact sheets; three representative chart images individually enlarged. **18 financial app charts (17 equity + one BTC/KRW), 16 market-context/education/ranking sources, three private-account screens excluded and 17 unrelated EHS/personal images excluded**. The repeatedly captured SpaceX/SPXC-labeled app screens mix 1-minute and 15-minute selections and quote/as-of times, so cannot be counted as distinct successful predictions. On BTC/KRW `1781695342307.jpeg`, thick sloping colored lines are identified by the legend as MA(5/10/20/60/120/200) and app reference marks; **no personally drawn price-anchor line is verified**. Study details and exact 54-name ledger: `ROOT_IMAGE_STUDIES_BULK013.md`.
+
+**Reconciled refreshed Library root:** **1,642** metadata images (+3 since v33); **1,036 visually source-classified**, eight older March originals inaccessible, **598 pending**; **34 completed date cohorts covering 861 files**. Image review is not source mastery or ex-ante transfer. Curated chart-sage 91 still 21 actually opened/0 mastered. SRC-STUDY-001 remains active; no canonical rule promotion, scan, S02 D04, order or production write. S02 PAUSED_AFTER_D03.
+
 ## BULK-012 — 70 Sep07–10 Library-root image files visually classified (2026-10-19)
 
 Revisited the 70 `ROOT_IMAGE_TRIAGE_BULK010_PRELIMINARY.md` OCR/pointer-only entries by downloading source image bytes and viewing all in five contact sheets, then magnifying the actual manual annotation case. Exactly **40 market-app charts with auto indicator overlays/no proven discretionary anchors, 2 files of ONE manually annotated blue ascending parallel-channel chart, 6 quote/ranking/context screens, 6 unvalidated stockcrew_1 study-text screenshots, 16 unrelated items excluded**. The pair `1788851445435.jpeg` and `chart-1(8).png` illustrates possible repeated swing-touch channel drawing; the rails may have been retroactively adjusted, so neither exact click anchors nor ex-ante edge is verified. The other 68 files' fine price labels were not individually full-res checked. Native source triage is not mastered chart analysis. Full source-and-file ledger: `ROOT_IMAGE_STUDIES_BULK012.md`.
@@ -19,7 +25,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v33 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v34 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
