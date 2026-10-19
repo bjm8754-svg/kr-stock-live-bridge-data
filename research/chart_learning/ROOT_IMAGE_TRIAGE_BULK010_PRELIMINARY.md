@@ -94,3 +94,16 @@ Category counts (preliminary): {"OFF_TOPIC_WORK":10,"MARKET_APP_SNAPSHOT_OR_QUOT
 2. No evidence of cutoff-locked entry, executable order book, filled limit, stop or realized P&L.
 3. Crop/duplicate similarity is heuristic, not binary-hash deduplication.
 4. These 70 files are separately accounted as **accessed / preliminary classified**, not added to the prior 851 genuinely visually studied count; no mastery or method-version promotion.
+
+## User-directed annotation-line reconstruction gate (2026-10-19)
+
+For screenshots containing hand-drawn trendlines, horizontals, boxes, arrows, channels, or Fibonacci marks, do not merely classify them as charts. **Research why the line was placed where it was**, as a competing hypothesis checked against accessible prices/bars:
+
+1. Identify asset, venue, linear/log scale, timeframe, screenshot time and completed-bar cutoff before judging placement.
+2. Record each visible line: endpoints and anchors where legible; wick extreme vs close/body; multiple touches; pivot recency; high-volume event; box edges/midpoint; MA/cloud; channel parallelism; gap or value-zone reference. Distinguish manual annotation from UI.
+3. Compare rival anchors: would moving one candle or using close instead of wick change entry/invalidation? Mark unknown if axes/history cropped.
+4. Separate ex-ante proposed role (resistance/support/trigger/target/invalidation/illustration) from post-event reaction. Do not infer author intent, advance knowledge or filled orders merely from drawn lines.
+5. Group screenshots of same asset/event as one longitudinal case. Seek failed tests, false breakouts, untouched lines and subjective redraws, not only successful retests.
+6. Promote only with rationale, counterexamples, cutoff-respecting unfamiliar-chart transfer and comparison to baseline; otherwise label ANNOTATION_HYPOTHESIS.
+
+**Immediate next QA:** prioritize annotated chart candidates from this batch for true pixel-level review; OCR triage cannot establish line anchors. Link useful sources to SRC-STUDY-001 and the 91 curated originals without claiming mastery.
