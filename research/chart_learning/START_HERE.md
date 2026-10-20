@@ -1,3 +1,9 @@
+## BULK-016 — May 82 original Library photos fully classified (2026-10-20)
+
+All **82 original Library-root photos** from **13 May 02–31 UTC upload-date cohorts** were downloaded and visually inspected in 6 contact sheets; 18 originals enlarged. Categories: **20 market price charts**, **5 market/theme context sources**, **11 private brokerage account/transaction images excluded**, **46 unrelated work/personal/reference sources excluded**. Promising editorial/manual annotation candidates: **LG Display May31** descending upper resistance and blue price-support rectangles/black pivot ovals, and **Zoom Communications May27** shaded historical base approximately $90 with a separate higher reaction ceiling around $120. Anchor creator, exact wick/body bar times and line creation before outcome are **NOT VERIFIED**. Brokerage MA, volume-at-price and average-cost graphics are distinctly marked as automatic. Full per-file ledger: [ROOT_IMAGE_STUDIES_BULK016.md](ROOT_IMAGE_STUDIES_BULK016.md).
+
+**Cumulative (1,642 Library-root metadata): 1,224 native-original pixel-source classifications, 53 inaccessible March originals NOT VERIFIED, 365 not yet attempted; 68 completely inspected upload dates/1,037 entries.** Historical partial-date visuals are separate and not entirely represented by the 12 *new* BULK015 partials. Curated91: 21 directly opened/0 independently mastered. No before-cutoff unknown-chart transfer, trading edge, new technical rule, scan, S02 D04, order or production change. Next study task: SRC-STUDY-001 and C_reference/C_adjust/H_adjust/L_adjust/M_box anchor validation.
+
 ## BULK-015 — March08–31 partial Library image source study (2026-10-19)
 
 Library metadata listed 86 March08–31 root images; **41 original image bytes visually examined, 45 exact file entries `content_missing` / NOT VERIFIED** (no guess or cohort closure for inaccessible originals). Among 41: **10 market price charts, 15 macro/market context, 12 unrelated/personal/work sources excluded, 4 visually low-information frames**. S-Oil Mar08→09 consecutive 15-minute screenshots and ETH/KRW Mar16→24→25 one-hour/daily screens provide **candidate** breakout/failure/retest counterexamples. ETH Mar24/25 has heavy blue/yellow curved strokes and green horizontal near 3.25m that look editorial/manual compared with app-labelled thin MA5/10/20/60/120/200, but **author, anchor bars and creation-before-outcome time NOT VERIFIED**. SPX exposure screenshot circles/arrows annotate derivatives levels, not confirmed candle-box anchors. Full per-file evidence and failures: [ROOT_IMAGE_STUDIES_BULK015.md](ROOT_IMAGE_STUDIES_BULK015.md).
@@ -38,7 +44,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 38
+**Learning revision:** 39
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

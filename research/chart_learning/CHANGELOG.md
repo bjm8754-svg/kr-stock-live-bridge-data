@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-20 — Revision 39 — BULK016 May 82 original-photo source classifications
+
+- All 82 original Library-root May photos across 13 disjoint date cohorts pixel-classified in six contact galleries, 18 native enlargements. Among them 20 market price charts, 5 market context, 11 private brokerage account items excluded, 46 nonchart work/personal photos excluded; candidate editorial boxes/trendline LG Display and ZM social basing range, but no verified advance anchor timing.
+- Root snapshot 1642: 1224 original-pixel classifications, 53 historical March inaccessible NOT VERIFIED, 365 unattempted; 68 complete dates/1037 entries plus 187 pre-existing/ongoing partial-date samples. Original curated91 remains 21 opened/0 mastered. No unseen transfer, promoted rule, profitability edge, scan, S02 D04, live order or production action.
+
+
 ## 2026-10-20 — Revision 38 — Make historical source tests cumulative and verify BULK015 loss accounting
 
 - After v37 passed the source validator, offline tests revealed three stale exact-current assertions written at v29/v30/v31. Scoped BULK007 partial read checks to their original first two cohorts; compare its historic 8 missing files as a floor while allowing later independently verified missing entries.
