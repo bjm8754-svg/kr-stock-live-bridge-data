@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 39,
+    "methodologyVersion": 40,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -360,7 +360,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Next triage the 365 remaining unattempted root photos, explicitly retain 53 March missing originals as NOT VERIFIED; follow independent manual-line anchor/box method research, not scanning.",
+    "action": "Continue source-only classifying remaining 252 Library-root entries, quarantine 57 inaccessible originals (53 historical March content_missing plus 4 April not materialized) as NOT VERIFIED. Independently test ex-ante line/box anchors, not operational scans.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -729,7 +729,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 1224,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1333,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -1346,10 +1346,145 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK016.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-01",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-02",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-03",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-06",
+        "allRootEntries": 10,
+        "classifiedFileEntries": 10,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-13",
+        "allRootEntries": 4,
+        "classifiedFileEntries": 4,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-15",
+        "allRootEntries": 14,
+        "classifiedFileEntries": 14,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-16",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-19",
+        "allRootEntries": 4,
+        "classifiedFileEntries": 4,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-20",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-21",
+        "allRootEntries": 12,
+        "classifiedFileEntries": 12,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-22",
+        "allRootEntries": 10,
+        "classifiedFileEntries": 10,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-23",
+        "allRootEntries": 22,
+        "classifiedFileEntries": 22,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-27",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-28",
+        "allRootEntries": 11,
+        "classifiedFileEntries": 11,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-04-29",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_ORIGINAL_PIXELS_VISUALLY_TRIAGED_CONTACT_SHEETS_BULK017",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
       }
     ],
-    "completedCohortDateCount": 68,
-    "rootEntriesWithinFullyClassifiedCohorts": 1037,
+    "completedCohortDateCount": 83,
+    "rootEntriesWithinFullyClassifiedCohorts": 1144,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -1497,15 +1632,70 @@
           "1774443033777.jpeg"
         ],
         "reason": "Library prepare_materialize unavailable_items content_missing retryable=false re_upload"
+      },
+      {
+        "uploadDate": "2026-04-07",
+        "totalListed": 2,
+        "visuallyOpened": 0,
+        "status": "SOURCE_ORIGINAL_MATERIALIZATION_FAILED_RETRY_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "image-1775555482927.jpg",
+          "image-1775555578070.jpg"
+        ],
+        "reason": "Library bulk native-materialization returned short transfer count; exact-file batch retry 0/4. No direct proof of content_missing, only unavailable source original bytes."
+      },
+      {
+        "uploadDate": "2026-04-08",
+        "totalListed": 3,
+        "visuallyOpened": 2,
+        "status": "SOURCE_ORIGINAL_MATERIALIZATION_FAILED_RETRY_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1775633319066.jpeg"
+        ],
+        "reason": "Library bulk native-materialization returned short transfer count; exact-file batch retry 0/4. No direct proof of content_missing, only unavailable source original bytes."
+      },
+      {
+        "uploadDate": "2026-04-09",
+        "totalListed": 1,
+        "visuallyOpened": 0,
+        "status": "SOURCE_ORIGINAL_MATERIALIZATION_FAILED_RETRY_NOT_VERIFIED",
+        "missingOriginalBytes": [
+          "1000050559.jpg"
+        ],
+        "reason": "Library bulk native-materialization returned short transfer count; exact-file batch retry 0/4. No direct proof of content_missing, only unavailable source original bytes."
       }
     ],
-    "totalRootImageCountExplanation": "v38 had 1142 root original pixel-source classifications + BULK016 82 May native-file views = 1224; 53 previously identified inaccessible March originals NOT VERIFIED; 1642 - 1224 - 53 = 365 unattempted. Prior 55 full dates/955 root entries plus disjoint 13 May full dates/82 files = 68 full dates/1037 entries. Other 187 pixel-classified root images are from incomplete earlier dates (including 12 newly inspected in BULK015); not equivalent to unattempted or mastered.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 1277,
-    "rootEntryAccessFailedCount": 53,
-    "rootImageCountUnaccountedForInCurrentInventory": 365,
+    "totalRootImageCountExplanation": "At v39 1224 actually viewed root originals + BULK017 109 April native-byte visual classifications = 1333. Previous 53 March native original access failures plus 4 April no-transfer after retry = 57 distinct inaccessible/NOT VERIFIED entries (April source was not proven permanently content_missing). Snapshot 1642 - 1333 - 57 = 252 unattempted. Previous 68 closed upload dates/1037 image entries plus April 15 fully viewed groups/107 image entries = 83 closed dates/1144 entries. 189 additionally viewed originals reside in incomplete upload-date cohorts, including 2 April08 items.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1390,
+    "rootEntryAccessFailedCount": 57,
+    "rootImageCountUnaccountedForInCurrentInventory": 252,
     "accessFailureDoesNotCountAsVisualStudy": true,
-    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven. BULK015 March source-pixel contact sheets 41 originals (selected 13 enlarged at native size) + direct API proved 45 others content_missing; never count metadata-only as visual. BULK016 82 original images visually source-classified in six montage pages, 18 selected enlarged; a contact source class does not prove native label accuracy, hand-drawn line timing or trading outcome.",
+    "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven. BULK015 March source-pixel contact sheets 41 originals (selected 13 enlarged at native size) + direct API proved 45 others content_missing; never count metadata-only as visual. BULK016 82 original images visually source-classified in six montage pages, 18 selected enlarged; a contact source class does not prove native label accuracy, hand-drawn line timing or trading outcome. BULK017 classified 109 April originals via 7 contact sheets plus 9 native enlargements; 4 metadata image originals no-transfer after retry count as access failure, not visual and not necessarily permanent content_missing. SHA-256 shows 10 exact duplicate binary pairs, including ETH/KRW Apr03 file names.",
     "batchHistory": [
+      {
+        "id": "BULK-017",
+        "dateKst": "2026-10-20",
+        "status": "109_APRIL_ROOT_ORIGINALS_VISUALLY_CLASSIFIED_4_SOURCE_NOT_VERIFIED",
+        "sourceMetadataEntries": 113,
+        "filesActuallyOpened": 109,
+        "newAccessFailed": 4,
+        "fullDateCohortsClosed": 15,
+        "closedDateImageEntries": 107,
+        "partialDateVisualSamples": 2,
+        "marketPriceAndOrderbookCharts": 20,
+        "marketContext": 7,
+        "nonChartExcluded": 82,
+        "sha256ExactBinaryDuplicatePairs": 10,
+        "manualPriceAnchorProvenExAnte": 0,
+        "sourceEpisodes": [
+          "Apr03 ETH exact-file duplicate and March 3.25m resistance continuation candidate",
+          "Apr29 orderbook heatmap vs hand-drawn horizontal lines"
+        ],
+        "method": "7 native-source galleries and 9 individually enlarged",
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-016",
         "dateKst": "2026-10-20",

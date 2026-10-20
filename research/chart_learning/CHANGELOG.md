@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-20 — Revision 40 — BULK017 109 April original pixels and four explicit access failures
+
+- April metadata 113 images across 18 cohorts. Actual source pixels viewed 109 (20 price/heatmap charts, 7 market/theme references, 82 unrelated/work excluded), 4 source bytes unavailable after exact retry / NOT VERIFIED. SHA-256 found 10 exact original duplicate filename-pairs including ETH/KRW Apr03, avoiding manufactured independent evidence. March24/25->Apr03 ETH horizontal 3.25m resistance lost-acceptance candidate, no before-cutoff candle test. Orderbook heatmap bands distinguished from drawn support and executed price-volume.
+- Root inventory 1642: 1333 visual source reads, 57 inaccessible originals (53 historical March+4 April), 252 unattempted; 83 closed dates/1144 entries. Curated91 21 direct reads/0 mastered. No method-rule promotion, scanner, S02 progression, live orders or production changes.
+
+
 ## 2026-10-20 — Revision 39 — BULK016 May 82 original-photo source classifications
 
 - All 82 original Library-root May photos across 13 disjoint date cohorts pixel-classified in six contact galleries, 18 native enlargements. Among them 20 market price charts, 5 market context, 11 private brokerage account items excluded, 46 nonchart work/personal photos excluded; candidate editorial boxes/trendline LG Display and ZM social basing range, but no verified advance anchor timing.

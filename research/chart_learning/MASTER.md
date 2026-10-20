@@ -1,3 +1,9 @@
+## BULK-017 — April Library root source triage: 109/113 original reads (2026-10-20)
+
+From **113 April-2026 root image metadata entries** across 18 upload dates, **109 original files were opened and pixel-classified** in seven contact sheets and 9 individual native enlargements; **4 entries could not be materialized even on explicit retry — NOT VERIFIED**. Actual visual classes: **20 price/price-plus-orderbook chart images, 7 market/news/context, 82 unrelated work/EHS/personal sources excluded**. SHA-256 yielded 10 exact duplicate binary pairs, among them the *same ETH/KRW April03* screenshot under two filenames. The April03 ETH ~3.139m vs earlier March24–25 resistance near ~3.25m may be a failed-acceptance *research counterexample candidate* but close-bar and prior editor-timing remain NOT VERIFIED. The April29 BTC/USDT-like red horizontal bands are exchange/orderbook **liquidity heatmap** layers, not manually drawn horizontal resistance or executed volume. App MA/volume-by-price graphics also are not discretionary analyst anchors. Full source-level evidence and inaccessible filenames: [ROOT_IMAGE_STUDIES_BULK017.md](ROOT_IMAGE_STUDIES_BULK017.md).
+
+**Cumulative Library-root snapshot 1,642 metadata:** **1,333 actually visualized source originals**, **57 access failures NOT VERIFIED** (53 historical March missing +4 April non-transferred), **252 untouched**; **83 fully completed upload dates / 1,144 root entries**, with April07/08/09 still incomplete. Curated91 original corpus remains 21 directly opened/0 independently mastered, and SRC-STUDY-001 remains pending unbiased cutoff-controlled transfer; no promoted rule, trading edge, new scan, S02 D04, live order or production changes.
+
 ## BULK-016 — May 82 original Library photos fully classified (2026-10-20)
 
 All **82 original Library-root photos** from **13 May 02–31 UTC upload-date cohorts** were downloaded and visually inspected in 6 contact sheets; 18 originals enlarged. Categories: **20 market price charts**, **5 market/theme context sources**, **11 private brokerage account/transaction images excluded**, **46 unrelated work/personal/reference sources excluded**. Promising editorial/manual annotation candidates: **LG Display May31** descending upper resistance and blue price-support rectangles/black pivot ovals, and **Zoom Communications May27** shaded historical base approximately $90 with a separate higher reaction ceiling around $120. Anchor creator, exact wick/body bar times and line creation before outcome are **NOT VERIFIED**. Brokerage MA, volume-at-price and average-cost graphics are distinctly marked as automatic. Full per-file ledger: [ROOT_IMAGE_STUDIES_BULK016.md](ROOT_IMAGE_STUDIES_BULK016.md).
@@ -43,7 +49,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v39 / 2026-10-20 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v40 / 2026-10-20 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
