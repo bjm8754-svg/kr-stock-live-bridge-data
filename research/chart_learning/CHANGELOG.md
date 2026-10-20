@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-20 — Revision 37 — Integrity-gate revision synchronization only
+
+- Corrected the stale `START_HERE.md` fixed boot marker (35) after the v36 source-record update; synchronized MANIFEST revision, STUDY_PROGRESS methodologyVersion, and MASTER version in one atomic research-doc revision to honor the append-only validator. This is maintenance **only**: no new source study, technical rule promotion, competence or economic-performance claim.
+- The prior `V3 Chart Learning Integrity` workflow failed with `startup revision differs from manifest`, leaving subsequent offline tests unexecuted; this commit aims to restore the gate. No trading, S02 progression, scanner, production or workflow configuration changed.
+
+
 ## 2026-10-19 — Revision 36 — BULK-015 partial March 41/86 verified pixels
 
 - From March08–31 Library-root 86 metadata image entries, 41 original source files visualized and classified (10 price charts, 15 macro/context, 12 off-topic/private, 4 low-information); 45 returned immutable-looking `content_missing` / `retryable=false` and are explicitly NOT VERIFIED. The seven fully reviewed days add 29 entries; 12 visuals belong to partial cohorts. Includes ETH blue/yellow/green bold line annotation candidate, app MA discriminator, S-Oil rising-then-falling 15m episode, SPX editorial option exposures. No proven creator/time/endpoints or transfer.

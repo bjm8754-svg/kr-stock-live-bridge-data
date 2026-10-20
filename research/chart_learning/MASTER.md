@@ -37,7 +37,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v36 / 2026-10-19 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Version: **v37 / 2026-10-20 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
 
 ## End objective
 
