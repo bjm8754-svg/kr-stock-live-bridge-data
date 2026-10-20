@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-20 — Revision 38 — Make historical source tests cumulative and verify BULK015 loss accounting
+
+- After v37 passed the source validator, offline tests revealed three stale exact-current assertions written at v29/v30/v31. Scoped BULK007 partial read checks to their original first two cohorts; compare its historic 8 missing files as a floor while allowing later independently verified missing entries.
+- BULK009 retains exact 9 original cohort sizes, 16 TIFF conversions, and 116 historical new source pixels, while current counters must reconcile to current metadata and increase monotonically. Added explicit BULK015 41/86 actual-pixel /45 content_missing safeguards, zero verified manual anchors, and strict PAUSED S02 invariants. Historical observations unchanged; only tests/maintenance, no methodology result promoted.
+- No scan, new S02 decision, live order, production or workflow configuration change.
+
+
 ## 2026-10-20 — Revision 37 — Integrity-gate revision synchronization only
 
 - Corrected the stale `START_HERE.md` fixed boot marker (35) after the v36 source-record update; synchronized MANIFEST revision, STUDY_PROGRESS methodologyVersion, and MASTER version in one atomic research-doc revision to honor the append-only validator. This is maintenance **only**: no new source study, technical rule promotion, competence or economic-performance claim.

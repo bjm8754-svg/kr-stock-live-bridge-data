@@ -263,19 +263,19 @@ class IntegrityTest(unittest.TestCase):
         self.assertGreaterEqual(m["revision"], 29)
         self.assertGreaterEqual(p["learningStatus"]["methodologyVersion"], 29)
         self.assertGreaterEqual(r["metadataInventory"]["rootEntries"], 1623)
-        self.assertEqual(r["metadataInventory"]["previousRootEntries"], 1623)
+        self.assertGreaterEqual(r["metadataInventory"]["previousRootEntries"], 1623)
         self.assertGreaterEqual(r["completedCohortDateCount"], 11)
         self.assertGreaterEqual(r["rootEntriesWithinFullyClassifiedCohorts"], 508)
-        self.assertEqual([x["visuallyOpened"] for x in r["partialDateCohortSamples"]], [72,103])
+        self.assertEqual([x["visuallyOpened"] for x in r["partialDateCohortSamples"][:2]], [72,103])
         self.assertGreaterEqual(r["totalRootImagesActuallyOpenedAllLoggedWork"], 688)
         self.assertGreaterEqual(r["rootEntriesAssignedVisualOrAccessOutcome"], 696)
-        self.assertEqual(r["rootEntryAccessFailedCount"], 8)
+        self.assertGreaterEqual(r["rootEntryAccessFailedCount"], 8)
         self.assertEqual(r["rootImageCountUnaccountedForInCurrentInventory"], r["metadataInventory"]["rootEntries"] - r["rootEntriesAssignedVisualOrAccessOutcome"])
         self.assertEqual([x["allRootEntries"] for x in r["dateCohortCoverage"][9:11]], [83,46])
         self.assertEqual(r["bulkStudies"][6]["rootEntriesSourceMetadataAudited"], 312)
         self.assertEqual(r["bulkStudies"][6]["actualNativeImagesRendered"], 304)
         self.assertEqual(r["bulkStudies"][6]["rootContentInaccessible"], 8)
-        self.assertEqual([x["visuallyOpened"] for x in r["partialDateCohortSamples"]], [72,103])
+        self.assertEqual([x["visuallyOpened"] for x in r["partialDateCohortSamples"][:2]], [72,103])
         self.assertFalse(r["metadataInventory"]["rootContentClassifiedComplete"])
         self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
         self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
@@ -294,30 +294,48 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(sr["dateCohortCoverage"][11]["uploadDate"], "2026-10-14")
         self.assertEqual(sr["dateCohortCoverage"][11]["newVisualRead"], 47)
         self.assertEqual(sr["dateCohortCoverage"][11]["actualTradingChartFiles"], 0)
-        self.assertEqual(len(sr["partialDateCohortSamples"]), 2)
+        self.assertGreaterEqual(len(sr["partialDateCohortSamples"]), 2)
         self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
         self.assertFalse(m["productionWriteAllowed"])
 
     def test_bulk009_native_tiff_recovery_and_cumulative_correction(self):
+        # BULK-009 is a historical milestone; later source batches must not invalidate it.
         m = gate.load_manifest()
         p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
         s = p["sourceRecovery"]
-        self.assertEqual(m["revision"], 31)
-        self.assertEqual(p["learningStatus"]["methodologyVersion"], 31)
-        self.assertEqual(s["metadataInventory"]["rootEntries"], 1639)
-        self.assertEqual(s["metadataInventory"]["entriesAddedSincePreviousSnapshot"], 16)
-        self.assertEqual(s["completedCohortDateCount"], 21)
-        self.assertEqual([x["allRootEntries"] for x in s["dateCohortCoverage"][-9:]], [30,12,6,2,13,2,8,10,33])
-        self.assertEqual(s["rootEntriesWithinFullyClassifiedCohorts"], 676)
-        self.assertEqual(s["totalRootImagesActuallyOpenedAllLoggedWork"], 851)
-        self.assertEqual(sum(x["visuallyOpened"] for x in s["partialDateCohortSamples"]), 175)
-        self.assertEqual(s["rootEntryAccessFailedCount"], 8)
-        self.assertEqual(s["rootEntriesAssignedVisualOrAccessOutcome"], 859)
-        self.assertEqual(s["rootImageCountUnaccountedForInCurrentInventory"], 780)
-        self.assertEqual(851 + 8 + 780, 1639)
-        self.assertEqual(s["bulkStudies"][-1]["rootFilesTiffConvertedFromRawBytes"], 16)
-        self.assertEqual(s["bulkStudies"][-1]["newDirectlyOpenedImages"], 116)
-        self.assertFalse(s["metadataInventory"]["rootContentClassifiedComplete"])
+        self.assertGreaterEqual(m["revision"], 31)
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        inv = s["metadataInventory"]
+        self.assertGreaterEqual(inv["rootEntries"], 1639)
+        self.assertEqual(inv["rootEntries"], inv["previousRootEntries"] + inv["entriesAddedSincePreviousSnapshot"])
+        self.assertGreaterEqual(s["completedCohortDateCount"], 21)
+        historic = {
+            "2026-09-14": 30, "2026-09-20": 12, "2026-09-21": 6,
+            "2026-09-22": 2, "2026-09-25": 13, "2026-09-30": 2,
+            "2026-10-01": 8, "2026-10-02": 10, "2026-10-06": 33,
+        }
+        by_date = {x["uploadDate"]: x["allRootEntries"] for x in s["dateCohortCoverage"]}
+        for date, count in historic.items():
+            self.assertEqual(by_date.get(date), count)
+        self.assertGreaterEqual(s["rootEntriesWithinFullyClassifiedCohorts"], 676)
+        self.assertGreaterEqual(s["totalRootImagesActuallyOpenedAllLoggedWork"], 851)
+        self.assertGreaterEqual(sum(x["visuallyOpened"] for x in s["partialDateCohortSamples"]), 175)
+        self.assertGreaterEqual(s["rootEntryAccessFailedCount"], 8)
+        self.assertGreaterEqual(s["rootEntriesAssignedVisualOrAccessOutcome"], 859)
+        self.assertEqual(
+            s["totalRootImagesActuallyOpenedAllLoggedWork"] + s["rootEntryAccessFailedCount"],
+            s["rootEntriesAssignedVisualOrAccessOutcome"],
+        )
+        self.assertEqual(s["rootImageCountUnaccountedForInCurrentInventory"],
+                         inv["rootEntries"] - s["rootEntriesAssignedVisualOrAccessOutcome"])
+        self.assertEqual(s["totalRootImagesActuallyOpenedAllLoggedWork"]
+                         + s["rootEntryAccessFailedCount"]
+                         + s["rootImageCountUnaccountedForInCurrentInventory"], inv["rootEntries"])
+        b009 = s["bulkStudies"][-1]
+        self.assertEqual(b009["id"], "BULK-009")
+        self.assertEqual(b009["rootFilesTiffConvertedFromRawBytes"], 16)
+        self.assertEqual(b009["newDirectlyOpenedImages"], 116)
+        self.assertFalse(inv["rootContentClassifiedComplete"])
         self.assertFalse(s["deduplicatedAcrossAllHistoricalBatchesVerified"])
         self.assertEqual(len(p["primarySource"]["directlyOpenedOriginalNumbers"]), 21)
         self.assertEqual(p["primarySource"]["imagesIndependentlyMasteredCount"], 0)
@@ -326,6 +344,29 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(p["s02"]["progression"], "PAUSED_AFTER_D03")
         self.assertFalse(m["productionWriteAllowed"])
         self.assertIn("## BULK-009", (gate.BASE / "RECOVERED_SCREENSHOT_CATALOG.md").read_text(encoding="utf-8"))
+
+    def test_bulk015_missing_pixels_never_count_as_source_study(self):
+        m = gate.load_manifest()
+        p = json.loads((gate.BASE / "STUDY_PROGRESS.json").read_text(encoding="utf-8"))
+        s = p["sourceRecovery"]
+        self.assertEqual(m["revision"], p["learningStatus"]["methodologyVersion"])
+        self.assertGreaterEqual(s["totalRootImagesActuallyOpenedAllLoggedWork"], 1142)
+        self.assertGreaterEqual(s["rootEntryAccessFailedCount"], 53)
+        self.assertGreaterEqual(s["completedCohortDateCount"], 55)
+        self.assertGreaterEqual(s["rootEntriesWithinFullyClassifiedCohorts"], 955)
+        self.assertEqual(sum(x["classifiedFileEntries"] for x in s["dateCohortCoverage"]),
+                         s["rootEntriesWithinFullyClassifiedCohorts"])
+        self.assertEqual(len(s["dateCohortCoverage"]), s["completedCohortDateCount"])
+        b015 = next(x for x in s["batchHistory"] if x["id"] == "BULK-015")
+        self.assertEqual(b015["cohortMetadataEntries"], 86)
+        self.assertEqual(b015["newVisuallyReviewed"], 41)
+        self.assertEqual(b015["newAccessFailed"], 45)
+        self.assertEqual(b015["manualPriceAnchorCasesVerified"], 0)
+        self.assertFalse(p["learningStatus"]["unseenChartTransferDemonstrated"])
+        self.assertFalse(m["productionWriteAllowed"])
+        ledger = (gate.BASE / "ROOT_IMAGE_STUDIES_BULK015.md").read_text(encoding="utf-8")
+        self.assertIn("NOT VERIFIED", ledger)
+        self.assertIn("content_missing", ledger)
 
     def test_no_research_production_write(self):
         m = gate.load_manifest()
