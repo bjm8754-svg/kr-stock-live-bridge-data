@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 59 — SRC-DEEP-004, all 22 original RSI/price/gap foundation figures deeply revisited
+
+- Directly opened native originals 001–022 (10 JPG RSI, 12 support/gap PNG). Source conclusions: RSI ≥70 or ≤30 can coexist with persistent directional prices; swing-divergence requires matched completed price/RSI extrema, not simply RSI falling while price rising; independent significant price/support first, RSI secondary; gap assessment depends on crossed price boundary, not jump magnitude or imaginary fills.
+- Cross-read with previously viewed Telegram `신 차트의` daily→1h cooling explanation and slope/anchor Sep08 manual channel, distinguishing incomplete daily oscillators, 1h trend and unproven bearish divergence. Full source-specific report SOURCE_DEEP_STUDY_P004_20261021.md.
+- Structured direct re-review now **80/91 distinct numbered source originals**, 11 remaining; `mastered=0` unchanged; no original AV chart frames verified; 69 inaccessible Library objects. No new market analysis, outcomes, trades, S02, scanner or production modifications.
+ 
+
 ## 2026-10-21 — Revision 58 — SRC-DEEP-003 original box/spring, connector pairs and discretionary-line provenance
 
 - Actually reopened all 18 listed teaching originals (046–050, 053–055, 057, 059, 063, 065, 086–091), Sep08 annotated channel `chart-1(8).png`, its duplicate phone rendering `1788851445435.jpeg`, and Sep21 hand-marked NAS100 `1789982866469.jpeg`.

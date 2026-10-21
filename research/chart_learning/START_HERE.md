@@ -1,3 +1,7 @@
+## SRC-DEEP-004 — All 22 original RSI and price-level/gap foundations directly re-read (2026-10-21)
+
+Read **primary #001–022 at native-pixel scale**, not the prior summary, and contrasted confirmed low/high RSI divergence and 70/30 **non-execution** with the earlier verified Telegram speaker's daily RSI cooling while price remains higher. Gap price crossing needs the historical barrier, completed close and fill assumptions; #015 allows oblique support-to-resistance but requires frozen slope anchors. [Full study](SOURCE_DEEP_STUDY_P004_20261021.md). **80/91 distinct teaching images** now reexamined in four structured batches; only **11** remain for detailed family review (#023/#025/#026/#032–034/#036–037/#042–044). This is source-reading coverage, **not independently proven chart mastery** (0 mastered), trade edge, or permission for market tests. Library 69 unavailable originals remain isolated; video chart frames unverified and S02/scanners/production paused.
+ 
 ## SRC-DEEP-003 — Direct review of remaining box/spring and three BEFORE/AFTER market chart pairs (2026-10-21)
 
 Reread **18 exact primary originals** #046–050/#053–055/#057/#059/#063/#065/#086–091, plus 3 already-indexed manually marked screenshots (2 copies of one channel + 1 NAS100). Explained synthetic box close remains `UNKNOWN`, apparent 7R/19R synthetic box-bottom numbers are not real capped risk, spring only proves failed persistence *so far*, and PENDLE/ALTEO/JEONJIN replay 'BEFORE' is not authenticated line creation before outcome. A large highlighted Sep08 parallel channel is sensitive to anchor selection and its twin mobile copy is **not a second case**; Nas100 current 29,993.8 is not a qualified completed daily close. [Deep original study](SOURCE_DEEP_STUDY_P003_20261021.md) · [line provenance matrix](SOURCE_DEEP_P003_LINE_PROVENANCE.md). Source study remains OPEN; no transfer/scanner/S02/orders/production edits; root counts unchanged (1,596 classified, 69 inaccessible).
@@ -112,7 +116,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 58
+**Learning revision:** 59
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

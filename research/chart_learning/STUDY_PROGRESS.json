@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 58,
+    "methodologyVersion": 59,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_THREE_DEEP_BATCHES_DONE_REMAINING_PICTURES_AND_SYNTHESIS_PENDING",
+    "status": "SOURCE_FIRST_FOUR_DEEP_BATCHES_80_OF_91_REEXAMINED_11_REMAIN",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue source study of primary 001–023 and 032–044 at enlarged native resolution; compare hand annotated Library charts for author/timeframe/source anchors, then integrate across curriculum/Telegram/U-001/U-002 and document contradictory alternatives before independent market transfer. 69 inaccessible images remain NOT_VERIFIED.",
+    "deliverable": "Finish native-image deep-review of originals 023/025/026/032/033/034/036/037/042/043/044; integrate price-level classes, gap/RSI and speaker cases across all 91, true manually annotated Library roots and separate U001/U002 lecture limitations. No new market-case outcomes/scanner/prod. 69 inaccessible remain NOT_VERIFIED.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2706,8 +2706,57 @@
         "preEventDrawingTimesVerified": false,
         "independentMarketValidation": false,
         "newScannerRules": 0
+      },
+      {
+        "id": "SRC-DEEP-004",
+        "dateKst": "2026-10-21",
+        "status": "DIRECT_22_FOUNDATION_ORIGINALS_STUDIED_CROSS_TG_NO_OUTCOME_VERIFICATION",
+        "originalTeachingNumbers": [
+          "001",
+          "002",
+          "003",
+          "004",
+          "005",
+          "006",
+          "007",
+          "008",
+          "009",
+          "010",
+          "011",
+          "012",
+          "013",
+          "014",
+          "015",
+          "016",
+          "017",
+          "018",
+          "019",
+          "020",
+          "021",
+          "022"
+        ],
+        "ledger": "research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md",
+        "noTradingTest": true,
+        "telegramComparedToEarlierActualNativeVisuals": true,
+        "originalVideoFramesVerified": false,
+        "verifiedIndependentSkill": false
       }
     ],
-    "canonicalDocumentFullTextStudied": true
+    "canonicalDocumentFullTextStudied": true,
+    "originalTeachingImagesDeepRereadDistinct": 80,
+    "remainingPrimaryOriginalNumbers": [
+      "023",
+      "025",
+      "026",
+      "032",
+      "033",
+      "034",
+      "036",
+      "037",
+      "042",
+      "043",
+      "044"
+    ],
+    "imagesIndependentlyMasteredCount": 0
   }
 }

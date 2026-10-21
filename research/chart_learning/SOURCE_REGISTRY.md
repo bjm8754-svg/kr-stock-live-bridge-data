@@ -1,3 +1,7 @@
+## SRC-DEEP-004 — RSI foundations, slope/gap roles and time-window consistency (2026-10-21)
+
+Native image reread of **001–022**, detailed SRC-DEEP-004 contrasts with existing Sep29 BTC Telegram daily/1h/15m RSI source and the Sep08 manual channel. Summary of high/low RSI non-signal, qualified divergence and gap support/role semantics in [SOURCE_DEEP_STUDY_P004_20261021.md](SOURCE_DEEP_STUDY_P004_20261021.md). These 22 are already-counted, not new images; 80/91 numbered native images reviewed across batches 001–004, 11 deeper rereads left. No proven method mastery/edge.
+
 ## SRC-DEEP-003 — Full-source box/spring/connector comparison and manual-line reinspection (2026-10-21)
 
 18 exact remaining didactic PNGs (#046–050, 053–055, 057, 059, 063, 065, 086–091) and 3 previous Library-root captures re-opened, with Sep08 channel phone copy deduplicated as ONE case and Sep21 NAS100 line source. [Deep findings](SOURCE_DEEP_STUDY_P003_20261021.md) · [source type and timestamp matrix](SOURCE_DEEP_P003_LINE_PROVENANCE.md). Reinforces undefined `C_box`, explicit as-of spring semantics, risky nominal box-bottom R/R, replay annotation provenance uncertainty. All image counts and stage locks unchanged.
