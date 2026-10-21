@@ -1,3 +1,7 @@
+## U-003 — Five user-supplied original chart screenshots (2026-10-21)
+
+Five directly attached native 709×1536 JPEG files were reviewed and recorded under [HT/듀켐바이오/SK하이닉스 case study](USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md), distinct from the earlier **1,665** root Library census and separate curated 91 teaching originals. HT로보틱스 contains a particularly useful **09:30 monthly (prior 2022/03 high 11,400) → 11:08 1-minute (10:49 intraday high 11,690; quote 11,170) → 15:31 1-minute (11,140)** sequence. The 1-minute breach of a monthly wick-high is **not** an accepted monthly breakout; no sealed blind prediction, close-bar data or transaction results were supplied. Do not promote a new rule or initiate scanner/S02/orders/production writes. Primary curated 91 opened 21, mastered 0. Earlier root census remains 1,665 = 1,596 visually classified +69 inaccessible. 
+
 ## BULK-020 — All 141 previously untouched source images attempted; 69 inaccessible remain (2026-10-21)
 
 All 141 previously unattempted Library-root entries were processed: **129 genuinely opened and visually classified**, **12 newly confirmed without downloadable original backing (NOT VERIFIED)**. With BULK019, current root census **1,665 = 1,596 visually classified +69 inaccessible +0 unattempted**; 127 upload dates fully visually closed, 1,407 entries inside them. 16 app price chart frames and two static manually annotated *candidate* price/volume drawings identified in the new batch; no signal or independent edge inferred. Full ledger: [ROOT_IMAGE_STUDIES_BULK020.md](ROOT_IMAGE_STUDIES_BULK020.md). Original curated 91 still 21 opened/0 mastered. **Recovery blocked by inaccessible 69; do not equate 0 unattempted with 100% completed visual source study.** S02 paused, no new scans/orders/production changes.
@@ -72,7 +76,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 45
+**Learning revision:** 46
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

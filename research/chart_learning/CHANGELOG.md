@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 46 — U003 five time-linked Korean equity screenshots
+
+- Directly inspected five native user-uploaded 709×1536 JPEGs and recorded exact SHA-256: HT로보틱스 monthly at 09:30, 1-minute at 11:08 and 15:31; 듀켐바이오 at 15:28; SK하이닉스 at 11:06. New case document: USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md.
+- HT's pre-existing visible 11,400 (2022/03) monthly high was overrun intraday at 11,690 (10:49), but both later snapshot quotes remained lower (11,170 and 11,140). Failed acceptance vs recovered intraday guide are rival hypotheses, not an independently validated new trading method.
+- Marked visible horizontal guides and system indicators by provenance uncertainty; flagged cross-session KRX/NXT time boundaries and non-executable non-round guide levels. Distinct issuers' one-minute charts are secondary comparators.
+- Kept the existing 1,665-root Library source census and curated 91 original figures unchanged; no screenshot counted twice, no unseen transfer demonstrated, no S02, scanner, live order or production modification.
+
+
 ## 2026-10-21 — Revision 45 — BULK020 attempt remaining 141 Library-root images
 
 - All 141 remaining prior untouched root entries addressed across Feb/Mar 25, June 62, October 54. Original native pixels viewed for 129; 12 additional Feb26/Mar02-03 originals returned no downloadable backing. 69 total inaccessible (57 prior+12 new), quarantined as NOT VERIFIED.

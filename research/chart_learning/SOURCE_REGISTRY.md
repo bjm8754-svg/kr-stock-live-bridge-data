@@ -1,3 +1,7 @@
+## U-003 — Direct user chart uploads: 2026-10-21 (HT / 듀켐바이오 / SK하이닉스)
+
+Five original JPEGs, SHA-256 and sequential analysis documented in [USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md](USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md). They are current-conversation uploads, **not counted as new Library-root classifications** nor part of the 91 numbered teaching files. Temporal multi-timeframe observation is **retrospective, not a verified ex-ante strategy test**. All five native images actually opened; raw bytes not published to the public GitHub repo.
+
 ## BULK-018 — July 86 files visually source-classified; SOURCE-FIRST LOCK (2026-10-21)
 
 **All 86 July Library-root originals (18 upload dates) successfully recovered and source-categorized**, consisting of **1 WTI crude-oil futures market line graph (automatic software display; MARKET_CONTEXT_ONLY)** and **85 unrelated workplace/personal/product documents/images excluded**. Exact original SHA-256 identified 69 unique byte hashes / 17 duplicate extra entries. Four April already-access-blocked files were reattempted with explicit `no downloadable backing file yet`, remain NOT VERIFIED. Full exact file ledger: [ROOT_IMAGE_STUDIES_BULK018.md](ROOT_IMAGE_STUDIES_BULK018.md).
