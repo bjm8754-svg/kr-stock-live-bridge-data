@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 46,
+    "methodologyVersion": 47,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -289,46 +289,6 @@
       "fullVisualVerification": false,
       "sourceClaimedLectureDate": "2026-10-05",
       "sourceClaimedDurationSeconds": 5475
-    },
-    {
-      "id": "U-003",
-      "kind": "DIRECT_USER_UPLOADED_CHART_SCREENSHOTS",
-      "dateKst": "2026-10-21",
-      "fileCount": 5,
-      "files": [
-        {
-          "filename": "1000060911.jpg",
-          "sha256": "5e1e5680d3303b4395883c3e3fc9cb77fb37c5d5f4436e558b59781d55e7ea75",
-          "resolution": "709x1536"
-        },
-        {
-          "filename": "1000060910.jpg",
-          "sha256": "44b316e0b1f5ada9e2025282c36d5a70ae4ddb9771ebefa2951f1764b86be599",
-          "resolution": "709x1536"
-        },
-        {
-          "filename": "1000060901.jpg",
-          "sha256": "8d34e77ce3d8dc1d6dd056c9693707a1ed855816d98f234a476ccc20ee7ff64c",
-          "resolution": "709x1536"
-        },
-        {
-          "filename": "1000060903.jpg",
-          "sha256": "ed7538b7563cb6cbb7e62e765056f28a46784328152b1ee67a24f5a3e76051ef",
-          "resolution": "709x1536"
-        },
-        {
-          "filename": "1000060907.jpg",
-          "sha256": "2a4fbac7673d30da7c350403960e7ab75658ecfe1a37b649b45bef2ac9922c8b",
-          "resolution": "709x1536"
-        }
-      ],
-      "readStatus": "ALL_FIVE_NATIVE_JPEG_PIXEL_IMAGES_INSPECTED",
-      "analysisScope": "HT multi-timeframe screenshot chronology; Dukem and SK contemporaneous market structure; no independent transfer or source-drawn annotation attribution",
-      "ledger": "research/chart_learning/USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md",
-      "rootLibraryCensusDelta": 0,
-      "curated91CensusDelta": 0,
-      "unseenTransferDemonstrated": false,
-      "canonRulePromoted": 0
     }
   ],
   "originalImageResearch": [
@@ -2376,5 +2336,47 @@
     ],
     "activeWorkMode": "RECOVER_AND_CLASSIFY_ALL_REMAINING_IMAGES_BEFORE_ANY_DEEP_STUDY",
     "sourceValueTriagePolicy": "Tag PRICE_CHART_MANUAL_ANNOTATION_CANDIDATE / PRICE_CHART_APP_AUTOMATIC / EDUCATION_TEXT / MARKET_CONTEXT / NONCHART_EXCLUDED; no retrospective inference or methodological study during cataloging."
-  }
+  },
+  "userChartImageStudies": [
+    {
+      "id": "U-003",
+      "kind": "DIRECT_USER_UPLOADED_CHART_SCREENSHOTS",
+      "dateKst": "2026-10-21",
+      "fileCount": 5,
+      "files": [
+        {
+          "filename": "1000060911.jpg",
+          "sha256": "5e1e5680d3303b4395883c3e3fc9cb77fb37c5d5f4436e558b59781d55e7ea75",
+          "resolution": "709x1536"
+        },
+        {
+          "filename": "1000060910.jpg",
+          "sha256": "44b316e0b1f5ada9e2025282c36d5a70ae4ddb9771ebefa2951f1764b86be599",
+          "resolution": "709x1536"
+        },
+        {
+          "filename": "1000060901.jpg",
+          "sha256": "8d34e77ce3d8dc1d6dd056c9693707a1ed855816d98f234a476ccc20ee7ff64c",
+          "resolution": "709x1536"
+        },
+        {
+          "filename": "1000060903.jpg",
+          "sha256": "ed7538b7563cb6cbb7e62e765056f28a46784328152b1ee67a24f5a3e76051ef",
+          "resolution": "709x1536"
+        },
+        {
+          "filename": "1000060907.jpg",
+          "sha256": "2a4fbac7673d30da7c350403960e7ab75658ecfe1a37b649b45bef2ac9922c8b",
+          "resolution": "709x1536"
+        }
+      ],
+      "readStatus": "ALL_FIVE_NATIVE_JPEG_PIXEL_IMAGES_INSPECTED",
+      "analysisScope": "HT multi-timeframe screenshot chronology; Dukem and SK contemporaneous market structure; no independent transfer or source-drawn annotation attribution",
+      "ledger": "research/chart_learning/USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md",
+      "rootLibraryCensusDelta": 0,
+      "curated91CensusDelta": 0,
+      "unseenTransferDemonstrated": false,
+      "canonRulePromoted": 0
+    }
+  ]
 }

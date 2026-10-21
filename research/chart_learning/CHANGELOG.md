@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 47 — Correct image-source registry schema after CI failure
+
+- GitHub offline tests failed for revision 46 because U-003 directly inspected JPEG charts were appended to the `userUploadedStudies` lecture-only collection, whose invariant requires `fullVisualVerification=false` for source lecture recordings without native original chart frames. The distinct native JPEG source classification did not belong there.
+- Moved U-003 to `userChartImageStudies`, preserving all five original SHA-256 fingerprints and source analysis. Kept U-001/U-002 unchanged in lecture collection and left all chart interpretations, original 91/root inventory counts, source case note and production state unchanged.
+- This is a record-schema repair, **not** a new chart analytical success or independent transfer.
+
+
 ## 2026-10-21 — Revision 46 — U003 five time-linked Korean equity screenshots
 
 - Directly inspected five native user-uploaded 709×1536 JPEGs and recorded exact SHA-256: HT로보틱스 monthly at 09:30, 1-minute at 11:08 and 15:31; 듀켐바이오 at 15:28; SK하이닉스 at 11:06. New case document: USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md.
