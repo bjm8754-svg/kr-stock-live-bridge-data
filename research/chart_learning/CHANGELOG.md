@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 63 — SOURCE-DEEP-009 RSI / CVD divergence research source audit
+
+- Reopened three native original price/RSI infographic images #002/#007/#010 and Telegram 20260929-144527.PNG at source pixel level. Named sender's BTCUSDT.P 15m chart marks an earlier RSI70 high/alert; actual screenshot's current RSI ~44.56. A historical alert cannot be interpreted as current reading or independently demonstrated regular bearish divergence.
+- Distinguished completed-swing regular/hidden bullish/bearish RSI divergences from merely cooling momentum, future pivot-confirmation leakage and multi-timeframe mismatch; hidden taxonomy is research framework, not empirical success from originals.
+- CVD price-progress disagreement/absorption requires genuine trade-flow venue/contract/anchoring/reset. No synchronized CVD or volume-at-price source confirmed; absorption and volume-void claims NOT VERIFIED. Saved SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md.
+- Source-first research only. Earlier broad v63 line-channel notes were *not* committed after an interrupted write; this v63 is the actual durable next GitHub revision. No change to image census, S02, scanner, capital or production.
+
+
 ## 2026-10-21 — Revision 62 — SRC-DEEP-007, Telegram speaker attributions vs native BTC RSI/chart provenance
 
 - Reopened 19 native PNGs of September 29 Library chat screenshot family, 17 not among the previous deep ten: 143456/143744/143940/144058/144535/144544/144550/144604/145007/145017/145027/145038/145154/145309/145440/145453/143707 plus re-reading 144521/144527 for side-by-side comparison. Uploaded files already counted in 39-image source family; no new source totals.

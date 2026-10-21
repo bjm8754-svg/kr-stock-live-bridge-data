@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 62,
+    "methodologyVersion": 63,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SRC_DEEP_007_TELEGRAM_MULTISPEAKER_CHART_TIMES_RESTUDIED_MORE_SOURCE_SYNTHESIS_PENDING",
+    "status": "SOURCE_DEEP_009_DIVERGENCE_REVIEW_COMMITTED_MISSING_CVD_RAW_SOURCE",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue source-first annotated chart cases and integrate separate speaker-authored vs other-contributor BTC/crypto charts, original post times, moving-average controls, conflicting RSI/price explanations. Seek true video chart frames only if available; 69 inaccessible Library originals remain NOT VERIFIED. No scanner or S02.",
+    "deliverable": "Continue source-first study: search classified Library images for authentic RSI or anchored CVD examples; preserve pivot first-knowable time, current-vs-past RSI and aggressive-flow source/reset, and test manual line provenance only as source hypotheses; do not start market trials/scanner/S02.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2822,6 +2822,23 @@
         "competenceVerified": false,
         "economicEdgeVerified": false,
         "productionChanged": false
+      },
+      {
+        "id": "SRC-DEEP-009",
+        "dateKst": "2026-10-21",
+        "status": "DIRECT_RSI_ORIGINALS_AND_TELEGRAM_REINSPECTION_CVD_TAXONOMY_RESEARCH_ONLY",
+        "primaryOriginalNumbers": [
+          "002",
+          "007",
+          "010"
+        ],
+        "telegramOriginalBasenames": [
+          "image(20260929-144527).png"
+        ],
+        "report": "research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md",
+        "cvdOriginalTradeTapeVerified": false,
+        "hiddenDivergencePerformanceVerified": false,
+        "independentMarketTest": false
       }
     ],
     "canonicalDocumentFullTextStudied": true,

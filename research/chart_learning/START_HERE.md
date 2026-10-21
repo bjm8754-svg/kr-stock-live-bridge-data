@@ -1,3 +1,7 @@
+## SRC-DEEP-009 — RSI divergence vs price momentum cooling vs CVD evidence (2026-10-21)
+
+Directly reread native RSI educational sources **#002/#007/#010** and Sept29 Telegram 15m image `144527`: a *prior* RSI70 alert/circled RSI high coexists with a **current ~44.56** display, **not** two contemporaneous observations or proof of a bearish divergence. Added source-bound taxonomy for regular/hidden RSI divergence, matched completed price-pivot timestamps, first-knowable pivot time, timeframe separation, and CVD-vs-price absorption hypotheses requiring authentic aggressive trade-flow **and matching anchor/reset**. No original CVD tape verified and hidden-divergence economic claims untested. [Study](SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md). Source-first stage OPEN; all 91 teaching sources previously read but independently mastered=0, root Library 69 inaccessible. No S02, scanning, production or trading.
+
 ## SRC-DEEP-007 — Additional native Telegram 19-image multi-speaker study (2026-10-21)
 
 Reread **19 source screenshots** from the already catalogued Sep29 Library-root chat group, **17 not previously in SRC-DEEP-001's directly reread Telegram ten**. [Exact individual source analysis](SOURCE_DEEP_STUDY_P007_20261021.md). Kept other contributor's 1h BTC chart `144521` separate from named speaker's 15m chart `144527`: screenshot contains prior RSI70 indicator alert/circle yet current displayed RSI is near 44.56. Another contributor's **upward cyan channel** is in `145453` following speaker's commentary in `145440`; not the speaker's validated drawn-line performance. Other named-speaker RSI60/1h caution/medium-term anecdote is source opinion, **NOT a numeric trading rule or proven result**. Source-study stage remains OPEN, no independent market analysis/edge; curated 91 images source-studied but 0 independently mastered; Library root 1,596 classified/69 inaccessible; scanner/S02/production/orders paused.
@@ -128,7 +132,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 62
+**Learning revision:** 63
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
