@@ -1,3 +1,7 @@
+## BULK-020 — All 141 previously untouched source images attempted; 69 inaccessible remain (2026-10-21)
+
+All 141 previously unattempted Library-root entries were processed: **129 genuinely opened and visually classified**, **12 newly confirmed without downloadable original backing (NOT VERIFIED)**. With BULK019, current root census **1,665 = 1,596 visually classified +69 inaccessible +0 unattempted**; 127 upload dates fully visually closed, 1,407 entries inside them. 16 app price chart frames and two static manually annotated *candidate* price/volume drawings identified in the new batch; no signal or independent edge inferred. Full ledger: [ROOT_IMAGE_STUDIES_BULK020.md](ROOT_IMAGE_STUDIES_BULK020.md). Original curated 91 still 21 opened/0 mastered. **Recovery blocked by inaccessible 69; do not equate 0 unattempted with 100% completed visual source study.** S02 paused, no new scans/orders/production changes.
+
 ## BULK-019 — Oct11–13 48 actual root images newly classified (2026-10-21)
 
 All 48 original library-root files in these three dates were materially fetched and pixel-classified: 3 platform-generated one-minute stock-app chart screenshots (not independently verified manual lines/trades), 45 unrelated workplace/private/recruitment sources excluded. Exact duplicate bytes: 0/48. [Full filename ledger](ROOT_IMAGE_STUDIES_BULK019.md). **Fresh root census now 1,665 = 1,467 visually classified +57 inaccessible +141 pending**, up from v43 1,642 because 23 new metadata files appeared. 104 complete dates /1,278 entries. Curated91 21 opened, 0 mastered; complete source classification before deep chart studies. S02 paused, no scans/orders/production edits.
@@ -68,7 +72,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 44
+**Learning revision:** 45
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

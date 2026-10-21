@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 45 — BULK020 attempt remaining 141 Library-root images
+
+- All 141 remaining prior untouched root entries addressed across Feb/Mar 25, June 62, October 54. Original native pixels viewed for 129; 12 additional Feb26/Mar02-03 originals returned no downloadable backing. 69 total inaccessible (57 prior+12 new), quarantined as NOT VERIFIED.
+- Useful source candidates: 16 software-generated chart screenshots, two June static chart figures with manually highlighted areas, 18 other market/orderbook/news context screens. Neither human pre-event line creation nor trading edge established; unrelated/private 93 excluded.
+- Revised complete metadata census 1,665 = 1,596 actually pixel-classified +69 inaccessible +0 unattempted; 127 completely inspected upload dates /1,407 entries. Original91 21 inspected, 0 mastered unchanged.
+- No master rule changes, unseen chart transfer, D04, new scans, orders or production code.
+
+
 ## 2026-10-21 — Revision 44 — BULK019 October 11–13 48 native image source classifications
 
 - Recovered and viewed 48/48 new original root images from Oct11 (9), Oct12 (15), Oct13 (24): 3 app-generated one-minute Korean equity charts; 45 non-chart/other personal/work documents excluded.
