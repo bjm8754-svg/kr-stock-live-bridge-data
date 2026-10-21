@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 60 — SRC-DEEP-005 and 91/91 primary original source rereads complete
+
+- Reopened last 11 native teaching original PNGs #023,#025,#026,#032,#033,#034,#036,#037,#042,#043,#044; recorded specific semantics of market-trace level creation, one event-line vs volume/time box region, wick 9,850 vs close 10,100 versus close 9,850, qualified upper retest and path after gap.
+- All **91 distinct original curated image files** now directly revisited across five disjoint structured source-study batches (23+17+18+22+11), with family crosswalk source summary. This concludes **educational source images**, not full historical Library corpus or genuine independent skill verification.
+- Preserved `C_box` computational ambiguity, source/author markup cutoff, weekly/monthly completion vs intrabar drawdown, source contradictions (nonmandatory retest, failed spring, RSI divergences, high-turnover nonreaction) and errors-as-source for later synthesis.
+- Original AV/video chart screens for U-001/U-002 still not accessed; Telegram additional material and manual library source cases remain; root 69 inaccessible photos NOT VERIFIED. S02, scanner, live orders, production and independent case tests unchanged/paused.
+ 
+
 ## 2026-10-21 — Revision 59 — SRC-DEEP-004, all 22 original RSI/price/gap foundation figures deeply revisited
 
 - Directly opened native originals 001–022 (10 JPG RSI, 12 support/gap PNG). Source conclusions: RSI ≥70 or ≤30 can coexist with persistent directional prices; swing-divergence requires matched completed price/RSI extrema, not simply RSI falling while price rising; independent significant price/support first, RSI secondary; gap assessment depends on crossed price boundary, not jump magnitude or imaginary fills.

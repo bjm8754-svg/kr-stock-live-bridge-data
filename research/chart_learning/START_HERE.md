@@ -1,3 +1,7 @@
+## SRC-DEEP-005 — All 91 curated native teaching images source-studied in five focused batches (2026-10-21)
+
+Completed direct rereads of the final **11 originals** #023/#025/#026/#032–034/#036–037/#042–044. Five batches now cover **91 distinct originals with direct native-pixel source observations** (23+17+18+22+11), with family-specific contradictions; [final 11-image source study](SOURCE_DEEP_STUDY_P005_20261021.md) and [91-original crosswalk](PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md). This is **primary educational source-review completeness**, not validated independent mastery: `imagesIndependentlyMasteredCount=0`; no accurate future predictions, real fills, rule performance or full Library review. Source study still OPEN for important manually annotated Library historical charts, Telegram remaining material and missing original AV chart frames. 69 inaccessible root source files isolated NOT VERIFIED; new scanning/S02/orders/production remain paused.
+ 
 ## SRC-DEEP-004 — All 22 original RSI and price-level/gap foundations directly re-read (2026-10-21)
 
 Read **primary #001–022 at native-pixel scale**, not the prior summary, and contrasted confirmed low/high RSI divergence and 70/30 **non-execution** with the earlier verified Telegram speaker's daily RSI cooling while price remains higher. Gap price crossing needs the historical barrier, completed close and fill assumptions; #015 allows oblique support-to-resistance but requires frozen slope anchors. [Full study](SOURCE_DEEP_STUDY_P004_20261021.md). **80/91 distinct teaching images** now reexamined in four structured batches; only **11** remain for detailed family review (#023/#025/#026/#032–034/#036–037/#042–044). This is source-reading coverage, **not independently proven chart mastery** (0 mastered), trade edge, or permission for market tests. Library 69 unavailable originals remain isolated; video chart frames unverified and S02/scanners/production paused.
@@ -116,7 +120,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 59
+**Learning revision:** 60
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

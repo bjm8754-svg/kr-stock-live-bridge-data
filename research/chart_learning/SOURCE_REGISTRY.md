@@ -1,3 +1,7 @@
+## SRC-DEEP-005 — Completion of native reading of all 91 didactic originals (2026-10-21)
+
+Last 11 actual source figures (#023,#025,#026,#032–034,#036–037,#042–044) reviewed for price-trace provenance, one-event-line vs time-built multi-candle box, exact wick-vs-close invalidation and close/retest/failed-acceptance states. [Full 11-original report](SOURCE_DEEP_STUDY_P005_20261021.md) · [disjoint 91-number topic crosswalk](PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md). Native 91/91 review completed as **teaching-source investigation**, not independent model mastery or wider Library completion. Scanner/S02 freeze persists.
+
 ## SRC-DEEP-004 — RSI foundations, slope/gap roles and time-window consistency (2026-10-21)
 
 Native image reread of **001–022**, detailed SRC-DEEP-004 contrasts with existing Sep29 BTC Telegram daily/1h/15m RSI source and the Sep08 manual channel. Summary of high/low RSI non-signal, qualified divergence and gap support/role semantics in [SOURCE_DEEP_STUDY_P004_20261021.md](SOURCE_DEEP_STUDY_P004_20261021.md). These 22 are already-counted, not new images; 80/91 numbered native images reviewed across batches 001–004, 11 deeper rereads left. No proven method mastery/edge.
