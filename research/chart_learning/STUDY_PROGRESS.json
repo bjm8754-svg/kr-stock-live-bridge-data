@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 49,
+    "methodologyVersion": 50,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -2477,6 +2477,27 @@
       "curated91CensusDelta": 0,
       "unseenTransferDemonstrated": false,
       "canonRulePromoted": 0
+    }
+  ],
+  "attributedDiscussionGroups": [
+    {
+      "id": "TG-CHARTGOD-001",
+      "dateKst": "2026-10-21",
+      "source": "ChatGPT Library root 2026-09-29 screenshot sequence",
+      "visibleDisplayName": "신 차트의",
+      "userAlias": "차트의신",
+      "identityEquivalenceVerified": false,
+      "sourceFileEntriesReviewed": 39,
+      "sequenceImageEntries": 29,
+      "qrLoginExcluded": 1,
+      "researchOrAdjacentImages": 28,
+      "directVisibleSpeakerTagScreenshots": 24,
+      "mixedOtherParticipants": true,
+      "scriptTranscriptRecovered": false,
+      "ledger": "research/chart_learning/TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md",
+      "sourceAddedToExistingRootCensus": 0,
+      "independentlyVerifiedTradingEdge": false,
+      "canonicalRulesPromoted": 0
     }
   ]
 }

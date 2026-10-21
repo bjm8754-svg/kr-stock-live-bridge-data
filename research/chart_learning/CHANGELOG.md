@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 50 — Separate `차트의신` / displayed `신 차트의` Telegram source group
+
+- Identified earlier missing *speaker-specific* sorting: Sep29 Telegram/TradingView screenshots were catalogued by RSI and price line themes but their named sender had not been segregated. Reopened all 39 source images from date; tagged contiguous 29 14:xx captures, excluded Telegram login QR, tagged 24 visible-speaker/mixed images versus 4 uncertain/context images. Exact 28-file ledger: TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md.
+- Capture display name reads `신 차트의`, whereas user called the person `차트의신`; marked possible alias association but no external identity verification. Other speakers and private PNL screenshots remain excluded from speaker claims.
+- Reclassified only; existing Library-root 1,665 /1,596 viewed /69 inaccessible and curated 91 all opened/0 mastered **unchanged**. No canonical method promotion, scanner/production/S02/market actions.
+
+
 ## 2026-10-21 — Revision 49 — Fix stale test assertions after source study coverage grows 21→91
 
 - The prior v48 CI source-validator stage passed, but offline regression tests failed because **five historical assertions required exactly 21 opened originals** even after the explicit v48 91/91 new source survey. These 21 were the correct prior count at the time the tests were written, but not a permanent project constraint.

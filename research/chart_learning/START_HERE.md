@@ -1,3 +1,7 @@
+## TG-CHARTGOD-001 — Telegram `신 차트의` / user-named `차트의신` group separated (2026-10-21)
+
+The existing 2026-09-29 Library root Telegram / TradingView screenshots now have a **speaker-aware source group**, not just multitimeframe RSI topic labels: [TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md](TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md). Reopened 39 images; 29 belong to the 14:xx screenshot continuity group, including one private Telegram login excluded. Of remaining 28, **24** contain visible `신 차트의` speaker-labelled/mixed messages; four are adjacent chart or uncertain-other-speaker context. Alias `차트의신` supplied by user, **not independently established as the display name**. All 39 were already classified: no census increment. Separate other participant opinions; no PNL, contact/QR data or raw images published. Rules/strategy/return not verified. Curated 91 sources already opened, mastered=0. S02 scanner and production unchanged.
+
 ## P-003 — Curated 91 original image files all directly viewed at least once (2026-10-21)
 
 This session retrieved **73 native original files** (001–022, 023–045, 046–063, 082–091), including three previously opened #052/#056/#058; **70 new unique originals**. Combined with 21 earlier native originals (#052/#056/#058/#064–081), curated **91/91 source-image coverage** is now achieved at visual source-survey level. Full original-family evidence and failure caveats: [PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md](PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md). **Do not conflate coverage with mastery:** original images independently mastered **0**, unfamiliar cutoff-controlled transfer **0**, economic edge **NOT VERIFIED**. Current unresolved question remains `SRC-STUDY-001`, evaluating box-break entries/invalidations and nonfill risk on truly unfamiliar price history. Earlier root Library inventory 1,665 =1,596 visibly classified +69 inaccessible remains separate. S02 paused; productionWriteAllowed=false; no new scans or orders.
@@ -80,7 +84,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 49
+**Learning revision:** 50
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

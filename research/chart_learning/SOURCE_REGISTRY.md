@@ -1,3 +1,7 @@
+## TG-CHARTGOD-001 — 2026-09-29 Telegram named-speaker group (2026-10-21)
+
+Source images visually re-opened from the already-counted Library root. Display name `신 차트의`, user alias `차트의신` (equivalence **not independently confirmed**). 24 screenshots feature the on-screen name amid other contributors, four adjacent/uncertain author sources and one QR-login screen excluded. Exact per-filename classification and source notes: [TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md](TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md). Price/RSI/timeframe concepts are the speaker's observations, not a verified trade edge or reproducible history. Other participants' messages, private account images and QR not published. Library root/image counts do not increase.
+
 ## P-003 — Curated original 91-image visual source coverage (2026-10-21)
 
 Native-file contact-sheet triage newly added 70 distinct previously unopened numbered originals; **91/91** original images now have at least one verified actual native-file image view across sessions. [Full provenance and interpretation cautions](PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md). Curated source count did not grow, root Library 1,665 and inaccessible 69 separate. Nothing yet independently mastered, and no economic edge or sealed market prediction demonstrated.
