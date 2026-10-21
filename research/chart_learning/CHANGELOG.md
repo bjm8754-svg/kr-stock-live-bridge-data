@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 49 — Fix stale test assertions after source study coverage grows 21→91
+
+- The prior v48 CI source-validator stage passed, but offline regression tests failed because **five historical assertions required exactly 21 opened originals** even after the explicit v48 91/91 new source survey. These 21 were the correct prior count at the time the tests were written, but not a permanent project constraint.
+- Replaced those five immutable exact-21 checks with **historical floor ≥21**, and added a stronger dedicated regression test verifying exact contiguous 001–091 inventory, source P-003 actual 73 opened /70 uniquely new, the source audit file, **0 independently mastered**, false unseen-transfer/edge flags and unchanged production restrictions. This is a test-maintenance correction, not test removal or skill advancement.
+- Curated 91/91 actual source view status and the separate 1,665 Library-root census remain unchanged. SRC-STUDY-001 remains open, no S02, scanner, orders or production changes.
+
+
 ## 2026-10-21 — Revision 48 — P-003 all curated 91 images source-viewed, no transfer proof
 
 - Fetched 73 native curated originals: #001–022, #023–045, #046–063, #082–091; #052/#056/#058 were prior reads, so 70 unique new, yielding total 91/91 **source image views**. Survey documented in PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md.
