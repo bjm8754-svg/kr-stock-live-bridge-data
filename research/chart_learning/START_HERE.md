@@ -1,3 +1,7 @@
+## EXP-SRC-001 — Fixed diagnostic chart-case selection before source opens (2026-10-21)
+
+Registered a strictly **research-only, three-case diagnostic** using Oct20 **existing** saved V3 review index and prior HEAD deterministic entries 10/15/20. Codes 098460, 015760, 271560. Full pre-registration: [EXPERIMENT_SRC001_PRE_REGISTRATION.md](EXPERIMENT_SRC001_PRE_REGISTRATION.md). No selected price-shard contents or any post-Oct20 price outcomes have been opened yet. This is *restricted scanner-cohort structural transfer practice*, **not** validated full-universe independent selection; no S02/scans/orders/production writes. `SRC-STUDY-001` open, economic skill not proven.
+
 ## TG-CHARTGOD-001/C — Telegram dialogue linked back to nearby TradingView charts (2026-10-21)
 
 Reopened the 2026-09-29 Library-root Telegram screenshot sequence and cross-linked **four concrete case clusters** into [TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md](TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md): (A) converging trendlines, upper-break supply, (B) directly posted daily/1h RSI illustrations answering a dated chat question, (C) other member 1h BTC versus the named speaker's 15m RSI reply, and (D) a weekly BTC supply chart. Some adjacent charts are from other contributors; filename proximity alone is **not** attribution. No new source count or proven outcomes; master/scanner/S02 remain unchanged.
@@ -88,7 +92,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 51
+**Learning revision:** 52
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

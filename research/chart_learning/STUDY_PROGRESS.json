@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 51,
+    "methodologyVersion": 52,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -2503,6 +2503,36 @@
       "chartLinksVerifiedFromVisibleChat": true,
       "distinctUnderlyingTradesVerified": 0,
       "rootLibrarySourceCountDelta": 0
+    }
+  ],
+  "methodTransferStudies": [
+    {
+      "id": "EXP-SRC-001",
+      "dateKst": "2026-10-21",
+      "status": "SELECTION_PRE_REGISTERED_NOT_YET_READ_SOURCE_SHARDS",
+      "referenceHead": "d25c4ea8189a1b65cd910a5c6e1452631ff0788a",
+      "sourceTradeDate": "20261020",
+      "selectionIndices": [
+        10,
+        15,
+        20
+      ],
+      "selectedCodes": [
+        "098460",
+        "015760",
+        "271560"
+      ],
+      "shardPaths": [
+        "market-structure-v3-review-shard-11.json",
+        "market-structure-v3-review-shard-16.json",
+        "market-structure-v3-review-shard-21.json"
+      ],
+      "ledger": "research/chart_learning/EXPERIMENT_SRC001_PRE_REGISTRATION.md",
+      "fullUniverseCoverage": false,
+      "s02Continuation": false,
+      "selectedPacketOpenedBeforeRegistration": false,
+      "outcomeRevealed": false,
+      "unseenTransferDemonstrated": false
     }
   ]
 }

@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 52 — Pre-register three unfamiliar chart diagnostic candidates before reading prices
+
+- Before opening any price review shard, locked deterministic selected Oct20 review-index entries: 10=098460, 15=015760, 20=271560 from prior HEAD `d25c4ea8189a1b65cd910a5c6e1452631ff0788a` final-byte modulo-32, with offsets 5/10. Protocol in EXPERIMENT_SRC001_PRE_REGISTRATION.md; as-of data 20261020.
+- Predefined price-first reconstruction, role acceptance, L0/L1/L2 non-forced conditional alternatives, no-fill, real structural invalidation, timestamp/tick/venue uncertainty and stronger adverse interpretation. No after-cutoff outcome reading authorized before sealed case.
+- Existing 32-stock prefiltered scanner cohort means **diagnostic, not unbiased full-market discovery**. No S02 progression, trading, scanner creation/scan, or production changes.
+
+
 ## 2026-10-21 — Revision 51 — TG-CHARTGOD original Telegram chart/message linkage
 
 - User correctly identified nearby charts were being lost by topic-only sorting. Reopened source images and linked original Sep29 Telegram dialogues and actual TradingView figures in four groups: 143434/143447/143748/143707; 144347/144353/144359/144405; 144521/144527/144535; 145216.
