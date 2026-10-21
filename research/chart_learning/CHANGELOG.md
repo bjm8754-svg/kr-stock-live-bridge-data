@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 62 — SRC-DEEP-007, Telegram speaker attributions vs native BTC RSI/chart provenance
+
+- Reopened 19 native PNGs of September 29 Library chat screenshot family, 17 not among the previous deep ten: 143456/143744/143940/144058/144535/144544/144550/144604/145007/145017/145027/145038/145154/145309/145440/145453/143707 plus re-reading 144521/144527 for side-by-side comparison. Uploaded files already counted in 39-image source family; no new source totals.
+- Important timing correction: 144527 BTC15m screenshot's cyan RSI70 circle and alert describe earlier threshold, **current RSI quote ~44.56**. Never code historical alert as contemporaneous 70 signal; 144521 1h chart supplied by a different member and 144535 screenshot is another contributor's chart situation, not speaker's 3 verified calls.
+- Other-member 145453 ascending cyan channel in chat following speaker's 145440 1h RSI/sideways remarks; source/author/created-at not independently proven, no price reaction scored. Medium-term and leverage commentary categorised as opinions/anecdotes, no empirical edge or risk policy.
+- Stored [source study](SOURCE_DEEP_STUDY_P007_20261021.md) and appended original Telegram chart-to-dialogue index. No new market tests, video, scanner, S02, orders or production writes.
+
+
 ## 2026-10-21 — Revision 61 — SRC-DEEP-006 original annotated/indicator market screenshots vs chart-teacher ontology
 
 - Reread 13 previously categorized Library root original image entries, source-grouped into LG Display article crops (3 screenshots but one thesis), Zoom Communications social weekly $90 breakout/$120 old supply plus separate May26 daily brokerage image, ETH/KRW dual-pane Mar16/24/25/Apr03 snapshots with identical Apr03 duplicate and contemporaneous BTC auto-control, and Sep01 HTS MA240/480/600/1000 education/settings screenshots.

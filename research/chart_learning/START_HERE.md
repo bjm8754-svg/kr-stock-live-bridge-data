@@ -1,3 +1,7 @@
+## SRC-DEEP-007 — Additional native Telegram 19-image multi-speaker study (2026-10-21)
+
+Reread **19 source screenshots** from the already catalogued Sep29 Library-root chat group, **17 not previously in SRC-DEEP-001's directly reread Telegram ten**. [Exact individual source analysis](SOURCE_DEEP_STUDY_P007_20261021.md). Kept other contributor's 1h BTC chart `144521` separate from named speaker's 15m chart `144527`: screenshot contains prior RSI70 indicator alert/circle yet current displayed RSI is near 44.56. Another contributor's **upward cyan channel** is in `145453` following speaker's commentary in `145440`; not the speaker's validated drawn-line performance. Other named-speaker RSI60/1h caution/medium-term anecdote is source opinion, **NOT a numeric trading rule or proven result**. Source-study stage remains OPEN, no independent market analysis/edge; curated 91 images source-studied but 0 independently mastered; Library root 1,596 classified/69 inaccessible; scanner/S02/production/orders paused.
+
 ## SRC-DEEP-006 — Real-library marked charts LG/Zoom/ETH and automatic-control rereads (2026-10-21)
 
 Directly examined **13 already-indexed native Library-root file entries**, grouped into a handful of **not independent trading** source families: May31 LG Display three-part editorial annotated sloping rail/blue zones, May27 Zoom weekly ~$90 breakout/$120 resistance social thesis vs May26 brokerage auto-MA/VaP, ETH March16/24/25 and duplicated April03 screenshots with complex thick-line provenance and **1h/daily/quote-time ambiguities**, and Sep01 HTS MA240/480/600/1000 settings screenshots (red arrows **UI tutorial**, not trades). [Source case deep report](SOURCE_DEEP_STUDY_P006_20261021.md) · [manual-vs-auto and time-origin matrix](SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md). This is source investigation only: posted 14k/50% claim, $90/$120 claim, and 3.25m lines have not been validated as pre-marked or fills. Primary 91 source rereads complete; full Library speaker/AV/source study remains OPEN; 69 inaccessible, independently mastered=0. No market diagnostics, S02, scanning, orders or production changes.
@@ -124,7 +128,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 61
+**Learning revision:** 62
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

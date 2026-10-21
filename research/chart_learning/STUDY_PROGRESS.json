@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 61,
+    "methodologyVersion": 62,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SRC_DEEP_006_MARKED_LIBRARY_SOURCE_CASES_STUDIED_MORE_RELEVANT_ORIGINALS_PENDING",
+    "status": "SRC_DEEP_007_TELEGRAM_MULTISPEAKER_CHART_TIMES_RESTUDIED_MORE_SOURCE_SYNTHESIS_PENDING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue at existing Library-root image dates with genuinely hand-annotated candidate charts and remaining attributed Telegram file groups, prioritizing original author-marked line provenance and contradictions. The full 91 didactic source rereads are complete but not mastered; 69 inaccessible and video frames still NOT VERIFIED; no market tests/S02/scanners.",
+    "deliverable": "Continue source-first annotated chart cases and integrate separate speaker-authored vs other-contributor BTC/crypto charts, original post times, moving-average controls, conflicting RSI/price explanations. Seek true video chart frames only if available; 69 inaccessible Library originals remain NOT VERIFIED. No scanner or S02.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2784,6 +2784,44 @@
         "independentEconomicTest": false,
         "sourceImageCountDelta": 0,
         "highConfidenceManualEditTimestampVerified": false
+      },
+      {
+        "id": "SRC-DEEP-007",
+        "dateKst": "2026-10-21",
+        "status": "SPEAKER_CHART_CHRONOLOGY_AND_OTHER_AUTHOR_ASCENDING_CHANNEL_NATIVE_REREAD_NOT_VALIDATED",
+        "telegramNativeFilesReopened": 19,
+        "telegramOutsideEarlierDeepBatch": 17,
+        "sourceScreenshotBasenames": [
+          "image(20260929-143456).png",
+          "image(20260929-143744).png",
+          "image(20260929-144058).png",
+          "image(20260929-144535).png",
+          "image(20260929-144544).png",
+          "image(20260929-144550).png",
+          "image(20260929-145007).png",
+          "image(20260929-145017).png",
+          "image(20260929-145027).png",
+          "image(20260929-145309).png",
+          "image(20260929-143940).png",
+          "image(20260929-144604).png",
+          "image(20260929-145038).png",
+          "image(20260929-145154).png",
+          "image(20260929-145440).png",
+          "image(20260929-145453).png",
+          "image(20260929-143707).png",
+          "image(20260929-144521).png",
+          "image(20260929-144527).png"
+        ],
+        "keyCases": [
+          "BTC_1H_OTHER_USER_VS_15M_SPEAKER_CURRENT_RSI_AND_PRIOR_ALERT",
+          "BTC_ASCENDING_CHANNEL_FROM_OTHER_PARTICIPANT_145453",
+          "RSI_60_70_DAILY_1H_CONTEXT_NOT_HARD_SIGNAL"
+        ],
+        "ledger": "research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md",
+        "originalChronologyVerified": false,
+        "competenceVerified": false,
+        "economicEdgeVerified": false,
+        "productionChanged": false
       }
     ],
     "canonicalDocumentFullTextStudied": true,

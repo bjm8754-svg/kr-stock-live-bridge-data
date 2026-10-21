@@ -45,3 +45,8 @@ The user correctly indicated that charts accompany the group-message captures. A
 - Do **not** extract, publish or train on third-party private P&L/account images, Telegram QR, personal identities or phone/device metadata.
 - Other pictures may exist in inaccessible root files (69 inaccessible); no claim of a complete Telegram archive. Original source citations remain exact private Library basenames.
 - Canonical trading rules unchanged, original curated 91 opened /0 mastered, `SRC-STUDY-001` still open, no S02 advance, scanner, orders or production modifications.
+
+
+## v62 SRC-DEEP-007 follow-up: original speaker/context vs another participant's ascending channel
+
+Directly re-opened 19 additional/overlapping native original Telegram captures in Sep29 root cohort, 17 outside SRC-DEEP-001's 10-image direct-reopen set. Newly identified `image(20260929-145453).png` as an **ascending two-solid-plus-one-dashed cyan channel chart** in the vicinity of another contributor `마이클33`'s message and September 28 `신 차트의` 1h RSI cooling commentary (`145440`). The visible chart **must NOT** be attributed as that teacher's own analysis or certified ex-ante support; author and edit time unknown. Reconfirmed `144521` another user hourly setup versus `144527` teacher's 15m RSI annotated chart: **RSI70 threshold alert happened before the displayed ~44.56 current RSI reading**, not a contemporaneous RSI70 signal. `144535` independent multi-contributor 1h price image is another cutoff. Full caveats in [SOURCE_DEEP_STUDY_P007_20261021.md](SOURCE_DEEP_STUDY_P007_20261021.md).

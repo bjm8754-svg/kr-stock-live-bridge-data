@@ -1,3 +1,7 @@
+## SRC-DEEP-007 — Other speakers' BTC channel versus named Telegram teacher RSI chronology (2026-10-21)
+
+Additional source-pixel reread of 19 existing Sep29 Telegram chart/thread captures (17 not in SRC-DEEP-001's native reread set); [source-attributed interpretive ledger](SOURCE_DEEP_STUDY_P007_20261021.md). Key: 1h BTC chart by another user (`144521`) versus named speaker 15m RSI image (`144527`) with historic RSI70 crossing and *current* RSI around mid-40s; ascending cyan BTC channel posted in another participant's message near `145453` is **not** the teacher's certified plotted skill. Capture creation ≠ bar time/edit time; no research sample or core inventory count change.
+
 ## SRC-DEEP-006 — Annotated historical Library screen sources and manual-vs-indicator controls (2026-10-21)
 
 Original pixel review of 13 earlier triaged screenshot file entries: LG Display editorial three-part chart, May27 Zoom weekly social thesis vs daily brokerage control, ETH/KRW March16/24/25 and Apr03 dual-pane mark/timeframe comparisons (including duplicate), Sep01 HTS-long-MA tutorial arrows. Detailed [source-level contradictions](SOURCE_DEEP_STUDY_P006_20261021.md) · [line author/timestamp matrix](SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md). All are separate from 91 primary corpus and are NOT authenticated ex-ante trading calls. No source count changed or program scan.
