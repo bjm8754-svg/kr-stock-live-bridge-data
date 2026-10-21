@@ -1,3 +1,7 @@
+## P-003 — Curated original 91-image visual source coverage (2026-10-21)
+
+Native-file contact-sheet triage newly added 70 distinct previously unopened numbered originals; **91/91** original images now have at least one verified actual native-file image view across sessions. [Full provenance and interpretation cautions](PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md). Curated source count did not grow, root Library 1,665 and inaccessible 69 separate. Nothing yet independently mastered, and no economic edge or sealed market prediction demonstrated.
+
 ## U-003 — Direct user chart uploads: 2026-10-21 (HT / 듀켐바이오 / SK하이닉스)
 
 Five original JPEGs, SHA-256 and sequential analysis documented in [USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md](USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md). They are current-conversation uploads, **not counted as new Library-root classifications** nor part of the 91 numbered teaching files. Temporal multi-timeframe observation is **retrospective, not a verified ex-ante strategy test**. All five native images actually opened; raw bytes not published to the public GitHub repo.

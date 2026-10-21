@@ -1,3 +1,7 @@
+## P-003 — Curated 91 original image files all directly viewed at least once (2026-10-21)
+
+This session retrieved **73 native original files** (001–022, 023–045, 046–063, 082–091), including three previously opened #052/#056/#058; **70 new unique originals**. Combined with 21 earlier native originals (#052/#056/#058/#064–081), curated **91/91 source-image coverage** is now achieved at visual source-survey level. Full original-family evidence and failure caveats: [PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md](PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md). **Do not conflate coverage with mastery:** original images independently mastered **0**, unfamiliar cutoff-controlled transfer **0**, economic edge **NOT VERIFIED**. Current unresolved question remains `SRC-STUDY-001`, evaluating box-break entries/invalidations and nonfill risk on truly unfamiliar price history. Earlier root Library inventory 1,665 =1,596 visibly classified +69 inaccessible remains separate. S02 paused; productionWriteAllowed=false; no new scans or orders.
+
 ## U-003 — Five user-supplied original chart screenshots (2026-10-21)
 
 Five directly attached native 709×1536 JPEG files were reviewed and recorded under [HT/듀켐바이오/SK하이닉스 case study](USER_CHART_CASE_STUDY_HT_DUKEM_SK_20261021.md), distinct from the earlier **1,665** root Library census and separate curated 91 teaching originals. HT로보틱스 contains a particularly useful **09:30 monthly (prior 2022/03 high 11,400) → 11:08 1-minute (10:49 intraday high 11,690; quote 11,170) → 15:31 1-minute (11,140)** sequence. The 1-minute breach of a monthly wick-high is **not** an accepted monthly breakout; no sealed blind prediction, close-bar data or transaction results were supplied. Do not promote a new rule or initiate scanner/S02/orders/production writes. Primary curated 91 opened 21, mastered 0. Earlier root census remains 1,665 = 1,596 visually classified +69 inaccessible. 
@@ -76,7 +80,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 47
+**Learning revision:** 48
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

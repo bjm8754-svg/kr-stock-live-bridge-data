@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 48 — P-003 all curated 91 images source-viewed, no transfer proof
+
+- Fetched 73 native curated originals: #001–022, #023–045, #046–063, #082–091; #052/#056/#058 were prior reads, so 70 unique new, yielding total 91/91 **source image views**. Survey documented in PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md.
+- Directly inspected family diagrams and selective original-size cases #045, #051, #082–085. Warning: teaching diagrams are not real OHLC outcomes; replay snapshots of PL/SNDK and similar may be retrospective and are not sealed predictions.
+- Wrote competing L0 proactive support, L1 spring reclaim, L2 role-tested pullback hypotheses as research questions, **not canonical rules**. Distinguish nonfills, gaps, multiple candle durations, drawing provenance, model selection and execution semantics.
+- Updated image-source completeness only (91/91 opened); **0 mastered, transfer not demonstrated, no economic edge verified**, `SRC-STUDY-001` open. Root census 1,665/1,596/69 unchanged. No S02, scanner, orders, production change.
+
+
 ## 2026-10-21 — Revision 47 — Correct image-source registry schema after CI failure
 
 - GitHub offline tests failed for revision 46 because U-003 directly inspected JPEG charts were appended to the `userUploadedStudies` lecture-only collection, whose invariant requires `fullVisualVerification=false` for source lecture recordings without native original chart frames. The distinct native JPEG source classification did not belong there.
