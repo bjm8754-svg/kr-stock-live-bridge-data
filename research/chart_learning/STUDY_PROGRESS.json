@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 43,
+    "methodologyVersion": 44,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -366,9 +366,9 @@
     "verifiedAtKst": "2026-10-21",
     "store": "ChatGPT Library",
     "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
-    "totalImageEntries": 1733,
+    "totalImageEntries": 1756,
     "curated91ImageEntries": 91,
-    "uncataloguedRootImageEntries": 1642,
+    "uncataloguedRootImageEntries": 1665,
     "rootImagesAreAllResearch": false,
     "possibleContentDuplicates": true,
     "externalMountCompleteness": "NOT_VERIFIED",
@@ -378,7 +378,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "PRIORITY LOCK: complete native source recovery and visual categorization for all 166 unattempted root image entries, then retry and quarantine 57 unavailable originals, mark valuable chart/teaching source candidates for later. DO NOT start any detailed single-chart methods study before classification is complete, including when user says next/ㄱㄱ. No S02 or scanner activity.",
+    "action": "SOURCE FIRST: classify the remaining 141 as-of-current 1,665 Library root images (118 left from previous snapshot plus 23 newly inventoried), retry/quarantine 57 access failures, then research classified chart candidates. No deep study, scanning, orders or S02.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -474,11 +474,11 @@
       "neverAutoTrade": true
     },
     "metadataInventory": {
-      "status": "CURRENT_ROOT_METADATA_LISTED_1642_CONTENT_PARTIAL",
-      "rootEntries": 1642,
+      "status": "CURRENT_ROOT_METADATA_LISTED_1665_CONTENT_PARTIAL",
+      "rootEntries": 1665,
       "pages": 9,
       "errors": 0,
-      "listingDateKst": "2026-10-19",
+      "listingDateKst": "2026-10-21",
       "listingScope": "ChatGPT Library root only, all image types",
       "roughDateCohorts": [
         [
@@ -512,8 +512,8 @@
       ],
       "rootContentClassifiedComplete": false,
       "nameBasedDuplicatesNotVerified": true,
-      "previousRootEntries": 1639,
-      "entriesAddedSincePreviousSnapshot": 3
+      "previousRootEntries": 1642,
+      "entriesAddedSincePreviousSnapshot": 23
     },
     "bulkStudies": [
       {
@@ -747,7 +747,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 1419,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1467,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -1661,10 +1661,37 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-10-11",
+        "allRootEntries": 9,
+        "classifiedFileEntries": 9,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK019",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK019.md",
+        "marketChartScreenshots": 1,
+        "manualPriceAnchorsVerified": 0
+      },
+      {
+        "uploadDate": "2026-10-12",
+        "allRootEntries": 15,
+        "classifiedFileEntries": 15,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK019",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK019.md",
+        "marketChartScreenshots": 2,
+        "manualPriceAnchorsVerified": 0
+      },
+      {
+        "uploadDate": "2026-10-13",
+        "allRootEntries": 24,
+        "classifiedFileEntries": 24,
+        "status": "ALL_NATIVE_PIXELS_OPENED_BULK019",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK019.md",
+        "marketChartScreenshots": 0,
+        "manualPriceAnchorsVerified": 0
       }
     ],
-    "completedCohortDateCount": 101,
-    "rootEntriesWithinFullyClassifiedCohorts": 1230,
+    "completedCohortDateCount": 104,
+    "rootEntriesWithinFullyClassifiedCohorts": 1278,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -1845,13 +1872,31 @@
         "reason": "Library bulk native-materialization returned short transfer count; exact-file batch retry 0/4. No direct proof of content_missing, only unavailable source original bytes."
       }
     ],
-    "totalRootImageCountExplanation": "BULK018 adds 86 actually opened July originals to prior 1333: 1419 visually classified, 57 still unavailable, 166 unattempted, total 1642. Jul dates 18 full cohorts/86 entries raise closed cohorts 83→101 and enclosed entries 1144→1230. July duplicates: 69 unique hashes, 17 redundant file entries. Four April source failures reattempted on 2026-10-21: still no downloadable backing file; not visually reviewed.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 1476,
+    "totalRootImageCountExplanation": "BULK019: 48 new native-byte visual classifications from Oct11 (9), Oct12 (15), Oct13 (24). Current fresh 9-page Library root snapshot 1,665 (+23 new metadata since v43) = 1,467 visually classified +57 access failures +141 unattempted. Fully closed upload date cohorts 104 / 1,278 entries. The curated 91 originals remain a separate corpus, 21 opened/0 mastered.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1524,
     "rootEntryAccessFailedCount": 57,
-    "rootImageCountUnaccountedForInCurrentInventory": 166,
+    "rootImageCountUnaccountedForInCurrentInventory": 141,
     "accessFailureDoesNotCountAsVisualStudy": true,
     "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven. BULK015 March source-pixel contact sheets 41 originals (selected 13 enlarged at native size) + direct API proved 45 others content_missing; never count metadata-only as visual. BULK016 82 original images visually source-classified in six montage pages, 18 selected enlarged; a contact source class does not prove native label accuracy, hand-drawn line timing or trading outcome. BULK017 classified 109 April originals via 7 contact sheets plus 9 native enlargements; 4 metadata image originals no-transfer after retry count as access failure, not visual and not necessarily permanent content_missing. SHA-256 shows 10 exact duplicate binary pairs, including ETH/KRW Apr03 file names.",
     "batchHistory": [
+      {
+        "id": "BULK-019",
+        "dateKst": "2026-10-21",
+        "status": "48_NATIVE_IMAGES_VISUALLY_CLASSIFIED_THREE_OCTOBER_COHORTS",
+        "files": 48,
+        "sourceCohorts": {
+          "2026-10-11": 9,
+          "2026-10-12": 15,
+          "2026-10-13": 24
+        },
+        "marketAppCharts": 3,
+        "manualPriceAnchorsVerified": 0,
+        "nonchartExcluded": 45,
+        "byteIdenticalDuplicates": 0,
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK019.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-018",
         "dateKst": "2026-10-21",

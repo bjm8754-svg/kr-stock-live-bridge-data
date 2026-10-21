@@ -1,3 +1,7 @@
+## BULK-019 — Oct11–13 48 actual root images newly classified (2026-10-21)
+
+All 48 original library-root files in these three dates were materially fetched and pixel-classified: 3 platform-generated one-minute stock-app chart screenshots (not independently verified manual lines/trades), 45 unrelated workplace/private/recruitment sources excluded. Exact duplicate bytes: 0/48. [Full filename ledger](ROOT_IMAGE_STUDIES_BULK019.md). **Fresh root census now 1,665 = 1,467 visually classified +57 inaccessible +141 pending**, up from v43 1,642 because 23 new metadata files appeared. 104 complete dates /1,278 entries. Curated91 21 opened, 0 mastered; complete source classification before deep chart studies. S02 paused, no scans/orders/production edits.
+
 ## BULK-018 — July 86 files visually source-classified; SOURCE-FIRST LOCK (2026-10-21)
 
 **All 86 July Library-root originals (18 upload dates) successfully recovered and source-categorized**, consisting of **1 WTI crude-oil futures market line graph (automatic software display; MARKET_CONTEXT_ONLY)** and **85 unrelated workplace/personal/product documents/images excluded**. Exact original SHA-256 identified 69 unique byte hashes / 17 duplicate extra entries. Four April already-access-blocked files were reattempted with explicit `no downloadable backing file yet`, remain NOT VERIFIED. Full exact file ledger: [ROOT_IMAGE_STUDIES_BULK018.md](ROOT_IMAGE_STUDIES_BULK018.md).
@@ -64,7 +68,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 43
+**Learning revision:** 44
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

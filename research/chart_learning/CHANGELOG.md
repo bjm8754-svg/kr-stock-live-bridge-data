@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 44 — BULK019 October 11–13 48 native image source classifications
+
+- Recovered and viewed 48/48 new original root images from Oct11 (9), Oct12 (15), Oct13 (24): 3 app-generated one-minute Korean equity charts; 45 non-chart/other personal/work documents excluded.
+- All 48 original SHA-256 hashes unique inside this cohort. Market screens are not certified human price annotations, precommitted forecasts, entries, or results. No chart methodology promoted.
+- Refreshed complete Library-root metadata listing: 1,665 (+23 since v43), now 1,467 actually visually classified, 57 unavailable, 141 unattempted. 104 complete upload dates / 1,278 entries. Primary91 21 opened/0 mastered.
+- Research-only, no S02/scanner/orders/production change.
+
+
 ## 2026-10-21 — Revision 43 — BULK018 July source recovery / prioritize full corpus classification
 
 - All 86 July root original images recovered and visibly categorized: 1 automatic WTI market chart/context, 85 off-topic/private/work excluded. Five source contact sheets, one chart enlarged; 69 unique byte hashes, 17 duplicate extra file entries.
