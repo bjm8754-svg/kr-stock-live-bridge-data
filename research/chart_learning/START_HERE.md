@@ -1,3 +1,7 @@
+## October 21 — v42 — September annotated channel alternative-anchor falsification
+
+**One existing original screenshot, no new picture classification:** [CHANNEL_ANCHOR_SENSITIVITY_20261021.md](CHANNEL_ANCHOR_SENSITIVITY_20261021.md). On Sep08 `chart-1(8).png`, approximating three old purple low-box centers A(118,593), B(280,568), C(534,519) yields A–B/A–C/B–C slopes −0.154/−0.178/−0.193 screen-y/x, which project to y≈430/405/395 near September x1175; displayed middle rail y≈400. Sep candles loosely y≈414, so **line-side interpretation depends on anchor selection**. The upper late-May and lower early-August outer-rail contacts appear symmetric around the interior, consistent with a copied channel **or post-August refitting**. Exact wick/body points, artist timestamps and future-cutoff bars NOT VERIFIED. Distinct horizontal swing baseline gives another rival. No source counts increase, no independently demonstrated predictive skill or new canonical rule. **Root census remains 1,642 / 1,333 classified / 57 unavailable / 252 untouched; primary91 21 opened, 0 mastered. S02 PAUSED_AFTER_D03, no new scan/orders/production.**
+
 ## October 21 — August/September line-role study (revision 41)
 
 Reopened **17 previously visually classified** Library-root files (Aug25, Sep08/15/20–21), plus curated original teaching diagrams **064, 068, 076, 079**. The Sep08 single manually annotated rising parallel channel reaches its old interior support from *below* after July failure; Sep21 manually highlighted US Nas100 chart approaches declining supply around 30,000 with acceptance **not verified**. A distinct MA-overlay control from Aug25 BTC/KRW prevents treating auto 60/120/200 MA lines as discretionary price anchors. Drawing-creation timestamp and completed-bar cutoff **unknown**. Hypotheses/invalidations in [LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md](LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md). **Not a new 17-file classification**: prior root inventory remains **1,642 / 1,333 classified / 57 not verified / 252 unattempted**, curated primary 21/91 opened and 0 independently mastered. No transfer, new rule, scan, S02 D04, order or production write.
@@ -54,7 +58,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 41
+**Learning revision:** 42
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

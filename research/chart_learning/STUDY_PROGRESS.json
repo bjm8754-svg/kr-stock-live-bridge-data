@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 41,
+    "methodologyVersion": 42,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -234,6 +234,12 @@
       "status": "17_PREVIOUSLY_CLASSIFIED_ROOT_PIXELS_REREAD_PLUS_4_PRIMARY_EDUCATIONAL_IMAGES_NO_TRANSFER",
       "source": "research/chart_learning/LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md",
       "claim": "Aug25 and Sep08/15/20–21 seventeen Library root source files deeply revisited together with four primary numbered originals 064/068/076/079. Manual channel rail roles contrasted with Nas100 overhead supply and with auto BTC moving-average controls; ex-ante line creation/cutoff, locked unfamiliar-chart transfer and economic profit remain unverified. Do not increment 1,333 root source-class census."
+    },
+    {
+      "type": "SOURCE_PIXEL_GEOMETRY_SENSITIVITY",
+      "status": "ONE_ALREADY_CLASSIFIED_IMAGE_ANCHOR_PERTURBATION_DIAGNOSTIC_NOT_TRANSFER",
+      "source": "research/chart_learning/CHANNEL_ANCHOR_SENSITIVITY_20261021.md",
+      "claim": "Re-examined Sep08 root chart-1(8).png and compared approximate A-B/A-C/B-C low-candidate rails, original middle rail, near-symmetric original channel width, and late-Aug horizontal baseline. September projected price-line side varies by plausible anchors. All coordinates pixel-level and ex-ante artist timing unverified. No new source files counted, no rule promotion, independent unseen-chart judgement, profit or S02 advancement."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",

@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 42 — Sep08 channel candidate-anchor sensitivity/decision-invariance check
+
+- Reopened and quantified one previously classified source chart `chart-1(8).png`: three approximate purple-box low pivots A/B/C produce y≈430/405/395 at x1175 versus the published y≈400 interior rail. Depending on plausible endpoints, Sep price is above or below the constructed line.
+- Compared two outer parallel offsets against marked May high and late-July/August trough; symmetry is consistent with real pre-event parallel geometry **or** retrospective fitting. Test exact historical annotation timestamps before claiming ex-ante result.
+- Compared prior-Aug horizontal swing high (~y442) versus rising interior rail (~y400): rival structures produce conflicting first-pass interpretations. Quantitative screen pixels are NOT verified OHLC prices.
+- Retained all source accounting; SRC-STUDY-001 unresolved; no transfer test, canon promotion, scanner, S02 D04, order or production change.
+
+
 ## 2026-10-21 — Revision 41 — August/September root price-line role-state case study
 
 - Reopened and deeply interpreted 17 previously source-classified root screenshots and four previously opened primary teaching PNGs 064/068/076/079; no source-census increment, no competence claim.
