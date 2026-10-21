@@ -1,3 +1,7 @@
+## SRC-DEEP-003 — Direct review of remaining box/spring and three BEFORE/AFTER market chart pairs (2026-10-21)
+
+Reread **18 exact primary originals** #046–050/#053–055/#057/#059/#063/#065/#086–091, plus 3 already-indexed manually marked screenshots (2 copies of one channel + 1 NAS100). Explained synthetic box close remains `UNKNOWN`, apparent 7R/19R synthetic box-bottom numbers are not real capped risk, spring only proves failed persistence *so far*, and PENDLE/ALTEO/JEONJIN replay 'BEFORE' is not authenticated line creation before outcome. A large highlighted Sep08 parallel channel is sensitive to anchor selection and its twin mobile copy is **not a second case**; Nas100 current 29,993.8 is not a qualified completed daily close. [Deep original study](SOURCE_DEEP_STUDY_P003_20261021.md) · [line provenance matrix](SOURCE_DEEP_P003_LINE_PROVENANCE.md). Source study remains OPEN; no transfer/scanner/S02/orders/production edits; root counts unchanged (1,596 classified, 69 inaccessible).
+ 
 ## SRC-DEEP-002 — Re-read 17 education figures + original lecture TXT/PDF (2026-10-21)
 
 Directly inspected **17 source image files** about how significant reference prices form (price/volume/time, exceptional event vs box, close role flip, bad overdrawn lines, nonmandatory breakout retest, U versus C_box) and read **the entire AI-summary TXT** and **all 14 edited-transcript PDF pages**. [Detailed study](SOURCE_DEEP_STUDY_P002_20261021.md). Key disagreements now recorded: 2–3× vs 10× volume are **illustrative and not thresholds**; **actual single adjustment bar close `C_adjust` cannot equal undefined multi-bar compressed `C_box` by assumption**; lecture's expected retest is **not guaranteed** (#067 expressly shows uninterrupted continuation/no-fill); monthly-close structural invalidation does not eliminate intramonth emergency risk. No original lecture video/chart frames verified. Source stage still OPEN; SRC-STUDY-001 and S02 remain paused; original91 source opened 91/0 mastered; root 1,596 classified/69 inaccessible.
@@ -108,7 +112,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 57
+**Learning revision:** 58
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

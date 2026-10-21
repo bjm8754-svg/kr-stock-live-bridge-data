@@ -1,3 +1,7 @@
+## SRC-DEEP-003 — Full-source box/spring/connector comparison and manual-line reinspection (2026-10-21)
+
+18 exact remaining didactic PNGs (#046–050, 053–055, 057, 059, 063, 065, 086–091) and 3 previous Library-root captures re-opened, with Sep08 channel phone copy deduplicated as ONE case and Sep21 NAS100 line source. [Deep findings](SOURCE_DEEP_STUDY_P003_20261021.md) · [source type and timestamp matrix](SOURCE_DEEP_P003_LINE_PROVENANCE.md). Reinforces undefined `C_box`, explicit as-of spring semantics, risky nominal box-bottom R/R, replay annotation provenance uncertainty. All image counts and stage locks unchanged.
+
 ## SRC-DEEP-002 — Source origins of price significance and lecture disagreement (2026-10-21)
 
 Directly viewed 17 original PNGs and reread whole 1,653-character summarized lecture TXT plus the corrected 14-page '조정봉' PDF. Source-specific ontology, retest non-fill counterexample, 2–3× vs 10× illustrative turnover and weekly/monthly structural-vs-emergency stop distinction: [SOURCE_DEEP_STUDY_P002_20261021.md](SOURCE_DEEP_STUDY_P002_20261021.md). Original audiovisual lecture frames still unverified; inventory and scanner/production state unchanged.

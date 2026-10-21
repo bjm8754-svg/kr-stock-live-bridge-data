@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 58 — SRC-DEEP-003 original box/spring, connector pairs and discretionary-line provenance
+
+- Actually reopened all 18 listed teaching originals (046–050, 053–055, 057, 059, 063, 065, 086–091), Sep08 annotated channel `chart-1(8).png`, its duplicate phone rendering `1788851445435.jpeg`, and Sep21 hand-marked NAS100 `1789982866469.jpeg`.
+- Source study: compressed box inner `C_box` undefined, synthetic 10,100 purchase vs 10,000 lower line yields nominal 100 risk but no executable stop assurance; spring is failed downside persistence and later inner `C_box` may still reject. PENDLE/Alteo/Jeonjin marked before/after replay screenshots neither seal creation time nor certify retests/fills.
+- Prior channel A–B/A–C/B–C anchor sensitivity corroborated with original full-size channel image and one duplicate; Nas100 quote intraday/current cannot be promoted to accepted daily breakout. Stored SOURCE_DEEP_STUDY_P003_20261021.md and SOURCE_DEEP_P003_LINE_PROVENANCE.md.
+- Inventory unchanged, original video source frames unavailable, remaining 001–023 and 032–044 family source work pending, 69 inaccessible originals NOT_VERIFIED. Source-first gate maintained; no tests/trades/scanning/S02/production changes.
+ 
+
 ## 2026-10-21 — Revision 57 — SRC-DEEP-002 original 17 figure and two full lecture-source reviews
 
 - Opened 17 specific teaching-source PNG files #024,027-031,035,038-041,067,069-073; read entire original Clova AI summary TXT and all 14 pages of edited PDF transcript without inventing original video frames.

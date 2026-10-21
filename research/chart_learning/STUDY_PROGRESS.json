@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 57,
+    "methodologyVersion": 58,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_TWO_DEEP_BATCHES_DONE_REMAINING_RELEVANT_SOURCES_PENDING",
+    "status": "SOURCE_FIRST_THREE_DEEP_BATCHES_DONE_REMAINING_PICTURES_AND_SYNTHESIS_PENDING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue source-first actual screenshot review, especially less-analyzed 91 originals and manually annotated historic Library files; distinguish source-drawn anchor times and assistant-derived hypotheticals, then cross-check U-001 and U-002 video chart frames if available. 69 originals still access blocked; no market diagnostics/scanning yet.",
+    "deliverable": "Continue source study of primary 001–023 and 032–044 at enlarged native resolution; compare hand annotated Library charts for author/timeframe/source anchors, then integrate across curriculum/Telegram/U-001/U-002 and document contradictory alternatives before independent market transfer. 69 inaccessible images remain NOT_VERIFIED.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2660,6 +2660,52 @@
         "sourceInventoriesIncreased": false,
         "independentMarketTransfer": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "id": "SRC-DEEP-003",
+        "dateKst": "2026-10-21",
+        "status": "ORIGINAL_18_CHARTS_AND_3_ANNOTATED_ROOT_IMAGES_REREAD_NO_MARKET_VALIDATION",
+        "originalTeachingNumbers": [
+          "046",
+          "047",
+          "048",
+          "049",
+          "050",
+          "053",
+          "054",
+          "055",
+          "057",
+          "059",
+          "063",
+          "065",
+          "086",
+          "087",
+          "088",
+          "089",
+          "090",
+          "091"
+        ],
+        "rootFilnames": [
+          "chart-1(8).png",
+          "1788851445435.jpeg",
+          "1789982866469.jpeg"
+        ],
+        "distinctRealMarketExemplars": [
+          "PENDLE_D1",
+          "ALTEO_1H",
+          "JEONJIN_1W",
+          "SEP08_RISING_CHANNEL",
+          "SEP21_NAS100_D1"
+        ],
+        "duplicateRootFiles": [
+          "chart-1(8).png",
+          "1788851445435.jpeg"
+        ],
+        "primaryLedger": "research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md",
+        "provenanceMatrix": "research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md",
+        "preEventDrawingTimesVerified": false,
+        "independentMarketValidation": false,
+        "newScannerRules": 0
       }
     ],
     "canonicalDocumentFullTextStudied": true
