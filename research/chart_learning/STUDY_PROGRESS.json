@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 53,
+    "methodologyVersion": 54,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "ASOF_DIAGNOSTIC_3_SAVED_REV53_FORWARD_UNSEEN_VALIDATION_STILL_UNTESTED",
+    "status": "SOURCE_FIRST_DEEP_REVIEW_REQUIRED_DIAGNOSTICS_PAUSED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "EXP-SRC-001 registered on Oct20 source and three as-of price-first/no-order conclusions saved; next truly unfamiliar externally independent historical outcome / full-universe precommitted comparative evaluation is not yet performed. Do not call as-of diagnostic a demonstrated trading edge.",
+    "deliverable": "Finish meaningful deep study of all accessible RELEVANT chart/lecture/Telegram materials and original author annotations; integrate competing views and invalidation examples before resuming unfamiliar market-transfer work; 69 inaccessible original images remain NOT VERIFIED.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -170,7 +170,8 @@
       "052",
       "056",
       "058"
-    ]
+    ],
+    "stageLock": "SOURCE_DEEP_REVIEW_BEFORE_NEXT_MARKET_CASE"
   },
   "completedEvidence": [
     {
@@ -2509,7 +2510,7 @@
     {
       "id": "EXP-SRC-001",
       "dateKst": "2026-10-21",
-      "status": "THREE_ASOF_CHART_DECISIONS_COMMITTED_NO_OUTCOME_READ_DIAGNOSTIC_ONLY",
+      "status": "ASOF_DECISIONS_SEALED_BUT_FURTHER_EVALUATION_PAUSED_USER_SOURCE_FIRST_ORDER",
       "referenceHead": "d25c4ea8189a1b65cd910a5c6e1452631ff0788a",
       "sourceTradeDate": "20261020",
       "selectionIndices": [
@@ -2552,7 +2553,24 @@
         }
       ],
       "preexistingScannerPacketStoredOnly": true,
-      "economicPerformanceScored": false
+      "economicPerformanceScored": false,
+      "analysisVerdictsPreserved": true,
+      "userRequestedStagePause": true,
+      "resumeAfter": "Available source deep study and synthesis, separate explicit phase shift; no automatic outcome scoring",
+      "pauseReason": "User: 자료검토부터 다 하는거 아녔어? Previous v53 as-of chart reviews were prematurely prioritized over deeper review of available originals. Keep locked v53 note as historical diagnostic, not a demonstrated validated strategy."
     }
-  ]
+  ],
+  "sourceFirstDeepReview": {
+    "dateKst": "2026-10-21",
+    "status": "IN_PROGRESS_NOT_COMPLETE",
+    "reviewLedger": "research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md",
+    "curatedOriginalsOpened": 91,
+    "curatedOriginalsMastered": 0,
+    "libraryRootCategoryClassified": 1596,
+    "libraryRootInaccessible": 69,
+    "telegramSpeakerLinkedChartsDeepMethodStudyDone": false,
+    "lectureVideosAndDocumentsIntegrated": false,
+    "manualDrawnLineAnchorReconstructionDone": false,
+    "independentTransferStageAuthorized": false
+  }
 }

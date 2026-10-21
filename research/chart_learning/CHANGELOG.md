@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 54 — Reprioritize full source deep study per user correction
+
+- User explicitly said material review was supposed to come first. Prior v52 pre-registration and v53 as-of decisions were made too early. Preserved those historical artefacts, marked `EXP-SRC-001` evaluation paused, no outcomes revealed/performances scored.
+- Created SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md defining remaining deep-analysis work on curated91, relevant classified images, Telegram chat↔chart cases, user text/PDF/videos and line-provenance evidence; clearly distinguishes browsing/category classification from mastery.
+- Logged L-017 about process-stage drift. Kept original 1,665 Library census, 91 image corpus, the separate 69 inaccessible items, source-first research mission and strict S02/scanner/production locks unchanged.
+
+
 ## 2026-10-21 — Revision 53 — EXP-SRC-001 pre-registered three-case as-of decision memo committed before outcome reveal
 
 - Fixed by v52 preregistration (deterministic 10/15/20 indices), inspected only saved Oct20 shards 11/16/21 and compiled detailed price-first reasoning in EXPERIMENT_SRC001_ASOF_DECISIONS.md; no post-Oct20 bars or results viewed.
