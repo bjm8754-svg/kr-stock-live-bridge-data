@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 55 — Repair source-first correction ledger count and cross-reference
+
+- v54 correctly preserved the premature diagnostic pause and added L-017, but integrity CI failed since manifest `lessonCount` remained 16 after adding the 17th unique lesson. Updated it to 17 and referenced L-017 in CASES.md as required by the research-validator contract.
+- No source or case analysis, past exposure, or source-first stage priority changed. S02 and production remain locked.
+
+
 ## 2026-10-21 — Revision 54 — Reprioritize full source deep study per user correction
 
 - User explicitly said material review was supposed to come first. Prior v52 pre-registration and v53 as-of decisions were made too early. Preserved those historical artefacts, marked `EXP-SRC-001` evaluation paused, no outcomes revealed/performances scored.

@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 54,
+  "revision": 55,
   "updatedKst": "2026-10-21",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -131,7 +131,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 16,
+  "lessonCount": 17,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,

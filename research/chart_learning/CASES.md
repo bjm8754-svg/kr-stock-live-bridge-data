@@ -117,3 +117,8 @@ Implemented a **self-contained, user-pasted command** in `BOOT_PROTOCOL.md`, a r
 - Portfolio blind infrastructure: `research/stock_blind/PROTOCOL.md` and active episode; **different window**, cannot be represented as a 2026-09 verified blind result.
 
 Preserve all adverse and non-fill examples on later revisions; correct with an appended erratum, never silently erase an embarrassment.
+
+
+## Source-first sequencing correction — L-017 (2026-10-21)
+
+The 91 numbered educational originals have all been visually opened, **0 independently mastered**, and the separate Library-root corpus has 69 original-backup inaccessible files. The assistant prematurely opened three preselected Oct20 scanner-case packets and sealed provisional as-of WATCH/REJECT/WATCH in v53 although the user had required comprehensive deep source review first. The user explicitly stopped the premature market-case evaluation. v52 selection/v53 decisions remain as provenance, `EXP-SRC-001` is paused for any future result scoring, and `SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md` defines unfinished relevant chart, Telegram, lecture and annotated-line study. Nothing in this case establishes predictive edge. See **L-017**.
