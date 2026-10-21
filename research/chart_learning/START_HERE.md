@@ -1,3 +1,9 @@
+## BULK-018 — July 86 files visually source-classified; SOURCE-FIRST LOCK (2026-10-21)
+
+**All 86 July Library-root originals (18 upload dates) successfully recovered and source-categorized**, consisting of **1 WTI crude-oil futures market line graph (automatic software display; MARKET_CONTEXT_ONLY)** and **85 unrelated workplace/personal/product documents/images excluded**. Exact original SHA-256 identified 69 unique byte hashes / 17 duplicate extra entries. Four April already-access-blocked files were reattempted with explicit `no downloadable backing file yet`, remain NOT VERIFIED. Full exact file ledger: [ROOT_IMAGE_STUDIES_BULK018.md](ROOT_IMAGE_STUDIES_BULK018.md).
+
+**Cumulative Library-root census unchanged 1,642: 1,419 actually pixel classified +57 inaccessible NOT VERIFIED +166 never attempted; 101 closed upload dates /1,230 entries.** Primary curated 91 PNGs remain 21 viewed, 0 mastered. **USER SEQUENCING PRIORITY: complete recovery, source-value sorting and classification of all root photos before further deep single-chart research or ex-ante methodology tests.** Record valuable sources as candidates only; do not start in-depth work on “다음/ㄱㄱ” until source-classification task complete. No rule promotion, scanner, S02 D04, live orders or production modification.
+
 ## October 21 — v42 — September annotated channel alternative-anchor falsification
 
 **One existing original screenshot, no new picture classification:** [CHANNEL_ANCHOR_SENSITIVITY_20261021.md](CHANNEL_ANCHOR_SENSITIVITY_20261021.md). On Sep08 `chart-1(8).png`, approximating three old purple low-box centers A(118,593), B(280,568), C(534,519) yields A–B/A–C/B–C slopes −0.154/−0.178/−0.193 screen-y/x, which project to y≈430/405/395 near September x1175; displayed middle rail y≈400. Sep candles loosely y≈414, so **line-side interpretation depends on anchor selection**. The upper late-May and lower early-August outer-rail contacts appear symmetric around the interior, consistent with a copied channel **or post-August refitting**. Exact wick/body points, artist timestamps and future-cutoff bars NOT VERIFIED. Distinct horizontal swing baseline gives another rival. No source counts increase, no independently demonstrated predictive skill or new canonical rule. **Root census remains 1,642 / 1,333 classified / 57 unavailable / 252 untouched; primary91 21 opened, 0 mastered. S02 PAUSED_AFTER_D03, no new scan/orders/production.**
@@ -58,7 +64,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 42
+**Learning revision:** 43
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

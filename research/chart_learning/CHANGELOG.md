@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 43 — BULK018 July source recovery / prioritize full corpus classification
+
+- All 86 July root original images recovered and visibly categorized: 1 automatic WTI market chart/context, 85 off-topic/private/work excluded. Five source contact sheets, one chart enlarged; 69 unique byte hashes, 17 duplicate extra file entries.
+- Four April previous access failures reattempted: no downloadable backing, still NOT VERIFIED. July 18 upload date cohorts now fully closed.
+- Root progress: 1,642 total = 1,419 real source-pixel classifications +57 source access failures +166 unattempted. Primary91 21 opened/0 mastered unchanged.
+- User explicitly reasserted mandatory sequencing: **recover/classify and earmark valuable pictures FIRST**, detailed chart method research ONLY after completing that task. No technical trading rule, unknown-case transfer, S02, scan, order or production write.
+
+
 ## 2026-10-21 — Revision 42 — Sep08 channel candidate-anchor sensitivity/decision-invariance check
 
 - Reopened and quantified one previously classified source chart `chart-1(8).png`: three approximate purple-box low pivots A/B/C produce y≈430/405/395 at x1175 versus the published y≈400 interior rail. Depending on plausible endpoints, Sep price is above or below the constructed line.

@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 42,
+    "methodologyVersion": 43,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -240,6 +240,12 @@
       "status": "ONE_ALREADY_CLASSIFIED_IMAGE_ANCHOR_PERTURBATION_DIAGNOSTIC_NOT_TRANSFER",
       "source": "research/chart_learning/CHANNEL_ANCHOR_SENSITIVITY_20261021.md",
       "claim": "Re-examined Sep08 root chart-1(8).png and compared approximate A-B/A-C/B-C low-candidate rails, original middle rail, near-symmetric original channel width, and late-Aug horizontal baseline. September projected price-line side varies by plausible anchors. All coordinates pixel-level and ex-ante artist timing unverified. No new source files counted, no rule promotion, independent unseen-chart judgement, profit or S02 advancement."
+    },
+    {
+      "type": "JULY_ROOT_SOURCE_CATALOG",
+      "status": "86_JULY_ORIGINALS_CLASSIFIED_1_MARKET_LINE_85_NONCHART_NOT_DEEP_STUDY",
+      "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+      "claim": "All 86 July Library root originals downloaded and inspected in 5 contact sheets, WTI chart enlarged. All 18 July upload-date cohorts closed; 69 unique byte hashes. Four April source files re-tried, still lack downloadable backing. Source-first before deep studies expressly locked. No new original-91 reads or economic study."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -357,7 +363,7 @@
     }
   ],
   "sourceRecovery": {
-    "verifiedAtKst": "2026-10-20",
+    "verifiedAtKst": "2026-10-21",
     "store": "ChatGPT Library",
     "method": "Paginated recursive list of image file metadata sorted by name, 9 pages x up to 200",
     "totalImageEntries": 1733,
@@ -372,7 +378,7 @@
       "/1000058321.jpg"
     ],
     "curated91NotTotalCorpus": true,
-    "action": "Continue source-only classifying remaining 252 Library-root entries, quarantine 57 inaccessible originals (53 historical March content_missing plus 4 April not materialized) as NOT VERIFIED. Independently test ex-ante line/box anchors, not operational scans.",
+    "action": "PRIORITY LOCK: complete native source recovery and visual categorization for all 166 unattempted root image entries, then retry and quarantine 57 unavailable originals, mark valuable chart/teaching source candidates for later. DO NOT start any detailed single-chart methods study before classification is complete, including when user says next/ㄱㄱ. No S02 or scanner activity.",
     "latestManuallyInspectedBatch": {
       "id": "B-003",
       "reviewedOnKst": "2026-10-15",
@@ -741,7 +747,7 @@
         "correctedStaleV30Count": true
       }
     ],
-    "totalRootImagesActuallyOpenedAllLoggedWork": 1333,
+    "totalRootImagesActuallyOpenedAllLoggedWork": 1419,
     "dateCohortCoverage": [
       {
         "uploadDate": "2026-09-23",
@@ -1493,10 +1499,172 @@
         "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
         "nativeFullResolutionAllItems": false,
         "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-01",
+        "allRootEntries": 5,
+        "classifiedFileEntries": 5,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-02",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-06",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-07",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-08",
+        "allRootEntries": 38,
+        "classifiedFileEntries": 38,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-09",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-11",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-13",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-14",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-15",
+        "allRootEntries": 9,
+        "classifiedFileEntries": 9,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-16",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-21",
+        "allRootEntries": 6,
+        "classifiedFileEntries": 6,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-22",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-23",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-24",
+        "allRootEntries": 8,
+        "classifiedFileEntries": 8,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-28",
+        "allRootEntries": 3,
+        "classifiedFileEntries": 3,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-29",
+        "allRootEntries": 1,
+        "classifiedFileEntries": 1,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
+      },
+      {
+        "uploadDate": "2026-07-30",
+        "allRootEntries": 2,
+        "classifiedFileEntries": 2,
+        "status": "ALL_JULY_ORIGINAL_PIXELS_VISUALLY_CLASSIFIED_BULK018",
+        "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "nativeFullResolutionAllItems": false,
+        "canonicalRulesPromoted": 0
       }
     ],
-    "completedCohortDateCount": 83,
-    "rootEntriesWithinFullyClassifiedCohorts": 1144,
+    "completedCohortDateCount": 101,
+    "rootEntriesWithinFullyClassifiedCohorts": 1230,
     "totalRootCountIsConservativeLowerBound": true,
     "deduplicatedAcrossAllHistoricalBatchesVerified": false,
     "cumulativeNamedFileCandidatesWithoutLegacyOverlapAdjustment": 207,
@@ -1677,13 +1845,33 @@
         "reason": "Library bulk native-materialization returned short transfer count; exact-file batch retry 0/4. No direct proof of content_missing, only unavailable source original bytes."
       }
     ],
-    "totalRootImageCountExplanation": "At v39 1224 actually viewed root originals + BULK017 109 April native-byte visual classifications = 1333. Previous 53 March native original access failures plus 4 April no-transfer after retry = 57 distinct inaccessible/NOT VERIFIED entries (April source was not proven permanently content_missing). Snapshot 1642 - 1333 - 57 = 252 unattempted. Previous 68 closed upload dates/1037 image entries plus April 15 fully viewed groups/107 image entries = 83 closed dates/1144 entries. 189 additionally viewed originals reside in incomplete upload-date cohorts, including 2 April08 items.",
-    "rootEntriesAssignedVisualOrAccessOutcome": 1390,
+    "totalRootImageCountExplanation": "BULK018 adds 86 actually opened July originals to prior 1333: 1419 visually classified, 57 still unavailable, 166 unattempted, total 1642. Jul dates 18 full cohorts/86 entries raise closed cohorts 83→101 and enclosed entries 1144→1230. July duplicates: 69 unique hashes, 17 redundant file entries. Four April source failures reattempted on 2026-10-21: still no downloadable backing file; not visually reviewed.",
+    "rootEntriesAssignedVisualOrAccessOutcome": 1476,
     "rootEntryAccessFailedCount": 57,
-    "rootImageCountUnaccountedForInCurrentInventory": 252,
+    "rootImageCountUnaccountedForInCurrentInventory": 166,
     "accessFailureDoesNotCountAsVisualStudy": true,
     "imageReadPolicyCorrection": "BULK010 70 image-pointer/OCR preliminary was not visual evidence at v32. BULK012 now independently downloaded all 70 actual original files, visually reviewed a 5-sheet reduced contact gallery and enlarged selected images. The source-class classification counts these 70 as pixel visual; fine-grained text/candlestick labels on most are not full-resolution-verified. BULK013 contact-sheet source classification 54 plus 3 critical native enlargements; no discretionary line endpoints proven. BULK015 March source-pixel contact sheets 41 originals (selected 13 enlarged at native size) + direct API proved 45 others content_missing; never count metadata-only as visual. BULK016 82 original images visually source-classified in six montage pages, 18 selected enlarged; a contact source class does not prove native label accuracy, hand-drawn line timing or trading outcome. BULK017 classified 109 April originals via 7 contact sheets plus 9 native enlargements; 4 metadata image originals no-transfer after retry count as access failure, not visual and not necessarily permanent content_missing. SHA-256 shows 10 exact duplicate binary pairs, including ETH/KRW Apr03 file names.",
     "batchHistory": [
+      {
+        "id": "BULK-018",
+        "dateKst": "2026-10-21",
+        "status": "86_JULY_ROOT_ORIGINAL_PIXELS_CLASSIFIED_RECOVERY_FIRST",
+        "sourceMetadataEntries": 86,
+        "filesActuallyOpened": 86,
+        "newAccessFailed": 0,
+        "fullDateCohortsClosed": 18,
+        "closedDateImageEntries": 86,
+        "marketPriceLineContext": 1,
+        "nonChartExcluded": 85,
+        "exactDuplicateRedundantFileEntries": 17,
+        "uniqueOriginalByteHashes": 69,
+        "aprilAccessRetryFailed": 4,
+        "manualPriceAnchorProvenExAnte": 0,
+        "method": "5 actual-source contact sheets, one market item at native size",
+        "ledger": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+        "canonicalRulesPromoted": 0,
+        "unseenChartTransferDemonstrated": false
+      },
       {
         "id": "BULK-017",
         "dateKst": "2026-10-20",
@@ -1857,6 +2045,8 @@
         "canonicalRulesPromoted": 0,
         "unseenChartTransferDemonstrated": false
       }
-    ]
+    ],
+    "activeWorkMode": "RECOVER_AND_CLASSIFY_ALL_REMAINING_IMAGES_BEFORE_ANY_DEEP_STUDY",
+    "sourceValueTriagePolicy": "Tag PRICE_CHART_MANUAL_ANNOTATION_CANDIDATE / PRICE_CHART_APP_AUTOMATIC / EDUCATION_TEXT / MARKET_CONTEXT / NONCHART_EXCLUDED; no retrospective inference or methodological study during cataloging."
   }
 }
