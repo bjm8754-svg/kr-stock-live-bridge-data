@@ -1,3 +1,7 @@
+## EXP-SRC-001 — Three as-of source-bound chart judgements sealed, no futures read (2026-10-21)
+
+Pre-registration v52 correctly selected fixed **098460 고영 / 015760 한국전력 / 271560 오리온** from already saved 2026-10-20 review shards. Read exact 120-daily/156-weekly/72-monthly traces **without later post-10/20 bars**, independently assessed price before machine labels, and froze **WATCH/REJECT/WATCH**, no actual orders. Detailed [as-of reasoning](EXPERIMENT_SRC001_ASOF_DECISIONS.md) and [prior selection lock](EXPERIMENT_SRC001_PRE_REGISTRATION.md). Both 고영 0.8%-wide hypothetical stop vs ATR9.4% and 한국전력 RR71.48 using current price instead of 31,550 entry illustrate machine false precision. Last weekly 20261023/monthly20261031 bars are **PARTIAL AS OF OCT20**, not completed weekly/monthly closes. Three already-prefiltered stocks means diagnostic, no demonstrated full-universe transfer, no later results or economic performance scored, S02 and production remain locked.
+
 ## EXP-SRC-001 — Fixed diagnostic chart-case selection before source opens (2026-10-21)
 
 Registered a strictly **research-only, three-case diagnostic** using Oct20 **existing** saved V3 review index and prior HEAD deterministic entries 10/15/20. Codes 098460, 015760, 271560. Full pre-registration: [EXPERIMENT_SRC001_PRE_REGISTRATION.md](EXPERIMENT_SRC001_PRE_REGISTRATION.md). No selected price-shard contents or any post-Oct20 price outcomes have been opened yet. This is *restricted scanner-cohort structural transfer practice*, **not** validated full-universe independent selection; no S02/scans/orders/production writes. `SRC-STUDY-001` open, economic skill not proven.
@@ -92,7 +96,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 52
+**Learning revision:** 53
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

@@ -39,3 +39,8 @@ All future experiments must be evaluated against [MINIMUM_COMPETENCE_BENCHMARK.m
 - Linked lesson IDs, rule status changes, reproducible source files:
 
 Do **not** mark any experiment PASS without the frozen pre-result decision artifact and market-appropriate execution and cost assumptions. Avoid selecting only famous future winners for validation.
+
+## E-008 — EXP-SRC-001: first pre-registered three-stock price-reading diagnostic (2026-10-21)
+
+Source as-of 2026-10-20, **pre-registered before selected shard reads** at v52, indices 10/15/20 (codes 098460/015760/271560). Three fixed source packets had 120 daily, 156 weekly and 72 monthly bars each, where latest weekly/monthly are partial. Independent price-first reviewed all three and froze WATCH/REJECT/WATCH with **no orders** at v53. Machine false precision: 고영 0.80% pseudo-stop versus ~9.4% ATR, 한국전력 RR71.48 current-near-stop denominator while planned entry much higher. 오리온 short rebound still under supply. [Full pre-registration](EXPERIMENT_SRC001_PRE_REGISTRATION.md), [as-of interpretation](EXPERIMENT_SRC001_ASOF_DECISIONS.md). Source cohort 32 was scanner-filtered, not full point-in-time universe; no outcomes revealed, no edge verified, no new scan or S02.
+

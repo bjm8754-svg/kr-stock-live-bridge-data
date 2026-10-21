@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 53 — EXP-SRC-001 pre-registered three-case as-of decision memo committed before outcome reveal
+
+- Fixed by v52 preregistration (deterministic 10/15/20 indices), inspected only saved Oct20 shards 11/16/21 and compiled detailed price-first reasoning in EXPERIMENT_SRC001_ASOF_DECISIONS.md; no post-Oct20 bars or results viewed.
+- Rejected machine `EXECUTABLE` level-retest on 고영 based on failed Oct impulse persistence, 0.8% stop vs 9.4% ATR and non-tick reference; downgraded Korean Electric Power 20-session declining box and RR71.48 wrong denominator; Orion held WATCH due room to overhead 114k/118.4k despite recovery and rising RSI.
+- Flagged packaged week-ending Oct23 and month-ending Oct31 **partial as-of Oct20** bars, not settled future closes; historical ratio estimates vs latest KRX reported data, unverified adjustment/venue.
+- All three decisions **NO_ORDER**, no fill claims, no economic scoring or full-universe transfer. `SRC-STUDY-001` open; S02/scanner/production unchanged.
+
+
 ## 2026-10-21 — Revision 52 — Pre-register three unfamiliar chart diagnostic candidates before reading prices
 
 - Before opening any price review shard, locked deterministic selected Oct20 review-index entries: 10=098460, 15=015760, 20=271560 from prior HEAD `d25c4ea8189a1b65cd910a5c6e1452631ff0788a` final-byte modulo-32, with offsets 5/10. Protocol in EXPERIMENT_SRC001_PRE_REGISTRATION.md; as-of data 20261020.

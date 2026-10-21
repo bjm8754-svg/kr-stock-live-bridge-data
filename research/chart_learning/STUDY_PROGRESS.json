@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 52,
+    "methodologyVersion": 53,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "ALL_91_SOURCE_FILES_TRIAGED_UNSEEN_TRANSFER_STILL_UNTESTED",
+    "status": "ASOF_DIAGNOSTIC_3_SAVED_REV53_FORWARD_UNSEEN_VALIDATION_STILL_UNTESTED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,7 +154,7 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Using the first full source-visual survey, create first truly unfamiliar cutoff-respecting chart case, compare proactive zone/reclaim/confirmed pullback without future bars, audit nonfills and invalidation. No scanner or S02.",
+    "deliverable": "EXP-SRC-001 registered on Oct20 source and three as-of price-first/no-order conclusions saved; next truly unfamiliar externally independent historical outcome / full-universe precommitted comparative evaluation is not yet performed. Do not call as-of diagnostic a demonstrated trading edge.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
     "supportingReading": "research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
@@ -2509,7 +2509,7 @@
     {
       "id": "EXP-SRC-001",
       "dateKst": "2026-10-21",
-      "status": "SELECTION_PRE_REGISTERED_NOT_YET_READ_SOURCE_SHARDS",
+      "status": "THREE_ASOF_CHART_DECISIONS_COMMITTED_NO_OUTCOME_READ_DIAGNOSTIC_ONLY",
       "referenceHead": "d25c4ea8189a1b65cd910a5c6e1452631ff0788a",
       "sourceTradeDate": "20261020",
       "selectionIndices": [
@@ -2532,7 +2532,27 @@
       "s02Continuation": false,
       "selectedPacketOpenedBeforeRegistration": false,
       "outcomeRevealed": false,
-      "unseenTransferDemonstrated": false
+      "unseenTransferDemonstrated": false,
+      "asofDecisionLedger": "research/chart_learning/EXPERIMENT_SRC001_ASOF_DECISIONS.md",
+      "analysisVerdicts": [
+        {
+          "code": "098460",
+          "verdict": "WATCH_NO_ORDER",
+          "reason": "NARROW_MACHINE_STOP_UNDER_ATR_AND_WEAK_ACCEPTANCE"
+        },
+        {
+          "code": "015760",
+          "verdict": "REJECT_ACTIONABLE_LONG",
+          "reason": "DECLINING_BOX_AND_INCONSISTENT_MACHINE_RR_DENOMINATOR"
+        },
+        {
+          "code": "271560",
+          "verdict": "WATCH_NO_ORDER",
+          "reason": "RECOVERING_FROM_LOW_BUT_NEAR_OVERHEAD_SUPPLY"
+        }
+      ],
+      "preexistingScannerPacketStoredOnly": true,
+      "economicPerformanceScored": false
     }
   ]
 }
