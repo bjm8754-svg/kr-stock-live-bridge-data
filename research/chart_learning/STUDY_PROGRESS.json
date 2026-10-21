@@ -1,6 +1,6 @@
 {
   "schema": "V3_METHODOLOGY_STUDY_PROGRESS_V1",
-  "updatedKst": "2026-10-20",
+  "updatedKst": "2026-10-21",
   "status": "IN_PROGRESS_NOT_COMPETENCE_PROVEN",
   "researchPhase": "METHODOLOGY_FIRST_SOURCE_STUDY",
   "currentObjective": "Independently derive, challenge and version chart-analysis reasoning using the 91 original 차트술사 PNGs as the primary study corpus, supplemented by expert plans and gap-specific external research.",
@@ -52,7 +52,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 40,
+    "methodologyVersion": 41,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -228,6 +228,12 @@
       "status": "41_SOURCE_PIXELS_INSPECTED_45_NOT_VERIFIED_NO_TRANSFER",
       "source": "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md",
       "claim": "41 disjoint March08–31 root original images visibly source-classified (10 price chart, 15 market context, 12 non-chart/private, 4 uninterpretable); 45 files returned content_missing and were not classified. ETH bold annotations remain creation-time/anchor hypothesis; S-Oil multi-frame sequence is not an independent OOS test. No new methodology competence."
+    },
+    {
+      "type": "ORIGINAL_IMAGE_ROLE_STATE_STUDY",
+      "status": "17_PREVIOUSLY_CLASSIFIED_ROOT_PIXELS_REREAD_PLUS_4_PRIMARY_EDUCATIONAL_IMAGES_NO_TRANSFER",
+      "source": "research/chart_learning/LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md",
+      "claim": "Aug25 and Sep08/15/20–21 seventeen Library root source files deeply revisited together with four primary numbered originals 064/068/076/079. Manual channel rail roles contrasted with Nas100 overhead supply and with auto BTC moving-average controls; ex-ante line creation/cutoff, locked unfamiliar-chart transfer and economic profit remain unverified. Do not increment 1,333 root source-class census."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",

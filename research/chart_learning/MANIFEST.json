@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 40,
-  "updatedKst": "2026-10-20",
+  "revision": 41,
+  "updatedKst": "2026-10-21",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -48,7 +48,8 @@
     "research/chart_learning/ROOT_IMAGE_STUDIES_BULK014.md",
     "research/chart_learning/ROOT_IMAGE_STUDIES_BULK015.md",
     "research/chart_learning/ROOT_IMAGE_STUDIES_BULK016.md",
-    "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md"
+    "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
+    "research/chart_learning/LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md"
   ],
   "rules": [
     {

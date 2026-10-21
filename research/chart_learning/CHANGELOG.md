@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 41 — August/September root price-line role-state case study
+
+- Reopened and deeply interpreted 17 previously source-classified root screenshots and four previously opened primary teaching PNGs 064/068/076/079; no source-census increment, no competence claim.
+- Compared manually annotated Sep08 rising parallel-channel (July internal-rail break, Aug lower rail, Sep underside approach), manually marked Sep21 US Nas100 overhead declining resistance, and Aug25 platform auto-MA controls; separated visual structure from non-verified ex-ante annotation timing.
+- Added explicit H-CH-1/2/3 rival models, future-candle acceptance requirements, retrospective fitting and duplicate-frame controls; anchors remain unset without true prior OHLCV.
+- S02 PAUSED_AFTER_D03, no scan, D04, order, production changes, profit or promoted CANONICAL rule.
+
+
 ## 2026-10-20 — Revision 40 — BULK017 109 April original pixels and four explicit access failures
 
 - April metadata 113 images across 18 cohorts. Actual source pixels viewed 109 (20 price/heatmap charts, 7 market/theme references, 82 unrelated/work excluded), 4 source bytes unavailable after exact retry / NOT VERIFIED. SHA-256 found 10 exact original duplicate filename-pairs including ETH/KRW Apr03, avoiding manufactured independent evidence. March24/25->Apr03 ETH horizontal 3.25m resistance lost-acceptance candidate, no before-cutoff candle test. Orderbook heatmap bands distinguished from drawn support and executed price-volume.
