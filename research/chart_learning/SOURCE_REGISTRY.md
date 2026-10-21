@@ -1,3 +1,7 @@
+## TG-CHARTGOD-001/C — Confirmed chart-to-chat contextual links (2026-10-21)
+
+The previously identified named Telegram speaker did post and discuss nearby charts; detailed case mappings and provenance safeguards: [TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md](TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md). Four discussion families: BTC channel; daily/1h RSI tutorial; other member 1h BTC versus speaker 15m chart; higher-timeframe BTC. The screenshots are **the same already-counted Library root source files**, and do not establish independently correct forecasts or trading P&L.
+
 ## TG-CHARTGOD-001 — 2026-09-29 Telegram named-speaker group (2026-10-21)
 
 Source images visually re-opened from the already-counted Library root. Display name `신 차트의`, user alias `차트의신` (equivalence **not independently confirmed**). 24 screenshots feature the on-screen name amid other contributors, four adjacent/uncertain author sources and one QR-login screen excluded. Exact per-filename classification and source notes: [TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md](TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md). Price/RSI/timeframe concepts are the speaker's observations, not a verified trade edge or reproducible history. Other participants' messages, private account images and QR not published. Library root/image counts do not increase.

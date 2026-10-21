@@ -52,3 +52,8 @@ The original recovered Library-root Sep29 screenshots had previously been groupe
 - **Any method inference remains HYPOTHESIS ONLY.** No one expert (including `차트의신`) becomes canonical and no method/entry or performance rule is promoted merely by reclassification.
 - If earlier/later screenshots across other dates prove the same named speaker, extend with **new exact filenames and checked source pixels**; do not assume a complete exported Telegram chat archive was recovered. 69 separate Library-root originals were inaccessible at v49 and could contain additional material.
 - No S02 D04, new scanner, live orders or production edits.
+
+
+## Chart-to-message follow-up (2026-10-21, revision 51)
+
+A separate direct-image cross-reference now links the speaker's message fragments to their **actual embedded/adjacent TradingView charts** while distinguishing charts posted by others: [TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md](TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md). The earlier broad attribution tag means speaker name present in a mixed screenshot, not every chart authored by the named speaker. Four linked case families are now registered without extra counting or verified edge.

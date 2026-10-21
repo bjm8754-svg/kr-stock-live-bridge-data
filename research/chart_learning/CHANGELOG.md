@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 51 — TG-CHARTGOD original Telegram chart/message linkage
+
+- User correctly identified nearby charts were being lost by topic-only sorting. Reopened source images and linked original Sep29 Telegram dialogues and actual TradingView figures in four groups: 143434/143447/143748/143707; 144347/144353/144359/144405; 144521/144527/144535; 145216.
+- Established visible original chart-vs-reply provenance. Some charts from another member (e.g. wk k, 메이크33), some directly embedded in `신 차트의` postings, with clip/export time vs chat time vs bar-time distinguished. Screenshot pair crops are overlapping evidence, not new trades.
+- Dedicated linkage ledger TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md; speaker group reference updated. Count remains 1,665 root, 1,596 visual +69 inaccessible, 91 curated original files read/0 mastered. No strategy promotion, no S02/scanner/production action.
+
+
 ## 2026-10-21 — Revision 50 — Separate `차트의신` / displayed `신 차트의` Telegram source group
 
 - Identified earlier missing *speaker-specific* sorting: Sep29 Telegram/TradingView screenshots were catalogued by RSI and price line themes but their named sender had not been segregated. Reopened all 39 source images from date; tagged contiguous 29 14:xx captures, excluded Telegram login QR, tagged 24 visible-speaker/mixed images versus 4 uncertain/context images. Exact 28-file ledger: TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md.

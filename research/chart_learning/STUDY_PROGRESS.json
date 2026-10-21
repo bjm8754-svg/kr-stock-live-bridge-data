@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 50,
+    "methodologyVersion": 51,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -2497,7 +2497,12 @@
       "ledger": "research/chart_learning/TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md",
       "sourceAddedToExistingRootCensus": 0,
       "independentlyVerifiedTradingEdge": false,
-      "canonicalRulesPromoted": 0
+      "canonicalRulesPromoted": 0,
+      "linkedChartLedger": "research/chart_learning/TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md",
+      "chartGroups": 4,
+      "chartLinksVerifiedFromVisibleChat": true,
+      "distinctUnderlyingTradesVerified": 0,
+      "rootLibrarySourceCountDelta": 0
     }
   ]
 }

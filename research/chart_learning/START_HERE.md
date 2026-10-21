@@ -1,3 +1,7 @@
+## TG-CHARTGOD-001/C — Telegram dialogue linked back to nearby TradingView charts (2026-10-21)
+
+Reopened the 2026-09-29 Library-root Telegram screenshot sequence and cross-linked **four concrete case clusters** into [TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md](TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md): (A) converging trendlines, upper-break supply, (B) directly posted daily/1h RSI illustrations answering a dated chat question, (C) other member 1h BTC versus the named speaker's 15m RSI reply, and (D) a weekly BTC supply chart. Some adjacent charts are from other contributors; filename proximity alone is **not** attribution. No new source count or proven outcomes; master/scanner/S02 remain unchanged.
+
 ## TG-CHARTGOD-001 — Telegram `신 차트의` / user-named `차트의신` group separated (2026-10-21)
 
 The existing 2026-09-29 Library root Telegram / TradingView screenshots now have a **speaker-aware source group**, not just multitimeframe RSI topic labels: [TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md](TELEGRAM_CHARTGOD_SOURCE_GROUP_20260929.md). Reopened 39 images; 29 belong to the 14:xx screenshot continuity group, including one private Telegram login excluded. Of remaining 28, **24** contain visible `신 차트의` speaker-labelled/mixed messages; four are adjacent chart or uncertain-other-speaker context. Alias `차트의신` supplied by user, **not independently established as the display name**. All 39 were already classified: no census increment. Separate other participant opinions; no PNL, contact/QR data or raw images published. Rules/strategy/return not verified. Curated 91 sources already opened, mastered=0. S02 scanner and production unchanged.
@@ -84,7 +88,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 50
+**Learning revision:** 51
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
