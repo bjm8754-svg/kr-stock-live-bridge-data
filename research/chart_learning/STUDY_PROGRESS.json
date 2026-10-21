@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 55,
+    "methodologyVersion": 56,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_DEEP_REVIEW_REQUIRED_DIAGNOSTICS_PAUSED",
+    "status": "SOURCE_FIRST_DEEP_REVIEW_BATCH_001_DONE_MORE_SOURCE_READING_REQUIRED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Finish meaningful deep study of all accessible RELEVANT chart/lecture/Telegram materials and original author annotations; integrate competing views and invalidation examples before resuming unfamiliar market-transfer work; 69 inaccessible original images remain NOT VERIFIED.",
+    "deliverable": "Deep-review remaining available relevant actual price/volume/time original images (#023-044, #046-050, #053-055, #057, #059, #063, #065, #067, #069-073, #086-091); read U001/U002 source text/PDF/video evidence fully; expand attributed Telegram and manual drawing source; then integrate coherent hypothesis without trial or code. 69 inaccessible remain NOT VERIFIED.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2562,7 +2562,7 @@
   ],
   "sourceFirstDeepReview": {
     "dateKst": "2026-10-21",
-    "status": "IN_PROGRESS_NOT_COMPLETE",
+    "status": "IN_PROGRESS_AT_LEAST_ONE_DIRECT_CROSS_SOURCE_STUDY",
     "reviewLedger": "research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md",
     "curatedOriginalsOpened": 91,
     "curatedOriginalsMastered": 0,
@@ -2571,6 +2571,62 @@
     "telegramSpeakerLinkedChartsDeepMethodStudyDone": false,
     "lectureVideosAndDocumentsIntegrated": false,
     "manualDrawnLineAnchorReconstructionDone": false,
-    "independentTransferStageAuthorized": false
+    "independentTransferStageAuthorized": false,
+    "completedBatches": [
+      {
+        "id": "SRC-DEEP-001",
+        "dateKst": "2026-10-21",
+        "scope": "Teaching 23 originals + Telegram 10 direct originals + 2 previously cataloged June chart screenshots + canonical full 50-page parsed source text",
+        "status": "SOURCE_THEMES_AND_CONTRADICTIONS_DOCUMENTED_FURTHER_STUDY_REQUIRED",
+        "originalTeachingNumbers": [
+          "045",
+          "051",
+          "052",
+          "056",
+          "058",
+          "060",
+          "061",
+          "062",
+          "064",
+          "066",
+          "068",
+          "074",
+          "075",
+          "076",
+          "077",
+          "078",
+          "079",
+          "080",
+          "081",
+          "082",
+          "083",
+          "084",
+          "085"
+        ],
+        "telegramFilenames": [
+          "image(20260929-143434).png",
+          "image(20260929-143447).png",
+          "image(20260929-143748).png",
+          "image(20260929-144347).png",
+          "image(20260929-144353).png",
+          "image(20260929-144359).png",
+          "image(20260929-144405).png",
+          "image(20260929-144521).png",
+          "image(20260929-144527).png",
+          "image(20260929-145216).png"
+        ],
+        "otherLibraryChartFilenames": [
+          "image(116).png",
+          "image(117).png"
+        ],
+        "textDocument": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+        "deepLedger": "research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md",
+        "hypothesisMatrix": "research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md",
+        "linesPreEventAuthorProven": false,
+        "methodologyVerified": false,
+        "transferVerified": false
+      }
+    ],
+    "canonicalDocumentFullTextStudied": true
   }
 }

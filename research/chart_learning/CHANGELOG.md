@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 56 — SOURCE-FIRST SRC-DEEP-001 direct chart/image/text cross-source analysis
+
+- Actually reopened 23 original primary images (#045,#051,#052,#056,#058,#060-062,#064,#066,#068,#074-081,#082-085), 10 original Sep29 Telegram screenshots and two earlier root image(116)/(117) market screenshots; read full 50-page canonical DOCX extracted text and verbatim appendix, not only summary.
+- Saved SOURCE_DEEP_STUDY_P001_20261021.md and SOURCE_DEEP_P001_STATE_MATRIX.md with source links, recurring levels, precise chronology and contrasts. Critical unresolved `C_box` is NOT the arithmetic center or last box close by assumption; event close differs from box compressed close. Raw author's immediate-on-touch trend connector versus drawings' confirmation/reclaim routes are distinct information sets; cannot backfit later confirmations to earlier limit fills.
+- Telegram speaker chart attribution and daily/1h/15m RSI claims reconciled cautiously; 82–85 'before/after' TradingView replay is not independently sealed prior prediction; June yellow-marked volumes do not prove accumulation.
+- Source-first stage remains OPEN; no test/trade/scanner/S02/production actions, no increment to inventory or image mastery, 69 Library sources unavailable. This is an evidence-grounded method-comparison batch, not confirmed predictive advantage.
+ 
+
 ## 2026-10-21 — Revision 55 — Repair source-first correction ledger count and cross-reference
 
 - v54 correctly preserved the premature diagnostic pause and added L-017, but integrity CI failed since manifest `lessonCount` remained 16 after adding the 17th unique lesson. Updated it to 17 and referenced L-017 in CASES.md as required by the research-validator contract.

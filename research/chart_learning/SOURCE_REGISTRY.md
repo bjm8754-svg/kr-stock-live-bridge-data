@@ -1,3 +1,7 @@
+## SRC-DEEP-001 — Exact original figures and Telegram cross-source contrast (2026-10-21)
+
+Direct native-file study of 23 numbered primary images, 10 Sep29 speaker/adjacent Telegram screenshots, two June source annotation candidates and complete 50-page original canonical document. [Image-specific and cross-teacher reasoning](SOURCE_DEEP_STUDY_P001_20261021.md) · [Price-state ambiguity matrix](SOURCE_DEEP_P001_STATE_MATRIX.md). Explicitly unresolved: box internal close algorithm, drawing edit times, session-qualified RSI, spring rebound timing, matched prior-future annotations. No underlying proven trading edge and no source count changes.
+
 ## TG-CHARTGOD-001/C — Confirmed chart-to-chat contextual links (2026-10-21)
 
 The previously identified named Telegram speaker did post and discuss nearby charts; detailed case mappings and provenance safeguards: [TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md](TELEGRAM_CHARTGOD_CHART_LINKS_20260929.md). Four discussion families: BTC channel; daily/1h RSI tutorial; other member 1h BTC versus speaker 15m chart; higher-timeframe BTC. The screenshots are **the same already-counted Library root source files**, and do not establish independently correct forecasts or trading P&L.

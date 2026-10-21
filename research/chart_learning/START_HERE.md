@@ -1,3 +1,7 @@
+## SRC-DEEP-001 — Direct cross-source image and canonical study, source-first only (2026-10-21)
+
+Reopened **23 original numbered teaching figures**, **10 directly read Telegram chat/TradingView screens**, **2 original highlighted market images** and read the full **50-page canonical study text**. Recorded exact filenames, visually grounded line/box/spring differences, unidentified `C_box` calculation, **preplanned touch vs reaction-confirmed execution** conflict, replay BEFORE/AFTER hindsight risk, weekly/daily/1h/15m RSI explanations, and author-attribution cautions. [Full deep source report](SOURCE_DEEP_STUDY_P001_20261021.md) · [price-state hypothesis matrix](SOURCE_DEEP_P001_STATE_MATRIX.md). This is **one substantive source study batch, not completion of source research**. Curated 91 opened/0 mastered, 1,665 root entries=1,596 classified+69 unavailable, `EXP-SRC-001` paused, no new chart trial, scanner, S02, order or production code.
+ 
 ## User correction — Source deep review FIRST; further market-case diagnostics PAUSED (2026-10-21)
 
 The user reaffirmed source-review-first order. v53's three saved Oct20 as-of chart decisions are preserved and their evaluation **paused**, not a demonstrated edge or endorsement of further trials. Finish deep study of **available relevant source figures**, dated line provenance and contradictory cases before starting another market test. [SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md](SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md) defines the gate. Curated91 images 91/91 viewed but **0 mastered**; Library-root 1,596 visually categorized, **69 inaccessible NOT VERIFIED**; speaker-linked Telegram charts and lecture video/text need integrated deep review. S02, scanner and production remain locked.
@@ -100,7 +104,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 55
+**Learning revision:** 56
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
