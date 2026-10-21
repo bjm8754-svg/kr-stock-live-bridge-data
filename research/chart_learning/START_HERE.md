@@ -1,3 +1,7 @@
+## SRC-DEEP-006 — Real-library marked charts LG/Zoom/ETH and automatic-control rereads (2026-10-21)
+
+Directly examined **13 already-indexed native Library-root file entries**, grouped into a handful of **not independent trading** source families: May31 LG Display three-part editorial annotated sloping rail/blue zones, May27 Zoom weekly ~$90 breakout/$120 resistance social thesis vs May26 brokerage auto-MA/VaP, ETH March16/24/25 and duplicated April03 screenshots with complex thick-line provenance and **1h/daily/quote-time ambiguities**, and Sep01 HTS MA240/480/600/1000 settings screenshots (red arrows **UI tutorial**, not trades). [Source case deep report](SOURCE_DEEP_STUDY_P006_20261021.md) · [manual-vs-auto and time-origin matrix](SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md). This is source investigation only: posted 14k/50% claim, $90/$120 claim, and 3.25m lines have not been validated as pre-marked or fills. Primary 91 source rereads complete; full Library speaker/AV/source study remains OPEN; 69 inaccessible, independently mastered=0. No market diagnostics, S02, scanning, orders or production changes.
+ 
 ## SRC-DEEP-005 — All 91 curated native teaching images source-studied in five focused batches (2026-10-21)
 
 Completed direct rereads of the final **11 originals** #023/#025/#026/#032–034/#036–037/#042–044. Five batches now cover **91 distinct originals with direct native-pixel source observations** (23+17+18+22+11), with family-specific contradictions; [final 11-image source study](SOURCE_DEEP_STUDY_P005_20261021.md) and [91-original crosswalk](PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md). This is **primary educational source-review completeness**, not validated independent mastery: `imagesIndependentlyMasteredCount=0`; no accurate future predictions, real fills, rule performance or full Library review. Source study still OPEN for important manually annotated Library historical charts, Telegram remaining material and missing original AV chart frames. 69 inaccessible root source files isolated NOT VERIFIED; new scanning/S02/orders/production remain paused.
@@ -120,7 +124,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 60
+**Learning revision:** 61
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

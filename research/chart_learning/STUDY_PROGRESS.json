@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 60,
+    "methodologyVersion": 61,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "CURATED_91_PRIMARY_NATIVE_SOURCE_REREADS_DONE_CROSS_LIBRARY_TELEGRAM_AV_PENDING",
+    "status": "SRC_DEEP_006_MARKED_LIBRARY_SOURCE_CASES_STUDIED_MORE_RELEVANT_ORIGINALS_PENDING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue SOURCE FIRST across annotated 1,596 accessible Library-root sources (avoid unimportant/non-chart), remaining Telegram-original comparisons, U-001/U-002 original video source frames if actually obtainable, and source-family contradiction synthesis. 69 Library originals NOT VERIFIED. Only then user-approved independent unfamiliar market transfer; no new trading scans/S02.",
+    "deliverable": "Continue at existing Library-root image dates with genuinely hand-annotated candidate charts and remaining attributed Telegram file groups, prioritizing original author-marked line provenance and contradictions. The full 91 didactic source rereads are complete but not mastered; 69 inaccessible and video frames still NOT VERIFIED; no market tests/S02/scanners.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2562,7 +2562,7 @@
   ],
   "sourceFirstDeepReview": {
     "dateKst": "2026-10-21",
-    "status": "IN_PROGRESS_AT_LEAST_ONE_DIRECT_CROSS_SOURCE_STUDY",
+    "status": "PRIMARY_91_SOURCE_REVIEW_COMPLETE_LIBRARY_ANNOTATIONS_UNDER_DEEP_STUDY",
     "reviewLedger": "research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md",
     "curatedOriginalsOpened": 91,
     "curatedOriginalsMastered": 0,
@@ -2763,6 +2763,27 @@
         "sourceRereadFull": true,
         "validatedMarketEdge": false,
         "independentTransfer": false
+      },
+      {
+        "id": "SRC-DEEP-006",
+        "dateKst": "2026-10-21",
+        "status": "DIRECT_HISTORY_13_LIBRARY_SOURCE_FILES_MANUAL_VS_AUTO_CONTROL_NO_TRADING_VALIDATION",
+        "libraryFileEntriesNativeViewed": 13,
+        "groupedSourceFamilies": [
+          "LG_DISPLAY_MAY31_THREE_POST_SCREENS",
+          "ZOOM_MAY27_TWO_IMAGES_SOCIAL_VS_BROKER",
+          "ETH_MAR16_MAR24_MAR25_APR03_FIVE_SCREENS_PLUS_BTC_CONTROL",
+          "SEP01_TWO_HTS_TUTORIAL_SCREENSHOTS"
+        ],
+        "studyLedger": "research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md",
+        "sourceTypeMatrix": "research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md",
+        "visuallyUnavailableExcludedFilenames": [
+          "1774443033777.jpeg"
+        ],
+        "independentSkillDemonstrated": false,
+        "independentEconomicTest": false,
+        "sourceImageCountDelta": 0,
+        "highConfidenceManualEditTimestampVerified": false
       }
     ],
     "canonicalDocumentFullTextStudied": true,

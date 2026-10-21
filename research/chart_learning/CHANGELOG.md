@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 61 — SRC-DEEP-006 original annotated/indicator market screenshots vs chart-teacher ontology
+
+- Reread 13 previously categorized Library root original image entries, source-grouped into LG Display article crops (3 screenshots but one thesis), Zoom Communications social weekly $90 breakout/$120 old supply plus separate May26 daily brokerage image, ETH/KRW dual-pane Mar16/24/25/Apr03 snapshots with identical Apr03 duplicate and contemporaneous BTC auto-control, and Sep01 HTS MA240/480/600/1000 education/settings screenshots.
+- Compared line creation hypotheses and data ambiguity: LG's manually annotated-looking rails/bands and author's 14k/50% claim not verified as independent prior call; Zoom social old resistance to new support under possible $120 ceiling not verified as filled; ETH thick colored sweep manual-vs-custom auto indicator **unresolved**, last-quote/crosshair/qualified close separated; tutorial red arrows are UI markup not trading.
+- Excluded `1774443033777.jpeg` from pixel claims because its native image did not return in this reread; retained 69 *other already catalogued* inaccessible source count without asserting membership.
+- Source-only v61 report + mark-type matrix saved. No new image categorization, chart-test/outcome reading, scanner/S02/production/actual orders; 91 primary method source-read done but model mastery remains unproven.
+
+
 ## 2026-10-21 — Revision 60 — SRC-DEEP-005 and 91/91 primary original source rereads complete
 
 - Reopened last 11 native teaching original PNGs #023,#025,#026,#032,#033,#034,#036,#037,#042,#043,#044; recorded specific semantics of market-trace level creation, one event-line vs volume/time box region, wick 9,850 vs close 10,100 versus close 9,850, qualified upper retest and path after gap.

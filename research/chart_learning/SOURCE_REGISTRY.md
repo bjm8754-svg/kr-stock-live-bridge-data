@@ -1,3 +1,7 @@
+## SRC-DEEP-006 — Annotated historical Library screen sources and manual-vs-indicator controls (2026-10-21)
+
+Original pixel review of 13 earlier triaged screenshot file entries: LG Display editorial three-part chart, May27 Zoom weekly social thesis vs daily brokerage control, ETH/KRW March16/24/25 and Apr03 dual-pane mark/timeframe comparisons (including duplicate), Sep01 HTS-long-MA tutorial arrows. Detailed [source-level contradictions](SOURCE_DEEP_STUDY_P006_20261021.md) · [line author/timestamp matrix](SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md). All are separate from 91 primary corpus and are NOT authenticated ex-ante trading calls. No source count changed or program scan.
+
 ## SRC-DEEP-005 — Completion of native reading of all 91 didactic originals (2026-10-21)
 
 Last 11 actual source figures (#023,#025,#026,#032–034,#036–037,#042–044) reviewed for price-trace provenance, one-event-line vs time-built multi-candle box, exact wick-vs-close invalidation and close/retest/failed-acceptance states. [Full 11-original report](SOURCE_DEEP_STUDY_P005_20261021.md) · [disjoint 91-number topic crosswalk](PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md). Native 91/91 review completed as **teaching-source investigation**, not independent model mastery or wider Library completion. Scanner/S02 freeze persists.
