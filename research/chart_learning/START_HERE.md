@@ -1,3 +1,7 @@
+## SRC-DEEP-002 — Re-read 17 education figures + original lecture TXT/PDF (2026-10-21)
+
+Directly inspected **17 source image files** about how significant reference prices form (price/volume/time, exceptional event vs box, close role flip, bad overdrawn lines, nonmandatory breakout retest, U versus C_box) and read **the entire AI-summary TXT** and **all 14 edited-transcript PDF pages**. [Detailed study](SOURCE_DEEP_STUDY_P002_20261021.md). Key disagreements now recorded: 2–3× vs 10× volume are **illustrative and not thresholds**; **actual single adjustment bar close `C_adjust` cannot equal undefined multi-bar compressed `C_box` by assumption**; lecture's expected retest is **not guaranteed** (#067 expressly shows uninterrupted continuation/no-fill); monthly-close structural invalidation does not eliminate intramonth emergency risk. No original lecture video/chart frames verified. Source stage still OPEN; SRC-STUDY-001 and S02 remain paused; original91 source opened 91/0 mastered; root 1,596 classified/69 inaccessible.
+ 
 ## SRC-DEEP-001 — Direct cross-source image and canonical study, source-first only (2026-10-21)
 
 Reopened **23 original numbered teaching figures**, **10 directly read Telegram chat/TradingView screens**, **2 original highlighted market images** and read the full **50-page canonical study text**. Recorded exact filenames, visually grounded line/box/spring differences, unidentified `C_box` calculation, **preplanned touch vs reaction-confirmed execution** conflict, replay BEFORE/AFTER hindsight risk, weekly/daily/1h/15m RSI explanations, and author-attribution cautions. [Full deep source report](SOURCE_DEEP_STUDY_P001_20261021.md) · [price-state hypothesis matrix](SOURCE_DEEP_P001_STATE_MATRIX.md). This is **one substantive source study batch, not completion of source research**. Curated 91 opened/0 mastered, 1,665 root entries=1,596 classified+69 unavailable, `EXP-SRC-001` paused, no new chart trial, scanner, S02, order or production code.
@@ -104,7 +108,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 56
+**Learning revision:** 57
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

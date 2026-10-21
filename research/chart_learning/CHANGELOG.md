@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-21 — Revision 57 — SRC-DEEP-002 original 17 figure and two full lecture-source reviews
+
+- Opened 17 specific teaching-source PNG files #024,027-031,035,038-041,067,069-073; read entire original Clova AI summary TXT and all 14 pages of edited PDF transcript without inventing original video frames.
+- Source-based distinctions: event volume ('10×' cartoon) vs 2–3× lecture example **not** hard filters; range volume/time construction vs actual one-candle adjustment OHLC; correct C_box remains formula-unknown; close breakout/role flip vs expected next retest.
+- Explicit source contradiction: PDF strongly expects box retests but primary #067 visibly shows a legitimate continuation with **no retest/fill**; #073's 50/50 staged-buy is marked as illustrative, not a fixed portfolio rule.
+- Structural monthly or weekly close thesis versus intraperiod drawdown/emergency money-loss clock separated. No source-derived proven trade edge, no new market diagnostic/scan, no S02, no code and no additional source inventory or video proof. Ledger: SOURCE_DEEP_STUDY_P002_20261021.md.
+ 
+
 ## 2026-10-21 — Revision 56 — SOURCE-FIRST SRC-DEEP-001 direct chart/image/text cross-source analysis
 
 - Actually reopened 23 original primary images (#045,#051,#052,#056,#058,#060-062,#064,#066,#068,#074-081,#082-085), 10 original Sep29 Telegram screenshots and two earlier root image(116)/(117) market screenshots; read full 50-page canonical DOCX extracted text and verbatim appendix, not only summary.

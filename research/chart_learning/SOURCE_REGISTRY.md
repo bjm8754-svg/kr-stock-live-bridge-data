@@ -1,3 +1,7 @@
+## SRC-DEEP-002 — Source origins of price significance and lecture disagreement (2026-10-21)
+
+Directly viewed 17 original PNGs and reread whole 1,653-character summarized lecture TXT plus the corrected 14-page '조정봉' PDF. Source-specific ontology, retest non-fill counterexample, 2–3× vs 10× illustrative turnover and weekly/monthly structural-vs-emergency stop distinction: [SOURCE_DEEP_STUDY_P002_20261021.md](SOURCE_DEEP_STUDY_P002_20261021.md). Original audiovisual lecture frames still unverified; inventory and scanner/production state unchanged.
+
 ## SRC-DEEP-001 — Exact original figures and Telegram cross-source contrast (2026-10-21)
 
 Direct native-file study of 23 numbered primary images, 10 Sep29 speaker/adjacent Telegram screenshots, two June source annotation candidates and complete 50-page original canonical document. [Image-specific and cross-teacher reasoning](SOURCE_DEEP_STUDY_P001_20261021.md) · [Price-state ambiguity matrix](SOURCE_DEEP_P001_STATE_MATRIX.md). Explicitly unresolved: box internal close algorithm, drawing edit times, session-qualified RSI, spring rebound timing, matched prior-future annotations. No underlying proven trading edge and no source count changes.
