@@ -1,3 +1,7 @@
+## SRC-DEEP-012 — Explicit identity/indicator audit on native daily-weekly swing sources (2026-10-22)
+
+Five existing Library originals reviewed: 1000052596/2598.jpg are **LG CNS 064400** (prior BULK-016 misidentified as LG Energy Solution, now corrected), BTC/KRW 1787696307713.jpeg + 1000056913.jpg with weekly cropped duplicate chart-1(4).png. Visible BTC Stochastic RSI and Williams Acc/Dist cannot be called conventional RSI or CVD. Daily rebound versus weekly overhead is a structural question, **not verified divergence**. [Detailed source audit](SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md). No validated edge or production implications.
+
 ## SRC-DEEP-007 — Other speakers' BTC channel versus named Telegram teacher RSI chronology (2026-10-21)
 
 Additional source-pixel reread of 19 existing Sep29 Telegram chart/thread captures (17 not in SRC-DEEP-001's native reread set); [source-attributed interpretive ledger](SOURCE_DEEP_STUDY_P007_20261021.md). Key: 1h BTC chart by another user (`144521`) versus named speaker 15m RSI image (`144527`) with historic RSI70 crossing and *current* RSI around mid-40s; ascending cyan BTC channel posted in another participant's message near `145453` is **not** the teacher's certified plotted skill. Capture creation ≠ bar time/edit time; no research sample or core inventory count change.

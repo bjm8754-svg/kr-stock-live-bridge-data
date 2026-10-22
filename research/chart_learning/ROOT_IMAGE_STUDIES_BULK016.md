@@ -1,3 +1,5 @@
+> **Source-identification erratum (2026-10-22):** Original enlarged screenshots 1000052596.jpg (daily) and 1000052598.jpg (weekly) unmistakably show **LG씨엔에스 (LG CNS), ticker 064400**, **not LG Energy Solution**. The historical labels were wrong and have been corrected below. See SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md. This does not alter the original asset files or assert price forecasts.
+
 # Library root BULK-016 — May 02–31 full native-source triage (2026-10-20)
 
 **Source access:** All 82 distinct ChatGPT Library root original image files in 13 disjoint May-2026 UTC upload-date groups successfully materialized and were visually viewed in six chronological contact sheets. Eighteen originals additionally inspected at native image size. Original-image category counts: **20 price charts + 5 market/theme context + 11 private brokerage account/transaction images excluded + 46 non-chart work/personal/reference images excluded = 82**. All 82 accessible; no new inaccessible May file. Each Library root filename is listed once below. Privately identifying content is not reproduced.
@@ -10,7 +12,7 @@
 
 2. **Zoom Communications — May 27 1000052577.webp.** A social chart shows a shaded multi-year sideways base, apparent near-horizontal base breakout around **USD 90**, and a farther historical reaction/supply line around **USD 120**; caption names these levels. These are candidate analyst-selected box/supply anchors, not smooth software MAs. Hypotheses: repeated historical close/wick clusters define a provisional box edge, then a previously broken ceiling may become retest support; a distant high is a separate target/hurdle, not the entry condition. **NOT VERIFIED:** object-creation time, exact anchor bars, prior availability at the screenshot cut-off or later realized move. The separately captured ZM app screenshot 1000052578.webp shows beige volume-by-price bars and a green average-cost marker; these are platform/portfolio overlays, not proven hand-drawn price lines.
 
-3. **Automatic-overlay false positives.** BIO/KRW and VIRTUAL/KRW app frames explicitly label MA5/10/20/60/120/200, including thick red/gray/green curves. Oisol, LG Energy Solution, LS Electric, Marvel Technology, Amosense and US equity app images use similarly legend-labelled moving averages, Bollinger clouds, volume-at-price bands, or broker average-cost lines. Beige horizontal '매물대' blocks originate from a stated ten-cluster price-volume feature. **Default interpretation: software indicators, not an analyst's hand-selected resistance/stop**. Paired VIRTUAL images and LG Energy Solution daily/weekly frames are repeated market episodes, not separate outcome trials.
+3. **Automatic-overlay false positives.** BIO/KRW and VIRTUAL/KRW app frames explicitly label MA5/10/20/60/120/200, including thick red/gray/green curves. Oisol, LG CNS (064400), LS Electric, Marvel Technology, Amosense and US equity app images use similarly legend-labelled moving averages, Bollinger clouds, volume-at-price bands, or broker average-cost lines. Beige horizontal '매물대' blocks originate from a stated ten-cluster price-volume feature. **Default interpretation: software indicators, not an analyst's hand-selected resistance/stop**. Paired VIRTUAL images and LG CNS (064400) daily/weekly frames are repeated market episodes, not separate outcome trials.
 
 ## Next question: SRC-STUDY-001 still open
 
@@ -90,8 +92,8 @@ On a genuinely unfamiliar and unannotated chart, fix a prior as-of bar, establis
 | 2026-05-27 | 1000052585.jpg | NON_CHART_EXCLUDED | ORIGINAL_CONTACT_SHEET; Non-chart work/safety/personal/legal material; source excluded |
 | 2026-05-27 | 1000052595.jpg | PRIVATE_ACCOUNT_EXCLUDED | ORIGINAL_CONTACT_SHEET; Broker position/account/transaction; private, excluded |
 | 2026-05-27 | 1000052592.jpg | PRIVATE_ACCOUNT_EXCLUDED | ORIGINAL_CONTACT_SHEET; Broker position/account/transaction; private, excluded |
-| 2026-05-27 | 1000052596.jpg | MARKET_PRICE_CHART | NATIVE_AND_CONTACT; LG Energy Solution daily app, price-volume and indicator overlays |
-| 2026-05-27 | 1000052598.jpg | MARKET_PRICE_CHART | NATIVE_AND_CONTACT; LG Energy Solution weekly app, paired with daily |
+| 2026-05-27 | 1000052596.jpg | MARKET_PRICE_CHART | NATIVE_AND_CONTACT; LG CNS (064400) daily app, price-volume and indicator overlays |
+| 2026-05-27 | 1000052598.jpg | MARKET_PRICE_CHART | NATIVE_AND_CONTACT; LG CNS (064400) weekly app, paired with daily |
 | 2026-05-27 | 1000052605.jpg | MARKET_PRICE_CHART | ORIGINAL_CONTACT_SHEET; App screenshot; manual price anchor not established |
 | 2026-05-27 | 1000052602.webp | MARKET_CONTEXT | ORIGINAL_CONTACT_SHEET; LS Electric market news/article screenshot |
 | 2026-05-27 | 1000052607.jpg | MARKET_PRICE_CHART | ORIGINAL_CONTACT_SHEET; App screenshot; manual price anchor not established |

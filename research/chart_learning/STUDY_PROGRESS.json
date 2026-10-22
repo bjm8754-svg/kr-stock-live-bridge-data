@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 64,
+    "methodologyVersion": 65,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_SWING_AND_TELEGRAM_MULTI_TIMEFRAME_DIVERGENCE_RESEARCH_REGISTERED",
+    "status": "SOURCE_FIRST_P012_SWING_MULTIFRAME_INDICATOR_IDENTIFICATION_DONE_MORE_GENUINE_RSI_AND_CVD_SOURCE_REVIEW_PENDING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue studying authentic annotated daily/weekly Library cases and separate named Telegram speaker's 15m,1h,1D,1W narratives. Require synchronized completed RSI series for confirmed divergence, draw-line edit provenance and risk-based swing scenarios. CVD raw trade tape unavailable. Do not restart new scanner, S02 or independent market-case trial.",
+    "deliverable": "Continue source-first review of true RSI daily+weekly annotated charts and authenticated aggressive-delta CVD if present; distinguish source instrument names and plain vs stochastic RSI before any divergence claim. Check weekly supply and daily price role for swing; keep backtests/S02/scanner/production paused.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2875,6 +2875,25 @@
         "weeklyRsiDivergenceConfirmed": false,
         "originalCvdDataVerified": false,
         "economicSuccessVerified": false
+      },
+      {
+        "id": "SRC-DEEP-012",
+        "dateKst": "2026-10-22",
+        "status": "TWO_HISTORICAL_DAILY_WEEKLY_PAIRED_SCREENS_AND_INDICATOR_IDENTITY_AUDITED_NOT_DIVERGENCE_VERIFIED",
+        "sourceFiles": [
+          "1000052596.jpg",
+          "1000052598.jpg",
+          "1787696307713.jpeg",
+          "1000056913.jpg",
+          "chart-1(4).png"
+        ],
+        "distinctMarketEpisodes": 2,
+        "sourceIdentityErratum": "1000052596/2598 are LG CNS 064400 NOT LG Energy Solution",
+        "indicators": "BTC Stochastic RSI and Williams Acc/Dist distinguished from conventional RSI and CVD; LG CNS lower indicator identity unknown",
+        "report": "research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md",
+        "plainRsiDivergenceVerified": false,
+        "cvdEvidenceVerified": false,
+        "independentSwingEdgeVerified": false
       }
     ],
     "canonicalDocumentFullTextStudied": true,

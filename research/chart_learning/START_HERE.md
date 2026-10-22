@@ -1,3 +1,7 @@
+## SRC-DEEP-012 — Daily/weekly swing screenshots: verify indicator and ticker first (2026-10-22)
+
+Native original pairs for **LG씨엔에스 (LG CNS, 064400)** daily/weekly and **BTC/KRW** daily/weekly plus cropped duplicate were re-read. Corrected previous source inventory error calling LG CNS "LG Energy Solution"; old root BULK-016 now includes an erratum. BTC lower pane explicitly says **Stochastic RSI** and **Williams Acc/Dist** (not raw RSI or CVD); LG CNS orange/purple oscillator identity isn't verified. Price snapshots show short-term recoveries vs weekly historical overhead but **no authenticated RSI divergence** or successful swing plan. [Source & indicator audit](SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md). Curated 91 source reread still 0 independent mastery; 69 root Library files inaccessible; no scan/S02/market-case testing/production/trades.
+
 ## Swing-first source study — Telegram RSI on different timeframes (2026-10-22)
 
 **User reaffirmed: swing trading is the destination; study multitimeframe divergences carefully rather than 15m scalping.** Direct rereads of chart-sage #067/#073/#080 contrast no-pullback, U vs deeper C_box reservations and missed fills. [SWING-FIRST SOURCE STUDY](SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md). Telegram poster `신 차트의` uses daily/1h RSI price-cooling differences in screenshots `144347/144353/144359/144405`, 1h RSI cooling relative to price `145440`, daily RSI60 + weekly RSI70 **chat context** `144058`, and weekly **price-only** supply image `145216`. The old RSI70 15m alert in `144527` is not the current ~44.56 indicator and doesn't cancel a weekly swing thesis. **A verified weekly RSI divergence is NOT present in the directly viewed weekly screenshot**, and hidden/regular divergence must be aligned to completed pivots. [MTF ANALYST SOURCE STUDY](SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md). Primary hierarchy: weekly/monthly context → daily setup and reserved entry/structural invalidation → 1h/4h confirmation → 15m optional refinement. No claims of trader's proven performance, CVD evidence or backtest success. Source-first stage OPEN, 69 Library images unavailable, 0 independently mastered; no market tests/scans/S02/orders/production changes.
@@ -136,7 +140,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 64
+**Learning revision:** 65
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

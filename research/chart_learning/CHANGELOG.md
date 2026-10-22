@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-22 — Revision 65 — SRC-DEEP-012 correct company source and separate Stochastic RSI from plain RSI
+
+- Reopened 5 known Library native screenshots, clustered as two non-independent-prediction daily/weekly pairs: LG씨엔에스 code 064400 (daily/weekly) and BTC/KRW (daily/weekly plus crop). Corrected ROOT_IMAGE_STUDIES_BULK016.md, which previously mislabeled the 064400 stock as LG Energy Solution, with an explicit source erratum.
+- Screen UI has Stochastic RSI (14,14) and Williams Acc/Dist on BTC. Neither is a supplied exchange-qualified conventional RSI pivot pair or aggressive-delta CVD; LG CNS oscillator naming not verified. No **actual** completed daily/weekly RSI divergence established from these screenshots. Quotes/focused chart selected prices and incomplete bar states separated.
+- Weekly overhead price structure remains primary for swing analysis, daily price reaction secondary, 1h/15m indicators tertiary. Five screenshots are two underlying market examples and contain no verified ex-ante limits/fills or economic edge. Study: SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md.
+- Source-first stage OPEN, 69 inaccessible Library originals, S02/scanner/production and market-trial gates unchanged.
+
+
 ## 2026-10-22 — Revision 64 — Swing-first and Telegram multiple-timeframe RSI conditional interpretation
 
 - Revisited original teaching #067/#073/#080: continuation without retest is a real no-fill possibility, box U and C_box staged purchases are case examples not mandated 50/50, and a structure-based swing order reservation can remain pending for weeks. Review every three sessions is NOT a three-day holding rule. Source study saved as SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md.
