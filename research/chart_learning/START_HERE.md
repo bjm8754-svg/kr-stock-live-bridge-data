@@ -1,3 +1,7 @@
+## Swing-first source study — Telegram RSI on different timeframes (2026-10-22)
+
+**User reaffirmed: swing trading is the destination; study multitimeframe divergences carefully rather than 15m scalping.** Direct rereads of chart-sage #067/#073/#080 contrast no-pullback, U vs deeper C_box reservations and missed fills. [SWING-FIRST SOURCE STUDY](SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md). Telegram poster `신 차트의` uses daily/1h RSI price-cooling differences in screenshots `144347/144353/144359/144405`, 1h RSI cooling relative to price `145440`, daily RSI60 + weekly RSI70 **chat context** `144058`, and weekly **price-only** supply image `145216`. The old RSI70 15m alert in `144527` is not the current ~44.56 indicator and doesn't cancel a weekly swing thesis. **A verified weekly RSI divergence is NOT present in the directly viewed weekly screenshot**, and hidden/regular divergence must be aligned to completed pivots. [MTF ANALYST SOURCE STUDY](SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md). Primary hierarchy: weekly/monthly context → daily setup and reserved entry/structural invalidation → 1h/4h confirmation → 15m optional refinement. No claims of trader's proven performance, CVD evidence or backtest success. Source-first stage OPEN, 69 Library images unavailable, 0 independently mastered; no market tests/scans/S02/orders/production changes.
+
 ## SRC-DEEP-009 — RSI divergence vs price momentum cooling vs CVD evidence (2026-10-21)
 
 Directly reread native RSI educational sources **#002/#007/#010** and Sept29 Telegram 15m image `144527`: a *prior* RSI70 alert/circled RSI high coexists with a **current ~44.56** display, **not** two contemporaneous observations or proof of a bearish divergence. Added source-bound taxonomy for regular/hidden RSI divergence, matched completed price-pivot timestamps, first-knowable pivot time, timeframe separation, and CVD-vs-price absorption hypotheses requiring authentic aggressive trade-flow **and matching anchor/reset**. No original CVD tape verified and hidden-divergence economic claims untested. [Study](SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md). Source-first stage OPEN; all 91 teaching sources previously read but independently mastered=0, root Library 69 inaccessible. No S02, scanning, production or trading.
@@ -132,7 +136,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 63
+**Learning revision:** 64
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

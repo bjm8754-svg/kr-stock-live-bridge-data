@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-22 — Revision 64 — Swing-first and Telegram multiple-timeframe RSI conditional interpretation
+
+- Revisited original teaching #067/#073/#080: continuation without retest is a real no-fill possibility, box U and C_box staged purchases are case examples not mandated 50/50, and a structure-based swing order reservation can remain pending for weeks. Review every three sessions is NOT a three-day holding rule. Source study saved as SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md.
+- Directly reread eight exact original `신 차트의` Telegram source files: 144347/144353/144359/144405 (daily sharp rally and 1h RSI cooling, daily RSI 80→50 historical analog), 144058 (daily 60 and weekly 70 chat hypotheses), 145216 (weekly **price-only** overhead supply; not RSI divergence proof), 145440 (1h RSI cooling), 143940 (15m anecdotal RSI divergence). Compared previously directly reopened 144527 current RSI mid-40 vs older RSI70 alert. Registered independent timeframe interpretation and key evidence limits in SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md.
+- Swing method hierarchy: weekly/monthly regime & supply; daily setup, conditional limit and proper structural risk; 1h/4h setup development; 15m/5m optional execution context. RSI divergence needs corresponding qualified pivots, not merely RSI cooling. Weekly RSI divergence remains unverified, CVD original aggressor data missing. No verified trade edge, no production or S02/scanning actions.
+
+
 ## 2026-10-21 — Revision 63 — SOURCE-DEEP-009 RSI / CVD divergence research source audit
 
 - Reopened three native original price/RSI infographic images #002/#007/#010 and Telegram 20260929-144527.PNG at source pixel level. Named sender's BTCUSDT.P 15m chart marks an earlier RSI70 high/alert; actual screenshot's current RSI ~44.56. A historical alert cannot be interpreted as current reading or independently demonstrated regular bearish divergence.
