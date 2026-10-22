@@ -1,16 +1,16 @@
 {
   "status": "PASS",
-  "checkedAtKst": "2026-10-21 09:50:29 KST",
-  "expectedCompletedTradeDate": "20261020",
-  "scanTradeDate": "20261020",
+  "checkedAtKst": "2026-10-22 09:51:07 KST",
+  "expectedCompletedTradeDate": "20261021",
+  "scanTradeDate": "20261021",
   "scanStatus": "PASS",
-  "scanGeneratedAtKst": "2026-10-20T21:56:04.089919+09:00",
+  "scanGeneratedAtKst": "2026-10-21T22:08:15.942643+09:00",
   "methodologyVersion": "YBM_SWING_V2_2026-09-29_STRUCTURE_ROLE_CONTINUATION",
   "referenceConsensusCount": 3,
   "referenceDates": {
-    "005930": "20261020",
-    "000660": "20261020",
-    "035420": "20261020"
+    "005930": "20261021",
+    "000660": "20261021",
+    "035420": "20261021"
   },
   "reasons": [],
   "phase": "FINAL"
