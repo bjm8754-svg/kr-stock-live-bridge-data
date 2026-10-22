@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-22 — Revision 66 — Source-bounded momentum cooling versus genuine swing RSI divergence
+
+- Reopened actual Sep29 Telegram original screenshots 144353 (speaker's daily and 1h BTC price/RSI illustrative comparison) and 144405 (historical *past-chart* daily RSI cooling-from-upper-range analogy). Explicitly classified price sideways + 1h RSI fall as **potential normalization** rather than a proven matched-price-pivot RSI divergence.
+- Compared prior original LG CNS daily/weekly and BTC/KRW daily/weekly pairs: LG CNS lower indicator identity unknown; BTC Stochastic RSI and Williams Acc/Dist not plain RSI or CVD. Library topical search surfaced old didactic RSI posters, not newly authenticated multiweek ordinary-RSI synchronized price pivots.
+- Created SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md: matched completed-price swing dates and RSI samples required, first-knowable lag, weekly structural limits, daily entry levels, 1h/4h subordinate confidence, no-fill handling and separate structural/capital risk. Historical example success, future out-of-sample trading edge and CVD data remain unverified.
+- No running scans, market outcomes, S02, real orders, production or independent chart test; source-first gate unchanged.
+
+
 ## 2026-10-22 — Revision 65 — SRC-DEEP-012 correct company source and separate Stochastic RSI from plain RSI
 
 - Reopened 5 known Library native screenshots, clustered as two non-independent-prediction daily/weekly pairs: LG씨엔에스 code 064400 (daily/weekly) and BTC/KRW (daily/weekly plus crop). Corrected ROOT_IMAGE_STUDIES_BULK016.md, which previously mislabeled the 064400 stock as LG Energy Solution, with an explicit source erratum.

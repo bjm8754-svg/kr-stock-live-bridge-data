@@ -1,3 +1,7 @@
+## SRC-DEEP-013 — Swing: RSI cooling is NOT itself matched-pivot divergence (2026-10-22)
+
+Source-pixel reread of `image(20260929-144353).png` and `image(20260929-144405).png`: named Telegram speaker shows a daily BTC price surge then 1h RSI cooling during elevated-price consolidation, and calls their separate RSI80→~50 chart a **past historical analogy**. These sources explain plausible `COOLING_ONLY` without proving two matched daily higher price-high/lower RSI-high pivots or a future return. BTC weekly source is price-only; archived BTC app's Stochastic RSI is not plain RSI. Swings anchored to weekly/monthly price regime and daily structure, with 4h/1h RSI subordinate; 15m execution-only. [Read exact evidence and negative controls](SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md). No new true matched plain-RSI daily+weekly/cumulative-volume-delta series verified. Continue source-first; scanner/S02/blind trades/production remain off.
+
 ## SRC-DEEP-012 — Daily/weekly swing screenshots: verify indicator and ticker first (2026-10-22)
 
 Native original pairs for **LG씨엔에스 (LG CNS, 064400)** daily/weekly and **BTC/KRW** daily/weekly plus cropped duplicate were re-read. Corrected previous source inventory error calling LG CNS "LG Energy Solution"; old root BULK-016 now includes an erratum. BTC lower pane explicitly says **Stochastic RSI** and **Williams Acc/Dist** (not raw RSI or CVD); LG CNS orange/purple oscillator identity isn't verified. Price snapshots show short-term recoveries vs weekly historical overhead but **no authenticated RSI divergence** or successful swing plan. [Source & indicator audit](SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md). Curated 91 source reread still 0 independent mastery; 69 root Library files inaccessible; no scan/S02/market-case testing/production/trades.
@@ -140,7 +144,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 65
+**Learning revision:** 66
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
