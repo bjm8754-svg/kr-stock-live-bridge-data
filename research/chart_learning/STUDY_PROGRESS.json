@@ -1,6 +1,6 @@
 {
   "schema": "V3_METHODOLOGY_STUDY_PROGRESS_V1",
-  "updatedKst": "2026-10-22",
+  "updatedKst": "2026-10-23",
   "status": "IN_PROGRESS_NOT_COMPETENCE_PROVEN",
   "researchPhase": "METHODOLOGY_FIRST_SOURCE_STUDY",
   "currentObjective": "Independently derive, challenge and version chart-analysis reasoning using the 91 original 차트술사 PNGs as the primary study corpus, supplemented by expert plans and gap-specific external research.",
@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 67,
+    "methodologyVersion": 68,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_39_SEP29_ROOT_IMAGES_FULLY_INSPECTED_ACTUAL_PLAIN_RSI_SWING_PROOF_STILL_MISSING",
+    "status": "SOURCE_FIRST_ENTRY_FILL_VS_REACTION_AMBIGUITY_DOCUMENTED_PLAIN_RSI_EQUITY_SAMPLE_MISSING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Continue source-first case study with authentic equity daily/weekly chart and explicitly identified plain RSI at two matched completed price pivots; pre-event level timestamps and support/volume context required. Sept29 cohort now 39/39 native files inspected but only two newly relevant sources; 1h BTC annotated possible RSI divergence remains unverified. No scanner/S02/market tests or production.",
+    "deliverable": "Source-first follow-up: authenticate an already archived Korean-equity daily/weekly chart with explicit ordinary RSI(14), two completed price pivots and matching RSI dates; otherwise mark source gap. Retain P015 distinction between pre-reaction resting fills and later confirmed-reaction entry, alongside U/C_box/C_event timestamp availability. No market test, scanning, S02, orders or production.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -323,6 +323,12 @@
       "status": "91_OF_91_SOURCE_FILES_VIEWED_NOT_MASTERED",
       "source": "/차트공부_원자료_20260928/images/ and research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md",
       "claim": "All 91 numbered images have been directly opened at least once across sessions; v48 added 70 unique image source visual surveys. Zero controlled chart transfer or validated economic improvement; source survey != image mastery."
+    },
+    {
+      "type": "BOX_BREAKOUT_SOURCE_LOGICAL_CONFLICT_STUDY",
+      "status": "14_NATIVE_DIDACTIC_PNG_REOPENED_PLUS_CANONICAL_TEXT_NO_MARKET_TRANSFER",
+      "source": "research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md",
+      "claim": "Revisited exact original figure roles/illustrative numbers, differentiated precommitted U/C_box resting fills vs post-event completed reaction and no-fill continuation; C_event 12,600 post-breakout reference cannot be available before bar completion. Source reconciliation and proposed test design only; no C_box algorithm, authentic trade fills, unseen transfer or economic edge proven."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",

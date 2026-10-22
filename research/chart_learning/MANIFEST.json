@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 67,
-  "updatedKst": "2026-10-22",
+  "revision": 68,
+  "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",

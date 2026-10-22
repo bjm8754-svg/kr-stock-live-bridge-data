@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 68 — Source-first distinction between standing box limits and observed price defense
+
+- Direct native reread of 14 already-inventoried curated figures #064/#065/#066/#067/#068/#073/#074/#075/#076/#077/#078/#079/#080/#081, plus source canonical DOCX. No census increase and no unsupported skill claims.
+- Preserved the tension between early resting U/C_box limit fills (#073) and later observable C_box defense or failure (#076/#080); a bar-close response cannot improve the earlier resting fill retrospectively. Also distinguished new event candle close 12,600 (#077) from U=12,000, C_box=11,300: C_event is unknown until the event bar closes. #067 no-retest is a nonfill, not a loss/win.
+- Stored source-only P015 report and conditional state/fill test design, NOT a tested rule or complete calculated C_box. Retained original source-study gate and missing genuine completed plain-RSI Korean equity pair, 69 inaccessible Library files and 0 independently mastered originals. No S02, market test/scan, actual orders, production change or performance claim.
+
+
 ## 2026-10-22 — Revision 67 — Complete actual Sep29 screenshot source cohort audit without false divergence labels
 
 - Directly inspected remaining 12 unique native PNG/JPG files from 39-file Sep29 Library root cohort, building upon 27 directly inspected previously in source batches 001 and 007. The cohort includes many **non-chart** screenshots; don't count 39 as 39 expert cases.
