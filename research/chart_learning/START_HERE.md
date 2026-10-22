@@ -1,3 +1,7 @@
+## SRC-DEEP-014 — Complete native audit of Sep29 39-file archive cohort: BTC 1h RSI annotated case (2026-10-22)
+
+Reopened **the 12 remaining distinct native September29 Library-root image files**, completing that **39/39 date-cohort visual inventory**, which is **NOT 39 Telegram trading charts**. Only two newly relevant market files: `image(20260929-144556).png` is a named speaker's BTC **1h RSI 14 close** pane with turquoise annotations near price and RSI lower regions, but two matched completed price swing lows and their RSI values/mark creation time **cannot be certified**; `1000059670.jpg` is COHR daily with mixed software MA/Bollinger/Ichimoku and **unidentified lower oscillator**, not verifiable plain RSI divergence. The other 10 files provide no usable price/RSI research and private login/financial materials were not copied. [Study details](SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md). Multiweek swing priority weekly/monthly→daily→1h optional; no new edge, market scan, S02, live trade or production change. Root 69 unavailable source files remain.
+
 ## SRC-DEEP-013 — Swing: RSI cooling is NOT itself matched-pivot divergence (2026-10-22)
 
 Source-pixel reread of `image(20260929-144353).png` and `image(20260929-144405).png`: named Telegram speaker shows a daily BTC price surge then 1h RSI cooling during elevated-price consolidation, and calls their separate RSI80→~50 chart a **past historical analogy**. These sources explain plausible `COOLING_ONLY` without proving two matched daily higher price-high/lower RSI-high pivots or a future return. BTC weekly source is price-only; archived BTC app's Stochastic RSI is not plain RSI. Swings anchored to weekly/monthly price regime and daily structure, with 4h/1h RSI subordinate; 15m execution-only. [Read exact evidence and negative controls](SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md). No new true matched plain-RSI daily+weekly/cumulative-volume-delta series verified. Continue source-first; scanner/S02/blind trades/production remain off.
@@ -144,7 +148,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 66
+**Learning revision:** 67
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

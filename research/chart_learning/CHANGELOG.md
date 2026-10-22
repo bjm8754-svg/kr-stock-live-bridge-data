@@ -1,5 +1,13 @@
 # Immutable learning change history
 
+## 2026-10-22 — Revision 67 — Complete actual Sep29 screenshot source cohort audit without false divergence labels
+
+- Directly inspected remaining 12 unique native PNG/JPG files from 39-file Sep29 Library root cohort, building upon 27 directly inspected previously in source batches 001 and 007. The cohort includes many **non-chart** screenshots; don't count 39 as 39 expert cases.
+- Identified newly deep-read teacher-source `image(20260929-144556).png`: BTC 1h price plus plain RSI(14 close) chart and cyan marks at price/RSI troughs. Useful potential bullish divergence study, but two qualified price swing lows/RSI values and author markup creation time unverified; adjacent private self-reported account/P&L not retained.
+- `1000059670.jpg` COHR daily has crowded auto indicator stack and unidentified lower oscillator, so cannot establish plain RSI divergence. Remaining ten archive files excluded as unrelated/nonchart, without reproducing sensitive material.
+- Saved SRC-DEEP-014 research ledger; S02, scanner, unfamiliar market-case validation, outcomes and production unchanged. 91 educational originals source-studied, skill/edge still unverified and 69 Library originals inaccessible.
+
+
 ## 2026-10-22 — Revision 66 — Source-bounded momentum cooling versus genuine swing RSI divergence
 
 - Reopened actual Sep29 Telegram original screenshots 144353 (speaker's daily and 1h BTC price/RSI illustrative comparison) and 144405 (historical *past-chart* daily RSI cooling-from-upper-range analogy). Explicitly classified price sideways + 1h RSI fall as **potential normalization** rather than a proven matched-price-pivot RSI divergence.

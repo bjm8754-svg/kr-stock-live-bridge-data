@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 66,
+    "methodologyVersion": 67,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SWING_SOURCE_REVIEW_P013_COOLING_VS_DIVERGENCE_DISTINCTION_ADDED_NO_RSI_CONFIRMATION_YET",
+    "status": "SOURCE_FIRST_39_SEP29_ROOT_IMAGES_FULLY_INSPECTED_ACTUAL_PLAIN_RSI_SWING_PROOF_STILL_MISSING",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,9 +154,9 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Resume source-first target of independently verifiable daily/weekly plain RSI source with identical completed pivot timestamps, actual multiweek swing prior context and manual drawing time. Existing educational sources allow definitions, not historic edge; if no authentic source, mark unavailable, don't backfit charts. S02, blind trials and scanner paused.",
+    "deliverable": "Continue source-first case study with authentic equity daily/weekly chart and explicitly identified plain RSI at two matched completed price pivots; pre-event level timestamps and support/volume context required. Sept29 cohort now 39/39 native files inspected but only two newly relevant sources; 1h BTC annotated possible RSI divergence remains unverified. No scanner/S02/market tests or production.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
       "C_reference",
       "C_adjust",
@@ -2921,6 +2921,26 @@
         "hiddenDivergenceEdgeVerified": false,
         "originalCvdTapesVerified": false,
         "productionChanged": false
+      },
+      {
+        "id": "SRC-DEEP-014",
+        "dateKst": "2026-10-22",
+        "status": "LAST_12_LIBRARY_SEP29_COHORT_NATIVE_FILES_AUDITED_BTC1H_RSI_ANNOTATION_CANDIDATE_NOT_PROVEN",
+        "auditScope": "2026-09-29_Library_root_39_file_cohort",
+        "totalDistinctInGroup": 39,
+        "previousDistinctNativeReviewed": 27,
+        "remainingDistinctNewlyNativeReviewed": 12,
+        "relevantFiles": [
+          "image(20260929-144556).png",
+          "1000059670.jpg"
+        ],
+        "nonChartOrUnusablePriceRsiFiles": 10,
+        "sourceStudyLedger": "research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md",
+        "hourlyBullishDivergenceVerified": false,
+        "dailyPlainRsiDivergenceVerified": false,
+        "preEventMarkTimeVerified": false,
+        "independentSwingEdgeVerified": false,
+        "privacySensitiveContentCopiedToRepo": false
       }
     ],
     "canonicalDocumentFullTextStudied": true,
@@ -2950,6 +2970,19 @@
       "reviewCadenceNotHoldingCap": true,
       "proofLevel": "SOURCE_ONLY_NO_CONFIRMED_EDGE",
       "telegramLedger": "research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md"
+    },
+    "telegramRootSep29CohortVisualAudit": {
+      "status": "ALL_39_NATIVE_FILES_DIRECTLY_INSPECTED_NOT_39_EXPERT_CHARTS",
+      "dateKst": "2026-10-22",
+      "filesTotal": 39,
+      "scopedPreviouslyReviewed": 27,
+      "additionalUniqueReviewed": 12,
+      "addedPriceChartCandidate": "image(20260929-144556).png",
+      "addedIndicatorControl": "1000059670.jpg",
+      "relevantNewCount": 2,
+      "otherNewUnusableForStudy": 10,
+      "caveat": "Other previously reviewed files and this date group include duplicates/noncharts; no 39-trade claim",
+      "outcomeValidation": false
     }
   }
 }
