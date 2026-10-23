@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 71,
+  "revision": 72,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -55,7 +55,11 @@
     "research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md",
     "research/chart_learning/SOURCE_DEEP_P016_PROVENANCE_20261023.json",
     "research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
-    "research/chart_learning/USER_SOURCE_INTAKE_20261023_PROVENANCE.json"
+    "research/chart_learning/USER_SOURCE_INTAKE_20261023_PROVENANCE.json",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_P017_PROVENANCE_20261023.json",
+    "research/chart_learning/SOURCE_DEEP_P017_GRID_DIAGNOSTIC_20261023.json",
+    "research/chart_learning/source_diagnostics/measure_u004_grid.py"
   ],
   "rules": [
     {
@@ -135,7 +139,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 18,
+  "lessonCount": 19,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,

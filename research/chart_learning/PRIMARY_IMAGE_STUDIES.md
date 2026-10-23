@@ -1,3 +1,7 @@
+## SRC-DEEP-017 — v72 / 2026-10-23: grid dependency and confirmation clocks
+
+[SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md). Reopened all 16 U-004 attachments and 17 primary originals (#024/#032/#033/#041/#047/#066/#076/#082–091), plus relevant canonical sections. Source-pixel diagnostic finds near-parallel, approximately 58px-spaced guides in attachment1012; manually selected bounds and threshold sensitivity are recorded. This supports a geometric-grid hypothesis, not independently formed price levels, author-tool identification or predictive value. Separate horizontal price from sloped line(t), geometric children from independent anchors, live/post-market quotes from completed-bar defense, and resting-limit fills from later confirmation. Tesla/Meta panels and dated source pairs are overlapping evidence, not independent successes. L-019/C-013; no new rule or market test. Current second review:43/91 unique individual rereads, 48 remaining, 0 mastered; missing69 unchanged. U-004 scoped deep review completed with drawing-time/timeframe questions open. P016 C_box correction preserved. Transfer/economics remain unverified; SOURCE-FIRST and S02 pause unchanged.
+
 # PRIMARY ORIGINAL IMAGE STUDY — 차트술사 91장
 
 ## Current source erratum — v70 / 2026-10-23 (L-018)

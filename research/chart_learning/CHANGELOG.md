@@ -1,5 +1,10 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 72 — Audit geometric dependency and confirmation clocks
+
+- P017:33 actual image rereads (16 U004 +17 primary), canonical relevant text, hashed provenance and reproducible image-only line diagnostic. Near-regular spacing is not proof of independent anchors or an author tool. Sloped line(t), live/post-market fields, repeated panels and source replay clocks distinguished.
+- L-019/C-013 append-only; candidate source synthesis only. No canonical rule promotion, transfer, economics, new market data/test, missing-file recovery or production change. Second review43 unique primary files,48 remaining, mastered0; prior errors and histories retained. All current revision fields72; SOURCE-FIRST/S02 pause unchanged.
+
 ## 2026-10-23 — Revision 71 — Register 16 new user attachments as grouped source candidates
 
 - Individually opened 16 supplied image files, preserved exact filenames/attachment IDs/SHA-256/dimensions in U-004 provenance, and catalogued 8 provisional research families. Distinct bytes do not make overlapping screenshots independent forecasts. Prior root-census/missing69 and primary91 counters unchanged.

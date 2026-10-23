@@ -1,0 +1,230 @@
+{
+  "schema": "U004_SOURCE_GRID_DIAGNOSTIC_V1",
+  "sourceFilename": "1000061012.jpg",
+  "sha256": "14eb0df1b085889ddde0d501c3fc62e9cc9a2e6eb2a380f01831058b72560d40",
+  "imageSize": [
+    709,
+    1536
+  ],
+  "coordinates": "Original top-left pixels; compare all lines at x=300",
+  "method": "Manual line bands +/-7px, x=70..580, slopes .040..075 step .001; neutral dark pixels within +/-1px",
+  "runs": [
+    {
+      "threshold": 100,
+      "lines": [
+        {
+          "sourceLabel": "1352000",
+          "pixelSlopeYPerX": 0.051,
+          "yAtX300": 847.8,
+          "darkPixelCoverage": 0.871
+        },
+        {
+          "sourceLabel": "1309000",
+          "pixelSlopeYPerX": 0.047,
+          "yAtX300": 906.6,
+          "darkPixelCoverage": 0.045
+        },
+        {
+          "sourceLabel": "1269000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 966.0,
+          "darkPixelCoverage": 0.63
+        },
+        {
+          "sourceLabel": "1228000",
+          "pixelSlopeYPerX": 0.046,
+          "yAtX300": 1023.3,
+          "darkPixelCoverage": 0.027
+        },
+        {
+          "sourceLabel": "1188000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 1081.9,
+          "darkPixelCoverage": 1.0
+        },
+        {
+          "sourceLabel": "1144000",
+          "pixelSlopeYPerX": 0.047,
+          "yAtX300": 1140.1,
+          "darkPixelCoverage": 0.037
+        },
+        {
+          "sourceLabel": "1103000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 1198.0,
+          "darkPixelCoverage": 0.728
+        },
+        {
+          "sourceLabel": "1060000",
+          "pixelSlopeYPerX": 0.046,
+          "yAtX300": 1255.8,
+          "darkPixelCoverage": 0.039
+        },
+        {
+          "sourceLabel": "1019000",
+          "pixelSlopeYPerX": 0.052,
+          "yAtX300": 1314.1,
+          "darkPixelCoverage": 0.476
+        }
+      ],
+      "adjacentGapsAtX300": [
+        58.8,
+        59.4,
+        57.3,
+        58.6,
+        58.2,
+        57.9,
+        57.8,
+        58.3
+      ],
+      "medianGap": 58.25
+    },
+    {
+      "threshold": 145,
+      "lines": [
+        {
+          "sourceLabel": "1352000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 848.0,
+          "darkPixelCoverage": 0.992
+        },
+        {
+          "sourceLabel": "1309000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 906.9,
+          "darkPixelCoverage": 0.278
+        },
+        {
+          "sourceLabel": "1269000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 966.0,
+          "darkPixelCoverage": 0.814
+        },
+        {
+          "sourceLabel": "1228000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 1023.5,
+          "darkPixelCoverage": 0.227
+        },
+        {
+          "sourceLabel": "1188000",
+          "pixelSlopeYPerX": 0.047,
+          "yAtX300": 1081.6,
+          "darkPixelCoverage": 1.0
+        },
+        {
+          "sourceLabel": "1144000",
+          "pixelSlopeYPerX": 0.049,
+          "yAtX300": 1140.2,
+          "darkPixelCoverage": 0.27
+        },
+        {
+          "sourceLabel": "1103000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 1198.0,
+          "darkPixelCoverage": 0.906
+        },
+        {
+          "sourceLabel": "1060000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 1255.9,
+          "darkPixelCoverage": 0.205
+        },
+        {
+          "sourceLabel": "1019000",
+          "pixelSlopeYPerX": 0.049,
+          "yAtX300": 1315.2,
+          "darkPixelCoverage": 0.507
+        }
+      ],
+      "adjacentGapsAtX300": [
+        58.9,
+        59.1,
+        57.5,
+        58.1,
+        58.6,
+        57.8,
+        57.9,
+        59.3
+      ],
+      "medianGap": 58.35
+    },
+    {
+      "threshold": 180,
+      "lines": [
+        {
+          "sourceLabel": "1352000",
+          "pixelSlopeYPerX": 0.05,
+          "yAtX300": 848.0,
+          "darkPixelCoverage": 0.996
+        },
+        {
+          "sourceLabel": "1309000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 906.9,
+          "darkPixelCoverage": 0.411
+        },
+        {
+          "sourceLabel": "1269000",
+          "pixelSlopeYPerX": 0.049,
+          "yAtX300": 965.7,
+          "darkPixelCoverage": 0.826
+        },
+        {
+          "sourceLabel": "1228000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 1023.4,
+          "darkPixelCoverage": 0.378
+        },
+        {
+          "sourceLabel": "1188000",
+          "pixelSlopeYPerX": 0.045,
+          "yAtX300": 1082.0,
+          "darkPixelCoverage": 1.0
+        },
+        {
+          "sourceLabel": "1144000",
+          "pixelSlopeYPerX": 0.047,
+          "yAtX300": 1140.1,
+          "darkPixelCoverage": 0.389
+        },
+        {
+          "sourceLabel": "1103000",
+          "pixelSlopeYPerX": 0.049,
+          "yAtX300": 1198.2,
+          "darkPixelCoverage": 0.926
+        },
+        {
+          "sourceLabel": "1060000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 1255.9,
+          "darkPixelCoverage": 0.286
+        },
+        {
+          "sourceLabel": "1019000",
+          "pixelSlopeYPerX": 0.048,
+          "yAtX300": 1314.9,
+          "darkPixelCoverage": 0.509
+        }
+      ],
+      "adjacentGapsAtX300": [
+        58.9,
+        58.8,
+        57.7,
+        58.6,
+        58.1,
+        58.1,
+        57.7,
+        59.0
+      ],
+      "medianGap": 58.35
+    }
+  ],
+  "interpretation": "Near-parallel/equal-spacing source geometry only; not a price-formation rule or proof of the author's software",
+  "limitations": [
+    "Manually constrained bands, not unbiased line detection",
+    "Pixel spacing does not certify arithmetic price spacing or linear/log axis",
+    "Dotted guides have lower coverage than solid guides; JPEG/labels/candles interfere",
+    "No OHLCV, completed-bar times, drawing times, fills, profits or independent cases"
+  ]
+}

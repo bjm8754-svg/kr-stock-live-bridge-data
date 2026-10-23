@@ -1,3 +1,7 @@
+## SRC-DEEP-017 — v72 / 2026-10-23: grid dependency and confirmation clocks
+
+[SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md). Reopened all 16 U-004 attachments and 17 primary originals (#024/#032/#033/#041/#047/#066/#076/#082–091), plus relevant canonical sections. Source-pixel diagnostic finds near-parallel, approximately 58px-spaced guides in attachment1012; manually selected bounds and threshold sensitivity are recorded. This supports a geometric-grid hypothesis, not independently formed price levels, author-tool identification or predictive value. Separate horizontal price from sloped line(t), geometric children from independent anchors, live/post-market quotes from completed-bar defense, and resting-limit fills from later confirmation. Tesla/Meta panels and dated source pairs are overlapping evidence, not independent successes. L-019/C-013; no new rule or market test. Current second review:43/91 unique individual rereads, 48 remaining, 0 mastered; missing69 unchanged. U-004 scoped deep review completed with drawing-time/timeframe questions open. P016 C_box correction preserved. Transfer/economics remain unverified; SOURCE-FIRST and S02 pause unchanged.
+
 ## U-004 — 추가 사용자 차트 16개 등록 (2026-10-23)
 
 [U-004 추가 원본 16개 목록](USER_SOURCE_INTAKE_20261023_MARS_16.md). 첨부 16개 모두 개별 원본 열람, 8개 잠정 사례군(SK하이닉스 맥락/분봉, NAS100, 종목 추정 Disney, Tesla, Meta, 엘리스, KOSPI, 디티에스)으로 연결. 파일 바이트는16개 모두 다르지만 확대·중첩·재게시를 독립 예측으로 세지 않음. 선 세분화 전후, 큰 구간과 세부 구간, 진행 중 캔들·게시시각 구분, 09:22→09:23 디티에스(0015M0) 변화가 연구 후보. 수평·사선의 산출 근거는 미확정. 분봉은 스윙 보조자료만. SOURCE REVIEWED/CATALOGUED이며 심층 방법론·독립 적용·경제성 미검증. 기존 91장·Library-root 과거 집계·접근 불가69와 별도 묶음; 원본 이미지/전체 대화 GitHub 복제 없음.
@@ -164,7 +168,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 71
+**Learning revision:** 72
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
