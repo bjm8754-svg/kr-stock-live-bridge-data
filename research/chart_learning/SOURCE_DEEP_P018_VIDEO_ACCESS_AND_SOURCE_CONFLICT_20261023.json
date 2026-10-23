@@ -1,0 +1,251 @@
+{
+  "dateKst": "2026-10-23",
+  "baseHead": "0ab9f9363a3e0b0f263db38384a66f50aaa10386",
+  "scope": "4 registrations;2 full returned transcripts;0 video frames;method synthesis halted on primary-source terminology conflict",
+  "duplicateCheck": "Exact four video IDs absent from preexisting research records and distinct from V001 JSYuRdYKo2M",
+  "videos": [
+    {
+      "id": "V-002",
+      "videoId": "lq8ZRohkpn0",
+      "sourceUrl": "https://www.youtube.com/watch?v=lq8ZRohkpn0",
+      "title": "주식 공부 어떻게 하냐고? 뭐부터 하냐고? 닥치고 이거부터해",
+      "channel": "상상주식TV",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "durationSeconds": 1378,
+      "publishedAtAsReturned": "2025-12-18T04:01:42-08:00",
+      "metadataAccess": "YOUTUBE_WATCH_PAGE_PLAYER_RESPONSE_ACTUALLY_READ",
+      "watchPageSha256": "724194cc968629c4b0d4b4a0b6203baef209c6182b7675d785ad8edc8bbc35c6",
+      "transcriptAccess": "VIDIQ_KO_TRANSCRIPT_RETURNED_FULL_TEXT_READ",
+      "transcriptLanguage": "ko",
+      "captionKindObservedOnWatchPage": "asr",
+      "returnedTrackIdentity": "NOT_INDEPENDENTLY_MATCHED",
+      "transcriptCharacters": 9315,
+      "transcriptUtf8Sha256": "774c1d8e268ec3fa3bddc910233bd6f1f952cf3f921308c89b7a6ac560299efb",
+      "timestampsReturned": false,
+      "audioVerified": false,
+      "visualStatus": "VISUAL NOT VERIFIED",
+      "nativeFramesDecoded": 0,
+      "anchors": [
+        {
+          "anchor": "오늘 수익 낸 사람들이",
+          "codepointStart": 2541,
+          "codepointEndExclusive": 2553,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "종가 배팅",
+          "codepointStart": 3097,
+          "codepointEndExclusive": 3102,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "매매 복기",
+          "codepointStart": 4028,
+          "codepointEndExclusive": 4033,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "금액 줄여야 됩니다",
+          "codepointStart": 7090,
+          "codepointEndExclusive": 7100,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "마이너스 20%",
+          "codepointStart": 7376,
+          "codepointEndExclusive": 7384,
+          "timestampSeconds": null
+        }
+      ],
+      "limits": [
+        "No speaker audio or chart screen verification",
+        "No timestamp supplied; offsets are Python Unicode codepoint positions, not video times",
+        "All four direct caption responses HTTP200 empty; native transcript API HTTP400 FAILED_PRECONDITION",
+        "Storyboard response bodies were195-byte Site Unavailable HTML, not images; no frames inspected",
+        "KUi9rWYJHnI media range probe206 text/html, not video"
+      ],
+      "vidiqError": null
+    },
+    {
+      "id": "V-003",
+      "videoId": "KUi9rWYJHnI",
+      "sourceUrl": "https://www.youtube.com/watch?v=KUi9rWYJHnI",
+      "title": "[주식강의] 데이 트레이딩 시 반드시 확인해야 할 8가지 (feat. 홍인기님)",
+      "channel": "상상주식TV",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "durationSeconds": 1895,
+      "publishedAtAsReturned": "2024-09-30T21:33:48-07:00",
+      "metadataAccess": "YOUTUBE_WATCH_PAGE_PLAYER_RESPONSE_ACTUALLY_READ",
+      "watchPageSha256": "0c605abd5aca6bc391cc1fd4c342ffc9efd46053284988a6537ebbfa8577bef4",
+      "transcriptAccess": "NOT VERIFIED",
+      "transcriptLanguage": null,
+      "captionKindObservedOnWatchPage": "asr",
+      "returnedTrackIdentity": "NOT_INDEPENDENTLY_MATCHED",
+      "transcriptCharacters": null,
+      "transcriptUtf8Sha256": null,
+      "timestampsReturned": false,
+      "audioVerified": false,
+      "visualStatus": "VISUAL NOT VERIFIED",
+      "nativeFramesDecoded": 0,
+      "anchors": [],
+      "limits": [
+        "No speaker audio or chart screen verification",
+        "No timestamp supplied; offsets are Python Unicode codepoint positions, not video times",
+        "All four direct caption responses HTTP200 empty; native transcript API HTTP400 FAILED_PRECONDITION",
+        "Storyboard response bodies were195-byte Site Unavailable HTML, not images; no frames inspected",
+        "KUi9rWYJHnI media range probe206 text/html, not video"
+      ],
+      "vidiqError": "Insufficient credits; no charge; refresh Nov15 per connector; no retry"
+    },
+    {
+      "id": "V-004",
+      "videoId": "9thTjRx7Km0",
+      "sourceUrl": "https://www.youtube.com/watch?v=9thTjRx7Km0",
+      "title": "주식은 그냥 이게 다에요",
+      "channel": "상상주식TV",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "durationSeconds": 1564,
+      "publishedAtAsReturned": "2026-02-17T03:21:35-08:00",
+      "metadataAccess": "YOUTUBE_WATCH_PAGE_PLAYER_RESPONSE_ACTUALLY_READ",
+      "watchPageSha256": "954c2be6eeede428fef85a3d5a58e14d10871126f35a7efea285b960698e4301",
+      "transcriptAccess": "VIDIQ_KO_TRANSCRIPT_RETURNED_FULL_TEXT_READ",
+      "transcriptLanguage": "ko",
+      "captionKindObservedOnWatchPage": "asr",
+      "returnedTrackIdentity": "NOT_INDEPENDENTLY_MATCHED",
+      "transcriptCharacters": 11132,
+      "transcriptUtf8Sha256": "6b19e9fe6133afc0b937df468141eed0a975308d6232e4bb42f9ba4ea1e11ccd",
+      "timestampsReturned": false,
+      "audioVerified": false,
+      "visualStatus": "VISUAL NOT VERIFIED",
+      "nativeFramesDecoded": 0,
+      "anchors": [
+        {
+          "anchor": "분봉 거래대금",
+          "codepointStart": 1498,
+          "codepointEndExclusive": 1505,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "3년 안에",
+          "codepointStart": 5595,
+          "codepointEndExclusive": 5600,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "로봇으로 넘어가",
+          "codepointStart": 8272,
+          "codepointEndExclusive": 8280,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "스피어 일봉",
+          "codepointStart": 8497,
+          "codepointEndExclusive": 8503,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "분당 거래대금",
+          "codepointStart": 9566,
+          "codepointEndExclusive": 9573,
+          "timestampSeconds": null
+        },
+        {
+          "anchor": "실시간 종목 조회순",
+          "codepointStart": 9632,
+          "codepointEndExclusive": 9642,
+          "timestampSeconds": null
+        }
+      ],
+      "limits": [
+        "No speaker audio or chart screen verification",
+        "No timestamp supplied; offsets are Python Unicode codepoint positions, not video times",
+        "All four direct caption responses HTTP200 empty; native transcript API HTTP400 FAILED_PRECONDITION",
+        "Storyboard response bodies were195-byte Site Unavailable HTML, not images; no frames inspected",
+        "KUi9rWYJHnI media range probe206 text/html, not video"
+      ],
+      "vidiqError": null
+    },
+    {
+      "id": "V-005",
+      "videoId": "NK2Sr9X14vg",
+      "sourceUrl": "https://www.youtube.com/watch?v=NK2Sr9X14vg",
+      "title": "당신의 '주식인생'을 바꿔줄 주식강의",
+      "channel": "상상주식TV",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "durationSeconds": 2399,
+      "publishedAtAsReturned": "2026-02-21T20:33:46-08:00",
+      "metadataAccess": "YOUTUBE_WATCH_PAGE_PLAYER_RESPONSE_ACTUALLY_READ",
+      "watchPageSha256": "5e1c6232da6f69d2b6a6561293680a3a7187e03367895e06e16c23bd834837ee",
+      "transcriptAccess": "NOT VERIFIED",
+      "transcriptLanguage": null,
+      "captionKindObservedOnWatchPage": "asr",
+      "returnedTrackIdentity": "NOT_INDEPENDENTLY_MATCHED",
+      "transcriptCharacters": null,
+      "transcriptUtf8Sha256": null,
+      "timestampsReturned": false,
+      "audioVerified": false,
+      "visualStatus": "VISUAL NOT VERIFIED",
+      "nativeFramesDecoded": 0,
+      "anchors": [],
+      "limits": [
+        "No speaker audio or chart screen verification",
+        "No timestamp supplied; offsets are Python Unicode codepoint positions, not video times",
+        "All four direct caption responses HTTP200 empty; native transcript API HTTP400 FAILED_PRECONDITION",
+        "Storyboard response bodies were195-byte Site Unavailable HTML, not images; no frames inspected",
+        "KUi9rWYJHnI media range probe206 text/html, not video"
+      ],
+      "vidiqError": "Insufficient credits; no charge; refresh Nov15 per connector; no retry"
+    }
+  ],
+  "primaryConflictEvidence": [
+    {
+      "number": "047",
+      "file": "047_image(20260928-070403).png",
+      "sha256": "4f68e7e474651d767cc56cb491ee2de72a0ea3af4477e13fb798269b622cca73",
+      "access": "NATIVE_IMAGE_OPENED",
+      "visibleLabel": "#047 prose 종가; diagram/labels 중가",
+      "doesNotEstablish": "Numeric definition, exact algorithm or equality with another anchor"
+    },
+    {
+      "number": "066",
+      "file": "066_image(20260928-071030).png",
+      "sha256": "b7bee1f059db47e49755f9090a86ba5abd1b37f17b4026950486d3b7205ce587",
+      "access": "NATIVE_IMAGE_OPENED",
+      "visibleLabel": "박스 중가",
+      "doesNotEstablish": "Numeric definition, exact algorithm or equality with another anchor"
+    },
+    {
+      "number": "073",
+      "file": "073_image(20260928-071117).png",
+      "sha256": "e8ecee8d621e0616c68db70a9ddd2a59d9701dbc72e8099b3d95471f9377d82e",
+      "access": "NATIVE_IMAGE_OPENED",
+      "visibleLabel": "박스 중가",
+      "doesNotEstablish": "Numeric definition, exact algorithm or equality with another anchor"
+    },
+    {
+      "number": "076",
+      "file": "076_image(20260928-071143).png",
+      "sha256": "58974b956a6d834d79c55f0bfc3a699e9274a72478eed9216fb3cf280d088da0",
+      "access": "NATIVE_IMAGE_OPENED",
+      "visibleLabel": "박스 중가",
+      "doesNotEstablish": "Numeric definition, exact algorithm or equality with another anchor"
+    },
+    {
+      "number": "079",
+      "file": "079_image(20260928-071209).png",
+      "sha256": "371aebab700eaf37c86a10a2b42c5a8160bf90376e9655d75496f908bec1b6bb",
+      "access": "NATIVE_IMAGE_OPENED",
+      "visibleLabel": "박스 중가",
+      "doesNotEstablish": "Numeric definition, exact algorithm or equality with another anchor"
+    }
+  ],
+  "canonicalComparison": {
+    "file": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+    "access": "EXTRACTED_RELEVANT_TEXT_READ",
+    "exactLabels": "박스 종가",
+    "sourceFileSha256": "e9652a579ce8ceef06fc622695cf979ad874b1663d2c3b7e8661474105ee16d7"
+  },
+  "newTransferValidation": false,
+  "newEconomicValidation": false,
+  "newScansOrdersProductionChanges": false
+}

@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 72,
+  "revision": 73,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -59,7 +59,9 @@
     "research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md",
     "research/chart_learning/SOURCE_DEEP_P017_PROVENANCE_20261023.json",
     "research/chart_learning/SOURCE_DEEP_P017_GRID_DIAGNOSTIC_20261023.json",
-    "research/chart_learning/source_diagnostics/measure_u004_grid.py"
+    "research/chart_learning/source_diagnostics/measure_u004_grid.py",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_P018_VIDEO_ACCESS_AND_SOURCE_CONFLICT_20261023.json"
   ],
   "rules": [
     {
@@ -139,7 +141,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 19,
+  "lessonCount": 20,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -251,5 +253,23 @@
   "supplementalVideoSourceRegistry": "research/chart_learning/VIDEO_STUDIES.md",
   "userLectureResearchLedger": "research/chart_learning/USER_SOURCE_STUDIES.md",
   "primaryOriginalImageStudyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
-  "recoveredScreenshotLedger": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md"
+  "recoveredScreenshotLedger": "research/chart_learning/RECOVERED_SCREENSHOT_CATALOG.md",
+  "activeSourceConflict": {
+    "id": "SRC-TERM-001",
+    "status": "SOURCE_INCONSISTENT_METHOD_SYNTHESIS_HALTED",
+    "detectedKst": "2026-10-23",
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+    "images": [
+      "047",
+      "066",
+      "073",
+      "076",
+      "079"
+    ],
+    "imageLabels": "047 mixed 종가 prose / 중가 diagrams;066/073/076/079 explicitly 박스 중가",
+    "canonicalLabel": "박스 종가",
+    "overbroadPriorClaim": "L018/P016 and v72 current errata attributed all 중가 wording to assistant mistranscription",
+    "resolution": "OPEN_NO_FORMULA_OR_EQUIVALENCE_INFERRED",
+    "safetyConflict": false
+  }
 }

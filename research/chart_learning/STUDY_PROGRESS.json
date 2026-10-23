@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 72,
+    "methodologyVersion": 73,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_GRID_DEPENDENCY_AND_CONFIRMATION_CLOCKS_AUDITED_ANCHOR_PROVENANCE_OPEN",
+    "status": "SOURCE_CONFLICT_RECORDED_NEW_METHOD_SYNTHESIS_HALTED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -156,7 +156,7 @@
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
     "deliverable": "Continue remaining 48 primary files #001–023/#025–031/#034–040/#042–045/#052–058 in current second review, then older Telegram/manual-channel sources. Preserve P016 CLOSE wording, P017 anchor dependency and line(t) distinction, P015 fill-vs-reaction clocks. Ordinary-RSI matched-pivot gap stays open. No market test, scan, S02, orders or production.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
     "requiredAnchorDisambiguation": [
       "C_box",
       "C_reference",
@@ -172,7 +172,8 @@
       "056",
       "058"
     ],
-    "stageLock": "SOURCE_DEEP_REVIEW_BEFORE_NEXT_MARKET_CASE"
+    "stageLock": "SOURCE_DEEP_REVIEW_BEFORE_NEXT_MARKET_CASE",
+    "blockingSourceConflict": "SRC-TERM-001; reconcile source labels/definitions before further synthesis; retain48-file original queue and existing priority."
   },
   "completedEvidence": [
     {
@@ -342,6 +343,12 @@
       "status": "33_NATIVE_IMAGES_REVIEWED_CANDIDATE_SYNTHESIS_ONLY",
       "source": "research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md",
       "claim": "16 U004 files and 17 numbered originals individually reopened; relevant canonical sections crosschecked. Manually bounded image-line diagnostic supports near-equidistant drawn grid, not author tool, independent price origins, predictive edge or trade fills. No new market case."
+    },
+    {
+      "type": "SUPPLEMENTARY_VIDEO_PARTIAL_REVIEW_AND_PRIMARY_SOURCE_CORRECTION",
+      "status": "4_REGISTERED_2_TRANSCRIPTS_0_VIDEO_FRAMES_NEW_SYNTHESIS_HALTED",
+      "source": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+      "claim": "All4 original watch-page metadata read;2 full returned Korean transcript texts read; other2 transcript access blocked. All4 audio/screens NOT VERIFIED. Native primary047/066/073/076/079 contradict blanket L018 CLOSE correction; append-only L020/C014 records mixed labels and stops new synthesis. No new source91 coverage or market validation."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -364,6 +371,74 @@
       ],
       "sourceRecord": "research/chart_learning/VIDEO_STUDIES.md",
       "status": "SOURCE_STUDIED_HYPOTHESES_NOT_VALIDATED",
+      "newCanonicalRulesPromoted": 0
+    },
+    {
+      "id": "V-002",
+      "videoId": "lq8ZRohkpn0",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "title": "주식 공부 어떻게 하냐고? 뭐부터 하냐고? 닥치고 이거부터해",
+      "sourcePublishedAt": "2025-12-18T04:01:42-08:00",
+      "studyDateKst": "2026-10-23",
+      "videoDurationSeconds": 1378,
+      "fullTranscriptReviewed": true,
+      "actualAudioVerified": false,
+      "fullVisualWalkthroughReviewed": false,
+      "videoFramesInspected": 0,
+      "timestampedChartSpeechMatched": false,
+      "sourceRecord": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+      "status": "TRANSCRIPT_TEXT_REVIEWED_VISUAL_NOT_VERIFIED",
+      "newCanonicalRulesPromoted": 0
+    },
+    {
+      "id": "V-003",
+      "videoId": "KUi9rWYJHnI",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "title": "[주식강의] 데이 트레이딩 시 반드시 확인해야 할 8가지 (feat. 홍인기님)",
+      "sourcePublishedAt": "2024-09-30T21:33:48-07:00",
+      "studyDateKst": "2026-10-23",
+      "videoDurationSeconds": 1895,
+      "fullTranscriptReviewed": false,
+      "actualAudioVerified": false,
+      "fullVisualWalkthroughReviewed": false,
+      "videoFramesInspected": 0,
+      "timestampedChartSpeechMatched": false,
+      "sourceRecord": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+      "status": "REGISTERED_METADATA_ONLY_NOT_VERIFIED",
+      "newCanonicalRulesPromoted": 0
+    },
+    {
+      "id": "V-004",
+      "videoId": "9thTjRx7Km0",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "title": "주식은 그냥 이게 다에요",
+      "sourcePublishedAt": "2026-02-17T03:21:35-08:00",
+      "studyDateKst": "2026-10-23",
+      "videoDurationSeconds": 1564,
+      "fullTranscriptReviewed": true,
+      "actualAudioVerified": false,
+      "fullVisualWalkthroughReviewed": false,
+      "videoFramesInspected": 0,
+      "timestampedChartSpeechMatched": false,
+      "sourceRecord": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+      "status": "TRANSCRIPT_TEXT_REVIEWED_VISUAL_NOT_VERIFIED",
+      "newCanonicalRulesPromoted": 0
+    },
+    {
+      "id": "V-005",
+      "videoId": "NK2Sr9X14vg",
+      "channelId": "UCjNKuCKVBIQsrRdqJBWpkqA",
+      "title": "당신의 '주식인생'을 바꿔줄 주식강의",
+      "sourcePublishedAt": "2026-02-21T20:33:46-08:00",
+      "studyDateKst": "2026-10-23",
+      "videoDurationSeconds": 2399,
+      "fullTranscriptReviewed": false,
+      "actualAudioVerified": false,
+      "fullVisualWalkthroughReviewed": false,
+      "videoFramesInspected": 0,
+      "timestampedChartSpeechMatched": false,
+      "sourceRecord": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+      "status": "REGISTERED_METADATA_ONLY_NOT_VERIFIED",
       "newCanonicalRulesPromoted": 0
     }
   ],
@@ -3228,6 +3303,48 @@
     "economicallyValidated": false,
     "full91SecondReviewComplete": false,
     "rawFilesModified": false,
+    "missing69Recovered": false
+  },
+  "activeSourceConflict": {
+    "id": "SRC-TERM-001",
+    "status": "SOURCE_INCONSISTENT_METHOD_SYNTHESIS_HALTED",
+    "detectedKst": "2026-10-23",
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+    "images": [
+      "047",
+      "066",
+      "073",
+      "076",
+      "079"
+    ],
+    "imageLabels": "047 mixed 종가 prose / 중가 diagrams;066/073/076/079 explicitly 박스 중가",
+    "canonicalLabel": "박스 종가",
+    "overbroadPriorClaim": "L018/P016 and v72 current errata attributed all 중가 wording to assistant mistranscription",
+    "resolution": "OPEN_NO_FORMULA_OR_EQUIVALENCE_INFERRED",
+    "safetyConflict": false
+  },
+  "sourceReviewWorkV73": {
+    "baseHead": "0ab9f9363a3e0b0f263db38384a66f50aaa10386",
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md",
+    "provenance": "research/chart_learning/SOURCE_DEEP_P018_VIDEO_ACCESS_AND_SOURCE_CONFLICT_20261023.json",
+    "supplementaryVideosRegistered": 4,
+    "returnedFullTranscriptsRead": 2,
+    "actualAudioVerified": 0,
+    "videoFramesInspected": 0,
+    "primaryRereadNumbers": [
+      "047",
+      "066",
+      "073",
+      "076",
+      "079"
+    ],
+    "primarySecondPassUniqueCountUnchanged": 43,
+    "remainingPrimarySecondPassCountUnchanged": 48,
+    "sourceFormulaResolved": false,
+    "newMethodSynthesis": "HALTED_ON_SOURCE_CONFLICT",
+    "transferValidated": false,
+    "economicallyValidated": false,
+    "priorReportsLessonsPreserved": true,
     "missing69Recovered": false
   }
 }

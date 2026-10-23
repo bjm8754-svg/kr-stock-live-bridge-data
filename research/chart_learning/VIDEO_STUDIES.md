@@ -45,3 +45,33 @@ This register stores original video source provenance and explicit **OBSERVED / 
 - For the claimed gas-project anecdote, no entry/stop/hedging/timeline or objective ex-ante exit policy was established; no inference of successful discipline is justified.
 
 **Verdict:** A substantive supplementary account of **execution capacity, contextual stock selection and opportunity selection**, relevant to the 91-image corpus, but **no newly proven canonical entry rule, returns advantage, or independent chart mastery**. Do not treat speaker's wealth/profit anecdotes as certified. This video is **STUDIED / SOURCE REVIEW COMPLETE**, with hypothetical principles pending blind transfer tests. **Do not restudy as a new source in the daily recurring channel workflow.**
+
+
+
+## Supplementary batch V-002–V-005 — 2026-10-23 / partial source review
+
+Exact-ID duplicate check: none of these four appears in preexisting records; V001 remains separate and unchanged. [P018](SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md) and [provenance](SOURCE_DEEP_P018_VIDEO_ACCESS_AND_SOURCE_CONFLICT_20261023.json) contain actual access scope, textual comparisons, offsets and blocked source details. No complete four-video audiovisual study, scene timestamps, transfer or economic validation. Original91/PDF/manual-chart priority unchanged; new synthesis halted by SRC-TERM-001.
+
+### V-002 — 주식 공부 어떻게 하냐고? 뭐부터 하냐고? 닥치고 이거부터해
+
+- Original: https://www.youtube.com/watch?v=lq8ZRohkpn0; channel 상상주식TV / `UCjNKuCKVBIQsrRdqJBWpkqA`; published as returned `2025-12-18T04:01:42-08:00`; length 22:58.
+- Access: VIDIQ_KO_TRANSCRIPT_RETURNED_FULL_TEXT_READ; actual audio NOT VERIFIED; **VISUAL NOT VERIFIED**,0frames. Original metadata read; no reliable speech timestamps.
+- Status: Partial text-based principles/teacher claims/counterexamples in P018; not chart-screen verified.
+
+### V-003 — [주식강의] 데이 트레이딩 시 반드시 확인해야 할 8가지 (feat. 홍인기님)
+
+- Original: https://www.youtube.com/watch?v=KUi9rWYJHnI; channel 상상주식TV / `UCjNKuCKVBIQsrRdqJBWpkqA`; published as returned `2024-09-30T21:33:48-07:00`; length 31:35.
+- Access: NOT VERIFIED; actual audio NOT VERIFIED; **VISUAL NOT VERIFIED**,0frames. Original metadata read; no reliable speech timestamps.
+- Status: Content review pending; do not infer claimed principles from the title.
+
+### V-004 — 주식은 그냥 이게 다에요
+
+- Original: https://www.youtube.com/watch?v=9thTjRx7Km0; channel 상상주식TV / `UCjNKuCKVBIQsrRdqJBWpkqA`; published as returned `2026-02-17T03:21:35-08:00`; length 26:04.
+- Access: VIDIQ_KO_TRANSCRIPT_RETURNED_FULL_TEXT_READ; actual audio NOT VERIFIED; **VISUAL NOT VERIFIED**,0frames. Original metadata read; no reliable speech timestamps.
+- Status: Partial text-based principles/teacher claims/counterexamples in P018; not chart-screen verified.
+
+### V-005 — 당신의 '주식인생'을 바꿔줄 주식강의
+
+- Original: https://www.youtube.com/watch?v=NK2Sr9X14vg; channel 상상주식TV / `UCjNKuCKVBIQsrRdqJBWpkqA`; published as returned `2026-02-21T20:33:46-08:00`; length 39:59.
+- Access: NOT VERIFIED; actual audio NOT VERIFIED; **VISUAL NOT VERIFIED**,0frames. Original metadata read; no reliable speech timestamps.
+- Status: Content review pending; do not infer claimed principles from the title.

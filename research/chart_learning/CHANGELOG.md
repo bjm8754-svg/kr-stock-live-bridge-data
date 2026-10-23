@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 73 — Four supplementary video registrations, partial review and source-conflict halt
+
+- V002–V005 metadata actually read; V002/V004 full returned Korean transcripts read, others content NOT VERIFIED; all4 actual audio/chart screens NOT VERIFIED. Direct caption/API/storyboard/media access failures documented by response content, not HTTP success alone. Exact IDs deduplicated; offsets/hashes without fabricated timecodes.
+- Reopened primary047/066/073/076/079 and relevant canonical sections. Images explicitly show 중가 or mixed terminology, falsifying blanket native-CLOSE attribution in L018/P016. Append-only L020/C014; current MASTER/progress/registry acknowledge SRC-TERM-001 and halt new method synthesis. Older reports/lessons retained; no formula/equivalence inferred or rule promotion.
+- Revision73 synchronized; second-pass43/91 and remaining48 unchanged. Original priority/missing69/mastered0/source-first/S02 pause remain. No new market experiment, scan, simulation, orders or operations.
+
 ## 2026-10-23 — Revision 72 — Audit geometric dependency and confirmation clocks
 
 - P017:33 actual image rereads (16 U004 +17 primary), canonical relevant text, hashed provenance and reproducible image-only line diagnostic. Near-regular spacing is not proof of independent anchors or an author tool. Sloped line(t), live/post-market fields, repeated panels and source replay clocks distinguished.
