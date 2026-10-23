@@ -1,0 +1,173 @@
+{
+  "revision": 81,
+  "dateKst": "2026-10-23",
+  "baseHead": "d64017bad2936054fba0c107701f4b8aca8329fc",
+  "report": "research/chart_learning/SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md",
+  "files": [
+    {
+      "filename": "1000052767.jpg",
+      "bytes": 165442,
+      "sha256": "dc622f539e9a31e66bfe9cee2e4952d2a705fd475f90513b77a0b7ace5b04841",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052769.jpg",
+      "bytes": 169134,
+      "sha256": "af254250a9d6d1dbf4474b83302319bcba46fa83d1ae71151230c956bea97a99",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052771.jpg",
+      "bytes": 144640,
+      "sha256": "31be84ae105a1bee7195e1a4b9c976768f800320ce622046a25c8754ee188ab9",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052577.webp",
+      "bytes": 111403,
+      "sha256": "891b16dbef4cdb07b76099677a40ed9bbbf420d105b8d891ad91abb8359e198b",
+      "dimensions": [
+        1378,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052578.webp",
+      "bytes": 243408,
+      "sha256": "9b77914f9ab9bb44092f312e29e9d66cf60aeb0730b7f9cb9c0dc37695d1e889",
+      "dimensions": [
+        1536,
+        804
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052596.jpg",
+      "bytes": 125486,
+      "sha256": "c19a55c718f327ae21ebd5e06c7474ab68e704bf06b679e378bd00801f2ee57b",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "1000052598.jpg",
+      "bytes": 125675,
+      "sha256": "71a39ad5246af2d157001ffb63d5e800df067dcf40e5907cdc315b03b03ba345",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_PIXELS_ACTUALLY_VIEWED",
+      "independentPrediction": false
+    },
+    {
+      "filename": "016_image(20260928-065818).png",
+      "bytes": 443896,
+      "sha256": "3073dd732881d836a71e64ca74eea4411e6a173cf8d498800dac32444281e9a1",
+      "access": "LIBRARY_REACQUIRED_EDUCATION_PNG_PIXELS_VIEWED"
+    },
+    {
+      "filename": "036_image(20260928-070148).png",
+      "bytes": 603819,
+      "sha256": "c9eaa312c513c38c7d4dc08014965d7074ec8d6eda6e88bb3cb3e778a0189249",
+      "access": "LIBRARY_REACQUIRED_EDUCATION_PNG_PIXELS_VIEWED"
+    },
+    {
+      "filename": "062_image(20260928-070650).png",
+      "bytes": 1026461,
+      "sha256": "d40c59247c17f0d97893926f3a1381cfd54d47317e6231971f3a4299fc174f7d",
+      "access": "LIBRARY_REACQUIRED_EDUCATION_PNG_PIXELS_VIEWED"
+    },
+    {
+      "filename": "067_image(20260928-071036).png",
+      "bytes": 861418,
+      "sha256": "0fbb91738d63ee06533e8c6da88c601c8aa2db817432ee911e9e67e5771521e6",
+      "access": "LIBRARY_REACQUIRED_EDUCATION_PNG_PIXELS_VIEWED"
+    },
+    {
+      "filename": "078_image(20260928-071159).png",
+      "bytes": 663364,
+      "sha256": "73acba24efa98855a33710c661555dd901edd62c53bf28a9189cab1545b6099c",
+      "access": "LIBRARY_REACQUIRED_EDUCATION_PNG_PIXELS_VIEWED"
+    },
+    {
+      "filename": "5_620385370813707921_20261015_101720.pdf",
+      "bytes": 178487,
+      "sha256": "b285082060a6016cd222dee897fc4a3e1e4ba84857b136a27c7d7a85ea42ae0c",
+      "access": "LIBRARY_REACQUIRED_EDITED_TRANSCRIPT_TEXT_AND_RENDERED_PAGES",
+      "pages": [
+        3,
+        4,
+        7
+      ],
+      "originalLectureChartScreensVerified": false
+    }
+  ],
+  "sourceExposure": "SOURCE_EXPOSED_NOT_BLIND",
+  "completionLedger": [
+    {
+      "family": "ZM",
+      "historicalDaily": "05/22 displayed high bar has later05/26 bar in source;source-internal completion only",
+      "historicalWeekly": "earlier base bars excluding rightmost",
+      "latestDailyFinalClose": "NOT_VERIFIED",
+      "latestWeeklyFinalClose": "NOT_VERIFIED",
+      "sameCutoffPairVerified": false
+    },
+    {
+      "family": "LG_DISPLAY",
+      "weeklySelectionVisuallyVerified": true,
+      "olderInteriorBars": "source-completed context",
+      "dateSelectorProvesNewFinishedBar": false,
+      "sourceFilesIndependent": false
+    },
+    {
+      "family": "LG_CNS",
+      "dailyAndWeeklySelected": true,
+      "sameCutoffVerified": false,
+      "lastClosedWeekDate": "NOT_VERIFIED",
+      "priorHighLabels": [
+        99400,
+        100800
+      ],
+      "plainRSIorCVDIdentityVerified": false
+    }
+  ],
+  "privateCostBasisValuePublished": false,
+  "sourceVerifiedCurrentCompletedDailyWeeklyPairCount": 0,
+  "exchangeOHLCAuthenticated": false,
+  "canonicalRulesPromoted": false,
+  "termConflictResolved": false,
+  "missing69Recovered": false,
+  "primaryMastered": 0,
+  "newVideoAV": false,
+  "newMarketData": false,
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "s02Progression": "PAUSED_AFTER_D03",
+  "preservedV80Registry": {
+    "bytes": 49911,
+    "sha256": "3720e702086a906c6205787a0c7a2424dce27d0b9ce80e9f96d2047656000231"
+  },
+  "next": "Existing original plans/comments:old entry failure versus genuinely new lower-entry thesis, confirmation vs waiting/add/no-rebound risk;no new hidden outcomes"
+}

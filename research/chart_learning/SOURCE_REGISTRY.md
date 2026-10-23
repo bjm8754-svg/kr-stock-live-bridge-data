@@ -1,3 +1,9 @@
+## CURRENT v81 — swing source completion and risk-clock comparison
+
+[SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) / [SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json](SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json). Reaccessed7existing LGDisplay/ZM/LGCNS files,5primary PNGs and edited adjustmentPDF pp3/4/7(text+renders,not raw lecture frames). Older interior bars support source-level structure questions; last daily/weekly finality and same cutoff remain unverified. Exact source-authored entry/stop not reconstructed. ZM personal cost-basis line excluded from market anchors; private cost value omitted. Current source census unchanged; no fresh DOCX/TXT/video access or independently demonstrated skill. Complete v80/v79 historical text below retained byte-for-byte. SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production. Transfer/economics false.
+
+---
+
 ## CURRENT v80 — public chronology, original access and full-tail preservation
 
 [SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json): actual Library reaccess of U0041018/1020/1016/0996/1012, all match prior U004 SHA. Primary039/056/057 actually reopened. DTS relative clock sequence is corroborated but calendar/completed bar/drawing objects NOT VERIFIED; KOSPI is ongoing-bar evidence; SK extra lines add no proven independent anchor. Later7:53 expression uploaded earlier than7:48 image. All SOURCE-EXPOSED; no blind/economic claim or new source-census/mastery count. U005/channel derivatives remain dependent known material, not new chronological outcomes.

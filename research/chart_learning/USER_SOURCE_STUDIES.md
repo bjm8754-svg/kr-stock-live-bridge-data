@@ -1,3 +1,9 @@
+## CURRENT v81 — swing versus entry failure; fresh edited-PDF selection
+
+[SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) / [SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json](SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json). Actual editedPDF pp3/4/7 text+render review compared with016/036/062/067/078 and archived LG/ZM/LGCNS screens. Monthly structure wait does not itself authorize capital loss; lower weekly floor does not repair a failed upper entry; eventual-return wording conflicts with067 no-retest branch. Original lecture AV still NOT VERIFIED, numeric transcription ambiguities not promoted. New source-known candidate distinctions only; primary91/mastered0/video/missing counts unchanged.
+
+---
+
 ## CURRENT v80 — U004 chronology and information stages
 
 [SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json): earlier/later DTS1min, KOSPI live panels and SK-context guide subdivision actually reviewed. Earlier37279 exists before later37650 quote, but no independently derived exact anchor or stop. KOSPI lower-low/intrabar rebound is extra information without completed spring/holding. New guide density has no verified new source anchors. DOCX/PDF/TXT/video no fresh access this unit; broader integration and AV/term uncertainty retained. Price-only expert plans not searched as nonexistent chart attachments.

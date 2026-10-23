@@ -1,3 +1,15 @@
+# CURRENT RESEARCH STATUS — v81 / 2026-10-23 KST
+
+MANIFEST/STUDY_PROGRESS revision81. [SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) / [SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json](SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json). SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production. Transfer/economics false.
+
+- Actual source work:7LGDisplay/ZM/LGCNS market files,5primary016/036/062/067/078 PNGs, edited adjustment PDF pp3/4/7 text+renders. Older interior daily/weekly segments readable, but no authenticated same-cutoff current completed daily/weekly pair. All SOURCE-EXPOSED, no exact independent ex-ante trade reconstruction.
+- Candidate refinement: entry-setup failure, higher-timeframe structural contradiction, and capital-risk limit are separate states. Lower weekly support cannot silently rescue a failed higher-price entry; an early risk exit does not itself prove weekly bearish reversal.
+- Direct source conflicts: PDF monthly wait despite narrated~-20% intramonth movement does not establish finite risk safety; PDF eventual-revisit language cannot override067 no-pullback continuation;078 close breakout can subsequently fail. ZM brokerage personal cost-basis line is not a market support anchor (private numeric cost omitted).
+- ZM short upper-price damage may coexist with weekly base; LGCNS daily rebound remains below older weekly supply; LGDisplay layered boxes cannot turn one failed plan into indefinitely valid lower supports. Original authored timestamps/latest bar closure/order history remain unverified.
+- Full v79/v80 registry bodies retained;28 existing checks preserved plus full-v80-body regression. No mastery or rule promotion. Next existing-source plan-transition/no-rebound risk comparison; broader91/DOCX/TXT/PDF/video/practical scope unchanged.
+
+---
+
 # CURRENT RESEARCH STATUS — v80 / 2026-10-23 KST
 
 MANIFEST/STUDY_PROGRESS revision80. [SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json). SOURCE-FIRST;91/91 second-pass coverage/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trading/orders/production. Transfer/economics false.

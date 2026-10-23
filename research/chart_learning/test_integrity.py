@@ -410,6 +410,16 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(hashlib.sha256(suffix).hexdigest(),
                          "38fb68edcac09798d26c38485454c012696d8808df42380e34bef698b3fc1feb")
 
+    def test_v80_registry_complete_body_byte_preserved(self):
+        import hashlib
+        registry = (gate.BASE / "SOURCE_REGISTRY.md").read_bytes()
+        marker = "## CURRENT v80 — public chronology, original access and full-tail preservation".encode()
+        self.assertEqual(registry.count(marker), 1)
+        suffix = registry[registry.index(marker):]
+        self.assertEqual(len(suffix), 49911)
+        self.assertEqual(hashlib.sha256(suffix).hexdigest(),
+                         "3720e702086a906c6205787a0c7a2424dce27d0b9ce80e9f96d2047656000231")
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

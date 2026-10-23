@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 81 — Swing structure, entry failure and money-risk limits
+
+- P027:actual7market/5primary images and editedPDF3pages reviewed. Distinguish source-internal older completed bars from authenticated latest daily/weekly settlement; comparable current completed pair0. No new market result or orders.
+- Candidate three-state distinction:entry setup,higher-frame structure,capital constraint. Source conflicts:monthly close-wait versus finite loss;eventual retest versus067 continuation;breakout close versus078 later failure. ZM personal cost line excluded/private cost value not published. L025/C019 appended;rules/mastery/validation flags unchanged.
+- Full historical registry v79/v80 preserved;retain existing28 tests and add full-v80-body hash regression. Review historical suffixes,changed scope,remote readback; integrity does not prove chart competence. Broader original integrated source mission retained.
+
+---
+
 ## 2026-10-23 — Revision 80 — Public source chronology and hypothesis-specific failure
 
 - P026 actual5U004/3primary source access and prior-hash reconciliation; relative DTS/KOSPI/SK chronology bounded by distinct clock fields. Source-known audit only; no new outcome, exact ex-ante drawing, trade or performance validation.

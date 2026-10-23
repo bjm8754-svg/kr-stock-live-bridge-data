@@ -157,3 +157,8 @@ L-022 / [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md
 ## C-018 — Upload-order reversal and separate failure clocks (L-024)
 
 [SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md). Later7:53 SK-context screenshot representation uploaded0.383060sec before earlier7:48 file; upload sorting reverses depicted chronology. DTS9:23 price damage does not itself prove close failure of earlier37279 horizontal reference; KOSPI9:16 wick does not certify completed spring. Exact drawing edits/first creation unknown. Existing-source known-path audit only, no predictive/economic validation.
+
+
+## C-019 — Weekly structure surviving does not repair a failed entry (L-025)
+
+[SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md). ZM upper-price damage and weekly base candidate can coexist;LGCNS daily recovery remains under older supply;LGDisplay lower boxes do not indefinitely rescue upper-entry failures. EditedPDF monthly wait/return-to-entry narratives lack finite-loss/no-retest guarantees;primary067/078 provide rival paths. Personal brokerage cost basis excluded. Source-exposed candidate synthesis only,latest qualified completed pair0,not actual failure trades or validated economics.
