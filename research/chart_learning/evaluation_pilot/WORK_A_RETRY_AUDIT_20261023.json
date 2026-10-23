@@ -1,0 +1,23 @@
+{
+  "schema": "WORK_A_RETRY_PILOT_V2",
+  "baseHead": "d0f73c9f58a83703d76ea3b266b95d0d5afa530e",
+  "methodRevision": 83,
+  "requested": 10,
+  "dataQualified": 9,
+  "excluded": 1,
+  "fullV83FormalEligibility": false,
+  "workBRelease": false,
+  "curatorReferenceFrozen": true,
+  "independentReferenceReviewComplete": false,
+  "corpusExposureCoverageComplete": false,
+  "status": "NINE_DATA_PACKETS_PREPARED_WORK_B_BLOCKED_PENDING_INDEPENDENT_REFERENCE_REVIEW",
+  "sourcePolicy": "KRX raw historical daily records via pinned archive; pre-cutoff unit change only",
+  "delegateReviewersAssigned": false,
+  "approvalNeeded": "Explicit authorization to delegate reference-only review to two independent agents; no Work B analysis",
+  "deliverableSha256": {
+    "input": "86ff85f8785c66fd039d1cbd88096b931fd4dc0ec67e60dee9720cd7df1f44a2",
+    "sealedReference": "d90777352d79cd8ac768a8134f28b41cbf69edee28a8eb55274a4acce3cd7ed1",
+    "audit": "12ab163490c46a0e63530f59b45533dfe6eddbd5d0e3a2e358f05863b1b3bcc9"
+  },
+  "noProductionTradingOrOutcomeChanges": true
+}
