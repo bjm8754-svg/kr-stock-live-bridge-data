@@ -1,0 +1,23 @@
+{
+  "schema": "WORK_A_PILOT_PREPARATION_AUDIT_V1",
+  "baseHead": "bc562b6f3c3768c44df8e80f2df191148e0d8637",
+  "revisionOfMethodUnchanged": 83,
+  "status": "PREPARATION_INCOMPLETE_ANALYSIS_BLOCKED",
+  "requested": 10,
+  "fetched": 10,
+  "prefixValidCandidates": 7,
+  "dataFailed": 3,
+  "eligible": 0,
+  "analysisOccurred": false,
+  "rubricRiskFrozen": true,
+  "independentReferenceFinal": false,
+  "blockers": ["PIT adjustment vintage", "source exposure gaps", "exchange calendar reconciliation", "independent reference/calibration"],
+  "deliverableSha256": {
+    "INPUT_ONLY.zip": "9ba2254811276133f55d1724a4031e6c24813f02ba92136f95adc0cdafc72b69",
+    "AUDIT_MANIFEST.zip": "85db41753fab6fbfa2ce878a686bf211d8bac8e7ae35784eabb5f6f6bf571f8d",
+    "SEALED_REFERENCE.aesgcm": "16a52c59c37fe9a923e29ccad889017b984cc4c08a2d1a277d5241285a2136bc"
+  },
+  "noFutureReturnsOrTradingOrProductionChanges": true,
+  "bootStatus": "NOT_VERIFIED_FULL_SOURCE_RESTORATION",
+  "currentHeadAndLocksConsistent": true
+}
