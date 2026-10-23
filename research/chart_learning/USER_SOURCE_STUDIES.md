@@ -1,5 +1,10 @@
 # User-provided lecture studies — provenance and hypotheses (not canonical trade rules)
 
+## Current source erratum — v70 / 2026-10-23 (L-018)
+
+Native #047/#048/#064–081 say **박스 종가 / compressed-box CLOSE**, not 박스 중가. Historical “middle/center” and `M_box` descriptions below are legacy ambiguous wording, corrected by [SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md). #047 explicitly rejects a simple midpoint. Use `C_box`; its reproducible derivation is still UNKNOWN. Do not infer VWAP/POC or equate it with a real adjustment close. PDF p.12 (1:13:43) also groups TWO months as one adjustment segment, so “single-bar versus multi-bar” is not a universal source distinction. Trace anchor construction, interval and information time. Existing source studies remain unchanged as history. No transfer/edge claim.
+
+
 This ledger tracks materials the user actually uploaded in ChatGPT, distinct from a video link, a verified full audiovisual original, and the separate **91 numbered native chart-study PNGs**. Chart-source facts and independently inferred caveats are separately labelled. A GitHub note is not a substitute for re-opening original attached files. User-provided files are not copied/reproduced here; the current chat's mounted attachments may not remain available in a different session unless explicitly retrieved from Library. Source details/hashes are locator fingerprints, not market-data proof.
 
 ## U-001 — 차트강의 2편 — user-uploaded TXT (Clova-style AI summary, not transcript)

@@ -1,3 +1,7 @@
+## Current source erratum — v70 / 2026-10-23 (L-018)
+
+Native #047/#048/#064–081 say **박스 종가 / compressed-box CLOSE**, not 박스 중가. Historical “middle/center” and `M_box` descriptions below are legacy ambiguous wording, corrected by [SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md). #047 explicitly rejects a simple midpoint. Use `C_box`; its reproducible derivation is still UNKNOWN. Do not infer VWAP/POC or equate it with a real adjustment close. PDF p.12 (1:13:43) also groups TWO months as one adjustment segment, so “single-bar versus multi-bar” is not a universal source distinction. Trace anchor construction, interval and information time. Existing source studies remain unchanged as history. No transfer/edge claim.
+
 ## SRC-DEEP-012 — Explicit identity/indicator audit on native daily-weekly swing sources (2026-10-22)
 
 Five existing Library originals reviewed: 1000052596/2598.jpg are **LG CNS 064400** (prior BULK-016 misidentified as LG Energy Solution, now corrected), BTC/KRW 1787696307713.jpeg + 1000056913.jpg with weekly cropped duplicate chart-1(4).png. Visible BTC Stochastic RSI and Williams Acc/Dist cannot be called conventional RSI or CVD. Daily rebound versus weekly overhead is a structural question, **not verified divergence**. [Detailed source audit](SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md). No validated edge or production implications.

@@ -122,7 +122,7 @@
     "imagesIndependentlyMasteredCount": 0
   },
   "learningStatus": {
-    "methodologyVersion": 69,
+    "methodologyVersion": 70,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -131,7 +131,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_ENTRY_FILL_VS_REACTION_AMBIGUITY_DOCUMENTED_PLAIN_RSI_EQUITY_SAMPLE_MISSING",
+    "status": "SOURCE_FIRST_BOX_CLOSE_TRANSCRIPTION_CORRECTED_ANCHOR_PROVENANCE_STILL_UNRESOLVED",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "064",
@@ -154,10 +154,11 @@
       "081"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Source-first follow-up: authenticate an already archived Korean-equity daily/weekly chart with explicit ordinary RSI(14), two completed price pivots and matching RSI dates; otherwise mark source gap. Retain P015 distinction between pre-reaction resting fills and later confirmed-reaction entry, alongside U/C_box/C_event timestamp availability. No market test, scanning, S02, orders or production.",
+    "deliverable": "Continue source-only review of remaining primary families #001–045/#052–058/#082–091 and historical channel/Telegram sources, retaining P016 exact 박스 종가 wording, anchor construction/first-knowable-time records and P015 fill-vs-reaction distinction. Genuine plain-RSI daily/weekly Korean-equity matched-pivot source remains missing; do not let that gap block other accessible sources. No market test, scan, S02, orders or production.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md",
     "requiredAnchorDisambiguation": [
+      "C_box",
       "C_reference",
       "C_adjust",
       "H_adjust",
@@ -329,6 +330,12 @@
       "status": "14_NATIVE_DIDACTIC_PNG_REOPENED_PLUS_CANONICAL_TEXT_NO_MARKET_TRANSFER",
       "source": "research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md",
       "claim": "Revisited exact original figure roles/illustrative numbers, differentiated precommitted U/C_box resting fills vs post-event completed reaction and no-fill continuation; C_event 12,600 post-breakout reference cannot be available before bar completion. Source reconciliation and proposed test design only; no C_box algorithm, authentic trade fills, unseen transfer or economic edge proven."
+    },
+    {
+      "type": "SOURCE_TRANSCRIPTION_ERRATUM_AND_ANCHOR_PROVENANCE_AUDIT",
+      "status": "29_NATIVE_PRIMARY_FILES_PLUS_5_ARCHIVED_CASE_FILES_TEXT_LECTURES_SOURCE_ONLY",
+      "source": "research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md",
+      "claim": "Corrected prior 박스 중가/middle misquotation to native 박스 종가, retained unknown C_box algorithm; PDF p12 explicitly groups two adjustment months, weakening universal single/multi-bar opposition. 29 files include near-duplicate #061/#062, not independent trials. No source-census increase, mastered images, market transfer, fills or economic edge."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -2990,5 +2997,66 @@
       "caveat": "Other previously reviewed files and this date group include duplicates/noncharts; no 39-trade claim",
       "outcomeValidation": false
     }
+  },
+  "sourceReviewWorkV70": {
+    "baseHead": "7efadeef4f1419f1924c2be78849ef636f64e61c",
+    "primaryNumbers": [
+      "046",
+      "047",
+      "048",
+      "049",
+      "050",
+      "051",
+      "059",
+      "060",
+      "061",
+      "062",
+      "063",
+      "064",
+      "065",
+      "066",
+      "067",
+      "068",
+      "069",
+      "070",
+      "071",
+      "072",
+      "073",
+      "074",
+      "075",
+      "076",
+      "077",
+      "078",
+      "079",
+      "080",
+      "081"
+    ],
+    "primaryFileCount": 29,
+    "archivedCaseFiles": [
+      "1000052767.jpg",
+      "1000052769.jpg",
+      "1000052771.jpg",
+      "1000052577.webp",
+      "1000052578.webp"
+    ],
+    "pdfTextPages": 14,
+    "pdfRenderedPagesInspected": [
+      3,
+      12
+    ],
+    "txt": "ENTIRE_TEXT_READ",
+    "canonical": "RELEVANT_BOX_AND_ENTRY_SECTIONS_READ",
+    "videoFreshReview": "NOT_PERFORMED_HISTORICAL_LEDGER_ONLY",
+    "legacyAlias": {
+      "M_box": "AMBIGUOUS_LEGACY_ALIAS_DO_NOT_TREAT_AS_SOURCE_MIDPOINT",
+      "C_box": "SOURCE_COMPRESSED_BOX_CLOSE_ALGORITHM_UNKNOWN"
+    },
+    "sourceReviewed": true,
+    "methodSynthesized": "LIMITED_CANDIDATE_SOURCE_CORRECTION",
+    "transferValidated": false,
+    "economicallyValidated": false,
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md",
+    "provenance": "research/chart_learning/SOURCE_DEEP_P016_PROVENANCE_20261023.json",
+    "full91SecondReviewComplete": false
   }
 }

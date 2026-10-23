@@ -1,5 +1,12 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 70 — Correct box CLOSE provenance and overly rigid adjustment distinction
+
+- Individually reopened #046–051/#059–081 (29 files, including near-duplicate #061/#062), five archived LG/ZM images, full lecture TXT/PDF text and canonical relevant sections. Native wording is 박스 종가; earlier quoted 박스 중가 and middle/M_box are explicitly corrected, historical reports preserved. L-018 / C-012 / P016 and hashed provenance.
+- PDF p12 groups two monthly adjustments, so compare anchor construction/interval/time rather than claim every adjustment is a single bar. C_box algorithm and C_box=C_adjust equivalence remain unverified. P015 standing-fill vs later-reaction safeguard retained.
+- All current revision fields synchronized. Source census/mastered0/missing69 and SOURCE-FIRST/S02 pause unchanged; no scanner, new market test, orders or production modification. This is source correction and candidate synthesis, not transfer/economic validation.
+
+
 ## 2026-10-23 — Revision 69 — Administrative MASTER historical-snapshot disambiguation
 
 - Reconciled **current** research version and progress presentation: current manifest/progress v69; 91/91 curated originals were source-reviewed previously but 0 mastered, Library-root 1,596 visually classified / 69 inaccessible. Kept immutable earlier BULK-018 (21/91, 57 unavailable) and v43 data as explicitly **historical snapshots** instead of overwriting them.

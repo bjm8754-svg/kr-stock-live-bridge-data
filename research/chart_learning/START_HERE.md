@@ -1,3 +1,7 @@
+## SRC-DEEP-016 — Source transcription correction, not a proven trading edge (2026-10-23)
+
+[SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md): 29 actual numbered-image rereads, full lecture TXT/PDF text and 5 archived LG/ZM case images. Native label **박스 종가** supersedes earlier source misquotes “박스 중가”; legacy `M_box` does not define a midpoint. Exact C_box derivation still unknown. PDF's two-month grouping means candle count alone cannot define the source-method boundary. Keep P015 fill/reaction clocks, source69 inaccessible, mastered0 and SOURCE-FIRST lock. No fresh AV review, unseen transfer or economic validation. L-018.
+
 ## DOC-SYNC-016 — Explicit current-vs-historical progress boundary (2026-10-23)
 
 GitHub v69 repairs misleading chronological presentation of MASTER, **not** the underlying chart evidence. Current progress is 91 curated images source-reviewed / 0 independently mastered, Library-root 1,596 classified / 69 inaccessible; historic MASTER BULK-018 21/91 and 57 inaccessible are 2026-10-21 **snapshots**, not today's progress. v43 is a former MASTER document-label, not a requirement that it equal MANIFEST learning revision. Boot still fails closed on actual conflicting current flags or source records. P015 remains the newest source study, SRC-STUDY-001 still open; no new original views, validation, scanner, S02 or operations.
@@ -156,7 +160,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 69
+**Learning revision:** 70
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

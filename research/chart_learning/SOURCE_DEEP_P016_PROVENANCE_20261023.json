@@ -1,0 +1,231 @@
+{
+  "schema": "SOURCE_PROVENANCE_P016_V1",
+  "dateKst": "2026-10-23",
+  "baseHead": "7efadeef4f1419f1924c2be78849ef636f64e61c",
+  "primaryFileReads": 29,
+  "independentMarketTests": 0,
+  "files": [
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/046_image(20260928-070355).png",
+      "sha256": "4ff5bcd2ebcf1f7300497981f8f347970a8fbd8d50d93070b5de1e7a1a44be54",
+      "bytes": 622899,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/047_image(20260928-070403).png",
+      "sha256": "4f68e7e474651d767cc56cb491ee2de72a0ea3af4477e13fb798269b622cca73",
+      "bytes": 685074,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/048_image(20260928-070410).png",
+      "sha256": "fef76e86bb738204456b1295a4896cc91b4f2bce281a1008def2a2b274910cf8",
+      "bytes": 687525,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/049_image(20260928-070415).png",
+      "sha256": "9fb398affafab51e7ffd885efc48613d5e1c54d8a2c1c9efd20daf136bd98daa",
+      "bytes": 895403,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/050_image(20260928-070424).png",
+      "sha256": "61599638f52a8edb2fd217297073963fe1f9920aa0b1af7d7913f7831486aeb7",
+      "bytes": 961989,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/051_image(20260928-070431).png",
+      "sha256": "062e8afa3698ebaa3d61ff47e5f9bd003b60666796be1843306efeadd7eb8125",
+      "bytes": 820697,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/059_image(20260928-070627).png",
+      "sha256": "b6789f52de8652e766e532c393f7696b002b7d562178c0694a5bc2907ada047a",
+      "bytes": 758353,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/060_image(20260928-070634).png",
+      "sha256": "b87777633720e84095cc64e179d6688ca2981dd542aaa5c07ad051e0eaa9af93",
+      "bytes": 822482,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/061_image(20260928-070643).png",
+      "sha256": "7b88e98c87e89724e28482cab25d3696801c7f3ff3a60583a668d44f926b2f27",
+      "bytes": 1020059,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/062_image(20260928-070650).png",
+      "sha256": "d40c59247c17f0d97893926f3a1381cfd54d47317e6231971f3a4299fc174f7d",
+      "bytes": 1026461,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/063_image(20260928-070657).png",
+      "sha256": "6f08b062b92ce7ab8528773681a94628bc1a82964c674b6d9842a0bd346ad6c5",
+      "bytes": 1033960,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/064_image(20260928-071012).png",
+      "sha256": "a998b946ce429dbd6810e67b7b76ebd8290cf758ea1a1df467f0061320152302",
+      "bytes": 1263408,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/065_image(20260928-071026).png",
+      "sha256": "bd0bf6943192df9a30f5cdbfb0e03b2501ec6d5ae3ca088f2bea28a0f6c31711",
+      "bytes": 992566,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/066_image(20260928-071030).png",
+      "sha256": "b7bee1f059db47e49755f9090a86ba5abd1b37f17b4026950486d3b7205ce587",
+      "bytes": 786422,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/067_image(20260928-071036).png",
+      "sha256": "0fbb91738d63ee06533e8c6da88c601c8aa2db817432ee911e9e67e5771521e6",
+      "bytes": 861418,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/068_image(20260928-071045).png",
+      "sha256": "4c6e4422c43a78a7d57fd38885dbb2fd3d4f546948a54313a8b023cc5dbf9fff",
+      "bytes": 882117,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/069_image(20260928-071051).png",
+      "sha256": "d8946611ea9dcd37565beca2cdb41c27da22f2de50b93d8afb562457b1c82e88",
+      "bytes": 878464,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/070_image(20260928-071058).png",
+      "sha256": "441972444fe88b0979ded4505aea24cefe62349c8d3f19ce8098ecb7ec4436c3",
+      "bytes": 1022442,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/071_image(20260928-071105).png",
+      "sha256": "517f400e8bde23a1060f71aba00bdb2a487d864be19b92cebe18d98345905c9a",
+      "bytes": 785124,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/072_image(20260928-071112).png",
+      "sha256": "7532f42c30f71a097a7259cb7239df998a84201ad84a78e78aa81eee2a6142e9",
+      "bytes": 703698,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/073_image(20260928-071117).png",
+      "sha256": "e8ecee8d621e0616c68db70a9ddd2a59d9701dbc72e8099b3d95471f9377d82e",
+      "bytes": 696635,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/074_image(20260928-071131).png",
+      "sha256": "846a7f84821a3aa296fddd4d23cc831a17893ae02b5d0fa5a7bf01d2c3cfe2b9",
+      "bytes": 1259076,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/075_image(20260928-071136).png",
+      "sha256": "5b1662460c976981deb9436207141bff98616e0f539b37a4cf5efc56924f8771",
+      "bytes": 858922,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/076_image(20260928-071143).png",
+      "sha256": "58974b956a6d834d79c55f0bfc3a699e9274a72478eed9216fb3cf280d088da0",
+      "bytes": 1275474,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/077_image(20260928-071149).png",
+      "sha256": "029a68e17af21cdd803130193f933636287c9a82343ce724be9d590e1e7ec30b",
+      "bytes": 1038307,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/078_image(20260928-071159).png",
+      "sha256": "73acba24efa98855a33710c661555dd901edd62c53bf28a9189cab1545b6099c",
+      "bytes": 663364,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/079_image(20260928-071209).png",
+      "sha256": "371aebab700eaf37c86a10a2b42c5a8160bf90376e9655d75496f908bec1b6bb",
+      "bytes": 699550,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/080_image(20260928-142926).png",
+      "sha256": "42e1649c4462c2fb54260031fc685133c2390ef1ad64317f7f7bdc6ddecaf56e",
+      "bytes": 970428,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_원자료_20260928/images/081_image(20260928-142930).png",
+      "sha256": "d3a1ba72fdf51bcd4b85fd1aea1d317a462124c7888df062137823a767cd8ef5",
+      "bytes": 1388100,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+      "sha256": "e9652a579ce8ceef06fc622695cf979ad874b1663d2c3b7e8661474105ee16d7",
+      "bytes": 58141,
+      "access": "RELEVANT_BOX_SECTIONS_TEXT_READ"
+    },
+    {
+      "libraryPath": "/차트강의 2편 [4tdsCJxpBds_20261015_101751.txt",
+      "sha256": "ddb5794fc4e8e381bbe3a0b8d2739a5103f73e9df6f78d2c275872ff82f3b103",
+      "bytes": 3823,
+      "access": "ENTIRE_TEXT_READ"
+    },
+    {
+      "libraryPath": "/5_620385370813707921_20261015_101720.pdf",
+      "sha256": "b285082060a6016cd222dee897fc4a3e1e4ba84857b136a27c7d7a85ea42ae0c",
+      "bytes": 178487,
+      "access": "ALL_14_PAGES_TEXT_READ_RENDERED_PAGES_3_12"
+    },
+    {
+      "libraryPath": "/1000052767.jpg",
+      "sha256": "dc622f539e9a31e66bfe9cee2e4952d2a705fd475f90513b77a0b7ace5b04841",
+      "bytes": 165442,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/1000052769.jpg",
+      "sha256": "af254250a9d6d1dbf4474b83302319bcba46fa83d1ae71151230c956bea97a99",
+      "bytes": 169134,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/1000052771.jpg",
+      "sha256": "31be84ae105a1bee7195e1a4b9c976768f800320ce622046a25c8754ee188ab9",
+      "bytes": 144640,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/1000052577.webp",
+      "sha256": "891b16dbef4cdb07b76099677a40ed9bbbf420d105b8d891ad91abb8359e198b",
+      "bytes": 111403,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    },
+    {
+      "libraryPath": "/1000052578.webp",
+      "sha256": "9b77914f9ab9bb44092f312e29e9d66cf60aeb0730b7f9cb9c0dc37695d1e889",
+      "bytes": 243408,
+      "access": "DIRECT_NATIVE_IMAGE_OPEN"
+    }
+  ]
+}

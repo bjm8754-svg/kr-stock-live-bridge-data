@@ -1,5 +1,10 @@
 # PRIMARY ORIGINAL IMAGE STUDY — 차트술사 91장
 
+## Current source erratum — v70 / 2026-10-23 (L-018)
+
+Native #047/#048/#064–081 say **박스 종가 / compressed-box CLOSE**, not 박스 중가. Historical “middle/center” and `M_box` descriptions below are legacy ambiguous wording, corrected by [SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md). #047 explicitly rejects a simple midpoint. Use `C_box`; its reproducible derivation is still UNKNOWN. Do not infer VWAP/POC or equate it with a real adjustment close. PDF p.12 (1:13:43) also groups TWO months as one adjustment segment, so “single-bar versus multi-bar” is not a universal source distinction. Trace anchor construction, interval and information time. Existing source studies remain unchanged as history. No transfer/edge claim.
+
+
 **Scope boundary:** Original images are in ChatGPT Library `/차트공부_원자료_20260928/images/`; this is the external, independently authored research ledger. Open the actual Library PNG again for disputed details. These pages are simplified teaching charts, **not authenticated market OHLCV**. Reading 18 source pages is source inspection, not independent mastery or a profitable trading edge.
 
 ## P-001 — Box-breakout source family: originals 064–081/091 (2026-10-15)

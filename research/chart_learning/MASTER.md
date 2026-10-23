@@ -1,13 +1,14 @@
-# CURRENT RESEARCH STATUS — v69 / 2026-10-23 KST (administrative reconciliation only)
+# CURRENT RESEARCH STATUS — v70 / 2026-10-23 KST (source correction, not validated trading skill)
 
-**Authoritative current version:** MANIFEST.json `revision=69`, STUDY_PROGRESS.json `learningStatus.methodologyVersion=69`. This is a documentation-synchronization revision, **NOT new source research, a methodology breakthrough, or demonstrated trading skill**.
+**Authoritative current version:** MANIFEST.json `revision=70`, STUDY_PROGRESS.json `learningStatus.methodologyVersion=70`.
 
-- **Curated 차트술사 originals:** all 91 distinct numbered images previously directly source-reviewed across recorded sessions; **0 independently mastered**, no unseen-chart transfer or economic advantage validated. The present administrative revision did not reread images.
-- **Library-root image census:** 1,665 catalogued entries were attempted; **1,596 source images classified**, **69 unavailable / NOT VERIFIED**. This count is distinct from the curated 91-image corpus; missing source bytes were not recovered.
-- **Latest source study:** P015 (2026-10-23), on distinction between resting limit-order fills and later confirmed support reactions. Next active task **SRC-STUDY-001**, with actual ordinary-RSI daily/weekly Korean-equity matched-pivot source still missing.
-- **Phase / safety:** METHODOLOGY_FIRST_SOURCE_STUDY; S02 **PAUSED_AFTER_D03**; no scans, D04, simulated orders, real orders, scanner changes or production writes authorized.
-- **How to read this file:** dated BULK and v41–v43 entries below are **immutable historical snapshots**, not current counts. In particular, the 21/91 and 57 inaccessible numbers at the beginning of the old BULK-018 entry describe **2026-10-21**, and the original embedded v43 label is a historical document-baseline label. They are not contradictions of the newer STUDY_PROGRESS snapshot.
-- **Boot consistency semantics:** differences in dates or historical document-label versions do not by themselves trigger INCONSISTENT. Fail closed for mismatched authoritative current revision, phase/permission flags, source claims or a truly contradictory current-state record. Do not treat earlier snapshots as current.
+- **Current source finding / L-018:** native originals say **박스 종가**, not 박스 중가. Historical middle/center/`M_box` notes require the explicit [SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md) erratum. `C_box` is a compressed-box CLOSE concept; its exact numeric construction remains UNKNOWN. PDF p.12 groups two adjustment months, so use anchor provenance rather than an absolute one-bar/multibar distinction.
+- **Actual current-unit work:** 29 numbered originals individually reopened (#046–051/#059–081), 5 archived LG/ZM case files, complete TXT and 14-page PDF text plus two rendered pages, relevant canonical sections. This is NOT a complete second 91-image review; fresh original-video review not performed.
+- **Curated originals:** prior source reviews cover all 91 distinct files; **0 independently mastered**, no unseen-chart transfer or economic advantage validated. Current rereads do not increase source census.
+- **Library-root historical census:** 1,665 attempted, 1,596 classified, **69 unavailable / NOT VERIFIED**; no missing bytes recovered in this unit.
+- **Latest source study:** P016, retaining P015's resting-fill versus later-reaction distinction. Next task **SRC-STUDY-001** remains OPEN for source deep review, anchor construction and uncertainty; an authentic ordinary-RSI daily/weekly Korean-equity matched-pivot source remains missing.
+- **Phase / safety:** METHODOLOGY_FIRST_SOURCE_STUDY; S02 **PAUSED_AFTER_D03**. No new scans, D04, simulated orders, real orders, scanner/Worker/watchlist or production writes authorized.
+- **History semantics:** dated BULK/v41–v43 notes and their 21/91/57 counts below are historical snapshots. The current block and STUDY_PROGRESS govern current state. Historical mistakes remain visible with explicit corrections; a new revision records research, not a model-weight upgrade.
 
 ---
 

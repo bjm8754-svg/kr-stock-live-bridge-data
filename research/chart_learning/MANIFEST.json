@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 69,
+  "revision": 70,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -51,7 +51,9 @@
     "research/chart_learning/ROOT_IMAGE_STUDIES_BULK017.md",
     "research/chart_learning/LINE_ROLE_CASE_STUDY_AUGSEP_20261021.md",
     "research/chart_learning/CHANNEL_ANCHOR_SENSITIVITY_20261021.md",
-    "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md"
+    "research/chart_learning/ROOT_IMAGE_STUDIES_BULK018.md",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_P016_PROVENANCE_20261023.json"
   ],
   "rules": [
     {
@@ -131,7 +133,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 17,
+  "lessonCount": 18,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
