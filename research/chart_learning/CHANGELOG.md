@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 71 — Register 16 new user attachments as grouped source candidates
+
+- Individually opened 16 supplied image files, preserved exact filenames/attachment IDs/SHA-256/dimensions in U-004 provenance, and catalogued 8 provisional research families. Distinct bytes do not make overlapping screenshots independent forecasts. Prior root-census/missing69 and primary91 counters unchanged.
+- Prioritized channel-line subdivision and anchor provenance, Tesla/Meta captioned timeframe comparisons, and DTS (디티에스, 0015M0) 09:22→09:23 adverse-path context. Elris ticker visibly0158S0; cropped Disney-like identity remains tentative. Intraday content stays auxiliary to daily/weekly swing research. No new market data/outcome test, strategy, lesson promotion, S02, order or production change; deep review pending.
+
+
 ## 2026-10-23 — Revision 70 — Correct box CLOSE provenance and overly rigid adjustment distinction
 
 - Individually reopened #046–051/#059–081 (29 files, including near-duplicate #061/#062), five archived LG/ZM images, full lecture TXT/PDF text and canonical relevant sections. Native wording is 박스 종가; earlier quoted 박스 중가 and middle/M_box are explicitly corrected, historical reports preserved. L-018 / C-012 / P016 and hashed provenance.

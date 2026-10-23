@@ -1,0 +1,226 @@
+{
+  "schema": "USER_SOURCE_INTAKE_U004_V1",
+  "registeredKst": "2026-10-23",
+  "baseHead": "acd1b60fe530b21b8b5f4320698cbf7d5d66c1f5",
+  "fileCount": 16,
+  "distinctBinaryHashes": 16,
+  "provisionalSourceFamilies": 8,
+  "legacyLibraryRootCensusUnchanged": true,
+  "originalFilesModified": false,
+  "sourceReviewed": true,
+  "methodSynthesized": false,
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "files": [
+    {
+      "name": "1000060993.jpg",
+      "file_id": "file_0000000008888209ae7c9cbfa8161ce6",
+      "sha256": "8689769e5d728b716e0d22716def39941226199dcb4272b67d58b5c1103fea8a",
+      "bytes": 64082,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000060996.jpg",
+      "file_id": "file_0000000033148209992c38e4fffa371f",
+      "sha256": "6e1b3241316e8cb444a23ee0d3861de92910df0a490881192980df256581c9fb",
+      "bytes": 83324,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000060997.jpg",
+      "file_id": "file_000000006be08209a058e59bbedab5bd",
+      "sha256": "16ad2508048dc8b6030a46ac69872af6883bbaad2a3c0af4aeaf31528f5a2c15",
+      "bytes": 56572,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000060999.jpg",
+      "file_id": "file_0000000050e882098360431242071a64",
+      "sha256": "7ca0db9e916a1d09bc70cd18477fcba754b5846d524dc15eb7194294ac6bffe6",
+      "bytes": 197712,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061001.jpg",
+      "file_id": "file_00000000458c8209a632a032cbb50bc5",
+      "sha256": "cef9610ef7fefa386df252aca904f59969609e3f1ac6a88ee48291820a541800",
+      "bytes": 173034,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "B"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061003.jpg",
+      "file_id": "file_00000000a1b48209ae35183735e26526",
+      "sha256": "ed070f8680d0cf3df49c229c897af6cb6e0120fe716712b4f125f6b1f460ff20",
+      "bytes": 197090,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "C"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061005.jpg",
+      "file_id": "file_00000000e6d88209878da87e1971d404",
+      "sha256": "e5bc3ca7ea2fb3bacca6f79a857670cfbae1586cc4069486627f17e4bc46e760",
+      "bytes": 182471,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "D",
+        "E"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061008.jpg",
+      "file_id": "file_0000000073248209bc240a951622b744",
+      "sha256": "41116c18cc332f4cfb8c8be91436c5db0f72ee96087a399ba1aefd20e9df873d",
+      "bytes": 189124,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "D",
+        "E"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061009.jpg",
+      "file_id": "file_000000006b2882088911d9d90f5a45c3",
+      "sha256": "8696f2eca560eee0cced0fb643fb02be64bf2ed96e0920a7e563fa1b28bd1647",
+      "bytes": 234376,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "E"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061012.jpg",
+      "file_id": "file_0000000043ec82098f4c33e97336a81e",
+      "sha256": "14eb0df1b085889ddde0d501c3fc62e9cc9a2e6eb2a380f01831058b72560d40",
+      "bytes": 185254,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061014.jpg",
+      "file_id": "file_00000000cf04821185755b00670c1a43",
+      "sha256": "bb01b21b17819c82f2c8082b715830c7413c58e5a1dd725a3cd0b84eee9b05bc",
+      "bytes": 156529,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "F"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061016.jpg",
+      "file_id": "file_00000000a31c8230bbf5d0de32bc0fa2",
+      "sha256": "c25b8e716ff26ddbd0c7232dbaf11af75f77e7615de94ba3119f7cb8833be11e",
+      "bytes": 175427,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "G"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061018.jpg",
+      "file_id": "file_0000000009988209bee0c0503360ef70",
+      "sha256": "b78618ddeeecc3930a687214326c6edd02f13bedb74e30ea73ff1c98ccf94ab5",
+      "bytes": 183193,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "H"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061020.jpg",
+      "file_id": "file_00000000b4688209b7447d0bc75b2c74",
+      "sha256": "ec0c657d17da9ece9b884586e9b151a25b903e13e38c97d3ac433ed6b7d28854",
+      "bytes": 177999,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "H"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061023.jpg",
+      "file_id": "file_000000006dcc8209ad27068273860b02",
+      "sha256": "8c032bee0ffaffc18dda241de1eb0cb5286c7bd46a3eaebd09146bf3365d4b79",
+      "bytes": 179972,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "F"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    },
+    {
+      "name": "1000061024.jpg",
+      "file_id": "file_0000000027ec8209974338aaa48f7830",
+      "sha256": "f5c7e0a43fc939aef76290a6020d35206bf1d6a468e256cb9e05c06b36035b0e",
+      "bytes": 178441,
+      "width": 709,
+      "height": 1536,
+      "access": "DIRECT_LOCAL_ATTACHMENT_IMAGE_VIEWED",
+      "researchGroups": [
+        "A"
+      ],
+      "duplicateStatus": "DISTINCT_FILE_BYTES_VISUAL_OVERLAP_GROUPED_NOT_INDEPENDENT_TRADE"
+    }
+  ]
+}

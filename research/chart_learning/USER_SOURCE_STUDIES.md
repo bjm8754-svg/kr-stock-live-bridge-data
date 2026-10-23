@@ -1,3 +1,7 @@
+## U-004 — 추가 사용자 차트 16개 등록 (2026-10-23)
+
+[U-004 추가 원본 16개 목록](USER_SOURCE_INTAKE_20261023_MARS_16.md). 첨부 16개 모두 개별 원본 열람, 8개 잠정 사례군(SK하이닉스 맥락/분봉, NAS100, 종목 추정 Disney, Tesla, Meta, 엘리스, KOSPI, 디티에스)으로 연결. 파일 바이트는16개 모두 다르지만 확대·중첩·재게시를 독립 예측으로 세지 않음. 선 세분화 전후, 큰 구간과 세부 구간, 진행 중 캔들·게시시각 구분, 09:22→09:23 디티에스(0015M0) 변화가 연구 후보. 수평·사선의 산출 근거는 미확정. 분봉은 스윙 보조자료만. SOURCE REVIEWED/CATALOGUED이며 심층 방법론·독립 적용·경제성 미검증. 기존 91장·Library-root 과거 집계·접근 불가69와 별도 묶음; 원본 이미지/전체 대화 GitHub 복제 없음.
+
 # User-provided lecture studies — provenance and hypotheses (not canonical trade rules)
 
 ## Current source erratum — v70 / 2026-10-23 (L-018)

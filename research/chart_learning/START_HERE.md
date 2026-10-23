@@ -1,3 +1,7 @@
+## U-004 — 추가 사용자 차트 16개 등록 (2026-10-23)
+
+[U-004 추가 원본 16개 목록](USER_SOURCE_INTAKE_20261023_MARS_16.md). 첨부 16개 모두 개별 원본 열람, 8개 잠정 사례군(SK하이닉스 맥락/분봉, NAS100, 종목 추정 Disney, Tesla, Meta, 엘리스, KOSPI, 디티에스)으로 연결. 파일 바이트는16개 모두 다르지만 확대·중첩·재게시를 독립 예측으로 세지 않음. 선 세분화 전후, 큰 구간과 세부 구간, 진행 중 캔들·게시시각 구분, 09:22→09:23 디티에스(0015M0) 변화가 연구 후보. 수평·사선의 산출 근거는 미확정. 분봉은 스윙 보조자료만. SOURCE REVIEWED/CATALOGUED이며 심층 방법론·독립 적용·경제성 미검증. 기존 91장·Library-root 과거 집계·접근 불가69와 별도 묶음; 원본 이미지/전체 대화 GitHub 복제 없음.
+
 ## SRC-DEEP-016 — Source transcription correction, not a proven trading edge (2026-10-23)
 
 [SRC-DEEP-016](SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md): 29 actual numbered-image rereads, full lecture TXT/PDF text and 5 archived LG/ZM case images. Native label **박스 종가** supersedes earlier source misquotes “박스 중가”; legacy `M_box` does not define a midpoint. Exact C_box derivation still unknown. PDF's two-month grouping means candle count alone cannot define the source-method boundary. Keep P015 fill/reaction clocks, source69 inaccessible, mastered0 and SOURCE-FIRST lock. No fresh AV review, unseen transfer or economic validation. L-018.
@@ -160,7 +164,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 70
+**Learning revision:** 71
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
