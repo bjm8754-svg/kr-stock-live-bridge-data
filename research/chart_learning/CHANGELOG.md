@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 74 — Partition source terminology and continue48-file counterreview
+
+- P019 records literal labels, roles, source interval/availability and numerical limits; SRC-TERM-001 stays OPEN, only term-related integration/promotion held under explicit user follow-up. No source-based or numeric equivalence forced; prior mistakes preserved.
+- P020/provenance:48 remaining primary originals individually reopened,17 related repeats,5 archived LG/ZM images, relevant canonical/TXT/old transcript excerpts and3edited PDF rendered pages. Second-pass individual coverage91/91, not mastery/full deep research. Candidate role/acceptance, gap/spring clocks, RSI caveats and cost-basis/no-rebound risk distinguished with rivals. L021/C015 source-only; no canonical promotion or economic claim.
+- Current revision fields74; missing69/mastered0/learning validation false/SOURCE-FIRST/S02 isolation retained. All4 new video AV checks unverified;2missing transcripts unchanged; no paid retry/bypass, new market case, scan, mock trade, orders or operations.
+
 ## 2026-10-23 — Revision 73 — Four supplementary video registrations, partial review and source-conflict halt
 
 - V002–V005 metadata actually read; V002/V004 full returned Korean transcripts read, others content NOT VERIFIED; all4 actual audio/chart screens NOT VERIFIED. Direct caption/API/storyboard/media access failures documented by response content, not HTTP success alone. Exact IDs deduplicated; offsets/hashes without fabricated timecodes.

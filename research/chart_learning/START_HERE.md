@@ -1,3 +1,9 @@
+## CURRENT v74 — scoped terminology hold; unrelated source research continues (2026-10-23)
+
+[P019 source matrix](SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md) / [P020 counterreview](SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md). User follow-up explicitly limits SRC-TERM-001 to **term-related integration/promotion**; broad v73 halt wording below is historical. Original labels/roles/timing/computability mapped without midpoint, universal internal-close or adjustment equality. #048 offers a last-price explanation; #065 locally equates diagram中가 with compressed close, but a unique real box interval/anchor formula remains unverified. Conflict OPEN.
+
+Actually reopened all48 remaining primary files and17 related repeats,5 archived LG/ZM files, edited PDF rendered pp3/4/12 and relevant canonical/TXT/old video-text excerpts. Current individual second-pass source coverage91/91 across v70/v72/v74, **not full deep research or mastery**. Candidate refinements address role vs demonstrated acceptance, gap crossing, spring information timing, RSI warning and the missing no-rebound branch in break-even rescue plans. No canonical rule promotion, unseen transfer or economics. Videos remain2returned texts/0actual AV verification; no paid retry or bypass. Missing69/mastered0/SOURCE-FIRST/S02 pause and production isolation unchanged.
+
 ## CURRENT SOURCE CONFLICT — v73 / 2026-10-23 — further method synthesis halted
 
 [P018](SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md) / L-020 / C-014 correct the overbroad P016/L-018 source attribution. Actually reopened #066/#073/#076/#079 visibly use **박스 중가**; #047 mixes **종가 in prose / 중가 in diagrams**, while canonical DOCX uses 종가. Earlier statements that native #047/#048/#064–081 uniformly say 종가 and that every 중가 is an assistant mistranscription are unsupported. Preserve old reports as corrected historical evidence. This does not establish arithmetic midpoint, exact C_box/M_box construction or anchor equality. SOURCE INCONSISTENT; further synthesis halted pending reconciliation.
@@ -174,7 +180,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 73
+**Learning revision:** 74
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

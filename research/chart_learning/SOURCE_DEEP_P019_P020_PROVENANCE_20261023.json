@@ -1,0 +1,1045 @@
+{
+  "dateKst": "2026-10-23",
+  "baseHead": "5b84cb1f504dd30038121abbbf5320da9f771896",
+  "revision": 74,
+  "primaryUnitReadCount": 65,
+  "remainingSecondPassReads": 48,
+  "relatedPreviouslyCoveredReads": 17,
+  "secondPassUniqueCoverageAfterUnit": 91,
+  "coverageMeaning": "Individual source-file rereads across v70/v72/v74;not comprehension/transfer/competence",
+  "primaryFiles": [
+    {
+      "number": "001",
+      "filename": "001_1000059604.jpg",
+      "bytes": 177980,
+      "sha256": "ef0a1299c49e84492f1416a015efb0d76e5f38cf4b651847432e17704aeef299",
+      "libraryPath": "/차트공부_원자료_20260928/images/001_1000059604.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "RS and RSI formula diagram; not exported RSI input data",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "002",
+      "filename": "002_1000059605.jpg",
+      "bytes": 217901,
+      "sha256": "85780297687751abb48647b3971ce18611d99b512567eb4207d1c259ee342786",
+      "libraryPath": "/차트공부_원자료_20260928/images/002_1000059605.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Lower price lows/higher RSI lows sketch; no time-stamped matched pivots",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "003",
+      "filename": "003_1000059608.jpg",
+      "bytes": 237909,
+      "sha256": "4b5949c47f5621b76fc48a12a3e34223596713d167615d393808102df7eac742",
+      "libraryPath": "/차트공부_원자료_20260928/images/003_1000059608.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "70/30 are not fixed reversal buttons; strong trend alternatives",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "004",
+      "filename": "004_1000059601.jpg",
+      "bytes": 171387,
+      "sha256": "3407ac7b8d7d8044727aa89066120bc32b08ad6e47c9bc369928d20fe760cd3f",
+      "libraryPath": "/차트공부_원자료_20260928/images/004_1000059601.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Price/volume/RSI metaphor; no independent order-flow observation",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "005",
+      "filename": "005_1000059609.jpg",
+      "bytes": 196705,
+      "sha256": "28252f006200fce236dea2baaa455ccdcaedac4772045bfd975a6112924726b9",
+      "libraryPath": "/차트공부_원자료_20260928/images/005_1000059609.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Persistent RSI70+ in uptrend; not an automatic sell",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "006",
+      "filename": "006_1000059611.jpg",
+      "bytes": 203629,
+      "sha256": "711d54460151615cbef3605c5440ad718ed64fc57b7982d1d89a16d35e43ec8f",
+      "libraryPath": "/차트공부_원자료_20260928/images/006_1000059611.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Persistent RSI30- in downtrend; not an automatic buy",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "007",
+      "filename": "007_1000059613.jpg",
+      "bytes": 197743,
+      "sha256": "d668d5d7e9499c132fd4046f555263d56016f059f20114c4b60c18cb3328f12c",
+      "libraryPath": "/차트공부_원자료_20260928/images/007_1000059613.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Bullish-divergence sketch with proposed price/volume confirmation",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "008",
+      "filename": "008_1000059617.jpg",
+      "bytes": 189080,
+      "sha256": "31703735d38884b01bdd90b8a50f37e71f9316bc1b9d91fd7a0e1692fee2b0c4",
+      "libraryPath": "/차트공부_원자료_20260928/images/008_1000059617.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Price/support context before RSI; RSI14 diagram not a new market case",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "009",
+      "filename": "009_1000059615.jpg",
+      "bytes": 204221,
+      "sha256": "9a6954422604f3564bf3fbdcd8ff7c4a540d400d86c765a219377112dc54ce6b",
+      "libraryPath": "/차트공부_원자료_20260928/images/009_1000059615.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Rising/falling divergence examples are schematic, not verified numeric pivots",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "010",
+      "filename": "010_1000059619.jpg",
+      "bytes": 195015,
+      "sha256": "9dbee2b0e03da6ac61cf1ada8ef9aabaec7f300bf77da2edc9dfd8dfed2171e5",
+      "libraryPath": "/차트공부_원자료_20260928/images/010_1000059619.jpg",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "RSI change and price structure summary, no return statistics",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "011",
+      "filename": "011_image(20260928-065646).png",
+      "bytes": 553404,
+      "sha256": "e0eea707c03cc49064c2ef34d4cc3bf66269ed54229a1e2d0eb6cc3b76edc48d",
+      "libraryPath": "/차트공부_원자료_20260928/images/011_image(20260928-065646).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Strong area plus RSI illustration; raw profile/RSI parameters absent",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "012",
+      "filename": "012_image(20260928-065701).png",
+      "bytes": 529125,
+      "sha256": "a4ac9a2ed74c35af37319842af4a656872153c2b2f86c2ce10ec326b0bce39c1",
+      "libraryPath": "/차트공부_원자료_20260928/images/012_image(20260928-065701).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Support/resistance as analysis framework, illustrative reactions",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "013",
+      "filename": "013_image(20260928-065714).png",
+      "bytes": 576340,
+      "sha256": "040ef5f68994c4ae0507a1e2c1c8086684af6f5aaace7fd1d969775eda6a5d9f",
+      "libraryPath": "/차트공부_원자료_20260928/images/013_image(20260928-065714).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Current side assigns candidate role; guarantee explicitly rejected",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "014",
+      "filename": "014_image(20260928-065727).png",
+      "bytes": 618014,
+      "sha256": "92535fc5c4263a0b648a3f3f4e89513d72dd435a4de095c9f3fcbd85dcb7dec6",
+      "libraryPath": "/차트공부_원자료_20260928/images/014_image(20260928-065727).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Seven properties include temporary roles, importance and judgment not prediction",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "015",
+      "filename": "015_image(20260928-065734).png",
+      "bytes": 605354,
+      "sha256": "996bdaa1aaa2e5722497e6b8a7e98fa746acbeee02cfccef811fcb053205fadb",
+      "libraryPath": "/차트공부_원자료_20260928/images/015_image(20260928-065734).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Horizontal and sloped boundaries; same principle but different time-dependent geometry",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "016",
+      "filename": "016_image(20260928-065818).png",
+      "bytes": 443896,
+      "sha256": "3073dd732881d836a71e64ca74eea4411e6a173cf8d498800dac32444281e9a1",
+      "libraryPath": "/차트공부_원자료_20260928/images/016_image(20260928-065818).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Both stop and lower-support add/break-even escape branches; no full worst-case plan",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "017",
+      "filename": "017_image(20260928-065838).png",
+      "bytes": 518926,
+      "sha256": "3c59d5ad5168c47938571921a4617dd599a3037e9a67ee91523b8812be678a0c",
+      "libraryPath": "/차트공부_원자료_20260928/images/017_image(20260928-065838).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Broken support becomes resistance; lower-support rebound is a separate setup",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "018",
+      "filename": "018_image(20260928-065855).png",
+      "bytes": 480994,
+      "sha256": "ec4b3375328059c76cfa5583a3eac5ec709745fcd75a260088b50d93705b32c0",
+      "libraryPath": "/차트공부_원자료_20260928/images/018_image(20260928-065855).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Gap interpretation starts from reference-side/role principles",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "019",
+      "filename": "019_image(20260928-065902).png",
+      "bytes": 407763,
+      "sha256": "1f9296b5c0cda9c619c83d7b8995d283594a1933f5b49146170e99a081ee2ab2",
+      "libraryPath": "/차트공부_원자료_20260928/images/019_image(20260928-065902).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Gap can skip a boundary; no universally measured absence of executions",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "020",
+      "filename": "020_image(20260928-065914).png",
+      "bytes": 446227,
+      "sha256": "0019714e5b8158dc45cdd43aced3d32686f303d0fa6f0b492d0a4fa7bd0ea456",
+      "libraryPath": "/차트공부_원자료_20260928/images/020_image(20260928-065914).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "10,000 resistance to10,500 open illustration; later defense still needed",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "021",
+      "filename": "021_image(20260928-065922).png",
+      "bytes": 472800,
+      "sha256": "c2d73159751eab78e2066372a031a36efc14f24ed4af334e445e5ad870856354",
+      "libraryPath": "/차트공부_원자료_20260928/images/021_image(20260928-065922).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "9,500 below10,000 versus10,300 above10,000 support gap comparison",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "022",
+      "filename": "022_image(20260928-065936).png",
+      "bytes": 507117,
+      "sha256": "f229027daa05223a634ec2e2d7c9ab87a7416c85587fccfeed54144b3ed19fb8",
+      "libraryPath": "/차트공부_원자료_20260928/images/022_image(20260928-065936).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Four gap/reference-side cases; fill narratives not equivalent",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "023",
+      "filename": "023_image(20260928-065955).png",
+      "bytes": 609337,
+      "sha256": "2537c572abe0ebf7bfaf6571c232cff32f9ef6f44ce96d679127c695ad459357",
+      "libraryPath": "/차트공부_원자료_20260928/images/023_image(20260928-065955).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Origins in participation instead of arbitrary historical turning-point lines",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "025",
+      "filename": "025_image(20260928-070013).png",
+      "bytes": 648498,
+      "sha256": "3c00f5402544459b051d8d3fb227eee8697696958e8a5b517724fa18748ac939",
+      "libraryPath": "/차트공부_원자료_20260928/images/025_image(20260928-070013).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Transactions leave price traces; no direct remaining-holder inventory",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "026",
+      "filename": "026_image(20260928-070022).png",
+      "bytes": 523806,
+      "sha256": "f47d5567c79290cc15698bbe7c00d920ff4dd542b316ba65b5f94e745a27c570",
+      "libraryPath": "/차트공부_원자료_20260928/images/026_image(20260928-070022).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Agreement means concentrated decisions, not literal meeting or net-demand proof",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "027",
+      "filename": "027_image(20260928-070031).png",
+      "bytes": 495924,
+      "sha256": "a5a42aed25253da7c980b85a1847d5e735754dea94eddc17f8d4577b5038b75b",
+      "libraryPath": "/차트공부_원자료_20260928/images/027_image(20260928-070031).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Price/volume/time candidate origins, not calibrated combined score",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "028",
+      "filename": "028_image(20260928-070050).png",
+      "bytes": 538520,
+      "sha256": "d6fc7123e385ab658ee8643a324cb212993c2d01a97ed8836bfffcf72d0426e7",
+      "libraryPath": "/차트공부_원자료_20260928/images/028_image(20260928-070050).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "10x volume example is illustrative; no universal benchmark threshold",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "029",
+      "filename": "029_image(20260928-070059).png",
+      "bytes": 613777,
+      "sha256": "1bac4514ecd91921632e679edbcc0e286231f740006589bb86e633fee857bc93",
+      "libraryPath": "/차트공부_원자료_20260928/images/029_image(20260928-070059).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "High-volume candle final close is a candidate; response can fail",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "030",
+      "filename": "030_image(20260928-070107).png",
+      "bytes": 546037,
+      "sha256": "8a5915bd4d4af198e7444d3dcfa0b24c4881b944c5468db8863c9a9067bcbda3",
+      "libraryPath": "/차트공부_원자료_20260928/images/030_image(20260928-070107).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Long turnover range described as positions; current inventory not directly observed",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "031",
+      "filename": "031_image(20260928-070113).png",
+      "bytes": 599644,
+      "sha256": "3c337566186a119ab8522bbe68fa359a9537326dfb062776cde4869937b0e180",
+      "libraryPath": "/차트공부_원자료_20260928/images/031_image(20260928-070113).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Event close versus range context, no automatic equivalence",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "034",
+      "filename": "034_image(20260928-070134).png",
+      "bytes": 604025,
+      "sha256": "e201e85e024b3eda20586d9ef860e0956409dde636269b8e8eeeb487fc597db2",
+      "libraryPath": "/차트공부_원자료_20260928/images/034_image(20260928-070134).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "One boundary changes role according to side; closing candidate not perpetual support",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "035",
+      "filename": "035_image(20260928-070141).png",
+      "bytes": 621117,
+      "sha256": "3f13eb2e9a9adf0a7b48adcbff1923ab17bb6a62f0d6681958e15e78c1328edb",
+      "libraryPath": "/차트공부_원자료_20260928/images/035_image(20260928-070141).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "10,100 intrabar versus9,900 close at10,000 resistance contrast",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "036",
+      "filename": "036_image(20260928-070148).png",
+      "bytes": 603819,
+      "sha256": "c9eaa312c513c38c7d4dc08014965d7074ec8d6eda6e88bb3cb3e778a0189249",
+      "libraryPath": "/차트공부_원자료_20260928/images/036_image(20260928-070148).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "9,850 wick/close distinction around10,000; selected-frame completion required",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "037",
+      "filename": "037_image(20260928-070159).png",
+      "bytes": 623589,
+      "sha256": "a2cb0bb39d7ab4ac461ccc914f0ad61ea4681288dfc9908acb08dfaa0dd5eba2",
+      "libraryPath": "/차트공부_원자료_20260928/images/037_image(20260928-070159).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "10,000 breakout and retest; later acceptance differs from original arrival",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "038",
+      "filename": "038_image(20260928-070214).png",
+      "bytes": 585164,
+      "sha256": "f1c08d643c5980cc8aff053932150ce7a6f8dc8abe6933336180d4002aa2f3ba",
+      "libraryPath": "/차트공부_원자료_20260928/images/038_image(20260928-070214).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "9,500 rebound toward lost10,000 support can encounter supply",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "039",
+      "filename": "039_image(20260928-070223).png",
+      "bytes": 616653,
+      "sha256": "db84a40f1f7b3c8549a144addb4e5d6ebeb3818dde7bc389e5bbe105885290f6",
+      "libraryPath": "/차트공부_원자료_20260928/images/039_image(20260928-070223).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "High-volume reference can later have no reaction or change role",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "040",
+      "filename": "040_image(20260928-070230).png",
+      "bytes": 629099,
+      "sha256": "3005ac2408387cc2ea33676b6d0837a925bf3ee61b3a187dc50004e29c4c81b3",
+      "libraryPath": "/차트공부_원자료_20260928/images/040_image(20260928-070230).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Thin/stale long box compared with active repeated-boundary trading",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "042",
+      "filename": "042_image(20260928-070249).png",
+      "bytes": 608761,
+      "sha256": "744178198e0b7cfa8b35f35b1e872577b070cbbb06ed884b6edde9368307448d",
+      "libraryPath": "/차트공부_원자료_20260928/images/042_image(20260928-070249).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Origin then reference then current side then retest judgment sequence",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "043",
+      "filename": "043_image(20260928-070257).png",
+      "bytes": 564310,
+      "sha256": "3238025386445d011b9457992cbf5323b9dff64dac028478f1a78be9c61e69a8",
+      "libraryPath": "/차트공부_원자료_20260928/images/043_image(20260928-070257).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Box/breakout/pullback/gap unified as role questions, not independent votes",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "044",
+      "filename": "044_image(20260928-070305).png",
+      "bytes": 626626,
+      "sha256": "9554c8a00ab41defad0f0c000ee1f2605da9334a16ae04dc143e39a30b4fe5d8",
+      "libraryPath": "/차트공부_원자료_20260928/images/044_image(20260928-070305).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Event and time accumulation summary; no live inventory proof",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "045",
+      "filename": "045_image(20260928-070314).png",
+      "bytes": 637447,
+      "sha256": "bd9f113583c18dd57c8139c654fb565da0daa6282b9ce27a14c5e29dd6d3f058",
+      "libraryPath": "/차트공부_원자료_20260928/images/045_image(20260928-070314).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Revisit and closing response as judgment, not preordained future",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "052",
+      "filename": "052_image(20260928-070438).png",
+      "bytes": 1001114,
+      "sha256": "6a45e0aef5a87998fd11601e164ca30f606f8ecec31202002d8d741dd3c77a11",
+      "libraryPath": "/차트공부_원자료_20260928/images/052_image(20260928-070438).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "10,000 to9,800 to10,100 spring example; recovery known later",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "053",
+      "filename": "053_image(20260928-070447).png",
+      "bytes": 1034339,
+      "sha256": "3714801ae7bfd32813e37cdca5b7f9d17e3efa460aedee494f9a6debf0db7eb6",
+      "libraryPath": "/차트공부_원자료_20260928/images/053_image(20260928-070447).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Failed lower acceptance after undercut is added information, not guarantee",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "054",
+      "filename": "054_image(20260928-070454).png",
+      "bytes": 1257860,
+      "sha256": "b05cb5e0ca86e09861ff8a303ef1dce21cc42e49738aa9f2fd94dfdea4148948",
+      "libraryPath": "/차트공부_원자료_20260928/images/054_image(20260928-070454).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "One failed break does not establish future rising trend",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "055",
+      "filename": "055_image(20260928-070500).png",
+      "bytes": 724899,
+      "sha256": "a2c4656c5c66e802a8b8036666581b554ea4325a0baf908946af682979398f32",
+      "libraryPath": "/차트공부_원자료_20260928/images/055_image(20260928-070500).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Defense is price-result interpretation; no actual participant order observed",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "056",
+      "filename": "056_image(20260928-070512).png",
+      "bytes": 1010999,
+      "sha256": "3483b89959fd7b920565187bcf11995276b9db3b44d3d506fd179792be4c88b1",
+      "libraryPath": "/차트공부_원자료_20260928/images/056_image(20260928-070512).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Next-bar recovery versus9,500/9,200 continuation are alternatives",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "057",
+      "filename": "057_image(20260928-070519).png",
+      "bytes": 1313041,
+      "sha256": "58ed264d5b3ddf2eee3bea7c9c6254c25c934a278e52db98c2fa1381236bf040",
+      "libraryPath": "/차트공부_원자료_20260928/images/057_image(20260928-070519).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Location plus failed breakdown, still not verified permanent support",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "058",
+      "filename": "058_image(20260928-070527).png",
+      "bytes": 740232,
+      "sha256": "9fc7fe509f003a36c7db8e9bf66bdc5aa4277f9f191d63bca2c4571188d21785",
+      "libraryPath": "/차트공부_원자료_20260928/images/058_image(20260928-070527).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "REMAINING_SECOND_PASS_FILE",
+      "observedScope": "Preemptive/recovery/retest modes trade information, price and nonfill risks",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "047",
+      "filename": "047_image(20260928-070403).png",
+      "bytes": 685074,
+      "sha256": "4f68e7e474651d767cc56cb491ee2de72a0ea3af4477e13fb798269b622cca73",
+      "libraryPath": "/차트공부_원자료_20260928/images/047_image(20260928-070403).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "048",
+      "filename": "048_image(20260928-070410).png",
+      "bytes": 687525,
+      "sha256": "fef76e86bb738204456b1295a4896cc91b4f2bce281a1008def2a2b274910cf8",
+      "libraryPath": "/차트공부_원자료_20260928/images/048_image(20260928-070410).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "049",
+      "filename": "049_image(20260928-070415).png",
+      "bytes": 895403,
+      "sha256": "9fb398affafab51e7ffd885efc48613d5e1c54d8a2c1c9efd20daf136bd98daa",
+      "libraryPath": "/차트공부_원자료_20260928/images/049_image(20260928-070415).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "050",
+      "filename": "050_image(20260928-070424).png",
+      "bytes": 961989,
+      "sha256": "61599638f52a8edb2fd217297073963fe1f9920aa0b1af7d7913f7831486aeb7",
+      "libraryPath": "/차트공부_원자료_20260928/images/050_image(20260928-070424).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "051",
+      "filename": "051_image(20260928-070431).png",
+      "bytes": 820697,
+      "sha256": "062e8afa3698ebaa3d61ff47e5f9bd003b60666796be1843306efeadd7eb8125",
+      "libraryPath": "/차트공부_원자료_20260928/images/051_image(20260928-070431).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "064",
+      "filename": "064_image(20260928-071012).png",
+      "bytes": 1263408,
+      "sha256": "a998b946ce429dbd6810e67b7b76ebd8290cf758ea1a1df467f0061320152302",
+      "libraryPath": "/차트공부_원자료_20260928/images/064_image(20260928-071012).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "065",
+      "filename": "065_image(20260928-071026).png",
+      "bytes": 992566,
+      "sha256": "bd0bf6943192df9a30f5cdbfb0e03b2501ec6d5ae3ca088f2bea28a0f6c31711",
+      "libraryPath": "/차트공부_원자료_20260928/images/065_image(20260928-071026).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "066",
+      "filename": "066_image(20260928-071030).png",
+      "bytes": 786422,
+      "sha256": "b7bee1f059db47e49755f9090a86ba5abd1b37f17b4026950486d3b7205ce587",
+      "libraryPath": "/차트공부_원자료_20260928/images/066_image(20260928-071030).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "067",
+      "filename": "067_image(20260928-071036).png",
+      "bytes": 861418,
+      "sha256": "0fbb91738d63ee06533e8c6da88c601c8aa2db817432ee911e9e67e5771521e6",
+      "libraryPath": "/차트공부_원자료_20260928/images/067_image(20260928-071036).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "068",
+      "filename": "068_image(20260928-071045).png",
+      "bytes": 882117,
+      "sha256": "4c6e4422c43a78a7d57fd38885dbb2fd3d4f546948a54313a8b023cc5dbf9fff",
+      "libraryPath": "/차트공부_원자료_20260928/images/068_image(20260928-071045).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "070",
+      "filename": "070_image(20260928-071058).png",
+      "bytes": 1022442,
+      "sha256": "441972444fe88b0979ded4505aea24cefe62349c8d3f19ce8098ecb7ec4436c3",
+      "libraryPath": "/차트공부_원자료_20260928/images/070_image(20260928-071058).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "071",
+      "filename": "071_image(20260928-071105).png",
+      "bytes": 785124,
+      "sha256": "517f400e8bde23a1060f71aba00bdb2a487d864be19b92cebe18d98345905c9a",
+      "libraryPath": "/차트공부_원자료_20260928/images/071_image(20260928-071105).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "072",
+      "filename": "072_image(20260928-071112).png",
+      "bytes": 703698,
+      "sha256": "7532f42c30f71a097a7259cb7239df998a84201ad84a78e78aa81eee2a6142e9",
+      "libraryPath": "/차트공부_원자료_20260928/images/072_image(20260928-071112).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "073",
+      "filename": "073_image(20260928-071117).png",
+      "bytes": 696635,
+      "sha256": "e8ecee8d621e0616c68db70a9ddd2a59d9701dbc72e8099b3d95471f9377d82e",
+      "libraryPath": "/차트공부_원자료_20260928/images/073_image(20260928-071117).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "076",
+      "filename": "076_image(20260928-071143).png",
+      "bytes": 1275474,
+      "sha256": "58974b956a6d834d79c55f0bfc3a699e9274a72478eed9216fb3cf280d088da0",
+      "libraryPath": "/차트공부_원자료_20260928/images/076_image(20260928-071143).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "077",
+      "filename": "077_image(20260928-071149).png",
+      "bytes": 1038307,
+      "sha256": "029a68e17af21cdd803130193f933636287c9a82343ce724be9d590e1e7ec30b",
+      "libraryPath": "/차트공부_원자료_20260928/images/077_image(20260928-071149).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    },
+    {
+      "number": "079",
+      "filename": "079_image(20260928-071209).png",
+      "bytes": 699550,
+      "sha256": "371aebab700eaf37c86a10a2b42c5a8160bf90376e9655d75496f908bec1b6bb",
+      "libraryPath": "/차트공부_원자료_20260928/images/079_image(20260928-071209).png",
+      "access": "NATIVE_ORIGINAL_INDIVIDUALLY_OPENED",
+      "unitRole": "ALREADY_COVERED_TERM_COMPARISON",
+      "observedScope": "Exact terms/roles/timing reviewed in P019 source matrix",
+      "marketDataRecomputed": false,
+      "firstDrawingTimeVerified": false
+    }
+  ],
+  "termSourceMatrix": [
+    {
+      "source": "#047",
+      "wordingAndLocation": "Prose **박스 안에도 종가가 존재한다**; internal blue labels **박스 중가**, compression body says candle 종가",
+      "priceRole": "Internal reference between upper/lower; not a simple midpoint; presented as compressed-candle closing price",
+      "formationAndAvailability": "Depends on the box interval. Start/end and annotation time not supplied",
+      "numericalRecoverability": "Role/label readable; no price axis or reproducible interval, so no numeric extraction algorithm"
+    },
+    {
+      "source": "#048",
+      "wordingAndLocation": "Title/body use 종가; diagrams **박스 중가 (=종가)**; text explains last price when the entire box is compressed",
+      "priceRole": "Ending-price explanation and separate accumulated-agreement language coexist",
+      "formationAndAvailability": "Last price is knowable after an explicitly chosen final constituent bar; that bar is not uniquely selected here",
+      "numericalRecoverability": "Conditional close of a specified interval is calculable from OHLC. This source does not specify which real interval or prove that every illustrated internal line is that close"
+    },
+    {
+      "source": "#049",
+      "wordingAndLocation": "Body/subhead 종가 / internal blue **박스 중가**",
+      "priceRole": "Divides upper resistance-near area and lower support-near area; relative entry location",
+      "formationAndAvailability": "Box boundaries and internal reference must already exist before use; no dated construction",
+      "numericalRecoverability": "Diagram role only; internal line position does not define its formula"
+    },
+    {
+      "source": "#050",
+      "wordingAndLocation": "Blue **박스 중가10,800**, U12,000/L10,000, entry10,100",
+      "priceRole": "First upper target candidate; lower boundary is nearby structural reference",
+      "formationAndAvailability": "Example values given before illustrated response, but original drawing/forecast history absent",
+      "numericalRecoverability": "Values can be transcribed;10,800 is not arithmetic midpoint11,000. This rejects a universal midpoint assumption but does not prove another formula"
+    },
+    {
+      "source": "#051",
+      "wordingAndLocation": "Blue 박스 중가10,800; lower10,000",
+      "priceRole": "Position at lower bound differs from confirmed reaction; lower break may continue",
+      "formationAndAvailability": "Reaction information arrives after arrival; no entry/stop timestamp",
+      "numericalRecoverability": "Given values only; spring observation cannot retroactively validate a prior standing fill"
+    },
+    {
+      "source": "#064",
+      "wordingAndLocation": "Blue 박스 중가; text also refers to **박스를 만들었던 봉의 종가**",
+      "priceRole": "Internal reference and a source-mentioned originating candle's close, alongside former box top",
+      "formationAndAvailability": "Exact originating candle identity/end and first availability not identified",
+      "numericalRecoverability": "Candidate reference-candle interpretation, not proof that C_reference equals every box internal reference"
+    },
+    {
+      "source": "#065",
+      "wordingAndLocation": "Blue **박스 중가 = 압축 캔들의 종가 = 박스 내부 핵심 기준선**; body uses high/종가/low",
+      "priceRole": "Source locally asserts a conceptual correspondence",
+      "formationAndAvailability": "Requires chosen box interval/compression convention before breakout usage",
+      "numericalRecoverability": "This is an observed source assertion, **not our validated universal equality** or a numeric method"
+    },
+    {
+      "source": "#066",
+      "wordingAndLocation": "Title **박스 상단 종가 돌파**, blue **박스 중가(내부 기준선)**",
+      "priceRole": "Title 종가 is the breakout bar's closing event above U; blue 중가 is an older internal level",
+      "formationAndAvailability": "U/internal candidate precede breakout; breakout closing event is only known when that bar finishes",
+      "numericalRecoverability": "The word 종가 here has a distinct event role. Do not replace the blue internal anchor with the event close"
+    },
+    {
+      "source": "#067/#068",
+      "wordingAndLocation": "Diagrams 박스 중가; #068 prose also calls it a box-origin candle close",
+      "priceRole": "Shallow U retest versus deeper internal-reference retest; no-retest continuation also possible",
+      "formationAndAvailability": "Waiting for response and earlier limit placement have different information sets; reference-candle selection unknown",
+      "numericalRecoverability": "No actual bar identity or exact computation; diagram supplies competing paths, not hit rates"
+    },
+    {
+      "source": "#070",
+      "wordingAndLocation": "Title/internal line 박스 중가; compression panel **압축 캔들의 종가 = 박스 중가**",
+      "priceRole": "Whole-box internal agreement price",
+      "formationAndAvailability": "Range completion and exact final bar not defined",
+      "numericalRecoverability": "Conceptual assertion only; no net-flow, VWAP, POC or midpoint computation supplied"
+    },
+    {
+      "source": "#071/#072",
+      "wordingAndLocation": "박스 중가 versus 박스 상단",
+      "priceRole": "Internal agreement reference versus boundary whose function may switch after breakout",
+      "formationAndAvailability": "Both old references are conceptually prior to the retest; defended role is later evidence",
+      "numericalRecoverability": "Distinct roles do not establish distinct measurable generation algorithms. No independent observed order flow"
+    },
+    {
+      "source": "#073",
+      "wordingAndLocation": "Blue **박스 중가11,300**, U12,000, displayed high13,500",
+      "priceRole": "Deeper purchase example and proposed equal split; not universally optimal sizing",
+      "formationAndAvailability": "Split schedule versus later rebound is illustration only; exact box-ending time absent",
+      "numericalRecoverability": "11,300 is a supplied example. Text calls11,300–12,000 a box-formation range while the green lower boundary is drawn below11,300 without a numeric label: do not backsolve missing L or a midpoint"
+    },
+    {
+      "source": "#076",
+      "wordingAndLocation": "Title **박스 중가 무너지면 구조를 다시 본다**, blue internal line",
+      "priceRole": "Arrival is not failure; inability to hold/reclaim and sustained lower pricing weaken structure",
+      "formationAndAvailability": "“유지” duration/bar-completion standard not quantified",
+      "numericalRecoverability": "No executable tolerance/time rule; later defense cannot certify earlier fill quality"
+    },
+    {
+      "source": "#077",
+      "wordingAndLocation": "Old internal **박스 중가11,300**, U12,000, **돌파 사건봉 종가12,600**",
+      "priceRole": "Older interval reference and separate new event reference",
+      "formationAndAvailability": "12,600 first becomes final at event-bar completion; old box role remains distinct",
+      "numericalRecoverability": "Given example levels recoverable; does not identify an internal formula or justify pre-event knowledge of12,600"
+    },
+    {
+      "source": "#079",
+      "wordingAndLocation": "Blue 박스 중가; prose **박스 내부로 종가** reentry",
+      "priceRole": "Internal price versus closing-event position relative to the old box",
+      "formationAndAvailability": "Reentry closing information follows the breakout; no guaranteed irreversible failure",
+      "numericalRecoverability": "Event and anchor names must remain separate; no actual closing timestamps or order evidence"
+    },
+    {
+      "source": "Canonical DOCX §§7–12/16",
+      "wordingAndLocation": "Normalizes internal anchor to **박스 종가** and compressed-candle close / core agreement; separately uses breakout-event close",
+      "priceRole": "Functional synthesis of source diagrams",
+      "formationAndAvailability": "Explicit unresolved computation; interval/candle identity still required",
+      "numericalRecoverability": "DOCX itself rejects automatic midpoint and leaves algorithm unresolved. Its standardized wording cannot erase image labels"
+    },
+    {
+      "source": "Edited PDF p3,11:33–12:08",
+      "wordingAndLocation": "Adjustment candle upper/lower wick and **조정봉의 종가**; quoted ABL monthly34,500/26,600/32,000",
+      "priceRole": "H_adjust/L_adjust/C_adjust for a named monthly candle in edited lecture text",
+      "formationAndAvailability": "For the cited2020-07 month, final values only after monthly completion; raw chart/split-adjustment history unavailable",
+      "numericalRecoverability": "Quoted values readable, not independently matched to actual OHLC. These are not an inferred box-internal algorithm"
+    },
+    {
+      "source": "Edited PDF p4,19:01–20:35",
+      "wordingAndLocation": "Another adjustment's quoted220,000/178,500/200,000; monthly failure condition",
+      "priceRole": "Candle reference and structural failure clock, not a whole-box formula",
+      "formationAndAvailability": "Monthly source closing clock; emergency loss may arise earlier",
+      "numericalRecoverability": "Quoted text only; exact source chart and fills NOT VERIFIED"
+    },
+    {
+      "source": "Edited PDF p12,1:13:43",
+      "wordingAndLocation": "Two adjustment months grouped into a box; uses quoted260 and100–109 zones",
+      "priceRole": "A multi-month adjustment-area interpretation",
+      "formationAndAvailability": "Which extrema/close of combined months and original drawing time are not supplied",
+      "numericalRecoverability": "Does not support a universal one-bar-only adjustment definition or C_box=C_adjust"
+    },
+    {
+      "source": "AI-summary TXT,18:06–21:48 /22:12–30:19",
+      "wordingAndLocation": "Candle-close reference, relative-volume examples and weekly failure clock",
+      "priceRole": "Summarizer's version of role switching",
+      "formationAndAvailability": "Weekly close may be required by that stated thesis; latest timestamp alone not an actual completed-bar audit",
+      "numericalRecoverability": "Tertiary summary; does not repair missing original audio/chart or define internal reference"
+    }
+  ],
+  "archivedFiles": [
+    {
+      "filename": "1000052767.jpg",
+      "bytes": 165442,
+      "sha256": "dc622f539e9a31e66bfe9cee2e4952d2a705fd475f90513b77a0b7ace5b04841",
+      "access": "NATIVE_ARCHIVED_FILE_REOPENED",
+      "caseFamily": "LG_ARTICLE_OVERLAP",
+      "firstDrawingTimeVerified": false,
+      "newMarketOutcomeOpened": false
+    },
+    {
+      "filename": "1000052769.jpg",
+      "bytes": 169134,
+      "sha256": "af254250a9d6d1dbf4474b83302319bcba46fa83d1ae71151230c956bea97a99",
+      "access": "NATIVE_ARCHIVED_FILE_REOPENED",
+      "caseFamily": "LG_ARTICLE_OVERLAP",
+      "firstDrawingTimeVerified": false,
+      "newMarketOutcomeOpened": false
+    },
+    {
+      "filename": "1000052771.jpg",
+      "bytes": 144640,
+      "sha256": "31be84ae105a1bee7195e1a4b9c976768f800320ce622046a25c8754ee188ab9",
+      "access": "NATIVE_ARCHIVED_FILE_REOPENED",
+      "caseFamily": "LG_ARTICLE_OVERLAP",
+      "firstDrawingTimeVerified": false,
+      "newMarketOutcomeOpened": false
+    },
+    {
+      "filename": "1000052577.webp",
+      "bytes": 111403,
+      "sha256": "891b16dbef4cdb07b76099677a40ed9bbbf420d105b8d891ad91abb8359e198b",
+      "access": "NATIVE_ARCHIVED_FILE_REOPENED",
+      "caseFamily": "ZM_TWO_SOURCE_VIEWS",
+      "firstDrawingTimeVerified": false,
+      "newMarketOutcomeOpened": false
+    },
+    {
+      "filename": "1000052578.webp",
+      "bytes": 243408,
+      "sha256": "9b77914f9ab9bb44092f312e29e9d66cf60aeb0730b7f9cb9c0dc37695d1e889",
+      "access": "NATIVE_ARCHIVED_FILE_REOPENED",
+      "caseFamily": "ZM_TWO_SOURCE_VIEWS",
+      "firstDrawingTimeVerified": false,
+      "newMarketOutcomeOpened": false
+    }
+  ],
+  "documents": [
+    {
+      "filename": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+      "bytes": 58141,
+      "sha256": "e9652a579ce8ceef06fc622695cf979ad874b1663d2c3b7e8661474105ee16d7",
+      "access": "Relevant extracted sections7–12/14–16/21–25",
+      "originalLectureAudioVisualVerified": false
+    },
+    {
+      "filename": "5_620385370813707921_20261015_101720.pdf",
+      "bytes": 178487,
+      "sha256": "b285082060a6016cd222dee897fc4a3e1e4ba84857b136a27c7d7a85ea42ae0c",
+      "access": "Edited transcript text sections and rendered pages3/4/12;not original lecture screens",
+      "originalLectureAudioVisualVerified": false
+    },
+    {
+      "filename": "차트강의 2편 [4tdsCJxpBds_20261015_101751.txt",
+      "bytes": 3823,
+      "sha256": "ddb5794fc4e8e381bbe3a0b8d2739a5103f73e9df6f78d2c275872ff82f3b103",
+      "access": "Selected AI-summary18:06–30:19 paragraphs",
+      "originalLectureAudioVisualVerified": false
+    }
+  ],
+  "videoExcerpts": [
+    {
+      "id": "lq8ZRohkpn0",
+      "access": "SELECTED_PREVIOUSLY_RETURNED_TRANSCRIPT_EXCERPTS_REREAD",
+      "sha256OfExactReturnedText": "774c1d8e268ec3fa3bddc910233bd6f1f952cf3f921308c89b7a6ac560299efb",
+      "codepointOffsets": [
+        2541,
+        4028
+      ],
+      "newAcquisition": false,
+      "audioVerified": false,
+      "visualVerified": false,
+      "timestampsVerified": false
+    },
+    {
+      "id": "9thTjRx7Km0",
+      "access": "SELECTED_PREVIOUSLY_RETURNED_TRANSCRIPT_EXCERPTS_REREAD",
+      "sha256OfExactReturnedText": "6b19e9fe6133afc0b937df468141eed0a975308d6232e4bb42f9ba4ea1e11ccd",
+      "codepointOffsets": [
+        8272,
+        8497,
+        9566
+      ],
+      "newAcquisition": false,
+      "audioVerified": false,
+      "visualVerified": false,
+      "timestampsVerified": false
+    }
+  ],
+  "unavailableVideoIds": [
+    "KUi9rWYJHnI",
+    "NK2Sr9X14vg"
+  ],
+  "allFourVideoAudioVisualStatus": "NOT VERIFIED",
+  "paidToolsOrCreditBypassAttempted": false,
+  "sourceConflict": "OPEN_TERM_INTEGRATION_AND_PROMOTION_HOLD_ONLY",
+  "originalFilesChanged": false,
+  "missing69Recovered": false,
+  "unseenTransferValidated": false,
+  "economicallyValidated": false,
+  "newScansS02SimulationOrdersProduction": false
+}

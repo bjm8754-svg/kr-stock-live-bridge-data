@@ -137,3 +137,8 @@ Directly reopened 29 primary files and five archived case images; compared canon
 ## C-014 — Overbroad CLOSE correction contradicted by source images (L-020, 2026-10-23)
 
 [P018](SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md) documents native066/073/076/079 중가 labels and047 mixed prose 종가 / diagrams 중가 versus canonical DOCX 종가. Earlier L018/P016/v72 attribution of all 중가 to assistant transcription error was too broad. Preserve old records; current source conflict SRC-TERM-001 blocks new synthesis. Neither arithmetic midpoint nor numerical equivalence is established. This is an observed source-attribution failure, not a market experiment or trading result. Supplementary V002–V005 access remains4metadata,2full returned texts,0verified audio/chart screens. No source/mastery/return promotion or operational change.
+
+
+## C-015 — Break-even rescue is not structural repair (L-021, source-only counterreview, 2026-10-23)
+
+[P020](SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md): native016 gives stop versus lower-support add/rebound-exit branches;017 treats the lower-support rebound as a separate setup. Edited PDF pp3/4 discusses monthly failure then adding/waiting for break-even. These source explanations do not verify a rebound, remaining risk capacity, emergency fill or complete no-rebound limit. Cost basis is position-dependent; historical support is a market-reference hypothesis. Lowering the former does not prove the latter repaired. No actual trader failure, new simulated trade, realized loss or profitable alternative is asserted. Related archived LG/ZM opposing readings are exposed sources, not blind tests. SRC-TERM-001 holds only term-rule integration/promotion, with old records and failures retained.

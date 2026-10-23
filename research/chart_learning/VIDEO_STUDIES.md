@@ -75,3 +75,8 @@ Exact-ID duplicate check: none of these four appears in preexisting records; V00
 - Original: https://www.youtube.com/watch?v=NK2Sr9X14vg; channel 상상주식TV / `UCjNKuCKVBIQsrRdqJBWpkqA`; published as returned `2026-02-21T20:33:46-08:00`; length 39:59.
 - Access: NOT VERIFIED; actual audio NOT VERIFIED; **VISUAL NOT VERIFIED**,0frames. Original metadata read; no reliable speech timestamps.
 - Status: Content review pending; do not infer claimed principles from the title.
+
+
+## v74 cross-source follow-up — no new audiovisual verification (2026-10-23)
+
+P020 rereads selected previously returned V002 text offsets2541/4028 and V004 offsets8272/8497/9566 for winner-selection, rotation/daily exception and attention comparisons. No new acquisition or timecode/audio/chart-frame verification; all4video AV statuses remain NOT VERIFIED, V003/V005 content still unverified. No paid retry or credit bypass. P019/P020 source work continues independently of those access gaps.
