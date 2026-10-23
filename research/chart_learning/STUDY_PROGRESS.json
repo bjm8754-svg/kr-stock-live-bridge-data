@@ -231,7 +231,7 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 78,
+    "methodologyVersion": 79,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -3658,6 +3658,20 @@
     "transferValidated": false,
     "economicallyValidated": false,
     "fullProjectComplete": false
+  },
+  "sourceReviewWorkV79": {
+    "dateKst": "2026-10-23",
+    "baseHead": "4e27d15f722f797b0fe74a47acd8797888c00b33",
+    "revision": 79,
+    "scope": "SOURCE_REGISTRY_HISTORICAL_TAIL_RESTORE_AND_REGRESSION_TEST",
+    "registryTruncationCaughtByPreviousCi": false,
+    "restoredFromV77": "a4303b3d1ca3af8fdf1db77a7cf73b82f44800b3",
+    "preservedCurrentP025": true,
+    "originalSourceReadCountInThisRepair": 0,
+    "transferValidated": false,
+    "economicallyValidated": false,
+    "s02Progression": "PAUSED_AFTER_D03",
+    "operationalChanges": false
   },
   "sourceReviewWorkV78": {
     "baseHead": "a4303b3d1ca3af8fdf1db77a7cf73b82f44800b3",

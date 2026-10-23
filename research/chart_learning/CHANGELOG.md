@@ -1,3 +1,8 @@
+## 2026-10-23 — Revision 79 — Restore truncated registry history and add non-regression check
+
+- An independent post-v78 GitHub diff audit found SOURCE_REGISTRY.md cut off mid-sentence after `- Actual independent spot checks`. It had removed historical root-source guidance, B-003, B-001, mandatory usage and Library/GitHub boundary. The existing 26 tests passed but did not cover this missing tail.
+- Restored the exact v77 historic suffix while preserving v78/P025 and new v79 current note. Added one test asserting preservation of these sections, rather than hiding the loss behind a green CI. Administrative repair only; research stage, five price-only expert plans, original91 source counts, term-only hold, S02 freeze and operational constraints unchanged. No new original-source research or competence promotion.
+
 ## 2026-10-23 — Revision 78 — Competing anchors and reservation time contracts
 
 - Booted actual main v77 a4303b3d1ca3af8fdf1db77a7cf73b82f44800b3 rather than assumed v76. P025 actual U0055jpeg access/SHA reconciliation plus selective3primary/U0042/channel1 images and cached DOCX paragraphs.

@@ -1,3 +1,9 @@
+# CURRENT RESEARCH STATUS — v79 / 2026-10-23 KST (documentation integrity repair only)
+
+SOURCE_REGISTRY historical tail damaged by v78 has been restored from v77 and is protected by new offline regression test. No research claim from v78/P025 changed. MANIFEST/STUDY_PROGRESS current revision79; SOURCE-FIRST, original91 second-pass91/91/mastered0, missing69 unverified, term-only ambiguity, S02 PAUSED_AFTER_D03 and all production-write restrictions retained.
+
+---
+
 # CURRENT RESEARCH STATUS — v78 / 2026-10-23 KST
 
 Authoritative revision78 in MANIFEST/STUDY_PROGRESS. [SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) / [SOURCE_DEEP_P025_PROVENANCE_20261023.json](SOURCE_DEEP_P025_PROVENANCE_20261023.json).

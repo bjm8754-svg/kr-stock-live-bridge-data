@@ -1,3 +1,7 @@
+## CURRENT v79 — archive restoration, not a new chart-method conclusion (2026-10-23)
+
+v78 SOURCE_REGISTRY tail was truncated unexpectedly despite a green CI. Restored original v77 historical sections and added a mandatory-section regression assertion. See [SOURCE_REGISTRY.md](SOURCE_REGISTRY.md) historical B-001/B-003 and 'Mandatory usage' / 'Cross-system boundary' sections. P025 remains the most recent source analysis. Next task: already-public chronological source screens and first-known line/anchor differences; no new scans/test/OHLC or execution. Latest metadata revision79, all safety/competence locks unchanged.
+
 ## CURRENT v78 — competing anchors and reservation clocks
 
 [SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) compares actual U005/U004/P021 source prices against competing horizontal/early-low/late-low/close-wick interpretations. Precise masked anchors remain NOT VERIFIED; annotated known sources cannot establish independent unfamiliar-chart drawing. Fixed limit and line(t) are distinct contracts; do not silently move orders or redraw invalidated lines. Source provenance/next step in [SOURCE_DEEP_P025_PROVENANCE_20261023.json](SOURCE_DEEP_P025_PROVENANCE_20261023.json).
@@ -204,7 +208,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 78
+**Learning revision:** 79
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

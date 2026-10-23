@@ -388,6 +388,18 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual(study["newUniqueOriginalsOpened"], 70)
         self.assertEqual(study["totalDistinctOriginalsEverOpened"], 91)
 
+    def test_registry_tail_and_mandatory_usage_preserved(self):
+        registry = (gate.BASE / "SOURCE_REGISTRY.md").read_text(encoding="utf-8")
+        for token in (
+            "- Actual independent spot checks outside curated 91",
+            "### B-003 — recovered LG CNS recap and degraded Samsung SDS teaching variants",
+            "## H. Recovered screenshot study index B-001",
+            "## Mandatory usage in every new V3 study",
+            "**Cross-system boundary:**",
+        ):
+            self.assertIn(token, registry, f"Registry section unexpectedly missing: {token}")
+        self.assertTrue(registry.rstrip().endswith("GitHub Actions cannot verify Library contents."))
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])
