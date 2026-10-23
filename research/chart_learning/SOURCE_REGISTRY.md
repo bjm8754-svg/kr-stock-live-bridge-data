@@ -1,3 +1,9 @@
+## CURRENT v78 — U005 originals reaccessed, source-exposed construction
+
+[SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) / [SOURCE_DEEP_P025_PROVENANCE_20261023.json](SOURCE_DEEP_P025_PROVENANCE_20261023.json). All5 U005 Library JPEGs actually downloaded, individually viewed, SHA-matched to P023/P024; prior notes alone not treated as pixels. Source exposure remains annotated/known, original chart OHLC/drawing history inaccessible. Selective primary039/058/076 and archived U004/channel inspected; no new census/mastery/AV coverage. Expert-five price-only correction governs, no expected chart recovery. SOURCE-FIRST; curated91 second-pass91/91/mastered0; missing69 NOT VERIFIED; SRC-TERM-001 term-only integration/promotion hold; S02 PAUSED_AFTER_D03; no scan/mock trade/order/production change. Transfer/economics false.
+
+---
+
 ## U-005 expanded — three additional screenshots, same KOSPI chart family (2026-10-23 / v77)
 
 The user supplied three further full-screen JPEG screenshot files, individually visually opened: `1000061034.jpg` (709×1536; 38,107 bytes; sha256 `69f004c6e91151b3216cf49627b775340b8a84dbd4a70cf67c68e1cc4e54554d`), `1000061037.jpg` (709×1536; 44,381 bytes; sha256 `bbc716837b119d3c759803413ed84639c58108e62b52a5e7f9a3eb4dd040ad3f`), `1000061038.jpg` (709×1536; 57,749 bytes; sha256 `a68003fdc49e70f6356865892d4a30524482756e55eba112734cfa246cd3288c`). This extends earlier `1000061025.jpg` and `1000061027.jpg`: five images, one overlapping source family. The bytes stay in conversation files, NOT published to public GitHub. [P024 analysis](SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md). Supports identification of extra historic contacts and lower candidate curves/diagonals, NOT completed defense, verified author chronology or independent win-rate. P023 5,019 blue callout role was over-attributed; see P024 visual-role correction.
@@ -225,25 +231,4 @@ Three more Library original teaching images **#052/#056/#058** were directly ope
 ## G. WARNING — Original screenshot corpus extends beyond the curated 91 (2026-10-15)
 
 - Verified via **nine paginated ChatGPT Library image-file listing pages**: **1,707 image entries** in scope, **91** in `/차트공부_원자료_20260928/images/`, and **1,616** images at `/`. This excludes any recursively unavailable connector mounts such as Google Drive. These are file entries, NOT unique content hashes, and NOT all stock-education images.
-- Actual independent spot checks outside curated 91 found `/1000059945.jpg` (2026-10-07, a chart screenshot with marked selling/buying zones and volume; **expert reasoning source to classify and review**) and `/1000058321.jpg` (2026-09-17, HVM price/volume chart). Also `/1000059604.jpg` (2026-09-28) was a RSI teaching image; likely related/duplicate to numbered material, **not verified as a unique image**. Other root samples include unrelated real-estate/EHS/privacy and general market screenshots; do not treat whole 1,616 as original chart teaching or publish them en masse.
-- **Failure diagnosed:** prior MASTER and START_HERE tracked the curated 91 originals and some text/case notes but never inventoried the bulk of root images. The old error was **incomplete source registration**, not proven global file deletion. Some older chat images may genuinely have expired or never been persistently archived; an all-time-original count is currently **UNKNOWN**.
-- Next source work (manual, without any automation): identify meaningful independent expert-supplied chart captures by date/name and original context, de-duplicate against the 91, separate historical OHLCV images versus tutorial rules versus expert execution plans, verify chart time axes, and register only reviewed ones in the methodology archive. Reopen actual originals before drawing inferences. Never claim that 91 exhausts the user's past supplied images.
-- **The 91-chart-sage collection remains the FIRST primary pedagogical study corpus**, not the only material; keep former cross-chat learning objective unchanged.
-
-### B-003 — recovered LG CNS recap and degraded Samsung SDS teaching variants
-
-On 2026-10-15, four additional Library root originals `1000059367.jpg`, `1000059372.jpg`, `1000059374.jpg`, `1000059376.jpg` were directly visually examined and cross-checked to `KakaoTalkChats.txt` around 2026-08-28 00:07–00:25. They document teaching context and a possible disagreement about labeling Samsung SDS `진돌이`, but original chart frames are obscured by expired-preview overlays and no accurate prices or retrospective trading result can be extracted. See `RECOVERED_SCREENSHOT_CATALOG.md` B-003. Root image entries manually opened across completed logged batches: **42**, not 42 methods mastered. Binary duplicate and all-time file completeness still unknown.
-
-## H. Recovered screenshot study index B-001 (2026-10-15)
-
-**Read `RECOVERED_SCREENSHOT_CATALOG.md`** before claiming the original pedagogical corpus ends at 91 screenshots. B-001 directly inspected 35 root images and found at least some Yangbongman chat/teaching visuals from Aug 27–28 plus a substantive Sep-29 multi-timeframe RSI discussion, alongside extraneous EHS/job/security/personal files. Match exact filename locators to dated `KakaoTalkChats.txt` lines 3345–3374 for Samsung SDS. **Some image previews are expired/overlaid; don't assert exact prices there.** No systematic recovery of entire root corpus, no full YBM original photo set and no quantitative trading test. Source summaries are NOT a replacement for the original images.
-
-## Mandatory usage in every new V3 study
-
-1. Read this registry along with START_HERE, MANIFEST, MASTER, LESSONS and existing assistant protocol.
-2. For any image-study statement, load Library `차트공부_CANONICAL_MASTER_FINAL_20260929.docx` and the relevant original numbered PNG(s) when exact details matter. A source index is NOT equivalent to seeing the image.
-3. For YBM source claims, cross-check `KakaoTalkChats.txt` with `YBM_METHOD_AUDIT.md` (and `YBM_V2_METHOD.md` only as historical system interpretation). Distinguish teacher's words from inferred rules. Do not infer original photographs from `사진` text.
-4. Record source accessibility and evidence confidence; if unavailable write `SOURCE_NOT_VERIFIED` and do not recreate imaginary content.
-5. If a source is corrected or newly recovered, append a lesson/change with evidence and increment MANIFEST revision; do not delete the prior assertion invisibly.
-
-**Cross-system boundary:** ChatGPT Library and GitHub are separate stores. This GitHub repo does not auto-mount Library images. Current/new sessions must actually query Library when necessary. GitHub Actions cannot verify Library contents.
+- Actual independent spot checks

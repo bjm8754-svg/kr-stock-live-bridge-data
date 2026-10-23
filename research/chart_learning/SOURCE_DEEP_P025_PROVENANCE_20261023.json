@@ -1,0 +1,170 @@
+{
+  "revision": 78,
+  "dateKst": "2026-10-23",
+  "baseHead": "a4303b3d1ca3af8fdf1db77a7cf73b82f44800b3",
+  "sourceImages": [
+    {
+      "filename": "1000061025.jpg",
+      "bytes": 201419,
+      "sha256": "1dd57a915eada9850f44328e0703aecc8ec4215c3a965e08fcaca9aaa8cc4c5e",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_SCREENSHOT",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "1000061027.jpg",
+      "bytes": 69253,
+      "sha256": "eefb51c7a4ba6674c0367abbdd2ead50b1e55986b1b08737e7b8331a0f951c84",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_SCREENSHOT",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "1000061034.jpg",
+      "bytes": 38107,
+      "sha256": "69f004c6e91151b3216cf49627b775340b8a84dbd4a70cf67c68e1cc4e54554d",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_SCREENSHOT",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "1000061037.jpg",
+      "bytes": 44381,
+      "sha256": "bbc716837b119d3c759803413ed84639c58108e62b52a5e7f9a3eb4dd040ad3f",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_SCREENSHOT",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "1000061038.jpg",
+      "bytes": 57749,
+      "sha256": "a68003fdc49e70f6356865892d4a30524482756e55eba112734cfa246cd3288c",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_SCREENSHOT",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "039_image(20260928-070223).png",
+      "bytes": 616653,
+      "sha256": "db84a40f1f7b3c8549a144addb4e5d6ebeb3818dde7bc389e5bbe105885290f6",
+      "dimensions": [
+        582,
+        730
+      ],
+      "access": "LIBRARY_REACQUIRED_PRIMARY_PNG",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "058_image(20260928-070527).png",
+      "bytes": 740232,
+      "sha256": "9fc7fe509f003a36c7db8e9bf66bdc5aa4277f9f191d63bca2c4571188d21785",
+      "dimensions": [
+        908,
+        766
+      ],
+      "access": "LIBRARY_REACQUIRED_PRIMARY_PNG",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "076_image(20260928-071143).png",
+      "bytes": 1275474,
+      "sha256": "58974b956a6d834d79c55f0bfc3a699e9274a72478eed9216fb3cf280d088da0",
+      "dimensions": [
+        945,
+        742
+      ],
+      "access": "LIBRARY_REACQUIRED_PRIMARY_PNG",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "02-1000060996.jpg",
+      "bytes": 83324,
+      "sha256": "6e1b3241316e8cb444a23ee0d3861de92910df0a490881192980df256581c9fb",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "CACHED_U004_ORIGINAL_REOPENED",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "10-1000061012.jpg",
+      "bytes": 185254,
+      "sha256": "14eb0df1b085889ddde0d501c3fc62e9cc9a2e6eb2a380f01831058b72560d40",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "CACHED_U004_ORIGINAL_REOPENED",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    },
+    {
+      "filename": "1788851445435.jpeg",
+      "bytes": 51661,
+      "sha256": "45e3eee3b0c3d7f8f08bbfdc96adee4657db8184c57b717947c56e215b3705d9",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "access": "CACHED_UPLOADED_ORIGINAL_REOPENED",
+      "actualPixelsViewed": true,
+      "sourceAuthorshipVerified": false,
+      "rawChartOrDrawingObjects": false
+    }
+  ],
+  "docx": {
+    "filename": "차트공부_CANONICAL_MASTER_FINAL_20260929.docx",
+    "sha256": "e9652a579ce8ceef06fc622695cf979ad874b1663d2c3b7e8661474105ee16d7",
+    "access": "CACHED_SOURCE_SELECTED_PARAGRAPHS_48_61_321_340_ACTUALLY_EXTRACTED",
+    "libraryCurrentVersionReverified": false
+  },
+  "sourceExposure": "ALREADY_ANNOTATED_AND_FAMILIAR_NOT_BLIND",
+  "newUnfamiliarChartTest": false,
+  "independentExAnteAnchorCalculationVerified": false,
+  "expertFiveInput": "PRICES_ONLY_NO_CHART_ATTACHMENTS_EXPECTED",
+  "missing69Recovered": false,
+  "primaryMastered": 0,
+  "termConflictResolved": false,
+  "newVideoAV": false,
+  "newMarketData": false,
+  "s02Progression": "PAUSED_AFTER_D03",
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "report": "research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md",
+  "resume": "Compare already-public chronological captures for first-available anchor/line and changes; no hidden future or new market test; retain full integrated source scope."
+}

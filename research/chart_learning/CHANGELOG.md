@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 78 — Competing anchors and reservation time contracts
+
+- Booted actual main v77 a4303b3d1ca3af8fdf1db77a7cf73b82f44800b3 rather than assumed v76. P025 actual U0055jpeg access/SHA reconciliation plus selective3primary/U0042/channel1 images and cached DOCX paragraphs.
+- Compared horizontal old acceptance, early/late pivots and wick floors; markup prevents exact ex-ante pivot recovery. Fixed reservation, dynamic line(t), redrawn model and structural/cash-risk clocks distinguished; red scenarios not observed support. Source-exposed method attempt only, no unfamiliar-chart/economic validation or canonical promotion.
+- Append L023/C017, preserve old errors and price-only expert correction. Current revision/manifest/progress synchronized; add P023/P024 artifact references to requiredPaths. Full scope and all safety/source/competence counters unchanged. Integrity tests are not performance evidence.
+
+---
+
 ## 2026-10-23 — Revision 77 — U005 expanded screenshot provenance and a lower-reference correction
 
 - Added three user-uploaded KOSPI full-screen crops to the U005 source family (five screenshot files, one chart family), SHA/size documented. Added P024; source image bytes not published to GitHub.

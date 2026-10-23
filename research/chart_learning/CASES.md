@@ -147,3 +147,8 @@ Directly reopened 29 primary files and five archived case images; compared canon
 ## C-016 — Derivative source and mistaken expert-chart identity (source diagnostic)
 
 L-022 / [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md](SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md) / [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md). Generated Sep08 PNG and uploaded JPEG share exactly matching chart interior after2x crop; don't count independent origins or extra detail. Native Sep30 `1790752451449.jpeg` is 삼천당제약000250 rather than catalogued 삼화콘덴서001820. Similar visible price172,700 vs known expert target172,500 is not linkage. Existing C001 numeric history preserved,0/5 original expert chart matches. This is a provenance-error counterexample, not five failed trades or transfer/economic validation.
+
+
+## C-017 — A moving guide is not a fixed reservation or historical accepted price (L-023)
+
+[SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md). U005 earlier low contacts support competing horizontal/diagonal hypotheses; today's~5300 projection is not proof that past trade concentrated at5300. Occluded endpoints prevent exact independent anchor recovery. U004 upper-box contact is not lower1188000 sloped reference defense; P021 prior interior is approached from below. A line can cross flat price due to time, and redrawn lines can hide failure if original is discarded. These are source-known counterexamples/candidate method distinctions, no new trade or transfer/economic result.

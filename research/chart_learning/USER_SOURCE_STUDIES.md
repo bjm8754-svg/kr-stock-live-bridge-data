@@ -1,3 +1,9 @@
+## CURRENT v78 — source-known competing line construction
+
+[SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) documents U005 horizontal acceptance versus projected slope, U004 upper-box versus sloped lower reference, and old channel interior approached from below. Original source bytes actually reopened; no raw data/exact pivots/independent drawing completion claimed. Cached canonical selected paragraphs compared; no fresh PDF/TXT/video verification. Fixed limit/line(t), structural failure/loss cap and original/redrawn model are candidate method distinctions. Expert-five remains price-only benchmark; no missing-attachment hunt.
+
+---
+
 ## U-005 v77 — five cropped screenshots of one annotated KOSPI structure
 
 [Additional-source P024](SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md): new three images #1034/#1037/#1038 add wider historical green-zone yellow contacts, a curved red trace by the ~5,019.05 tag, and lower ~4,754.65 /~4,479.55 rising candidates. They overlap U-005's existing #1025/#1027 and are not independent market predictions. We retract certainty that ~5,019 is simply a dashed/sloped structural fallback because the series definition is unreadable. The prospective red rebound sketches are forecasts, not candles. The five numeric expert plan benchmark was originally provided as prices only and is unrelated to these screenshots. No raw chart data/drawing timeline/confirmed close, no new market trial, no skill claim.

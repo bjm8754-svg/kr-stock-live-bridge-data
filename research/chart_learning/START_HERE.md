@@ -1,3 +1,11 @@
+## CURRENT v78 — competing anchors and reservation clocks
+
+[SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) compares actual U005/U004/P021 source prices against competing horizontal/early-low/late-low/close-wick interpretations. Precise masked anchors remain NOT VERIFIED; annotated known sources cannot establish independent unfamiliar-chart drawing. Fixed limit and line(t) are distinct contracts; do not silently move orders or redraw invalidated lines. Source provenance/next step in [SOURCE_DEEP_P025_PROVENANCE_20261023.json](SOURCE_DEEP_P025_PROVENANCE_20261023.json).
+
+Five expert plans: user supplied PRICES ONLY, no chart attachments expected. SOURCE-FIRST; curated91 second-pass91/91/mastered0; missing69 NOT VERIFIED; SRC-TERM-001 term-only integration/promotion hold; S02 PAUSED_AFTER_D03; no scan/mock trade/order/production change. Transfer/economics false.
+
+---
+
 ## CURRENT v77 — three extra crops of the same KOSPI source (2026-10-23)
 
 Three more user-uploaded Telegram/chart screenshots (#1034, #1037, #1038) were opened and compared with U-005's prior #1025/#1027: **five screenshot files but ONE overlapping KOSPI chart/source family**, not five independent signals. [P024 addendum](SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md) shows wider prior yellow-circle contacts on the rising green zone; earlier annotation~5,270.51 and later~5,300.83 refer to different horizontal positions on ascending line(t), not an invariant horizontal bracket. Crucial correction to P023: ~5,019.05 label sits by a separate smoothly rising **red curve** as well as a nearby dashed guide; plot definition is unknown, so the earlier depiction of it as a confirmed independent dotted/sloped structural fallback was too specific. Additional lower candidate diagonals~4,754.65 and~4,479.55 visible. No market outcome or line timestamp observed. Expert five remain user-provided price lists only. All research phase, safety locks, original91 2nd-pass status and independent mastery=0 unchanged.
@@ -196,7 +204,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 77
+**Learning revision:** 78
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
