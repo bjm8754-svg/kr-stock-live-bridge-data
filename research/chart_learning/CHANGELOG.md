@@ -1,5 +1,11 @@
 # Immutable learning change history
 
+## 2026-10-23 — Revision 69 — Administrative MASTER historical-snapshot disambiguation
+
+- Reconciled **current** research version and progress presentation: current manifest/progress v69; 91/91 curated originals were source-reviewed previously but 0 mastered, Library-root 1,596 visually classified / 69 inaccessible. Kept immutable earlier BULK-018 (21/91, 57 unavailable) and v43 data as explicitly **historical snapshots** instead of overwriting them.
+- Clarified BOOT_PROTOCOL that current-state contradiction fails closed; dated historical state or old document-baseline version is not by itself such a contradiction. Promoted no research hypothesis or CANONICAL rule and performed no new original source reads, scans, S02, trading, performance validation, or production writes.
+
+
 ## 2026-10-23 — Revision 68 — Source-first distinction between standing box limits and observed price defense
 
 - Direct native reread of 14 already-inventoried curated figures #064/#065/#066/#067/#068/#073/#074/#075/#076/#077/#078/#079/#080/#081, plus source canonical DOCX. No census increase and no unsupported skill claims.

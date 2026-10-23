@@ -1,3 +1,16 @@
+# CURRENT RESEARCH STATUS — v69 / 2026-10-23 KST (administrative reconciliation only)
+
+**Authoritative current version:** MANIFEST.json `revision=69`, STUDY_PROGRESS.json `learningStatus.methodologyVersion=69`. This is a documentation-synchronization revision, **NOT new source research, a methodology breakthrough, or demonstrated trading skill**.
+
+- **Curated 차트술사 originals:** all 91 distinct numbered images previously directly source-reviewed across recorded sessions; **0 independently mastered**, no unseen-chart transfer or economic advantage validated. The present administrative revision did not reread images.
+- **Library-root image census:** 1,665 catalogued entries were attempted; **1,596 source images classified**, **69 unavailable / NOT VERIFIED**. This count is distinct from the curated 91-image corpus; missing source bytes were not recovered.
+- **Latest source study:** P015 (2026-10-23), on distinction between resting limit-order fills and later confirmed support reactions. Next active task **SRC-STUDY-001**, with actual ordinary-RSI daily/weekly Korean-equity matched-pivot source still missing.
+- **Phase / safety:** METHODOLOGY_FIRST_SOURCE_STUDY; S02 **PAUSED_AFTER_D03**; no scans, D04, simulated orders, real orders, scanner changes or production writes authorized.
+- **How to read this file:** dated BULK and v41–v43 entries below are **immutable historical snapshots**, not current counts. In particular, the 21/91 and 57 inaccessible numbers at the beginning of the old BULK-018 entry describe **2026-10-21**, and the original embedded v43 label is a historical document-baseline label. They are not contradictions of the newer STUDY_PROGRESS snapshot.
+- **Boot consistency semantics:** differences in dates or historical document-label versions do not by themselves trigger INCONSISTENT. Fail closed for mismatched authoritative current revision, phase/permission flags, source claims or a truly contradictory current-state record. Do not treat earlier snapshots as current.
+
+---
+
 ## BULK-018 — July 86 files visually source-classified; SOURCE-FIRST LOCK (2026-10-21)
 
 **All 86 July Library-root originals (18 upload dates) successfully recovered and source-categorized**, consisting of **1 WTI crude-oil futures market line graph (automatic software display; MARKET_CONTEXT_ONLY)** and **85 unrelated workplace/personal/product documents/images excluded**. Exact original SHA-256 identified 69 unique byte hashes / 17 duplicate extra entries. Four April already-access-blocked files were reattempted with explicit `no downloadable backing file yet`, remain NOT VERIFIED. Full exact file ledger: [ROOT_IMAGE_STUDIES_BULK018.md](ROOT_IMAGE_STUDIES_BULK018.md).
@@ -63,7 +76,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 **Source lesson (hypothesis only):** Sep20 ETH/KRW multi-venue/15m-vs-4h screenshots, Sep21 Nasdaq100 annotated resistance, Sep14 multi-ticker/minute-vs-week snapshots, and Oct1 **Amotech (052710)** images at 10:41 quoted 20,650 and 10:59 quoted 20,850 illustrate why quote time, completed bar, venue, repeated screenshots and an already-placed order are different information sets. Oct1 progression does not prove a buy at 20,650 or an economic win. Nine date groups' many job, EHS, service and historical Worker status screens were excluded rather than claimed as methodology. No promoted CANONICAL rule, OOS performance, scan, new S02 step or production write.
 
 
-Version: **v43 / 2026-10-21 KST**. Source of truth for chart judgement continuity. **Not a trading signal.**
+Historical MASTER baseline label: **v43 / 2026-10-21 KST** (retained for provenance; superseded for CURRENT progress by v69 header and STUDY_PROGRESS). **Not a trading signal.**
 
 ## End objective
 

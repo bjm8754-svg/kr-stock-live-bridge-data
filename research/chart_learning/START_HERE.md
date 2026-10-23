@@ -1,3 +1,7 @@
+## DOC-SYNC-016 — Explicit current-vs-historical progress boundary (2026-10-23)
+
+GitHub v69 repairs misleading chronological presentation of MASTER, **not** the underlying chart evidence. Current progress is 91 curated images source-reviewed / 0 independently mastered, Library-root 1,596 classified / 69 inaccessible; historic MASTER BULK-018 21/91 and 57 inaccessible are 2026-10-21 **snapshots**, not today's progress. v43 is a former MASTER document-label, not a requirement that it equal MANIFEST learning revision. Boot still fails closed on actual conflicting current flags or source records. P015 remains the newest source study, SRC-STUDY-001 still open; no new original views, validation, scanner, S02 or operations.
+
 ## SRC-DEEP-015 — Pending limit fills are NOT confirmed support reactions (2026-10-23)
 
 Reopened exact primary box-breakout teaching originals #064–068, #073–081 and canonical reference to isolate a critical timing ambiguity: #073's illustrative U=12,000 / C_box=11,300 50/50 resting-entry scenario cannot borrow the later confirmed C_box defense from #076/#080 at the same earlier fill price. #077's high-volume breakout event close C_event=12,600 exists only after the event candle finishes; #067 permits total no-retest and nonfill. [Source-level comparison and prospective falsification design](SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md). No real ticker/RSI matched-pivot equity proof, C_box algorithm, new market case, filled trade, claimed skill, S02 or production action. SRC-STUDY-001 source-first gate remains OPEN; 91 teaching originals remain 0 independently mastered and Library-root 69 inaccessible.
@@ -152,7 +156,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 68
+**Learning revision:** 69
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
