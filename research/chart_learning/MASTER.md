@@ -1,3 +1,14 @@
+# CURRENT RESEARCH STATUS — v83 / 2026-10-23 KST
+
+MANIFEST/STUDY_PROGRESS revision83. Existing [P028 evaluation design](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) concretized; [readiness record](EVALUATION_READINESS_20261023.json). **DOCUMENT SPECIFIED / EXECUTION NOT READY.** This is protocol preparation, not P029, a new trading rule, source review or demonstrated chart skill.
+
+- Frozen-before-output anchor families/roles/bar IDs replace expert-price matching; reasonable novel alternatives remain explicit disputes, not post-hoc widened primary answers. A/T/R outputs, critical-error codes and opportunity omission versus unsupported entry are specified.
+- Proposed100 unique issuer episodes/four regimes, paired pinned v81/v82, absolute process gate and paired comparison are reviewable policy proposals only. No cases/tickers/periods selected, price data collected or evaluation performed. Independent graders/calibration, final policy/model/risk contracts, eligible holdout and explicit execution approval remain absent.
+- Source counters unchanged:91/91 historical second pass/mastered0;missing69 NOT VERIFIED;2additional-video transcripts/0AV verified. SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production. Transfer/economics/competence remain false. SOURCE_REGISTRY and existing lessons/cases/rules unchanged;all prior history retained.
+- Next:review concrete readiness gates and freeze contracts before any separately authorized evaluation preparation/execution. Broader91/DOCX/PDF/TXT/video/practical-source mission retained. Integrity checks assess records only.
+
+---
+
 # CURRENT RESEARCH STATUS — v82 / 2026-10-23 KST
 
 MANIFEST/STUDY_PROGRESS revision82. [SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) / [inactive evaluation design](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md). SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trade/order/production or evaluation. Transfer/economics false.

@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 82,
+  "revision": 83,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -82,7 +82,8 @@
     "research/chart_learning/SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json",
     "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md",
     "research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md",
-    "research/chart_learning/SOURCE_DEEP_P028_PROVENANCE_20261023.json"
+    "research/chart_learning/SOURCE_DEEP_P028_PROVENANCE_20261023.json",
+    "research/chart_learning/EVALUATION_READINESS_20261023.json"
   ],
   "rules": [
     {

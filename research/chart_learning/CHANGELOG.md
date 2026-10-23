@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 83 — Evaluation readiness protocol, no experiment
+
+- Expand the existing P028 design;preserve v82 draft verbatim. Add readiness JSON with explicitly proposed sample/pass policy,cutoff-bound anchor families,A/T/R and critical-error grading,dispute handling,opportunity/abstention controls,and fair pinned v81/v82 comparison.
+- Document policy/roles/calibration/model/risk/data/approval blockers. Statistical arithmetic only,no case/instrument/period selection,price collection,output generation or evaluation. No P029,lesson/case addition,rule promotion or competence change.
+- Preserve SOURCE_REGISTRY byte-for-byte,all historical document bodies,existing29 regression tests,LESSONS/CASES and safety/source counters. Revision83 denotes protocol preparation only;integrity does not prove analytical skill.
+
+---
+
 ## 2026-10-23 — Revision 82 — Ex-ante decision procedure and design-only evaluation
 
 - P028 actual3primary PNG and selected Kakao text review;dated retrospective kept separate from original dated plan. Synthesis links important structure,trade-adoption veto and risk constraints;personal cost not market support but required for loss/budget continuity. New thesis cannot erase prior loss. L026/C020 appended,candidate only,no canonical promotion.

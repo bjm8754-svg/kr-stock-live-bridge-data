@@ -1,3 +1,9 @@
+## CURRENT v83 — independent-evaluation readiness, design only
+
+[Operational proposal in the existing P028 design](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) and [readiness gates](EVALUATION_READINESS_20261023.json). DOCUMENT SPECIFIED / EXECUTION NOT READY. Anchor-family evidence, A/T/R outputs, disputes, anti-abstention scoring, paired v81/v82 controls and proposed sample/pass policy specified. No new P029/lesson/case or skill promotion. Cases selected0,price collection0,evaluation0. Need explicit execution approval,independent graders/calibration,policy/method/model/risk freezes and eligible audited inputs. Next review these gates;do not start cases on ambiguous continuation. SOURCE-FIRST;91historical/mastered0;missing69;term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production/paid analysis. Full original source mission retained.
+
+---
+
 ## CURRENT v82 — ex-ante decision procedure and inactive evaluation design
 
 [SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) separates important structure,conditional trade adoption,and risk veto. New thesis labels never erase losses/budget;cost basis excluded from market anchors but needed for money accounting. Dated Aug28 retrospective is not authenticated May/June prior plan. [UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) is DESIGN ONLY/NOT EXECUTED,no evaluation packets selected. SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trade/order/production or evaluation. Transfer/economics false.
@@ -232,7 +238,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 82
+**Learning revision:** 83
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

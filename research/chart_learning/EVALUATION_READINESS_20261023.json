@@ -1,0 +1,93 @@
+{
+  "schema": "V3_EVALUATION_READINESS_DESIGN_V1",
+  "revision": 83,
+  "dateKst": "2026-10-23",
+  "baseHead": "2af74fba7c78410d888127434da818d2243039ca",
+  "status": "DOCUMENT_SPECIFIED_EXECUTION_NOT_READY",
+  "proposalStatus": "PROPOSED_FOR_RATIFICATION",
+  "designPath": "research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md",
+  "methodPins": {
+    "baselineV81": "57a9656b99052fe3bd57fc717b248383056bdadf",
+    "candidateV82": "2af74fba7c78410d888127434da818d2243039ca",
+    "v83IsEvaluationProtocolNotNewCandidate": true
+  },
+  "executionAuthorized": false,
+  "executionOccurred": false,
+  "casesSelected": 0,
+  "newPriceDataCollected": false,
+  "outputsGenerated": 0,
+  "proposedSampling": {
+    "nIndependentEpisodes": 100,
+    "maxEpisodesPerIssuer": 1,
+    "regimes": {
+      "up": 25,
+      "range": 25,
+      "down": 25,
+      "reboundTransition": 25
+    },
+    "minConditionalOpportunityCases": 25,
+    "minRejectOrInsufficientCases": 25,
+    "classificationUsesCutoffOnly": true,
+    "marketFrequencyRepresentative": false,
+    "marketClustersMustBeAudited": true,
+    "smallMethodDifferencePowerGuaranteed": false
+  },
+  "proposedAbsoluteGate": {
+    "nEligible": 100,
+    "observedCriticalErrors": 0,
+    "minAllDomainPasses": 80,
+    "oneSidedExactConfidence": 0.95,
+    "minPassRateLowerLimit": 0.7,
+    "independenceRequiredForStatisticalClaim": true,
+    "normativePolicyNotValidatedTradingRule": true
+  },
+  "primaryPairedComparison": {
+    "endpoint": "A_T_R_ALL_2_NO_CRITICAL_OR_UNRESOLVED_DISPUTE",
+    "test": "ONE_SIDED_EXACT_BINOMIAL_ON_DISCORDANT_PAIRS",
+    "nullP": 0.5,
+    "alpha": 0.05,
+    "direction": "V82_GREATER_THAN_V81",
+    "noOptionalStopping": true,
+    "noDifferenceDetectedDoesNotEstablishEquivalence": true
+  },
+  "disputes": {
+    "primarySuccessUntilResolvedByFrozenKey": false,
+    "remainInPrimaryDenominator": true,
+    "secondaryAdjudicationReported": true,
+    "newFamiliesApplyToFutureCohortRubricOnly": true
+  },
+  "gates": {
+    "policyRatifiedAndFrozen": false,
+    "curatorAndIndependentGradersAssigned": false,
+    "calibrationComplete": false,
+    "methodBundlesAndModelSettingsFrozen": false,
+    "riskScenarioFrozen": false,
+    "eligibleHoldoutAudited": false,
+    "privateImmutableRecordStoreReady": false,
+    "userExecutionApproval": false
+  },
+  "thisUnitEvidence": {
+    "repositoryDesignAndMetadataReviewed": true,
+    "newTeachingImagesViewed": 0,
+    "newVideoVisualsVerified": 0,
+    "statisticalReferencesReviewed": [
+      "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbici.htm",
+      "https://www.itl.nist.gov/div898/handbook/prc/section2/prc241.htm"
+    ],
+    "designArithmeticOnly": true,
+    "preservedV82DraftSha256": "59b25c1acc3a76e9beaf27989496481bd67c43817b0ae04f1c94fd1ad97e620c"
+  },
+  "scopeLocks": {
+    "s02": "PAUSED_AFTER_D03",
+    "sourceTerm001": "OPEN_TERM_INTEGRATION_AND_PROMOTION_HOLD_ONLY",
+    "newScans": false,
+    "mockTrading": false,
+    "orders": false,
+    "productionChanges": false,
+    "economicEvaluation": false
+  },
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "competencePromoted": false,
+  "nextStep": "Review and freeze concrete protocol proposals and role/risk contracts; do not prepare/select/run evaluation cases without separate explicit authorization."
+}
