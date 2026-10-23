@@ -1,3 +1,9 @@
+## CURRENT v82 — decision/risk continuity and prior-plan evidence
+
+[SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) connects prior teaching/practical sources without repeating chart outcome scoring. Fresh032/033/068 plus bounded original chat text access;Aug28 May/June retrospective is not original prior plan. No raw chat published. Analysis/trade/risk candidates and continuous loss budget distinguished;new thesis does not reset money history. PDF/lecture/AV access gaps unchanged. [UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) DESIGN ONLY,no selected data/test/orders.
+
+---
+
 ## CURRENT v81 — swing versus entry failure; fresh edited-PDF selection
 
 [SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) / [SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json](SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json). Actual editedPDF pp3/4/7 text+render review compared with016/036/062/067/078 and archived LG/ZM/LGCNS screens. Monthly structure wait does not itself authorize capital loss; lower weekly floor does not repair a failed upper entry; eventual-return wording conflicts with067 no-retest branch. Original lecture AV still NOT VERIFIED, numeric transcription ambiguities not promoted. New source-known candidate distinctions only; primary91/mastered0/video/missing counts unchanged.

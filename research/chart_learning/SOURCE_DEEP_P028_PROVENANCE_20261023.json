@@ -1,0 +1,79 @@
+{
+  "revision": 82,
+  "dateKst": "2026-10-23",
+  "baseHead": "57a9656b99052fe3bd57fc717b248383056bdadf",
+  "report": "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md",
+  "design": "research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md",
+  "images": [
+    {
+      "filename": "032_image(20260928-070121).png",
+      "bytes": 456566,
+      "sha256": "a523f5354576b921f6e0fe195933d3264191188c57e0c99c1143be8a340befa0",
+      "dimensions": [
+        487,
+        734
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_PNG_PIXELS_ACTUALLY_VIEWED"
+    },
+    {
+      "filename": "033_image(20260928-070127).png",
+      "bytes": 595078,
+      "sha256": "807366e54d15c5d9bd26bad7ab8707025e8fcb2bdc3efa67e28d32b3a4834a19",
+      "dimensions": [
+        581,
+        730
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_PNG_PIXELS_ACTUALLY_VIEWED"
+    },
+    {
+      "filename": "068_image(20260928-071045).png",
+      "bytes": 882117,
+      "sha256": "4c6e4422c43a78a7d57fd38885dbb2fd3d4f546948a54313a8b023cc5dbf9fff",
+      "dimensions": [
+        951,
+        736
+      ],
+      "access": "LIBRARY_REACQUIRED_NATIVE_PNG_PIXELS_ACTUALLY_VIEWED"
+    }
+  ],
+  "textRead": {
+    "filename": "KakaoTalkChats.txt",
+    "libraryId": "libfile_1eabef23fac88191a92c28c4c5711f29",
+    "fileId": "file_00000000627c8211b5f188ee630b23be",
+    "metadataBytes": 641685,
+    "totalRenderedLines": 6767,
+    "actualReadSpans": [
+      [
+        1,
+        15
+      ],
+      [
+        3330,
+        3414
+      ]
+    ],
+    "dateOfReadRetrospective": "2026-08-28",
+    "earlierPlanDatesClaimed": [
+      "May12",
+      "May22",
+      "June1"
+    ],
+    "originalEarlierPlanAuthenticated": false,
+    "rawPrivateConversationPublished": false,
+    "fullFileSha256": "NOT_COMPUTED_NOT_MATERIALIZED"
+  },
+  "primaryCoverageAdded": 0,
+  "newPDFDOCXorVideoRead": false,
+  "newMarketData": false,
+  "newExperimentDataSelected": false,
+  "evaluationExecuted": false,
+  "canonicalRulesPromoted": false,
+  "sourceExposure": "SOURCE_EXPOSED_METHODOLOGY_SYNTHESIS_ONLY",
+  "termConflictResolved": false,
+  "missing69Recovered": false,
+  "mastered": 0,
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "s02Progression": "PAUSED_AFTER_D03",
+  "next": "Keep design inactive;resolve original plan/provenance and risk-budget assumptions within existing sources,or obtain separate authorization and eligible unseen packets before evaluation"
+}

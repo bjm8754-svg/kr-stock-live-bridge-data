@@ -162,3 +162,8 @@ L-022 / [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md
 ## C-019 — Weekly structure surviving does not repair a failed entry (L-025)
 
 [SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md). ZM upper-price damage and weekly base candidate can coexist;LGCNS daily recovery remains under older supply;LGDisplay lower boxes do not indefinitely rescue upper-entry failures. EditedPDF monthly wait/return-to-entry narratives lack finite-loss/no-retest guarantees;primary067/078 provide rival paths. Personal brokerage cost basis excluded. Source-exposed candidate synthesis only,latest qualified completed pair0,not actual failure trades or validated economics.
+
+
+## C-020 — Retrospective plan dates and risk-ledger reset (L-026)
+
+[SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md). A dated Aug28 source recollects May/June views but is not their authenticated original plan. Do not infer advance success or deception. Candidate procedure distinguishes original/new thesis history from continuous economic loss/budget history;cost basis is not support but is not erased from accounting. Inactive evaluation design only,no new case/return/competence test.

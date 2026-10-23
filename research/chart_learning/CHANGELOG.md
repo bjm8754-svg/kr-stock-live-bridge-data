@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 82 — Ex-ante decision procedure and design-only evaluation
+
+- P028 actual3primary PNG and selected Kakao text review;dated retrospective kept separate from original dated plan. Synthesis links important structure,trade-adoption veto and risk constraints;personal cost not market support but required for loss/budget continuity. New thesis cannot erase prior loss. L026/C020 appended,candidate only,no canonical promotion.
+- Add inactive unfamiliar-chart evaluation design:prefix/cutoff/selection/annotation leakage,episode deduplication,baselinev81 comparison,pre-outcome reasoning adjudication and separate economic approval. No evaluation cases/market data selected or executed;sample/threshold/budget decisions pending.
+- Full historical registry/doc bodies and v79/v80 preservation tests retained;review modified scope and exact remote readback. Revision synchronization only,competence/source/safety flags unchanged. Broader original research mission maintained.
+
+---
+
 ## 2026-10-23 — Revision 81 — Swing structure, entry failure and money-risk limits
 
 - P027:actual7market/5primary images and editedPDF3pages reviewed. Distinguish source-internal older completed bars from authenticated latest daily/weekly settlement; comparable current completed pair0. No new market result or orders.

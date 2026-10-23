@@ -1,3 +1,14 @@
+# CURRENT RESEARCH STATUS — v82 / 2026-10-23 KST
+
+MANIFEST/STUDY_PROGRESS revision82. [SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) / [inactive evaluation design](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md). SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trade/order/production or evaluation. Transfer/economics false.
+
+- P028 connects analysis,trade adoption and risk decisions with new candidate distinctions:bullish structure can coexist with trade rejection;personal cost is not support but remains relevant to continuous loss/risk accounting;new thesis does not reset accumulated loss or budget.
+- Actual fresh source review:032/033/068 PNGs and Kakao text lines1–15/3330–3414. Aug28 retrospective mentions May12/May22/June1 views,not the original dated plans. Authenticated ex-ante plan/revision remains missing;no claim of fraud or prior prediction success. No private conversation copy published.
+- Evaluation design only:prefix-computed bars/indicators,annotation and selection leakage,episode-family deduplication,unfamiliarity,baselinev81 versus candidateP028,pre-outcome reasoning adjudication and separately authorized economics. No case/ticker/date selection,market fetch or test execution. Sample/threshold/budget assumptions unresolved.
+- All findings remain conditional method synthesis,not canonical trading rules or skill. Current strategy/competence flags unchanged;full registry historical bodies/tests preserved. Next source work addresses plan authenticity and risk assumptions;design remains inactive until separately authorized.
+
+---
+
 # CURRENT RESEARCH STATUS — v81 / 2026-10-23 KST
 
 MANIFEST/STUDY_PROGRESS revision81. [SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) / [SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json](SOURCE_DEEP_P027_SOURCE_AND_COMPLETION_LEDGER_20261023.json). SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production. Transfer/economics false.

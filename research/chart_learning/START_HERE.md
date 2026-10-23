@@ -1,3 +1,11 @@
+## CURRENT v82 — ex-ante decision procedure and inactive evaluation design
+
+[SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) separates important structure,conditional trade adoption,and risk veto. New thesis labels never erase losses/budget;cost basis excluded from market anchors but needed for money accounting. Dated Aug28 retrospective is not authenticated May/June prior plan. [UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) is DESIGN ONLY/NOT EXECUTED,no evaluation packets selected. SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trade/order/production or evaluation. Transfer/economics false.
+
+Next preserve original plan/provenance/risk-assumption gaps;do not activate evaluation on ambiguous continuation. Broader91/DOCX/PDF/TXT/video/practical source mission retained.
+
+---
+
 ## CURRENT v81 — entry failure, swing structure and capital constraints
 
 [SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md](SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md) compares actual daily/weekly source segments with edited PDF and5primary originals. Source-internal older completed bars differ from authenticated latest settlement; current completed pair0. Entry-setup failure, higher-frame failure and capital limit are distinct. Lower weekly support never retroactively validates a failed higher entry. Personal cost basis is not market support; eventual retest not guaranteed. All SOURCE-EXPOSED/candidate synthesis, not transfer/economics. SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no scan/mock trade/order/production. Transfer/economics false.
@@ -224,7 +232,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 81
+**Learning revision:** 82
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
