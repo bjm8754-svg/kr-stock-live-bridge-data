@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 74,
+  "revision": 75,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -64,7 +64,12 @@
     "research/chart_learning/SOURCE_DEEP_P018_VIDEO_ACCESS_AND_SOURCE_CONFLICT_20261023.json",
     "research/chart_learning/SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md",
     "research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md",
-    "research/chart_learning/SOURCE_DEEP_P019_P020_PROVENANCE_20261023.json"
+    "research/chart_learning/SOURCE_DEEP_P019_P020_PROVENANCE_20261023.json",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_P021_P022_PROVENANCE_20261023.json",
+    "research/chart_learning/SOURCE_DEEP_P021_CHANNEL_DIAGNOSTIC_20261023.json",
+    "research/chart_learning/source_diagnostics/audit_manual_channel.py"
   ],
   "rules": [
     {
@@ -144,7 +149,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 21,
+  "lessonCount": 22,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,

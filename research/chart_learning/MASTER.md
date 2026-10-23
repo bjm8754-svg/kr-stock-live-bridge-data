@@ -1,3 +1,16 @@
+# CURRENT RESEARCH STATUS — v75 / 2026-10-23 KST
+
+Authoritative current fields: MANIFEST revision75 / STUDY_PROGRESS methodologyVersion75. [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md](SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md) and [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md).
+
+- P021/P022: actual source-pixel review and candidate method comparison; expert corresponding originals recovered0/5. No transfer/economic validation or rule promotion. Primary91 second-pass coverage unchanged91/91, mastered0; missing69 remains NOT VERIFIED. SRC-TERM-001 OPEN, term-only hold; S02 PAUSED_AFTER_D03; no scans/mock trades/orders/production changes.
+- New verified source correction: chart-1(8).png metadata is generated; its chart interior exactly matches a2x crop of uploaded1788851445435.jpeg. Two files do not add independent source evidence or native resolution. Legacy anchor-center projections remain source diagnostics, not exact OHLC/forecast verification.
+- Sep30 candidate1790752451449.jpeg is 삼천당제약000250, not 삼화콘덴서001820. Prior catalogue attribution explicitly corrected, original history preserved. Five expert prices remain secondary C001 records; technical anchor/stop/target reasoning not reconstructed without originals.
+- Selected Nasdaq/Mason/U004 sources distinguish horizontal recovery vs diagonal supply, shared line derivations, live bars, and unknown CVD reset. Candidate evidence-recording procedure refined; predictive benefit NOT DEMONSTRATED.
+- Broader mission retained: primary91/DOCX/TXT/PDF/video/practical charts/expert plans. Added four videos still2texts/0actual AV screens;2contents NOT VERIFIED. No new PDF/DOCX/video verification this unit.
+- Next: existing manual-chart evidence with stronger drawing-time/anchor provenance; original expert message/chart linkage remains open. Full research and independent competence are not complete. See MINIMUM_COMPETENCE_BENCHMARK.md and VIDEO_STUDIES.md for unchanged limits.
+
+---
+
 # CURRENT RESEARCH STATUS — v74 / 2026-10-23 KST (source reconciliation and counterreview)
 
 **Authoritative current version:** MANIFEST.json `revision=74`, STUDY_PROGRESS.json `learningStatus.methodologyVersion=74`.

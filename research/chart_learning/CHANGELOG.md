@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 75 — Preserve manual-source provenance and expert-original gaps
+
+- P021 actual native channel pair pixel audit, Nasdaq/Mason/U004 comparisons: generated crop is dependent on uploaded JPEG; no extra native detail. Reproducible source-only diagnostic and alternative-anchor projections, not market testing.
+- P022 original expert-chart recovery0/5; correct Sep30 SCD/Samhwa source misidentification while preserving historical descriptions and five C001 numeric records. Missing author/cutoff/price-rationale remains explicit; no reverse fitting.
+- L022/C016 append-only, provenance JSON and restart location. Revision and current state synchronized; historical rules/reports/lessons preserved. All safety/competence/source counters unchanged. Tests assess document integrity, not analytical skill.
+
+---
+
 # Immutable learning change history
 
 ## 2026-10-23 — Revision 74 — Partition source terminology and continue48-file counterreview

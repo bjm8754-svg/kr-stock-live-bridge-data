@@ -1,3 +1,9 @@
+## CURRENT v75 manual/practical and expert-link audit
+
+[SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md](SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md) compares Sep08 channel provenance/alternative anchors, Nasdaq horizontal-vs-diagonal role, Mason RSI/CVD limits and3previous U004 files. [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md) records0/5 expert-original matches and excludes misidentified SCD as Samhwa. Existing U001/U002 lecture access remains historical, not fresh verification; U004 grouping remains dependent. Candidate synthesis only; no new canonical rule or trading validation.
+
+---
+
 ## CURRENT v74 — scoped terminology hold; unrelated source research continues (2026-10-23)
 
 [P019 source matrix](SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md) / [P020 counterreview](SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md). User follow-up explicitly limits SRC-TERM-001 to **term-related integration/promotion**; broad v73 halt wording below is historical. Original labels/roles/timing/computability mapped without midpoint, universal internal-close or adjustment equality. #048 offers a last-price explanation; #065 locally equates diagram中가 with compressed close, but a unique real box interval/anchor formula remains unverified. Conflict OPEN.

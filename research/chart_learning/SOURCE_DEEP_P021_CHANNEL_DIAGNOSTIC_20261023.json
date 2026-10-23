@@ -1,0 +1,95 @@
+{
+  "scope": "SOURCE_PIXEL_DIAGNOSTIC_ONLY_NOT_MARKET_OR_TRANSFER_TEST",
+  "transformation": {
+    "resize": "BICUBIC2x1418x3072",
+    "crop": [
+      0,
+      1080,
+      1418,
+      2000
+    ],
+    "screenToUploadedCoordinates": "x_native=x/2;y_native=(y+1080)/2"
+  },
+  "files": [
+    {
+      "filename": "1788851445435.jpeg",
+      "bytes": 51661,
+      "sha256": "45e3eee3b0c3d7f8f08bbfdc96adee4657db8184c57b717947c56e215b3705d9"
+    },
+    {
+      "filename": "chart-1(8).png",
+      "bytes": 637124,
+      "sha256": "65e5bfaf029136dceda00c24e5f7c983b901d884e386d7675a79e0f718befc70"
+    }
+  ],
+  "meanAbsoluteRgbError": 0.0004428057480427628,
+  "maxAbsoluteRgbError": 3,
+  "exactMatchingPixelFraction": 0.9995638376157479,
+  "differentPixelCount": 569,
+  "interiorPlotRectangle": [
+    20,
+    90,
+    1300,
+    890
+  ],
+  "interiorPlotExactlyEqual": true,
+  "legacyApproximateBoxCenters": {
+    "A": [
+      118.0,
+      593.0
+    ],
+    "B": [
+      280.0,
+      568.0
+    ],
+    "C": [
+      534.0,
+      519.0
+    ]
+  },
+  "approximateLatestScreenProbe": [
+    1175.0,
+    414.0
+  ],
+  "pointOrigin": "Previously published CHANNEL_ANCHOR_SENSITIVITY_20261021;box centers,not wick/body OHLC;already outcome-exposed",
+  "alternatives": [
+    {
+      "anchors": [
+        "A",
+        "B"
+      ],
+      "screenSlope": -0.15432098765432098,
+      "projectedScreenY": 429.88271604938274,
+      "sameProjectionInUploadedJpegY": 754.9413580246913,
+      "approxLatestPriceSide": "ABOVE_LINE",
+      "secondAnchorPlus5ScreenYProjectionEffect": 32.623456790123456
+    },
+    {
+      "anchors": [
+        "A",
+        "C"
+      ],
+      "screenSlope": -0.1778846153846154,
+      "projectedScreenY": 404.97596153846155,
+      "sameProjectionInUploadedJpegY": 742.4879807692307,
+      "approxLatestPriceSide": "BELOW_LINE",
+      "secondAnchorPlus5ScreenYProjectionEffect": 12.704326923076923
+    },
+    {
+      "anchors": [
+        "B",
+        "C"
+      ],
+      "screenSlope": -0.19291338582677164,
+      "projectedScreenY": 395.3425196850394,
+      "sameProjectionInUploadedJpegY": 737.6712598425197,
+      "approxLatestPriceSide": "BELOW_LINE",
+      "secondAnchorPlus5ScreenYProjectionEffect": 17.618110236220474
+    }
+  ],
+  "newMarketDataFetched": false,
+  "newNativeDetailRecovered": false,
+  "drawingTimeVerified": false,
+  "actualCompletedBarVerified": false,
+  "predictiveValueVerified": false
+}

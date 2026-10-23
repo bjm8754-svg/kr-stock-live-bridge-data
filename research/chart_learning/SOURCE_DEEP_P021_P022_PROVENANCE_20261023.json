@@ -1,0 +1,106 @@
+{
+  "revision": 75,
+  "dateKst": "2026-10-23",
+  "baseHead": "0ea508a819e1ad116b39b26a2f06ff69e9e36e52",
+  "status": "SOURCE_REVIEWED_CANDIDATE_SYNTHESIS_ONLY",
+  "files": [
+    {
+      "filename": "1788851445435.jpeg",
+      "libraryId": "libfile_d32f2edd8c288191a93c09cb00771d89",
+      "modelGeneratedMetadata": false,
+      "role": "channel_uploaded",
+      "bytes": 51661,
+      "sha256": "45e3eee3b0c3d7f8f08bbfdc96adee4657db8184c57b717947c56e215b3705d9",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "chart-1(8).png",
+      "libraryId": "libfile_224c8e1082d48191bdc32f357a019881",
+      "modelGeneratedMetadata": true,
+      "role": "channel_derivative",
+      "bytes": 637124,
+      "sha256": "65e5bfaf029136dceda00c24e5f7c983b901d884e386d7675a79e0f718befc70",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "1789982866469.jpeg",
+      "libraryId": "libfile_8861d14bb3c0819192e2a9b97d4b0ab1",
+      "modelGeneratedMetadata": false,
+      "role": "nasdaq_manual",
+      "bytes": 178800,
+      "sha256": "ba3a8965abe8bd7ede348234d36e41d89bfdb9ef7ca2b1943dd5d3989962cb68",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "1000059945.jpg",
+      "libraryId": "libfile_09e953f5ee488191b5aab25a8cb5b2fe",
+      "modelGeneratedMetadata": false,
+      "role": "mason_indicator",
+      "bytes": 80124,
+      "sha256": "59bb43915bb54069bd729ea130f65a63ef055866f626a9ae18f7ffb80fe494ef",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "1000059730.jpg",
+      "libraryId": "libfile_ac35d70407908191b3446eed3497f5ef",
+      "modelGeneratedMetadata": false,
+      "role": "identity_control_mico",
+      "bytes": 133466,
+      "sha256": "b9516090b3e4f48296d234ff542802b37d3fedd7af24c127f3e6c043148a3756",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "1790752451449.jpeg",
+      "libraryId": "libfile_ace80061dd4881918a49c826159948ff",
+      "modelGeneratedMetadata": false,
+      "role": "identity_control_scd_not_samhwa",
+      "bytes": 122131,
+      "sha256": "de745d3d4696613e52a1a2df29fef434512b393983c57f6b8399de7221d915d4",
+      "actualPixelsViewed": true,
+      "expertPlanOriginalMatched": false
+    },
+    {
+      "filename": "02-1000060996.jpg",
+      "source": "Existing U004 attachment;full provenance in USER_SOURCE_INTAKE_20261023_PROVENANCE.json",
+      "bytes": 83324,
+      "sha256": "6e1b3241316e8cb444a23ee0d3861de92910df0a490881192980df256581c9fb",
+      "actualPixelsViewed": true
+    },
+    {
+      "filename": "10-1000061012.jpg",
+      "source": "Existing U004 attachment;full provenance in USER_SOURCE_INTAKE_20261023_PROVENANCE.json",
+      "bytes": 185254,
+      "sha256": "14eb0df1b085889ddde0d501c3fc62e9cc9a2e6eb2a380f01831058b72560d40",
+      "actualPixelsViewed": true
+    },
+    {
+      "filename": "08-1000061008.jpg",
+      "source": "Existing U004 attachment;full provenance in USER_SOURCE_INTAKE_20261023_PROVENANCE.json",
+      "bytes": 189124,
+      "sha256": "41116c18cc332f4cfb8c8be91436c5db0f72ee96087a399ba1aefd20e9df873d",
+      "actualPixelsViewed": true
+    }
+  ],
+  "independentCaseCountClaimed": false,
+  "expertOriginalChartsMatched": 0,
+  "expertNumericRecords": 5,
+  "excludedPrivateCohortFiles": 5,
+  "negativeSearchIsGlobalAbsenceProof": false,
+  "primaryRereadCountClaimedThisUnit": 0,
+  "newVideoScreensVerified": 0,
+  "missing69Recovered": false,
+  "termConflictResolved": false,
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "newMarketDataFetched": false,
+  "reports": [
+    "SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md",
+    "SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md"
+  ],
+  "resume": "Continue archived manual-chart timing/anchor comparisons;recover expert original chart/message links without reverse fitting;retain broader91/PDF/TXT/video scope."
+}

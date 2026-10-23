@@ -1,3 +1,9 @@
+## CURRENT v75 provenance qualification
+
+The five expert plans remain the user's qualitative MINIMUM comparison standard, not verified answer data. [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md) found0/5 matching original charts in this bounded recovery attempt; author/actual publication/cutoff/rationale/execution not verified. Existing numbers are C001 secondary records. No independent competence demonstrated; M01–M07 acceptance unchanged. Prior descriptions of what an analyst presents do not certify these five plans' structural reasoning or performance.
+
+---
+
 # Minimum independent trading-judgement benchmark
 
 **Status: USER-DEFINED MINIMUM TARGET — NOT ACHIEVED OR VERIFIED**
@@ -44,3 +50,4 @@ The expert's five plans are a **minimum quality comparison**, **not** a playbook
 - Persisted research continuity exists, but future-session compliance and *economic* improvement are not yet validated.
 
 **Next study:** independent locked whole-market retrospective episodes and continuing SHADOW evaluation with cross-regime, cost-aware grading. Remain SHADOW / productionWriteAllowed=false.
+

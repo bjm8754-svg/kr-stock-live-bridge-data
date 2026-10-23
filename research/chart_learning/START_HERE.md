@@ -1,3 +1,11 @@
+## CURRENT v75 — source provenance checkpoint / 2026-10-23
+
+P021/P022: actual source-pixel review and candidate method comparison; expert corresponding originals recovered0/5. No transfer/economic validation or rule promotion. Primary91 second-pass coverage unchanged91/91, mastered0; missing69 remains NOT VERIFIED. SRC-TERM-001 OPEN, term-only hold; S02 PAUSED_AFTER_D03; no scans/mock trades/orders/production changes.
+
+Read [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md](SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md), [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md) and [SOURCE_DEEP_P021_P022_PROVENANCE_20261023.json](SOURCE_DEEP_P021_P022_PROVENANCE_20261023.json) before resuming. Uploaded channel source and generated crop are dependent; Sep30 SCD chart is not Samhwa. Do not invent five expert rationales or call an already-known-price audit blind. Next work remains source-first manual timing/anchor comparisons and original expert linkage, with91/PDF/TXT/video integration retained.
+
+---
+
 ## CURRENT v74 — scoped terminology hold; unrelated source research continues (2026-10-23)
 
 [P019 source matrix](SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md) / [P020 counterreview](SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md). User follow-up explicitly limits SRC-TERM-001 to **term-related integration/promotion**; broad v73 halt wording below is historical. Original labels/roles/timing/computability mapped without midpoint, universal internal-close or adjustment equality. #048 offers a last-price explanation; #065 locally equates diagram中가 with compressed close, but a unique real box interval/anchor formula remains unverified. Conflict OPEN.
@@ -180,7 +188,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 74
+**Learning revision:** 75
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

@@ -1,3 +1,11 @@
+## CURRENT ERRATUM v75 — identification and derivative provenance
+
+Actual native reinspection: Sep30 `1790752451449.jpeg` is **삼천당제약000250**, not 삼화콘덴서001820 as the older cohort/BULK009 summary states. `1000059730.jpg` is 미코059090. Neither is verified as one of C001's five original expert-plan charts. Preserve old classifications as history, apply this current correction.
+
+Sep08 `chart-1(8).png` Library metadata model_generated=true; its plot interior exactly matches a2x crop of uploaded `1788851445435.jpeg`. These are dependent versions, not independent cases. [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md](SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md) / [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md). Census1665 attempted/1596 classified/69 unavailable unchanged; reinspection and private-file exclusions add no census count.
+
+---
+
 # Previously supplied screenshots recovered from ChatGPT Library (not the curated 91)
 
 ## BULK-009 — Nine fully visually triaged Library-root date cohorts (2026-10-19)
@@ -863,3 +871,4 @@ These observations are different from the 91-image pack's general RSI introducti
 **Research critique retained:** (i) a box represented as a huge candle is a *didactic compression*, not actual volume-weighted execution history, (ii) box midpoint/middle 'consensus price' is a hypothesis requiring observed distribution and strict as-of box cutoff, not a proven VWAP, (iii) a resting support-zone limit can fill before any later spring/reclaim confirmation, so those decisions require separate as-of timestamps, (iv) long sideways box or high volume is not proof of who accumulated, (v) successful stop/re-entry scenarios must be compared with nonfills and breakdown cases, and (vi) close acceptance above upper box can still fail later. Historical screenshots cannot validate orders or independent edge.
 
 **Verification scope:** Teaching source inspected and organized only; independent unfamiliar chart transfer **NOT VERIFIED**; economic edge **NOT VERIFIED**; S02 remains PAUSED_AFTER_D03; no production scan, live order or operations changes.
+
