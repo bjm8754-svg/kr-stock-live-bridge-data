@@ -1,0 +1,53 @@
+{
+  "sourceFamily": "U005_KOSPI",
+  "dateKst": "2026-10-23",
+  "revision": 77,
+  "baseCommit": "bae0f0e122563e0b64f07b56c5806734380935b2",
+  "originalUserFilesRead": [
+    {
+      "file": "1000061034.jpg",
+      "size": 38107,
+      "dimensions": [
+        709,
+        1536
+      ],
+      "sha256": "69f004c6e91151b3216cf49627b775340b8a84dbd4a70cf67c68e1cc4e54554d"
+    },
+    {
+      "file": "1000061037.jpg",
+      "size": 44381,
+      "dimensions": [
+        709,
+        1536
+      ],
+      "sha256": "bbc716837b119d3c759803413ed84639c58108e62b52a5e7f9a3eb4dd040ad3f"
+    },
+    {
+      "file": "1000061038.jpg",
+      "size": 57749,
+      "dimensions": [
+        709,
+        1536
+      ],
+      "sha256": "a68003fdc49e70f6356865892d4a30524482756e55eba112734cfa246cd3288c"
+    }
+  ],
+  "previousImages": [
+    "1000061025.jpg",
+    "1000061027.jpg"
+  ],
+  "totalImages": 5,
+  "independentChartFamilies": 1,
+  "visualConfirmation": "THREE_USER_NATIVE_JPEGS_ACTUALLY_OPENED",
+  "newInsights": [
+    "hist_yellow_circle_reactions_ascending_zone",
+    "line_t_5270_to_5300_context",
+    "red_curve_near_5019_label_series_unknown",
+    "lower_blue_line_4754",
+    "lower_black_line_4479"
+  ],
+  "imageBytesCommitted": false,
+  "marketOHLCOrFutureBarsFetched": false,
+  "sourceAuthorshipVerified": false,
+  "independentPerformanceValidated": false
+}

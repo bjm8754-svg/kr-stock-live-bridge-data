@@ -231,7 +231,7 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 76,
+    "methodologyVersion": 77,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -3571,6 +3571,31 @@
       "research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md"
     ],
     "provenance": "research/chart_learning/SOURCE_DEEP_P019_P020_PROVENANCE_20261023.json"
+  },
+  "sourceReviewWorkV77": {
+    "baseHead": "bae0f0e122563e0b64f07b56c5806734380935b2",
+    "revision": 77,
+    "dateKst": "2026-10-23",
+    "newImages": 3,
+    "cumulativeU005Screenshots": 5,
+    "independentChartFamilies": 1,
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md",
+    "sourceImages": [
+      "1000061034.jpg",
+      "1000061037.jpg",
+      "1000061038.jpg"
+    ],
+    "sourceStatus": "ORIGINAL_UPLOADED_SCREENSHOTS_READ; not native chart/OHLC/draw-tool history",
+    "refinements": [
+      "green diagonal past near 5270.51 versus newer projected near 5300.83 is line(t) not horizontal fixed dual band",
+      "blue tag 5019.05 adjacent curved red trace and dotted guide, actual plotted series unknown; do not assert standalone dotted structural support",
+      "lower 4754.65 blue rising diagonal and 4479.55 black ascending guide are lower dependent candidate guides",
+      "red zigzags remain future forecast only"
+    ],
+    "newMarketDataOrOrders": false,
+    "noProductionChanges": true,
+    "independentTransfer": false,
+    "economicEdge": false
   },
   "sourceReviewWorkV76": {
     "baseHead": "7184893f38d8dd1713f10971023c14779f3af496",

@@ -1,3 +1,9 @@
+## 2026-10-23 — Revision 77 — U005 expanded screenshot provenance and a lower-reference correction
+
+- Added three user-uploaded KOSPI full-screen crops to the U005 source family (five screenshot files, one chart family), SHA/size documented. Added P024; source image bytes not published to GitHub.
+- Reconfirmed line(t) in ~5,270.51 to~5,300.83 ascending green historic support proposal; more historical contacts visible. Corrected P023 over-narrow description of 5,019.05 as a dotted/sloped guide: callout is adjacent a red smooth plotted curve, exact plotted formula unspecified; further lower blue/black diagonals ~4,754.65 and~4,479.55 remain speculative structural candidates.
+- No new chart performance, independent rule promotion, market scan, S02, simulation, orders or production write. Learning revision v77 synchronization, originals91 second-pass coverage unchanged, mastered0.
+
 ## 2026-10-23 — Revision 76 — Price-only expert benchmark input and independent KOSPI source candidate
 
 - Explicit user correction: the five expert examples were originally supplied as prices without chart attachments; v75 0/5 original charts is not failed restoration of promised images. Unknown pricing rationale/timestamp still nonverified.
