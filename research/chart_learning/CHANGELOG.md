@@ -1,3 +1,9 @@
+## 2026-10-23 — Revision 76 — Price-only expert benchmark input and independent KOSPI source candidate
+
+- Explicit user correction: the five expert examples were originally supplied as prices without chart attachments; v75 0/5 original charts is not failed restoration of promised images. Unknown pricing rationale/timestamp still nonverified.
+- U005/P023: two current-turn native mobile screenshots visually read as one overlapping KOSPI chart family with time-dependent ascending reference zone, stated ~5,300 defense thesis, overhead candidates and red hypothetical recovery arrows. No original line-object timestamps/OHLC, future result or proven predictive edge; image bytes not published to GitHub.
+- Updated study register and version flags only. SOURCE-FIRST, master=0, missing69, term-only hold, S02 freeze and production isolation unchanged; no new scan, simulation, order or production changes.
+
 ## 2026-10-23 — Revision 75 — Preserve manual-source provenance and expert-original gaps
 
 - P021 actual native channel pair pixel audit, Nasdaq/Mason/U004 comparisons: generated crop is dependent on uploaded JPEG; no extra native detail. Reproducible source-only diagnostic and alternative-anchor projections, not market testing.

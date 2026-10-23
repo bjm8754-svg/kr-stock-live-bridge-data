@@ -1,3 +1,7 @@
+## CURRENT v76 — five plans supplied as price-only examples
+
+User clarified that the five human expert trading plans were **originally provided only as sets of prices**, not with chart image attachments. Therefore the v75 '0/5 original charts matched' is NOT a recovery failure and should not be used as a source-quality penalty. It remains true that these five examples do not verify the basis used to draw a level, the ex-ante information cutoff, the trade executions or the author's economic skill. Preserve benchmark as a qualitative target; a known-price inverse fit is not independent chart mastery. [P023](SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md) is an unrelated user-supplied KOSPI annotated screenshot family and NOT an expert-five source chart.
+
 ## CURRENT v75 provenance qualification
 
 The five expert plans remain the user's qualitative MINIMUM comparison standard, not verified answer data. [SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md](SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md) found0/5 matching original charts in this bounded recovery attempt; author/actual publication/cutoff/rationale/execution not verified. Existing numbers are C001 secondary records. No independent competence demonstrated; M01–M07 acceptance unchanged. Prior descriptions of what an analyst presents do not certify these five plans' structural reasoning or performance.

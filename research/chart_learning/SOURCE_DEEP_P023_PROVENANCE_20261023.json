@@ -1,0 +1,53 @@
+{
+  "dateKst": "2026-10-23",
+  "researchRevision": 76,
+  "baseHead": "7184893f38d8dd1713f10971023c14779f3af496",
+  "sourceType": "2_TELEGRAM_SCREENSHOTS_1_DEPENDENT_KOSPI_CHART_FAMILY",
+  "sourceImages": [
+    {
+      "filename": "1000061027.jpg",
+      "sha256": "eefb51c7a4ba6674c0367abbdd2ead50b1e55986b1b08737e7b8331a0f951c84",
+      "bytes": 69253,
+      "pixels": [
+        709,
+        1536
+      ],
+      "access": "NATIVE_SCREENSHOT_OPENED_VISUALLY",
+      "inPublicGitHub": false
+    },
+    {
+      "filename": "1000061025.jpg",
+      "sha256": "1dd57a915eada9850f44328e0703aecc8ec4215c3a965e08fcaca9aaa8cc4c5e",
+      "bytes": 201419,
+      "pixels": [
+        709,
+        1536
+      ],
+      "access": "NATIVE_SCREENSHOT_OPENED_VISUALLY",
+      "inPublicGitHub": false
+    }
+  ],
+  "observedLevels": {
+    "ascendingZoneHistoricCallout": 5270.51,
+    "ascendingZoneLaterCallout": 5300.83,
+    "lowerGuide": 5019.05,
+    "overhead": [
+      5607.53,
+      5962.24,
+      6357.35,
+      6748.47
+    ]
+  },
+  "imagesNotIndependent": true,
+  "forwardArrowsArePredictions": true,
+  "chartSourceTimeframeAuthenticated": false,
+  "authorIdentityAuthenticated": false,
+  "drawingCreatedBeforePriceResponseVerified": false,
+  "priorFivePlansUserProvidedPriceOnly": true,
+  "priorFivePlansAccompaniedByUserCharts": false,
+  "priorFiveOriginalChartRationaleKnown": false,
+  "currentKOSPIQuoteChecked": false,
+  "marketScansOrOrders": 0,
+  "transferValidated": false,
+  "economicallyValidated": false
+}

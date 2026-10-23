@@ -4,7 +4,7 @@ These are **research** observations and deliberately not instructions to buy. Ex
 
 ## C-001 — Expert five-plan benchmark (DIAGNOSTIC, known levels)
 
-Five *recommended*, not actually-filled, first/add/stop/target price plans were supplied as examples of quality:
+Five *recommended*, not actually-filled, first/add/stop/target price plans were supplied as examples of quality. **Clarification (2026-10-23): user supplied prices only; there were no chart image attachments for these five plans. Lack of original chart matching is not a recovery failure; calculation rationale, author/cutoff and actual performance remain unverified.**
 - 에이피알 (278470), 2026-09-11: 352,000 / 301,000 / 289,000 / 426,600 / final 500,000.
 - 삼화콘덴서 (001820), 2026-09-20: 139,000 / 118,300 / 98,900 / 172,500.
 - 레메디 (387690), 2026-09-29: 22,300 / 18,750 / 17,760 / 34,650.

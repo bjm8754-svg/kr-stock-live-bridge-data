@@ -1,3 +1,7 @@
+## CURRENT v76 — source-type clarification and new KOSPI manual-source candidate (2026-10-23)
+
+The user explicitly confirmed **five expert plans were supplied only as price lists; no original chart attachments were provided**. v75 0/5 matching was an optional-context search, not a failure to recover five promised charts. The PRICE records remain useful as a qualitative benchmark, but underlying anchor/cutoff and execution are NOT VERIFIED. [P023](SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md) studies two newly user-supplied Telegram screenshots of ONE overlapping annotated KOSPI thesis. The yellow marked ascending green zone and its ~5,270.51 earlier / ~5,300.83 later callouts are **time-dependent sloped reference values**, not an audited fixed horizontal entry range. Red zigzag arrows are future scenarios, not observations. Exact first drawing times, chart OHLC, timeframe, author and realized outcomes NOT VERIFIED. No link to five expert plans. No new scanner, market scan, S02, orders or operating changes. SOURCE-FIRST, 91/91 source reread, mastered0/missing69 and SRC-TERM-001 term-only hold unchanged.
+
 ## CURRENT v75 — source provenance checkpoint / 2026-10-23
 
 P021/P022: actual source-pixel review and candidate method comparison; expert corresponding originals recovered0/5. No transfer/economic validation or rule promotion. Primary91 second-pass coverage unchanged91/91, mastered0; missing69 remains NOT VERIFIED. SRC-TERM-001 OPEN, term-only hold; S02 PAUSED_AFTER_D03; no scans/mock trades/orders/production changes.
@@ -188,7 +192,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 75
+**Learning revision:** 76
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
