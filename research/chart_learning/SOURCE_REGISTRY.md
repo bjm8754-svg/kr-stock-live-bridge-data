@@ -1,3 +1,11 @@
+## CURRENT v80 — public chronology, original access and full-tail preservation
+
+[SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json): actual Library reaccess of U0041018/1020/1016/0996/1012, all match prior U004 SHA. Primary039/056/057 actually reopened. DTS relative clock sequence is corroborated but calendar/completed bar/drawing objects NOT VERIFIED; KOSPI is ongoing-bar evidence; SK extra lines add no proven independent anchor. Later7:53 expression uploaded earlier than7:48 image. All SOURCE-EXPOSED; no blind/economic claim or new source-census/mastery count. U005/channel derivatives remain dependent known material, not new chronological outcomes.
+
+Full v79 registry text below is retained byte-for-byte, including original-source guidance, spot checks, B003/B001, mandatory verification and cross-system boundary. SOURCE-FIRST;91/91 second-pass coverage/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trading/orders/production. Transfer/economics false.
+
+---
+
 ## CURRENT v79 — source-registry tail integrity repair (2026-10-23)
 
 Restored the accidentally truncated **historical** SOURCE_REGISTRY tail from the recorded v77 content (source spot-checks, B-003, B-001, mandatory verification and Library/GitHub cross-system boundary). v78 P025 source analysis remains unchanged. This is only a **research archive integrity repair**, not new original-source research, independent chart transfer, evidence for profit, or restored missing Library images. New offline regression test checks preservation of these mandatory sections. No trading, market scan, S02, order or production change.

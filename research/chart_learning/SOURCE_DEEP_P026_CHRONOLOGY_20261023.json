@@ -1,0 +1,192 @@
+{
+  "revision": 80,
+  "baseHead": "0ebf4ae10b60ec66af238fbfef6a51c8eac8aaaf",
+  "dateKst": "2026-10-23",
+  "report": "research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md",
+  "files": [
+    {
+      "filename": "1000061018.jpg",
+      "libraryId": "libfile_6c276438cfd48191aed8de051bcf9244",
+      "libraryCreatedAt": "2026-10-23T00:40:01.820908Z",
+      "bytes": 183193,
+      "sha256": "b78618ddeeecc3930a687214326c6edd02f13bedb74e30ea73ff1c98ccf94ab5",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "actualPixelsViewed": true,
+      "previousU004HashMatched": true
+    },
+    {
+      "filename": "1000061020.jpg",
+      "libraryId": "libfile_0aac5ac87ac48191afb25de107d7e88d",
+      "libraryCreatedAt": "2026-10-23T00:40:01.959060Z",
+      "bytes": 177999,
+      "sha256": "ec0c657d17da9ece9b884586e9b151a25b903e13e38c97d3ac433ed6b7d28854",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "actualPixelsViewed": true,
+      "previousU004HashMatched": true
+    },
+    {
+      "filename": "1000060996.jpg",
+      "libraryId": "libfile_58f346051c64819186a10884de7ac760",
+      "libraryCreatedAt": "2026-10-23T00:39:37.692372Z",
+      "bytes": 83324,
+      "sha256": "6e1b3241316e8cb444a23ee0d3861de92910df0a490881192980df256581c9fb",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "actualPixelsViewed": true,
+      "previousU004HashMatched": true
+    },
+    {
+      "filename": "1000061012.jpg",
+      "libraryId": "libfile_62c059e394288191965956379292c0a4",
+      "libraryCreatedAt": "2026-10-23T00:39:37.309312Z",
+      "bytes": 185254,
+      "sha256": "14eb0df1b085889ddde0d501c3fc62e9cc9a2e6eb2a380f01831058b72560d40",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "actualPixelsViewed": true,
+      "previousU004HashMatched": true
+    },
+    {
+      "filename": "1000061016.jpg",
+      "libraryId": "libfile_c27786dac0fc819185b86c50d4776343",
+      "libraryCreatedAt": "2026-10-23T00:40:02.882628Z",
+      "bytes": 175427,
+      "sha256": "c25b8e716ff26ddbd0c7232dbaf11af75f77e7615de94ba3119f7cb8833be11e",
+      "dimensions": [
+        709,
+        1536
+      ],
+      "actualPixelsViewed": true,
+      "previousU004HashMatched": true
+    },
+    {
+      "filename": "039_image(20260928-070223).png",
+      "bytes": 616653,
+      "sha256": "db84a40f1f7b3c8549a144addb4e5d6ebeb3818dde7bc389e5bbe105885290f6",
+      "dimensions": [
+        582,
+        730
+      ],
+      "actualPixelsViewed": true,
+      "role": "REACQUIRED_PRIMARY_DIAGRAM_NOT_REAL_MARKET_SEQUENCE"
+    },
+    {
+      "filename": "056_image(20260928-070512).png",
+      "bytes": 1010999,
+      "sha256": "3483b89959fd7b920565187bcf11995276b9db3b44d3d506fd179792be4c88b1",
+      "dimensions": [
+        939,
+        704
+      ],
+      "actualPixelsViewed": true,
+      "role": "REACQUIRED_PRIMARY_DIAGRAM_NOT_REAL_MARKET_SEQUENCE"
+    },
+    {
+      "filename": "057_image(20260928-070519).png",
+      "bytes": 1313041,
+      "sha256": "58ed264d5b3ddf2eee3bea7c9c6254c25c934a278e52db98c2fa1381236bf040",
+      "dimensions": [
+        941,
+        708
+      ],
+      "actualPixelsViewed": true,
+      "role": "REACQUIRED_PRIMARY_DIAGRAM_NOT_REAL_MARKET_SEQUENCE"
+    }
+  ],
+  "exposure": "SOURCE_EXPOSED_NOT_BLIND",
+  "groups": [
+    {
+      "id": "U004_DTS",
+      "files": [
+        "1000061018.jpg",
+        "1000061020.jpg"
+      ],
+      "instrument": "DTS0015M0",
+      "timeframe": "1MIN_SELECTED",
+      "outerCapture": "09:34_BOTH",
+      "embeddedClock": [
+        "09:22",
+        "09:23"
+      ],
+      "chartAxis": "10/23_09:22_TO_09:23_YEAR_NOT_AUTHENTICATED",
+      "postLabels": [
+        "09:22",
+        "09:23"
+      ],
+      "orderStatus": "RELATIVE_ORDER_CORROBORATED_CALENDAR_UNAUTHENTICATED",
+      "lastCompletedBar": "NOT_VERIFIED",
+      "earlierReference": 37279,
+      "laterDisplayedPrice": 37650,
+      "redStrokeAbsenceProvesObjectDeletion": false
+    },
+    {
+      "id": "U004_KOSPI",
+      "files": [
+        "1000061016.jpg"
+      ],
+      "panels": 2,
+      "postLabels": [
+        "09:07",
+        "09:16"
+      ],
+      "outerCapture": "09:17",
+      "countdown": [
+        "03:54:08",
+        "03:44:04"
+      ],
+      "displayedLow": [
+        5347.53,
+        5305.98
+      ],
+      "tag": [
+        5308.07,
+        5300.57
+      ],
+      "timeframe": "NOT_VERIFIED",
+      "completedSupportOrSpring": false,
+      "lineObjectChangeVerified": false,
+      "linkToU005ChronologyVerified": false
+    },
+    {
+      "id": "U004_SK_CONTEXT",
+      "files": [
+        "1000060996.jpg",
+        "1000061012.jpg"
+      ],
+      "depictedPostLabels": [
+        "07:48",
+        "07:53"
+      ],
+      "laterPostRepresentationUploadedEarlier": true,
+      "uploadReversalSeconds": 0.38306,
+      "independentNewAnchorVerified": false
+    }
+  ],
+  "preservedRegistry": {
+    "baselineHead": "0ebf4ae10b60ec66af238fbfef6a51c8eac8aaaf",
+    "marker": "## CURRENT v79 — source-registry tail integrity repair (2026-10-23)",
+    "bytes": 48689,
+    "sha256": "38fb68edcac09798d26c38485454c012696d8808df42380e34bef698b3fc1feb",
+    "policy": "PREPEND_ONLY_FULL_V79_SUFFIX_BYTE_PRESERVATION"
+  },
+  "authorDrawingTimestampVerified": false,
+  "independentExAnteDrawingVerified": false,
+  "newMarketData": false,
+  "newVideoAV": false,
+  "transferValidated": false,
+  "economicallyValidated": false,
+  "termConflictResolved": false,
+  "missing69Recovered": false,
+  "s02Progression": "PAUSED_AFTER_D03",
+  "next": "Existing public completed daily/weekly multi-date source pair;otherwise lecture contradiction and archived counterexample study"
+}

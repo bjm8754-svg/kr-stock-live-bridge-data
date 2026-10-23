@@ -400,6 +400,16 @@ class IntegrityTest(unittest.TestCase):
             self.assertIn(token, registry, f"Registry section unexpectedly missing: {token}")
         self.assertTrue(registry.rstrip().endswith("GitHub Actions cannot verify Library contents."))
 
+    def test_v79_registry_complete_body_byte_preserved(self):
+        import hashlib
+        registry = (gate.BASE / "SOURCE_REGISTRY.md").read_bytes()
+        marker = "## CURRENT v79 — source-registry tail integrity repair (2026-10-23)".encode()
+        self.assertEqual(registry.count(marker), 1)
+        suffix = registry[registry.index(marker):]
+        self.assertEqual(len(suffix), 48689)
+        self.assertEqual(hashlib.sha256(suffix).hexdigest(),
+                         "38fb68edcac09798d26c38485454c012696d8808df42380e34bef698b3fc1feb")
+
     def test_no_research_production_write(self):
         m = gate.load_manifest()
         self.assertFalse(m["productionWriteAllowed"])

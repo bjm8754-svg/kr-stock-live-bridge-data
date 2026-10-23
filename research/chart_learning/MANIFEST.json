@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 79,
+  "revision": 80,
   "updatedKst": "2026-10-23",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -75,7 +75,9 @@
     "research/chart_learning/SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md",
     "research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md",
     "research/chart_learning/SOURCE_DEEP_P023_PROVENANCE_20261023.json",
-    "research/chart_learning/SOURCE_DEEP_P024_PROVENANCE_20261023.json"
+    "research/chart_learning/SOURCE_DEEP_P024_PROVENANCE_20261023.json",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md",
+    "research/chart_learning/SOURCE_DEEP_P026_CHRONOLOGY_20261023.json"
   ],
   "rules": [
     {
@@ -155,7 +157,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 23,
+  "lessonCount": 24,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,

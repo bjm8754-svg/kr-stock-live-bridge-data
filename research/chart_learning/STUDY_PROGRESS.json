@@ -231,7 +231,7 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 79,
+    "methodologyVersion": 80,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -240,7 +240,7 @@
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
-    "status": "SOURCE_FIRST_PUBLIC_CAPTURE_CHRONOLOGY_AND_ANCHOR_MODEL_COMPARISON_TERM_ONLY_HOLD",
+    "status": "SOURCE_FIRST_COMPLETED_SWING_CAPTURE_OR_LECTURE_COUNTEREXAMPLE_COMPARISON",
     "question": "In box-breakout structures, distinguish a legitimate breakout and accepted retest from a failed breakout and a deep pullback. Determine when shallow upper-box entries, deeper box-consensus entries, or confirmation-led continuation are structurally defensible ex ante, including opportunity cost and invalidation.",
     "primaryOriginalImages": [
       "016",
@@ -263,9 +263,9 @@
       "079"
     ],
     "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "Compare already-public chronological captures for which pivots/lines existed at the earlier source cutoff and which were changed. Separate horizontal acceptance, time-dependent projection, fixed reservation and structural/cash-risk clocks. P025 is source-exposed not blind; exact occluded U005 pivots unknown. Expert5 were prices only, no chart attachments expected; do not repeat nonexistent attachment recovery. Retain full91/DOCX/PDF/TXT/video/practical scope,2texts/0AV and missing69. No new market/hidden result/scan/S02/mock trade/order/production or paid video work.",
+    "deliverable": "P026 local chronology completed with bounds. Prefer already-public completed daily/weekly multi-date source captures to compare prior anchor availability and short-vs-swing thesis failure; no repeated searching same insufficient files. If unavailable continue archived lecture/practical contradictions and invalidation/add/no-rebound cases. Keep source-exposed status, original/changed line and failure clocks. Retain91/DOCX/PDF/TXT/video scope,2text/0AV, missing69 and term-only hold. Expert5 prices only. No new market/hidden result/scan/S02/mock trade/order/production/paid video.",
     "proofRequired": "Independent judgment on unfamiliar chart without future data; compare legacy conclusions and consequences of alternative entries. Do not claim improvement before this.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
     "requiredAnchorDisambiguation": [
       "C_box",
       "C_reference",
@@ -476,6 +476,12 @@
       "status": "SOURCE_EXPOSED_METHOD_ATTEMPT_NOT_INDEPENDENT_TRANSFER",
       "source": "research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md",
       "claim": "5U005 native files reaccessed/SHA-matched; horizontal old-low versus early/late slope/wick-floor and fixed-limit versus line(t) alternatives compared. Exact covered endpoints unknown; no independent ex-ante drawing success, source-census increase, paid media/new market or trade validation."
+    },
+    {
+      "type": "PUBLIC_CHRONOLOGY_AND_THESIS_SPECIFIC_FAILURE",
+      "status": "SOURCE_EXPOSED_LOCAL_SEQUENCE_NOT_TRANSFER",
+      "source": "research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md",
+      "claim": "DTS prior/later reference, KOSPI intrabar progression and SK guide additions reviewed on original pixels; upload order reversed. Separate failure hypotheses, not new orders or performance. Exact source/author/completed clocks unknown."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -3698,5 +3704,30 @@
     "transferValidated": false,
     "economicallyValidated": false,
     "nextSourceWork": "Existing public chronological source captures;anchor first-availability and line-change evidence"
+  },
+  "sourceReviewWorkV80": {
+    "baseHead": "0ebf4ae10b60ec66af238fbfef6a51c8eac8aaaf",
+    "dateKst": "2026-10-23",
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md",
+    "provenance": "research/chart_learning/SOURCE_DEEP_P026_CHRONOLOGY_20261023.json",
+    "libraryOriginalsActuallyViewed": 5,
+    "selectivePrimary": [
+      "039",
+      "056",
+      "057"
+    ],
+    "priorU004HashesMatched": true,
+    "chronology": "LOCAL_CLOCK_ORDER_SUPPORTED_CALENDAR_AND_COMPLETED_BARS_UNAUTHENTICATED",
+    "exposure": "SOURCE_EXPOSED_NOT_BLIND",
+    "uploadOrderReversalObserved": true,
+    "authorDrawingTimestampVerified": false,
+    "independentExAnteDrawingVerified": false,
+    "transferValidated": false,
+    "economicallyValidated": false,
+    "newMarketData": false,
+    "newVideoAV": false,
+    "sourceCensusChanged": false,
+    "registryV79FullBodySha256": "38fb68edcac09798d26c38485454c012696d8808df42380e34bef698b3fc1feb",
+    "fullResearchComplete": false
   }
 }

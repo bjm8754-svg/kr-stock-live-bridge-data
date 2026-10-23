@@ -1,3 +1,11 @@
+## CURRENT v80 — public chronology and thesis-specific failure
+
+[SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) distinguishes earlier-visible evidence from later observed price/annotation changes. All cases SOURCE-EXPOSED/NOT BLIND. DTS short momentum failure differs from old-range failure; KOSPI intrabar wick differs from completed reclaim/holding; SK extra guides differ from independent new pivots. Library upload order is directly reversed versus depicted7:48/7:53 posting order. Exact drawing timestamps remain unknown. SOURCE-FIRST;91/91 second-pass coverage/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trading/orders/production. Transfer/economics false.
+
+V79 full SOURCE_REGISTRY suffix pinned for preservation. Next: existing public completed daily/weekly multi-date source comparison; retain broader primary91/DOCX/PDF/TXT/video/practical scope.
+
+---
+
 ## CURRENT v79 — archive restoration, not a new chart-method conclusion (2026-10-23)
 
 v78 SOURCE_REGISTRY tail was truncated unexpectedly despite a green CI. Restored original v77 historical sections and added a mandatory-section regression assertion. See [SOURCE_REGISTRY.md](SOURCE_REGISTRY.md) historical B-001/B-003 and 'Mandatory usage' / 'Cross-system boundary' sections. P025 remains the most recent source analysis. Next task: already-public chronological source screens and first-known line/anchor differences; no new scans/test/OHLC or execution. Latest metadata revision79, all safety/competence locks unchanged.
@@ -208,7 +216,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 79
+**Learning revision:** 80
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

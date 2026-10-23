@@ -152,3 +152,8 @@ L-022 / [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md
 ## C-017 — A moving guide is not a fixed reservation or historical accepted price (L-023)
 
 [SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md). U005 earlier low contacts support competing horizontal/diagonal hypotheses; today's~5300 projection is not proof that past trade concentrated at5300. Occluded endpoints prevent exact independent anchor recovery. U004 upper-box contact is not lower1188000 sloped reference defense; P021 prior interior is approached from below. A line can cross flat price due to time, and redrawn lines can hide failure if original is discarded. These are source-known counterexamples/candidate method distinctions, no new trade or transfer/economic result.
+
+
+## C-018 — Upload-order reversal and separate failure clocks (L-024)
+
+[SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md). Later7:53 SK-context screenshot representation uploaded0.383060sec before earlier7:48 file; upload sorting reverses depicted chronology. DTS9:23 price damage does not itself prove close failure of earlier37279 horizontal reference; KOSPI9:16 wick does not certify completed spring. Exact drawing edits/first creation unknown. Existing-source known-path audit only, no predictive/economic validation.

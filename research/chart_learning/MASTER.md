@@ -1,3 +1,14 @@
+# CURRENT RESEARCH STATUS — v80 / 2026-10-23 KST
+
+MANIFEST/STUDY_PROGRESS revision80. [SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json). SOURCE-FIRST;91/91 second-pass coverage/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trading/orders/production. Transfer/economics false.
+
+- P026 actually reaccessed5U004 originals and3primary PNGs039/056/057. DTS relative09:22→09:23 order corroborated by embedded clock/chart axis/post labels, calendar and last completed bar not authenticated. KOSPI09:07→09:16 is intrabar information, not completed spring/support. SK-context7:48→7:53 adds guides, no independent new anchors verified.
+- New source fact: later7:53 representation1012 uploaded0.383060sec BEFORE earlier7:48 capture0996; upload order cannot reconstruct annotation/market order.
+- New bounded reasoning: DTS short momentum damage and existing horizontal37279 failure are different hypotheses; later37650 remains above earlier reference, not a confirmed close break. A new lower-level thesis cannot silently rescue old momentum thesis. Current-stage facts robust to plausible line changes precede exact prices. Red stroke absence does not prove line-object deletion/movement.
+- V79 full registry body preserved byte-for-byte with pinned-hash regression plus prior tail test; historical reports/lessons unchanged. Document tests do not establish chart skill. Expert5 remain prices only; added4video AV gaps unchanged. Next: existing public completed daily/weekly multi-date sources or lecture contradiction cases, not endless same-file search.
+
+---
+
 # CURRENT RESEARCH STATUS — v79 / 2026-10-23 KST (documentation integrity repair only)
 
 SOURCE_REGISTRY historical tail damaged by v78 has been restored from v77 and is protected by new offline regression test. No research claim from v78/P025 changed. MANIFEST/STUDY_PROGRESS current revision79; SOURCE-FIRST, original91 second-pass91/91/mastered0, missing69 unverified, term-only ambiguity, S02 PAUSED_AFTER_D03 and all production-write restrictions retained.

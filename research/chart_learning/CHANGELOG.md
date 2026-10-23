@@ -1,3 +1,11 @@
+## 2026-10-23 — Revision 80 — Public source chronology and hypothesis-specific failure
+
+- P026 actual5U004/3primary source access and prior-hash reconciliation; relative DTS/KOSPI/SK chronology bounded by distinct clock fields. Source-known audit only; no new outcome, exact ex-ante drawing, trade or performance validation.
+- Show upload-order reversal, prior horizontal reference vs short-momentum damage, intrabar rebound vs completed spring, and derived-line additions without proven new anchors. L024/C018 append-only; canonical rules/source counters/safety unchanged.
+- Preserve complete v79 registry body, add pinned full-body regression beyond section tokens; review all changed historical suffixes/line changes and remote readback. Integrity success is separate from competence. Next existing public daily/weekly chronology or lecture/counterexample study.
+
+---
+
 ## 2026-10-23 — Revision 79 — Restore truncated registry history and add non-regression check
 
 - An independent post-v78 GitHub diff audit found SOURCE_REGISTRY.md cut off mid-sentence after `- Actual independent spot checks`. It had removed historical root-source guidance, B-003, B-001, mandatory usage and Library/GitHub boundary. The existing 26 tests passed but did not cover this missing tail.

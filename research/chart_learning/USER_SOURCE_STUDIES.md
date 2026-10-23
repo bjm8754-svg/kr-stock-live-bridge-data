@@ -1,3 +1,9 @@
+## CURRENT v80 — U004 chronology and information stages
+
+[SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md](SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md) / [SOURCE_DEEP_P026_CHRONOLOGY_20261023.json](SOURCE_DEEP_P026_CHRONOLOGY_20261023.json): earlier/later DTS1min, KOSPI live panels and SK-context guide subdivision actually reviewed. Earlier37279 exists before later37650 quote, but no independently derived exact anchor or stop. KOSPI lower-low/intrabar rebound is extra information without completed spring/holding. New guide density has no verified new source anchors. DOCX/PDF/TXT/video no fresh access this unit; broader integration and AV/term uncertainty retained. Price-only expert plans not searched as nonexistent chart attachments.
+
+---
+
 ## CURRENT v78 — source-known competing line construction
 
 [SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md](SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md) documents U005 horizontal acceptance versus projected slope, U004 upper-box versus sloped lower reference, and old channel interior approached from below. Original source bytes actually reopened; no raw data/exact pivots/independent drawing completion claimed. Cached canonical selected paragraphs compared; no fresh PDF/TXT/video verification. Fixed limit/line(t), structural failure/loss cap and original/redrawn model are candidate method distinctions. Expert-five remains price-only benchmark; no missing-attachment hunt.
