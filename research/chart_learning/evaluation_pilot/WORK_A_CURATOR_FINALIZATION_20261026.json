@@ -1,0 +1,40 @@
+{
+  "schema": "WORK_A_CURATOR_FINALIZATION_VERIFIED_V1",
+  "dateKst": "2026-10-26",
+  "basePreparationHead": "6bcf77619af9a9f663a2e4b0985f4cef4d9aec34",
+  "methodRevision": 83,
+  "casesUnchanged": 10,
+  "inputSHA256Unchanged": "f9b95f363ffdafc40ec191582e1d29cb50f9839c18173180f28890cc6b3015b6",
+  "dataRecollectedOrRegenerated": false,
+  "curatorFinalReferences": 10,
+  "independentReferenceReviews": 0,
+  "rawRowsComparedToStoredPinnedOriginals": true,
+  "fourOriginalArchiveHashesRechecked": true,
+  "storedReaccessExactByteAndSHA256": true,
+  "zipCrcAndEntryHashChecks": true,
+  "imagesVerified": 30,
+  "zeroByteFiles": 0,
+  "workBRelease": false,
+  "fullEligibilityConfirmedCases": 0,
+  "changedArchiveHashes": {
+    "SEALED_REFERENCE.zip": "4c1c577e0b124e278e2ac616e2daee3a535ff2c2b040a4a7878bc978d88c70d6",
+    "AUDIT_MANIFEST.zip": "42815d68b11bbf3865597cd272db013a224fc02b2d1bf3c3949d264aeeccf35b"
+  },
+  "externalEvidenceStillNeeded": [
+    "independent two-reviewer calibration and reference adjudication",
+    "cutoff-vintage KRX source, official session calendar and corporate-action register",
+    "missing69/image-only corpus exposure evidence; abandoned old-batch mapping overlap unknown"
+  ],
+  "inherentlyUnverifiableHere": [
+    "model pretraining exposure inventory"
+  ],
+  "actualDataMismatchFound": false,
+  "sourceLimitsDoNotProveDataDefect": true,
+  "falsePositiveExposure": "clovanote.naver.com is a transcript URL, not NAVER stock-chart exposure",
+  "operationChanges": false,
+  "sourceTermHoldMaintained": true,
+  "s02": "PAUSED_AFTER_D03",
+  "newScans": false,
+  "workBAnswersSeenOrProduced": false,
+  "privateReferenceUploadedToGitHub": false
+}
