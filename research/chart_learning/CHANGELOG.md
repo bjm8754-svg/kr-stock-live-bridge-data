@@ -1,3 +1,9 @@
+## 2026-10-26 — Revision 84 — Work B provisional grading and separate PD-01 proposal
+
+Preserved frozen original; verified hash/attachment internal consistency; recorded ten A/T/R self-review grades, C-code checks,41-family comparison, omissions/disputes/data limits and source-exposed exclusions. Added L-027/C-021/E-009. Separate PD-01 proposal targets nearby-boundary ordering, competing-anchor justification and line/failure-state clocks. Independent review not performed, no formal v83 certification or competence/economic promotion. No original answers, prior lessons, source registry, canonical rule bodies or production files rewritten. All operating locks retained.
+
+---
+
 ## 2026-10-23 — Revision 83 — Evaluation readiness protocol, no experiment
 
 - Expand the existing P028 design;preserve v82 draft verbatim. Add readiness JSON with explicitly proposed sample/pass policy,cutoff-bound anchor families,A/T/R and critical-error grading,dispute handling,opportunity/abstention controls,and fair pinned v81/v82 comparison.

@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 83,
-  "updatedKst": "2026-10-23",
+  "revision": 84,
+  "updatedKst": "2026-10-26",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -83,7 +83,18 @@
     "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md",
     "research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md",
     "research/chart_learning/SOURCE_DEEP_P028_PROVENANCE_20261023.json",
-    "research/chart_learning/EVALUATION_READINESS_20261023.json"
+    "research/chart_learning/EVALUATION_READINESS_20261023.json",
+    "research/chart_learning/work_b_20261026/README.md",
+    "research/chart_learning/work_b_20261026/ORIGINAL_COPY.md",
+    "research/chart_learning/work_b_20261026/00_PRESERVATION_AND_AUDIT.json",
+    "research/chart_learning/work_b_20261026/01_CASE_GRADING.md",
+    "research/chart_learning/work_b_20261026/01_SCORES.json",
+    "research/chart_learning/work_b_20261026/01_FAMILY_CROSSWALK.json",
+    "research/chart_learning/work_b_20261026/02_ERRORS_DISPUTES_AND_DATA.md",
+    "research/chart_learning/work_b_20261026/03_SKILL_DIAGNOSIS.md",
+    "research/chart_learning/work_b_20261026/04_METHOD_IMPROVEMENT_CANDIDATE.md",
+    "research/chart_learning/work_b_20261026/GRADING_FREEZE.json",
+    "research/chart_learning/work_b_20261026/EXPOSURE_REGISTER.json"
   ],
   "rules": [
     {
@@ -163,7 +174,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 26,
+  "lessonCount": 27,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -297,5 +308,19 @@
     "holdScope": "Term-related numeric integration, executable equality and rule promotion only; unrelated source reading/comparison/counterexample research explicitly authorized by user follow-up.",
     "unrelatedSourceResearchAuthorized": true,
     "userFollowupDateKst": "2026-10-23"
+  },
+  "postDiagnosticWorkB": {
+    "path": "research/chart_learning/work_b_20261026/README.md",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "status": "PROVISIONAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "case_count": 10,
+    "analysis_method_revision": 82,
+    "record_revision": 84,
+    "independent_review_complete": false,
+    "formal_v83_certified": false,
+    "improvement": "PD-01_PROPOSED_UNVALIDATED",
+    "unseen_reuse_allowed": false,
+    "transfer_validated": false,
+    "economics_validated": false
   }
 }

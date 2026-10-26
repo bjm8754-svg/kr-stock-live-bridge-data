@@ -1,0 +1,215 @@
+{
+  "checked_at_kst": "2026-10-26T15:08:43.838786+09:00",
+  "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+  "original_matches_user_hash": true,
+  "all_original_member_hashes": {
+    "E01_FIRST_ANALYSIS.md": "77de619efc83230dbf1d72fe5000d0e56263e8a13c558876d0a39d8b44a3a91c",
+    "E02_FIRST_ANALYSIS.md": "64e772f297766835c2d71f4b7a2e64de99535a9363cf08f696a674cf2497c603",
+    "E03_FIRST_ANALYSIS.md": "6b7ab4469a19b6977571611870fbc193de4b7b3164989175575e1157bbced145",
+    "E04_FIRST_ANALYSIS.md": "0fde98beb43a8d6aa0c54a6d8f82e0bdbbd0ed8ecda9322dfb6021481f0d0b28",
+    "E05_FIRST_ANALYSIS.md": "dda2703e80d14d753ddf7e62b1c4423f3ab9872727e18467807941f3098ee76d",
+    "E06_FIRST_ANALYSIS.md": "2883d0995d81ff2c9bb2b1427930c89c0a0b10e0a1c25a4359c1cd6efb9130f9",
+    "E07_FIRST_ANALYSIS.md": "9bb5b73b02b5c38ed750522a68388b12f66c901eba87ee182de851743bdb750e",
+    "E08_FIRST_ANALYSIS.md": "f4e01324c178296f175c8ae646cbd9522c994c8ae6e29976a588ca93a308b383",
+    "E09_FIRST_ANALYSIS.md": "7cfd398e85a3fdca9c468968774874016a2229f78399dcbd2a3adbe33821766e",
+    "E10_FIRST_ANALYSIS.md": "29bd77ee2db5bad5101bd512a59571c78cd2f751b488480835a27bb81eff4740",
+    "FIRST_ANALYSIS_ORIGINAL.md": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "FIRST_ANALYSIS_STRUCTURED.json": "72a606cd4b742699b27582a711409e4dc32820efa85a4817cb5c2c8456faf938",
+    "FREEZE_RECEIPT.json": "911274dc16c506cf4754ab2e4e86cdd5f538fca990e0cd9f77aa258863f72156",
+    "INPUT_HASHES.json": "e5dbb3c94f944e0bd67a21c7704c519c2628e370280f17ae921620343a832343",
+    "INTERNAL_VERIFICATION.json": "8293c8b7783824d32dde5b3516b35158602ebf7e76a0e53781b8266c8013b83c",
+    "METHOD_AND_ACCESS_LOCK.json": "0bd1b15f594e516cb0cf9becfc5d500823faf5efa3ac579c092792799ccc0a22",
+    "README.md": "67335dd1e4ba20db715b1a5c8b9617945add715b8eaa84eddc6957c3a502872a"
+  },
+  "original_archive_sha256": "9aa01ccb1782bf19ad2e090be18e0e8c76afde580c50149b8e2140b036e11196",
+  "attachment_hashes": {
+    "INPUT_ONLY(4).zip": "f9b95f363ffdafc40ec191582e1d29cb50f9839c18173180f28890cc6b3015b6",
+    "AUDIT_MANIFEST(4).zip": "42815d68b11bbf3865597cd272db013a224fc02b2d1bf3c3949d264aeeccf35b",
+    "SEALED_REFERENCE(3).zip": "4c1c577e0b124e278e2ac616e2daee3a535ff2c2b040a4a7878bc978d88c70d6"
+  },
+  "reference_authority": "CURATOR_FINAL_REFERENCE.json; draft retained but not graded",
+  "external_independent_review": false,
+  "formal_certification": false,
+  "current_manifest_entries_matched": 150,
+  "row_and_anchor_checks": [
+    {
+      "case_id": "E01",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E02",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E03",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E04",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E05",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E06",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 5,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E07",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E08",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E09",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    },
+    {
+      "case_id": "E10",
+      "raw_to_input_all_982_rows_match": true,
+      "raw_sha_matches_mapping": true,
+      "reference_anchors_checked": 4,
+      "reference_price_and_five_right_bar_clock_match": true
+    }
+  ],
+  "line_replay_checks": [
+    {
+      "case_id": "E01",
+      "formula_matches": true,
+      "post_second_anchor_events": [
+        {
+          "bar_id": "D0974",
+          "field": "High",
+          "bar_value": 127.13987473903967,
+          "line_value": 127.07724425887265,
+          "wick_breach": 0.06263048016701589,
+          "close_crosses": false
+        }
+      ],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E02",
+      "formula_matches": true,
+      "post_second_anchor_events": [],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E03",
+      "formula_matches": true,
+      "post_second_anchor_events": [],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E04",
+      "formula_matches": true,
+      "post_second_anchor_events": [],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E05",
+      "formula_matches": true,
+      "post_second_anchor_events": [],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E06",
+      "formula_matches": true,
+      "post_second_anchor_events": [
+        {
+          "bar_id": "D0980",
+          "field": "High",
+          "bar_value": 91.98664440734558,
+          "line_value": 91.58597662771285,
+          "wick_breach": 0.4006677796327267,
+          "close_crosses": true
+        }
+      ],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E07",
+      "formula_matches": true,
+      "post_second_anchor_events": [],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E09",
+      "formula_matches": true,
+      "post_second_anchor_events": [
+        {
+          "bar_id": "D0981",
+          "field": "High",
+          "bar_value": 194.44444444444443,
+          "line_value": 189.04761904761907,
+          "wick_breach": 5.396825396825363,
+          "close_crosses": true
+        },
+        {
+          "bar_id": "D0982",
+          "field": "High",
+          "bar_value": 195.23809523809524,
+          "line_value": 188.015873015873,
+          "wick_breach": 7.2222222222222285,
+          "close_crosses": true
+        }
+      ],
+      "original_notes_break": true,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    },
+    {
+      "case_id": "E10",
+      "formula_matches": true,
+      "post_second_anchor_events": [
+        {
+          "bar_id": "D0980",
+          "field": "High",
+          "bar_value": 87.77292576419214,
+          "line_value": 87.68558951965065,
+          "wick_breach": 0.0873362445414898,
+          "close_crosses": true
+        }
+      ],
+      "original_notes_break": false,
+      "interpretation": "numeric geometry check only; no universal wick/close rejection rule implied"
+    }
+  ]
+}

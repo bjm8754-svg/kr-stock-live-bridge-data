@@ -167,3 +167,7 @@ L-022 / [SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md
 ## C-020 — Retrospective plan dates and risk-ledger reset (L-026)
 
 [SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md). A dated Aug28 source recollects May/June views but is not their authenticated original plan. Do not infer advance success or deception. Candidate procedure distinguishes original/new thesis history from continuous economic loss/budget history;cost basis is not support but is not erased from accounting. Inactive evaluation design only,no new case/return/competence test.
+
+## C-021 — Work B nearby-boundary omissions and disputed new anchors (L-027)
+
+2026-10-26. [Case grading](work_b_20261026/01_CASE_GRADING.md) / [errors and disputes](work_b_20261026/02_ERRORS_DISPUTES_AND_DATA.md). Frozen first answer `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` unchanged. E01 near-current older support, E04/E05 crossed-high roles, and E09 intervening broken support were missed. Novel first-entry anchors in four cases have real bar evidence but are outside the curator candidate families; provisional T1, not automatically wrong buys/C2. Same analyst self-review; independent ratification0; no formal v83 pass. Ten cases now reference-exposed and excluded from future unseen tests. Improvements are PD-01 hypotheses only; outcomes/economic evidence untested.

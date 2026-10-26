@@ -1,3 +1,13 @@
+# CURRENT RESEARCH STATUS — v84 / 2026-10-26 KST
+
+**POST-DIAGNOSTIC RECORD / PROVISIONAL SELF-REVIEW / NOT FORMAL v83 CERTIFICATION.** User explicitly supplied sealed references after original Work B freeze. Original SHA256 `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` remains unchanged. [Case grading](work_b_20261026/01_CASE_GRADING.md) and [diagnosis](work_b_20261026/03_SKILL_DIAGNOSIS.md) are distinct from [PD-01 improvement candidate](work_b_20261026/04_METHOD_IMPROVEMENT_CANDIDATE.md).
+
+Ten preliminary scores A15/T16/R20 (51/60 record-only, not accuracy/pass rate); observed critical errors0, unresolved novel entries4, four material hierarchy omissions E01/E04/E05/E09. R scores assess conceptual contract compliance, not execution safety or optimal sizing. [L-027 / C-021] evidence requires nearby historical boundaries, role transitions and competing-anchor selection to be explicit. PD-01 remains proposed; no canonical rule promoted or edge demonstrated. All E01–E10 episode families now reference-exposed; never reuse as unseen. [Exposure register](work_b_20261026/EXPOSURE_REGISTER.json).
+
+Independent review0; official vintage/action/exposure gates unresolved. SOURCE-FIRST,91 historical reviewed/mastered0,missing69,term-only hold,2video-text/0AV and S02 PAUSED_AFTER_D03 retained. No new scan/recommendation/mock trade/order/operating change or future outcomes. Research revision84 records this diagnostic; it does not retroactively change the v82 first answer or certify improved skill.
+
+---
+
 # CURRENT RESEARCH STATUS — v83 / 2026-10-23 KST
 
 MANIFEST/STUDY_PROGRESS revision83. Existing [P028 evaluation design](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) concretized; [readiness record](EVALUATION_READINESS_20261023.json). **DOCUMENT SPECIFIED / EXECUTION NOT READY.** This is protocol preparation, not P029, a new trading rule, source review or demonstrated chart skill.
