@@ -1,3 +1,9 @@
+## CURRENT v85 SUPPLEMENT — buy→hold→reduce→exit source gap audit (2026-10-26)
+
+Read [SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md](SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md) before claiming completed sell-method learning or ordering another unseen-chart test. At prior HEAD `efe0453e` the researcher booted fully, found all91 source files and directly reopened **30 selected native images** plus CANONICAL DOCX/lecture TXT. Primary evidence already contains broken-support rebound as a possible sell context (#016/#017/#038), failed box re-entry as a structural reassessment (#076/#079), and contextual hold/price-response signals (#074/#075/#078); there is **no newly validated complete hold/reduce/full exit execution policy**. Existing v85, PD-01/PD-02 and E01–E10 frozen results stay unchanged; this is **source audit and candidate synthesis, not v86/competence/economic validation**. Next work: targeted study of unresolved original/lecture exit sources, then separate user-approved NEW unseen sequential decisions. S02 remains PAUSED_AFTER_D03; no scanner, orders or operations.
+
+---
+
 ## CURRENT v85 — first Work B answers checked against supplied actual paths
 
 Read [work_b_market_20261026/README.md](work_b_market_20261026/README.md) and [diagnosis / PD-02](work_b_market_20261026/02_DIAGNOSIS_AND_PD02.md). Original answer `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` and v84 provisional51/60 preserved. User authorized only these ten historical outcomes20/60/120. E09 entry-location evidence positive; E02 nonfill; E04/E05 late price access; E03/E10 grounded avoidance. Sell contracts absent, no realized strategy performance claimed. E08 ordinary skill/return comparison excluded for missing pre-cutoff material event and halt. Final partial weekly bars and dividend entitlements handled separately.
