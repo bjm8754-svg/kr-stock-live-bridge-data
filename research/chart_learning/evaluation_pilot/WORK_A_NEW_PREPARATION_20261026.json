@@ -1,0 +1,45 @@
+{
+  "schema": "WORK_A_NEW_PREPARATION_ACTUAL_FILES_V1",
+  "dateKst": "2026-10-26",
+  "methodRevision": 83,
+  "oldNineRecoveryClosed": true,
+  "dataPacketsPrepared": 10,
+  "rawMappingChartStorageReaccessVerifiedCases": 10,
+  "eligibleForWorkB": 0,
+  "workBRelease": false,
+  "independentReferenceReviewComplete": false,
+  "referencesStatus": "CURATOR_PIVOT_EVIDENCE_DRAFT_ONLY_NO_FINAL_ACTION_SETS",
+  "exposureStatus": "KNOWN_CORPUS_LITERAL_NO_MATCH; MISSING69_AND_PRETRAINING_UNKNOWN",
+  "sourceAuthenticityLimit": "Pinned raw-price mirror; full official exchange vintage/calendar/corporate-action audit incomplete",
+  "accountACLIsolationClaimed": false,
+  "custody": "User keeps all three ZIPs; B receives input only after release gates; private reference never published to GitHub",
+  "noEncryptionKeyRequired": true,
+  "firstCasePersistenceReopenPassedBeforeRemainingBuild": true,
+  "files": {
+    "INPUT_ONLY.zip": {
+      "sha256": "f9b95f363ffdafc40ec191582e1d29cb50f9839c18173180f28890cc6b3015b6",
+      "bytes": 1689656,
+      "persistedReaccessExactMatch": true,
+      "zipCrcPassed": true,
+      "zeroByteFiles": 0
+    },
+    "SEALED_REFERENCE.zip": {
+      "sha256": "b0862e7804087e53371991c4d9d287057a381c3791c30d566393f76a1775e1ee",
+      "bytes": 170627,
+      "persistedReaccessExactMatch": true,
+      "zipCrcPassed": true,
+      "zeroByteFiles": 0
+    },
+    "AUDIT_MANIFEST.zip": {
+      "sha256": "d201f852d727f83193f491a2ad1c19fb60031470fa2008561d44a1ee11d8fe62",
+      "bytes": 21824,
+      "persistedReaccessExactMatch": true,
+      "zipCrcPassed": true,
+      "zeroByteFiles": 0
+    }
+  },
+  "operationalChanges": false,
+  "evaluationOccurred": false,
+  "newScans": false,
+  "canonicalRuleChanges": false
+}
