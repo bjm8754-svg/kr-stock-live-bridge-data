@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 84,
+  "revision": 85,
   "updatedKst": "2026-10-26",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -94,7 +94,20 @@
     "research/chart_learning/work_b_20261026/03_SKILL_DIAGNOSIS.md",
     "research/chart_learning/work_b_20261026/04_METHOD_IMPROVEMENT_CANDIDATE.md",
     "research/chart_learning/work_b_20261026/GRADING_FREEZE.json",
-    "research/chart_learning/work_b_20261026/EXPOSURE_REGISTER.json"
+    "research/chart_learning/work_b_20261026/EXPOSURE_REGISTER.json",
+    "research/chart_learning/work_b_market_20261026/01_CASE_MARKET_VERIFICATION.md",
+    "research/chart_learning/work_b_market_20261026/02_DIAGNOSIS_AND_PD02.md",
+    "research/chart_learning/work_b_market_20261026/CASE_VERDICTS.json",
+    "research/chart_learning/work_b_market_20261026/CHRONOLOGICAL_EVIDENCE.json",
+    "research/chart_learning/work_b_market_20261026/MARKET_FINDINGS_FREEZE.json",
+    "research/chart_learning/work_b_market_20261026/ORIGINAL_ANCHOR_OBSERVATIONS.csv",
+    "research/chart_learning/work_b_market_20261026/ORIGINAL_CONDITIONS.json",
+    "research/chart_learning/work_b_market_20261026/ORIGINAL_FIRST_ANSWER_UNCHANGED.md",
+    "research/chart_learning/work_b_market_20261026/PATHS_KRW.csv",
+    "research/chart_learning/work_b_market_20261026/PRESERVATION_AND_VALIDATION.json",
+    "research/chart_learning/work_b_market_20261026/README.md",
+    "research/chart_learning/work_b_market_20261026/V84_ORIGINAL_SCORES_UNCHANGED.json",
+    "research/chart_learning/work_b_market_20261026/check_evidence.py"
   ],
   "rules": [
     {
@@ -174,7 +187,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 27,
+  "lessonCount": 28,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -322,5 +335,30 @@
     "unseen_reuse_allowed": false,
     "transfer_validated": false,
     "economics_validated": false
+  },
+  "postOutcomeWorkB": {
+    "path": "research/chart_learning/work_b_market_20261026/README.md",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_scores_sha256": "0f86f1a5bd43655350d4a82ad7a9c25df5bf11fa7559743ebaea10ed28e11a7f",
+    "status": "SUPPLIED_QUOTE_OUTCOME_DIAGNOSTIC_NOT_ECONOMIC_VALIDATION",
+    "record_revision": 85,
+    "prior_record_revision_preserved": 84,
+    "horizons": [
+      20,
+      60,
+      120
+    ],
+    "ordinary_cases": 9,
+    "special_excluded_cases": [
+      "E08"
+    ],
+    "realized_strategy_returns_created": 0,
+    "synthetic_filled_trades_created": 0,
+    "portfolio_created": false,
+    "independent_review_complete": false,
+    "formal_certification": false,
+    "PD02": "PROPOSED_UNVALIDATED",
+    "unseen_reuse_allowed": false,
+    "economic_edge_validated": false
   }
 }

@@ -1,3 +1,11 @@
+## CURRENT v85 — first Work B answers checked against supplied actual paths
+
+Read [work_b_market_20261026/README.md](work_b_market_20261026/README.md) and [diagnosis / PD-02](work_b_market_20261026/02_DIAGNOSIS_AND_PD02.md). Original answer `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` and v84 provisional51/60 preserved. User authorized only these ten historical outcomes20/60/120. E09 entry-location evidence positive; E02 nonfill; E04/E05 late price access; E03/E10 grounded avoidance. Sell contracts absent, no realized strategy performance claimed. E08 ordinary skill/return comparison excluded for missing pre-cutoff material event and halt. Final partial weekly bars and dividend entitlements handled separately.
+
+All10 are now outcome-exposed, not future unseen evidence. PD-01 limitations and unvalidated PD-02 recorded asL-028/C-022/E-010. Next requires independent adjudication and a separately approved genuinely new evaluation with explicit candidate-lifecycle/confirmation/sell/stop contracts. No new case collection or operating activity authorized; S02 paused and SOURCE-FIRST/source gaps retained.
+
+---
+
 ## CURRENT v84 — Work B preliminary post-grading, improvement unvalidated
 
 Read [work_b_20261026/README.md](work_b_20261026/README.md), [frozen provisional grades](work_b_20261026/01_CASE_GRADING.md), [separate PD-01 candidate](work_b_20261026/04_METHOD_IMPROVEMENT_CANDIDATE.md), and [reference-exposed exclusion register](work_b_20261026/EXPOSURE_REGISTER.json). Original Work B SHA256 `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` unchanged. User authorized post-grading after first freeze; same analyst self-review, independent reviewers0, no formal v83 certification. A15/T16/R20 are record-only rubric sums, not skill percentages. Four material nearby-boundary/role omissions, four unresolved adopted-entry alternatives. No C1–C6 observed; no absolute contamination guarantee.
@@ -246,7 +254,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 84
+**Learning revision:** 85
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

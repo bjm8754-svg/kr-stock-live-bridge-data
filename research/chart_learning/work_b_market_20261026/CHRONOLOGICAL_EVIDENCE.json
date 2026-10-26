@@ -1,0 +1,3654 @@
+[
+  {
+    "case_id": "E01",
+    "first_state": "REJECT_WITH_FUTURE_REASSESSMENT",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 M0041 급등 고점 이후 가격 진전을 모두 반납했고 M0048은 이전 수개월 하단보다 낮다. 주봉 W0202 반등 뒤 W0206에서 더 낮은 고점, W0207에서 116대 기존 저점 아래 종가를 형성했다. 일봉도 D0973 반등을 D0976–D0978이 무너뜨렸다. D0982 양봉은 하락 끝의 반응 한 봉이며 상승 전환 확인이 아니다. 급등기의 큰 거래량 사건봉 종가들은 현재에서 너무 멀고 이미 하향 통과되어 당장 매수 근거가 되지 않는다. 장기 횡보 가격대로 돌아왔다는 사실과 지지가 입증됐다는 사실을 구별한다.",
+    "original_T": "현재 고정 매수 후보는 채택하지 않는다. 104 부근에서 다시 받는다는 이유만으로 하락 추세에 선제 진입할 근거가 약하다. 먼저 완료 일봉 종가가 117.328 위로 복귀하고, 이후 재접근에서 116.701 아래 종가를 남기지 않는지 관찰한다. 이 조건 이후에만 116.701–117.328 구간의 새 확인 후 후보를 심사한다. 그때의 주문가격은 새 봉의 실제 정보로 정하며 지금 104대 체결을 소급 주장하지 않는다. 반등이 124.843–127.766에 바로 막히면 진입 여유가 좁아 다시 거절할 수 있다. 복귀 전 신저가 또는 복귀 후 116.701 아래 일봉 종가면 후보 취소. 상단까지 직행하면 미체결/기회 누락을 인정한다.",
+    "original_R": "현재 진입이 없어 노출 0. 가정한 117대 복귀 가설은 116.701 아래 재마감으로 실패하며, 더 낮은 94–99 지지를 이유로 연장하지 않는다. 주봉의 최근 116대 유지 가설은 이미 W0207로 손상됐다. 새 장기 하단 유지 가설은 W0208 저가 103.967 아래 주봉 종가, 더 넓은 과거 박스 하단 가설은 M0020 저가 93.946 아래 완료 월봉 종가에서 각각 반증된다. 이 세 경계를 같은 손절가로 합치지 않는다. 차후 거래가 생기면 그때의 진입/실패/비용으로 아래 공통 위험식을 다시 적용한다.",
+    "original_zones": [
+      {
+        "priority_role": "1 하단 반응 관찰",
+        "anchors": [
+          {
+            "bar_id": "D0981",
+            "field": "Low",
+            "value": 103.96659707724426
+          },
+          {
+            "bar_id": "D0982",
+            "field": "Close",
+            "value": 107.30688935281837
+          }
+        ],
+        "interpretation": "현재 저점과 최신 종가. 103.967 저점은 오른쪽 확인 봉이 부족하여 확정 피벗이 아니다."
+      },
+      {
+        "priority_role": "2 가장 먼저 회복할 공급",
+        "anchors": [
+          {
+            "bar_id": "D0971",
+            "field": "Low",
+            "value": 116.70146137787056
+          },
+          {
+            "bar_id": "D0970",
+            "field": "Close",
+            "value": 117.3277661795407
+          }
+        ],
+        "interpretation": "116.701–117.328은 직전 일봉 저점/종가. 이후 주봉 종가가 아래로 내려왔으므로 지지 회복 여부를 먼저 확인할 구간."
+      },
+      {
+        "priority_role": "3 그 위 반등 상단",
+        "anchors": [
+          {
+            "bar_id": "D0973",
+            "field": "Close",
+            "value": 124.84342379958247
+          },
+          {
+            "bar_id": "D0973",
+            "field": "High",
+            "value": 127.76617954070981
+          }
+        ],
+        "interpretation": "124.843–127.766 반등 실체/꼬리. 이 구간 미회복이면 낮아지는 고점 해석 유지."
+      },
+      {
+        "priority_role": "4 오래된 하단 대안",
+        "anchors": [
+          {
+            "bar_id": "M0020",
+            "field": "Low",
+            "value": 93.94572025052192
+          },
+          {
+            "bar_id": "M0011",
+            "field": "Low",
+            "value": 96.03340292275574
+          },
+          {
+            "bar_id": "W0111",
+            "field": "Low",
+            "value": 99.37369519832986
+          }
+        ],
+        "interpretation": "93.946–99.374의 과거 저점군. 현재보다 낮다는 이유만으로 예약 매수선 채택하지 않는다."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0971",
+        "field": "Low",
+        "normalized": 116.70146137787056,
+        "krw": 5590.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "D0970",
+        "field": "Close",
+        "normalized": 117.3277661795407,
+        "krw": 5620.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "D0971",
+        "field": "Low",
+        "normalized": 116.70146137787056,
+        "krw": 5590.0,
+        "label": "retest_low"
+      },
+      "early_reset": {
+        "bar_id": "D0981",
+        "field": "Low",
+        "normalized": 103.96659707724426,
+        "krw": 4980.0,
+        "label": "early_reset"
+      },
+      "weekly_failure": {
+        "bar_id": "W0208",
+        "field": "Low",
+        "normalized": 103.96659707724426,
+        "krw": 4980.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0973",
+        "field": "Close",
+        "normalized": 124.84342379958247,
+        "krw": 5980.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0973",
+        "field": "High",
+        "normalized": 127.76617954070981,
+        "krw": 6120.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 1,
+      "date": "2018-01-02",
+      "Open": 5210.0,
+      "High": 5380.0,
+      "Low": 5000.0,
+      "Close": 5360.0,
+      "Volume": 63976.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": null,
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": {
+      "session": 14,
+      "date": "2018-01-19",
+      "Open": 5110.0,
+      "High": 6630.0,
+      "Low": 5050.0,
+      "Close": 6630.0,
+      "Volume": 3493891.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_subsequent_zone_overlap_and_close_hold_minimal": {
+      "session": 32,
+      "date": "2018-02-14",
+      "Open": 5950.0,
+      "High": 5950.0,
+      "Low": 5570.0,
+      "Close": 5680.0,
+      "Volume": 93099.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_reclaim_attempt_close_failure": {
+      "session": 120,
+      "date": "2018-06-28",
+      "Open": 5620.0,
+      "High": 5800.0,
+      "Low": 5500.0,
+      "Close": 5500.0,
+      "Volume": 91301.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": false,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "first_local_reset_close": null,
+    "first_new_low_or_wick_below_reset": null,
+    "local_reset_before_reclaim": false,
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 6650.0,
+        "endpoint_price_change_pct": 29.37743190661479,
+        "hindsight_ordered_envelope_pct": 62.65060240963856,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 4980.0
+        },
+        "maximum": {
+          "session": 15,
+          "date": "2018-01-22",
+          "priceKRW": 8100.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 6200.0,
+        "endpoint_price_change_pct": 20.62256809338521,
+        "hindsight_ordered_envelope_pct": 62.65060240963856,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 4980.0
+        },
+        "maximum": {
+          "session": 15,
+          "date": "2018-01-22",
+          "priceKRW": 8100.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 5500.0,
+        "endpoint_price_change_pct": 7.003891050583655,
+        "hindsight_ordered_envelope_pct": 90.16064257028114,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 4980.0
+        },
+        "maximum": {
+          "session": 77,
+          "date": "2018-04-23",
+          "priceKRW": 9470.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 5140.0,
+    "event_audit": {
+      "caseId": "E01",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        10950000
+      ],
+      "sharesAtCutoff": 10950000,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E01",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/023350.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "7a39ebd09dce2ef60ceec5eee529e6b3009cc3aba2a04f87eb7c68c4b8d0ae45",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E02",
+    "first_state": "CONDITIONAL_RESTING_LIMIT_CANDIDATE",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 M0039 저점 이후 회복했고 M0045 조정 저점을 높인 뒤 M0046–M0048 상승이 이어졌다. 주봉 W0197 저점에서 W0206 저점으로 상승하고 최근 두 주는 800대 과거 공급을 넘어 가격이 진전했다. 일봉 D0979 장대 상승과 D0980 확장이 같은 방향이다. D0979 종가 위에서 D0980 저가와 이후 종가들이 유지된 점은 사건봉 종가의 단순 위치보다 강한 현재 근거다. 다만 962.245 현가는 최근 사건봉 종가에서 이미 멀고, 과거 월봉 고점 1093.878 아래에 있다. 이격과 상단 공급을 함께 본다.",
+    "original_T": "사전 고정 지정가 후보 P=861.224(D0979 종가). 이는 앞으로 처음 눌릴 때의 반응을 아직 모르는 선제 대기 후보다. 이미 마감된 D0980–D0982 유지 정보만 근거로 사용한다. 962.245 현가 매수나 다음 시가 자동 매수는 채택하지 않는다. 813.265 아래 완료 일봉 종가, 또는 진입 전 해당 경계를 아래로 통과한 갭/급락이면 기존 후보를 취소한다. 861대 반응을 먼저 기다리는 대안은 가능하나 이후 더 높은 가격을 지불하거나 미체결될 수 있다. 상단 검토 순서는 과거 923.469, 현재 끝 고가 971.429, 오래된 1093.878이며 목표 달성 보장은 아니다. 첫 구간까지의 여유가 비용/변동성 대비 줄어들면 미채택. 주 단위 진행을 보되 일봉마다 재검토하고 특정 3일 만기를 두지 않는다.",
+    "original_R": "진입 가설 실패는 사건봉 종가 유지가 약해지는 것과 813.265 돌파 경계 아래 일봉 종가 재진입으로 단계 구분한다. 856.122 순간 침범만으로 주봉 상승 전면 실패라고 하지 않는다. 자본 위험 산출 참조 S=813.265, 종가 실패 청산은 그 가격 체결을 보장하지 않는다. 주봉 조정 유지 구조의 실패는 W0206 저가 738.776 아래 완료 주봉 종가이며, 더 넓은 회복 저점 559.184는 별도 층위다. S를 낮춰 원 거래를 연명하지 않는다. 약 47.959 폭은 TR14 평균 38.265의 약 1.25배여서 지나치게 작은 틱 손절로 손익비를 만든 경우와 다르지만 갭/추세 급변 위험은 남는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 눌림 기준",
+        "anchors": [
+          {
+            "bar_id": "D0979",
+            "field": "Close",
+            "value": 861.2244897959183
+          },
+          {
+            "bar_id": "D0980",
+            "field": "Low",
+            "value": 856.1224489795918
+          }
+        ],
+        "interpretation": "861.224 사건봉 종가와 다음 봉 저가 856.122. 다음 봉 저가 확인은 D0980 종료 이후에만 이용 가능. 고정 후보는 사건봉 종가 861.224 하나로 정한다."
+      },
+      {
+        "priority_role": "2 돌파 경계/실패 감시",
+        "anchors": [
+          {
+            "bar_id": "D0962",
+            "field": "High",
+            "value": 813.2653061224489
+          },
+          {
+            "bar_id": "W0132",
+            "field": "High",
+            "value": 842.8571428571428
+          }
+        ],
+        "interpretation": "813.265 최근 고점과 842.857 오래된 주봉 고점. 현재는 넘어섰지만 향후 눌림 전체가 지지로 확정된 것은 아니다."
+      },
+      {
+        "priority_role": "3 최근 주봉 조정 바닥",
+        "anchors": [
+          {
+            "bar_id": "D0971",
+            "field": "Low",
+            "value": 738.7755102040816
+          },
+          {
+            "bar_id": "W0206",
+            "field": "Close",
+            "value": 765.3061224489795
+          }
+        ],
+        "interpretation": "738.776–765.306. 현재 진입 가설이 실패해도 여기가 남을 수 있으나 손실 거래를 보유할 허가는 아니다."
+      },
+      {
+        "priority_role": "4 상단 공급",
+        "anchors": [
+          {
+            "bar_id": "D0982",
+            "field": "High",
+            "value": 971.4285714285713
+          },
+          {
+            "bar_id": "M0019",
+            "field": "High",
+            "value": 1093.877551020408
+          }
+        ],
+        "interpretation": "971.429는 현재 확장 끝 고가로 미확정 피벗. 1093.878은 오래된 월봉 꼬리 고점으로 별도 저항. M0019 시가 923.469도 과거 고가권 거래 흔적으로 중간 부담이다."
+      }
+    ],
+    "levels": {
+      "bid": {
+        "bar_id": "D0979",
+        "field": "Close",
+        "normalized": 861.2244897959183,
+        "krw": 42200.0,
+        "label": "bid"
+      },
+      "daily_failure": {
+        "bar_id": "D0962",
+        "field": "High",
+        "normalized": 813.2653061224489,
+        "krw": 39850.0,
+        "label": "daily_failure"
+      },
+      "risk_reference": {
+        "bar_id": "D0962",
+        "field": "High",
+        "normalized": 813.2653061224489,
+        "krw": 39850.0,
+        "label": "risk_reference"
+      },
+      "weekly_failure": {
+        "bar_id": "W0206",
+        "field": "Low",
+        "normalized": 738.7755102040816,
+        "krw": 36200.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "M0019",
+        "field": "Open",
+        "normalized": 923.4693877551019,
+        "krw": 45250.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0982",
+        "field": "High",
+        "normalized": 971.4285714285713,
+        "krw": 47600.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "M0019",
+        "field": "High",
+        "normalized": 1093.877551020408,
+        "krw": 53600.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": null,
+    "unactivated_boundary_breach_is_not_a_trade_failure": false,
+    "first_completed_week_failure": null,
+    "partial_final_week_not_scored_as_completed": true,
+    "first_bid_price_access": null,
+    "prior_hard_close_cancel": null,
+    "target_events_after_price_access": [
+      {
+        "target": {
+          "bar_id": "M0019",
+          "field": "Open",
+          "normalized": 923.4693877551019,
+          "krw": 45250.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 47000.0,
+          "High": 49950.0,
+          "Low": 46700.0,
+          "Close": 49600.0,
+          "Volume": 97985.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0982",
+          "field": "High",
+          "normalized": 971.4285714285713,
+          "krw": 47600.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 47000.0,
+          "High": 49950.0,
+          "Low": 46700.0,
+          "Close": 49600.0,
+          "Volume": 97985.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "M0019",
+          "field": "High",
+          "normalized": 1093.877551020408,
+          "krw": 53600.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 30,
+          "date": "2018-02-12",
+          "Open": 51800.0,
+          "High": 53900.0,
+          "Low": 50600.0,
+          "Close": 51800.0,
+          "Volume": 98038.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      }
+    ],
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 49800.0,
+        "endpoint_price_change_pct": 5.620360551431602,
+        "hindsight_ordered_envelope_pct": 20.3178206583428,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 44050.0
+        },
+        "maximum": {
+          "session": 16,
+          "date": "2018-01-23",
+          "priceKRW": 53000.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 59600.0,
+        "endpoint_price_change_pct": 26.4050901378579,
+        "hindsight_ordered_envelope_pct": 37.3439273552781,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 44050.0
+        },
+        "maximum": {
+          "session": 60,
+          "date": "2018-03-29",
+          "priceKRW": 60500.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 51200.0,
+        "endpoint_price_change_pct": 8.589607635206796,
+        "hindsight_ordered_envelope_pct": 43.70034052213394,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 44050.0
+        },
+        "maximum": {
+          "session": 69,
+          "date": "2018-04-11",
+          "priceKRW": 63300.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 47150.0,
+    "event_audit": {
+      "caseId": "E02",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        7461237
+      ],
+      "sharesAtCutoff": 7461237,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E02",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/092730.KQ?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "b2d5f50fdde03b05ed8b44f1d1dd032ca8ecc18638445528e7cc5a6997291799",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E03",
+    "first_state": "REJECT_WITH_FUTURE_REASSESSMENT",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉 고점과 저점이 장기간 낮아지며 M0043의 큰 윗꼬리 이후 종가가 60대로 밀렸다. 주봉은 59–64 부근 횡보 뒤 W0207에서 하단을 이탈했고 W0208 반등에도 그 아래다. 일봉 D0982 회복은 55대 반응이며, 59대 이전 거래 구간을 회복하지 못했다. D0877–D0878 거래량 폭증은 고가 유지 실패와 후속 하락을 동반했으므로 수요 승리로 해석하지 않는다.",
+    "original_T": "현재 매수 가격은 지정하지 않고 거절한다. 새 후보의 최소 관찰 조건은 일봉 종가가 59.963 위로 복귀한 뒤 59.032–59.963 재시험을 유지하는 것. 당시 상단 63.873–64.804와 새 저점 사이의 여유를 재평가해야 한다. 지금 낮은 53–55대 예약을 걸어 놓고 미래 복귀 확인까지 얻었다고 할 수 없다. 재시험 일봉 종가가 59.032 아래면 취소, 복귀 전 52.514 아래 추가 하락이면 하단 전제를 새로 심사한다. 반등이 없이 계속 하락하는 경로를 기본 위험으로 인정한다.",
+    "original_R": "현재 노출 0. 향후 옛 하단 복귀 진입의 실패와 주봉 하락 추세는 별도다. 최근 59대 베이스 유지 가설은 W0207에서 이미 실패했고, W0208 저가 52.514 아래 주봉 종가는 새 하단 안정 가설까지 반증한다. 월봉 M0036 저가 59.218도 최근 월봉이 하회했으므로 과거 월봉 지지가 아직 온전하다고 주장하지 않는다. 확인 후 거래에는 새 진입가격과 새 반응 저점이 필요하므로 현재 확정 수량은 0이다.",
+    "original_zones": [
+      {
+        "priority_role": "1 신저가/반응",
+        "anchors": [
+          {
+            "bar_id": "D0980",
+            "field": "Low",
+            "value": 52.513966480446925
+          },
+          {
+            "bar_id": "D0982",
+            "field": "Close",
+            "value": 55.679702048417134
+          }
+        ],
+        "interpretation": "52.514–55.680. 최신 저점은 확정 피벗이 아니고 하락 속의 반응 구간이다."
+      },
+      {
+        "priority_role": "2 먼저 회복할 옛 하단",
+        "anchors": [
+          {
+            "bar_id": "D0955",
+            "field": "Low",
+            "value": 59.0316573556797
+          },
+          {
+            "bar_id": "D0974",
+            "field": "Close",
+            "value": 59.96275605214153
+          }
+        ],
+        "interpretation": "59.032–59.963. 여러 번 거래된 하단을 이탈한 뒤 아래에서 접근하는 위치."
+      },
+      {
+        "priority_role": "3 반등 상단 공급",
+        "anchors": [
+          {
+            "bar_id": "D0965",
+            "field": "High",
+            "value": 63.87337057728119
+          },
+          {
+            "bar_id": "W0200",
+            "field": "High",
+            "value": 64.80446927374301
+          }
+        ],
+        "interpretation": "63.873–64.804. 하단 복귀 후에도 다음 공급이 가까울 수 있다."
+      },
+      {
+        "priority_role": "4 큰 실패 사건",
+        "anchors": [
+          {
+            "bar_id": "D0877",
+            "field": "High",
+            "value": 85.6610800744879
+          },
+          {
+            "bar_id": "D0878",
+            "field": "Close",
+            "value": 70.39106145251397
+          },
+          {
+            "bar_id": "M0043",
+            "field": "Close",
+            "value": 61.452513966480446
+          }
+        ],
+        "interpretation": "85.661 꼬리와 70.391 사건봉 종가, 월봉 61.453 마감은 서로 다른 기준. 큰 거래량만으로 현재 지지로 쓰지 않는다."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0955",
+        "field": "Low",
+        "normalized": 59.0316573556797,
+        "krw": 15850.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "D0974",
+        "field": "Close",
+        "normalized": 59.96275605214153,
+        "krw": 16100.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "D0955",
+        "field": "Low",
+        "normalized": 59.0316573556797,
+        "krw": 15850.0,
+        "label": "retest_low"
+      },
+      "early_reset": {
+        "bar_id": "D0980",
+        "field": "Low",
+        "normalized": 52.513966480446925,
+        "krw": 14100.0,
+        "label": "early_reset"
+      },
+      "weekly_failure": {
+        "bar_id": "W0208",
+        "field": "Low",
+        "normalized": 52.513966480446925,
+        "krw": 14100.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0965",
+        "field": "High",
+        "normalized": 63.87337057728119,
+        "krw": 17150.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0200",
+        "field": "High",
+        "normalized": 64.80446927374301,
+        "krw": 17400.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 1,
+      "date": "2018-01-02",
+      "Open": 15150.0,
+      "High": 15450.0,
+      "Low": 15150.0,
+      "Close": 15350.0,
+      "Volume": 2791.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": {
+      "date": "2018-03-09",
+      "Close": 13950.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": null,
+    "first_subsequent_zone_overlap_and_close_hold_minimal": null,
+    "first_reclaim_attempt_close_failure": null,
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": false,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "first_local_reset_close": {
+      "session": 3,
+      "date": "2018-01-04",
+      "Open": 14750.0,
+      "High": 15050.0,
+      "Low": 14050.0,
+      "Close": 14050.0,
+      "Volume": 9167.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_new_low_or_wick_below_reset": {
+      "session": 3,
+      "date": "2018-01-04",
+      "Open": 14750.0,
+      "High": 15050.0,
+      "Low": 14050.0,
+      "Close": 14050.0,
+      "Volume": 9167.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "local_reset_before_reclaim": true,
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 15200.0,
+        "endpoint_price_change_pct": 1.6722408026755842,
+        "hindsight_ordered_envelope_pct": 10.357142857142865,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 5,
+          "date": "2018-01-08",
+          "priceKRW": 14000.0
+        },
+        "maximum": {
+          "session": 2,
+          "date": "2018-01-03",
+          "priceKRW": 15650.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 13350.0,
+        "endpoint_price_change_pct": -10.70234113712375,
+        "hindsight_ordered_envelope_pct": 25.0,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 56,
+          "date": "2018-03-23",
+          "priceKRW": 12000.0
+        },
+        "maximum": {
+          "session": 23,
+          "date": "2018-02-01",
+          "priceKRW": 17500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 10800.0,
+        "endpoint_price_change_pct": -27.75919732441472,
+        "hindsight_ordered_envelope_pct": 36.32478632478633,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 119,
+          "date": "2018-06-27",
+          "priceKRW": 10600.0
+        },
+        "maximum": {
+          "session": 23,
+          "date": "2018-02-01",
+          "priceKRW": 17500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 14950.0,
+    "event_audit": {
+      "caseId": "E03",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        10000000
+      ],
+      "sharesAtCutoff": 10000000,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E03",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/021820.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "769b3c2b5ff414cf543a6de42fbe06c72d53c1b1856d9129f2d5e57e50ad9f2e",
+        "retrieved": true,
+        "events": {
+          "dividends": [
+            {
+              "amount": 100.0,
+              "date": 1530144000,
+              "dateKst": "2018-06-28T09:00:00+09:00"
+            }
+          ]
+        },
+        "finding": "EVENTS_REPORTED_REQUIRING_EVENT_SPECIFIC_HANDLING"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends.",
+      "targetWindowDividendExDateReported": [
+        {
+          "amount": 100.0,
+          "date": 1530144000,
+          "dateKst": "2018-06-28T09:00:00+09:00"
+        }
+      ],
+      "amountKnownAtExDateAuthenticated": false,
+      "paymentReceiptVerified": false
+    }
+  },
+  {
+    "case_id": "E04",
+    "first_state": "CONDITIONAL_RESTING_LIMIT_CANDIDATE",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 396.396 고점 이후 장기 하락했지만 M0045 저점에서 M0046 반등, M0047 조정, M0048 재회복을 보인다. 주봉은 W0196 133.784 저점 이후 강하게 반등했고 W0204 167.117 저점 위에서 버텼다. 일봉은 D0939와 D0950의 상승 사건 뒤 큰 조정을 거쳤으며 최신 이틀 반등이 180대를 되찾는 중이다. 일봉 회복과 장기 상승 추세 확정을 구분한다. 183–196 공급이 남아 있으므로 현가에서 강한 추격 후보로 보지 않는다.",
+    "original_T": "P=172.072(D0973 저가)의 조건부 고정 지정가 후보를 채택한다. 해당 가격 도달 시 지지가 확인될 것이라는 보장은 없다. 현재 181.081에서 추격하지 않고 과거 반복 저점대로 되돌아올 경우에만 관심을 둔다. 사전에 167.117 아래 일봉 종가가 발생하거나 갭으로 그 아래에서 시작하면 후보 취소/접촉 매수 제외. 182.883 위 일봉 유지 후 재시험을 기다리는 대안은 증거가 늘지만 지금의 172.072 체결을 가정할 수 없다. 재상승시 180.631–182.883을 먼저 검토하고 그 위 189.189–190.991, 196.396 순으로 공급을 평가한다. 첫 공급까지만 보면 이익 여유가 작아 강한 비중을 주지 않는다. 수주 단위 회복 가설이며 일봉 재검토 주기가 보유 만기는 아니다.",
+    "original_R": "진입 가설은 167.117 아래 완료 일봉 종가에서 실패. 자본 참조 S=167.117이지만 그때의 실제 청산가격은 미정이다. 약 4.955의 폭은 TR14 평균 5.598보다 작아 장중 정밀 손절로 쓰기 어렵다. 이 불리함을 숨기지 않으며 아래 공통식의 갭 민감도까지 반영한 작은 조건부 노출 한도만 제시한다. 더 가까운 171.171 손절로 명목 손익비를 키우지 않는다. 주봉 기준 167.117 아래 종가는 최근 높은 저점 유지의 실패, M0045 저가 133.784 아래 완료 월봉 종가는 더 큰 바닥 회복 가설의 실패다. 하위 진입 실패 후 133대까지 버티는 계획으로 바꾸지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 눌림 거래 구간",
+        "anchors": [
+          {
+            "bar_id": "D0973",
+            "field": "Low",
+            "value": 172.07207207207207
+          },
+          {
+            "bar_id": "D0976",
+            "field": "Low",
+            "value": 171.17117117117118
+          },
+          {
+            "bar_id": "D0971",
+            "field": "Low",
+            "value": 168.9189189189189
+          }
+        ],
+        "interpretation": "172.072 및 171.171, 168.919 최근 저점군. P는 172.072로 고정하며 전체 범위를 임의 체결 구간으로 쓰지 않는다."
+      },
+      {
+        "priority_role": "2 회복 설정 하단",
+        "anchors": [
+          {
+            "bar_id": "D0963",
+            "field": "Low",
+            "value": 167.11711711711712
+          },
+          {
+            "bar_id": "W0204",
+            "field": "Close",
+            "value": 180.63063063063063
+          }
+        ],
+        "interpretation": "167.117 저점과 180.631 주봉 회복 종가. 같은 사건의 하단/회복을 별도 독립 신호로 중복 계산하지 않는다."
+      },
+      {
+        "priority_role": "3 바로 위 공급",
+        "anchors": [
+          {
+            "bar_id": "D0961",
+            "field": "High",
+            "value": 189.1891891891892
+          },
+          {
+            "bar_id": "D0966",
+            "field": "High",
+            "value": 190.99099099099098
+          },
+          {
+            "bar_id": "D0950",
+            "field": "High",
+            "value": 196.3963963963964
+          }
+        ],
+        "interpretation": "189.189–196.396 반등 고점군. 그 전에 D0982 고가 182.883이 단기 진전 문턱이다."
+      },
+      {
+        "priority_role": "4 더 넓은 회복 출발",
+        "anchors": [
+          {
+            "bar_id": "D0939",
+            "field": "Open",
+            "value": 160.36036036036035
+          },
+          {
+            "bar_id": "W0199",
+            "field": "Low",
+            "value": 148.19819819819818
+          },
+          {
+            "bar_id": "M0045",
+            "field": "Low",
+            "value": 133.78378378378378
+          }
+        ],
+        "interpretation": "160.360 사건봉 시가, 148.198 주봉 저가, 133.784 월봉 저가. 낮은 구조들은 원 진입 실패를 취소하지 않는다."
+      }
+    ],
+    "levels": {
+      "bid": {
+        "bar_id": "D0973",
+        "field": "Low",
+        "normalized": 172.07207207207207,
+        "krw": 19100.0,
+        "label": "bid"
+      },
+      "daily_failure": {
+        "bar_id": "D0963",
+        "field": "Low",
+        "normalized": 167.11711711711712,
+        "krw": 18550.0,
+        "label": "daily_failure"
+      },
+      "risk_reference": {
+        "bar_id": "D0963",
+        "field": "Low",
+        "normalized": 167.11711711711712,
+        "krw": 18550.0,
+        "label": "risk_reference"
+      },
+      "weekly_failure": {
+        "bar_id": "W0204",
+        "field": "Low",
+        "normalized": 167.11711711711712,
+        "krw": 18550.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "W0204",
+        "field": "Close",
+        "normalized": 180.63063063063063,
+        "krw": 20050.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0982",
+        "field": "High",
+        "normalized": 182.88288288288288,
+        "krw": 20300.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0961",
+        "field": "High",
+        "normalized": 189.1891891891892,
+        "krw": 21000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0966",
+        "field": "High",
+        "normalized": 190.99099099099098,
+        "krw": 21200.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0950",
+        "field": "High",
+        "normalized": 196.3963963963964,
+        "krw": 21800.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 112,
+      "date": "2018-06-18",
+      "Open": 18450.0,
+      "High": 18850.0,
+      "Low": 17700.0,
+      "Close": 18000.0,
+      "Volume": 105507.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": false,
+    "first_completed_week_failure": {
+      "date": "2018-06-22",
+      "Close": 18000.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_bid_price_access": {
+      "session": 101,
+      "date": "2018-05-30",
+      "Open": 20200.0,
+      "High": 20200.0,
+      "Low": 19100.0,
+      "Close": 19300.0,
+      "Volume": 80584.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "prior_hard_close_cancel": null,
+    "bid_access_type": "INTRADAY_LOW_AT_OR_BELOW_LIMIT",
+    "price_access_not_queue_fill": true,
+    "gap_through_risk_at_first_access": false,
+    "first_risk_reference_low_after_bid_access": {
+      "session": 112,
+      "date": "2018-06-18",
+      "Open": 18450.0,
+      "High": 18850.0,
+      "Low": 17700.0,
+      "Close": 18000.0,
+      "Volume": 105507.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_risk_reference_close_below_after_bid_access": {
+      "session": 112,
+      "date": "2018-06-18",
+      "Open": 18450.0,
+      "High": 18850.0,
+      "Low": 17700.0,
+      "Close": 18000.0,
+      "Volume": 105507.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "post_access_quote_envelope_before_first_close_failure": {
+      "max_high": {
+        "session": 106,
+        "date": "2018-06-07",
+        "Open": 19800.0,
+        "High": 20100.0,
+        "Low": 19550.0,
+        "Close": 19600.0,
+        "Volume": 73706.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "min_low": {
+        "session": 112,
+        "date": "2018-06-18",
+        "Open": 18450.0,
+        "High": 18850.0,
+        "Low": 17700.0,
+        "Close": 18000.0,
+        "Volume": 105507.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "price_change_from_limit_to_max_high_pct": 5.235602094240832,
+      "not_profit_or_verified_MFE": true,
+      "entry_day_high_excluded": true
+    },
+    "candidate_still_active_at_late_access_authenticated": false,
+    "target_events_after_price_access": [
+      {
+        "target": {
+          "bar_id": "W0204",
+          "field": "Close",
+          "normalized": 180.63063063063063,
+          "krw": 20050.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 20450.0,
+          "High": 21800.0,
+          "Low": 20200.0,
+          "Close": 21400.0,
+          "Volume": 239441.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": {
+          "session": 101,
+          "date": "2018-05-30",
+          "Open": 20200.0,
+          "High": 20200.0,
+          "Low": 19100.0,
+          "Close": 19300.0,
+          "Volume": 80584.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "first_separate_later_day_target": {
+          "session": 106,
+          "date": "2018-06-07",
+          "Open": 19800.0,
+          "High": 20100.0,
+          "Low": 19550.0,
+          "Close": 19600.0,
+          "Volume": 73706.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": true,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0982",
+          "field": "High",
+          "normalized": 182.88288288288288,
+          "krw": 20300.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 20450.0,
+          "High": 21800.0,
+          "Low": 20200.0,
+          "Close": 21400.0,
+          "Volume": 239441.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0961",
+          "field": "High",
+          "normalized": 189.1891891891892,
+          "krw": 21000.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 20450.0,
+          "High": 21800.0,
+          "Low": 20200.0,
+          "Close": 21400.0,
+          "Volume": 239441.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0966",
+          "field": "High",
+          "normalized": 190.99099099099098,
+          "krw": 21200.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 20450.0,
+          "High": 21800.0,
+          "Low": 20200.0,
+          "Close": 21400.0,
+          "Volume": 239441.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0950",
+          "field": "High",
+          "normalized": 196.3963963963964,
+          "krw": 21800.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 20450.0,
+          "High": 21800.0,
+          "Low": 20200.0,
+          "Close": 21400.0,
+          "Volume": 239441.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      }
+    ],
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 24700.0,
+        "endpoint_price_change_pct": 22.88557213930349,
+        "hindsight_ordered_envelope_pct": 30.76923076923077,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 20150.0
+        },
+        "maximum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 26350.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 20700.0,
+        "endpoint_price_change_pct": 2.9850746268656803,
+        "hindsight_ordered_envelope_pct": 30.76923076923077,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 57,
+          "date": "2018-03-26",
+          "priceKRW": 19200.0
+        },
+        "maximum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 26350.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 19000.0,
+        "endpoint_price_change_pct": -5.472636815920396,
+        "hindsight_ordered_envelope_pct": 30.76923076923077,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 114,
+          "date": "2018-06-20",
+          "priceKRW": 17000.0
+        },
+        "maximum": {
+          "session": 11,
+          "date": "2018-01-16",
+          "priceKRW": 26350.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 20100.0,
+    "event_audit": {
+      "caseId": "E04",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        15000000
+      ],
+      "sharesAtCutoff": 15000000,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E04",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/052260.KQ?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "36fd4d67f9f4aa9fc23ce91e0123d59c08fb252ba6a87b86f5f759462390b5cd",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E05",
+    "first_state": "CONDITIONAL_RESTING_LIMIT_CANDIDATE",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 63대 저점 이후 회복했으나 최근에는 약 100–124대 넓은 회전 구간이다. M0042의 134.483 윗꼬리는 유지되지 못했다. 주봉은 W0194 저점에서 반등한 뒤 W0204 조정 저점을 높였고 최근 주봉 종가가 연속 상승했다. 일봉 D0960 저점 이후 D0970, D0978 저점이 높아지는 흐름이다. 이는 상승 방향의 국지적 개선이지만 현가 120은 121–124 반복 공급 바로 아래다. 신고가 추세로 확대 해석하지 않는다.",
+    "original_T": "P=115.034(D0978 저가)의 선제 고정 지정가 후보. 현재 120에서 상단 직전 추격은 거절한다. 115대 도달 반응을 미리 안다고 하지 않고, 넓은 회복 설정의 실패선 108.690과 함께 판단한다. 진입 전 108.690 아래 일봉 종가 또는 그 아래 갭이면 취소한다. 113.103 아래 종가면 최근 얕은 계단 상승은 훼손되었다고 기록하되 처음 정한 넓은 설정이 자동 실패한 것은 아니다. 그때 위험이 커지거나 상단 공급이 강화되면 후보를 먼저 철회할 수 있다. 124.552 위 종가·이후 재시험을 기다리는 대안도 있지만 그때는 새 체결가와 새 실패선을 다시 정한다. 위쪽은 121.241–124.552부터 심사하고 돌파 수용 전 134.483을 확정 목표로 쓰지 않는다. 수주 단위 가설, 일봉마다 재검토.",
+    "original_R": "넓은 진입 가설 실패/S=108.690 아래 일봉 종가. 약 6.345 폭은 TR14 2.512의 약 2.53배로 얕은 저점 하나 바로 아래에 붙인 손절은 아니다. 대신 첫 상단까지의 가격 여유가 대단히 우수한 것은 아니므로 후보의 강도는 제한적이다. 주봉 W0204 저점 108.690 아래 주봉 종가는 최근 회복 실패이며, 98.897 아래 주봉/월봉 종가는 넓은 100대 바닥 가설까지 반증한다. 현재 P로 들어간 거래를 실패 후 98.897 손절 거래로 바꾸지 않는다. 추가매수는 채택하지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 가까운 눌림 기준",
+        "anchors": [
+          {
+            "bar_id": "D0978",
+            "field": "Low",
+            "value": 115.0344827586207
+          },
+          {
+            "bar_id": "D0977",
+            "field": "Low",
+            "value": 117.10344827586208
+          }
+        ],
+        "interpretation": "115.034 최근 확인 저점과 117.103 단기 내부 거래 영역. P는 115.034로 고정한다."
+      },
+      {
+        "priority_role": "2 회복 바닥",
+        "anchors": [
+          {
+            "bar_id": "D0960",
+            "field": "Low",
+            "value": 108.6896551724138
+          },
+          {
+            "bar_id": "D0970",
+            "field": "Low",
+            "value": 113.10344827586208
+          }
+        ],
+        "interpretation": "108.690 조정 바닥, 113.103 중간 저점. 짧은 가설과 넓은 가설을 처음부터 구분한다."
+      },
+      {
+        "priority_role": "3 우선 상단 공급",
+        "anchors": [
+          {
+            "bar_id": "D0939",
+            "field": "Close",
+            "value": 121.24137931034483
+          },
+          {
+            "bar_id": "D0940",
+            "field": "High",
+            "value": 124.0
+          },
+          {
+            "bar_id": "W0144",
+            "field": "High",
+            "value": 124.55172413793105
+          }
+        ],
+        "interpretation": "121.241 사건 종가, 124.000 최근 고가, 124.552 오래된 반복 상단. 지금 위치에서 가장 먼저 판단을 제한한다."
+      },
+      {
+        "priority_role": "4 꼬리 확장과 장기 하단",
+        "anchors": [
+          {
+            "bar_id": "M0042",
+            "field": "High",
+            "value": 134.48275862068965
+          },
+          {
+            "bar_id": "M0045",
+            "field": "Low",
+            "value": 98.89655172413794
+          }
+        ],
+        "interpretation": "134.483은 과거 확장 고가, 98.897은 넓은 박스 하단. 양쪽 모두 현재 첫 목표/첫 손절로 무조건 채택하지 않는다."
+      }
+    ],
+    "levels": {
+      "bid": {
+        "bar_id": "D0978",
+        "field": "Low",
+        "normalized": 115.0344827586207,
+        "krw": 834000.0,
+        "label": "bid"
+      },
+      "daily_failure": {
+        "bar_id": "D0960",
+        "field": "Low",
+        "normalized": 108.6896551724138,
+        "krw": 788000.0,
+        "label": "daily_failure"
+      },
+      "risk_reference": {
+        "bar_id": "D0960",
+        "field": "Low",
+        "normalized": 108.6896551724138,
+        "krw": 788000.0,
+        "label": "risk_reference"
+      },
+      "short_setup_warning": {
+        "bar_id": "D0970",
+        "field": "Low",
+        "normalized": 113.10344827586208,
+        "krw": 820000.0,
+        "label": "short_setup_warning"
+      },
+      "weekly_failure": {
+        "bar_id": "W0204",
+        "field": "Low",
+        "normalized": 108.6896551724138,
+        "krw": 788000.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0939",
+        "field": "Close",
+        "normalized": 121.24137931034483,
+        "krw": 879000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0940",
+        "field": "High",
+        "normalized": 124.0,
+        "krw": 899000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0144",
+        "field": "High",
+        "normalized": 124.55172413793105,
+        "krw": 903000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "M0042",
+        "field": "High",
+        "normalized": 134.48275862068965,
+        "krw": 975000.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 41,
+      "date": "2018-03-02",
+      "Open": 794000.0,
+      "High": 800000.0,
+      "Low": 772000.0,
+      "Close": 786000.0,
+      "Volume": 217305.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": false,
+    "first_completed_week_failure": {
+      "date": "2018-03-02",
+      "Close": 786000.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_bid_price_access": {
+      "session": 29,
+      "date": "2018-02-09",
+      "Open": 817000.0,
+      "High": 830000.0,
+      "Low": 806000.0,
+      "Close": 808000.0,
+      "Volume": 158070.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "prior_hard_close_cancel": null,
+    "bid_access_type": "OPEN_GAP_BELOW_LIMIT",
+    "price_access_not_queue_fill": true,
+    "gap_through_risk_at_first_access": false,
+    "first_risk_reference_low_after_bid_access": {
+      "session": 41,
+      "date": "2018-03-02",
+      "Open": 794000.0,
+      "High": 800000.0,
+      "Low": 772000.0,
+      "Close": 786000.0,
+      "Volume": 217305.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_risk_reference_close_below_after_bid_access": {
+      "session": 41,
+      "date": "2018-03-02",
+      "Open": 794000.0,
+      "High": 800000.0,
+      "Low": 772000.0,
+      "Close": 786000.0,
+      "Volume": 217305.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "post_access_quote_envelope_before_first_close_failure": {
+      "max_high": {
+        "session": 37,
+        "date": "2018-02-23",
+        "Open": 831000.0,
+        "High": 842000.0,
+        "Low": 820000.0,
+        "Close": 829000.0,
+        "Volume": 70864.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "min_low": {
+        "session": 41,
+        "date": "2018-03-02",
+        "Open": 794000.0,
+        "High": 800000.0,
+        "Low": 772000.0,
+        "Close": 786000.0,
+        "Volume": 217305.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "price_change_from_limit_to_max_high_pct": 0.9592326139088669,
+      "not_profit_or_verified_MFE": true,
+      "entry_day_high_excluded": true
+    },
+    "candidate_still_active_at_late_access_authenticated": false,
+    "target_events_after_price_access": [
+      {
+        "target": {
+          "bar_id": "D0939",
+          "field": "Close",
+          "normalized": 121.24137931034483,
+          "krw": 879000.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 871000.0,
+          "High": 885000.0,
+          "Low": 870000.0,
+          "Close": 885000.0,
+          "Volume": 93587.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0940",
+          "field": "High",
+          "normalized": 124.0,
+          "krw": 899000.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 4,
+          "date": "2018-01-05",
+          "Open": 893000.0,
+          "High": 918000.0,
+          "Low": 880000.0,
+          "Close": 908000.0,
+          "Volume": 136811.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "W0144",
+          "field": "High",
+          "normalized": 124.55172413793105,
+          "krw": 903000.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 4,
+          "date": "2018-01-05",
+          "Open": 893000.0,
+          "High": 918000.0,
+          "Low": 880000.0,
+          "Close": 908000.0,
+          "Volume": 136811.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "M0042",
+          "field": "High",
+          "normalized": 134.48275862068965,
+          "krw": 975000.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 7,
+          "date": "2018-01-10",
+          "Open": 943000.0,
+          "High": 975000.0,
+          "Low": 927000.0,
+          "Close": 928000.0,
+          "Volume": 120097.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": null,
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      }
+    ],
+    "first_short_setup_warning_close": {
+      "session": 29,
+      "date": "2018-02-09",
+      "Open": 817000.0,
+      "High": 830000.0,
+      "Low": 806000.0,
+      "Close": 808000.0,
+      "Volume": 158070.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 932000.0,
+        "endpoint_price_change_pct": 7.126436781609202,
+        "hindsight_ordered_envelope_pct": 12.847222222222232,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 2,
+          "date": "2018-01-03",
+          "priceKRW": 864000.0
+        },
+        "maximum": {
+          "session": 7,
+          "date": "2018-01-10",
+          "priceKRW": 975000.0
+        },
+        "bid_price_access_within_horizon": false,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 786000.0,
+        "endpoint_price_change_pct": -9.6551724137931,
+        "hindsight_ordered_envelope_pct": 12.847222222222232,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 41,
+          "date": "2018-03-02",
+          "priceKRW": 772000.0
+        },
+        "maximum": {
+          "session": 7,
+          "date": "2018-01-10",
+          "priceKRW": 975000.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 747000.0,
+        "endpoint_price_change_pct": -14.137931034482754,
+        "hindsight_ordered_envelope_pct": 15.895061728395055,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 101,
+          "date": "2018-05-30",
+          "priceKRW": 648000.0
+        },
+        "maximum": {
+          "session": 7,
+          "date": "2018-01-10",
+          "priceKRW": 975000.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 870000.0,
+    "event_audit": {
+      "caseId": "E05",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        32962679
+      ],
+      "sharesAtCutoff": 32962679,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E05",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/035420.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "65e3d39c80811f5533af9abf031b26aca41bbcb139779274611ce15dff722cc8",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E06",
+    "first_state": "WATCH_NOT_ADOPTED",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 57대 저점 이후 회복했으나 M0043 고점 이후 최근 고점·저점이 낮아졌다. 주봉도 W0198 반등 상단 이후 W0205 저점까지 하락했고 최근 3주는 작은 회복이다. 일봉은 86.978 이후 88.147 저점이 높아졌지만 92.321 위 가격 진전이 없다. D0979 거래량 6,196,526은 최근 다른 날에 비해 매우 크지만 종가는 90.317에 그쳤고 후속 고가도 92대 미만이다. 매집·기관 수급·흡수 주체는 판정할 수 없다. 원시 거래량의 실질 의미/기업행사는 미확인이다.",
+    "original_T": "현재는 관찰, 고정 매수 대기는 채택하지 않는다. 앞으로 완료 일봉 종가가 93.155 위로 올라서고 이후 92.321–93.155 재시험을 유지하면 확인 후 후보를 재심사한다. 낮은 90.317을 새 지정가로 기다리는 대안은 그 시점에도 88.147 저점과 회복 논리가 유효할 때만 검토 가능하다. 지금 이미 확인 진입/체결로 기록하지 않는다. 92.321만 잠깐 넘고 93.155 아래에 머무르면 공급 소화가 미완료인 대안 해석도 유지한다. 88.147 아래 일봉 종가면 짧은 회복 가설 취소. 큰 거래량의 이유를 알 수 없다는 공백 때문에 상단 확인 없이 현가 매수를 허용하지 않는다.",
+    "original_R": "현재 노출 0. 미래 90.317 후보를 심사한다면 조건부 위험 참조는 88.147, 그 폭 2.170은 TR14 약 1.860과 비슷해 작지 않은 잡음/갭 민감도를 가진다. 이는 아직 채택한 포지션 수량이 아니다. 88.147 아래 일봉 종가는 짧은 회복 실패이며 86.978 아래 주봉 종가는 최근 바닥 유지 실패다. 더 오래된 M0035 저가 85.309가 남아도 기존 거래 위험 한도를 늘리지 않는다. 거대한 거래량이 향후 청산 유동성까지 보장하지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 먼저 넘을 문턱",
+        "anchors": [
+          {
+            "bar_id": "D0976",
+            "field": "High",
+            "value": 92.32053422370618
+          },
+          {
+            "bar_id": "D0955",
+            "field": "High",
+            "value": 93.15525876460768
+          }
+        ],
+        "interpretation": "92.321 최근 고점과 93.155 이전 반등 고점. 아직 종가 수용이 없다."
+      },
+      {
+        "priority_role": "2 현재 회복 내부",
+        "anchors": [
+          {
+            "bar_id": "D0979",
+            "field": "Close",
+            "value": 90.31719532554257
+          },
+          {
+            "bar_id": "D0981",
+            "field": "Low",
+            "value": 90.15025041736227
+          }
+        ],
+        "interpretation": "90.317 사건 종가와 90.150 후속 저가. 큰 거래량만으로 강한 지지라고 단정하지 않는다."
+      },
+      {
+        "priority_role": "3 회복 저점",
+        "anchors": [
+          {
+            "bar_id": "D0978",
+            "field": "Low",
+            "value": 88.14691151919867
+          },
+          {
+            "bar_id": "D0965",
+            "field": "Low",
+            "value": 86.97829716193657
+          }
+        ],
+        "interpretation": "88.147 최신 확인 저점, 86.978 앞 저점. 서로 다른 실패 층위."
+      },
+      {
+        "priority_role": "4 더 위 공급",
+        "anchors": [
+          {
+            "bar_id": "D0909",
+            "field": "Low",
+            "value": 94.4908180300501
+          },
+          {
+            "bar_id": "D0946",
+            "field": "High",
+            "value": 97.8297161936561
+          },
+          {
+            "bar_id": "D0933",
+            "field": "High",
+            "value": 102.1702838063439
+          }
+        ],
+        "interpretation": "94.491 과거 하단, 97.830 반등 고가, 102.170 큰 하락 시작 부근 고가. 회복 시 공급 후보이나 현재 모두 지지 확정 아님."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0978",
+        "field": "Low",
+        "normalized": 88.14691151919867,
+        "krw": 52800.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "D0955",
+        "field": "High",
+        "normalized": 93.15525876460768,
+        "krw": 55800.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "D0976",
+        "field": "High",
+        "normalized": 92.32053422370618,
+        "krw": 55300.0,
+        "label": "retest_low"
+      },
+      "early_reset": {
+        "bar_id": "D0978",
+        "field": "Low",
+        "normalized": 88.14691151919867,
+        "krw": 52800.0,
+        "label": "early_reset"
+      },
+      "weekly_failure": {
+        "bar_id": "D0965",
+        "field": "Low",
+        "normalized": 86.97829716193657,
+        "krw": 52100.0,
+        "label": "weekly_failure"
+      },
+      "hypothetical_later_bid": {
+        "bar_id": "D0979",
+        "field": "Close",
+        "normalized": 90.31719532554257,
+        "krw": 54100.0,
+        "label": "hypothetical_later_bid"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0909",
+        "field": "Low",
+        "normalized": 94.4908180300501,
+        "krw": 56600.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0946",
+        "field": "High",
+        "normalized": 97.8297161936561,
+        "krw": 58600.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0933",
+        "field": "High",
+        "normalized": 102.1702838063439,
+        "krw": 61200.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 13,
+      "date": "2018-01-18",
+      "Open": 52800.0,
+      "High": 53200.0,
+      "Low": 52700.0,
+      "Close": 52700.0,
+      "Volume": 205334.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": {
+      "date": "2018-04-13",
+      "Close": 50800.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": {
+      "session": 18,
+      "date": "2018-01-25",
+      "Open": 55500.0,
+      "High": 56500.0,
+      "Low": 54700.0,
+      "Close": 56100.0,
+      "Volume": 371352.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_subsequent_zone_overlap_and_close_hold_minimal": {
+      "session": 24,
+      "date": "2018-02-02",
+      "Open": 55000.0,
+      "High": 56100.0,
+      "Low": 54900.0,
+      "Close": 55800.0,
+      "Volume": 584768.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_reclaim_attempt_close_failure": {
+      "session": 19,
+      "date": "2018-01-26",
+      "Open": 55500.0,
+      "High": 56000.0,
+      "Low": 55100.0,
+      "Close": 55100.0,
+      "Volume": 288210.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": true,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "first_local_reset_close": {
+      "session": 13,
+      "date": "2018-01-18",
+      "Open": 52800.0,
+      "High": 53200.0,
+      "Low": 52700.0,
+      "Close": 52700.0,
+      "Volume": 205334.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_new_low_or_wick_below_reset": {
+      "session": 12,
+      "date": "2018-01-17",
+      "Open": 52900.0,
+      "High": 53400.0,
+      "Low": 52500.0,
+      "Close": 53000.0,
+      "Volume": 343850.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "local_reset_before_reclaim": true,
+    "raw_later_bid_price_access_after_reclaim": {
+      "session": 21,
+      "date": "2018-01-30",
+      "Open": 54900.0,
+      "High": 55000.0,
+      "Low": 53500.0,
+      "Close": 53700.0,
+      "Volume": 354865.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "later_bid_was_not_adopted": true,
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 54700.0,
+        "endpoint_price_change_pct": 0.1831501831501825,
+        "hindsight_ordered_envelope_pct": 8.030592734225618,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 14,
+          "date": "2018-01-19",
+          "priceKRW": 52300.0
+        },
+        "maximum": {
+          "session": 18,
+          "date": "2018-01-25",
+          "priceKRW": 56500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 52600.0,
+        "endpoint_price_change_pct": -3.663003663003661,
+        "hindsight_ordered_envelope_pct": 14.91395793499044,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 57,
+          "date": "2018-03-26",
+          "priceKRW": 51300.0
+        },
+        "maximum": {
+          "session": 41,
+          "date": "2018-03-02",
+          "priceKRW": 60100.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 42800.0,
+        "endpoint_price_change_pct": -21.611721611721613,
+        "hindsight_ordered_envelope_pct": 14.91395793499044,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 102,
+          "date": "2018-05-31",
+          "priceKRW": 42350.0
+        },
+        "maximum": {
+          "session": 41,
+          "date": "2018-03-02",
+          "priceKRW": 60100.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 54600.0,
+    "event_audit": {
+      "caseId": "E06",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        123875069
+      ],
+      "sharesAtCutoff": 123875069,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E06",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/161390.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "c3813af16dc28d84af0423f542b8a71002732c2cde9b56ce2a6cd7db0da01c54",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E07",
+    "first_state": "WAIT_NOT_ADOPTED",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 264.085 고점 이후 하락했고 최근 134대에서 반등했으나 160대 위 공급을 충분히 해소하지 못했다. 주봉은 W0196 저점 이후 조금씩 높아지는 저점이 있으나 W0207은 183.099까지 상승하고 155.810으로 밀린 큰 윗꼬리다. 일봉 D0975 상승 사건 뒤 D0978이 큰 거래량과 함께 상승분을 대부분 반납했다. D0982 반등은 아직 D0975 종가 169.014와 D0977 종가 171.655 아래다. 단기 돌파 실패와 134대 바닥 붕괴를 구분한다.",
+    "original_T": "현재 고정 매수는 대기. 160.387–161.796 바로 아래에서 추격할 여유가 작고 최근 큰 상단 거절이 남아 있다. 향후 171.655 위 완료 일봉 종가와 후속 유지가 확인되면 161.796 재시험 대기를 대안 후보로 심사할 수 있다. 이는 현재 158대에서 171대 확인을 동시에 얻는 진입이 아니다. 161.796 아래로 깊게 내려오면 돌파 유지 가설을 다시 평가하며 146.655까지의 넓은 실패선을 감안할 때 다음 183.099까지의 여유만으로는 매력이 제한적이다. 다른 대안인 146.655 부근 선제 매수는 134.155까지 위험이 크므로 현재 채택하지 않는다. 146.655 아래 일봉 종가면 국지적 회복 후보 취소. 무되돌림 상승은 기회 누락으로 남긴다.",
+    "original_R": "현재 노출 0. 위 미래 대안을 택하더라도 151.761/146.655 등 어떤 회복 저점을 실패 기준으로 삼는지 진입 전에 고정해야 한다. 151.761은 아직 확정 피벗이 아니므로 더 타이트한 손절을 확정해 손익비를 꾸미지 않는다. 최근 TR14는 약 9.054로 160 부근 진입의 1–3포인트 손절은 통상 변동에 비해 너무 작다. 일봉 회복 실패는 146.655 아래 종가, 주봉 바닥 회복의 큰 실패는 134.155 아래 주봉 종가다. 현재 169대 돌파 시도는 이미 실패한 사건으로 보존하며 낮은 지지가 있다는 이유로 성공으로 바꾸지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 가장 가까운 공급",
+        "anchors": [
+          {
+            "bar_id": "D0959",
+            "field": "High",
+            "value": 161.79577464788733
+          },
+          {
+            "bar_id": "D0967",
+            "field": "High",
+            "value": 160.38732394366198
+          }
+        ],
+        "interpretation": "161.796, 160.387 기존 반등 고점. 현가 바로 위라 먼저 해결해야 할 구간."
+      },
+      {
+        "priority_role": "2 실패 사건의 회복",
+        "anchors": [
+          {
+            "bar_id": "D0975",
+            "field": "Close",
+            "value": 169.01408450704227
+          },
+          {
+            "bar_id": "D0977",
+            "field": "Close",
+            "value": 171.6549295774648
+          },
+          {
+            "bar_id": "D0978",
+            "field": "High",
+            "value": 183.09859154929578
+          }
+        ],
+        "interpretation": "169.014–171.655 종가 회복 문턱, 183.099 실패 꼬리. D0978 종가 155.810과 같은 사건의 서로 다른 역할."
+      },
+      {
+        "priority_role": "3 최근 반등 유지 구간",
+        "anchors": [
+          {
+            "bar_id": "D0971",
+            "field": "Low",
+            "value": 146.6549295774648
+          },
+          {
+            "bar_id": "D0981",
+            "field": "Low",
+            "value": 151.7605633802817
+          },
+          {
+            "bar_id": "D0975",
+            "field": "Low",
+            "value": 153.5211267605634
+          }
+        ],
+        "interpretation": "146.655, 151.761, 153.521. 최신 일봉 저점은 오른쪽 봉 부족으로 확정 피벗이 아니다."
+      },
+      {
+        "priority_role": "4 큰 바닥",
+        "anchors": [
+          {
+            "bar_id": "M0045",
+            "field": "Low",
+            "value": 134.1549295774648
+          },
+          {
+            "bar_id": "W0198",
+            "field": "Low",
+            "value": 134.85915492957747
+          }
+        ],
+        "interpretation": "134.155–134.859. 바닥 반응은 관찰되었지만 더 높은 진입 손실을 정당화하는 근거는 아니다."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0971",
+        "field": "Low",
+        "normalized": 146.6549295774648,
+        "krw": 8330.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "D0977",
+        "field": "Close",
+        "normalized": 171.6549295774648,
+        "krw": 9750.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "D0977",
+        "field": "Close",
+        "normalized": 171.6549295774648,
+        "krw": 9750.0,
+        "label": "retest_low"
+      },
+      "early_reset": {
+        "bar_id": "D0971",
+        "field": "Low",
+        "normalized": 146.6549295774648,
+        "krw": 8330.0,
+        "label": "early_reset"
+      },
+      "weekly_failure": {
+        "bar_id": "M0045",
+        "field": "Low",
+        "normalized": 134.1549295774648,
+        "krw": 7620.0,
+        "label": "weekly_failure"
+      },
+      "hypothetical_later_bid": {
+        "bar_id": "D0959",
+        "field": "High",
+        "normalized": 161.79577464788733,
+        "krw": 9190.0,
+        "label": "hypothetical_later_bid"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0967",
+        "field": "High",
+        "normalized": 160.38732394366198,
+        "krw": 9110.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0978",
+        "field": "High",
+        "normalized": 183.09859154929578,
+        "krw": 10400.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 42,
+      "date": "2018-03-05",
+      "Open": 8300.0,
+      "High": 8420.0,
+      "Low": 8240.0,
+      "Close": 8240.0,
+      "Volume": 32823.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": {
+      "date": "2018-05-25",
+      "Close": 7590.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": {
+      "session": 6,
+      "date": "2018-01-09",
+      "Open": 9350.0,
+      "High": 10000.0,
+      "Low": 9350.0,
+      "Close": 9820.0,
+      "Volume": 487143.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_subsequent_zone_overlap_and_close_hold_minimal": {
+      "session": 11,
+      "date": "2018-01-16",
+      "Open": 9410.0,
+      "High": 10100.0,
+      "Low": 9320.0,
+      "Close": 9860.0,
+      "Volume": 448637.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_reclaim_attempt_close_failure": {
+      "session": 7,
+      "date": "2018-01-10",
+      "Open": 9850.0,
+      "High": 9850.0,
+      "Low": 9390.0,
+      "Close": 9540.0,
+      "Volume": 172448.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": true,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "first_local_reset_close": {
+      "session": 42,
+      "date": "2018-03-05",
+      "Open": 8300.0,
+      "High": 8420.0,
+      "Low": 8240.0,
+      "Close": 8240.0,
+      "Volume": 32823.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_new_low_or_wick_below_reset": {
+      "session": 41,
+      "date": "2018-03-02",
+      "Open": 8350.0,
+      "High": 8440.0,
+      "Low": 8180.0,
+      "Close": 8350.0,
+      "Volume": 46438.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "local_reset_before_reclaim": false,
+    "raw_later_bid_price_access_after_reclaim": {
+      "session": 25,
+      "date": "2018-02-05",
+      "Open": 9370.0,
+      "High": 9470.0,
+      "Low": 9020.0,
+      "Close": 9280.0,
+      "Volume": 129764.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "later_bid_was_not_adopted": true,
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 10050.0,
+        "endpoint_price_change_pct": 11.295681063122931,
+        "hindsight_ordered_envelope_pct": 18.101545253863137,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 9060.0
+        },
+        "maximum": {
+          "session": 13,
+          "date": "2018-01-18",
+          "priceKRW": 10700.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 7950.0,
+        "endpoint_price_change_pct": -11.960132890365449,
+        "hindsight_ordered_envelope_pct": 18.101545253863137,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 57,
+          "date": "2018-03-26",
+          "priceKRW": 7660.0
+        },
+        "maximum": {
+          "session": 13,
+          "date": "2018-01-18",
+          "priceKRW": 10700.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 6690.0,
+        "endpoint_price_change_pct": -25.913621262458474,
+        "hindsight_ordered_envelope_pct": 18.101545253863137,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 120,
+          "date": "2018-06-28",
+          "priceKRW": 6600.0
+        },
+        "maximum": {
+          "session": 13,
+          "date": "2018-01-18",
+          "priceKRW": 10700.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 9030.0,
+    "event_audit": {
+      "caseId": "E07",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        8693978
+      ],
+      "sharesAtCutoff": 8693978,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E07",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/039290.KQ?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "91168ea2a596465a9875ed600f85341c04c90624d2d1aec39ca1d7971edf9e9a",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E08",
+    "first_state": "REJECT_EVENT_INPUT_DEFECT",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 과거 급등/윗꼬리 이후 오랜 기간 170–182대에서 거의 횡보했다. 최근 M0046의 225.688 고가는 해당 월 종가 171.101로 유지되지 못했고 M0047–M0048에서 180대 복귀가 나타났다. 주봉 W0201 저점 이후 회복, W0204–W0208은 좁은 상단 횡보다. 일봉은 177–181대에 묶여 있고 D0982 고가 확장만으로 장기 돌파 수용이라고 하기 어렵다. D0934 거래량 폭증과 긴 윗꼬리가 특이하며 원인을 모른다. 최근 일거래량은 입력 단위 기준 작은 값이 반복되므로 원화 거래대금·호가·스프레드 없이 실제 수용능력을 추정할 수 없다.",
+    "original_T": "현재 거래 채택을 거절한다. 분석상 후보 구간은 177.064–177.523이지만 첫 상단 182.569까지 약 5포인트이며 최근 TR14 약 2.228과 체결 불확실성을 감안하면 이 구간만으로 주문 설계를 완성하기 어렵다. 향후 182.569 위 종가와 재시험 유지가 보이면 구조는 다시 볼 수 있으나 거래량/스프레드/체결 조건 공백도 함께 해소되어야 한다. 허용 입력만으로 그 공백을 메울 수 없으므로 현재 정확한 매수가·수량은 만들지 않는다. 177.064 아래 일봉 종가면 상단 압축 가설 취소, 172.018 회복 경계 상실시 더 넓은 반등도 재심사한다.",
+    "original_R": "현재 노출 0. 가까운 상단 유지 가설은 177.064 아래 일봉 종가, 회복 경계는 172.018 아래 일봉/주봉 마감, 주봉 바닥은 168.349 아래 주봉 종가로 각각 구분한다. 장기 횡보가 안전이나 낮은 갭 위험을 보장하지 않는다. 가격 변동폭이 좁더라도 비용/스프레드 때문에 위험 대비 보상이 나쁠 수 있으나 실제 비용 수치는 미제공이라 경제성 결론을 수치화하지 않는다. 확정 q=0이며 정규화 거래량을 원화 거래대금으로 바꾸지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 상단 확인 구간",
+        "anchors": [
+          {
+            "bar_id": "D0966",
+            "field": "High",
+            "value": 180.73394495412845
+          },
+          {
+            "bar_id": "D0982",
+            "field": "High",
+            "value": 182.11009174311928
+          },
+          {
+            "bar_id": "W0138",
+            "field": "High",
+            "value": 182.56880733944956
+          }
+        ],
+        "interpretation": "180.734–182.569. D0982 고가 182.110은 미확정 끝 고가이고 W0138 182.569는 오래된 주봉 꼬리."
+      },
+      {
+        "priority_role": "2 최근 횡보 하단",
+        "anchors": [
+          {
+            "bar_id": "D0968",
+            "field": "Low",
+            "value": 177.06422018348624
+          },
+          {
+            "bar_id": "D0979",
+            "field": "Low",
+            "value": 177.52293577981652
+          }
+        ],
+        "interpretation": "177.064–177.523. 여러 최근 저점이 있으나 좁은 호가/정체 가격의 영향은 미확인."
+      },
+      {
+        "priority_role": "3 이전 회복 경계",
+        "anchors": [
+          {
+            "bar_id": "D0962",
+            "field": "Low",
+            "value": 172.01834862385323
+          },
+          {
+            "bar_id": "W0201",
+            "field": "Low",
+            "value": 168.34862385321102
+          }
+        ],
+        "interpretation": "172.018 및 168.349. 앞 구간 재시험 후 복귀 관찰과 최저 바닥은 별도."
+      },
+      {
+        "priority_role": "4 일회성 고가",
+        "anchors": [
+          {
+            "bar_id": "D0934",
+            "field": "High",
+            "value": 225.68807339449543
+          },
+          {
+            "bar_id": "D0934",
+            "field": "Close",
+            "value": 177.52293577981652
+          },
+          {
+            "bar_id": "W0119",
+            "field": "High",
+            "value": 192.66055045871562
+          }
+        ],
+        "interpretation": "225.688 고가/177.523 종가, 오래된 192.661 고가. 225.688을 당연한 목표나 대형 매집 증거로 쓰지 않는다."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0968",
+        "field": "Low",
+        "normalized": 177.06422018348624,
+        "krw": 19300.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "W0138",
+        "field": "High",
+        "normalized": 182.56880733944956,
+        "krw": 19900.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "W0138",
+        "field": "High",
+        "normalized": 182.56880733944956,
+        "krw": 19900.0,
+        "label": "retest_low"
+      },
+      "weekly_failure": {
+        "bar_id": "W0201",
+        "field": "Low",
+        "normalized": 168.34862385321102,
+        "krw": 18350.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0982",
+        "field": "High",
+        "normalized": 182.11009174311928,
+        "krw": 19850.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0138",
+        "field": "High",
+        "normalized": 182.56880733944956,
+        "krw": 19900.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": null,
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": null,
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": {
+      "session": 35,
+      "date": "2018-02-21",
+      "Open": 19850.0,
+      "High": 19950.0,
+      "Low": 19850.0,
+      "Close": 19950.0,
+      "Volume": 31919.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_subsequent_zone_overlap_and_close_hold_minimal": null,
+    "first_reclaim_attempt_close_failure": null,
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": false,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 19800.0,
+        "endpoint_price_change_pct": 0.50761421319796,
+        "hindsight_ordered_envelope_pct": 1.5306122448979664,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 19600.0
+        },
+        "maximum": {
+          "session": 16,
+          "date": "2018-01-23",
+          "priceKRW": 19900.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 35,
+        "ordinary_complete": false,
+        "endpoint_close": null,
+        "endpoint_price_change_pct": null,
+        "hindsight_ordered_envelope_pct": 1.7857142857142794,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 19600.0
+        },
+        "maximum": {
+          "session": 35,
+          "date": "2018-02-21",
+          "priceKRW": 19950.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 35,
+        "ordinary_complete": false,
+        "endpoint_close": null,
+        "endpoint_price_change_pct": null,
+        "hindsight_ordered_envelope_pct": 1.7857142857142794,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 19600.0
+        },
+        "maximum": {
+          "session": 35,
+          "date": "2018-02-21",
+          "priceKRW": 19950.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 19700.0,
+    "event_audit": {
+      "caseId": "E08",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        46363851
+      ],
+      "sharesAtCutoff": 46363851,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": false,
+      "recordedNonTradingDays": [
+        "2018-02-22",
+        "2018-02-23",
+        "2018-02-26",
+        "2018-02-27",
+        "2018-02-28",
+        "2018-03-02",
+        "2018-03-05",
+        "2018-03-06",
+        "2018-03-07",
+        "2018-03-08",
+        "2018-03-09",
+        "2018-03-12",
+        "2018-03-13",
+        "2018-03-14",
+        "2018-03-15",
+        "2018-03-16",
+        "2018-03-19"
+      ],
+      "missingMarketSessions": [
+        "2018-03-20",
+        "2018-03-21",
+        "2018-03-22",
+        "2018-03-23",
+        "2018-03-26",
+        "2018-03-27",
+        "2018-03-28",
+        "2018-03-29",
+        "2018-03-30",
+        "2018-04-02",
+        "2018-04-03",
+        "2018-04-04",
+        "2018-04-05",
+        "2018-04-06",
+        "2018-04-09",
+        "2018-04-10",
+        "2018-04-11",
+        "2018-04-12",
+        "2018-04-13",
+        "2018-04-16",
+        "2018-04-17",
+        "2018-04-18",
+        "2018-04-19",
+        "2018-04-20",
+        "2018-04-23",
+        "2018-04-24",
+        "2018-04-25",
+        "2018-04-26",
+        "2018-04-27",
+        "2018-04-30",
+        "2018-05-02",
+        "2018-05-03",
+        "2018-05-04",
+        "2018-05-08",
+        "2018-05-09",
+        "2018-05-10",
+        "2018-05-11",
+        "2018-05-14",
+        "2018-05-15",
+        "2018-05-16",
+        "2018-05-17",
+        "2018-05-18",
+        "2018-05-21",
+        "2018-05-23",
+        "2018-05-24",
+        "2018-05-25",
+        "2018-05-28",
+        "2018-05-29",
+        "2018-05-30",
+        "2018-05-31",
+        "2018-06-01",
+        "2018-06-04",
+        "2018-06-05",
+        "2018-06-07",
+        "2018-06-08",
+        "2018-06-11",
+        "2018-06-12",
+        "2018-06-14",
+        "2018-06-15",
+        "2018-06-18",
+        "2018-06-19",
+        "2018-06-20",
+        "2018-06-21",
+        "2018-06-22",
+        "2018-06-25",
+        "2018-06-26",
+        "2018-06-27",
+        "2018-06-28"
+      ],
+      "specialEvent": {
+        "classification": "CASH_EXCHANGE_TRADING_HALT_TERMINAL_SERIES",
+        "initialFilingDate": "2017-12-29",
+        "correctionDated": "2018-01-15",
+        "haltPlannedAfterCorrection": "2018-02-22",
+        "observedLastTradableDate": "2018-02-21",
+        "observedFirstZeroTradeDate": "2018-02-22",
+        "plannedCashPerShareKRW": 20000,
+        "cashPaymentReceiptVerified": false,
+        "officialDelistingDateDirectlyAuthenticated": false,
+        "sourceURLs": [
+          "https://spn.stockplus.com/news/api/v1/disclosure_views/koscom/0525720",
+          "https://www.paxnet.co.kr/news/008000/disclosureView?articleId=20180116002377&currentPageNo=1&newsSetId=008000&objId=A20180116002377"
+        ],
+        "provenance": "issuer regulatory filing text reproduced by third-party hosts; direct KIND/DART original not retrieved",
+        "inputDefect": "Material event first filed before cutoff but not included in original chart-only input. Do not attribute missing event knowledge to Work B. No Work B answer or score was opened.",
+        "zeroCloseTreatment": "19950 carried close after halt is not a sellable market price; no synthetic exit at day60 or120."
+      },
+      "secondaryEventCrosscheck": {
+        "caseId": "E08",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/008000.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "retrieved": false,
+        "error": "HTTP Error 404: Not Found"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E09",
+    "first_state": "CONDITIONAL_RESTING_LIMIT_CANDIDATE",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 큰 고점 이후 하락했고 최근 약 180–250의 넓은 범위 속에서도 반등 고점이 낮아진다. 주봉 W0202 반등 고점에서 W0207까지 조정했고 W0208은 180대 하단 위에서 반등했다. 일봉 D0979 저점 181.746은 이후 D0982까지 세 봉이 생겨 국지적 저점으로 확인 가능하지만 장기 추세 반전을 뜻하지 않는다. D0951 큰 거래량의 상승은 후속 유지에 실패했다. 최근 하단 반등의 거래량 확대도 강하지 않아 공격적 매수보다 범위 하단 반응 가설로 한정한다.",
+    "original_T": "P=185.714(D0979 고가)의 소규모 선제 고정 지정가 후보. D0979 이후 세 봉 반응을 이미 본 cutoff 시점에서 미래 재접근을 기다리는 것으로, D0979 당시 매수한 것처럼 기록하지 않는다. 현재 193.651 추격은 거절. 진입 전 일봉 종가가 180.952 아래로 내려가면 기존 하단 재시험 후보 취소하며, 그 아래 갭에서 접촉 매수를 가정하지 않는다. 반응 확인 후 접근 대안은 195.238 위 일봉 종가와 후속 지지 유지 관찰이다. 그 대안을 택하면 새 가격으로 심사한다. 상단 검토는 195.238, 203.175–205.556, 그 다음 211–228대로 단계적이며 첫 문턱의 거절을 무시하지 않는다. 가설은 수일~수주 반등이고 일봉 검토와 별도다.",
+    "original_R": "최근 바닥 가설의 일봉 실패는 180.952 아래 종가. 자본 산출용 더 넓은 참조 S=178.571(W0150 저가)를 처음부터 사용하되 실제 의도는 더 이른 실패 시 거래 종료이며 하단으로 이동하는 손절이 아니다. 폭 약 7.143은 TR14 5.499의 약 1.30배다. 주봉 180.952 아래 종가는 최근 하단 구조 실패, 178.571 아래 주봉 종가는 더 오래된 범위 하단까지 반증한다. 월봉 M0026 저가 177.778도 그 아래 별도 경계지만 그것을 기다리며 기존 손실을 연장하지 않는다. 저가 재시험이 없이 오르면 미체결로 남고 추가매수는 하지 않는다.",
+    "original_zones": [
+      {
+        "priority_role": "1 바닥 재시험",
+        "anchors": [
+          {
+            "bar_id": "W0196",
+            "field": "Low",
+            "value": 180.95238095238093
+          },
+          {
+            "bar_id": "D0979",
+            "field": "Low",
+            "value": 181.74603174603175
+          },
+          {
+            "bar_id": "D0931",
+            "field": "Low",
+            "value": 183.33333333333331
+          }
+        ],
+        "interpretation": "180.952–183.333 과거/최근 저점군. 새 저점 181.746은 D0982까지 3봉 확인을 얻는다."
+      },
+      {
+        "priority_role": "2 조건부 예약 기준",
+        "anchors": [
+          {
+            "bar_id": "D0979",
+            "field": "High",
+            "value": 185.7142857142857
+          },
+          {
+            "bar_id": "D0979",
+            "field": "Close",
+            "value": 184.9206349206349
+          }
+        ],
+        "interpretation": "185.714 반응봉 고가를 고정 후보로 선택. 그 봉 종가 184.921은 더 낮은 대안이고 지지 보장 아님."
+      },
+      {
+        "priority_role": "3 가장 가까운 반등 문턱",
+        "anchors": [
+          {
+            "bar_id": "D0975",
+            "field": "High",
+            "value": 195.23809523809524
+          },
+          {
+            "bar_id": "D0965",
+            "field": "High",
+            "value": 205.55555555555554
+          }
+        ],
+        "interpretation": "195.238 및 205.556. 현가 193.651은 첫 문턱 바로 아래라 즉시 추격에 불리."
+      },
+      {
+        "priority_role": "4 큰 상단/넓은 실패 대안",
+        "anchors": [
+          {
+            "bar_id": "D0951",
+            "field": "High",
+            "value": 228.57142857142856
+          },
+          {
+            "bar_id": "W0150",
+            "field": "Low",
+            "value": 178.57142857142856
+          }
+        ],
+        "interpretation": "228.571 반등 실패 고가와 178.571 오래된 주봉 저점. 178.571은 자본 참조 경계로 사전 지정하되 최근 181.746 하단 실패를 무시하는 허가가 아니다."
+      }
+    ],
+    "levels": {
+      "bid": {
+        "bar_id": "D0979",
+        "field": "High",
+        "normalized": 185.7142857142857,
+        "krw": 11700.0,
+        "label": "bid"
+      },
+      "daily_failure": {
+        "bar_id": "W0196",
+        "field": "Low",
+        "normalized": 180.95238095238093,
+        "krw": 11400.0,
+        "label": "daily_failure"
+      },
+      "risk_reference": {
+        "bar_id": "W0150",
+        "field": "Low",
+        "normalized": 178.57142857142856,
+        "krw": 11250.0,
+        "label": "risk_reference"
+      },
+      "weekly_failure": {
+        "bar_id": "W0196",
+        "field": "Low",
+        "normalized": 180.95238095238093,
+        "krw": 11400.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0975",
+        "field": "High",
+        "normalized": 195.23809523809524,
+        "krw": 12300.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0204",
+        "field": "Close",
+        "normalized": 203.17460317460316,
+        "krw": 12800.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0965",
+        "field": "High",
+        "normalized": 205.55555555555554,
+        "krw": 12950.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0202",
+        "field": "Close",
+        "normalized": 211.9047619047619,
+        "krw": 13350.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0951",
+        "field": "High",
+        "normalized": 228.57142857142856,
+        "krw": 14400.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 120,
+      "date": "2018-06-28",
+      "Open": 11600.0,
+      "High": 11750.0,
+      "Low": 11200.0,
+      "Close": 11350.0,
+      "Volume": 66281.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": false,
+    "first_completed_week_failure": null,
+    "partial_final_week_not_scored_as_completed": true,
+    "first_bid_price_access": {
+      "session": 4,
+      "date": "2018-01-05",
+      "Open": 11700.0,
+      "High": 11850.0,
+      "Low": 11500.0,
+      "Close": 11700.0,
+      "Volume": 40337.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "prior_hard_close_cancel": null,
+    "bid_access_type": "OPEN_AT_LIMIT",
+    "price_access_not_queue_fill": true,
+    "gap_through_risk_at_first_access": false,
+    "first_risk_reference_low_after_bid_access": {
+      "session": 120,
+      "date": "2018-06-28",
+      "Open": 11600.0,
+      "High": 11750.0,
+      "Low": 11200.0,
+      "Close": 11350.0,
+      "Volume": 66281.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_risk_reference_close_below_after_bid_access": null,
+    "post_access_quote_envelope_before_first_close_failure": {
+      "max_high": {
+        "session": 68,
+        "date": "2018-04-10",
+        "Open": 14700.0,
+        "High": 16950.0,
+        "Low": 14550.0,
+        "Close": 16200.0,
+        "Volume": 1175359.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "min_low": {
+        "session": 120,
+        "date": "2018-06-28",
+        "Open": 11600.0,
+        "High": 11750.0,
+        "Low": 11200.0,
+        "Close": 11350.0,
+        "Volume": 66281.0,
+        "tradable": true,
+        "record_status": "TRADABLE"
+      },
+      "price_change_from_limit_to_max_high_pct": 44.87179487179487,
+      "not_profit_or_verified_MFE": true,
+      "entry_day_high_excluded": true
+    },
+    "candidate_still_active_at_late_access_authenticated": false,
+    "target_events_after_price_access": [
+      {
+        "target": {
+          "bar_id": "D0975",
+          "field": "High",
+          "normalized": 195.23809523809524,
+          "krw": 12300.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 1,
+          "date": "2018-01-02",
+          "Open": 12100.0,
+          "High": 12450.0,
+          "Low": 12000.0,
+          "Close": 12000.0,
+          "Volume": 20323.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": {
+          "session": 9,
+          "date": "2018-01-12",
+          "Open": 12250.0,
+          "High": 12950.0,
+          "Low": 12100.0,
+          "Close": 12500.0,
+          "Volume": 174586.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "W0204",
+          "field": "Close",
+          "normalized": 203.17460317460316,
+          "krw": 12800.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 9,
+          "date": "2018-01-12",
+          "Open": 12250.0,
+          "High": 12950.0,
+          "Low": 12100.0,
+          "Close": 12500.0,
+          "Volume": 174586.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": {
+          "session": 9,
+          "date": "2018-01-12",
+          "Open": 12250.0,
+          "High": 12950.0,
+          "Low": 12100.0,
+          "Close": 12500.0,
+          "Volume": 174586.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0965",
+          "field": "High",
+          "normalized": 205.55555555555554,
+          "krw": 12950.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 9,
+          "date": "2018-01-12",
+          "Open": 12250.0,
+          "High": 12950.0,
+          "Low": 12100.0,
+          "Close": 12500.0,
+          "Volume": 174586.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": {
+          "session": 9,
+          "date": "2018-01-12",
+          "Open": 12250.0,
+          "High": 12950.0,
+          "Low": 12100.0,
+          "Close": 12500.0,
+          "Volume": 174586.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "W0202",
+          "field": "Close",
+          "normalized": 211.9047619047619,
+          "krw": 13350.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 18,
+          "date": "2018-01-25",
+          "Open": 12700.0,
+          "High": 13400.0,
+          "Low": 12700.0,
+          "Close": 13250.0,
+          "Volume": 152097.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": {
+          "session": 18,
+          "date": "2018-01-25",
+          "Open": 12700.0,
+          "High": 13400.0,
+          "Low": 12700.0,
+          "Close": 13250.0,
+          "Volume": 152097.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      },
+      {
+        "target": {
+          "bar_id": "D0951",
+          "field": "High",
+          "normalized": 228.57142857142856,
+          "krw": 14400.0,
+          "label": "resistance_review_only"
+        },
+        "first_threshold_seen_anywhere": {
+          "session": 29,
+          "date": "2018-02-09",
+          "Open": 14000.0,
+          "High": 14450.0,
+          "Low": 13550.0,
+          "Close": 13850.0,
+          "Volume": 752090.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "entry_day_high_target_also_seen": null,
+        "first_separate_later_day_target": {
+          "session": 29,
+          "date": "2018-02-09",
+          "Open": 14000.0,
+          "High": 14450.0,
+          "Low": 13550.0,
+          "Close": 13850.0,
+          "Volume": 752090.0,
+          "tradable": true,
+          "record_status": "TRADABLE"
+        },
+        "same_day_order_ambiguous": false,
+        "realized_return": null
+      }
+    ],
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 13400.0,
+        "endpoint_price_change_pct": 9.836065573770503,
+        "hindsight_ordered_envelope_pct": 22.466960352422905,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 11350.0
+        },
+        "maximum": {
+          "session": 20,
+          "date": "2018-01-29",
+          "priceKRW": 13900.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 13750.0,
+        "endpoint_price_change_pct": 12.704918032786882,
+        "hindsight_ordered_envelope_pct": 36.563876651982376,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 6,
+          "date": "2018-01-09",
+          "priceKRW": 11350.0
+        },
+        "maximum": {
+          "session": 30,
+          "date": "2018-02-12",
+          "priceKRW": 15500.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 11350.0,
+        "endpoint_price_change_pct": -6.9672131147541005,
+        "hindsight_ordered_envelope_pct": 49.33920704845816,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 120,
+          "date": "2018-06-28",
+          "priceKRW": 11200.0
+        },
+        "maximum": {
+          "session": 68,
+          "date": "2018-04-10",
+          "priceKRW": 16950.0
+        },
+        "bid_price_access_within_horizon": true,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 12200.0,
+    "event_audit": {
+      "caseId": "E09",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        7900000
+      ],
+      "sharesAtCutoff": 7900000,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E09",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/012790.KQ?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "fb86238ea24cf6397560b207506acaf5402234f5c5a26d56fe52384c6ba9f9af",
+        "retrieved": true,
+        "events": {},
+        "finding": "NO_REPORTED_DIVIDEND_EX_DATE_OR_SPLIT_IN_TARGET_WINDOW"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends."
+    }
+  },
+  {
+    "case_id": "E10",
+    "first_state": "REJECT_WITH_FUTURE_REASSESSMENT",
+    "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+    "original_A": "월봉은 131대 고점 이후 저점과 반등 고점이 낮아지고 최근 M0048 종가가 84.607 이전 바닥 아래다. 주봉 W0196–W0207의 85–88대 안정 구간을 W0208이 하향 이탈했다. 일봉 D0980 종가 87.773 뒤 D0981 시가 83.843으로 불연속 하락했고 D0982도 이전 바닥 아래다. 이는 단순 장중 꼬리 침범이 아니라 제공 가격의 종가/갭 변화다. 다만 기업행사·조정 방식의 완전 인증은 없으므로 갭을 실제 특정 악재로 단정하지 않는다.",
+    "original_T": "현재 고정 매수 후보는 거절. 단지 전날보다 싸졌다는 이유로 83.843에서 매수하지 않는다. 먼저 84.607 위 일봉 종가 복귀와 이후 재시험 유지가 필요하며, 더 보수적으로 86.026 안정 영역 복귀까지 기다릴 수 있다. 그때 갭/조정 사유와 거래 조건 확인 공백도 해소되어야 한다. 84.607 확인 진입을 나중에 83.5 저점 체결로 기록하지 않는다. 새 반응 구간 83.515 아래 추가 하락이면 복귀 후보 취소/재설계. 일거래량 증가 두 건은 갭 하락을 동반했으므로 상승 수요로 읽지 않는다.",
+    "original_R": "현재 노출 0. 84.607 바닥 유지와 86대 안정 가설은 이번 마감 정보에서 이미 손상됐다. 미래 복귀 가설의 실패는 재차 84.607 아래 일봉 종가이며, 새 하단 유지까지 검토한다면 83.515 아래 주봉 종가가 반증 기준이다. 더 먼 월봉 저점 M0002 저가 같은 과거 수치를 새 손절로 가져오지 않는다. D0980 종가 대비 D0981 시가 갭 약 -4.48%는 TR14 1.185만으로 예상 손실을 제한할 수 없음을 보여준다. 원인 미확인 상태의 최종 진입/수량은 0으로 둔다.",
+    "original_zones": [
+      {
+        "priority_role": "1 새 반응 범위",
+        "anchors": [
+          {
+            "bar_id": "D0981",
+            "field": "Low",
+            "value": 83.51528384279476
+          },
+          {
+            "bar_id": "D0981",
+            "field": "High",
+            "value": 84.71615720524018
+          }
+        ],
+        "interpretation": "83.515–84.716. 최신 저점은 확정 피벗이 아니다."
+      },
+      {
+        "priority_role": "2 깨진 이전 바닥",
+        "anchors": [
+          {
+            "bar_id": "D0921",
+            "field": "Low",
+            "value": 84.60698689956332
+          },
+          {
+            "bar_id": "D0927",
+            "field": "Low",
+            "value": 84.60698689956332
+          }
+        ],
+        "interpretation": "84.607은 두 시점에서 관찰된 이전 바닥으로 현가 위 회복 문턱."
+      },
+      {
+        "priority_role": "3 이전 안정 영역",
+        "anchors": [
+          {
+            "bar_id": "D0943",
+            "field": "Low",
+            "value": 86.02620087336244
+          },
+          {
+            "bar_id": "D0964",
+            "field": "Low",
+            "value": 86.24454148471617
+          },
+          {
+            "bar_id": "D0978",
+            "field": "High",
+            "value": 87.882096069869
+          }
+        ],
+        "interpretation": "86.026–87.882. 가격이 갭으로 건너뛰었다고 체결된 지지/거래 공백으로 확정하지 않는다."
+      },
+      {
+        "priority_role": "4 더 위 반등 공급",
+        "anchors": [
+          {
+            "bar_id": "D0968",
+            "field": "High",
+            "value": 88.8646288209607
+          },
+          {
+            "bar_id": "W0187",
+            "field": "High",
+            "value": 91.15720524017468
+          }
+        ],
+        "interpretation": "88.865와 91.157. 현재에서 먼 반등 목표일 뿐 자동 재방문 보장 없음."
+      }
+    ],
+    "levels": {
+      "daily_failure": {
+        "bar_id": "D0921",
+        "field": "Low",
+        "normalized": 84.60698689956332,
+        "krw": 387500.0,
+        "label": "daily_failure"
+      },
+      "reclaim": {
+        "bar_id": "D0921",
+        "field": "Low",
+        "normalized": 84.60698689956332,
+        "krw": 387500.0,
+        "label": "reclaim"
+      },
+      "retest_low": {
+        "bar_id": "D0921",
+        "field": "Low",
+        "normalized": 84.60698689956332,
+        "krw": 387500.0,
+        "label": "retest_low"
+      },
+      "early_reset": {
+        "bar_id": "D0981",
+        "field": "Low",
+        "normalized": 83.51528384279476,
+        "krw": 382500.0,
+        "label": "early_reset"
+      },
+      "weekly_failure": {
+        "bar_id": "D0981",
+        "field": "Low",
+        "normalized": 83.51528384279476,
+        "krw": 382500.0,
+        "label": "weekly_failure"
+      }
+    },
+    "targets": [
+      {
+        "bar_id": "D0964",
+        "field": "Low",
+        "normalized": 86.24454148471617,
+        "krw": 395000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "D0968",
+        "field": "High",
+        "normalized": 88.8646288209607,
+        "krw": 407000.0,
+        "label": "resistance_review_only"
+      },
+      {
+        "bar_id": "W0187",
+        "field": "High",
+        "normalized": 91.15720524017468,
+        "krw": 417500.0,
+        "label": "resistance_review_only"
+      }
+    ],
+    "realized_return": null,
+    "actual_fill_authenticated": false,
+    "original_sell_rule_fixed": false,
+    "original_sell_status": "RESISTANCE_REVIEW_LEVELS_ONLY_NO_PRICE_QUANTITY_TRIGGER_EXECUTION_CONTRACT",
+    "new_trade_or_portfolio_created": false,
+    "first_daily_failure_close": {
+      "session": 1,
+      "date": "2018-01-02",
+      "Open": 384000.0,
+      "High": 386500.0,
+      "Low": 381000.0,
+      "Close": 382000.0,
+      "Volume": 2394.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "unactivated_boundary_breach_is_not_a_trade_failure": true,
+    "first_completed_week_failure": {
+      "date": "2018-01-05",
+      "Close": 379000.0
+    },
+    "partial_final_week_not_scored_as_completed": true,
+    "first_reclaim_close": null,
+    "first_subsequent_zone_overlap_and_close_hold_minimal": null,
+    "first_reclaim_attempt_close_failure": null,
+    "minimal_hold_occurs_only_after_first_reclaim_attempt_failed": false,
+    "later_overlap_cannot_erase_first_attempt_failure": true,
+    "retake_definition_warning": "Overlap/close-hold is a transparent minimal observation, not a newly authorized entry rule or a complete definition of repeated holding.",
+    "first_local_reset_close": {
+      "session": 1,
+      "date": "2018-01-02",
+      "Open": 384000.0,
+      "High": 386500.0,
+      "Low": 381000.0,
+      "Close": 382000.0,
+      "Volume": 2394.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "first_new_low_or_wick_below_reset": {
+      "session": 1,
+      "date": "2018-01-02",
+      "Open": 384000.0,
+      "High": 386500.0,
+      "Low": 381000.0,
+      "Close": 382000.0,
+      "Volume": 2394.0,
+      "tradable": true,
+      "record_status": "TRADABLE"
+    },
+    "local_reset_before_reclaim": true,
+    "horizons": [
+      {
+        "horizon": 20,
+        "date": "2018-01-29",
+        "tradable_sessions": 20,
+        "ordinary_complete": true,
+        "endpoint_close": 382000.0,
+        "endpoint_price_change_pct": -0.520833333333337,
+        "hindsight_ordered_envelope_pct": 2.257636122177953,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 15,
+          "date": "2018-01-22",
+          "priceKRW": 376000.0
+        },
+        "maximum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 386500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 60,
+        "date": "2018-03-29",
+        "tradable_sessions": 60,
+        "ordinary_complete": true,
+        "endpoint_close": 334500.0,
+        "endpoint_price_change_pct": -12.890625,
+        "hindsight_ordered_envelope_pct": 7.458143074581436,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 45,
+          "date": "2018-03-08",
+          "priceKRW": 328500.0
+        },
+        "maximum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 386500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      },
+      {
+        "horizon": 120,
+        "date": "2018-06-28",
+        "tradable_sessions": 120,
+        "ordinary_complete": true,
+        "endpoint_close": 357000.0,
+        "endpoint_price_change_pct": -7.03125,
+        "hindsight_ordered_envelope_pct": 12.480974124809752,
+        "hindsight_not_capturable_return": true,
+        "minimum": {
+          "session": 45,
+          "date": "2018-03-08",
+          "priceKRW": 328500.0
+        },
+        "maximum": {
+          "session": 1,
+          "date": "2018-01-02",
+          "priceKRW": 386500.0
+        },
+        "bid_price_access_within_horizon": null,
+        "realized_B_return": null
+      }
+    ],
+    "cutoff_close_krw": 384000.0,
+    "event_audit": {
+      "caseId": "E10",
+      "cashPriceNotTotalReturn": true,
+      "shareCountsObserved": [
+        1300000
+      ],
+      "sharesAtCutoff": 1300000,
+      "shareCountChangeObserved": false,
+      "referencePriceDiscontinuities": [],
+      "noObservedSplitOrRightsAdjustmentSignature": true,
+      "signatureIsNotExhaustiveCorporateActionCertification": true,
+      "dividends": "Full dividend entitlement/payment register not authenticated. Payments for pre-cutoff record dates are not earned by a new post-cutoff purchaser; no dividends added to quote returns. Any intervening record-date entitlement/total return remains unverified.",
+      "source": "FinanceData/marcap pinned unadjusted KRX mirror; independent exchange original still unverified",
+      "complete120SourceRows": true,
+      "recordedNonTradingDays": [],
+      "missingMarketSessions": [],
+      "secondaryEventCrosscheck": {
+        "caseId": "E10",
+        "source": "Yahoo Finance chart events, secondary crosscheck only",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/002960.KS?period1=1514732400&period2=1530197999&interval=1d&events=div%2Csplits",
+        "window": "2018-01-01 through2018-06-28 KST",
+        "priceSeriesUsed": false,
+        "notOfficialCorporateActionRegister": true,
+        "responseSha256": "654e7ac7569ce49f12111d9db1dbb27283a5343c8215899b0ce8e18ed8faf2bb",
+        "retrieved": true,
+        "events": {
+          "dividends": [
+            {
+              "amount": 2000.0,
+              "date": 1530144000,
+              "dateKst": "2018-06-28T09:00:00+09:00"
+            }
+          ]
+        },
+        "finding": "EVENTS_REPORTED_REQUIRING_EVENT_SPECIFIC_HANDLING"
+      },
+      "dividendEntitlementCaution": "Cash dividend payment in the follow-up interval is not necessarily earned by a new post-cutoff purchaser; ex-date/record-date entitlement must be checked separately. Do not add past record-date dividends.",
+      "targetWindowDividendExDateReported": [
+        {
+          "amount": 2000.0,
+          "date": 1530144000,
+          "dateKst": "2018-06-28T09:00:00+09:00"
+        }
+      ],
+      "amountKnownAtExDateAuthenticated": false,
+      "paymentReceiptVerified": false
+    }
+  }
+]

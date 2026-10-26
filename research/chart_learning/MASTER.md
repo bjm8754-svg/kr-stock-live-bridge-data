@@ -1,3 +1,15 @@
+# CURRENT RESEARCH STATUS — v85 / 2026-10-26 KST
+
+**SUPPLIED REAL-OUTCOME DIAGNOSTIC / NOT ECONOMIC EDGE OR FORMAL CERTIFICATION.** User explicitly authorized checking the same10 frozen Work B cases against Work A's20/60/120-session paths. OriginalSHA256 `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` and v84A15/T16/R20 remain unchanged. [Case evidence](work_b_market_20261026/01_CASE_MARKET_VERIFICATION.md) and [PD-01 limitations / separate PD-02 proposal](work_b_market_20261026/02_DIAGNOSIS_AND_PD02.md).
+
+Selected initial fixed candidates: E02 never reached42200; E04 first19100 quote atS101 after early rally, separate-day first20050 review level before18550 close failure; E05 gap below834000 atS29,788000 failure before first879000 review level; E09 11700 quote atS4,12300 through14400 review levels before final-window11400 close failure. Quote access is not fill; review levels are not sell orders. E03/E10 abstention had grounded downside protection. E01/E06/E07 had mixed missed-rise/protection paths and no frozen follow-up decisions. E08 excluded from ordinary skill/return comparison for pre-cutoff cash-exchange information omission and subsequent halt; no synthetic day60/120 exit.
+
+L-028/C-022/E-010: process score != executable timing or realized capture. E02 original A overstates next-bar-low holding above event close:41950<42200; record new observation error without revising original score. PD-01 boundary repair alone cannot solve nonfill/stale-candidate/exit gaps; PD-02 is PROPOSED ONLY. No realized strategy returns/win rate or portfolio created. Source data/mapping hashes and30 fixed-window ordered envelopes checked.10H120 daily/weekly pairs viewed. Final partial week not treated completed; E03/E10 reported last-day dividend events separated from total returns.
+
+All10 now answer/reference/outcome-exposed, never eligible as unseen. Independent review0; corporate-action/vintage/fill/entitlement gaps remain. SOURCE-FIRST,91 historical coverage/mastered0,missing69,term-only hold,video gaps and S02 PAUSED_AFTER_D03 retained. No new scanner/stock recommendation/mock trade/order/operating code changes. Revision85 is a research-record increment, not a validated method/skill upgrade.
+
+---
+
 # CURRENT RESEARCH STATUS — v84 / 2026-10-26 KST
 
 **POST-DIAGNOSTIC RECORD / PROVISIONAL SELF-REVIEW / NOT FORMAL v83 CERTIFICATION.** User explicitly supplied sealed references after original Work B freeze. Original SHA256 `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` remains unchanged. [Case grading](work_b_20261026/01_CASE_GRADING.md) and [diagnosis](work_b_20261026/03_SKILL_DIAGNOSIS.md) are distinct from [PD-01 improvement candidate](work_b_20261026/04_METHOD_IMPROVEMENT_CANDIDATE.md).

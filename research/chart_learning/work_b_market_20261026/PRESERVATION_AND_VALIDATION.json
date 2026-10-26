@@ -1,0 +1,29 @@
+{
+  "checked_at_kst": "2026-10-26T16:58:47.817850+09:00",
+  "original_sha256": "f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f",
+  "original_unchanged": true,
+  "prior_scores_sha256": "0f86f1a5bd43655350d4a82ad7a9c25df5bf11fa7559743ebaea10ed28e11a7f",
+  "prior_scores_unchanged": true,
+  "prior_grade_file_hashes": {
+    "00_PRESERVATION_AND_AUDIT.json": "9238276d7e00e598d6db933be089a13b081637d34736ebcc3780f5f8fcaedeb8",
+    "01_CASE_GRADING.md": "8da2a8db469a4b8507597e9cfce4f14db260fb27e303a7eb05b73fb483f523c4",
+    "01_SCORES.json": "0f86f1a5bd43655350d4a82ad7a9c25df5bf11fa7559743ebaea10ed28e11a7f",
+    "01_FAMILY_CROSSWALK.json": "d3566db07e76039de5f904477f43e0364899c295195b7915a946e100ac50a2c3",
+    "02_ERRORS_DISPUTES_AND_DATA.md": "1222164e8df7c4c1151bf12a3da45903e9114091b680bb8e6fbec71ec6febd1a",
+    "03_SKILL_DIAGNOSIS.md": "aa2e61f3c67dc8b70e909d507b3feb159d7d5fe68942864e9e668f086d4ac9bd"
+  },
+  "answer_key_manifest_sha256": "2ac713809441d7410fffa9479421d45c5bb20c383b17d4d64c71fb472b102a61",
+  "answer_key_files_checked": 258,
+  "answer_key_zip_sha256": "4aef2b627581cee015fd226ed1b01eeb780a91ec22d82a4f44fd25c6fc7a66df",
+  "case_count": 10,
+  "horizon_envelopes_recomputed": 30,
+  "pre_cutoff_raw_copies_all_match": true,
+  "external_market_price_fetch": false,
+  "verified_fills": 0,
+  "realized_returns_created": 0,
+  "portfolio_created": false,
+  "operational_program_modified": false,
+  "interpretation": "static supplied-quote event audit only; no simulated order matching, account path or strategy return",
+  "chart_visual_review": "ten H120 daily+weekly pairs opened; H20/H60 numbers checked in supplied CSV/JSON",
+  "E08_excluded_from_ordinary_skill_and_return_evaluation": true
+}

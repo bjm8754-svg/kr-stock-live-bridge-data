@@ -1,3 +1,9 @@
+## 2026-10-26 — Revision 85 — Preserve v84 and verify original choices against supplied market paths
+
+Add outcome-exposed static quote chronology, ten-case assessment, fixed20/60/120 tables, original contract/anchor restoration, hashes, E08 defect/censoring separation, first-attempt/new-attempt distinction, and independent read-only verification. Record L-028/C-022/E-010 and separate unvalidated PD-02 proposal. Original answer, prior v84 grades/documents, canonical rules and production code unchanged. No order fills, synthetic sells, portfolio/economic-return calculation or new market scan. PD-01 omissions were not automatically converted to return gains.
+
+---
+
 ## 2026-10-26 — Revision 84 — Work B provisional grading and separate PD-01 proposal
 
 Preserved frozen original; verified hash/attachment internal consistency; recorded ten A/T/R self-review grades, C-code checks,41-family comparison, omissions/disputes/data limits and source-exposed exclusions. Added L-027/C-021/E-009. Separate PD-01 proposal targets nearby-boundary ordering, competing-anchor justification and line/failure-state clocks. Independent review not performed, no formal v83 certification or competence/economic promotion. No original answers, prior lessons, source registry, canonical rule bodies or production files rewritten. All operating locks retained.
