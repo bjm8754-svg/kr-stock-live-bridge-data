@@ -1,0 +1,42 @@
+{
+  "schema": "WORK_A_RESUME_VERIFICATION_V1",
+  "dateKst": "2026-10-26",
+  "baseHead": "5ea1b5f413ac160cf0190150f0982dc9a5dd4e5c",
+  "methodRevision": 83,
+  "status": "BLOCKED_EXISTING_INPUT_CORRUPT_RAW_AND_KEY_UNAVAILABLE",
+  "workBRelease": false,
+  "files": [
+    {
+      "name": "V3_WorkA_AUDIT_MANIFEST.zip",
+      "sha256": "12ab163490c46a0e63530f59b45533dfe6eddbd5d0e3a2e358f05863b1b3bcc9",
+      "matches": true
+    },
+    {
+      "name": "V3_WorkA_SEALED_REFERENCE.aesgcm",
+      "sha256": "d90777352d79cd8ac768a8134f28b41cbf69edee28a8eb55274a4acce3cd7ed1",
+      "matches": true
+    },
+    {
+      "name": "V3_WorkB_INPUT_ONLY.zip",
+      "expected": "86ff85f8785c66fd039d1cbd88096b931fd4dc0ec67e60dee9720cd7df1f44a2",
+      "actual": "0aaa13e5d0a1bb71acbdbb312858df3bd4eec321afa273ba77b3a791b7be87a0",
+      "matches": false,
+      "zipReadable": false,
+      "repeatMaterializationSameHash": true
+    }
+  ],
+  "manifestZeroByteFiles": [
+    "E01/daily.png",
+    "E04/daily.png"
+  ],
+  "rawNineFilesCurrentlyVerified": 0,
+  "rawFilesAndDecryptionKeyLocatedInCurrentWorkspace": false,
+  "independentReferenceReviewComplete": false,
+  "exposureReviewComplete": false,
+  "existingEvidencePreserved": true,
+  "dataRefetched": false,
+  "packetsRegenerated": false,
+  "evaluationExecuted": false,
+  "productionChanged": false,
+  "next": "Recover existing intact input/raw archive and original Work A decryption key; do not recreate or release Work B. Missing originals are not proven deleted globally."
+}
