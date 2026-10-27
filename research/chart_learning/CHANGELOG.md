@@ -1,3 +1,9 @@
+## 2026-10-27 — Revision 86 — Deepen original hold/reduce/exit reasoning, no new evaluation
+
+Two source checkpoints P029/P030: remaining61 then integrated91 originals, fresh canonical DOCX/TXT/editedPDF text and p8/p13 renders,5 existing practical images. Recover explicit partial/full/hold wording; challenge mandatory retests using067. Compare range/continuation, rebound/progress failure, newly available holding anchors, residual thesis after trim and current forward risk. Append L029/C023 and provenance; preserve all historical bodies, original10/grades/exposure, PD01/PD02 and canonical rules. No new test/market fetch/scanner/mock trade/orders/production. Revision is research-record progress, not demonstrated skill. Atomic MASTER/CHANGELOG/MANIFEST synchronization; existing integrity tests verify records only.
+
+---
+
 ## 2026-10-26 — Revision 85 — Preserve v84 and verify original choices against supplied market paths
 
 Add outcome-exposed static quote chronology, ten-case assessment, fixed20/60/120 tables, original contract/anchor restoration, hashes, E08 defect/censoring separation, first-attempt/new-attempt distinction, and independent read-only verification. Record L-028/C-022/E-010 and separate unvalidated PD-02 proposal. Original answer, prior v84 grades/documents, canonical rules and production code unchanged. No order fills, synthetic sells, portfolio/economic-return calculation or new market scan. PD-01 omissions were not automatically converted to return gains.

@@ -1,3 +1,11 @@
+## CURRENT v86 — original-source hold/reduce/exit research, no new test
+
+First restore [P030](SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md) and [P029](SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md), following v85 [lifecycle audit](SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md).91 individual original rereads plus actual DOCX/TXT/PDF/practical comparisons; source-known reasoning only. Partial/full/hold statements recovered from editedPDF with retest-premise counterexample067. No universal formula, mastery, verified transfer or economics.
+
+**Current next task overrides earlier evaluation-oriented next steps:** nonredundant original AV/context and continuation-reference availability/failed rebound study. New unseen evaluation is explicitly excluded from this request. Do not create one. Existing10 remain exposed and immutable. Record revision86 is not skill promotion; full research incomplete. All historical records below remain provenance. SOURCE-FIRST; SRC-TERM-001 term-only hold,missing69,mastered0,S02 PAUSED_AFTER_D03 retained.
+
+---
+
 ## CURRENT v85 SUPPLEMENT — buy→hold→reduce→exit source gap audit (2026-10-26)
 
 Read [SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md](SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md) before claiming completed sell-method learning or ordering another unseen-chart test. At prior HEAD `efe0453e` the researcher booted fully, found all91 source files and directly reopened **30 selected native images** plus CANONICAL DOCX/lecture TXT. Primary evidence already contains broken-support rebound as a possible sell context (#016/#017/#038), failed box re-entry as a structural reassessment (#076/#079), and contextual hold/price-response signals (#074/#075/#078); there is **no newly validated complete hold/reduce/full exit execution policy**. Existing v85, PD-01/PD-02 and E01–E10 frozen results stay unchanged; this is **source audit and candidate synthesis, not v86/competence/economic validation**. Next work: targeted study of unresolved original/lecture exit sources, then separate user-approved NEW unseen sequential decisions. S02 remains PAUSED_AFTER_D03; no scanner, orders or operations.
@@ -260,7 +268,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 85
+**Learning revision:** 86
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

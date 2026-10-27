@@ -1,3 +1,14 @@
+# CURRENT RESEARCH STATUS — v86 / 2026-10-27 KST
+
+**ORIGINAL SOURCE LIFECYCLE DEEP STUDY / NOT INDEPENDENT COMPETENCE VALIDATION.**
+[P029 remaining61](SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md), [P030 integrated reasoning](SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md), [source provenance](SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json). Boot base `033b3c5a306e2a978cb9121ed14e6c8b4d5ade06`, preceding research v85. All91 original numbered files individually reopened in this session (audit30 plus remaining61), canonical DOCX text, lecture TXT,14-page edited PDF text (rendered p8/p13) and5 existing practical images compared. This is source interpretation and conditional reasoning, not91 mastered charts or a new unseen test.
+
+Specific extension: edited PDF44:30/1:22:13 contains partial/full sale descriptions, while1:22:44 permits continuing hold. Mandatory-retest reasoning conflicts with067's no-retest branch. Separate source claim, independent synthesis, counterexample and untested hypothesis; no automatic half-sale rule. Range rebound objectives and trend continuation require distinct justifications; initial rebound is not subsequent progress. Holding needs current forward risk and newly available continuation structures, not cheap cost basis or an immortal original floor. Partial reduction needs a defensible remaining thesis; total trade exit is not proof of a permanent market top. See L-029 / C-023.
+
+Revision86 records research progress only. Full source/method research INCOMPLETE; independent unfamiliar-chart judgment improvement NOT PROVEN; economic edge false; canonical rules unchanged; source91 historical counts/mastered0,missing69 and SRC-TERM-001 term-only hold preserved. Original AV chart context/first-known drawing times/exact sizing and executable exits unresolved. Original ten/51 record/PD01/PD02 unchanged and exposed, never reused as unseen evidence. S02 PAUSED_AFTER_D03; no scan/new market data/mock trade/order/production change.
+
+---
+
 # CURRENT RESEARCH STATUS — v85 / 2026-10-26 KST
 
 **SUPPLIED REAL-OUTCOME DIAGNOSTIC / NOT ECONOMIC EDGE OR FORMAL CERTIFICATION.** User explicitly authorized checking the same10 frozen Work B cases against Work A's20/60/120-session paths. OriginalSHA256 `f4ab10186560a5742862ce596d1686c3d1fb25f22639329a7c86807f17f2cf5f` and v84A15/T16/R20 remain unchanged. [Case evidence](work_b_market_20261026/01_CASE_MARKET_VERIFICATION.md) and [PD-01 limitations / separate PD-02 proposal](work_b_market_20261026/02_DIAGNOSIS_AND_PD02.md).

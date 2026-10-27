@@ -1,3 +1,9 @@
+## CURRENT v86 — lifecycle source reread and candidate synthesis
+
+[P029](SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md) / [P030](SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md) / [provenance](SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json): all91 native numbered image files individually reopened (first10 JPG,rest PNG), canonical DOCX/lectureTXT/editedPDF text freshly read; PDFp8/p13 rendered,5 existing practical root originals. Original AV not newly verified. Partial/full/hold source language and must-retest contradiction recorded; no new unseen/economic evidence, new source census or mastery. Previous registry body preserved byte-for-byte. SOURCE-FIRST,term-only hold,missing69,mastered0,S02 paused; no new market/scan/mock trade/order/production.
+
+---
+
 ## CURRENT v82 — selected native sources and retrospective-plan boundary
 
 [SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md](SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md) / [SOURCE_DEEP_P028_PROVENANCE_20261023.json](SOURCE_DEEP_P028_PROVENANCE_20261023.json):actual Library032/033/068 pixels and KakaoTalkChats selected lines1–15/3330–3414. August28 retrospective references May/June earlier views;earlier original plan/authorship/cutoff verification NOT achieved. Raw private conversation and source images not published. Prior PDF/DOCX/video/practical evidence referenced without claiming fresh access. [UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md](UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md) remains inactive design,not a new case or market experiment. Full historical registry body below preserved. SOURCE-FIRST;91/91 historical second pass/mastered0;missing69 NOT VERIFIED;SRC-TERM-001 term-only hold;S02 PAUSED_AFTER_D03;no new scan/mock trade/order/production or evaluation. Transfer/economics false.

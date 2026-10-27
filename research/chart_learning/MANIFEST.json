@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 85,
-  "updatedKst": "2026-10-26",
+  "revision": 86,
+  "updatedKst": "2026-10-27",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -107,7 +107,10 @@
     "research/chart_learning/work_b_market_20261026/PRESERVATION_AND_VALIDATION.json",
     "research/chart_learning/work_b_market_20261026/README.md",
     "research/chart_learning/work_b_market_20261026/V84_ORIGINAL_SCORES_UNCHANGED.json",
-    "research/chart_learning/work_b_market_20261026/check_evidence.py"
+    "research/chart_learning/work_b_market_20261026/check_evidence.py",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md",
+    "research/chart_learning/SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md",
+    "research/chart_learning/SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json"
   ],
   "rules": [
     {
@@ -187,7 +190,7 @@
       "status": "CANONICAL"
     }
   ],
-  "lessonCount": 28,
+  "lessonCount": 29,
   "latestEvidenceStatus": "S01_CONTAMINATED_LOOKAHEAD",
   "performanceVerified": false,
   "manualGateRequired": true,
@@ -360,5 +363,14 @@
     "PD02": "PROPOSED_UNVALIDATED",
     "unseen_reuse_allowed": false,
     "economic_edge_validated": false
+  },
+  "lifecycleSourceStudy": {
+    "dateKst": "2026-10-27",
+    "recordRevision": 86,
+    "report": "research/chart_learning/SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md",
+    "sourceCoverage": "91_REOPENED_NOT_MASTERED",
+    "methodStatus": "SOURCE_GROUNDED_CANDIDATE_NOT_TRANSFER_VALIDATED",
+    "newUnseenEvaluation": false,
+    "canonicalRulePromotion": false
   }
 }
