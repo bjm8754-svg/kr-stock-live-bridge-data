@@ -1,0 +1,85 @@
+{
+  "schema": "V86_SEQUENTIAL_WORK_A_FREEZE_V1",
+  "dateKst": "2026-10-27",
+  "methodHead": "298ca2655dccbe77a993041dd74904bd2c9643bb",
+  "methodRevision": 86,
+  "authorization": "USER_EXPLICIT_NEW_TEN_PAST_CHART_SEQUENTIAL_AUTHORING_ONLY",
+  "cases": 10,
+  "stages": [
+    0,
+    20,
+    40,
+    60,
+    80,
+    100,
+    120
+  ],
+  "caseStageReferences": 70,
+  "images": 230,
+  "referenceFrozenAtKst": "2026-10-27T14:12:05.290522+09:00",
+  "artifacts": [
+    {
+      "file": "V86_S00_INPUT_ONLY.zip",
+      "sha256": "6222904337fbf26d5ee9cd27f3c97b3937ee7a36c457355a7dde904aaf3acef3",
+      "bytes": 1777487
+    },
+    {
+      "file": "V86_OWNER_RELEASE_CONTROL.zip",
+      "sha256": "c98feca495b5203a9a7b085526bda800a218883a62ae1ae7a54c7645354d1288",
+      "bytes": 9993075
+    },
+    {
+      "file": "V86_SEALED_REFERENCE.zip",
+      "sha256": "4a13e94149f6fcd1f8e6d938434a617ef5bb908e110676be76e9f4346dc4bdfc",
+      "bytes": 2023727
+    },
+    {
+      "file": "V86_PRIVATE_AUDIT.zip",
+      "sha256": "72c150a99626fd089d2aa027dec26a3bfd051db614ccaeb115703f0de7aac595",
+      "bytes": 92167
+    }
+  ],
+  "persistenceReaccess": "PERSISTED_DOWNLOAD_REOPEN_PASS",
+  "persistenceVerifiedAtKst": "2026-10-27T14:18:30.389836+09:00",
+  "checks": {
+    "zipCRC": true,
+    "allEntrySHA256": true,
+    "decryptionAndImages": true,
+    "sourceMirrorExactSelectedRows": 9798,
+    "secondVendorFollowupRowsEach": 120,
+    "oracleWindows": 30,
+    "releaseGateTests": 12
+  },
+  "limits": {
+    "independentReferenceReviewers": 0,
+    "formalV83Certification": false,
+    "absoluteUnseenGuarantee": false,
+    "missing69Recovered": false,
+    "oldFailedNineMappingIntersection": "NOT_CERTIFIABLE_MAPPING_UNAVAILABLE_AND_RECOVERY_CLOSED;priorWorkBReleasefalse",
+    "officialHistoricalVintageAndAllCorporateFilings": false,
+    "modelPretrainingExposure": "UNKNOWN",
+    "sameAccountHardAccessIsolation": false,
+    "tenCaseRegimeIndependence": false,
+    "economicValidation": false
+  },
+  "privateFiles": "Original identifiers, price paths, curator answers and release passwords remain in user-only downloadable packages; NOT committed here.",
+  "workB": {
+    "newAnswersCreated": 0,
+    "newAnswersRead": 0,
+    "gradingPerformed": false,
+    "releaseInitialOnly": "V86_S00_INPUT_ONLY.zip",
+    "laterStageRelease": "only after allten preceding-stage answers frozen with input hash"
+  },
+  "preservation": {
+    "oldE01E10": true,
+    "oldScores": true,
+    "v86ResearchRecords": true,
+    "methodChanged": false,
+    "learningRevisionChanged": false,
+    "S02": "PAUSED_AFTER_D03",
+    "productionFilesChanged": false,
+    "ordersOrMockPortfolio": false,
+    "newOperationalScan": false
+  },
+  "scope": "Preparation complete for a bounded sequential diagnostic; not competence promotion or formal benchmark certification. Owner control/sealed reference/private audit must not be provided to Work B before allfirst-stage decisions throughS06 are frozen."
+}
