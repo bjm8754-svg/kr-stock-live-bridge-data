@@ -1,3 +1,11 @@
+## MARS-SKHYNIX-20261029 — source studied, MASTER-INTEGRATION-PENDING
+
+2026-10-29, record revision87 / active frozen methodology86. Library `/차트연구_추가원본/20261029_마스_SK하이닉스_스크린샷8장_원본.zip`, ID `libfile_05a61456b450819188d0cb0d9e58ae84`; ZIP SHA256 `343fbe8510de643d5e7de8520ab5807823dfb4f5b45f89c3e228b99eb5fab0da`. Eight JPEG originals individually viewed and byte/hash checked against embedded manifest; one dependent Telegram/chart family. Related primary039/058/076 reopened, not91 new mastered images.
+
+[Detailed critical study](SOURCE_STUDIES/MARS_SKHYNIX_20261029.md) · [per-image SHA256/provenance](SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json) · [OPEN #11](https://github.com/bjm8754-svg/kr-stock-live-bridge-data/issues/11). Claim/observation/forecast separated; projected guides and future box are not independently verified historical acceptance. Same-time volume/value claim, exact anchors/period/calendar, trades/outcomes NOT VERIFIED. Source-exposed, no blind transfer or competence/economic promotion. Do not use in current Work B; no MASTER/LESSONS change. Future MASTER update must query all open pending titles/labels and document each promotion/nonpromotion/defer rationale after exam freeze and grading. Old registry follows verbatim.
+
+---
+
 ## CURRENT v86 — lifecycle source reread and candidate synthesis
 
 [P029](SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md) / [P030](SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md) / [provenance](SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json): all91 native numbered image files individually reopened (first10 JPG,rest PNG), canonical DOCX/lectureTXT/editedPDF text freshly read; PDFp8/p13 rendered,5 existing practical root originals. Original AV not newly verified. Partial/full/hold source language and must-retest contradiction recorded; no new unseen/economic evidence, new source census or mastery. Previous registry body preserved byte-for-byte. SOURCE-FIRST,term-only hold,missing69,mastered0,S02 paused; no new market/scan/mock trade/order/production.

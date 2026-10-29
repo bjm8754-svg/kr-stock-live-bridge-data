@@ -1,3 +1,9 @@
+## 2026-10-29 — Revision 87 — Preserve post-exam Mars SK hynix study; frozen method remains86
+
+Eight native source JPEGs opened and SHA256-matched; related039/058/076 reopened. Add one source-exposed critical study/provenance, registry, progress and startup discovery. Separate observed rebound, expert forecasts, sloped guide values, future box, time-bound recovery, participation data gaps and action alternatives/counterexamples. No proven ability/edge. MASTER/LESSONS/CASES/experiments, prior answers/scores/hashes/exam inputs and all operations untouched. User's explicit exam freeze overrides normal MASTER/lesson synchronization: this revision is archive metadata only, NOT method promotion; active exam method remains86. #11 remains OPEN MASTER-INTEGRATION-PENDING. Future MASTER edits must read all pending title/label matches and record each promotion/nonpromotion/defer reason after exam freeze and grading. Historical registry body preserved verbatim.
+
+---
+
 ## 2026-10-27 — Revision 86 — Deepen original hold/reduce/exit reasoning, no new evaluation
 
 Two source checkpoints P029/P030: remaining61 then integrated91 originals, fresh canonical DOCX/TXT/editedPDF text and p8/p13 renders,5 existing practical images. Recover explicit partial/full/hold wording; challenge mandatory retests using067. Compare range/continuation, rebound/progress failure, newly available holding anchors, residual thesis after trim and current forward risk. Append L029/C023 and provenance; preserve all historical bodies, original10/grades/exposure, PD01/PD02 and canonical rules. No new test/market fetch/scanner/mock trade/orders/production. Revision is research-record progress, not demonstrated skill. Atomic MASTER/CHANGELOG/MANIFEST synchronization; existing integrity tests verify records only.

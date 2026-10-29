@@ -1,0 +1,146 @@
+{
+  "schema": "SOURCE_STUDY_PROVENANCE_V1",
+  "sourceId": "MARS-SKHYNIX-20261029",
+  "studyDateKst": "2026-10-29",
+  "baseHead": "a7485b714f2d2f307716a5a478969b0c68c68077",
+  "bootStatus": "PASS_SESSION_RESTORE_NOT_CAPABILITY",
+  "frozenMethodologyVersion": 86,
+  "recordRevision": 87,
+  "libraryPath": "/차트연구_추가원본/20261029_마스_SK하이닉스_스크린샷8장_원본.zip",
+  "libraryFileId": "libfile_05a61456b450819188d0cb0d9e58ae84",
+  "archiveBytes": 1494228,
+  "archiveSha256": "343fbe8510de643d5e7de8520ab5807823dfb4f5b45f89c3e228b99eb5fab0da",
+  "archiveHashMatchesIssue11": true,
+  "imageManifestAllBytesAndHashesMatched": true,
+  "images": [
+    {
+      "filename": "images/6389.jpg",
+      "bytes": 207529,
+      "sha256": "365597b1b2eb4b910b0bc3dc9c8b57a2d11c9044f40e514ec2666129f0fbfe90",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6391.jpg",
+      "bytes": 199914,
+      "sha256": "abab2e5cf1b01308fa7acf653d6a6488d9f7ef5b3633af885eaef00bb28aca45",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6393.jpg",
+      "bytes": 177161,
+      "sha256": "0833d36aa6d35d528619e364277ef9ba500007b7772faa6ec851675ac42837e6",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6395.jpg",
+      "bytes": 176246,
+      "sha256": "376113560ff280a7c94834430753b1c6d419285f1b24c070e6322174fc7866a2",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6397.jpg",
+      "bytes": 199212,
+      "sha256": "4143158a02c6f2c748eb16f2d94c2321aae92d9f5d9d4e69e98429d421a30f46",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6400.jpg",
+      "bytes": 185795,
+      "sha256": "4b0d521faed62c1689d19fce9c1c50f99d34bd40d0dc49bb91e8b272ac032c84",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6401.jpg",
+      "bytes": 188676,
+      "sha256": "c4437f31466701931b155507baa8b9ffd686b10a36dec0df9bee4e9cd4ad9759",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    },
+    {
+      "filename": "images/6404.jpg",
+      "bytes": 187462,
+      "sha256": "481f5a5f0d32f0dbc336aa635587f99f300d652434b4dfec2c503297c9828b66",
+      "visuallyOpened": true,
+      "evidenceSection": "2 image-by-image ledger",
+      "independentEpisode": false
+    }
+  ],
+  "relatedPrimaryReopened": [
+    {
+      "filename": "039_image(20260928-070223).png",
+      "sha256": "db84a40f1f7b3c8549a144addb4e5d6ebeb3818dde7bc389e5bbe105885290f6",
+      "bytes": 616653,
+      "visuallyOpened": true
+    },
+    {
+      "filename": "058_image(20260928-070527).png",
+      "sha256": "9fc7fe509f003a36c7db8e9bf66bdc5aa4277f9f191d63bca2c4571188d21785",
+      "bytes": 740232,
+      "visuallyOpened": true
+    },
+    {
+      "filename": "076_image(20260928-071143).png",
+      "sha256": "58974b956a6d834d79c55f0bfc3a699e9274a72478eed9216fb3cf280d088da0",
+      "bytes": 1275474,
+      "visuallyOpened": true
+    }
+  ],
+  "studyPath": "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
+  "status": "SOURCE_STUDIED_MASTER_INTEGRATION_PENDING",
+  "originalCalendarDateAuthenticated": false,
+  "postTimesObserved": "09:49;10:06–10:19",
+  "captureClockObserved": "10:19–10:20",
+  "chartTimeframeVerified": false,
+  "ohlcvVerified": false,
+  "sameTimeVolumeValueVerified": false,
+  "lineAnchorsReproduced": false,
+  "actualTradesVerified": false,
+  "sourceFamilyCount": 1,
+  "sourceExposed": true,
+  "blind": false,
+  "transferValidated": false,
+  "economicEdgeValidated": false,
+  "masterPromoted": false,
+  "lessonsPromoted": false,
+  "issue": 11,
+  "issueMustRemainOpen": true,
+  "protectedFileSha256AtBase": {
+    "research/chart_learning/MASTER.md": "92ff0bf481b972eacc9cfea49d86e380247d4d2168bdfc54df18e3ac15480e7a",
+    "research/chart_learning/LESSONS.jsonl": "539cd3dc476e12f8b8fe12b6a9ff2b0b9a2bc4db79625386827599cd63a52363",
+    "research/chart_learning/CASES.md": "b2939eedde89e00d17e2b1e42ea85237235a116f38533eddfc67fd9a8d7a72a2",
+    "research/chart_learning/EXPERIMENTS.md": "f148158fd37bacef0d41c7d4d12ce61ca05e679feb81de1e4eaf3594e02c1eed",
+    "ASSISTANT_CHART_DEEP_REVIEW_PROTOCOL.md": "a5e92d5f7528bd7b3650aa0a8c80432e9596206ef5441a46cb1f29f073b6306e"
+  },
+  "examArtifactsModified": false,
+  "operatingCodeModified": false,
+  "limitations": [
+    "Only new eight JPEGs and selected primary039/058/076 individually viewed this session; no complete91/DOCX/AV reinspection",
+    "No follow-up market outcomes fetched",
+    "Global START_HERE/registry discoverability is not a technical information firewall; Work B must retain frozen exam input/method",
+    "Future master update must query all pending titles AND labels and adjudicate each candidate"
+  ],
+  "validation": {
+    "integrityGate": "PASS",
+    "existingIntegrityTests": 29,
+    "existingIntegrityTestsPassed": 29,
+    "testCodeChanged": false,
+    "all8ArchiveImageChecks": "PASS",
+    "titlePendingQueue": [
+      11
+    ],
+    "labelPendingQueue": []
+  }
+}

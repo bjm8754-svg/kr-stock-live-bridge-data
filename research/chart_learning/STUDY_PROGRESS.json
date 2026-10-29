@@ -1,6 +1,6 @@
 {
   "schema": "V3_METHODOLOGY_STUDY_PROGRESS_V1",
-  "updatedKst": "2026-10-27",
+  "updatedKst": "2026-10-29",
   "status": "IN_PROGRESS_NOT_COMPETENCE_PROVEN",
   "researchPhase": "METHODOLOGY_FIRST_SOURCE_STUDY",
   "currentObjective": "Independently derive, challenge and version chart-analysis reasoning using the 91 original 차트술사 PNGs as the primary study corpus, supplemented by expert plans and gap-specific external research.",
@@ -231,12 +231,13 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 86,
+    "methodologyVersion": 87,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
     "economicEdgeVerified": false,
-    "crossChatBootVerified": false
+    "crossChatBootVerified": false,
+    "versionScope": "ARCHIVE_RECORD_ONLY_NOT_ACTIVE_EXAM_METHOD"
   },
   "nextTask": {
     "id": "SRC-STUDY-001",
@@ -3895,5 +3896,51 @@
     "transferValidated": false,
     "economicallyValidated": false,
     "fullProjectComplete": false
+  },
+  "archiveRecordRevision": 87,
+  "activeExamMethodologyVersion": 86,
+  "postExamSourceStudies": [
+    {
+      "id": "MARS-SKHYNIX-20261029",
+      "status": "SOURCE_STUDIED_MASTER_INTEGRATION_PENDING",
+      "path": "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
+      "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json",
+      "issue": 11,
+      "imagesActuallyOpened": 8,
+      "sourceFamilies": 1,
+      "hashesMatched": true,
+      "sameTimeParticipationVerified": false,
+      "lineAnchorsReproduced": false,
+      "transferValidated": false,
+      "economicallyValidated": false,
+      "masterPromoted": false,
+      "workBUseDuringExamAllowed": false,
+      "unresolved": [
+        "calendar/timeframe/close authentication",
+        "line anchors/first-drawn clocks",
+        "time-aligned volume and value",
+        "actual trades and source prior forecast",
+        "post-exam candidate-by-candidate integration audit"
+      ]
+    }
+  ],
+  "masterIntegrationHandoff": {
+    "queryOpenIssuesBeforeEveryMasterEdit": true,
+    "titleQuery": "repo:bjm8754-svg/kr-stock-live-bridge-data is:issue is:open in:title MASTER-INTEGRATION-PENDING",
+    "labelQuery": "repo:bjm8754-svg/kr-stock-live-bridge-data is:issue is:open label:MASTER-INTEGRATION-PENDING",
+    "mustReadEveryMatchedIssue": true,
+    "prerequisite": "v86 sequential S00–S06 frozen and graded",
+    "decisionsRequired": [
+      "PROMOTED",
+      "DUPLICATE",
+      "NOT PROMOTED",
+      "DEFERRED"
+    ],
+    "reasonAndCommitRequired": true,
+    "pendingIssues": [
+      11
+    ],
+    "lastTitleQueueCheckedKst": "2026-10-29",
+    "historicalNextTaskPreserved": true
   }
 }

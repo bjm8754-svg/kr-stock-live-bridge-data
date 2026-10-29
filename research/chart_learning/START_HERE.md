@@ -1,3 +1,13 @@
+## RECORD REVISION 87 — post-exam archive only; active exam methodology v86 unchanged
+
+2026-10-29: [마스 SK하이닉스 원본8장 독립 비판 연구](SOURCE_STUDIES/MARS_SKHYNIX_20261029.md) / [hash and access ledger](SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json), [OPEN Issue #11 — MASTER-INTEGRATION-PENDING](https://github.com/bjm8754-svg/kr-stock-live-bridge-data/issues/11). All8 JPEGs actually opened/hash-checked; one overlapping source family, not8 independent cases. Conditional rebound/continuation/failure analysis; exact anchors, same-time participation, timeframe and trades NOT VERIFIED. No ability/edge claim.
+
+**EXAM FIREWALL:** revision87 is preservation metadata, NOT a new Work B method. Legacy progress.methodologyVersion=87 is an archive counter synchronized to the manifest; activeExamMethodologyVersion=86 is the frozen method. Frozen method remains86; MASTER.md, LESSONS.jsonl, existing answers/scores/hashes/exam inputs remain unchanged. Do not load this study or its findings into Work B during S00–S06. No unseen evaluation or operating action here. A link in the shared entrypoint is discoverability, not a technical access barrier; retain the actual exam-frozen packet/revision.
+
+**Before every future MASTER revision**, query ALL open `MASTER-INTEGRATION-PENDING` issues by title and label, open each, and record candidate-specific PROMOTED / DUPLICATE / NOT PROMOTED / DEFERRED reasons and commit links. No integration before exam freeze AND grading complete. Do not close #11 until that audit. New source work must not overwrite the broader SRC-STUDY-001/AV gaps below. S02 PAUSED_AFTER_D03.
+
+---
+
 ## CURRENT v86 — original-source hold/reduce/exit research, no new test
 
 First restore [P030](SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md) and [P029](SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md), following v85 [lifecycle audit](SELL_LIFECYCLE_SOURCE_GAP_AUDIT_20261026.md).91 individual original rereads plus actual DOCX/TXT/PDF/practical comparisons; source-known reasoning only. Partial/full/hold statements recovered from editedPDF with retest-premise counterexample067. No universal formula, mastery, verified transfer or economics.
@@ -268,7 +278,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 86
+**Learning revision:** 87
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

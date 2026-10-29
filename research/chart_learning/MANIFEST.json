@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 86,
-  "updatedKst": "2026-10-27",
+  "revision": 87,
+  "updatedKst": "2026-10-29",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -110,7 +110,9 @@
     "research/chart_learning/work_b_market_20261026/check_evidence.py",
     "research/chart_learning/SOURCE_DEEP_STUDY_P029_REMAINING61_HOLD_EXIT_20261027.md",
     "research/chart_learning/SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md",
-    "research/chart_learning/SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json"
+    "research/chart_learning/SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json",
+    "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
+    "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json"
   ],
   "rules": [
     {
@@ -372,5 +374,16 @@
     "methodStatus": "SOURCE_GROUNDED_CANDIDATE_NOT_TRANSFER_VALIDATED",
     "newUnseenEvaluation": false,
     "canonicalRulePromotion": false
+  },
+  "recordRevisionScope": "ARCHIVE_ONLY_POST_EXAM_SOURCE_STUDY",
+  "activeExamMethodologyVersion": 86,
+  "postExamStudy": {
+    "id": "MARS-SKHYNIX-20261029",
+    "path": "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
+    "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json",
+    "issue": 11,
+    "status": "MASTER-INTEGRATION-PENDING",
+    "promotedToMasterOrLessons": false,
+    "workBUseDuringExamAllowed": false
   }
 }
