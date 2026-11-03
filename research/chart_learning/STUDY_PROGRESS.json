@@ -231,7 +231,7 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 88,
+    "methodologyVersion": 89,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
@@ -240,9 +240,9 @@
     "versionScope": "ARCHIVE_SOURCE_RELEARNING_ONLY_NOT_ACTIVE_EXAM_METHOD"
   },
   "nextTask": {
-    "id": "INTRO-BRIDGE-20261103",
-    "status": "BRIDGE_AND_SEPARATE_MASTER_CANDIDATE_PENDING",
-    "question": "Finish read-only scanner capability mapping and separate practical MASTER candidate; preserve frozen exam.",
+    "id": "INTRO-FOLLOWUP-20261103",
+    "status": "INTRO_SOURCE_COMPLETE_TRANSFER_AND_PROFIT_NOT_PROVEN",
+    "question": "Use the completed Intro source/bridge/candidate without repeating31 pages; next source phase is intermediate later. Remaining judgement questions: ex-ante anchor choice, confirmation vs shallow/deep entry, long-trend participation, ADD and remaining-size decisions. No new test in this Work.",
     "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
     "scannerBridge": "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
     "masterCandidate": "research/chart_learning/MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md",
@@ -467,6 +467,13 @@
       "status": "SOURCE_STUDIED_NOT_COMPETENCE_PROVEN",
       "source": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
       "claim": "All31 text/page-images and7chart pages studied; SK8+Nov17=24unique images viewed, not independent outcomes."
+    },
+    {
+      "type": "SCANNER_BRIDGE_AND_MASTER_CANDIDATE",
+      "dateKst": "2026-11-03",
+      "status": "CANDIDATE_SYNTHESIS_NOT_TRANSFER_VALIDATED",
+      "source": "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
+      "claim": "Existing scanner code/config/static artifacts audited read-only; separate8-step judgement candidate; no production/MASTER/frozen-exam modification."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -3869,7 +3876,7 @@
     "economicallyValidated": false,
     "fullProjectComplete": false
   },
-  "archiveRecordRevision": 88,
+  "archiveRecordRevision": 89,
   "activeExamMethodologyVersion": 86,
   "postExamSourceStudies": [
     {
@@ -3963,7 +3970,7 @@
   },
   "introRelearning20261103": {
     "id": "MARS-INTRO-20261103",
-    "recordRevision": 88,
+    "recordRevision": 89,
     "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
     "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json",
     "pagesReadAndVisuallyReviewed": 31,
@@ -3976,9 +3983,9 @@
       23,
       28
     ],
-    "scannerBridge": "PENDING_NEXT_CHECKPOINT",
-    "masterCandidate": "PENDING_NEXT_CHECKPOINT",
-    "status": "SOURCE_CHECKPOINT_COMPLETE_BRIDGE_CANDIDATE_PENDING",
+    "scannerBridge": "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
+    "masterCandidate": "research/chart_learning/MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md",
+    "status": "SOURCE_AND_BRIDGE_CANDIDATE_COMPLETE_NOT_TRANSFER_VALIDATED",
     "intermediateStudied": false,
     "newUnseenEvaluation": false,
     "canonicalRulePromotion": false,
@@ -3989,6 +3996,7 @@
       12
     ],
     "issuesStatus": "OPEN_MASTER_INTEGRATION_PENDING",
-    "operationalChanges": false
+    "operationalChanges": false,
+    "workCFinalReport": "research/chart_learning/work_c_v86_20261029/02_FINAL_REPORT.md"
   }
 }

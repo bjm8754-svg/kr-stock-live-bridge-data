@@ -1,6 +1,6 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 88,
+  "revision": 89,
   "updatedKst": "2026-11-03",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
@@ -114,7 +114,9 @@
     "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
     "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json",
     "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
-    "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json"
+    "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json",
+    "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
+    "research/chart_learning/MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md"
   ],
   "rules": [
     {
@@ -392,7 +394,7 @@
   },
   "introRelearning": {
     "id": "MARS-INTRO-20261103",
-    "recordRevision": 88,
+    "recordRevision": 89,
     "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
     "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json",
     "pagesReadAndVisuallyReviewed": 31,
@@ -405,9 +407,9 @@
       23,
       28
     ],
-    "scannerBridge": "PENDING_NEXT_CHECKPOINT",
-    "masterCandidate": "PENDING_NEXT_CHECKPOINT",
-    "status": "SOURCE_CHECKPOINT_COMPLETE_BRIDGE_CANDIDATE_PENDING",
+    "scannerBridge": "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
+    "masterCandidate": "research/chart_learning/MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md",
+    "status": "SOURCE_AND_BRIDGE_CANDIDATE_COMPLETE_NOT_TRANSFER_VALIDATED",
     "intermediateStudied": false,
     "newUnseenEvaluation": false,
     "canonicalRulePromotion": false,
@@ -418,6 +420,7 @@
       12
     ],
     "issuesStatus": "OPEN_MASTER_INTEGRATION_PENDING",
-    "operationalChanges": false
+    "operationalChanges": false,
+    "workCFinalReport": "research/chart_learning/work_c_v86_20261029/02_FINAL_REPORT.md"
   }
 }

@@ -1,3 +1,17 @@
+## RECORD REVISION 89 — 입문편 원본 재학습 / 기존 HTS 스캐너 연결
+
+2026-11-03 사용자 최상위 목표: **기존 전종목 HTS 스캐너로 기회 탐색 → MASTER 독립 분석 → 매수·보유·추가·부분·전량 판단 → 실제 성과 검증 → 지속 가능한 수익 능력**. 기존91장·강의·MASTER·실전자료는 보존한다. 아래 옛 PRIMARY 우선순위는 역사적 지침이며 이번 명시적 작업은 입문편31쪽 우선, 중급편은 이후다.
+
+BOOT 기준 main `b8f108d2ffb8173cafc14daf3f2175f0f47d1ba0` PASS, 당시 archive87 / frozen exam86. 현재89은 **기록 카운터이며 실력 승격이 아니다**. [입문편31/31쪽 원문·페이지 이미지·차트7쪽 학습](SOURCE_STUDIES/MARS_INTRO_20261103.md), [원본hash·열람 장부](SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json). SK8와 전체17의 고유16장 직접 열람, 별도맥락2장 분리. 중급편 미학습.
+
+[실제 스캐너 연결 감사](SCANNER_MASTER_BRIDGE_20261103.md) / [짧은 실전 MASTER 통합 후보](MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md) 완료. 기존 MASTER·LESSONS·CASES와 frozen v86 판단/채점 불변. Work C 최종 평가는 완료 문서를 읽었으며 진입 선택성·상승 참여·ADD 부족을 비교 기준으로 보존한다. 옛 시험 진행중 안내는 당시 기록이다. Issue11/12 OPEN, 후보별 DUPLICATE/NOT PROMOTED/DEFERRED 판정만 기록. 후보를CANONICAL로 승격하지 않았다.
+
+스캐너는 이미 존재하며 재개발 금지. V3는SHADOW, 일봉 구조+주/월 trace, 장중 bridge는 별도 제한된 snapshot이다. 과거대금 추정·실제매물대 부재·동시간비교/4h 부재·미완성봉·최초식별시각을 확인할 것. 읽은11/3 health는10/30 scan을STALE로 표시: 최신 매매자료로 오용 금지, 재실행하지 않음.
+
+**능력 판정:** source study 완료 ≠ 독립 판단 향상. unseen transfer NOT PROVEN, economic edge NOT VERIFIED. 다음 Work는 이 세 문서와 progress의 nextTask에서 재개한다. 기존 공부 반복/새 시험을 자동 실행하지 않는다. SRC-TERM-001 보류 유지. 새 스캔·모의/실주문·운영 변경0; S02 PAUSED_AFTER_D03.
+
+---
+
 ## RECORD REVISION 88 — 입문편 원본 재학습 / 기존 HTS 스캐너 연결
 
 2026-11-03 사용자 최상위 목표: **기존 전종목 HTS 스캐너로 기회 탐색 → MASTER 독립 분석 → 매수·보유·추가·부분·전량 판단 → 실제 성과 검증 → 지속 가능한 수익 능력**. 기존91장·강의·MASTER·실전자료는 보존한다. 아래 옛 PRIMARY 우선순위는 역사적 지침이며 이번 명시적 작업은 입문편31쪽 우선, 중급편은 이후다.
@@ -290,7 +304,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 88
+**Learning revision:** 89
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 
