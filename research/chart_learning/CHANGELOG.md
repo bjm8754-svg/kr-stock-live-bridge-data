@@ -1,3 +1,10 @@
+## Revision 88 — Intro31 source checkpoint (2026-11-03)
+
+31page text+pixel study and7chart analyses; 24unique additional screenshot views, archive hashes verified; source-level conflicts/counterexamples retained. Intermediate not studied.
+Record revision only; active frozen exam method86, existing MASTER/LESSONS/CASES and all v86 decisions/grades unchanged. Existing scanner retained, new scans/simulation/orders/production changes0, S02 PAUSED_AFTER_D03. Issue11/12 remainOPEN pending actual MASTER integration. All old registry tails preserved byte-for-byte. User priority: existing scanner+independent MASTER+realistic validation toward sustainable profit.
+
+---
+
 ## 2026-10-29 — Revision 87 — Preserve post-exam Mars SK hynix study; frozen method remains86
 
 Eight native source JPEGs opened and SHA256-matched; related039/058/076 reopened. Add one source-exposed critical study/provenance, registry, progress and startup discovery. Separate observed rebound, expert forecasts, sloped guide values, future box, time-bound recovery, participation data gaps and action alternatives/counterexamples. No proven ability/edge. MASTER/LESSONS/CASES/experiments, prior answers/scores/hashes/exam inputs and all operations untouched. User's explicit exam freeze overrides normal MASTER/lesson synchronization: this revision is archive metadata only, NOT method promotion; active exam method remains86. #11 remains OPEN MASTER-INTEGRATION-PENDING. Future MASTER edits must read all pending title/label matches and record each promotion/nonpromotion/defer reason after exam freeze and grading. Historical registry body preserved verbatim.

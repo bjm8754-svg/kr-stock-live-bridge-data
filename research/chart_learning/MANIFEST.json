@@ -1,7 +1,7 @@
 {
   "schema": "V3_CHART_LEARNING_MANIFEST_V1",
-  "revision": 87,
-  "updatedKst": "2026-10-29",
+  "revision": 88,
+  "updatedKst": "2026-11-03",
   "status": "ACTIVE_RESEARCH",
   "productionWriteAllowed": false,
   "entrypoint": "research/chart_learning/START_HERE.md",
@@ -112,7 +112,9 @@
     "research/chart_learning/SOURCE_DEEP_STUDY_P030_TREND_HOLD_REDUCE_EXIT_SYNTHESIS_20261027.md",
     "research/chart_learning/SOURCE_DEEP_P029_P030_PROVENANCE_20261027.json",
     "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029.md",
-    "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json"
+    "research/chart_learning/SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json",
+    "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
+    "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json"
   ],
   "rules": [
     {
@@ -266,7 +268,8 @@
     "goalType": "DEVELOP_INDEPENDENT_PROFIT_SEEKING_AI_TRADER_THEN_AUTOMATE",
     "validationRole": "INTERMEDIATE_TRAINING_AND_EVALUATION_NOT_END_GOAL",
     "productionRequiresSeparateUserAuthorization": true,
-    "competenceAchieved": false
+    "competenceAchieved": false,
+    "existingScannerToMasterPipeline": "Existing all-market HTS scanner -> independent MASTER analysis -> buy/hold/add/reduce/exit -> realistic performance validation -> sustainable risk-adjusted profit; no capability claim"
   },
   "currentResearchPhase": {
     "name": "METHODOLOGY_FIRST_SOURCE_STUDY",
@@ -288,7 +291,8 @@
       "UNSEEN_CHART_TRANSFER_AND_ERROR_CORRECTION",
       "LATER_ECONOMIC_VALIDATION",
       "USER_APPROVED_AUTOMATION"
-    ]
+    ],
+    "currentUserStudyPriority": "2026-11-03 explicit user override: Intro book31 pages now; retained original91 corpus; intermediate later"
   },
   "bootProtocol": {
     "path": "research/chart_learning/BOOT_PROTOCOL.md",
@@ -375,7 +379,7 @@
     "newUnseenEvaluation": false,
     "canonicalRulePromotion": false
   },
-  "recordRevisionScope": "ARCHIVE_ONLY_POST_EXAM_SOURCE_STUDY",
+  "recordRevisionScope": "ARCHIVE_SOURCE_RELEARNING_NOT_VALIDATED_METHOD_UPGRADE",
   "activeExamMethodologyVersion": 86,
   "postExamStudy": {
     "id": "MARS-SKHYNIX-20261029",
@@ -385,5 +389,35 @@
     "status": "MASTER-INTEGRATION-PENDING",
     "promotedToMasterOrLessons": false,
     "workBUseDuringExamAllowed": false
+  },
+  "introRelearning": {
+    "id": "MARS-INTRO-20261103",
+    "recordRevision": 88,
+    "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
+    "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json",
+    "pagesReadAndVisuallyReviewed": 31,
+    "chartPagesDiscussed": [
+      9,
+      13,
+      16,
+      17,
+      21,
+      23,
+      28
+    ],
+    "scannerBridge": "PENDING_NEXT_CHECKPOINT",
+    "masterCandidate": "PENDING_NEXT_CHECKPOINT",
+    "status": "SOURCE_CHECKPOINT_COMPLETE_BRIDGE_CANDIDATE_PENDING",
+    "intermediateStudied": false,
+    "newUnseenEvaluation": false,
+    "canonicalRulePromotion": false,
+    "competenceImprovement": "NOT_PROVEN",
+    "profitability": "NOT_VERIFIED",
+    "issues": [
+      11,
+      12
+    ],
+    "issuesStatus": "OPEN_MASTER_INTEGRATION_PENDING",
+    "operationalChanges": false
   }
 }

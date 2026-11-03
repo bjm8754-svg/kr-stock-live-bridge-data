@@ -1,3 +1,15 @@
+## RECORD REVISION 88 — 입문편 원본 재학습 / 기존 HTS 스캐너 연결
+
+2026-11-03 사용자 최상위 목표: **기존 전종목 HTS 스캐너로 기회 탐색 → MASTER 독립 분석 → 매수·보유·추가·부분·전량 판단 → 실제 성과 검증 → 지속 가능한 수익 능력**. 기존91장·강의·MASTER·실전자료는 보존한다. 아래 옛 PRIMARY 우선순위는 역사적 지침이며 이번 명시적 작업은 입문편31쪽 우선, 중급편은 이후다.
+
+BOOT 기준 main `b8f108d2ffb8173cafc14daf3f2175f0f47d1ba0` PASS, 당시 archive87 / frozen exam86. 현재88은 **기록 카운터이며 실력 승격이 아니다**. [입문편31/31쪽 원문·페이지 이미지·차트7쪽 학습](SOURCE_STUDIES/MARS_INTRO_20261103.md), [원본hash·열람 장부](SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json). SK8와 전체17의 고유16장 직접 열람, 별도맥락2장 분리. 중급편 미학습.
+
+**첫 저장 단계:** 출처 연구 완료. 다음 저장 단계에서 실제 스캐너 기능/자료 공백 연결 감사와 짧은 MASTER 후보를 분리 보존한다. 기존MASTER를 덮어쓰지 않는다.
+
+**능력 판정:** source study 완료 ≠ 독립 판단 향상. unseen transfer NOT PROVEN, economic edge NOT VERIFIED. 다음 Work는 이 세 문서와 progress의 nextTask에서 재개한다. 기존 공부 반복/새 시험을 자동 실행하지 않는다. SRC-TERM-001 보류 유지. 새 스캔·모의/실주문·운영 변경0; S02 PAUSED_AFTER_D03.
+
+---
+
 ## RECORD REVISION 87 — post-exam archive only; active exam methodology v86 unchanged
 
 2026-10-29: [마스 SK하이닉스 원본8장 독립 비판 연구](SOURCE_STUDIES/MARS_SKHYNIX_20261029.md) / [hash and access ledger](SOURCE_STUDIES/MARS_SKHYNIX_20261029_PROVENANCE.json), [OPEN Issue #11 — MASTER-INTEGRATION-PENDING](https://github.com/bjm8754-svg/kr-stock-live-bridge-data/issues/11). All8 JPEGs actually opened/hash-checked; one overlapping source family, not8 independent cases. Conditional rebound/continuation/failure analysis; exact anchors, same-time participation, timeframe and trades NOT VERIFIED. No ability/edge claim.
@@ -278,7 +290,7 @@ Nine additional root Library upload-date cohorts were fully visually inspected: 
 
 
 **Status:** ACTIVE RESEARCH CONTINUITY CONTRACT
-**Learning revision:** 87
+**Learning revision:** 88
 **Established:** 2026-10-14 (KST); priority clarified 2026-10-15
 **Repository:** bjm8754-svg/kr-stock-live-bridge-data
 

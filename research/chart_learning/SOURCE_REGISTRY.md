@@ -1,3 +1,14 @@
+## CURRENT record v88 — 입문편31쪽 및 추가 실전 원본 (2026-11-03)
+
+- 주교재 `/차트연구_원본교재_20261103/입문편.pdf`, SHA25664e5f049d2155643d7a88621388d82af4a0b7428838fdb53467750bd1e22e8ec,31쪽 텍스트+각 페이지 이미지 직접 확인; 차트p9/13/16/17/21/23/28 별도 관찰. [연구](SOURCE_STUDIES/MARS_INTRO_20261103.md), [provenance](SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json).
+- 중급편은 Library 위치 확인만. 미다운로드·미학습. 사용자 Drive 대체 링크는 Library 성공으로 사용하지 않음.
+- `/차트연구_추가원본/20261029_마스_SK하이닉스_스크린샷8장_원본.zip`: hash343fbe8510de643d5e7de8520ab5807823dfb4f5b45f89c3e228b99eb5fab0da.8장 재열람.
+- `/차트연구_추가원본/20261103_마스_장중캡처_전체17장_원본.zip`: hash51da3abd83647e06a3d5bc657cf7627deeb2be9da219c6430d8920b9d5aae4a6.17첨부/16고유,byte중복1검증,별도맥락2장 분리. 기존12장 기록을 삭제/대체하지 않음.
+- Issue11/12 확인, OPEN 유지. 원문 주장·보이는 차트·독립 해석·반례·미검증 분리. 실제체결·예측시점·수익성 미인증. 기존91/강의는 과거 연구기록 대조이며 이번 전수 원본 재열람 아님.
+- 스캐너 연결 및 MASTER 후보 다음 저장 단계. 원본PDF/이미지 재배포 없음. 기존 정본·모든 역사적 tail byte 보존. CI cannot verify source pixels.
+
+---
+
 ## MARS-SKHYNIX-20261029 — source studied, MASTER-INTEGRATION-PENDING
 
 2026-10-29, record revision87 / active frozen methodology86. Library `/차트연구_추가원본/20261029_마스_SK하이닉스_스크린샷8장_원본.zip`, ID `libfile_05a61456b450819188d0cb0d9e58ae84`; ZIP SHA256 `343fbe8510de643d5e7de8520ab5807823dfb4f5b45f89c3e228b99eb5fab0da`. Eight JPEG originals individually viewed and byte/hash checked against embedded manifest; one dependent Telegram/chart family. Related primary039/058/076 reopened, not91 new mastered images.

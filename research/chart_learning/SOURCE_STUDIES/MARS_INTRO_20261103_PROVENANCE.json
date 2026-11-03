@@ -1,0 +1,532 @@
+{
+  "schema": "V3_SOURCE_STUDY_PROVENANCE_V1",
+  "studyId": "MARS-INTRO-20261103",
+  "dateKst": "2026-11-03",
+  "baselineMain": "b8f108d2ffb8173cafc14daf3f2175f0f47d1ba0",
+  "boot": "PASS",
+  "sourcePath": "/차트연구_원본교재_20261103/입문편.pdf",
+  "sourceSha256": "64e5f049d2155643d7a88621388d82af4a0b7428838fdb53467750bd1e22e8ec",
+  "sourceBytes": 2819785,
+  "pdfPages": 31,
+  "pages": [
+    {
+      "page": 1,
+      "renderSha256": "8f3ca408bd8457ae362e576014742fc17d44b1ff1cc9921784fd17958e90c5c8",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 2,
+      "renderSha256": "7c821af9d711bb03409f344836f22e4179bb1eaf974242fc712cc3f90161268a",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 3,
+      "renderSha256": "1ad65115359a92bed1a2415a1cc5098005b2904a9c55341181537493dc754ac1",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 4,
+      "renderSha256": "0f2be495444706ff2a60888fe2272e10c32ba8ffdbf5fadb78b245239b0d363a",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 5,
+      "renderSha256": "21786ea248cba124cc011918d49b7bbba8aef86d6ccbb8d2cc932d6f7d2d52c1",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 6,
+      "renderSha256": "4230406267957030bf84698291c05ed86d4cd942dea16886f6c95a0f18346955",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 7,
+      "renderSha256": "10191479263b37441030e18499b497d8dc4429ba602fcea74b0b208a831e319c",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 8,
+      "renderSha256": "f98aa4f89c20235d7ec89c98bb80f11901ffa382e50ffadb7294af4f5ad74199",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 9,
+      "renderSha256": "c2ff3bec461f137db65607ddd5fb5b4fbe0c1c5f2ad6712572f600f66e1b9749",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 10,
+      "renderSha256": "3fd4ae81f4acf3e6614c7ed847b8dae17d083f5cec98417d2ef0906c12955e8c",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 11,
+      "renderSha256": "416388ebc16c8baaba68b7a7850e899523e3a169c01f242b9558f49278b308a1",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 12,
+      "renderSha256": "2932add9dfa2cf72f8814cac3ba32914a7d5f8f49ee37b7d91d47e68a55f9832",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 13,
+      "renderSha256": "8227e942772eb4fb3a78b52077319723d1ffbbdf4fb7cad082d64826fecc2274",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 14,
+      "renderSha256": "62ea529eb0244e52eb133c5dcacc18a3d19229c7f2ad00ade8f3e2a3d879a249",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 15,
+      "renderSha256": "780748c41f834923f816e66a1136ba56333479d3abacdec6f8388739fd849cff",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 16,
+      "renderSha256": "e82611653f90126ce96e675a573b134b8131c205fd0e28d77e00d601368baf70",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 17,
+      "renderSha256": "d819c55e4b4f8a87e0ab2ddfc12829d5efbcf750f8d0556435a54812330d023e",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 18,
+      "renderSha256": "09f4566d8f2f57e81b78897e8c66c570b1733df8265b19a439b763bcba17c904",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 19,
+      "renderSha256": "8a8d1c1114f1da3946225ce55187a850c5daa5ebef8c8a98da965af5e3cd0718",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 20,
+      "renderSha256": "caef2af004a823f28b5b94359b9429e99c215cc4dd2beeed73b50aaaceb76f36",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 21,
+      "renderSha256": "aa1042a91b15a93a0eeeaad912c14dcb293d54f8399dc4d69dd7bf4674051378",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 22,
+      "renderSha256": "50c686ea73c6fa63832b82f88aea1bbcab6813c07701ea85c29552bb20ed2aa0",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 23,
+      "renderSha256": "f5b971b6ecaf10a0b08190c66fba2219da1acbf6059e35bfa1c2ea41bbb106f5",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 24,
+      "renderSha256": "79734832f429a20ea5f50eb9f0032c33293b2b5aa274e31af9ca49c780d6725d",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 25,
+      "renderSha256": "22448f444d2117c3e6e023687e7fd82d0e84416af023e01952f9f216715bbe28",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 26,
+      "renderSha256": "1f28bd9f08c44c5251179b1f74455990de4ec308cd2710bc3778f81d916b8c2d",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 27,
+      "renderSha256": "0468c10d43093f13615de3ed530532eccdf148b4966bffe6c10488279ffd2248",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 28,
+      "renderSha256": "6b5008210a544950b1ce0906c8ae7759c64c42763ed685a76e1bb7b9b234a7fd",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": true
+    },
+    {
+      "page": 29,
+      "renderSha256": "0cb961da3755797ea0af634af9400942949fea3f460d319bba980fd95fdc73cf",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 30,
+      "renderSha256": "091e3c20ab981eeff2d0d7a43849cf9827675b7958975606030c3bbbf5beba7c",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    },
+    {
+      "page": 31,
+      "renderSha256": "fcc14b70e08e87e318c9728c552fc61e53befb3142a121add04b35a4e344d488",
+      "directPageImageViewed": true,
+      "textRead": true,
+      "chartDiscussed": false
+    }
+  ],
+  "intermediateBook": "LOCATED_NOT_DOWNLOADED_OR_STUDIED",
+  "additionalArchives": [
+    {
+      "path": "/차트연구_추가원본/20261029_마스_SK하이닉스_스크린샷8장_원본.zip",
+      "sha256": "343fbe8510de643d5e7de8520ab5807823dfb4f5b45f89c3e228b99eb5fab0da",
+      "bytes": 1494228
+    },
+    {
+      "path": "/차트연구_추가원본/20261103_마스_장중캡처_전체17장_원본.zip",
+      "sha256": "51da3abd83647e06a3d5bc657cf7627deeb2be9da219c6430d8920b9d5aae4a6",
+      "bytes": 2950866
+    }
+  ],
+  "additionalImages": [
+    {
+      "group": "mars8",
+      "path": "images/6389.jpg",
+      "sha256": "365597b1b2eb4b910b0bc3dc9c8b57a2d11c9044f40e514ec2666129f0fbfe90",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6391.jpg",
+      "sha256": "abab2e5cf1b01308fa7acf653d6a6488d9f7ef5b3633af885eaef00bb28aca45",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6393.jpg",
+      "sha256": "0833d36aa6d35d528619e364277ef9ba500007b7772faa6ec851675ac42837e6",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6395.jpg",
+      "sha256": "376113560ff280a7c94834430753b1c6d419285f1b24c070e6322174fc7866a2",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6397.jpg",
+      "sha256": "4143158a02c6f2c748eb16f2d94c2321aae92d9f5d9d4e69e98429d421a30f46",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6400.jpg",
+      "sha256": "4b0d521faed62c1689d19fce9c1c50f99d34bd40d0dc49bb91e8b272ac032c84",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6401.jpg",
+      "sha256": "c4437f31466701931b155507baa8b9ffd686b10a36dec0df9bee4e9cd4ad9759",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars8",
+      "path": "images/6404.jpg",
+      "sha256": "481f5a5f0d32f0dbc336aa635587f99f300d652434b4dfec2c503297c9828b66",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6515.jpg",
+      "sha256": "599b174d19f3714e1d7fff7f04176ce6c725655e0907af0bac218380302c7682",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6517.jpg",
+      "sha256": "21d5752d5b4363e35fd1ec41cd7804e452607bd4cfdbd30dd7ad5919ded4f380",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6519.jpg",
+      "sha256": "5a545bb41fff2144e5abfb018e7d07b5d92ce8640c53adc94e3dda366a38e8ca",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6521.jpg",
+      "sha256": "cdf4756db906f6af9c77653a63d9d987b366d73daa5f0aed0a5f333e725e96ae",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6524.jpg",
+      "sha256": "0c82f10f235a875ec20fb4fa8f3f8a2457b08e589a23d795e033c1d7676d6d28",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6525.jpg",
+      "sha256": "c380a6960bd90656cdb96f9119b75d265ec5961264d5640ce19ee68f0ff9512e",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6527.jpg",
+      "sha256": "f7f841306e0e6429b3192e29267f1224af52f4fa55245845572ecfc4d87bd056",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6529.jpg",
+      "sha256": "1319637f2c2387815728bd2c7762f8465a6b5035c27c938f038e7808bf2211a8",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6531.jpg",
+      "sha256": "ee10c6d4dae14124789bcf0abdc9af963374e859ac671432c69de91b0d8afbac",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "initial_10/6533.jpg",
+      "sha256": "e3413c5943a272975661e70889f71b08f884a7f2b659259064c4533eefc4a0a4",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "continued_5/6533(1).jpg",
+      "sha256": "e3413c5943a272975661e70889f71b08f884a7f2b659259064c4533eefc4a0a4",
+      "status": "BYTE_DUPLICATE_OF_initial_10/6533.jpg",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "continued_5/6535.jpg",
+      "sha256": "24877d0d3bebf663bd220138e3f6f2843ff27968b5f0668eb68b11b535ceb496",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "continued_5/6537.jpg",
+      "sha256": "89f57daf2871920c1a13e050b8428847e12f55f627362bab297313f201aa4ed1",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "continued_5/6539.jpg",
+      "sha256": "87405596c7c496863793d1f7da260c3d40c2137d2d1d50ae4a832a197694e22b",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "continued_5/6541.jpg",
+      "sha256": "8200197c66d9fba6068fa79b075d1e2dac3516e8c1c98da9f546a3691830f750",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "other_context_2/1000061025.jpg",
+      "sha256": "1dd57a915eada9850f44328e0703aecc8ec4215c3a965e08fcaca9aaa8cc4c5e",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    },
+    {
+      "group": "mars17",
+      "path": "other_context_2/1000061027.jpg",
+      "sha256": "eefb51c7a4ba6674c0367abbdd2ead50b1e55986b1b08737e7b8331a0f951c84",
+      "status": "DIRECT_PIXEL_VIEWED",
+      "independentOutcomeEvidence": false
+    }
+  ],
+  "uniqueAdditionalImagesViewed": 24,
+  "attachmentEntries": 25,
+  "newUnseenEvaluations": 0,
+  "economicEdgeVerified": false,
+  "competenceImprovement": "NOT_PROVEN",
+  "masterPromotion": false,
+  "issuesRead": [
+    11,
+    12
+  ],
+  "issuesRemainOpen": true,
+  "old91ReopenedThisWork": false,
+  "priorSourceCoveragePreserved": true,
+  "originalVideoViewedThisWork": false,
+  "productionWriteAllowed": false,
+  "newScanRun": false,
+  "simulatedTrades": false,
+  "liveOrders": false,
+  "s02": "PAUSED_AFTER_D03",
+  "scannerFilesRead": [
+    {
+      "path": "scripts/market_structure_v3.py",
+      "gitBlobSha": "8809deaf35b1237c1a1009b5cadf9977c7c47fd7"
+    },
+    {
+      "path": "scripts/build_market_structure_v3_review_shards.py",
+      "gitBlobSha": "b55a344e34a3ef8ae9cd38e29b4d5097c28a1b5c"
+    },
+    {
+      "path": "scripts/longterm_scan.py",
+      "gitBlobSha": "2b9efcda29305dfd35714040f989465cbad59ac6"
+    },
+    {
+      "path": "longterm-scan-config.json",
+      "gitBlobSha": "f0ce100d09dce8e555db4b13c3f0e121fa7c1ae2"
+    },
+    {
+      "path": "scripts/msv3/engine.py",
+      "gitBlobSha": "3d024ff625c56109247db75e24f1f1b49bce26ac"
+    },
+    {
+      "path": "scripts/msv3/execution.py",
+      "gitBlobSha": "81881b5c265ec94c171f54f0669c1fa946f19da7"
+    },
+    {
+      "path": "scripts/msv3/features.py",
+      "gitBlobSha": "5f1188f7f4eb0b5efef958d0c7f67dc346274e0e"
+    },
+    {
+      "path": "scripts/msv3/levels.py",
+      "gitBlobSha": "359b7ff39818ab3673d7d0058a2783c3deb38951"
+    },
+    {
+      "path": "scripts/msv3/review.py",
+      "gitBlobSha": "f1bf522207dc51a8981b1df2f70fbbff77b86780"
+    },
+    {
+      "path": "scripts/msv3/setups.py",
+      "gitBlobSha": "c1609671104a4d4c1a21c1e1fec4fceaafe0421d"
+    },
+    {
+      "path": "market-structure-v3-config.json",
+      "gitBlobSha": "9b1ca90b1bb3d6cb2dc18f47bbb482e286af32ed"
+    },
+    {
+      "path": "market-structure-v3-review-index.json",
+      "gitBlobSha": "ee857beca24c171d0eb6885a425c877ab17163fc"
+    },
+    {
+      "path": "market-structure-v3-review-shard-01.json",
+      "gitBlobSha": "08e66a0dc606c5a85041021a6726989cabab64cd"
+    },
+    {
+      "path": "market-structure-v3-handoff.json",
+      "gitBlobSha": "325ae27dd06578b277c965746ce9638b0b8fdafc"
+    },
+    {
+      "path": "longterm-scan-health.json",
+      "gitBlobSha": "1f9357689de6bed1b6d8e85e626ed9081bc05cab"
+    },
+    {
+      "path": "cloudflare/worker_v3_hardened.mjs",
+      "gitBlobSha": "9e99e2dec3c73c3bc00fac2cc072f97ed37c7340"
+    },
+    {
+      "path": "scripts/v3_shadow_live_capture.py",
+      "gitBlobSha": "7a17648381a14e9864b79f8dc118c2bc65b6b4ab"
+    },
+    {
+      "path": "live-health.json",
+      "gitBlobSha": "ea58198ac72ca86ae320cf1c5381129cc26cbeca"
+    }
+  ],
+  "immutableLocalBaseline": [
+    {
+      "path": "research/chart_learning/MASTER.md",
+      "sha256": "92ff0bf481b972eacc9cfea49d86e380247d4d2168bdfc54df18e3ac15480e7a"
+    },
+    {
+      "path": "research/chart_learning/LESSONS.jsonl",
+      "sha256": "539cd3dc476e12f8b8fe12b6a9ff2b0b9a2bc4db79625386827599cd63a52363"
+    },
+    {
+      "path": "research/chart_learning/CASES.md",
+      "sha256": "b2939eedde89e00d17e2b1e42ea85237235a116f38533eddfc67fd9a8d7a72a2"
+    },
+    {
+      "path": "research/chart_learning/work_c_v86_20261029/02_FINAL_REPORT.md",
+      "sha256": "e31f088891423522dacf5459dcc592c087368869d11a73b92380e3d814a2601e"
+    }
+  ],
+  "coverageNote": "31 page images and text; 7 embedded chart pages discussed; 8 SKHynix plus16 unique Nov3 images pixel-viewed. Source understanding is not independent transfer or profitability."
+}

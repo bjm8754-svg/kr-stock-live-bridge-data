@@ -1,9 +1,9 @@
 {
   "schema": "V3_METHODOLOGY_STUDY_PROGRESS_V1",
-  "updatedKst": "2026-10-29",
+  "updatedKst": "2026-11-03",
   "status": "IN_PROGRESS_NOT_COMPETENCE_PROVEN",
   "researchPhase": "METHODOLOGY_FIRST_SOURCE_STUDY",
-  "currentObjective": "Independently derive, challenge and version chart-analysis reasoning using the 91 original 차트술사 PNGs as the primary study corpus, supplemented by expert plans and gap-specific external research.",
+  "currentObjective": "Preserve the existing domestic all-market HTS scanner and develop independent MASTER buy/hold/add/reduce/exit judgement for later realistic performance validation and sustainable profit; current authorized study is Intro book31 pages, old sources retained, intermediate later. No scan/trade/production change.",
   "modelWeightTraining": false,
   "scannerAlreadyBuilt": true,
   "liveTradingAuthorized": false,
@@ -231,59 +231,24 @@
     }
   },
   "learningStatus": {
-    "methodologyVersion": 87,
+    "methodologyVersion": 88,
     "technicalRuleIndexExists": true,
     "sourceCoverageComplete": false,
     "unseenChartTransferDemonstrated": false,
     "economicEdgeVerified": false,
     "crossChatBootVerified": false,
-    "versionScope": "ARCHIVE_RECORD_ONLY_NOT_ACTIVE_EXAM_METHOD"
+    "versionScope": "ARCHIVE_SOURCE_RELEARNING_ONLY_NOT_ACTIVE_EXAM_METHOD"
   },
   "nextTask": {
-    "id": "SRC-STUDY-001",
-    "status": "SOURCE_LIFECYCLE_DEEP_STUDY_IN_PROGRESS_NO_NEW_TEST",
-    "question": "Resolve original audiovisual chart context behind partial/full exits and continuing holds; examine first-known higher continuation anchors and rebound progress failure without new market tests or exposed-case skill claims.",
-    "primaryOriginalImages": [
-      "016",
-      "017",
-      "020",
-      "021",
-      "029",
-      "036",
-      "038",
-      "039",
-      "040",
-      "048",
-      "055",
-      "056",
-      "058",
-      "065",
-      "073",
-      "076",
-      "077",
-      "079"
-    ],
-    "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
-    "deliverable": "P029 remaining61 source matrix and P030 integrated hold/reduce/exit reasoning complete as bounded source work; full research and independent ability remain unproven. Continue only nonredundant existing-source contradictions or original AV when accessible.",
-    "proofRequired": "Source interpretation can be refined now. Independent judgment improvement requires a separately authorized genuinely unfamiliar sequential case; no such evaluation in this task.",
-    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md; research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
-    "requiredAnchorDisambiguation": [
-      "C_box",
-      "C_reference",
-      "C_adjust",
-      "H_adjust",
-      "L_adjust",
-      "M_box"
-    ],
-    "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap",
-    "studyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
-    "secondaryOriginalCrossCheck": [
-      "052",
-      "056",
-      "058"
-    ],
-    "stageLock": "SOURCE_DEEP_REVIEW_BEFORE_NEXT_MARKET_CASE",
-    "blockingSourceConflict": "SRC-TERM-001 holds only term-related integration/promotion; unrelated source comparison/counterexamples continue under explicit user follow-up."
+    "id": "INTRO-BRIDGE-20261103",
+    "status": "BRIDGE_AND_SEPARATE_MASTER_CANDIDATE_PENDING",
+    "question": "Finish read-only scanner capability mapping and separate practical MASTER candidate; preserve frozen exam.",
+    "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
+    "scannerBridge": "research/chart_learning/SCANNER_MASTER_BRIDGE_20261103.md",
+    "masterCandidate": "research/chart_learning/MASTER_CANDIDATES/INTRO_PRACTICAL_MASTER_20261103.md",
+    "proofRequired": "Source comprehension is complete within31 pages; unfamiliar sequential transfer and realistic economic outcome validation remain separate future work. Existing exposed cases cannot supply new independent evidence.",
+    "riskConstraint": "Separate higher-timeframe structure, transaction failure and capital limits; S02 remains paused",
+    "priorSourceTaskPreservedIn": "priorNextTaskBeforeIntro20261103"
   },
   "completedEvidence": [
     {
@@ -495,6 +460,13 @@
       "status": "CANDIDATE_SYNTHESIS_DESIGN_ONLY_NOT_TRANSFER",
       "source": "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md",
       "claim": "Analysis/trade/risk linked with risk-ledger continuity and source-authenticated-plan distinction.3primary/selected chat read;prior method reports restored. No selected new evaluation case,market data,performance or skill promotion."
+    },
+    {
+      "type": "INTRO_SOURCE_CHECKPOINT",
+      "dateKst": "2026-11-03",
+      "status": "SOURCE_STUDIED_NOT_COMPETENCE_PROVEN",
+      "source": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
+      "claim": "All31 text/page-images and7chart pages studied; SK8+Nov17=24unique images viewed, not independent outcomes."
     }
   ],
   "lastMeaningfulMethodologyImprovement": "NOT_DEMONSTRATED",
@@ -3897,7 +3869,7 @@
     "economicallyValidated": false,
     "fullProjectComplete": false
   },
-  "archiveRecordRevision": 87,
+  "archiveRecordRevision": 88,
   "activeExamMethodologyVersion": 86,
   "postExamSourceStudies": [
     {
@@ -3942,5 +3914,81 @@
     ],
     "lastTitleQueueCheckedKst": "2026-10-29",
     "historicalNextTaskPreserved": true
+  },
+  "priorNextTaskBeforeIntro20261103": {
+    "id": "SRC-STUDY-001",
+    "status": "SOURCE_LIFECYCLE_DEEP_STUDY_IN_PROGRESS_NO_NEW_TEST",
+    "question": "Resolve original audiovisual chart context behind partial/full exits and continuing holds; examine first-known higher continuation anchors and rebound progress failure without new market tests or exposed-case skill claims.",
+    "primaryOriginalImages": [
+      "016",
+      "017",
+      "020",
+      "021",
+      "029",
+      "036",
+      "038",
+      "039",
+      "040",
+      "048",
+      "055",
+      "056",
+      "058",
+      "065",
+      "073",
+      "076",
+      "077",
+      "079"
+    ],
+    "secondaryCase": "Review the frozen S02 A2452E7F51 533,000 KRW first-buy nonfill as a diagnostic only, without revealing new S02 future bars or rewriting a locked decision.",
+    "deliverable": "P029 remaining61 source matrix and P030 integrated hold/reduce/exit reasoning complete as bounded source work; full research and independent ability remain unproven. Continue only nonredundant existing-source contradictions or original AV when accessible.",
+    "proofRequired": "Source interpretation can be refined now. Independent judgment improvement requires a separately authorized genuinely unfamiliar sequential case; no such evaluation in this task.",
+    "supportingReading": "research/chart_learning/SOURCE_DEEP_STUDY_P028_EX_ANTE_DECISION_AND_RISK_CONTINUITY_20261023.md; research/chart_learning/UNSEEN_CHART_EVALUATION_DESIGN_DRAFT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P027_SWING_STRUCTURE_ENTRY_FAILURE_AND_RISK_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P026_PUBLIC_CHART_CHRONOLOGY_AND_THESIS_FAILURE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P025_COMPETING_ANCHORS_AND_RESERVATION_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P024_KOSPI_EXPANDED_CROPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P023_USER_SUPPLIED_KOSPI_MANUAL_LINES_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P021_MANUAL_ANCHORS_AND_SOURCE_DEPENDENCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P022_EXPERT_PLAN_PROVENANCE_GAPS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P019_TERM_PROVENANCE_MATRIX_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P020_REMAINING48_COUNTERREVIEW_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P018_FOUR_VIDEOS_AND_SOURCE_CONFLICT_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P017_GRID_AND_CLOCKS_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P016_BOX_CLOSE_PROVENANCE_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P015_ENTRY_FILL_VS_REACTION_20261023.md; research/chart_learning/SOURCE_DEEP_STUDY_P014_RSI_TG_COHORT_COMPLETENESS_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P013_SWING_COOLING_VS_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P012_SWING_PAIR_INDICATOR_AUDIT_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P011_TELEGRAM_MTF_DIVERGENCE_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P010_SWING_HORIZON_20261022.md; research/chart_learning/SOURCE_DEEP_STUDY_P009_DIVERGENCE_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P007_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P006_20261021.md; research/chart_learning/SOURCE_DEEP_P006_MARK_TYPE_MATRIX.md; research/chart_learning/SOURCE_DEEP_STUDY_P005_20261021.md; research/chart_learning/PRIMARY_91_CROSSWALK_AFTER_NATIVE_STUDY_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P004_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P003_20261021.md; research/chart_learning/SOURCE_DEEP_P003_LINE_PROVENANCE.md; research/chart_learning/SOURCE_DEEP_STUDY_P002_20261021.md; research/chart_learning/SOURCE_DEEP_STUDY_P001_20261021.md; research/chart_learning/SOURCE_DEEP_P001_STATE_MATRIX.md; research/chart_learning/SOURCE_FIRST_DEEP_REVIEW_QUEUE_20261021.md; research/chart_learning/PRIMARY_CORPUS_VISUAL_SURVEY_20261021.md; research/chart_learning/PRIMARY_IMAGE_STUDIES.md; research/chart_learning/USER_SOURCE_STUDIES.md; research/chart_learning/USER_SOURCE_INTAKE_20261023_MARS_16.md",
+    "requiredAnchorDisambiguation": [
+      "C_box",
+      "C_reference",
+      "C_adjust",
+      "H_adjust",
+      "L_adjust",
+      "M_box"
+    ],
+    "riskConstraint": "Distinguish structural weekly/monthly close invalidation from intraperiod emergency risk cap",
+    "studyLedger": "research/chart_learning/PRIMARY_IMAGE_STUDIES.md",
+    "secondaryOriginalCrossCheck": [
+      "052",
+      "056",
+      "058"
+    ],
+    "stageLock": "SOURCE_DEEP_REVIEW_BEFORE_NEXT_MARKET_CASE",
+    "blockingSourceConflict": "SRC-TERM-001 holds only term-related integration/promotion; unrelated source comparison/counterexamples continue under explicit user follow-up."
+  },
+  "introRelearning20261103": {
+    "id": "MARS-INTRO-20261103",
+    "recordRevision": 88,
+    "sourceReport": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103.md",
+    "provenancePath": "research/chart_learning/SOURCE_STUDIES/MARS_INTRO_20261103_PROVENANCE.json",
+    "pagesReadAndVisuallyReviewed": 31,
+    "chartPagesDiscussed": [
+      9,
+      13,
+      16,
+      17,
+      21,
+      23,
+      28
+    ],
+    "scannerBridge": "PENDING_NEXT_CHECKPOINT",
+    "masterCandidate": "PENDING_NEXT_CHECKPOINT",
+    "status": "SOURCE_CHECKPOINT_COMPLETE_BRIDGE_CANDIDATE_PENDING",
+    "intermediateStudied": false,
+    "newUnseenEvaluation": false,
+    "canonicalRulePromotion": false,
+    "competenceImprovement": "NOT_PROVEN",
+    "profitability": "NOT_VERIFIED",
+    "issues": [
+      11,
+      12
+    ],
+    "issuesStatus": "OPEN_MASTER_INTEGRATION_PENDING",
+    "operationalChanges": false
   }
 }
