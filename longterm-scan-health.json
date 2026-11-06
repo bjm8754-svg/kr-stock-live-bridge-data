@@ -1,6 +1,6 @@
 {
   "status": "STALE",
-  "checkedAtKst": "2026-11-06 11:00:21 KST",
+  "checkedAtKst": "2026-11-06 11:47:09 KST",
   "expectedCompletedTradeDate": "20261105",
   "scanTradeDate": "20261030",
   "scanStatus": "PASS",
@@ -15,7 +15,5 @@
   "reasons": [
     "SCAN_TRADE_DATE_STALE"
   ],
-  "phase": "PRECHECK",
-  "repairDispatched": true,
-  "repairWorkflow": "longterm-scan.yml"
+  "phase": "FINAL"
 }
