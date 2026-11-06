@@ -1,19 +1,21 @@
 {
   "status": "STALE",
-  "checkedAtKst": "2026-11-05 11:43:41 KST",
-  "expectedCompletedTradeDate": "20261104",
+  "checkedAtKst": "2026-11-06 11:00:21 KST",
+  "expectedCompletedTradeDate": "20261105",
   "scanTradeDate": "20261030",
   "scanStatus": "PASS",
   "scanGeneratedAtKst": "2026-10-30T23:30:25.710778+09:00",
   "methodologyVersion": "YBM_SWING_V2_2026-09-29_STRUCTURE_ROLE_CONTINUATION",
   "referenceConsensusCount": 3,
   "referenceDates": {
-    "005930": "20261104",
-    "000660": "20261104",
-    "035420": "20261104"
+    "005930": "20261105",
+    "000660": "20261105",
+    "035420": "20261105"
   },
   "reasons": [
     "SCAN_TRADE_DATE_STALE"
   ],
-  "phase": "FINAL"
+  "phase": "PRECHECK",
+  "repairDispatched": true,
+  "repairWorkflow": "longterm-scan.yml"
 }
